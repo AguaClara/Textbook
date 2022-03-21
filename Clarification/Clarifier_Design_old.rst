@@ -13,14 +13,6 @@ Clarifier Design
 
 .. _heading_Clarifier_Design:
 
-The AguaClara clarifier is a high-rate vertical flow clarifier that is designed with the following goals:
-
-#. Minimize secondary currents that could send high velocity flow through some of the plate settlers
-#. Prevent accumulation of sludge that would tend to become anaerobic and release both dissolved organics (taste and order issues) and methane bubbles that would carry flocs to the top of the clarifier
-#. Include a stable floc filter that reduces the settled water turbidity
-#. Remove the solids without requiring power or moving mechanical parts
-#. Provide a mechanism for the operator to dump poorly flocculated water before it enters the clarifier. This is important to reduce the recovery time when there is a flocculation failure.
-#. Ensure easy operation and maintenance.
 
 Components and Flow Paths
 ==========================
@@ -31,41 +23,13 @@ In this section, we will develop a conceptual understanding of the clarifier usi
 #. How water moves through the clarifier.
 #. How water leaves the clarifier.
 
-.. _figure_clarifier_overview:
 
-.. figure:: ../Images/clarifier_overview.png
-    :target: https://youtu.be/ca3xVntxEzw
-    :height: 300px
-    :align: center
-    :alt: Overview of an AguaClara Clarification tank (click to be sent to video).
-
-Overview of an AguaClara Clarification tank (click image to be sent to video).
 
 .. _heading_Clarifier_As_Circuit:
 
 Entering the Tank
 ==================
 
-To understand how we will use flow distribution as a primary design constraint, we will develop a concept called the "clarifier as a circuit". This concept will be elaborated on as you learn about the clarifier components and design, but we will introduce it now because it is a driving principle for flow distribution in AguaClara clarifiers. The chapter on Manifold design (still needs to be written) will be very useful to understand some of these fluids concepts.
-
-An electrical circuit is a path in which electrons flow from a voltage or current source. Electrical circuits frequently have resistors, which are passive electrical components to create resistance in the flow of electric current. What does this have to do with clarifiers? In our "clarifier as a circuit" concept, we will draw parallels between how electrons flow through a circuit to how water flows through the clarifier.
-
-The AguaClara treatment train is designed so that flow is driven by potential energy. The entrance of the clarifier, where water comes from the flocculator, is the source of the flow. Water then moves through the clarifier and exits to the filter. At different points throughout the flow of water in the clarifier, there are changes in piezometric head from fluid acceleration/deceleration and head loss. In the development of our circuit concept, piezometric head is like electrical resistance.
-
-In electrical circuits, electrons will travel the path of least resistance in a parallel path system. Water is similar in that it will flow in the path of least resistance.
-
-.. _figure_circuit_base:
-
-.. figure:: ../Images/circuit_base.png
-    :height: 300px
-    :align: center
-    :alt: Clarification tank as a circuit.
-
-    Clarification tank as a circuit.
-
-:numref:`figure_circuit_base` shows flow through a clarifier in which there are two clarifier bays working in parallel. Each bay has multiple components through which piezometric head changes; wherever a resistor symbol is shown, it means that there is a difference in piezometric head in that section of pipe. We want to understand what is going on between the influent channel and the effluent channel so that we can design to control head loss and fluid flow.
-
-Remember, the goal is to have even flow distribution. It is bad if different flow paths have different head losses or changes in piezometric head. We must consider this between clarifier bays (comparing each bay to each other) and within a single clarifier bay (comparing the flows at different points within the clarifier bay). We want to limit differences in "resistance" to ensure equal flow distribution. Therefore, we define
 
 .. _heading_Good_v_Bad_Hl:
 
@@ -74,76 +38,19 @@ Remember, the goal is to have even flow distribution. It is bad if different flo
 
 We can artificially introduce the second form of head loss to dominate the resistance and render small variations due to pressure recovery insignificant. We will go through each part of the clarifier to understand how these goals drive AguaClara designs. As we learn about each component, we will attempt to categorize its contribution into creating "good" or "bad" head loss.
 
-.. _heading_Clarifier_Influent_Channel:
+
 
 Inlet Channel
 --------------------
 
-After water exits the flocculator, it is ready for clarification. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple clarifiers operating in parallel; we call each of these clarifier units a 'bay'. Because there may be multiple clarifier bays, we have to distribute flocculated water between the bays. To do this, we have an **influent channel** shown in :numref:`figure_influent_channel_bays`, which receives water from the flocculator and passes it to the clarifier bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the clarifier bays without allowing any settling of flocs in the influent channel. The minimum velocity in the influent channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each clarifier bay.
-
-.. _figure_influent_channel_bays:
-
-.. figure:: ../Images/influent_channel_bays.png
-    :height: 300px
-    :align: center
-    :alt: Influent channel with pipes leading to different clarifier bays.
-
-    Influent channel with pipes leading to different clarifier bays.
-
-An important question is consider is whether or not the water in the influent channel gets evenly distributed between the different bays. If it does not get evenly distributed, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to conversion of kinetic energy into potential energy as the flow decelerates. This deceleration results in an increase in the piezometric head in the direction of flow.
-
-Where else in fluids have we discussed decelerating flow? We have discussed this in flow expansions. We know that in flow expansions, there are higher pressures and slower velocities downstream. At the end of the pipe, there is low velocity and thus high pressure, driving the flow through the orifices at the end. For this same reason, a channel with multiple exits will have greatest flow thru the last exit.
-
-So, is this type of head loss "good" or "bad"? In our :ref:`definition of "good" and "bad" <heading_Good_v_Bad_Hl>`, we stated that "bad" head loss creates unequal flow in parallel flow paths. The head loss in the influent channel is therefore "bad" head loss because it can lead to different bays in parallel receiving different flows.
-
-Clarification units have multiple bays for a few different reasons. Plants with higher flow rates require more clarifier bays because the flow through each bay is limited by other design constraints, namely upflow velocity, which will be discussed later. Additionally, it is good to have more than one bay for maintenance purposes; if one bay needs to be cleaned, we want to always have another that can be working. Pipe stubs can be used to plug the entrance hole to a clarifier bay to shut it down for maintenance.
-
-Of note is that the clarifier influent channel is located directly next to a drain channel. This drain channel was built to remove poorly flocculated water from the treatment train. If an operator observes poor flocculation, they can change the chemical dosing in an attempt to improve flocculation. In the meantime, they will want to dump the poorly flocculated water to avoid poor effluent quality. Operators can plug the entrance hole to the clarifier bays, allowing the influent channel to fill with water. Once water reaches the height of the wall separating it from the drain channel, the water will pour over from the influent channel into the drain channel. This allows operators to easily dump poorly treated water and then easily restart the clarifier once flocculation performance improves.
-
-The clarifier inlet channel is designed to distribute the flow uniformly between the clarifiers. The flow paths through the various clarifiers are identical except for the difference in the length of the path in the clarifier inlet channel. Thus the difference in piezometric head in the clarifier inlet channel must be small compared with the head loss through a clarifier. The head loss through a clarifier is dominated by the outlet manifold which is designed to have a head loss of 5 cm. This 5 cm of head loss is in turn dominated by the orifice head loss as required to achieve uniform flow distribution between the orifices (see :ref:`clarifier outlet manifold <heading_clarifier_outlet_manifold>`)
-
-For a simple conservative design we calculate the maximum channel velocity assuming that the channel cross section is constant. In our designs we slope the bottom of this channel to maintain a constant velocity to ensure that flocs are scoured and don't accumulate at the end of this channel where the velocities would be lower if the cross section were constant.
-
-We can use :eq:`Energy_and_Pi_Q_no_manifold_hl` to calculate maximum velocity in the clarifier inlet channel. In this case the average manifold piezometric head, :math:`\bar \Psi_M` ,is measured relative to the water level in the clarifier that is above the clarifier exit weir. This difference in elevation is dominated by the 5 cm of head loss created by the orifices in the clarifier outlet manifold. Solving for the maximum channel velocity we obtain
-
-.. math::
-  :label: vM_Energy_and_Pi_Q_no_manifold_hl
-
-  \bar v_{M_1} = 2\sqrt{g\bar \Psi_{Clarifier}\frac{1 - \Pi_{Q}^2}{\Pi_{Q}^2 + 1}}
-
-where :math:`\Pi_{Q}` represents the uniformity of flow distribution taken as the minimum clarifier flow divided by the maximum clarifier flow.
-
-The Ten State Standards states, "The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s." The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that value is dependent on the head loss through the clarifiers.
-
-`Here we calculate the maximum clarifier inlet channel velocity as a function of the flow distribution uniformity. <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=8DRdoLVGUmWS&line=3&uniqifier=1>`_
-
-.. _figure_Clarifier_channel_max_v:
-
-.. figure:: ../Images/Clarifier_channel_max_v.png
-    :width: 400px
-    :align: center
-    :alt: Clarifier inlet channel velocity constraints
-
-    The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.
-
-The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the clarifier head loss is 5 cm.
 
 
-.. _heading_clarifier_inlet_manifold:
+
 
 Inlet Manifold
 --------------
 
-Now, we will focus on a single clarifier bay. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the clarifier bay. This section of pipe that distributes water at the bottom of the clarifier bay is referred to as the **influent manifold** shown in :numref:`figure_influent_channel_manifold`.
 
-.. _figure_influent_channel_manifold:
-
-.. figure:: ../Images/influent_channel_manifold.png
-    :height: 300px
-    :align: center
-    :alt: Influent channel with pipe leading to one inlet manifold.
-
-    Influent channel with pipe leading to one inlet manifold.
 
 
 The port velocity for inlet manifold diffusers is set by the slot width, the width of the clarifier, and the upflow velocity in the clarifier. From mass conservation we have
@@ -376,159 +283,15 @@ Equation can also be written in terms of flow rate by substituting the continuit
 
 The maximum jet velocity increases with width of the clarifier valley because the jet thickness is proportional to valley width and the energy is dissipated more slowly as the jet width increases.
 
-Clarification tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the clarifier, Equation :eq:`max_clarifier_jet_velocity_of_G` provides the maximum jet reverser velocity.
-
-The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
-
-.. math::
-  :label: max_clarifier_manifold_velocity
-
-  \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
-
-where the port velocity, :math:`\bar v_{P}`, is equal to the jet velocity, :math:`v_{Jet_{max}}`, from Equation :eq:`max_clarifier_jet_velocity_of_G`. Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_clarifier_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
-
-The big unknown is the required design value for :math:`\zeta_{breakup}` as defined in Equation :eq:`G_of_vc_and_floc_props`. The expectation is that raw waters with high concentrations of organic matter will have lower density core particles and thus will require a smaller :math:`\zeta_{breakup}` for successful capture of the lower density flocs.
-
-The maximum velocity that could be carried by the inlet manifold given the flow expansion corresponding to the inlet can be calculated using Equation :eq:`D_pipe_min_of_K_and_jet_G_max`. This constraint would allow the use of a smaller diameter inlet manifold than the velocity constraint required by Equation :eq:`max_clarifier_manifold_velocity`.
-
-The result of the requirement for a low velocity jet to prevent floc break up is that the inlet manifold has to be large in diameter to obtain reasonably uniform flow distribution between the diffusers. This constraint is fairly severe and results in large diameter (and hence expensive) inlet manifold pipes.
-
-The fundamental problem of the inlet manifold is that the diffusers exit perpendicular to the flow of the water in the inlet manifold and thus the flow into the diffusers is set by the difference in piezometric head between the manifold and the floc filter. The kinetic energy at the inlet of the manifold is converted to increased pressure at the end of the manifold. That results in more flow out of the last diffuser ports.
-
-An alternative design would be to have each of the diffuser pipes end inside the manifold with an elbow so that the inlet to the diffuser would face upstream. This change would potentially improve the flow distribution between diffuser pipes, but the large number of diffuser pipes makes this impossible to fabricate without introducing significant additional head loss in the manifold pipe from drag around all of the diffuser inlets.
-
-To overcome the impossibility of having higher velocity in the inlet manifold and directly connecting that to the diffusers we propose to use a two stage manifold system. The manifold pipe will be split into two chambers with the top chamber being the inlet manifold and the bottom section being a new equalization chamber (see :numref:`figure_2stageInletManifold`).
-
-
-.. _figure_2stageInletManifold:
-
-.. figure:: ../Images/2stageInletManifold.png
-    :width: 400px
-    :align: center
-    :alt: two stage inlet manifold
-
-    The two stage inlet manifold with upper chamber acting as the inlet manifold and the lower chamber acting to equalize the flow from the diffusers (not shown).
-
-The inlet manifold flow is transferred to the equalization chamber through half-pipe ports that are tapered (see :numref:`figure_2stageInletManifoldfromUpstream`) to guide flow into the equalization chamber. The taper is designed to be less than the rate of the flow expansion as given by Equation :eq:`PlaneJet_expansion`.
-
-.. _figure_2stageInletManifoldfromUpstream:
-
-.. figure:: ../Images/2stageInletManifoldfromUpstream.png
-    :width: 400px
-    :align: center
-    :alt: two stage inlet manifold from upstream
-
-    The half-pipe ports face upstream and slope at a rate that is slower than the rate at which the flow expands to ensure that the flow is fully expanded before the entrance into the next half-pipe port.
-
-The manifold system must be designed so that the velocity gradient in all flow expansions is less than the maximum allowed velocity gradient. The minimum diameter of the inlet manifold is set by the largest minor loss coefficient (see Equation :eq:`D_pipe_min_of_K_and_jet_G_max`) which is created by the 90° elbow.
-
-The flow equalizer dissipates most of the kinetic energy in the inlet manifold as the flow exits the ports and enters the equalizer chamber. The ports face upstream and thus act like pitot tubes with the flow into the port controlled by the difference in total energy head between the manifold and the equalizer rather than controlled by the piezometric head (no kinetic energy term). The ports are sloped at a very gradual angle to allow the flow in the manifold to fully expand before arriving at the next port.
-
-The port diameter and port velocity are governed by two constraints.
- 1) The slope of the port must be less than the rate of flow expansion in the manifold.
- 1) The velocity gradient created by the jet entering the equalizer must be less than the maximum allowed velocity gradient.
-
-For the first constraint we use continuity to ensure that enough water enters the port to serve the diffusers that are in the length of the manifold corresponding to the sloped port. The flow per unit length of the clarifier is
-
-.. math::
-  :label: port_continuity
-
-  Q_{port} = \bar v_{port} \Pi_{vc} \frac{\pi D_{port}^2}{8}
-          = \frac{Q_{manifold}}{L_{jetreverser}} \Pi_r^L \frac{D_{port}}{2}
-
-where :math:`\Pi_r^L` is the ratio of the port length to the port radius and must have a value greater than the inverse of the plane jet expansion ratio given in Equation :eq:`PlaneJet_expansion`. Solve for the minimum port diameter.
-
-.. math::
-  :label: D_port_min_continuity
-
-   D_{port_{min}} = \frac{4 \Pi_r^L Q_{manifold}}{\bar v_{port} \Pi_{vc} L_{jetreverser}\pi}
-
-The unknown in Equation :eq:`D_port_min_continuity` is the maximum allowable value for the port velocity, :math:`\bar v_{port}`. The port velocity is limited by the maximum allowable velocity gradient.
-
-The ports all deliver kinetic energy into the equalizer and that energy has to be dissipated through turbulence without creating any large mean flows. Given that the ports are all pointed in the same direction a high velocity would be generated in the same direction as the velocity in the manifold. To counteract this effect half of the flow from each port must be reversed. This will be accomplished with a jet reverser that will catch approximately 50% of the port flow and redirect it upstream. The thickness of this reversed jet will be approximately equal 50% of the port area divided by the port diameter.
-
-.. math::
-  :label: S_port_reversed_jet
-
-  S_{jet} =  \frac{\pi D_{port}}{16}
-
-The plane jet velocity gradient given in Equation :eq:`planejet_V_max` can be combined with Equation :eq:`S_port_reversed_jet` to obtain the maximum jet velocity.
-
-.. math::
-  :label: v_port_max_of_G
-
-  \bar v_{Port_{Max}} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}
-
-Now we can combine Equations :eq:`D_port_min_continuity` and :eq:`v_port_max_of_G` and solve for the minimum port diameter.
-
-.. math::
-  :label: D_port_min
-
-   D_{port_{min}} = \left[\left(\frac{16 \Pi_{JetPlane} }{\nu \pi  G_{Max}^2 }\right) \left(\frac{4 \Pi_r^L Q_{manifold}}{ \Pi_{vc} L_{jetreverser}\pi} \right)^3 \right]^{\frac{1}{4}}
-
-The port diameter will be rounded up to the next available pipe diameter. The maximum length of the port is given by the maximum flow from the port. The maximum port velocity is given by Equation :eq:`v_port_max_of_G`. The maximum port flow is obtained by multiplying by the port area.
-
-.. math::
-  :label: port_max_spacing
-
-  Q_{port_{max}} = \bar v_{Port_{Max}} \frac{\pi D_{port}^2}{8} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
-
-The port center to center distance is obtained by matching the port flow to the flow through the diffusers.
-
-.. math::
-  :label: continuity_for_port_spacing
-
-  Q_{port_{max}} = \frac{Q_{manifold}}{L_{jetreverser}} B_{port_{max}}
-
-where :math:`B_{port}` is the center to center spacing of the ports. Combining Equations :eq:`port_max_spacing` and :eq:`continuity_for_port_spacing` we obtain the maximum port spacing.
-
-.. math::
-  :label: max_port_spacing_draft
-
-  G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8} = \frac{Q_{manifold}}{L_{jetreverser}} B_{port_{max}}
-
-Solve for the port spacing.
-
-.. math::
-  :label: max_port_spacing
-
-  B_{port_{max}} = \frac{L_{jetreverser}}{Q_{manifold}}  \left(\frac{\nu G_{Max}^2 \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
-
-Round down to the port spacing that works given the total length of the jet reverser and the requirement that there be an integer number of ports.
-
-The port reverser must have a diameter that is at least double that given by Equation :eq:`S_port_reversed_jet`. The optimal location for installing the port reverser is not yet determined. The port reverser is installed with its center below dividing plate. The port reverser center coincindes with the center of the port. The assumption is that the flow has not expanded significantly and thus the port reverser will catch the flow in the upper half of the port reverser.
 
 
 
-.. _heading_clarifier_outlet_manifold:
+
+
 
 Clarifier Outlet Manifold
 ----------------------------------
 
-The clarifier outlet manifold collects the clarified water from the top of the plate setters. The outlet manifold is required to help ensure uniform flow up through the plate settlers.  The outlet manifold has orifices and it is these orifices that provide the majority of the head loss through the clarifier. The target head loss for the outlet manifold is about 5 cm. This head loss helps ensure that flow divides evenly between clarifiers and divides evenly between the plate settlers.
-
-The outlet head loss is dominated by the orifice loss and by the exit loss where the manifold exits the clarifier and enters a channel. The total head loss through the outlet manifold, :math:`h_{e_{T}}`, is thus the sum of those two losses. If pipes were made of all possible diameters, then the ratio of orifice to manifold velocity would be exactly given by Equation :eq:`Manifold_max_v_no_hl_series` and that relationship can be used to eliminate the port velocity.
-
-.. math::
-  :label: Outlet_manifold_hl
-
-   h_{e_{T}} = h_{e_{P}} + h_{e_{M}} = \frac{\bar v_{P}^2}{2g} + \frac{\bar v_{M}^2}{2g} =\frac{\bar v_{M}^2}{2g} \left(\frac{1}{\sqrt{{\Pi_{\Psi}}}} + 1 \right)
-
-The maximum manifold velocity can be obtained by solving Equation :eq:`Outlet_manifold_hl` for the manifold velocity.
-
-.. math::
-  :label: Outlet_manifold_hl
-
-  \bar v_{M_{max}} = \sqrt{\frac{2 g h_{e_{T}}\sqrt{{\Pi_{\Psi}}}}{\sqrt{{\Pi_{\Psi}}} + 1}}
-
-The solution steps are as follows:
-
-1) Calculate the minimum manifold diameter from continuity and the maximum allowable manifold velocity, :math:`\bar v_{M_{max}}`.
-1) Calculate the manifold inner diameter from the next available pipe size.
-1) Calculate the actual manifold velocity.
-1) Calculate the manifold exit head loss.
-1) Calculate the required orifice head loss by subtracting the manifold exit head loss from the desired total head loss.
-1) Calculate the orifice diameter from the orifice head loss and the orifice flow rate given the number of orifices.
 
 The head loss through the clarifier is due to:
 
@@ -629,291 +392,14 @@ Let's recap some important conclusions from this section on the floc filter.
 - We do not yet have a consistent way for operators to observe the floc filter.
 - We do not know what exactly contributes to the ability of a floc filter to resuspend or survive variable flow.
 
-.. _heading_Clarifier_Floc_Hopper:
+
 
 Floc Hopper
 -----------
 
-The **floc hopper** provides an opportunity for floc consolidation. The floc weir controls the depth of the floc filter because as the floc filter grows, it will eventually reach the top of the floc weir. Because flocs are more dense than water, the flocs "spill" over the edge of the floc weir which allows the floc filter to stay a constant height while sludge accumulates and consolidates in the floc hopper.
 
-.. _figure_floc_hopper_highlight:
 
-.. figure:: ../Images/floc_hopper_highlight.png
-   :target: https://youtu.be/xh9dTjWRoto
-   :width: 400px
-   :align: center
-   :alt: Floc hopper detail with flocs "spilling" over the wall (click to be sent to video).
 
-   Floc hopper detail with flocs "spilling" over the wall (click to be sent to video).
-
-Consolidated sludge in the bottom of the floc hopper is then removed from the clarifier through small drain valve controlled by the operator. Floc hoppers in the lab-scale and PF300 setting are currently set at a 45 degree angle, but further optimization is needed.
-
-.. _figure_benchtop_sed:
-
-.. figure:: ../Images/benchtop_sed.png
-    :height: 300px
-    :align: center
-    :alt: Benchtop clarifier setup, highlighting the floc filter and floc hopper.
-
-    Benchtop clarifier setup, highlighting the floc filter and floc hopper.
-
-The floc hopper allows for a self-cleaning clarifier. By gravity, flocs are sent over to a floc hopper. This means that operators only have to clean the clarifier once every three to six months because there is no stagnant accumulation of anoxic sludge. When operators do clean the clarifier, they are primarily cleaning plate settlers. Under normal operation, operators can open the floc hopper drain valve whenever they want to easily drain the sludge. We don't yet have a method to guide the operation of the floc hopper, so operators determine how frequently to drain the floc hopper from experimental and operational experience. Without the floc filter transport system, other methods would be required to remove accumulated sludge in the bay. Mechanical sludge removal systems are common alternatives but are well known to be costly to install and a challenge to maintain.
-
-We've stated that a benefit of the floc filter is that flocs can be removed without mechanical assistance, but why do we need the floc hopper at all? Why can't we just install drain holes in the bottom of the clarifier so that any accumulated sludge is removed? This is a question that plagued AguaClara in its early years. At first, before we were able to successfully build and operate a floc filter, we had sludge accumulate in the bottom of the clarifier bay. Therefore, we needed to remove the sludge with drain holes at the bottom. However, to have those drain holes where the sludge was accumulating in the tank, designers made a flat bottom tank. But as we now know, the flat bottom tank is part of the reason that there wasn't any floc filter forming. As soon as we realized that we could grow a floc filter with a sloped bottom tank and a jet reverser, we could not use drain holes in the bottom of the tank. Why? Because in the bottom of tanks with floc filters created by jet reversers, there is no settling. Drain holes at the bottom of a sloped tank would be draining a combination of flocculated water and floc filter water, neither of which are consolidated thus making the draining ineffective and inefficient. A benefit of the floc hopper is that there is no upflow velocity, which means that the sludge is able to settle and become more dense, allowing for less water waste from draining sludge.
-
-Floc filter flow into the floc hopper is a function of the mass flux of particles into the clarifier. In order to optimize the floc hopper design, we need to characterize the consolidation rate of the flocs. We do not have a good model for this yet; developing one would allow us to optimize design and guide operators for how much and how frequently the floc hopper should be drained.
-
-.. _heading_Clarifier_Plate_Settlers:
-
-Plate Settlers
---------------------
-
-After flowing through the floc filter, flocs reach the **plate settlers**. Plate settlers are sloped surfaces that provide additional settling area for flocs, thereby increasing the effective settling area of the clarifier without increasing the plan view area. AguaClara plate settlers are sloped at 60 degrees. In our discussion of horizontal and vertical flow clarifiers, an important design parameter was capture velocity which was set by flow rate and plan view area of the clarifier. With the introduction of plate settlers, the important design parameter changes. What matters is not just the plan view area of the clarifier, but instead the projected area of all of the surfaces where particles can settle out, which we call the effective settling area. Without plate settlers, the only way we could improve performance and impact the capture velocity was by increasing the plan view area of the clarifier. With plate settlers, we can improve performance by adding additional settling area without increasing the plan view area. This allows for greater treatment efficiency at low cost because we can maintain a small footprint. Note that plate settlers can also be referred to as lamella settlers, or lamellas.
-
-The first thing that we will discuss is how flocs can settle on plates. To understand this, we will ask a few questions about how particles and flocs will flow between two plate settlers.
-
-1) What is the critical path?
-
-We need particles to settle on the bottom plate for it to be effectively captured. Thus, the critical path can be shown by a floc that enters the plate settlers closest to the upper plate, because it will have the greatest distance to settle.
-
-.. _figure_plate_settler_critpath:
-
-.. figure:: ../Images/plate_settler_critpath.png
-    :height: 300px
-    :align: center
-    :alt: Critical path between two plate settlers.
-
-    Critical path between two plate settlers.
-
-2) How far must the particle settle to reach the lower plate?
-
-Let's make a simplification and assume that water is flowing with uniform velocity between the plates, represented by a "top hat" velocity profile. This is a significant assumption, but it is used to help us understand the critical path. The fluid is carrying the floc between the inclined plates while gravity is pulling the floc down. Therefore, a particle must fall the vertical distance between the plates, which is the critical height, :math:`H_c`. The plates are positioned at an angle, :math:`\alpha`, to ensure that settling flocs slide down to the floc filter. The critical height :math:`H_c` can be expressed in terms of plate settler length, :math:`L`, and plate settler angle, :math:`\alpha`, by :math:`H_c=\frac{S}{cos\alpha}`.
-
-.. _figure_plate_settler_critheight:
-
-.. figure:: ../Images/plate_settler_critheight.png
-    :height: 300px
-    :align: center
-    :alt: Critical height between two plate settlers.
-
-    Critical height between two plate settlers.
-
-3) What is the total vertical distance that the critical particle will travel?
-
-Taking the vertical component of the critical path, we see that the total vertical distance is :math:`H` where :math:`H =L sin\alpha`.
-
-4) What is the net vertical velocity of a floc between the plate settlers?
-
-The fluid carries the floc between the plate settlers while gravity pulls the floc down. The velocity through the plate settlers has both a horizontal component, :math:`\bar v_{x_{Plate}}`, and vertical component, :math:`\bar v_{z_{Plate}}`, with a resultant velocity we call :math:`\bar v_{\alpha_{Plate}}`.
-
-.. _figure_plate_settler_valpha:
-
-.. figure:: ../Images/plate_settler_base.png
-    :height: 300px
-    :align: center
-    :alt: Velocity components between two plate settlers.
-
-    Velocity components between two plate settlers.
-
-This means that the net vertical velocity :math:`v_{z_{net}}` is the vertical component of flow minus the settling velocity of the floc. Recall our previous discussion of terminal velocity and capture velocity; in this case, because we are designing a plate settler specifically to capture the critical particle, the terminal velocity equals the capture velocity. The terminal velocity is a function of the velocity that the critical particle settles at and the capture velocity is a function of the reactor geometry which we are designing to capture the critical particle. Thus, :math:`\bar v_{z_{net}} = \bar v_{z_{Plate}} - \bar v_{c}`.
-
-.. _figure_plate_settler_vnet:
-
-.. figure:: ../Images/plate_settler_vnet.png
-    :height: 300px
-    :align: center
-    :alt: Net velocity between two plate settlers.
-
-    Net velocity between two plate settlers.
-
-From answering the questions above, we know that the particle must fall the distance :math:`H_c` at its terminal velocity in the same amount of time that it rises a distance :math:`H` at its net upward velocity, because otherwise it would not be captured; time to travel :math:`H_c` = time to travel :math:`H`
-
-Finding time by dividing by distance by velocity for each travel,
-
-.. math::
-
-  Time = \frac{H_c}{\bar v_c} = \frac{H}{\bar v_{z_{net}}}
-
-Substituting for :math:`\bar v_{z_{net}} = \bar v_{z_{Plate}}-v_{c}`,
-
-.. math::
-
-  Time = \frac{H_c}{\bar v_c} = \frac{H}{\bar v_{z_{Plate}}- \bar v_{c}}
-
-Using trigonometric substitutions for :math:`H_c` and :math:`H`,
-
-.. math::
-
-  Time = \frac{S}{\bar v_c cos\alpha} = \frac{L sin\alpha}{\bar v_{z_{Plate}} - \bar v_{c}}
-
-Rearranging to solve for :math:`\bar v_{c}`,
-
-.. math::
-
-  \bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
-
-Rearranging to solve for :math:`\frac{\bar v_{z_{Plate}}}{\bar v_{c}}`,
-
-.. math::
-
-  \frac{\bar v_{z_{Plate}}}{\bar v_{c}} = 1+\frac{L}{S}cos\alpha sin\alpha
-
-The equation that we determined for critical velocity, :math:`\bar v_c`, shows its dependence on plate settler geometry. Through another derivation, we can prove that by considering the total projected area over which particles can settle, we determine the same critical velocity.
-
-Beginning with :math:`Q = \bar vA`, we can modify the equation to fit the specific flow through a plate settler, :math:`Q = \bar v_{\alpha_{Plate}}SW`.
-
-Using trigonometric substitutions, we know that :math:`\frac{\bar v_{z_{Plate}}}{\bar v_{\alpha_{Plate}}} = sin\alpha` and :math:`\frac{\bar v_{z_{Plate}}}{sin\alpha} = v_{\alpha}`. So,
-
-.. math::
-
-  Q = \frac{\bar v_{z_{Plate}}SW}{sin\alpha}
-
-Determining the horizontal projection of the plate settlers,
-
-.. math::
-
-  S = Lcos\alpha + \frac{S}{sin\alpha}
-
-Substituting for area, :math:`A`,
-
-.. math::
-
-  A = (Lcos\alpha + \frac{S}{sin\alpha})W
-
-Solving for :math:`\bar v_c = \frac{Q}{A}`
-
-.. math::
-
-  \bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
-
-We can see that there are five parameters which will impact each other in our design :math:`\bar v_{z_{Plate}}, \bar v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`\bar v_{z_{Plate}}, \bar v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <heading_Clarifier_Plate_Settler_Design>`.
-
-The 'active' sedimentation zone refers to the area of the tank in which water can flow through the plate settlers where:
-
-| :math:`L_{SedActive} =` length of the clarifier that includes entrance to a plate settlers
-| :math:`\bar v_{z_{Active}} =` upflow velocity of the water entering the plate settlers; vertical velocity in 'active' region
-
-The only reason that there is a distinction between this area and the floc filter area is because plate settlers are built at an angle. This angle creates a "lost triangle" because there is a space in which the plate settlers are not effective and water does not flow through them. Because the active length is less than the floc filter length, :math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, the average active velocity must be greater than the average upflow velocity through the floc filter, :math:`\bar v_{z_{Active}} > \bar v_{z_{ff}}`. The same flow going through less area means that the velocity must increase.
-
-Thus, :math:`Q_{Clarifier} = W_{Clarifier} L_{SedActive} \bar v_{z_{Active}}`, and :math:`\bar v_{z_{Active}} > \bar v_{z_{ff}}`.
-
-Now, we will discuss flow through plate settlers where:
-
-| :math:`\bar v_{z_{Plate}} =` upflow velocity of the water in the plate settlers; vertical velocity component between the plate settlers
-| :math:`S =` spacing between plate settlers
-| :math:`B =` center-to-center distance between plate settlers
-| :math:`T =` thickness of plate settlers
-| :math:`L =` length of plate settlers
-
-We know that plate settlers have a certain thickness and take up area, which means that once we reach the plate settler zone, there is less area for water to travel through. Because flow is conserved and there is a decrease in area, we know that the upflow velocity of water through the plate settlers must increase compared to the upflow velocity of water below the plate settlers, :math:`\bar v_{z_{Plate}} > \bar v_{z_{Active}}`.
-
-Thus, :math:`\bar v_{z_{Plate}} > \bar v_{z_{Active}} > \bar v_{z_{ff}}`
-
-In addition to the vertical velocity component increasing between the plates, the resultant velocity of water between the plates increases compared to :math:`\bar v_{z_{Active}}`. What are the two reasons that this is true?
-
-- The first reason, as already discussed, is that the vertical velocity component needs to increase to ensure conservation of flow.
-
-- The second reason has to do with the fact that the resultant velocity of water between the plates is at an angle. This means that there is a horizontal component introduced. Because we know that the vertical velocity increases, and there is a new positive horizontal velocity component, the resultant velocity must also increase.
-
-Now, consider a tube settler used in a lab setting instead of a plate settler. If a tube settler was designed with an angle to mimic a plate settler, would the water change vertical velocity after the angle? How does this compare to the plate settler scenario? In the case of the tube settler, the vertical velocity does not increase because there is no change in flow area; the diameter of the tube is constant throughout, meaning that for the flow to remain constant, the velocity does not change.
-
-For another example of flow conservation, let's consider the relationship between :math:`\bar v_{z_{Plate}}*S` and :math:`\bar v_{z_{Active}}*B`. :math:`B` is the center-to-center distance between plate settlers, and does not take into account the thickness of plate settlers. Considering only the center-to-center distance means that the area for water to travel through does to change from before the plate settlers to within the plate settlers because we are not accounting for any thickness. If the area does not change, then velocity should also not change to keep flow conserved. However, if we are to account for thickness, we must discuss :math:`S` which is the spacing between plate settlers. This does take into account the change in area,  which means that the velocity would need to increase through the lesser area. So if we look at the flow through plate settlers, we can confirm that :math:`\bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B`.
-
-By using flow conservation and plate settler geometry, we can begin to understand the mathematical relationships that drive design.
-
-
-Now that we have established how flocs settle on the plate and the increase in plan view area that plate settlers offer, we need to discuss how flocs will act once they are on the plates. We want particles and flocs that settle to agglomerate and slide down the plate settlers to be returned to the floc filter. We will explore this concept by first considering the desired spacing between plate settlers.
-
-Let's start with a basic question. If we know that adding plate settlers improves performance, why don't we just keep adding more and more plate settlers to our system? Is there any impact of placing plates closer together?
-
-We know that more plates means more effective settling area which means that we could remover more particles and make our tank smaller to save money and limit the use of concrete. But how close can those plates be?
-
-The Ten State Standards report that plate settlers should have a separation of two inches, with very long plate settlers, which means very deep tanks. Clarification tanks are usually 4 meters deep, maybe because filters are also deep. This is a result of the engineering context rather than the basic design principles. The Ten State Standards are primarily based off the modification of existing clarifiers which were usually built deep and then plate settlers were added. This means that there wasn't added incentive to optimize the entire plate settler and tank process because the tanks were already built. However, AguaClara designs are made to use all of the AguaClara innovations in a green field, meaning that we are incentivized to optimize every part of this design process.
-
-AguaClara plants can design for changes in the depth and/or plan view area of the tank for optimal plate settler efficiency. We want to have the smallest and shallowest tanks possible for low cost and ease of construction. We know that in the plate settler design, there is a dimensionless parameter of plate spacing to length, :math:`\frac{S}{L}`. The ratio is close to constant, which means that if we double the length of the plate settler, we can double the spacing between the plate settler and get the same performance as when we started. Conversely, if we halve the distance between the plate settlers, we can halve the length of the plate settlers. But how far can we push this? Can we make really compact plate settlers?
-
-What we really want to know is: what is the connection between spacing of plate settlers and performance?
-
-.. _figure_plate_settler_depth:
-
-.. figure:: ../Images/plate_settler_depth.png
-    :height: 300px
-    :align: center
-    :alt: Relationship between plate settler length and clarifier depth.
-
-    Relationship between plate settler spacing and clarifier depth.
-
-When we were discussed how plate settlers promote settling, we assumed a uniform velocity profile between the plates. However, we know from fluid mechanics and boundary layer rules that in reality, there is a nonuniform velocity profile. The flow between the plates, as determined by the Reynolds number, is laminar which means that there is a parabolic velocity profile between the plates and the shape of the parabola is affected by the distance between the plates.
-
-.. _heading_Floc_Rollup:
-
-There are some cases in which the plates are so close that even if flocs settle on the plate, they do not slide down. This is called **floc rollup**. Consider the following questions:
-
-1) Why would flocs roll up?
-
-It is a force balance! There is a force of gravity pulling the particle down, balanced with the force that the fluid flow exerts through drag related to viscosity. But why does it matter if plates are close together for floc roll up? The average velocity between plates is about 1 mm/s and is the same for any spacing. However, when plates are closer together the velocity profile is much steeper. Compared with plates with greater spacing, the closer plates cause there to be a higher velocity closer to the surface of the plate. This means that flocs between closely spaced plates will see a greater velocity closer to the plate settler, which will impact the force balance. The derivation of the force balance is found in the section on :ref:`plate settler design <heading_Floc_Rollup_Derivation>`.
-
-2) How would you define the transition between floc rollup and slide down? What would describe the case for a floc that is stationary on the plate settler (not rolling up or sliding down?)
-
-The transition is defined as when the gravitational forces and the fluid drag forces match.
-
-3) Will little flocs or big flocs be most vulnerable to floc rollup?
-
-This is a very complicated question. We would expect big flocs to slide down because they are heavier and have a greater gravitational force. However, bigger flocs also have a greater drag force and are out further into the flow. Because of the velocity profile, they will feel a higher velocity than smaller flocs. This means that the answer to this question should be determine mathematically, which it is in the next section.
-
-4) Will large or small spacing between plates cause more floc rollup?
-
-As we have already suggested, small spacing between plates will cause more floc rollup due to the steeper resulting velocity profile between the plates.
-
-.. _figure_floc_rollup:
-
-.. figure:: ../Images/floc_rollup.png
-    :target: https://youtu.be/cQJxLO0WOPA
-    :height: 300px
-    :align: center
-    :alt: Floc rollup between two plates (click to be sent to video).
-
-    Floc rollup between two plates (click to be sent to video).
-
-So what does this mean for plate settler spacing? Let's review some results from lab experiments. The following graph shows minimum plate settler spacing (mm) as a function of floc terminal velocity (mm/s). Some important things to note are that AguaClara plate settlers are designed for a capture velocity of 0.12 mm/s (recall that this capture velocity means that we want to capture flocs that are settling at 0.12 mm/s and faster). Before AguaClara filters were designed and deployed, AguaClara adopted the 0.12 mm/s capture velocity in an effort to reduce effluent turbidity as much as possible.
-
-A plot of Equation :eq:`Plate_S_min_of_fractal_of_2` reveals that the minimum spacing is strongly influenced by the density of the core particle and by the temperature. The minimum spacing increases as the size of the primary particle, :math:`D_{cp}`, decreases. This is an important insight because flocs that are made of coagulant nanoparticles and dissolved organics are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.
-
-.. _figure_SofRollupwithfractal2:
-
-.. figure:: ../Images/SofRollupwithfractal2.png
-   :height: 300px
-   :align: center
-   :alt: Floc roll up as a function of core particle density and temperatures
-
-   Plate settler spacing must increase to capture low density flocs.
-
-Given that AguaClara uses a lower upflow velocity, :math:`\bar v_{z_{Plate}}`, than many plate settler designs it is reasonable for us to use more closely spaced plates. More work is required to characterize the density and size of the core particles as a function of raw water constituents to provide guidance on the required plate spacing.
-
-AguaClara plate settlers are currently using separations of 2.5 cm, which is far above the constraint of floc roll up except for very low density flocs. As floc density decreases, as we expect for organic matter, minimum spacing increases. However, we don't yet know what that spacing is or where the boundary is because we don't know the properties of the humic acid-coagulant flocs. Further research is required here to determine the floc properties of flocs that are dominated by dissolved organic matter.
-
-Why does the plate settling distance matter so much? How much does it impact the rest of the clarifier and its design?
-
-One impact of plate settler spacing is on clarifier depth. We know that the spacing between plate settlers has a strong influence on clarifier depth and closer plate settlers allows for shallower tanks. There is a diminishing effect for small spacings, meaning that the difference in depth between 5 and 2.5 cm spacing is greater than the different in depth between 2.5 and 1 cm spacing. Because AguaClara does not yet have a good model for non-clay flocs, we cannot optimize our plate settler spacing and thus cannot optimize for the shallowest tanks possible.
-
-.. _heading_Clarifier_Plate_Settlers_Head_Loss_Intro:
-
-Another impact of plate settler spacing is on flow distribution in the tank. This is related to our previous discussion of pressure recovery and flow distribution. Reduced spacing between plates leads to an increased pressure drop through the plate settlers due to higher head loss as shown in Equation :eq:`plate_settler_headloss`. Therefore, plate settlers with small spacing will have more uniform flow distributions because head loss will dominate. This use of head loss can potentially get us better flow distribution. When the plates are brought closer together, there is more shear between the plates because the average velocity remains the same. The velocity gradient is higher between closer plates, which leads to higher shear, and thus higher head loss.
-
-However, if the plates are closer together, then they will be shorter in length to keep the capture velocity constant. The decrease in length decreases the total amount of shear. The head loss from the competing impacts to shear can be determined through a force balance and the Navier-Stokes equation, as shown in the derivation of :ref:`head loss through a plate settler <heading_Clarifier_Hl_thru_Plate_Settlers>`.
-
-.. _figure_plate_settler_headloss_spacing:
-
-.. figure:: ../Images/plate_settler_headloss_spacing.png
-   :height: 300px
-   :align: center
-   :alt: Head loss as a function of plate settler spacing.
-
-   Head loss as a function of plate settler spacing.
-
-The important thing to note is that after determining head loss as a function of plate settler spacing, we realize that the plate settlers do not provide much head loss at the design separation of 2.5 cm. Head loss through plate settlers is really small, which means that they do not contribute much to equalizing flow distribution.
-
-The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. This means that if there is any flow entering the plate settlers at greater than 4 mm/s, the head loss provided by the plate settlers will not be sufficient to dampen the nonuniformity and there will not be adequate flow distribution. Luckily for us, the upflow velocity through the clarifier is on average 1 mm/s, which fulfills the requirement of less than 4 mm/s. The floc filter plays a very important role here in providing uniform vertical flow of 1 mm/s so that the flow between the plate settlers can be close to uniform.
 
 
 However, remember the diffusers that distribute water into the clarifier? They create velocities on the order of 100 mm/s. Those high initial velocities are damped out by the floc filter which helps to distribute the flow. If we weren't able to use the floc filter to dampen the flow to be less than 4 mm/s, then the plate settlers would not provide any head loss to help with uniform flow distribution. This point about uniform flow is really important.
@@ -985,89 +471,16 @@ Now that we have passed through the plate settlers, we are ready to leave the cl
 Submerged Effluent Manifold
 ------------------------------
 
-The **submerged effluent manifold**, sometimes called a launder, collects settled water from the clarifier. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the clarifier. Recall that the influent manifold also uses a submerged pipe and orifice design to distribute flow. However, unlike the influent manifold, the effluent manifold does not include diffusers because we do not need to precisely control velocity and flow direction.
 
-.. _figure_effluent_manifold:
-
-.. figure:: ../Images/effluent_manifold.png
-    :height: 300px
-    :align: center
-    :alt: Effluent manifold from the side- and top-view.
-
-    Effluent manifold from the side- and top-view.
-
-The orifices in the pipe are evenly distributed along the length of the pipe to promote even flow collection from the tank. The orifices are designed create uniform head loss. Is this head loss "good" or "bad"? Like the diffusers, the orifices in the effluent manifold create "good" head loss because they increase head loss through all flow paths. This is critical because there is pressure recovery within the effluent manifold that creates "bad" head loss.
-
-Are there effluent manifold exit losses? What type of head loss would it be? This head loss is a result of exit loss into its receiving channel. Is it "good" or "bad"? This head loss is also "good" head loss because it impacts all flow paths the same; each clarifier bay and all water within a single bay is subject to the same amount of exit loss.
-
-Why did AguaClara design the effluent manifold to be submerged? There are 3 main reasons.
-
-#. It is designed to be submerged because sometimes there are particles or substances that rise to the top of clarifiers and float on the water surface. These particles or substances may be flocs that escaped capture and remain buoyant, or may be foam or scum that results from organic matter in the water. No matter what it is that is rising to the water surface, we want to avoid it entering the settled water effluent pipe. Placing the effluent manifold below the surface allows particles or substances floating on the surface to remain separate from the effluent water headed towards filtration. Operators can then skim the water surface to remove and dispose of anything that floats.
-
-#. The launders were also designed to be submerged to simplify construction. Effluent launders that also act as weirs must be installed perfectly level. This is difficult to ensure during construction and thus we have elected to use a single weir to regulate the water level in all of the clarifiers. The water from all of the clarifiers in one treatment train joins together in a common channel before flowing over the exit weir.
-
-#. The submerged launder and exit weir system also make it possible to refill and empty a clarifier with clean water, as shown in the following video.
-
-.. _figure_clarifier_fill_empty:
-
-.. figure:: ../Images/clarifier_fill_empty.png
-    :target: https://youtu.be/B_LEH1ezd6E
-    :height: 300px
-    :align: center
-    :alt: Clarification tank filling and emptying with clean water (click to be sent to video).
-
-    Clarification tank filling and emptying with clean water (click to be sent to video).
-
-Why are the orifices in the effluent manifold located at the top of the pipe?
-They are located on the top to promote even flow collection and for ease of operation and maintenance. The orifices need to be either located on the top or bottom so that they are symmetrical about the tank because if the orifices were put on the sides, then they might not draw water evenly from the entire tank. So, we are to choose between the top or the bottom; which would be better for operation and maintenance? The top is better because orifices located on the top of the pipe can be easily observed and maintained by operators in case any clogging occurs. We also want to limit the number of flocs that rise through the plate settlers and enter the effluent manifold. Locating the orifices on the top discourages that from happening by not drawing up directly from the top of plate settlers and by giving more time for flocs to potentially settle.
 
 .. _heading_Clarifier_Exit_Weir_Channel:
 
 Exit Weir and Effluent Channel
 ----------------------------------------
 
-The submerged effluent manifold transports water from the clarifier to a channel that runs perpendicular to the clarifier bays. The channel collects water from all of the clarifier bays. Water leaves this channel by flowing over a small wall, called the **exit weir**. The clarifier exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and clarifier. In construction, great care is taken to ensure that this weir is at the right elevation and is level. After the water flows over the exit weir, it is collected in the **effluent channel**. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box.
 
-.. _figure_channel_labeled:
 
-.. figure:: ../Images/channel_labeled.png
-    :height: 300px
-    :align: center
-    :alt: Image of clarifier channels.
 
-    Image of clarifier channels.
-
-.. _figure_channel_labeled_cad:
-
-.. figure:: ../Images/channel_labeled_cad.png
-    :height: 300px
-    :align: center
-    :alt: Figure of clarifier channels.
-
-    Figure of clarifier channels.
-
-.. _heading_Clarifier_Conclusions:
-
-Clarifier Summary
-=================
-
-You have now been introduced to the AguaClara clarifier in three parts:
-
-#. How water enters the clarifier;
-#. How water moves through the clarifier, and;
-#. How water leaves the clarifier.
-
-This introduction should allow you to understand the components of the clarifier, the purpose of each component, and AguaClara-specific innovations.
-
-Let's recap some important points about the clarifier.
-
-- The AguaClara clarifier includes three process in one tank: filtration, sedimentation, and consolidation.
-- Floc filters improve clarifier performance two ways. First, they produce a uniform upward velocity so that the flow is distributed evenly between the plate settlers. Second, they filter small particles and flocs that have terminal velocities that are too low to be captured by the plate settlers.
-- The floc filter and floc hopper design eliminate the need for mechanized sludge removal by using hydraulic sludge removal.
-- Plate settlers make it possible to significantly reduce the plan-view area of the clarifier.
-- Reduced plate settler spacing allows for shallower, and therefore cheaper, tanks.
-- Flow distribution is very important in clarifier design.
-- Hydraulic residence times can be greatly decreased using AguaClara innovations. While some standards suggest a minimum of four hours for sedimentation processes, AguaClara plants have shown that a hydraulic residence time of 24 minutes is sufficient for efficient clarification.
 - The AguaClara clarifier design is driven by the need for high treatment capability coupled with easy operation and maintenance.
 - There is "good" head loss introduced by the influent manifold entrance, diffusers, effluent manifold orifices, and effluent manifold exit. There is "bad" head loss introduced by pressure recovery in the influent channel, influent manifold, and effluent manifold. Even flow distribution is achieved by ensuring that "good" head loss dominates through intentional design.
 

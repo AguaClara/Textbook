@@ -7,14 +7,27 @@
 
 .. _title_Clarifier_Derivations:
 
-***********************************************
-Clarification Deriviations
-***********************************************
+*********************
+Clarifier Derivations
+*********************
+
+
 
 .. _heading_Clarifier_Plate_Settler_Design:
 
 Plate Settler Design
 ====================
+
+The vertical component of the velocity in the plate settlers is greater than the vertical velocity in the floc filter due to the lost triangle at the one end of the plate settlers and due to the thickness of the plate settlers (:numref:`figure_clarifier_velocities`).
+
+.. _figure_clarifier_velocities:
+
+.. figure:: ../Images/clarifier_velocities.png
+    :height: 300px
+    :align: center
+    :alt: velocities in the clarifier.
+
+    Clarifier vertical velocity components in the floc filter, the active plate settler zone, and inside the plate settlers.
 
 Parameters
 -----------
@@ -66,27 +79,21 @@ We also already know from our :ref:`discussion of plate settlers <heading_Clarif
 .. math::
   :label: vc_of_vz_plate
 
-  \bar v_c = \frac{S  \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
+  \bar v_c = \frac{S  \bar v_{z_{Plate}}}{L sin\alpha cos\alpha + S}
 
 Substitute for :math:`\bar v_{z_{Plate}} = \frac{\bar v_{z_{Active}}(S+T)}{S}` by,
 
 .. math::
+  :label: vc_of_vz_
 
-  \bar v_c = \left(\frac{S}{Lsin\alpha cos\alpha + S}\right)\left(\frac{\bar v_{z_{Active}}(S+T)}{S}\right)
+  \bar v_c = \left(\frac{S}{L sin\alpha cos\alpha + S}\right)\left(\frac{\bar v_{z_{Active}}(S+T)}{S}\right)
 
-Now, we can use this form of the capture velocity equation to solve for :math:`B` or :math:`L`, as shown by,
-
-.. math::
-
-  B = \frac{Lsin\alpha cos\alpha - T}{\frac{\bar v_{z_{Plate}}}{\bar v_c}-1}
+Now, we can use this form of the capture velocity equation to solve for :math:`L`, as shown by,
 
 .. math::
+  :label: L_plate_settler
 
-  L = \frac{B\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}-1\right) + T}{sin\alpha cos\alpha}
-
-.. math::
-
-  L = \frac{S\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}-1\right) + T\left(\frac{\bar v_{z_{Plate}}}{\bar v_c}\right)}{sin\alpha cos\alpha}
+  L = \frac{S\left(\frac{\bar v_{z_{Active}}}{\bar v_c}-1\right) + T\left(\frac{\bar v_{z_{Active}}}{\bar v_c}\right)}{sin\alpha cos\alpha}
 
 .. _heading_Clarifier_Plate_Settler_Design_Review:
 
@@ -222,13 +229,7 @@ Substituting by the trigonometric relationship :math:`\bar v_{\alpha_{Plate}} = 
 **3) Find terminal velocity of the floc down the plate (for the case of zero velocity fluid):**
 
 
-The terminal velocity of a floc is given by Equation :eq:`vt_of_floc`. We can rearrange this equation to solve for :math:`D_{floc}` by
-
-.. math::
-
-  D_{floc} = D_{cp} \left( \frac{18 v_t \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}}\right) ^{\frac{1}{ \Pi_{fractal} - 1}}
-
-We will need this equation for :math:`D_{floc}` in the next step.
+The terminal velocity of a floc is given by Equation :eq:`vt_of_floc`.
 
 .. _figure_floc_rollup_step3:
 
@@ -584,7 +585,7 @@ The bottom-view of the diffuser is shown in :numref:`figure_BvsS_diffuser`.
 | :math:`Q_{diff} =` flow rate through each diffuser
 | :math:`h_{L,jet} =` head loss in jet leaving the jet reverser
 
-What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our clarifier, we want an upflow velocity of 1 mm/s. The velocity gradient in the jet leaving the jet reverser must be low enough so that it 
+What is the target shape of the diffuser? We know that the diffuser must be sized so that our velocity constraints will be achieved. The minimum velocity constraint comes from the need to keep flocs resuspended. We also know that in the active region of our clarifier, we want an upflow velocity of 1 mm/s. The velocity gradient in the jet leaving the jet reverser must be low enough so that it
 
 Let's begin by finding the internal width of a single diffuser. Using conservation of flow, we know that,
 

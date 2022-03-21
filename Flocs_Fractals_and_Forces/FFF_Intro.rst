@@ -316,6 +316,13 @@ Clay based flocs with diameters around 200 :math:`\mu m` have a terminal velocit
 
 Our understanding of floc terminal velocity suggests that we can decide the size of the floc that we want the plate settlers to capture. If we decide that we want to capture flocs that are 35 :math:`\mu m` or larger, we know that we must design the plate settlers to capture flocs falling at 0.12 :math:`\frac{mm}{s}`.
 
+The diameter of a floc as a function of the terminal velocity is obtained from Equation :eq:`vt_of_floc`
+
+.. math::
+  :label: d-floc-of-vt
+
+  D_{floc} = D_{cp} \left( \frac{18 v_t \nu }{D_{cp}^2g} \frac{ \rho_{H_2O}}{ \rho_{cp} - \rho_{H_2O}}\right) ^{\frac{1}{ \Pi_{fractal} - 1}}
+
 If we assume the fractal dimension is 2, then Equation :eq:`vt_of_floc` simplifies to
 
 .. math::

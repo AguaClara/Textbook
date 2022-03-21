@@ -89,7 +89,7 @@ The three main steps that need to be accomplished for a clarifier to be successf
 
 1) Suspended flocs need to be able to settle out of the water.
 1) Settling flocs need to be able to move from wherever they settle to a resuspension zone.
-1) 
+1)
 
 Clarification is ubiquitous in water treatment. Nevertheless, the process is very complex with many failure modes and there are many active research areas. The following sections will explore the state of conventional sedimentation systems and their challenges, gaps in knowledge, and the AguaClara approach to clarification.
 
@@ -294,9 +294,275 @@ There are some important differences between horizontal and vertical clarifiers.
 - vertical flow tanks require careful attention to the delivery of water in the bottom of the tank and the extraction of water in the top of the tank;
 - vertical and horizontal flow tanks may have different velocities and turbulence capacities due to plan view areas;
 - research on tube settlers by `Brentwood Industries <https://www.brentwoodindustries.com/water-wastewater-products/tube-settlers/>`_ suggests that settle capture velocities should be 0.12 - 0.36 mm/s;
-- research on horizontal flow tanks in *Surface Water Treatment for Communities in Developing Countries* by Schulz and Okun suggests that settle capture velocities should be 0.24 - 0.72 mm/s.
+- research on horizontal flow tanks in *Surface Water Treatment for Communities in Developing Countries* by Schulz and Okun suggests that settle capture velocities should be 0.24 - 0.72 mm/s. However, the very low head loss through plate settlers suggests that horizonal flow tanks will have preferential flow up through the plate settlers at the end of the tank furthest from the tank inlet.
+
+.. _heading_Clarifier_Plate_Settlers:
+
+Plate Settlers
+==============
+
+Plate settlers are sloped surfaces that provide additional settling area for flocs, thereby increasing the effective settling area of the clarifier without increasing the plan view area. AguaClara plate settlers are sloped at 60 degrees. In our discussion of horizontal and vertical flow clarifiers, an important design parameter was capture velocity which was set by flow rate and plan view area of the clarifier. With the introduction of plate settlers, the important design parameter changes. What matters is not just the plan view area of the clarifier, but instead the projected area of all of the surfaces where particles can settle out, which we call the effective settling area. Without plate settlers, the only way we could improve performance and impact the capture velocity was by increasing the plan view area of the clarifier. With plate settlers, we can improve performance by adding additional settling area without increasing the plan view area. This allows for greater treatment efficiency at lower cost because we can maintain a small footprint. Note that plate settlers can also be referred to as lamella settlers, or lamellas.
+
+.. _heading_plate_capture_velocity:
+
+Capture Velocity
+----------------
+
+The first thing that we will discuss is how flocs can settle on plates. To understand this, we will ask a few questions about how particles and flocs will flow between two plate settlers.
+
+1) What is the critical path?
+
+We need particles to settle on the bottom plate for it to be effectively captured. Thus, the critical path can be shown by a floc that enters the plate settlers closest to the upper plate, because it will have the greatest distance to settle.
+
+.. _figure_plate_settler_critpath:
+
+.. figure:: ../Images/plate_settler_critpath.png
+    :height: 300px
+    :align: center
+    :alt: Critical path between two plate settlers.
+
+    Critical path between two plate settlers.
+
+2) How far must the particle settle to reach the lower plate?
+
+Let's make a simplification and assume that water is flowing with uniform velocity between the plates, represented by a "top hat" velocity profile. This is a significant assumption, but it is used to help us understand the critical path. The fluid is carrying the floc between the inclined plates while gravity is pulling the floc down. Therefore, a particle must fall the vertical distance between the plates, which is the critical height, :math:`H_c`. The plates are positioned at an angle, :math:`\alpha`, to ensure that settling flocs slide down to the floc filter. The critical height :math:`H_c` can be expressed in terms of plate settler length, :math:`L`, and plate settler angle, :math:`\alpha`, by :math:`H_c=\frac{S}{cos\alpha}`.
+
+.. _figure_plate_settler_critheight:
+
+.. figure:: ../Images/plate_settler_critheight.png
+    :height: 300px
+    :align: center
+    :alt: Critical height between two plate settlers.
+
+    Critical height between two plate settlers.
+
+3) What is the total vertical distance that the critical particle will travel?
+
+Taking the vertical component of the critical path, we see that the total vertical distance is :math:`H` where :math:`H =L sin\alpha`.
+
+4) What is the net vertical velocity of a floc between the plate settlers?
+
+The fluid carries the floc between the plate settlers while gravity pulls the floc down. The velocity through the plate settlers has both a horizontal component, :math:`\bar v_{x_{Plate}}`, and vertical component, :math:`\bar v_{z_{Plate}}`, with a resultant velocity we call :math:`\bar v_{\alpha_{Plate}}`.
+
+.. _figure_plate_settler_valpha:
+
+.. figure:: ../Images/plate_settler_base.png
+    :height: 300px
+    :align: center
+    :alt: Velocity components between two plate settlers.
+
+    Velocity components between two plate settlers.
+
+This means that the net vertical velocity :math:`v_{z_{net}}` is the vertical component of flow minus the settling velocity of the floc. Recall our previous discussion of terminal velocity and capture velocity; in this case, because we are designing a plate settler specifically to capture the critical particle, the terminal velocity equals the capture velocity. The terminal velocity is a function of the velocity that the critical particle settles at and the capture velocity is a function of the reactor geometry which we are designing to capture the critical particle. Thus, :math:`\bar v_{z_{net}} = \bar v_{z_{Plate}} - \bar v_{c}`.
+
+.. _figure_plate_settler_vnet:
+
+.. figure:: ../Images/plate_settler_vnet.png
+    :height: 300px
+    :align: center
+    :alt: Net velocity between two plate settlers.
+
+    Net velocity between two plate settlers.
+
+From answering the questions above, we know that the particle must fall the distance :math:`H_c` at its terminal velocity in the same amount of time that it rises a distance :math:`H` at its net upward velocity, because otherwise it would not be captured; time to travel :math:`H_c` = time to travel :math:`H`
+
+Finding time by dividing by distance by velocity for each travel,
+
+.. math::
+
+  Time = \frac{H_c}{\bar v_c} = \frac{H}{\bar v_{z_{net}}}
+
+Substituting for :math:`\bar v_{z_{net}} = \bar v_{z_{Plate}}-v_{c}`,
+
+.. math::
+
+  Time = \frac{H_c}{\bar v_c} = \frac{H}{\bar v_{z_{Plate}}- \bar v_{c}}
+
+Using trigonometric substitutions for :math:`H_c` and :math:`H`,
+
+.. math::
+
+  Time = \frac{S}{\bar v_c cos\alpha} = \frac{L sin\alpha}{\bar v_{z_{Plate}} - \bar v_{c}}
+
+Rearranging to solve for :math:`\bar v_{c}`,
+
+.. math::
+
+  \bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
+
+Rearranging to solve for :math:`\frac{\bar v_{z_{Plate}}}{\bar v_{c}}`,
+
+.. math::
+
+  \frac{\bar v_{z_{Plate}}}{\bar v_{c}} = 1+\frac{L}{S}cos\alpha sin\alpha
+
+The equation that we determined for capture velocity, :math:`\bar v_c`, shows its dependence on plate settler geometry. Through another derivation, we can prove that by considering the total projected area over which particles can settle, we determine the same capture velocity.
+
+Beginning with :math:`Q = \bar vA`, we can modify the equation to fit the specific flow through a plate settler, :math:`Q = \bar v_{\alpha_{Plate}}SW`.
+
+Using trigonometric substitutions, we know that :math:`\frac{\bar v_{z_{Plate}}}{\bar v_{\alpha_{Plate}}} = sin\alpha` and :math:`\frac{\bar v_{z_{Plate}}}{sin\alpha} = v_{\alpha}`. So,
+
+.. math::
+
+  Q = \frac{\bar v_{z_{Plate}}SW}{sin\alpha}
+
+Determining the horizontal projection of the plate settlers,
+
+.. math::
+
+  S = Lcos\alpha + \frac{S}{sin\alpha}
+
+Substituting for area, :math:`A`,
+
+.. math::
+
+  A = (Lcos\alpha + \frac{S}{sin\alpha})W
+
+Solving for :math:`\bar v_c = \frac{Q}{A}`
+
+.. math::
+
+  \bar v_c = \frac{S \bar v_{z_{Plate}}}{Lsin\alpha cos\alpha + S}
+
+We can see that there are five parameters which will impact each other in our design :math:`\bar v_{z_{Plate}}, \bar v_{c}, L, S`, and :math:`\alpha`. AguaClara plants typically use constants for :math:`\bar v_{z_{Plate}}, \bar v_{c}, S`, and :math:`\alpha`, leaving :math:`L` to be calculated. More information is found in the section on :ref:`plate settler design <heading_Clarifier_Plate_Settler_Design>`.
+
+The 'active' sedimentation zone refers to the area of the tank in which water can flow through the plate settlers where:
+
+| :math:`L_{SedActive} =` length of the clarifier that includes entrance to a plate settlers
+| :math:`\bar v_{z_{Active}} =` upflow velocity of the water entering the plate settlers; vertical velocity in 'active' region
+
+The only reason that there is a distinction between this area and the floc filter area is because plate settlers are built at an angle. This angle creates a "lost triangle" because there is a space in which the plate settlers are not effective and water does not flow through them. Because the active length is less than the floc filter length, :math:`L_{SedActive} < L_{SedFloc}`, and because flow must be conserved, the average active velocity must be greater than the average upflow velocity through the floc filter, :math:`\bar v_{z_{Active}} > \bar v_{z_{ff}}`. The same flow going through less area means that the velocity must increase.
+
+Thus, :math:`Q_{Clarifier} = W_{Clarifier} L_{SedActive} \bar v_{z_{Active}}`, and :math:`\bar v_{z_{Active}} > \bar v_{z_{ff}}`.
+
+Now, we will discuss flow through plate settlers where:
+
+| :math:`\bar v_{z_{Plate}} =` upflow velocity of the water in the plate settlers; vertical velocity component between the plate settlers
+| :math:`S =` spacing between plate settlers
+| :math:`B =` center-to-center distance between plate settlers
+| :math:`T =` thickness of plate settlers
+| :math:`L =` length of plate settlers
+
+We know that plate settlers have a certain thickness and take up area, which means that once we reach the plate settler zone, there is less area for water to travel through. Because flow is conserved and there is a decrease in area, we know that the upflow velocity of water through the plate settlers must increase compared to the upflow velocity of water below the plate settlers, :math:`\bar v_{z_{Plate}} > \bar v_{z_{Active}}`.
+
+Thus, :math:`\bar v_{z_{Plate}} > \bar v_{z_{Active}} > \bar v_{z_{ff}}`
+
+In addition to the vertical velocity component increasing between the plates, the resultant velocity of water between the plates increases compared to :math:`\bar v_{z_{Active}}`. What are the two reasons that this is true?
+
+- The first reason, as already discussed, is that the vertical velocity component needs to increase to ensure conservation of flow.
+
+- The second reason has to do with the fact that the resultant velocity of water between the plates is at an angle. This means that there is a horizontal component introduced. Because we know that the vertical velocity increases, and there is a new positive horizontal velocity component, the resultant velocity must also increase.
+
+Now, consider a tube settler used in a lab setting instead of a plate settler. If a tube settler was designed with an angle to mimic a plate settler, would the water change vertical velocity after the angle? How does this compare to the plate settler scenario? In the case of the tube settler, the vertical velocity does not increase because there is no change in flow area; the diameter of the tube is constant throughout, meaning that for the flow to remain constant, the velocity does not change.
+
+For another example of flow conservation, let's consider the relationship between :math:`\bar v_{z_{Plate}}*S` and :math:`\bar v_{z_{Active}}*B`. :math:`B` is the center-to-center distance between plate settlers, and does not take into account the thickness of plate settlers. Considering only the center-to-center distance means that the area for water to travel through does to change from before the plate settlers to within the plate settlers because we are not accounting for any thickness. If the area does not change, then velocity should also not change to keep flow conserved. However, if we are to account for thickness, we must discuss :math:`S` which is the spacing between plate settlers. This does take into account the change in area,  which means that the velocity would need to increase through the lesser area. So if we look at the flow through plate settlers, we can confirm that :math:`\bar v_{z_{Plate}}*S = \bar v_{z_{Active}}*B`.
+
+By using flow conservation and plate settler geometry, we can begin to understand the mathematical relationships that drive design.
+
+
+Now that we have established how flocs settle on the plate and the increase in plan view area that plate settlers offer, we need to discuss how flocs will act once they are on the plates. We want particles and flocs that settle to agglomerate and slide down the plate settlers to be returned to the floc filter. We will explore this concept by first considering the desired spacing between plate settlers.
+
+Let's start with a basic question. If we know that adding plate settlers improves performance, why don't we just keep adding more and more plate settlers to our system? Is there any impact of placing plates closer together?
+
+We know that more plates means more effective settling area which means that we could remover more particles and make our tank smaller to save money and limit the use of concrete. But how close can those plates be?
+
+The Ten State Standards report that plate settlers should have a separation of two inches, with very long plate settlers, which means very deep tanks. Clarification tanks are usually 4 meters deep, maybe because filters are also deep. This is a result of the engineering context rather than the basic design principles. The Ten State Standards are primarily based off the modification of existing clarifiers which were usually built deep and then plate settlers were added. This means that there wasn't added incentive to optimize the entire plate settler and tank process because the tanks were already built. However, AguaClara designs are made to use all of the AguaClara innovations in a green field, meaning that we are incentivized to optimize every part of this design process.
+
+AguaClara plants can design for changes in the depth and/or plan view area of the tank for optimal plate settler efficiency. We want to have the smallest and shallowest tanks possible for low cost and ease of construction. We know that in the plate settler design, there is a dimensionless parameter of plate spacing to length, :math:`\frac{S}{L}`. The ratio is close to constant, which means that if we double the length of the plate settler, we can double the spacing between the plate settler and get the same performance as when we started. Conversely, if we halve the distance between the plate settlers, we can halve the length of the plate settlers. But how far can we push this? Can we make really compact plate settlers?
+
+What we really want to know is: what is the connection between spacing of plate settlers and performance?
+
+.. _figure_plate_settler_depth:
+
+.. figure:: ../Images/plate_settler_depth.png
+    :height: 300px
+    :align: center
+    :alt: Relationship between plate settler length and clarifier depth.
+
+    Relationship between plate settler spacing and clarifier depth.
+
+When we were discussed how plate settlers promote settling, we assumed a uniform velocity profile between the plates. However, we know from fluid mechanics and boundary layer rules that in reality, there is a nonuniform velocity profile. The flow between the plates, as determined by the Reynolds number, is laminar which means that there is a parabolic velocity profile between the plates and the shape of the parabola is affected by the distance between the plates.
+
+
+.. _heading_Floc_Rollup:
+
+Floc Rollup
+-----------
+
+There are some cases in which the plates are so close that even if flocs settle on the plate, they do not slide down. This is called **floc rollup**. Consider the following questions:
+
+1) Why would flocs roll up?
+
+It is a force balance! There is a force of gravity pulling the particle down, balanced with the force that the fluid flow exerts through drag related to viscosity. But why does it matter if plates are close together for floc roll up? The average velocity between plates is about 1 mm/s and is the same for any spacing. However, when plates are closer together the velocity profile is much steeper. Compared with plates with greater spacing, the closer plates cause there to be a higher velocity closer to the surface of the plate. This means that flocs between closely spaced plates will see a greater velocity closer to the plate settler, which will impact the force balance. The derivation of the force balance is found in the section on :ref:`plate settler design <heading_Floc_Rollup_Derivation>`.
+
+2) How would you define the transition between floc rollup and slide down? What would describe the case for a floc that is stationary on the plate settler (not rolling up or sliding down?)
+
+The transition is defined as when the gravitational forces and the fluid drag forces match.
+
+3) Will little flocs or big flocs be most vulnerable to floc rollup?
+
+This is a very complicated question. We would expect big flocs to slide down because they are heavier and have a greater gravitational force. However, bigger flocs also have a greater drag force and are out further into the flow. Because of the velocity profile, they will feel a higher velocity than smaller flocs. This means that the answer to this question should be determine mathematically, which it is in the next section.
+
+4) Will large or small spacing between plates cause more floc rollup?
+
+As we have already suggested, small spacing between plates will cause more floc rollup due to the steeper resulting velocity profile between the plates.
+
+.. _figure_floc_rollup:
+
+.. figure:: ../Images/floc_rollup.png
+    :target: https://youtu.be/cQJxLO0WOPA
+    :height: 300px
+    :align: center
+    :alt: Floc rollup between two plates (click to be sent to video).
+
+    Floc rollup between two plates (click to be sent to video).
+
+So what does this mean for plate settler spacing? Let's review some results from lab experiments. The following graph shows minimum plate settler spacing (mm) as a function of floc terminal velocity (mm/s). Some important things to note are that AguaClara plate settlers are designed for a capture velocity of 0.12 mm/s (recall that this capture velocity means that we want to capture flocs that are settling at 0.12 mm/s and faster). Before AguaClara filters were designed and deployed, AguaClara adopted the 0.12 mm/s capture velocity in an effort to reduce effluent turbidity as much as possible.
+
+A plot of Equation :eq:`Plate_S_min_of_fractal_of_2` reveals that the minimum spacing is strongly influenced by the density of the core particle and by the temperature. The minimum spacing increases as the size of the primary particle, :math:`D_{cp}`, decreases. This is an important insight because flocs that are made of coagulant nanoparticles and dissolved organics are the most difficult flocs to capture. Flocs made of coagulant nanoparticles are less dense than flocs made of clay. Coagulant nanoparticle flocs are produced when water treatment plants are used to remove dissolved organics or arsenic or when high coagulant dosages are used.
+
+.. _figure_SofRollupwithfractal2:
+
+.. figure:: ../Images/SofRollupwithfractal2.png
+   :height: 300px
+   :align: center
+   :alt: Floc roll up as a function of core particle density and temperatures
+
+   Plate settler spacing must increase to capture low density flocs.
+
+Given that AguaClara uses a lower upflow velocity, :math:`\bar v_{z_{Plate}}`, than many plate settler designs it is reasonable for us to use more closely spaced plates. More work is required to characterize the density and size of the core particles as a function of raw water constituents to provide guidance on the required plate spacing.
+
+AguaClara plate settlers are currently using separations of 2.5 cm, which is far above the constraint of floc roll up except for very low density flocs. As floc density decreases, as we expect for organic matter, minimum spacing increases. However, we don't yet know what that spacing is or where the boundary is because we don't know the properties of the humic acid-coagulant flocs. Further research is required here to determine the floc properties of flocs that are dominated by dissolved organic matter.
+
+Why does the plate settling distance matter so much? How much does it impact the rest of the clarifier and its design?
+
+One impact of plate settler spacing is on clarifier depth. We know that the spacing between plate settlers has a strong influence on clarifier depth and closer plate settlers allows for shallower tanks. There is a diminishing effect for small spacings, meaning that the difference in depth between 5 and 2.5 cm spacing is greater than the different in depth between 2.5 and 1 cm spacing. Because AguaClara does not yet have a good model for non-clay flocs, we cannot optimize our plate settler spacing and thus cannot optimize for the shallowest tanks possible.
+
+
+.. _heading_Clarifier_Plate_Settlers_Head_Loss_Intro:
+
+Plate Settler Head Loss
+-----------------------
+
+Another impact of plate settler spacing is on flow distribution in the tank. This is related to our previous discussion of pressure recovery and flow distribution. Reduced spacing between plates leads to an increased pressure drop through the plate settlers due to higher head loss as shown in Equation :eq:`plate_settler_headloss`. Therefore, plate settlers with small spacing will have more uniform flow distributions because head loss will dominate. This use of head loss can potentially get us better flow distribution. When the plates are brought closer together, there is more shear between the plates because the average velocity remains the same. The velocity gradient is higher between closer plates, which leads to higher shear, and thus higher head loss.
+
+However, if the plates are closer together, then they will be shorter in length to keep the capture velocity constant. The decrease in length decreases the total amount of shear. The head loss from the competing impacts to shear can be determined through a force balance and the Navier-Stokes equation, as shown in the derivation of :ref:`head loss through a plate settler <heading_Clarifier_Hl_thru_Plate_Settlers>`.
+
+.. _figure_plate_settler_headloss_spacing:
+
+.. figure:: ../Images/plate_settler_headloss_spacing.png
+   :height: 300px
+   :align: center
+   :alt: Head loss as a function of plate settler spacing.
+
+   Head loss as a function of plate settler spacing.
+
+The important thing to note is that after determining head loss as a function of plate settler spacing, we realize that the plate settlers do not provide much head loss at the design separation of 2.5 cm. Head loss through plate settlers is really small, which means that they do not contribute much to equalizing flow distribution.
+
+The velocities of any eddies or mean flow need to be less than 4 mm/s to achieve uniform flow through plate settlers. This means that if there is any flow entering the plate settlers at greater than 4 mm/s, the head loss provided by the plate settlers will not be sufficient to dampen the nonuniformity and there will not be adequate flow distribution. Luckily for us, the upflow velocity through the clarifier is on average 1 mm/s, which fulfills the requirement of less than 4 mm/s. The floc filter plays a very important role here in providing uniform vertical flow of 1 mm/s so that the flow between the plate settlers can be close to uniform.
+
 
 References
-============
+==========
 
 Schulz, C. R., Okun, D. A., & Water and Sanitation for Health Project (U.S.). (1984). Surface water treatment for communities in developing countries. New York: Wiley.
