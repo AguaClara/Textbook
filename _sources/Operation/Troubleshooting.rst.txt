@@ -1,22 +1,26 @@
+.. raw:: html
 
-Can we make some sort of a diagnostic guide based on symptoms? Make the following into a giant table.
+    <embed>
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <script src="https://hypothes.is/embed.js" async></script>
+    </embed>
 
+.. _title_Flocculation_Model:
 
+*****************************************
 Plant Operation Troubleshooting
-=================================
+*****************************************
 
-
-Temperature fluctuations
+.. note:: Can we make some sort of a diagnostic guide based on symptoms? Make the following into a giant table.
 
 Calcium from calcium hypochlorite combines with carbonate in the water to form low solubility calcium carbonate.
-
 
 
 Drip chlorine into water rather than injecting it to eliminate formation of precipitate at the injection point
 
 Use valves at the end of the pipeline to control transmission line flow rate rather than upstream control. Review the transmission line to ensure that all sections of the line have flow controlled by limiting available driving head. Air entrainment occurs when the available head exceeds the head required to transmit the target flow.
 
-.. todo:: create a troubleshooting guide that is hierarchical that covers multiple symptoms and then narrows down again to the potential solutions.
+.. note:: create a troubleshooting guide that is hierarchical that covers multiple symptoms and then narrows down again to the potential solutions.
 
 .. _table_Troubleshooting:
 
