@@ -113,3 +113,46 @@ The solutions all revolve around oxidizing the iron chemically before the bacter
  - It might be possible to move the acid addition point to the exit of the flocculator if the flocculation process provides enough time for iron oxidation
  - Create an aeration system upstream from the plant in the transmission line
  - Move chlorination to the rapid mix. This might work, but given the chlorine resistance of the slime and the disadvantages of prechlorination for production of disinfection by-products, we don't recommend this.
+
+
+Floc Volcanoes
+==============
+
+Floc volcanoes occur when water and flocs rise preferentially in one part of the clarifier. At points of high velocity, flocs can rise to the surface of the water. Consider the following case: an AguaClara plant in San Nicolas, Honduras, was witnessing intermittent floc volcanoes in the clarifiers. During operation, the plant was treating raw water with 4 NTU with a PACl dose of 3.5 mg/L. The settled water turbidity varied between 0.5 and 4 NTU. What might explain the floc volcanoes and very poor plant performance? Try coming up with a hypothesis that matches the information given to us from the plant. We want to figure out what is causing this problem so we can design a solution. What questions would you want to ask the technicians or engineers in Honduras? This exercise emphasizes the idea that asking the right questions are sometimes the hardest first step to learning more information.
+
+Some hypotheses and questions may include:
+
+1) Is the problem related to dissolved air flotation? Dissolved air coming out of flocculation can cause flocs to float to the top.
+
+After asking the operators, we are told that there are not any bubbles in the clarifier.
+
+2) Is the problem regularly intermittent? Is there anything that we can correlate these fluctuations to?
+
+After asking the operators, we are told that the floc volcanoes appear in the early afternoon each day.
+
+.. _figure_temp_turbidity:
+
+.. figure:: ../Images/temp_turbidity.png
+    :height: 300px
+    :align: center
+    :alt: Turbidity as a function of time in San Nicolas, Honduras.
+
+    Turbidity as a function of time in San Nicolas, Honduras.
+
+Using this new information, we have to make another hypothesis about why the floc volcanoes are impacted daily. Perhaps it is related to the sun and daily temperature changes. We can ask the operators to measure the water temperatures so we can do some analysis. The operators measure temperature and we plot the results, providing the following graph.
+
+We know that this plant brings water from a water source about 14 km away. The water is transported in a galvanized iron pipe that is placed on the surface of the ground because there is no concern about freezing pipes in Honduras (galvanized iron is not damaged by UV like PVC pipe is). The pipe functions as a 14 km water heater, raising the temperature of the water to the plant after noon.
+
+But why does the temperature difference cause a problem for the plate settlers?
+The problem is that there is warmer water entering the clarifier than what is in it. This temperature difference causes a density difference in the clarifier and plate settlers. The less dense, warmer water rises to the top of the plate settlers while the cold water drops to the bottom of the plate. This creates a current, allowing water to flow up on the top and settle on the bottom. The temperature gradient changes slowly over a few hours.
+
+.. _figure_temp_tube_settler:
+
+.. figure:: ../Images/temp_tube_settler.png
+    :height: 300px
+    :align: center
+    :alt: Hot water rising and cold water settling in a tube settler.
+
+    Hot water rising and cold water settling in a tube settler.
+
+So, now that we think we know what the problem is, how would we try to solve it? One idea would be to paint the entire line to reflect heat, but this is not feasible due to cost. The town Water Board had been maintaining the distribution line by cleaning weeds and brush from the pipe. The solution ended up being to just let the weeds grow over the pipe to provide shade. We haven't yet come up with a real solution. A possible long-term solution could be to design a clarifier that has a really short residence time. The longer the residence time in the clarifier, the worse the problem is because there is a large variation between the water that entered it last night and the water that enters it this afternoon. A tank with a really short residence time, on the order of a few minutes, would ensure that the water coming in would be very close to the water already in the tank.
