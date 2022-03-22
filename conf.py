@@ -60,7 +60,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'AguaClara Textbook'
-copyright = '2022, AguaClara Reach'
+copyright = '2022, https://www.aguaclarareach.org/'
 author = 'AguaClara Reach'
 
 # The version info for the project you're documenting, acts as replacement for
