@@ -115,6 +115,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
 
   Filtration/Filtration_Intro.rst
   Filtration/Filtration_Design.rst
+  Filtration/Filtration_Design_Challenge.rst
   Filtration/Filtration_Theory_and_Future_Work.rst
   Filtration/Filtration_Design_Solution.rst
 

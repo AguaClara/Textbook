@@ -7,39 +7,38 @@
 
 .. _title_Clarification_Design_Challenge:
 
-******************************
-Clarification Design Challenge
-******************************
+***************************
+Filtration Design Challenge
+***************************
 
-Designing a clarifier requires selecting several key design parameters. The upflow velocity sets the plan view area of the clarifier and thus directly controls the cost of the concrete tank. The capture velocity sets the required area of the plate settlers and thus sets their cost. The maximum velocity gradient sets the maximum velocity exiting the diffuser ports and that in turn sets the maximum velocity in the inlet manifold and hence the diameter of the inlet manifold.
+The design of Stacked Rapid Sand Filters involves balancing many constraints. Given that we don't yet have a model of how sand filters work it is not yet possible to optimize the design of sand filters. It is very likely that many of the empirically derived design guidelines such as filtration velocity and number of filter layers will be refined as we continue to learn more.
 
 Learning Objectives
 ===================
 
-* Make the connections between raw water characteristics, flocculator design, and clarifier design.
-* Learn the power of combining the constraints imposed by physics with the cost of materials to guide the design.
+* Discover why Open Stacked Rapid Sand Filters can not be used for low flows.
+* Learn how head loss works for flow in parallel.
+* Discover how clean backwash water is.
 
 Design Exploration
 ==================
 
-Create a copy of the `Clarification Template <https://cad.onshape.com/documents/c4c06fe11682a7c27d053171/w/aa02f5c9a6b4328cc182f0e1/e/631cfc4aba85cf4609d01ce8>`_. This workspace includes a feature studio called overrides that has the default inputs for the design and a convenient place to add and edit overrides to the defaults. You will use that to modify the design. The Design Analysis feature studio is where you can do calculations and answer the questions.
+Create a copy of the `StaRS Template <https://cad.onshape.com/documents/7c0d04fa1181c03c2d5966c9/w/e4c32164239a9b866e97d9df/e/d6e1f42043793dd9ae5759c4>`_. We will use a default filter flow rate of 20 L/s for the design calculations. If not stated, use the defaults given in the list of parameters in the Onshape document.
 
-The rendering time for the design is significantly faster if rep is set to false. When rep is false the part studio only shows single parts in most cases. Although all of the replicated parts aren't shown, the cost calculations are still correct. You can verify this by setting rep to true and then check to see if the Bill of Materials is the same.
-
-Use a temperature of 5°C, design the tank for APP, and an SDR_max of 41.
-
-#. What is the total cost of the plastic in the default design for a 6 L/s clarifier? Use the Bill of Material and simply copy the total cost and paste it into your answer. It would be cool to make a cost function that could be called in FeatureScript for a part studio that would make it easy to change inputs and compare costs, but we don't have that figured out yet!
-#. What is the cost of the inlet manifold pipe? Note that this does not include the elbow and coupling that are designed as part of the channel system in the clarifier.
-#. Use Equation :eq:`G_of_vc_and_floc_props`, the design defaults for capture velocity and inlet manifold maximum velocity gradient, and a water temperature of 5°C to calculate the value of :math:`\xi_{breakup}` that is implicitly used in the design of the clarifier. Create new variables for capture velocity and velocity gradient so those values don't change as we make changes to the design inputs (design.inletManifold.diffuser.G_bod and design.captureVm_bod). Note that this value is smaller than the value of :math:`\xi_{breakup} = 50 \cdot \frac{mm^8}{s^6}` that was experimentally determined for a kaolin suspension. We are still learning how :math:`\xi_{breakup}` controls the design of diffusers and plate settlers. We know that surface waters that contain dissolved organics will have core particle densities that are lower than kaolin clay and thus based on Equation :eq:`G_of_vc_and_floc_props` the value of :math:`\xi_{breakup}` will be reduced significantly.
-#. What is the ID of an 8" pipe with an SDR of 41? Use the queryPipeWithFittingDim function. Note that it returns a map with many parameters.
-#. Increase the velocity gradient for the diffuser (in the const designOverrides in the overrides tab) until the inlet pipe switches from 10" to 8". You can see the change in the minimum required pipe ID by using the variable table with this input (#sedPlastic.inletManifold.manifold). The variable table is another custom table option at the same location as the bill of materials. You can see how much you have to adjust the velocity gradient based on the value of the minimum required pipe ID. Given that you are finding this value by iteration provide an answer that is within 10 Hz of the actual value. What is the minimum velocity gradient that results in an 8" ND inlet manifold?
-#. Use Equation :eq:`G_of_vc_and_floc_props` to calculate the maximum capture velocity that can be used given a water temperature of 5°C and assuming that the maximum allowable value of :math:`\xi_{breakup}` is the implicit default value you calculated in step 3.
-#. Change the capture velocity in the designOverrides and find the new cost of the 6 L/s clarifier with an 8" inlet manifold.
-#. Explain why the cost decreased from the initial value even though this new design has the same value for  :math:`\xi_{breakup}`.
-#. How many plate settlers are in this clarifier (see if you can find this value in the design map using the variable table)?
-#. What is the flow rate between two plates? Note that the number of spaces between plates is one less than the number of plates!
-#. What is the plan view area of the entrance into the space between two plate settlers? We will use this to calculate the vertical component of the velocity entering the plate settlers.
-#. What is the vertical velocity entering the plate settlers? You'll need to use continuity to figure this out.
-#. Why is this velocity greater than the upflow velocity in the sed tank in the section where the walls are vertical?
-#. What is the capture velocity of these plate settlers (see Equation :eq:`vc_of_vz_plate`)?
-#. Is the calculated capture velocity better than or worse than the design capture velocity?
+#. Calculate the minimum flow for an Open Stacked Rapid Sand Filter, OStaRS (ostarsQ_min). An OStaRS is made with a masonry filter box that is open at the top. Given the masonry construction the filter box dimensions must be large enough for the mason to work inside the box. The filter tank width is set by the space required for the hydraulic controls and is approximately 1.43 meter. We estimate that 0.8 meter is the minimum tank length for construction. The backwash velocity is 11 mm/s.
+#. What is the minimum plant flow for OStaRS given a minimum of two filters (so that during periods of low flow one filter can still be backwashed)?
+#. Given a design filter flow rate of 20 L/s, what is the required filter length? The filter width remains unchanged.
+#. What bulk sand volume (sand + pores) required assuming a porosity of 0.4.
+#. What mass of sand is needed for this filter given a sand density of :math:`2650 \frac{kg}{m^3}`? Note this is the sand density, not the bulk sand density which includes the pores.
+#. What is the filtration velocity given that the design flow rate is the same for backwash and for filtration modes? Remember that there are 6 filter layers and that the flow is in parallel during filtration and in series during backwash.
+#. How much water is filtered in a filter run of 11 hours and 40 minutes?
+#. If all of that water were in a tank with the length and width of the filter box, how tall would it be? This is the height of water filtered during a filter run. Note that there are two ways to calculate this.
+#. What fraction of the water coming into the plant is wasted by the filter if it takes 20 minutes from initiation of backwash to when the filter is returned to production?
+#. If a cubic tank is built to hold all of the backwash water from one filter, what is the inside length of one side of the cube? (ignore the effect of freeboard).
+#. If the filter runtime is 11 hours and 40 minutes with a clarified water turbidity of 1 NTU and a filtered water turbidity of 0.1 NTU, then what is the average suspended solids concentration of the backwash water? You can assume that 1 NTU = 1.47 mg/L for kaolin clay `Coagulation behavior of polyaluminum chloride (Wei et al., 2015) <https://doi.org/10.1016/j.cjche.2015.02.003>`_. I have defined NTU in the Onshape document. I suggest simply entering the turbidity inputs in the equation that you write in FeatureScript. You can display the result in NTU by dividing the value by NTU and then include " NTU" in the postString. see ```printAnswer(i, "The average concentration of suspended solids during backwash is", " NTU", design.bwC/NTU, 3);```
+#. What fraction of the sand pores were filled with clay particles?  Note that we are ignoring the fact that the clay particles formed flocs and the flocs include water. For this problem simply take the volume of clay particles divided by the sand pore volume.
+#. What is the head loss at the coldest water temperature, 0°C, through the clean sand during filtration? Use the Ergun Equation :eq:`eq_Ergun`. Create a function in FeatureScript to calculate the head loss using the Ergun Equation.
+#. What is the head loss at the warmest water temperature, 25°C, through the clean sand during filtration?
+#. Estimate the depth of the filter box using Equation :eq:`approximate_filter_depth`. Note that this estimate misses about 1 meter of safety factors, freeboard, and plumbing head loss.
+#. How much would the depth of the filter increase if the number of layers were increased to 10? Note that the 6 layer design was an engineering decision based on the minimum number of layers that seemed likely to be viable. The number of layers, layer height, and sand diameter are all parameters that deserve further investigation.
+#. If the water coming into the filter was as turbid as the backwash water turbidity calculated above, then approximately how long would you expect the filter could run before it reached breakthrough? You can simplify the analysis by assuming that the filter captures all of the particles.
