@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Clarification Design Challenge &mdash; AguaClara Textbook 289/merge documentation</title>
+  <title>Filtration Design Challenge &mdash; AguaClara Textbook 289/merge documentation</title>
   
 
   
@@ -39,7 +39,9 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Filtration Theory and Future Work" href="Filtration_Theory_and_Future_Work.html" />
+    <link rel="prev" title="Stacked Rapid Sand Filter Design" href="Filtration_Design.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -159,11 +161,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html">Filtration  Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html#filtration-theory">Filtration Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Stacked Rapid Sand Filter Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Future Work</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Filtration Design Challenge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#design-exploration">Design Exploration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 10: Dissolved Gas</span></p>
@@ -234,7 +240,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Clarification Design Challenge</li>
+      <li>Filtration Design Challenge</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -256,37 +262,38 @@
   <embed>
    <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
    <script src="https://hypothes.is/embed.js" async></script>
-</embed><div class="section" id="clarification-design-challenge">
-<span id="title-clarification-design-challenge"></span><h1>Clarification Design Challenge<a class="headerlink" href="#clarification-design-challenge" title="Permalink to this headline">¶</a></h1>
-<p>Designing a clarifier requires selecting several key design parameters. The upflow velocity sets the plan view area of the clarifier and thus directly controls the cost of the concrete tank. The capture velocity sets the required area of the plate settlers and thus sets their cost. The maximum velocity gradient sets the maximum velocity exiting the diffuser ports and that in turn sets the maximum velocity in the inlet manifold and hence the diameter of the inlet manifold.</p>
+</embed><div class="section" id="filtration-design-challenge">
+<span id="title-clarification-design-challenge"></span><h1>Filtration Design Challenge<a class="headerlink" href="#filtration-design-challenge" title="Permalink to this headline">¶</a></h1>
+<p>The design of Stacked Rapid Sand Filters involves balancing many constraints. Given that we don’t yet have a model of how sand filters work it is not yet possible to optimize the design of sand filters. It is very likely that many of the empirically derived design guidelines such as filtration velocity and number of filter layers will be refined as we continue to learn more.</p>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Make the connections between raw water characteristics, flocculator design, and clarifier design.</p></li>
-<li><p>Learn the power of combining the constraints imposed by physics with the cost of materials to guide the design.</p></li>
+<li><p>Discover why Open Stacked Rapid Sand Filters can not be used for low flows.</p></li>
+<li><p>Learn how head loss works for flow in parallel.</p></li>
+<li><p>Discover how clean backwash water is.</p></li>
 </ul>
 </div>
 <div class="section" id="design-exploration">
 <h2>Design Exploration<a class="headerlink" href="#design-exploration" title="Permalink to this headline">¶</a></h2>
-<p>Create a copy of the <a class="reference external" href="https://cad.onshape.com/documents/c4c06fe11682a7c27d053171/w/aa02f5c9a6b4328cc182f0e1/e/631cfc4aba85cf4609d01ce8">Clarification Template</a>. This workspace includes a feature studio called overrides that has the default inputs for the design and a convenient place to add and edit overrides to the defaults. You will use that to modify the design. The Design Analysis feature studio is where you can do calculations and answer the questions.</p>
-<p>The rendering time for the design is significantly faster if rep is set to false. When rep is false the part studio only shows single parts in most cases. Although all of the replicated parts aren’t shown, the cost calculations are still correct. You can verify this by setting rep to true and then check to see if the Bill of Materials is the same.</p>
-<p>Use a temperature of 5°C, design the tank for APP, and an SDR_max of 41.</p>
+<p>Create a copy of the <a class="reference external" href="https://cad.onshape.com/documents/7c0d04fa1181c03c2d5966c9/w/e4c32164239a9b866e97d9df/e/d6e1f42043793dd9ae5759c4">StaRS Template</a>. We will use a default filter flow rate of 20 L/s for the design calculations. If not stated, use the defaults given in the list of parameters in the Onshape document.</p>
 <ol class="arabic simple">
-<li><p>What is the total cost of the plastic in the default design for a 6 L/s clarifier? Use the Bill of Material and simply copy the total cost and paste it into your answer. It would be cool to make a cost function that could be called in FeatureScript for a part studio that would make it easy to change inputs and compare costs, but we don’t have that figured out yet!</p></li>
-<li><p>What is the cost of the inlet manifold pipe? Note that this does not include the elbow and coupling that are designed as part of the channel system in the clarifier.</p></li>
-<li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(267)</a>, the design defaults for capture velocity and inlet manifold maximum velocity gradient, and a water temperature of 5°C to calculate the value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> that is implicitly used in the design of the clarifier. Create new variables for capture velocity and velocity gradient so those values don’t change as we make changes to the design inputs (design.inletManifold.diffuser.G_bod and design.captureVm_bod). Note that this value is smaller than the value of <span class="math notranslate nohighlight">\(\xi_{breakup} = 50 \cdot \frac{mm^8}{s^6}\)</span> that was experimentally determined for a kaolin suspension. We are still learning how <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> controls the design of diffusers and plate settlers. We know that surface waters that contain dissolved organics will have core particle densities that are lower than kaolin clay and thus based on Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(267)</a> the value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> will be reduced significantly.</p></li>
-<li><p>What is the ID of an 8” pipe with an SDR of 41? Use the queryPipeWithFittingDim function. Note that it returns a map with many parameters.</p></li>
-<li><p>Increase the velocity gradient for the diffuser (in the const designOverrides in the overrides tab) until the inlet pipe switches from 10” to 8”. You can see the change in the minimum required pipe ID by using the variable table with this input (#sedPlastic.inletManifold.manifold). The variable table is another custom table option at the same location as the bill of materials. You can see how much you have to adjust the velocity gradient based on the value of the minimum required pipe ID. Given that you are finding this value by iteration provide an answer that is within 10 Hz of the actual value. What is the minimum velocity gradient that results in an 8” ND inlet manifold?</p></li>
-<li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(267)</a> to calculate the maximum capture velocity that can be used given a water temperature of 5°C and assuming that the maximum allowable value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> is the implicit default value you calculated in step 3.</p></li>
-<li><p>Change the capture velocity in the designOverrides and find the new cost of the 6 L/s clarifier with an 8” inlet manifold.</p></li>
-<li><p>Explain why the cost decreased from the initial value even though this new design has the same value for  <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span>.</p></li>
-<li><p>How many plate settlers are in this clarifier (see if you can find this value in the design map using the variable table)?</p></li>
-<li><p>What is the flow rate between two plates? Note that the number of spaces between plates is one less than the number of plates!</p></li>
-<li><p>What is the plan view area of the entrance into the space between two plate settlers? We will use this to calculate the vertical component of the velocity entering the plate settlers.</p></li>
-<li><p>What is the vertical velocity entering the plate settlers? You’ll need to use continuity to figure this out.</p></li>
-<li><p>Why is this velocity greater than the upflow velocity in the sed tank in the section where the walls are vertical?</p></li>
-<li><p>What is the capture velocity of these plate settlers (see Equation <a class="reference internal" href="../Clarification/Clarifier_Derivations.html#equation-vc-of-vz-plate">(565)</a>)?</p></li>
-<li><p>Is the calculated capture velocity better than or worse than the design capture velocity?</p></li>
+<li><p>Calculate the minimum flow for an Open Stacked Rapid Sand Filter, OStaRS (ostarsQ_min). An OStaRS is made with a masonry filter box that is open at the top. Given the masonry construction the filter box dimensions must be large enough for the mason to work inside the box. The filter tank width is set by the space required for the hydraulic controls and is approximately 1.43 meter. We estimate that 0.8 meter is the minimum tank length for construction. The backwash velocity is 11 mm/s.</p></li>
+<li><p>What is the minimum plant flow for OStaRS given a minimum of two filters (so that during periods of low flow one filter can still be backwashed)?</p></li>
+<li><p>Given a design filter flow rate of 20 L/s, what is the required filter length? The filter width remains unchanged.</p></li>
+<li><p>What bulk sand volume (sand + pores) required assuming a porosity of 0.4.</p></li>
+<li><p>What mass of sand is needed for this filter given a sand density of <span class="math notranslate nohighlight">\(2650 \frac{kg}{m^3}\)</span>? Note this is the sand density, not the bulk sand density which includes the pores.</p></li>
+<li><p>What is the filtration velocity given that the design flow rate is the same for backwash and for filtration modes? Remember that there are 6 filter layers and that the flow is in parallel during filtration and in series during backwash.</p></li>
+<li><p>How much water is filtered in a filter run of 11 hours and 40 minutes?</p></li>
+<li><p>If all of that water were in a tank with the length and width of the filter box, how tall would it be? This is the height of water filtered during a filter run. Note that there are two ways to calculate this.</p></li>
+<li><p>What fraction of the water coming into the plant is wasted by the filter if it takes 20 minutes from initiation of backwash to when the filter is returned to production?</p></li>
+<li><p>If a cubic tank is built to hold all of the backwash water from one filter, what is the inside length of one side of the cube? (ignore the effect of freeboard).</p></li>
+<li><p>If the filter runtime is 11 hours and 40 minutes with a clarified water turbidity of 1 NTU and a filtered water turbidity of 0.1 NTU, then what is the average suspended solids concentration of the backwash water? You can assume that 1 NTU = 1.47 mg/L for kaolin clay <a class="reference external" href="https://doi.org/10.1016/j.cjche.2015.02.003">Coagulation behavior of polyaluminum chloride (Wei et al., 2015)</a>. I have defined NTU in the Onshape document. I suggest simply entering the turbidity inputs in the equation that you write in FeatureScript. You can display the result in NTU by dividing the value by NTU and then include ” NTU” in the postString. see <code class="docutils literal notranslate"><span class="pre">`printAnswer(i,</span> <span class="pre">&quot;The</span> <span class="pre">average</span> <span class="pre">concentration</span> <span class="pre">of</span> <span class="pre">suspended</span> <span class="pre">solids</span> <span class="pre">during</span> <span class="pre">backwash</span> <span class="pre">is&quot;,</span> <span class="pre">&quot;</span> <span class="pre">NTU&quot;,</span> <span class="pre">design.bwC/NTU,</span> <span class="pre">3);`</span></code></p></li>
+<li><p>What fraction of the sand pores were filled with clay particles?  Note that we are ignoring the fact that the clay particles formed flocs and the flocs include water. For this problem simply take the volume of clay particles divided by the sand pore volume.</p></li>
+<li><p>What is the head loss at the coldest water temperature, 0°C, through the clean sand during filtration? Use the Ergun Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-ergun">(170)</a>. Create a function in FeatureScript to calculate the head loss using the Ergun Equation.</p></li>
+<li><p>What is the head loss at the warmest water temperature, 25°C, through the clean sand during filtration?</p></li>
+<li><p>Estimate the depth of the filter box using Equation <a class="reference internal" href="Filtration_Intro.html#equation-approximate-filter-depth">(671)</a>. Note that this estimate misses about 1 meter of safety factors, freeboard, and plumbing head loss.</p></li>
+<li><p>How much would the depth of the filter increase if the number of layers were increased to 10? Note that the 6 layer design was an engineering decision based on the minimum number of layers that seemed likely to be viable. The number of layers, layer height, and sand diameter are all parameters that deserve further investigation.</p></li>
+<li><p>If the water coming into the filter was as turbid as the backwash water turbidity calculated above, then approximately how long would you expect the filter could run before it reached breakthrough? You can simplify the analysis by assuming that the filter captures all of the particles.</p></li>
 </ol>
 </div>
 </div>
@@ -296,6 +303,10 @@
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Filtration_Theory_and_Future_Work.html" class="btn btn-neutral float-right" title="Filtration Theory and Future Work" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Filtration_Design.html" class="btn btn-neutral float-left" title="Stacked Rapid Sand Filter Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

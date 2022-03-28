@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Filtration Future Work &mdash; AguaClara Textbook 289/merge documentation</title>
+  <title>Filtration Theory and Future Work &mdash; AguaClara Textbook 289/merge documentation</title>
   
 
   
@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Filtration Design Solution" href="Filtration_Design_Solution.html" />
-    <link rel="prev" title="Stacked Rapid Sand Filter Design" href="Filtration_Design.html" /> 
+    <link rel="prev" title="Filtration Design Challenge" href="Filtration_Design_Challenge.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -163,14 +163,21 @@
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html">Filtration  Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Filtration_Intro.html#filtration-theory">Filtration Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Filtration_Design.html">Stacked Rapid Sand Filter Design</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Filtration Future Work</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="Filtration_Design_Challenge.html">Filtration Design Challenge</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Filtration Theory and Future Work</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#particle-removal-efficiency">Particle Removal Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filtration-model">Filtration Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-head-loss">Filter Head Loss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clarification-impacts">Clarification Impacts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#velocity-gradient">Velocity Gradient</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#constriction-velocity">Constriction Velocity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#shear-big-flocs">Shear Big Flocs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#floc-size-calculations">Floc Size Calculations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#floc-volume">Floc Volume</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#particle-removal-efficiency">Particle Removal Efficiency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Particle Removal Efficiency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#proposed-experiments">Proposed Experiments</a></li>
 </ul>
 </li>
@@ -244,7 +251,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Filtration Future Work</li>
+      <li>Filtration Theory and Future Work</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -266,29 +273,226 @@
   <embed>
    <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
    <script src="https://hypothes.is/embed.js" async></script>
-</embed><div class="section" id="filtration-future-work">
-<span id="title-filtration-theory-and-future-work"></span><h1>Filtration Future Work<a class="headerlink" href="#filtration-future-work" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=iraCMmqY4sT2&amp;line=1&amp;uniqifier=1">Be sure to run the import code before trying any of the code examples linked in this section</a></p>
+</embed><div class="section" id="filtration-theory-and-future-work">
+<span id="title-filtration-theory-and-future-work"></span><h1>Filtration Theory and Future Work<a class="headerlink" href="#filtration-theory-and-future-work" title="Permalink to this headline">¶</a></h1>
+<p>Filters are used to remove particles and thus we’d like to be able to predict particle removal efficiency in a filter. Unfortunately we don’t yet have equations that describe particle removal by sand filtration. This is a very unpleasant surprise. It is as if we were designing a suspension bridge and didn’t have any equations describing the relationship between the tension in the cables and the load they are supporting. We only have an equation describing what the cables do when there isn’t any additional load. In the case of filtration we only have clean bed filtration models that attempt to describe what happens before the filter begins to remove particles.</p>
+<dl class="simple">
+<dt>Reflection: How did we get to 2019 without a model for filter performance? There may be several reasons for the lack of a filtration model. Here are a few ideas:</dt><dd><ul class="simple">
+<li><p>The lack of data acquisition systems in university laboratories means that very few rapid sand filters were operated and evaluated for full filter runs in laboratory settings.</p></li>
+<li><p>The Environmental Engineering fixation on jar tests as the way to model water treatment plants provided no method to test filtration and thus most university laboratories only experimented with batch operation and not continuous flow.</p></li>
+<li><p>Filtration models were borrowed from air filtration (<a class="reference external" href="https://pubs.acs.org/doi/abs/10.1021/es60058a005">Yao et al, 1971</a>) and thus did not take into account that the coagulant nanoparticles made particle attachment to surfaces very favorable.</p></li>
+<li><p>Filtration models only modeled the clean bed phase (the first few minutes of a filter run) before particles were deposited and began altering the geometry of the pores.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Clean bed filtration models include an equation first presented by Iwasaki in 1937 that suggested that particle removal occurred as a first order process with respect to depth. This simplifies to</p>
+<div class="math notranslate nohighlight" id="equation-filter-iwasaki">
+<span class="eqno">(758)<a class="headerlink" href="#equation-filter-iwasaki" title="Permalink to this equation">¶</a></span>\[  pC^* \propto \frac{L}{D_{sand}}\]</div>
+<p>where L is the depth of the sand in the column. This suggests that increasing the depth of sand in a filter would dramatically improve performance.</p>
+<p>It is quite amazing that we have no useful models for sand filter performance after more than a century of using sand filters as a required process in converting surface waters into safe drinking water. Fortunately we have plenty of clues suggesting what is happening inside filters and at the level of the particles traveling through the pores.</p>
+<p>The movie in <a class="reference internal" href="#figure-active-zone-model"><span class="std std-numref">Fig. 210</span></a> illustrates that the classic performance of a rapid sand filter as a function of time could be explained by the presence of an active filtration zone that slowly progresses down through the filter as the pores become fully loaded. But that begs the question of what determines “fully loaded.”</p>
+<div class="figure align-center" id="id2">
+<span id="figure-active-zone-model"></span><a class="reference external image-reference" href="https://youtu.be/II0cfH80nrI"><img alt="../_images/Active_zone_model.png" src="../_images/Active_zone_model.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 210 </span><span class="caption-text">Movie illustrating how effluent turbidity connects to deposition of particles within a sand bed.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The linear increase in head loss with time (see <a class="reference internal" href="#figure-head-loss-vs-time"><span class="std std-numref">Fig. 211</span></a>) is a remarkable and surprising property of depth filtration. The deposition of particles in a pore would change the flow geometry, increase the flow velocity, and increase the head loss across the pore. As each particle is deposited in the pore it would be expected to have an increasing impact on head loss as the flow area is decreased and the flow velocity increases.  Head loss due to the flow expansion downstream from the flow constriction is proportional to the velocity squared. Thus we would not expect head loss across a pore to increase linearly with time.</p>
+<div class="figure align-center" id="id3">
+<span id="figure-head-loss-vs-time"></span><a class="reference internal image-reference" href="../_images/Head_loss_vs_time.png"><img alt="Head loss increases linearly with time" src="../_images/Head_loss_vs_time.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 211 </span><span class="caption-text">Head loss through a filter increases linearly with time under conditions of constant influent turbidity.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>The data is trying to tell us something. The head loss through a filter does increase linearly with time and with the amount of solids that have been captured by the filter. Our hypothesis is that the number of fully loaded pores is increasing linearly with time. To understand how this might be working we need to delve into the filter and imagine what must be happening in the pores as particles are flowing by.</p>
+<p><a class="reference internal" href="#figure-deposition-at-constrictions"><span class="std std-numref">Fig. 212</span></a> illustrates that particles that are carried by the fluid can come into contact with the walls of the pores where the streamlines converge. Clean bed filtration models predict that this process of interception is significant even for clean beds. As a pore begins to fill due to particle deposition, the flow constriction becomes even more severe and thus the capture efficiency increases. This would suggest that a pore would rapidly fill with flocs until it became so clogged that the flow of water through the pore effectively stopped.</p>
+<div class="figure align-center" id="id4">
+<span id="figure-deposition-at-constrictions"></span><a class="reference external image-reference" href="https://youtu.be/Odp6uwqJmMc"><img alt="../_images/Deposition_at_constrictions.png" src="../_images/Deposition_at_constrictions.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 212 </span><span class="caption-text">Movie illustrating that particles are transported closer to sand surfaces where streamlines converge.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>If pores clogged completely, then sand filters would clog as soon as one layer of pores was filled. There must be another process that is preventing pores from clogging. We hypothesize that flocs can’t attach to the filter surfaces when the fluid drag on the floc exceeds the strength of the bonds between the coagulant nanoparticles and the particle and pore surfaces. Thus as pores grow smaller due to deposition it becomes more difficult for incoming flocs to attach. Instead, the flocs are shoved right through the pore even if it means the floc has to undergo significant deformation to squeeze through.</p>
+<div class="figure align-center" id="id5">
+<span id="figure-flocs-teleporting"></span><a class="reference external image-reference" href="https://youtu.be/lgfggRX_Wgs"><img alt="../_images/Flocs_teleport.png" src="../_images/Flocs_teleport.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 213 </span><span class="caption-text">Movie showing flocs flowing through a pore created by sand grains. (Credit <a class="reference external" href="https://github.com/AguaClara/filter-constrictions">Filter_Constrictions team Spring 2018</a>)</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>The story is beginning to emerge. Converging streamlines result in flocs touching previously deposited particles in the flow constriction and attaching. As the flow constriction becomes even smaller the fluid drag on particles that attempt to attach to the pore becomes too great and the particles are forced through the constriction. At that point the pore is fully loaded. However, fully loaded does not mean that the void is full of flocs. It just means that the constriction is as small as it can get given the strength of the coagulant nanoparticle bonds and the fluid drag on the flocs.</p>
+<p>Pores at the upstream end of the filter are fully loaded first and then remain relatively unchanged for the duration of the filter run. Thus the active filtration zone is pushed deeper into the filter bed. At any one time there are likely a series of pores that are partially loaded and thus actively filling. The number of pores in series that are actively filling is not yet known, but it is clear that the particle removal efficiency of a filter must be related to the number of actively filling pores in series.</p>
+<p>The active filtration zone is progressing through the filter at a constant velocity. The number of fully loaded pores is increasing linearly with time! That is why head loss increases linearly with time.</p>
+<p>The poor performance at the beginning of a filter run is because the clean zone isn’t a good filter. This suggests that dual media filters are pointless because the smaller media at the downstream end of the filter remains clean and doesn’t actually do anything. If this is correct, then multimedia filters can be replaced with a single larger media size.</p>
+<dl class="simple">
+<dt>As coagulant dose increases:</dt><dd><ul class="simple">
+<li><p>Flocs are larger and thus they fill the pores faster and thus the active zone moves faster through the filter.</p></li>
+<li><p>Large flocs are removed more efficiently and thus the active zone is thinner (fewer active pores in series).</p></li>
+<li><p>Thinner active zone results in faster failure (higher slope of turbidity vs time during failure).</p></li>
+<li><p>Larger flocs results in faster failure (higher slope of turbidity vs time during failure).</p></li>
+</ul>
+</dd>
+<dt>As sand size increases:</dt><dd><ul class="simple">
+<li><p>There are fewer pores and thus fewer constrictions and thus less head loss at the end of the filter run.</p></li>
+<li><p>Each constriction requires more particles to build and thus there is less head loss per mass of particles removed.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="particle-removal-efficiency">
+<h2>Particle Removal Efficiency<a class="headerlink" href="#particle-removal-efficiency" title="Permalink to this headline">¶</a></h2>
+<p>This is the multi-decade old question that challenges us to continue our research. What determines how many particles sneak through a water treatment plant? We’ve learned that flocculation runs out of steam because the primary particles only want to collide with other primary particles and thus they start taking forever to collide as they become scarce. The floc filter likely acts like a series of collectors (can’t say it is like a filter because it doesn’t have stationary constrictions). This would suggest that more floc filter is always better. Some primary particles make it through the floc filter. What determines how many of those primary particles make it through the filter? It must depend on the geometry of every constriction. Large flocs are easy to capture in a sand filter. Primary particles are much more difficult to capture. Large flocs tend to fill up the first unfilled pore they come to. Thus large flocs tend to take active pores out of service. This suggests that the influent floc size distribution might influence filter performance. See <a class="reference internal" href="#heading-shear-big-flocs-to-improve-filter-performance"><span class="std std-ref">Shear Big Flocs</span></a> for an analysis of the feasibility of breaking up flocs at the point of injection into the sand bed.</p>
+</div>
+<div class="section" id="filtration-model">
+<h2>Filtration Model<a class="headerlink" href="#filtration-model" title="Permalink to this headline">¶</a></h2>
+<p>The filtration model is based on the insight that rapid sand filters have an active filtration zone that slowly progresses down through the filter as it fills to maximum capacity at the upstream end. A clean bed of sand is ineffective at capturing small particles as evidenced by the poor initial performance after backwash. Thus it is apparent that previously deposited particles play a key role in subsequent capture of particles.</p>
+<p>Interception!
+Flow constrictions - converging streamlines move particles closer to the pore wall. Previously deposited particles form constrictions. The constrictions are the most likely location for particles to collide with deposited particles. Thus particles do not fill the pores and clog the filter. Instead particles form constrictions where streamlines already converged.</p>
+<p>Maximum shear sets a minimum constriction opening size!
+As particles gradually deposit in an ever shrinking flow constriction, the velocity through the constriction increases and the velocity gradient at the wall increases. Eventually the bond strength of the coagulant nanoparticles is not great enough to capture suspended particles that collide with the deposited particles. The flow constriction reaches a minimum diameter and subsequent suspended flocs flow right through the constriction.</p>
+<p>The gradual creation of more flow constrictions results in an almost linear increase in head loss as a function of the volume of deposited flocs.</p>
+<span id="table-filter-hypotheses"></span><table class="colwidths-given docutils align-center" id="id6">
+<caption><span class="caption-number">Table 21 </span><span class="caption-text">Hypotheses, evidence, and why it matters</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 3%" />
+<col style="width: 48%" />
+<col style="width: 24%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>Hypotheses</p></th>
+<th class="head"><p>Evidence</p></th>
+<th class="head"><p>Why it matters</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Particle removal is primarily due to converging streamlines that move particles close to the sand surface or to previously deposited particles</p></td>
+<td><p>Filtration theory and estimates of void volume occupied by particles</p></td>
+<td><p>Basis for our filtration model</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>The particle size distribution entering the filter is set by the plate settlers</p></td>
+<td><p>Estimate of velocity gradient in inlet waterfall and in filter bed</p></td>
+<td><p>High velocity injection would be required to reduce the floc size</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>The jets that the constrictions create dissipate almost all of their energy in the downstream void BEFORE entering the next constriction</p></td>
+<td><p>Laminar flow jets dissipate energy very quickly</p></td>
+<td><p>Allows a simple relationship between pore head loss and constriction velocity</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Flocs are captured with VERY high efficiency and thus primary particle removal limits filter performance</p></td>
+<td><p>Clean bed filtration models</p></td>
+<td><p>Need to optimize filters for primary particle removal</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Constrictions form a continuous barrier across the filter at each sand grain layer</p></td>
+<td><p>Any gaps would receive higher flow rate and thus higher flux of particles</p></td>
+<td><p>Filter automatically prevents short circuiting</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>The thickness of the deposit scales with the width of the ring or perhaps simply with the pore size or sand size</p></td>
+<td><p>Thickness can’t scale with diameter of the flocs because that would predict more total mass retained with increased coagulant dose</p></td>
+<td><p>Required to predict head loss vs mass deposited.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="filter-head-loss">
+<span id="heading-filter-head-loss-model"></span><h2>Filter Head Loss<a class="headerlink" href="#filter-head-loss" title="Permalink to this headline">¶</a></h2>
+<p>The maximum velocity in a constriction is set by the drag on a primary particle that is large enough to prevent the primary particle from attaching. Given that the constriction is likely sharp edged on the upstream face, the flow velocity is likely close to uniform at the entrance to the constriction. There is likely a vena contracta effect and that effect would prevent deposition of particles downstream of the leading edge of the constriction because particles are diverted away from the constriction walls.</p>
+<p>The maximum constriction velocity is thus likely independent of the filtration velocity and pore size. The maximum velocity at the inlet to the constrictions is likely proportional to the fractional surface coverage of the primary particles by coagulant nanoparticles. Thus as the coagulant dose increases the head loss per pore and the head loss at the time of particle breakthrough increases.</p>
+<div class="math notranslate nohighlight" id="equation-eq-headloss-constriction">
+<span class="eqno">(759)<a class="headerlink" href="#equation-eq-headloss-constriction" title="Permalink to this equation">¶</a></span>\[  h_{l_{constriction}} = \frac{\bar v_{constriction}^2}{2g}\]</div>
+<dl class="simple">
+<dt>The maximum drag that a primary particle can</dt><dd><ul class="simple">
+<li><p>Need to connect velocity to drag.</p></li>
+<li><p>Use experimental data from filtration to find critical velocity.</p></li>
+<li><p>Expect velocity to be independent of pore size (sand size).</p></li>
+<li><p>Create model for total head loss in a filter as a function of sand size.</p></li>
+<li><p>Need a connection between pore size and volume of particles it can hold.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The average distance between sand grains in a filter bed is obtained by taking the cube root of the total volume occupied by a sand grain including the pore space. We also assume that there is a one-to-one correspondence between pores and sand grains and thus the distance between pores is the same as the distance between sand grains.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-0">
+<span class="eqno">(760)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-0" title="Permalink to this equation">¶</a></span>\[\Lambda_{sand} = \Lambda_{pore} = \left(\frac{\pi}{6(1-\phi)} \right)^\frac{1}{3}D_{sand}\]</div>
+<p>The flow rate per pore is the approach velocity multiplied by <span class="math notranslate nohighlight">\(\Lambda^2\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-1">
+<span class="eqno">(761)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-1" title="Permalink to this equation">¶</a></span>\[Q_{pore} = v_a \Lambda_{pore}^2\]</div>
+<p>The velocity through a constriction in a pore is</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-2">
+<span class="eqno">(762)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[Q_{pore} = v_a \Lambda_{pore}^2 = \frac{\pi}{4} D_{constriction}^2v_{constriction}\]</div>
+<p>The constriction diameter is thus given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-d-constriction">
+<span class="eqno">(763)<a class="headerlink" href="#equation-eq-d-constriction" title="Permalink to this equation">¶</a></span>\[  D_{constriction} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction}}\]</div>
+<p>The Reynolds number of the jet issuing from the constriction is obtained by using Equation <a class="reference internal" href="#equation-eq-d-constriction">(763)</a> to eliminate the dependence on diameter.</p>
+<div class="math notranslate nohighlight" id="equation-eq-re-constriction">
+<span class="eqno">(764)<a class="headerlink" href="#equation-eq-re-constriction" title="Permalink to this equation">¶</a></span>\[  Re_{jet} = \frac{\Lambda_{pore} }{\nu }\sqrt\frac{4 v_a v_{constriction}}{\pi }\]</div>
+<p>The jet issuing from the constrictions is laminar for Reynolds numbers below 500 (<a class="reference external" href="https://dspace.mit.edu/handle/1721.1/27517">see Ungate et al., 1975 page 13</a>).  The constriction is likely a relatively thin (washer-like) deposit and thus the flow through the constriction is likely close to uniform. In order to estimate the head loss in the flow expansion that occurs after the constriction we need to understand how much the flow expands. The flow expansion may be limited by the geometry of the pores or it might be limited by the rate at which laminar flow jets expand. We don’t have a way to know which constraint will set the expansion and thus we need to calculate the expansion rate for a laminar jet to see if that expansion could occur given the pore geometry.</p>
+<p>The rate of jet expansion can be obtained from an analytical solution of the Navier Stokes equation as shown by <a class="reference external" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99">Pai, S.I., Fluid dynamics of jets. (D. Van Nostrand Company, Inc., Princeton, NJ, 1954 (pages 78-79)</a></p>
+<p>The momentum in the direction of flow is conserved and is given by</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-3">
+<span class="eqno">(765)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho \int_{0}^{\infty} u^2 r dr\]</div>
+<p>For the case of uniform velocity through the constriction we can replace <span class="math notranslate nohighlight">\(\infty\)</span> with <span class="math notranslate nohighlight">\(r_{constriction}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-4">
+<span class="eqno">(766)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[M_0 = 2 \pi \rho v_{constriction}^2 \int_{0}^{r_{constriction}}  r dr\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-5">
+<span class="eqno">(767)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-5" title="Permalink to this equation">¶</a></span>\[M_0 = \pi \rho v_{constriction}^2 r_{constriction}^2 = \rho Q_{pore}v_{constriction}\]</div>
+<p>The velocity in the direction of the jet is given by (equation 4.39 in <a class="reference external" href="https://babel.hathitrust.org/cgi/pt?id=mdp.39015000450273;view=1up;seq=99">Pai, 1954</a>)</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-6">
+<span class="eqno">(768)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-6" title="Permalink to this equation">¶</a></span>\[u = \frac{3M_0}{8\pi \mu} \frac{1}{x} \frac{1}{\left[1+(\frac{\zeta_{jet}^2}{4})\right]^2}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-7">
+<span class="eqno">(769)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[\zeta_{jet} = \frac{1}{4\nu} \left(\frac{3M_0}{\pi\rho}\right)^{\frac{1}{2}} \frac{r}{x}\]</div>
+<p>and thus <span class="math notranslate nohighlight">\(\zeta\)</span> is zero at the centerline.  We will use the centerline velocity at distance <span class="math notranslate nohighlight">\(\Lambda_{pore}\)</span> from the constriction to estimate the head loss caused by one constriction.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-8">
+<span class="eqno">(770)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[v_{exp} = \frac{3\rho Q_{pore}v_{constriction}}{8\pi \mu \Lambda_{pore}}\]</div>
+<p>We can substitute for <span class="math notranslate nohighlight">\(Q_{pore}\)</span> to obtain</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-9">
+<span class="eqno">(771)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3 v_a \Lambda_{pore} }{8\pi \nu }v_{constriction}\]</div>
+<p>We can use mass conservation and the equation for <span class="math notranslate nohighlight">\(Q_{pore}\)</span> to replace <span class="math notranslate nohighlight">\(v_a\)</span> with <span class="math notranslate nohighlight">\(v_{constriction}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-10">
+<span class="eqno">(772)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[v_{exp} =  \frac{3}{32}\frac{D_{constriction}}{\Lambda_{pore}}Re_{jet}v_{constriction}\]</div>
+<p>It isn’t yet clear if this always means that <span class="math notranslate nohighlight">\(v_{exp}\)</span> will be very small compared with <span class="math notranslate nohighlight">\(v_{constriction}\)</span>, but that seems to be the logical conclusion. Thus when calculating the head loss for a pore it is reasonable to assume that the kinetic energy of the jet is all lost before entering the next constriction.</p>
+</div>
+<div class="section" id="clarification-impacts">
+<h2>Clarification Impacts<a class="headerlink" href="#clarification-impacts" title="Permalink to this headline">¶</a></h2>
+<p>The characteristic floc size could be set by the plate settlers that preferentially remove large flocs or it could be set by any of the high shear events on the path to or through the filter. We will estimate floc size from each of the potential shear and terminal velocity events. The calculations are done in
+<a class="reference internal" href="#heading-floc-size-and-velocity-gradient-calculations"><span class="std std-ref">python below</span></a>.</p>
+<p>The floc diameter that is not completely captured by plate settlers with a capture velocity of 0.12 mm/s (the capture velocity used by AguaClara) is 25 <span class="math notranslate nohighlight">\(\mu m\)</span>.</p>
+<div class="section" id="velocity-gradient">
+<h3>Velocity Gradient<a class="headerlink" href="#velocity-gradient" title="Permalink to this headline">¶</a></h3>
+<p>Almost all of the kinetic energy of the jet issuing from the constriction is dissipated in the downstream pore. We will assume that the majority of the head loss is due to the jet (rather than wall shear). The volume of a pore is given by</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-11">
+<span class="eqno">(773)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-11" title="Permalink to this equation">¶</a></span>\[\rlap{-} V_{pore} = \phi\Lambda_{pore}^3\]</div>
+<p>The hydraulic residence time in a pore is obtained from the volume and flow rate through a pore.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-12">
+<span class="eqno">(774)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-12" title="Permalink to this equation">¶</a></span>\[\theta_{pore} = \frac{\rlap{-} V_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}\]</div>
+<p>The Camp Stein velocity gradient in a pore is obtained by assuming that all of the input kinetic energy is dissipated through viscosity during the time that the water spends in the pore.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-13">
+<span class="eqno">(775)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-13" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}}\]</div>
+<p>The head loss in the pore is from the jet kinetic energy. Substitute the equations for pore volume, residence time, and head loss to obtain the fundamental equation for the velocity gradient in a pore.</p>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-14">
+<span class="eqno">(776)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-14" title="Permalink to this equation">¶</a></span>\[G_{CS} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}\]</div>
+<p>The estimated value of this velocity gradient is <em>300 Hz</em>.</p>
+<p>We need to compare the constricted jet velocity gradient with the clean bed injection velocity gradient that occurs due to the fact that the approach velocity at the point of flow injection in StaRS filters is much higher than the average approach velocity. The flow injection area is approximately 2.5 cm wide and serves an effective filter area (up and down!) of 20 cm (spacing between injection points is 10 cm.). Thus the approach velocity in current StaRS filters is 14.6 mm/s and the corresponding Camp Stein velocity gradient is <em>1440 Hz</em>.</p>
+<p>EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and we will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain <em>4300 Hz</em>. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 <span class="math notranslate nohighlight">\(\mu m\)</span> diameter floc. This is larger than the flocs produced by the clarifier plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the clarifier plate settlers.</p>
+<p>Note that the water fall height diminishes during a filter run as the water level in the inlet box increases due to head loss through the filter. Thus it is likely that the waterfall doesn’t significantly break flocs.</p>
+</div>
+</div>
 <div class="section" id="constriction-velocity">
 <h2>Constriction Velocity<a class="headerlink" href="#constriction-velocity" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=iraCMmqY4sT2&amp;line=1&amp;uniqifier=1">Be sure to run the import code before trying any of the code examples linked in this section</a></p>
 <p>The maximum velocity in a pore is set by the strength of the coagulant bonds and the size of the core particles that are being captured by the filter. The drag force on the core particle must be balanced by the chemical bond strength and that relationship is given by Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-fbond-of-v-constriction">(276)</a>.</p>
 <p>The minimum diameter of a particle deposition constriction is set by the maximum constriction velocity, <span class="math notranslate nohighlight">\(v_{constriction_{max}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-d-constriction-min">
-<span class="eqno">(772)<a class="headerlink" href="#equation-eq-d-constriction-min" title="Permalink to this equation">¶</a></span>\[  D_{constriction_{min}} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction_{max}}}\]</div>
+<span class="eqno">(777)<a class="headerlink" href="#equation-eq-d-constriction-min" title="Permalink to this equation">¶</a></span>\[  D_{constriction_{min}} = \Lambda_{pore} \sqrt\frac{4 v_a}{\pi v_{constriction_{max}}}\]</div>
 <p>The head loss through a flow constriction can be estimated from the head loss through a flow expansion. We will use the form of the expansion Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html#equation-eq-exp-v-in">(22)</a> that is based on the contraction velocity. The jet is assumed to expand sufficiently so that the residual kinetic energy is insignificant.</p>
 <div class="math notranslate nohighlight" id="equation-eq-exp-v-constriction">
-<span class="eqno">(773)<a class="headerlink" href="#equation-eq-exp-v-constriction" title="Permalink to this equation">¶</a></span>\[   h_{e_{constriction}} =  \frac{\bar v_{constriction_{max}}^2}{2g}\]</div>
+<span class="eqno">(778)<a class="headerlink" href="#equation-eq-exp-v-constriction" title="Permalink to this equation">¶</a></span>\[   h_{e_{constriction}} =  \frac{\bar v_{constriction_{max}}^2}{2g}\]</div>
 <p>The number of deposited constrictions per unit depth in a filter is</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-0">
-<span class="eqno">(774)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-0" title="Permalink to this equation">¶</a></span>\[N_{constrictions_{series}} = \frac{H_{filter}}{\Lambda_{pore}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-15">
+<span class="eqno">(779)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-15" title="Permalink to this equation">¶</a></span>\[N_{constrictions_{series}} = \frac{H_{filter}}{\Lambda_{pore}}\]</div>
 <p>The total head loss in a filter if taken to the point where the active filtration zone exited the filter and all pores were constricted would be</p>
 <div class="math notranslate nohighlight" id="equation-eq-he-filter">
-<span class="eqno">(775)<a class="headerlink" href="#equation-eq-he-filter" title="Permalink to this equation">¶</a></span>\[  h_{e_{filter_{max}}} = \frac{H_{filter}}{\Lambda_{pore}}  \frac{\bar v_{constriction_{max}}^2}{2g}\]</div>
+<span class="eqno">(780)<a class="headerlink" href="#equation-eq-he-filter" title="Permalink to this equation">¶</a></span>\[  h_{e_{filter_{max}}} = \frac{H_{filter}}{\Lambda_{pore}}  \frac{\bar v_{constriction_{max}}^2}{2g}\]</div>
 <p>The effect of increasing the pore size on terminal head loss is to decrease the <em>final</em> head loss when the active zone reaches the bottom of the filter because of the effect of <span class="math notranslate nohighlight">\(\Lambda_{pore}\)</span>. Note that this does not yet address the rate of head loss accumulation which is expected to be a function of sand grain diameter.</p>
-<p>We can solve Equation <a class="reference internal" href="#equation-eq-he-filter">(775)</a> for maximum constriction velocity based on experimental measurements of the head loss at filter failure that is due to constrictions. Note that this head loss does NOT include the clean bed head loss.</p>
+<p>We can solve Equation <a class="reference internal" href="#equation-eq-he-filter">(780)</a> for maximum constriction velocity based on experimental measurements of the head loss at filter failure that is due to constrictions. Note that this head loss does NOT include the clean bed head loss.</p>
 <div class="math notranslate nohighlight" id="equation-eq-he-filter2">
-<span class="eqno">(776)<a class="headerlink" href="#equation-eq-he-filter2" title="Permalink to this equation">¶</a></span>\[  v_{constriction_{max}} = \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}\]</div>
-<p>From <a class="reference internal" href="Filtration_Intro.html#figure-head-loss-vs-time"><span class="std std-numref">Fig. 208</span></a> we have an estimate of 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 163 mm/s for the constriction velocity. This can be combined with Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-fbond-of-v-constriction">(276)</a> to estimate the coagulant bond strength to be 3.9 nN.</p>
+<span class="eqno">(781)<a class="headerlink" href="#equation-eq-he-filter2" title="Permalink to this equation">¶</a></span>\[  v_{constriction_{max}} = \sqrt{ \frac{2g\Lambda_{pore}}{H_{filter}}h_{e_{filter_{max}}}}\]</div>
+<p>From <a class="reference internal" href="#figure-head-loss-vs-time"><span class="std std-numref">Fig. 211</span></a> we have an estimate of 80 cm of head loss through a 20 cm bed of 0.5 mm diameter sand. This gives an estimate of 163 mm/s for the constriction velocity. This can be combined with Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-fbond-of-v-constriction">(276)</a> to estimate the coagulant bond strength to be 3.9 nN.</p>
 </div>
 <div class="section" id="shear-big-flocs">
 <span id="heading-shear-big-flocs-to-improve-filter-performance"></span><h2>Shear Big Flocs<a class="headerlink" href="#shear-big-flocs" title="Permalink to this headline">¶</a></h2>
@@ -298,44 +502,44 @@
 <p>We need an estimate of the shear through the first pores as the water enters the sand. The Kozeny equation is valid up to a particle Reynolds number of 1 (<a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-re-porous-media">(172)</a>). The Reynolds number at this proposed flow injection site will be much larger than 1 and thus the Ergun equation (<a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-ergun">(170)</a>) that is valid for laminar and turbulent flow in porous media will be used.</p>
 <p>We will use the Camp Stein velocity gradient to estimate injection velocity required to create very small flocs. The important parameter for floc break up is a force that can be obtained from the velocity gradient multiplied by the dynamic viscosity.</p>
 <p>Solving <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-g-cs-porous-media">(177)</a> for the approach velocity, <span class="math notranslate nohighlight">\(v_a\)</span>, we obtain</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-1">
-<span class="eqno">(777)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-1" title="Permalink to this equation">¶</a></span>\[v_a = \left( G_{CS}^2 \frac{2\nu D_{sand}}{f_{\phi}} \frac{\phi^4}{(1-\phi)} \right)^{\frac{1}{3}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-16">
+<span class="eqno">(782)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-16" title="Permalink to this equation">¶</a></span>\[v_a = \left( G_{CS}^2 \frac{2\nu D_{sand}}{f_{\phi}} \frac{\phi^4}{(1-\phi)} \right)^{\frac{1}{3}}\]</div>
 <p>to estimate the injection area that should be used to break up flocs entering the sand bed.</p>
 </div>
 <div class="section" id="floc-size-calculations">
 <span id="heading-floc-size-and-velocity-gradient-calculations"></span><h2>Floc Size Calculations<a class="headerlink" href="#floc-size-calculations" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=Mlv81ZYLi1Gc&amp;line=25&amp;uniqifier=1">The code to make a figure showing the relationship between approach velocity and headloss can be found here.</a></p>
-<div class="figure align-center" id="id1">
+<div class="figure align-center" id="id7">
 <span id="figure-head-loss-ergun-and-kozeny"></span><a class="reference internal image-reference" href="../_images/Head_loss_Ergun_and_Kozeny.png"><img alt="Head loss Ergun and Kozeny" src="../_images/Head_loss_Ergun_and_Kozeny.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 213 </span><span class="caption-text">The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 214 </span><span class="caption-text">The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=g4nn81gGi9aS&amp;line=3&amp;uniqifier=1">The code for the following graph is found here.</a></p>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id8">
 <span id="figure-g-vs-approach-velocity"></span><a class="reference internal image-reference" href="../_images/G_vs_approach_velocity.png"><img alt="G vs approach velocity" src="../_images/G_vs_approach_velocity.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 214 </span><span class="caption-text">The Camp Stein velocity gradient increases rapidly with approach velocity.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 215 </span><span class="caption-text">The Camp Stein velocity gradient increases rapidly with approach velocity.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=KqQCyZaZjBJm&amp;line=3&amp;uniqifier=1">See here for how the injection port width and injection velocity are determined.</a></p>
 <p>The analysis above suggests that the approach velocity required to break flocs down to a dimension of <span class="math notranslate nohighlight">\(20 \mu m\)</span> is approximately 80 mm/s. This is based on a VERY bad guesstimate of the relationship between floc size and shear.</p>
 <p>We need to know how much energy would be expended to force the water through this high velocity injection zone. Once the water enters the sand it will spread radially in all directions. As the water spreads it will slow down and the head loss per distance traveled will decrease. We need to integrate this head loss over the first few centimeters to get an estimate of the injection head loss.</p>
 <p>The velocity at distance r from the center of the injection line can be calculated from the velocity at <span class="math notranslate nohighlight">\(r_0\)</span> by continuity.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-2">
-<span class="eqno">(778)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[v_{a_r} r= v_{a_{r_0}} r_0\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-3">
-<span class="eqno">(779)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[v_{a_r}= v_{a_{r_0}} \frac{r_0}{r}\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-4">
-<span class="eqno">(780)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[dh_f= \frac{dr}{2g D_{sand}} \left( 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}v_a  + 3.5 \frac{ (1-\phi) }{\phi^3}v_a^2 \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-17">
+<span class="eqno">(783)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-17" title="Permalink to this equation">¶</a></span>\[v_{a_r} r= v_{a_{r_0}} r_0\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-18">
+<span class="eqno">(784)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-18" title="Permalink to this equation">¶</a></span>\[v_{a_r}= v_{a_{r_0}} \frac{r_0}{r}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-19">
+<span class="eqno">(785)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-19" title="Permalink to this equation">¶</a></span>\[dh_f= \frac{dr}{2g D_{sand}} \left( 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}v_a  + 3.5 \frac{ (1-\phi) }{\phi^3}v_a^2 \right)\]</div>
 <p>Now substitute for the approach velocity</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-5">
-<span class="eqno">(781)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-5" title="Permalink to this equation">¶</a></span>\[\frac{dh_f}{dr}= \frac{1}{2g D_{sand}} \left[ 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\left(v_{a_{r_0}} \frac{r_0}{r}\right)  + 3.5 \frac{ (1-\phi) }{\phi^3} \left(v_{a_{r_0}} \frac{r_0}{r}\right)^2 \right]\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-6">
-<span class="eqno">(782)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-6" title="Permalink to this equation">¶</a></span>\[dh_f= \frac{v_{a_{r_0}}r_0}{2g D_{sand}} \left[ 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\left( \frac{1}{r}\right)  + 3.5 \frac{ (1-\phi)v_{a_{r_0}}r_0 }{\phi^3} \left( \frac{1}{r}\right)^2 \right] dr\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-20">
+<span class="eqno">(786)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-20" title="Permalink to this equation">¶</a></span>\[\frac{dh_f}{dr}= \frac{1}{2g D_{sand}} \left[ 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\left(v_{a_{r_0}} \frac{r_0}{r}\right)  + 3.5 \frac{ (1-\phi) }{\phi^3} \left(v_{a_{r_0}} \frac{r_0}{r}\right)^2 \right]\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-21">
+<span class="eqno">(787)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-21" title="Permalink to this equation">¶</a></span>\[dh_f= \frac{v_{a_{r_0}}r_0}{2g D_{sand}} \left[ 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\left( \frac{1}{r}\right)  + 3.5 \frac{ (1-\phi)v_{a_{r_0}}r_0 }{\phi^3} \left( \frac{1}{r}\right)^2 \right] dr\]</div>
 <p>We will create terms to make the integration easier</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-7">
-<span class="eqno">(783)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[a_0 = \frac{v_{a_{r_0}}r_0}{2g D_{sand}}\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-8">
-<span class="eqno">(784)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[a_1 = 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\]</div>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-9">
-<span class="eqno">(785)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[a_2 = 3.5 \frac{ (1-\phi)v_{a_{r_0}}r_0 }{\phi^3}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-22">
+<span class="eqno">(788)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-22" title="Permalink to this equation">¶</a></span>\[a_0 = \frac{v_{a_{r_0}}r_0}{2g D_{sand}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-23">
+<span class="eqno">(789)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-23" title="Permalink to this equation">¶</a></span>\[a_1 = 300 \frac{\nu (1-\phi)^2}{D_{sand} \phi^3}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-24">
+<span class="eqno">(790)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-24" title="Permalink to this equation">¶</a></span>\[a_2 = 3.5 \frac{ (1-\phi)v_{a_{r_0}}r_0 }{\phi^3}\]</div>
 <p>Now we set up the numerical integration and integrate from the injection site to the radius where the velocity is equal to the filtration velocity.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=PF8v34hSjJtx&amp;line=11&amp;uniqifier=1">For an inlet that service two layers, see here to determine the head loss through the sand</a></p>
 <p>The analysis above suggests that a high velocity and high velocity gradient injection into the sand bed with the goal of breaking flocs into pieces that are 20 <span class="math notranslate nohighlight">\(\mu m\)</span> in diameter would require about 12 cm of head loss. This is based on the assumption that the water would be able to flow radially from the injection point and thus rapidly slow down. Thus the head loss rapidly decreases with distance from the injection point.</p>
@@ -345,47 +549,47 @@
 <h2>Floc Volume<a class="headerlink" href="#floc-volume" title="Permalink to this headline">¶</a></h2>
 <p>The volume of solids deposited in one pore can be obtained based on the average diameter of clean pore constrictions, the diameter of the constricted pore after solids deposition, and the thickness of the deposit. We already have an estimate for the diameter of the constricted pore after solids deposition. The thickness of the deposit must be proportional to some other length scale. We initially hypothesized that the thickness of the deposit scaled with the diameter of the flocs that make it up. That led to the conclusion that increased coagulant dose would increase the total mass of solids that could be retained by the filter before breakthrough. That doesn’t match experimental data and thus we now propose that the average thickness of the deposit scales with the sand grain size, or pore size, or pore separation distance. We will use the pore separation distance as our scaling parameter.</p>
 <p>There are several options for estimating the areal extent of the constriction. We already have an estimate of the inner diameter of the constriction and thus all we need is an estimate of the outer extent of the deposited constriction.  One option would be to take the area of a circle defined by 3 spheres coming close together. That is a clear underestimate because the constriction must extend into the gaps between the spheres. A second option would be to use the porosity to estimate the average plane view area of the pores. If we assume that the pore must connect vertically and thus has a height <span class="math notranslate nohighlight">\(\Lambda_{pore}\)</span>, then the plane view area is given by</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-10">
-<span class="eqno">(786)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[A_{pore} = \phi\Lambda_{pore}^2\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-25">
+<span class="eqno">(791)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-25" title="Permalink to this equation">¶</a></span>\[A_{pore} = \phi\Lambda_{pore}^2\]</div>
 <p>The area of the deposit is obtained by subtracting the constriction opening from the previous equation.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-11">
-<span class="eqno">(787)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-11" title="Permalink to this equation">¶</a></span>\[A_{deposit} = \Lambda_{pore}^2\left(\phi-\frac{v_a}{ v_{constriction}} \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-26">
+<span class="eqno">(792)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-26" title="Permalink to this equation">¶</a></span>\[A_{deposit} = \Lambda_{pore}^2\left(\phi-\frac{v_a}{ v_{constriction}} \right)\]</div>
 <p>The volume of the deposit is thus</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-12">
-<span class="eqno">(788)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-12" title="Permalink to this equation">¶</a></span>\[\rlap{-} V_{deposit} = \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-27">
+<span class="eqno">(793)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-27" title="Permalink to this equation">¶</a></span>\[\rlap{-} V_{deposit} = \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Pi_{pore}^{deposit}\)</span> a number much less than 1 that represents the fixed ratio between the thickness of the deposit and the pore separation distance.</p>
 <p>The head loss per volume of particles deposited can be obtained by dividing the head loss per pore by the volume of particles per pore.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-13">
-<span class="eqno">(789)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-13" title="Permalink to this equation">¶</a></span>\[h_{l_{per_{deposit}}} = \frac{\bar v_{constriction}^2}{2g\Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-28">
+<span class="eqno">(794)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-28" title="Permalink to this equation">¶</a></span>\[h_{l_{per_{deposit}}} = \frac{\bar v_{constriction}^2}{2g\Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)}\]</div>
 <p>If the primary goal for filter design were to decrease head loss per volume of solids deposited, then selecting larger sand (increasing <span class="math notranslate nohighlight">\(\Lambda_{pore}\)</span>) would be the clear strategy. Increasing the sand diameter by a factor of two should decrease the head loss by a factor of 8. Increasing the approach velocity <span class="math notranslate nohighlight">\(v_a\)</span>, results in a small increase in the head loss per volume of deposited material.</p>
 <p>We need a method to connect turbidity removed by a filter into volume of deposited flocs. We will make this connection by first assuming that the flocs have a characteristic size based on a high shear event on their way into the filter. We begin with the relationship between the number of clay particles in a floc and the floc diameter.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-14">
-<span class="eqno">(790)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-14" title="Permalink to this equation">¶</a></span>\[D_{floc} = D_{clay} n_{clay}^\frac{1}{\Pi_{fractal}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-29">
+<span class="eqno">(795)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-29" title="Permalink to this equation">¶</a></span>\[D_{floc} = D_{clay} n_{clay}^\frac{1}{\Pi_{fractal}}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(\Pi_{fractal}\)</span> is the volume based fractal dimension of a floc. We estimate <span class="math notranslate nohighlight">\(\Pi_{fractal}\)</span> to have a value of 2.1. We can rearrange this equation and solve for the number of clay particles in a floc.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-15">
-<span class="eqno">(791)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-15" title="Permalink to this equation">¶</a></span>\[n_{clay} = \left(\frac{D_{floc}}{D_{clay}}\right)^{\Pi_{fractal}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-30">
+<span class="eqno">(796)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-30" title="Permalink to this equation">¶</a></span>\[n_{clay} = \left(\frac{D_{floc}}{D_{clay}}\right)^{\Pi_{fractal}}\]</div>
 <p>Now we can create a relationship for the concentration of clay in a floc dividing the mass of clay by the volume of the floc.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-16">
-<span class="eqno">(792)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-16" title="Permalink to this equation">¶</a></span>\[C_{clay_{floc}} = \frac{n_{clay}\rlap{-} V_{clay}\rho_{clay}}{\rlap{-} V_{floc}} = \frac{n_{clay}D_{clay}^3\rho_{clay}}{D_{floc}^3}= \frac{D_{clay}^3\rho_{clay}}{D_{floc}^3}\left(\frac{D_{floc}}{D_{clay}}\right)^{\Pi_{fractal}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-31">
+<span class="eqno">(797)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-31" title="Permalink to this equation">¶</a></span>\[C_{clay_{floc}} = \frac{n_{clay}\rlap{-} V_{clay}\rho_{clay}}{\rlap{-} V_{floc}} = \frac{n_{clay}D_{clay}^3\rho_{clay}}{D_{floc}^3}= \frac{D_{clay}^3\rho_{clay}}{D_{floc}^3}\left(\frac{D_{floc}}{D_{clay}}\right)^{\Pi_{fractal}}\]</div>
 <p>With one more simplification we obtain the desired equation for the clay concentration in a floc of given diameter.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-17">
-<span class="eqno">(793)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-17" title="Permalink to this equation">¶</a></span>\[C_{clay_{floc}} = \rho_{clay} \left(\frac{D_{clay}}{D_{floc}}\right)^{3-\Pi_{fractal}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-32">
+<span class="eqno">(798)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-32" title="Permalink to this equation">¶</a></span>\[C_{clay_{floc}} = \rho_{clay} \left(\frac{D_{clay}}{D_{floc}}\right)^{3-\Pi_{fractal}}\]</div>
 <p>The mass of clay per pore is obtained by multiplying the deposit volume by the concentration of the flocs.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-18">
-<span class="eqno">(794)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-18" title="Permalink to this equation">¶</a></span>\[M_{clay_{pore}} =\rho_{clay}  \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)\left(\frac{D_{clay}}{D_{floc}}\right)^{3-\Pi_{fractal}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-33">
+<span class="eqno">(799)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-33" title="Permalink to this equation">¶</a></span>\[M_{clay_{pore}} =\rho_{clay}  \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)\left(\frac{D_{clay}}{D_{floc}}\right)^{3-\Pi_{fractal}}\]</div>
 <p>The mass of clay per plan view area of the filter is obtained by multiplying by the number of pores per depth of the filter and dividing by the plan view area of a pore, <span class="math notranslate nohighlight">\(\Lambda_{pore}^2\)</span>.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-19">
-<span class="eqno">(795)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-19" title="Permalink to this equation">¶</a></span>\[M_{clay_{filter}} =H_{filter} \rho_{clay}  \Pi_{pore}^{deposit}\left(\phi-\frac{v_a}{ v_{constriction}} \right)\left(\frac{D_{clay}}{D_{floc}}\right)^{3-\Pi_{fractal}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-34">
+<span class="eqno">(800)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-34" title="Permalink to this equation">¶</a></span>\[M_{clay_{filter}} =H_{filter} \rho_{clay}  \Pi_{pore}^{deposit}\left(\phi-\frac{v_a}{ v_{constriction}} \right)\left(\frac{D_{clay}}{D_{floc}}\right)^{3-\Pi_{fractal}}\]</div>
 <p>According to this model, the mass of clay that can be held by a filter increases linearly with filter depth. The retained mass is independent of the sand size. This is an easy hypothesis to test. Note, however, that this model does not account for the depth of the active zone. Presumably the active zone depth may be greater for larger diameter media and thus breakthrough may occur sooner for larger diameter media.</p>
 <p>If coagulant dose increases it will have two effects. The primary particle attachment strength will increase, the constricted velocity will increase, and the mass retained will increase. The size of the flocs will also increase and that will result in a slight decrease in the retained mass.</p>
 <p>Thus it isn’t immediately clear how changing the coagulant dose will change the maximum mass of retained particles. The evidence from the AguaClara filter theory team is that the mass of clay retained decreases as the coagulant dose increases.</p>
 <p>The head loss per mass of particles deposited can be obtained by dividing the head loss per pore by the mass per pore.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-20">
-<span class="eqno">(796)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-20" title="Permalink to this equation">¶</a></span>\[h_{e_{permassclay}} = \frac{\bar v_{constriction_{max}}^2}{2g\rho_{clay}  \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)}\left(\frac{D_{floc}}{D_{clay}}\right)^{3-\Pi_{fractal}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-35">
+<span class="eqno">(801)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-35" title="Permalink to this equation">¶</a></span>\[h_{e_{permassclay}} = \frac{\bar v_{constriction_{max}}^2}{2g\rho_{clay}  \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)}\left(\frac{D_{floc}}{D_{clay}}\right)^{3-\Pi_{fractal}}\]</div>
 <p>The head loss per mass of solids removed is significantly lower for larger sand sizes. When the coagulant dose increases the head loss increases rapidly because the constricted velocity increases and the floc diameter increases. Unfortunately we do not yet have a model describing floc size as a function of both velocity gradient and coagulant nanoparticle coverage.</p>
 </div>
-<div class="section" id="particle-removal-efficiency">
-<h2>Particle Removal Efficiency<a class="headerlink" href="#particle-removal-efficiency" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>Particle Removal Efficiency<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Particle removal is complicated. We hypothesize that flocs form the deposits that change the flow from being wall shear dominated with a parabolic velocity profile to being uniform velocity flow through the constrictions. This uniform velocity profile transports a very small fraction of clay particles close enough to the deposit to be captured.</p>
 <p>During filter ripening the particles that pass through the filter would be expected to be the primary particles because removal efficiency increases very rapidly with size. During the main part of the filter run the escaping particles are primary particles that weren’t captured by the actively growing deposits. Breakthrough at the end of the filter run is caused by both primary particles and flocs.</p>
 <p>The flocs form a series of actively growing deposits. The number of actively growing deposits in series is possibly a function of the average volume of the flocs (smaller flocs result in more active deposits) and the volume fraction of the flocs normalized by the volume fraction of the primary particles. If this dimensionless volume fraction increases there may be more active deposits and hence improved removal of primary particles.</p>
@@ -411,7 +615,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="Filtration_Design_Solution.html" class="btn btn-neutral float-right" title="Filtration Design Solution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="Filtration_Design.html" class="btn btn-neutral float-left" title="Stacked Rapid Sand Filter Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Filtration_Design_Challenge.html" class="btn btn-neutral float-left" title="Filtration Design Challenge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
