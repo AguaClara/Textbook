@@ -138,6 +138,7 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   :caption: Appendix 1 + Resources
   :maxdepth: 1
 
+  AIDE/AIDE.rst
   Introduction/Python_Tutorial.rst
   equations.rst
   glossary.rst
