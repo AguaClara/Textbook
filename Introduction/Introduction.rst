@@ -190,7 +190,7 @@ A water treatment system must be able to handle the likely range of contaminant 
 Particles
 ^^^^^^^^^^^
 
-Surface waters (rivers, streams, lakes) and some ground water (especially ground water under the influence of surface water) inevitable carry some suspended particles. "`Particles transported by rivers are composed of resistant primary minerals (e.g., quartz and zircon), secondary minerals (clays, metallic oxides and oxyhydroxides) and biogenic remains." </secret https://www.sciencedirect.com/science/article/pii/S0048969708010103>`_ Many of these particles may be harmless, but there is good reason to be hesitant to drink water with a high concentration of suspended particles.
+Surface waters (rivers, streams, lakes) and some ground water (especially ground water under the influence of surface water) inevitable carry some suspended particles. "`Particles transported by rivers are composed of resistant primary minerals (e.g., quartz and zircon), secondary minerals (clays, metallic oxides and oxyhydroxides) and biogenic remains." <https://www.sciencedirect.com/science/article/pii/S0048969708010103>`_ Many of these particles may be harmless, but there is good reason to be hesitant to drink water with a high concentration of suspended particles.
 
 .. _heading_Pathogens:
 

@@ -11,6 +11,7 @@
 AguaClara Infrastructure Design Engine
 **************************************
 
+The AguaClara Infrastructure Design Engine (AIDE) is created and maintained by AguaClara Reach in `Onshape <https://www.onshape.com/en/>`_  AIDE uses parametric design, a part studio tree, and a parts database to generate 3-D models of AguaClara water treatment plants and their Smart Part Components. The part studio tree architecture makes it possible to pass design parameters between Smart Parts and thus achieve an integrated design. Part dimensions and other parameters can be optimized to achieve a compact plant layout.
 
 .. |LFOM| image:: ../Images/AIDElfom.png
   :width: 60
@@ -29,7 +30,7 @@ AguaClara Infrastructure Design Engine
 .. |20-80Lpsplant| image:: ../Images/AIDE20-80lpsPlant.png
   :width: 100
 
-The following AIDE Smart Parts are provided for education and as a demonstration of the AguaClara Reach ability to provide customized designs to AguaClara implementation partners. The AIDE Smart Parts are not
+The following AIDE Smart Parts are provided for education and as a demonstration of the AguaClara Reach ability to provide customized designs to AguaClara implementation partners. The AIDE Smart Parts are not engineering designs. AguaClara Reach works with AguaClara Implementation Partners to develop customized designs for community scale water treatment plants.
 
 If you do not yet have an Onshape account, then you will be able to make changes to the configuration of the Smart Parts and will have access to the `view only toolbar <https://cad.onshape.com/help/Content/viewonlytoolbar.htm>`_. You can sign up for a `free public Onshape account <https://www.onshape.com/en/products/free>`_ that will enable you to also access the parts lists and ESTIMATED materials cost for each of the AIDE Smart Parts.
 
