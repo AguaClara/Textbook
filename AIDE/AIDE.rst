@@ -16,9 +16,8 @@ The AguaClara Infrastructure Design Engine (AIDE) is created and maintained by A
 Disclaimer
 ==========
 
-Authors:  AguaClara Reach
 
-The AguaClara Infrastructure Design Engine (AIDE) and the constituent elements (Smart Parts) were created by AguaClara Reach using Onshape.
+The AguaClara Infrastructure Design Engine (AIDE) and the constituent elements (Smart Parts) were created by AguaClara Reach using Onshape. 
 
 The Smart Parts created by AIDE are not engineering designs. The Smart Parts are provided for educational purposes and the flexible configurations create models that have not been reviewed and are likely NOT suitability for any particular application.
 
