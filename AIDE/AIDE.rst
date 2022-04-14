@@ -17,9 +17,9 @@ Disclaimer
 ==========
 
 
-The AguaClara Infrastructure Design Engine (AIDE) and the constituent elements (Smart Parts) were created by AguaClara Reach using Onshape. 
+The AguaClara Infrastructure Design Engine (AIDE) and the constituent elements (Smart Parts) were created by AguaClara Reach using Onshape.
 
-The Smart Parts created by AIDE are not engineering designs. The Smart Parts are provided for educational purposes and the flexible configurations create models that have not been reviewed and are likely NOT suitability for any particular application.
+The Smart Parts created by AIDE are not engineering designs. The Smart Parts are provided for educational purposes. The flexible configurations of the Smart Parts create models have not been reviewed and are likely NOT suitability for any particular application.
 
 IN NO EVENT SHALL AGUACLARA REACH, OR THEIR EMPLOYEES BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF AIDE, EVEN IF AGUACLARA REACH MAY HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
