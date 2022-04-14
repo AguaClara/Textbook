@@ -16,11 +16,7 @@ The AguaClara Infrastructure Design Engine (AIDE) is created and maintained by A
 Disclaimer
 ==========
 
-Copyright © 2022 AguaClara Reach
-
-Authors:  AguaClara Reach
-
-The AguaClara Infrastructure Design Engine (AIDE) and the constituent elements (Smart Parts) were created by AguaClara Reach using Onshape. It is subject to the Creative Commons Attribution-Share Alike 3.0 United States license. If you alter, transform, or build upon this work, you may distribute the resulting work only under the same, similar or a compatible license. Permission to use AIDE Smart Parts created by AguaClara Reach for educational purposes without a written agreement is hereby granted.
+The AguaClara Infrastructure Design Engine (AIDE) and the constituent elements (Smart Parts) were created by AguaClara Reach using Onshape. 
 
 The Smart Parts created by AIDE are not engineering designs. The Smart Parts are provided for educational purposes and the flexible configurations create models that have not been reviewed and are likely NOT suitability for any particular application.
 
