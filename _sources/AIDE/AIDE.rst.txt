@@ -16,15 +16,12 @@ The AguaClara Infrastructure Design Engine (AIDE) is created and maintained by A
 Disclaimer
 ==========
 
-Copyright © 2022 AguaClara Reach
 
-Authors:  AguaClara Reach
+The AguaClara Infrastructure Design Engine (AIDE) and the constituent elements (Smart Parts) were created by AguaClara Reach using Onshape.
 
-The AguaClara Infrastructure Design Engine (AIDE) and the constituent elements (Smart Parts) were created by AguaClara Reach using Onshape. It is subject to the Creative Commons Attribution-Share Alike 3.0 United States license. If you alter, transform, or build upon this work, you may distribute the resulting work only under the same, similar or a compatible license. Permission to use AIDE Smart Parts created by AguaClara Reach for educational purposes without a written agreement is hereby granted.
+The Smart Parts created by AIDE are not engineering designs. The Smart Parts are provided for educational purposes. The flexible configurations of the Smart Parts create models have not been reviewed and are likely NOT suitability for any particular application.
 
-The Smart Parts created by AIDE are not engineering designs. The Smart Parts are provided for educational purposes and the flexible configurations create models that have not been reviewed and are likely NOT suitability for any particular application.
-
-IN NO EVENT SHALL AGUACLARA REACH, OR THEIR EMPLOYEES BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF AIDE AND ITS ASSOCIATED COPYRIGHTS, EVEN IF AGUACLARA REACH MAY HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+IN NO EVENT SHALL AGUACLARA REACH, OR THEIR EMPLOYEES BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF AIDE, EVEN IF AGUACLARA REACH MAY HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Smart Part User Survey
 ======================
@@ -64,14 +61,14 @@ If you do not yet have an Onshape account, then you will be able to make changes
 .. _table_AIDE Smart Parts:
 
 .. csv-table:: AIDE Smart Parts.
-   :header: "Image", "`AIDE Smart Parts <https://cad.onshape.com/documents?nodeId=a20a96b6267e1942c6dc9951&resourceType=folder>`_",  "Description"
+   :header: "Image", "`AIDE Smart Parts <https://cad.onshape.com/documents?nodeId=a20a96b6267e1942c6dc9951&resourceType=folder>`_",  "Description", "Update time (s)"
    :align: left
 
-   |LFOM|, "`LFOM <https://cad.onshape.com/documents/49035a16b895fd8095d17a02>`_", "Linear Flow Orifice Meter"
-   |EntranceTank|, "`Entrance Tank <https://cad.onshape.com/documents/4c47a124da3abec33e0ce813>`_", "Trash racks, grit removal, chemical dose controller, and linear flow orifice meter"
-   |FlocculatorVH|, "`Flocculator VH <https://cad.onshape.com/documents/673077f4fa843a817d4cd55d>`_", "Vertical-Horizontal Flocculator for flows below about 20 L/s"
-   |FlocculatorHV|, "`Flocculator HV <https://cad.onshape.com/documents/9742e8c019b742df4ae4db85>`_", "Horizontal-Vertical Flocculator for flows between about 10 and 100 L/s"
-   |FlocculatorHH|, "`Flocculator HH <https://cad.onshape.com/documents/84c4c94f9773b67506cd35bb>`_", "Horizontal-Horizontal Flocculator for flows above about 100 L/s"
+   |LFOM|, "`LFOM <https://cad.onshape.com/documents/49035a16b895fd8095d17a02>`_", "Linear Flow Orifice Meter", <5
+   |EntranceTank|, "`Entrance Tank <https://cad.onshape.com/documents/4c47a124da3abec33e0ce813/v/b63a33a398af4ceed22e4f6f/e/bcf152c5be02d9ab5b2b5285?configuration=L%3D7.0%2Bmeter%3BQm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BflocUpstreamHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=62597a5450de854523e95eb6>`_", "Trash racks, grit removal, chemical dose controller, and linear flow orifice meter",
+   |FlocculatorVH|, "`Flocculator VH <https://cad.onshape.com/documents/673077f4fa843a817d4cd55d/w/8bd189f4769c2a64aa07a8c0/e/cdc0c6cfa0e8b64f179ced51?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BL%3D6.0%2Bmeter%3BQm_max%3D4.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D5.0%3BoutletHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dtrue&renderMode=0&uiState=62598bb1f3f15b27bec69729>`_", "Vertical-Horizontal Flocculator for flows below about 20 L/s"
+   |FlocculatorHV|, "`Flocculator HV <https://cad.onshape.com/documents/9742e8c019b742df4ae4db85/w/cbe4d0f58d318c45281687ae/e/05162587e7127122572d3a10?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BL%3D6.0%2Bmeter%3BQm_max%3D80.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D0.0%3BoutletHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=62598b6a314d4c5f8c5cf53f>`_", "Horizontal-Vertical Flocculator for flows between about 10 and 100 L/s"
+   |FlocculatorHH|, "`Flocculator HH <https://cad.onshape.com/documents/84c4c94f9773b67506cd35bb/w/58a1f53fe5ebbbbc808a3541/e/aa5906755ba02b0a3925ec10?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BQm_max%3D200.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D0.0%3BoutletHW%3D3.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=62598a75a0700c52f6918d1b>`_", "Horizontal-Horizontal Flocculator for flows above about 100 L/s"
    |Clarifier|, "`Clarifier <https://cad.onshape.com/documents/e05915c533ee7568c402981a>`_", "Clarifier with floc filter, plate settlers, and floc hopper"
    |OStaRS|, "`OStaRS <https://cad.onshape.com/documents/8a1a990f01575e6e5eed1922>`_", "Open Stacked Rapid Sand Filter"
    |20-80Lpsplant|, "`20-80 L/s plant <https://cad.onshape.com/documents/0e9ede93e11e5a54f68f8606>`_", "Integrated plant for flows between 20 and 80 L/s"
