@@ -1,7 +1,7 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Intro.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
@@ -16,6 +16,7 @@ Constant Head Tanks
 
 Flow :math:`Q` and Water Level :math:`h` as a Function of Time
 ----------------------------------------------------------------
+
 Our first step is to see if we can get constant head out of a simple system. The most simple flow control system is a bucket or tank with a hole in it. This system is too coarse to provide constant head. One step above that is a bucket or tank with a valve. This is where we begin our search for constant head.
 
 Using the setup described in the image below, we derive the following equation for flow :math:`Q` through the valve as a function of time :math:`t`. The derivation is found here: :ref:`heading_flow_for_a_tank_with_a_valve`.

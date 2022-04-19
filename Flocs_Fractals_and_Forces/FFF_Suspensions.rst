@@ -1,7 +1,7 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Flocs_Fractals_and_Forces/FFF_Suspensions.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 

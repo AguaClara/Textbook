@@ -1,3 +1,11 @@
+.. raw:: html
+
+    <embed>
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Design_Solution.html" />
+       <script src="https://hypothes.is/embed.js" async></script>
+    </embed>
+
+
 *************************
 Rapid Mix Design Solution
 *************************
