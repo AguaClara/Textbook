@@ -1,7 +1,7 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Derivations.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 

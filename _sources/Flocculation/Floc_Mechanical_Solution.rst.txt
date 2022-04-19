@@ -1,3 +1,11 @@
+.. raw:: html
+
+    <embed>
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Flocculation/Floc_Mechanical_Solution.html" />
+       <script src="https://hypothes.is/embed.js" async></script>
+    </embed>
+
+
 *******************************
 Mechanical Flocculator Solution
 *******************************
@@ -132,7 +140,7 @@ It doesn’t actually cost very much to flocculate water using electricity. We w
 
 `Determine equivalent height <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=QFSaD7qOxuyj&line=4&uniqifier=1>`_
 
-The equivalent amount of potential energy to run this  mechanical flocculator is 1.17 m 
+The equivalent amount of potential energy to run this  mechanical flocculator is 1.17 m
 The shaft power required is 0.57 kilowatt
 
 

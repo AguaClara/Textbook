@@ -1,3 +1,10 @@
+.. raw:: html
+
+    <embed>
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Filtration/Filtration_Design_Solution.html" />
+       <script src="https://hypothes.is/embed.js" async></script>
+    </embed>
+
 **************************
 Filtration Design Solution
 **************************
