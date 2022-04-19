@@ -1,7 +1,7 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Introduction/Design_Evolution.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 

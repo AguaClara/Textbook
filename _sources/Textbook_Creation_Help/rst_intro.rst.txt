@@ -1,7 +1,7 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Textbook_Creation_Help/rst_intro.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
@@ -150,4 +150,3 @@ You'll need to carefully review any page converted with pandoc.
 .. _Atom: https://ide.atom.io/
 .. _Travis: https://travis-ci.org/
 .. _Python: https://www.python.org/downloads/
-

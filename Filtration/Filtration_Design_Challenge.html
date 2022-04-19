@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Filtration Design Challenge &mdash; AguaClara Textbook v1.3.17 documentation</title>
+  <title>Filtration Design Challenge &mdash; AguaClara Textbook v1.3.18 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.17
+                v1.3.18
               </div>
             
           
@@ -99,11 +99,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Design_Evolution.html">Design Evolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html#drinking-water-challenges">Drinking Water Challenges</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html#wastewater-treatment-challenges">Wastewater Treatment Challenges</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html#anaerobic-pulsed-bed">Anaerobic Pulsed Bed</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html#aerobic-string-digester-asd">Aerobic String Digester (ASD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
 <ul>
@@ -261,7 +257,7 @@
            <div itemprop="articleBody">
             
   <embed>
-   <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+   <link rel="canonical" href="https://aguaclara.github.io/Textbook/Filtration/Filtration_Design_Challenge.html" />
    <script src="https://hypothes.is/embed.js" async></script>
 </embed><div class="section" id="filtration-design-challenge">
 <span id="title-clarification-design-challenge"></span><h1>Filtration Design Challenge<a class="headerlink" href="#filtration-design-challenge" title="Permalink to this headline">¶</a></h1>
@@ -281,7 +277,7 @@
 <li><p>Calculate the minimum flow for an Open Stacked Rapid Sand Filter, OStaRS (ostarsQ_min). An OStaRS is made with a masonry filter box that is open at the top. Given the masonry construction the filter box dimensions must be large enough for the mason to work inside the box. The filter tank width is set by the space required for the hydraulic controls and is approximately 1.43 meter. We estimate that 0.8 meter is the minimum tank length for construction. The backwash velocity is 11 mm/s.</p></li>
 <li><p>What is the minimum plant flow for OStaRS given a minimum of two filters (so that during periods of low flow one filter can still be backwashed)?</p></li>
 <li><p>Given a design filter flow rate of 20 L/s, what is the required filter length? The filter width remains unchanged.</p></li>
-<li><p>What bulk sand volume (sand + pores) required assuming a porosity of 0.4.</p></li>
+<li><p>What is the bulk sand (sand + pores) volume?</p></li>
 <li><p>What mass of sand is needed for this filter given a sand density of <span class="math notranslate nohighlight">\(2650 \frac{kg}{m^3}\)</span>? Note this is the sand density, not the bulk sand density which includes the pores.</p></li>
 <li><p>What is the filtration velocity given that the design flow rate is the same for backwash and for filtration modes? Remember that there are 6 filter layers and that the flow is in parallel during filtration and in series during backwash.</p></li>
 <li><p>How much water is filtered in a filter run of 11 hours and 40 minutes?</p></li>
@@ -289,7 +285,7 @@
 <li><p>What fraction of the water coming into the plant is wasted by the filter if it takes 20 minutes from initiation of backwash to when the filter is returned to production?</p></li>
 <li><p>If a cubic tank is built to hold all of the backwash water from one filter, what is the inside length of one side of the cube? (ignore the effect of freeboard).</p></li>
 <li><p>If the filter runtime is 11 hours and 40 minutes with a clarified water turbidity of 1 NTU and a filtered water turbidity of 0.1 NTU, then what is the average suspended solids concentration of the backwash water? You can assume that 1 NTU = 1.47 mg/L for kaolin clay <a class="reference external" href="https://doi.org/10.1016/j.cjche.2015.02.003">Coagulation behavior of polyaluminum chloride (Wei et al., 2015)</a>. I have defined NTU in the Onshape document. I suggest simply entering the turbidity inputs in the equation that you write in FeatureScript. You can display the result in NTU by dividing the value by NTU and then include ” NTU” in the postString. see <code class="docutils literal notranslate"><span class="pre">`printAnswer(i,</span> <span class="pre">&quot;The</span> <span class="pre">average</span> <span class="pre">concentration</span> <span class="pre">of</span> <span class="pre">suspended</span> <span class="pre">solids</span> <span class="pre">during</span> <span class="pre">backwash</span> <span class="pre">is&quot;,</span> <span class="pre">&quot;</span> <span class="pre">NTU&quot;,</span> <span class="pre">design.bwC/NTU,</span> <span class="pre">3);`</span></code></p></li>
-<li><p>What fraction of the sand pores were filled with clay particles?  Note that we are ignoring the fact that the clay particles formed flocs and the flocs include water. For this problem simply take the volume of clay particles divided by the sand pore volume.</p></li>
+<li><p>What fraction of the sand pores were filled with clay particles prior to backwash?  Note that we are ignoring the fact that the clay particles formed flocs and the flocs include water. For this problem simply take the volume of clay particles divided by the sand pore volume.</p></li>
 <li><p>What is the head loss at the coldest water temperature, 0°C, through the clean sand during filtration? Use the Ergun Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-ergun">(170)</a>. Create a function in FeatureScript to calculate the head loss using the Ergun Equation.</p></li>
 <li><p>What is the head loss at the warmest water temperature, 25°C, through the clean sand during filtration?</p></li>
 <li><p>Estimate the depth of the filter box using Equation <a class="reference internal" href="Filtration_Intro.html#equation-approximate-filter-depth">(671)</a>. Note that this estimate misses about 1 meter of safety factors, freeboard, and plumbing head loss.</p></li>

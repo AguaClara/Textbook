@@ -1,3 +1,11 @@
+.. raw:: html
+
+    <embed>
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Rapid_Mix/RM_Mechanical_Solution.html" />
+       <script src="https://hypothes.is/embed.js" async></script>
+    </embed>
+
+
 ******************************
 Rapid Mix Mechanical Solution
 ******************************
@@ -18,10 +26,10 @@ This design challenge contains two parts: - In the first section, we will explor
 Part 1: Temperature effects, energy use, and operating costs
 ============================================================
 
-**1) Create a graph** of the kinematic viscosity of water as a function of temperature. Use the ``pc.viscosity_kinematic`` function. 
+**1) Create a graph** of the kinematic viscosity of water as a function of temperature. Use the ``pc.viscosity_kinematic`` function.
 
-  #. Create an array of temperatures (0 to 35) using ``np.linspace`` to create a dimensionless array. Then, attach appropriate temperature dimensions to the array by multiplying by the units. You can do this in one line! 
-  #. Pass the entire array of temperatures to the kinematic viscosity function in aguaclara.core.pc to obtain an array of corresponding viscosities. 
+  #. Create an array of temperatures (0 to 35) using ``np.linspace`` to create a dimensionless array. Then, attach appropriate temperature dimensions to the array by multiplying by the units. You can do this in one line!
+  #. Pass the entire array of temperatures to the kinematic viscosity function in aguaclara.core.pc to obtain an array of corresponding viscosities.
   #. Plot viscosity (mm^2/s) as a function of temperature (Celsius).
 
 `Code for solution here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=KrQbKPFS9Trz&line=1&uniqifier=1>`_
@@ -112,7 +120,7 @@ It is common in engineering design to have target design value that must be roun
 The rapid mix motor has 5 hp.
 
 
-**6) Find the efficiency of this motor.** 
+**6) Find the efficiency of this motor.**
 
 6a) One way to do this is to find the index (row number) of this motor horsepower in the original dataframe (or in your created array) and then use that index to find its corresponding efficiency. Use the ``np.where`` function to find the index of the motor horsepower. The ``where`` function will return an array, so you will need to use indexes on the returned array to extract the index of the motor. If you display the returned results, it will help you figure out how to use indexes to get the desired element.
 
@@ -150,13 +158,13 @@ The motor specifications are given below.
 
 The `motor specifications <https://www.mcmaster.com/#5990k314/=19d4hod>`__ indicate that the efficiency is 89.5% which is very close to the premium efficiency standard.
 
-**8) Find the cost** of the motor. 
+**8) Find the cost** of the motor.
 
 How much does the motor cost? Create a variable showing the cost of the motor in USD. We have added USD to pint, so you will not find it in the original registry linked in Problem 3. The abbreviation for US Dollars is ``u.USD``.
 
 `Get the cost of the motor <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=Wyub0oW6BFHt&line=1&uniqifier=1>`_
 
-The cost of the motor is 714.6 dollars. 
+The cost of the motor is 714.6 dollars.
 
 **9) Determine the cost of electricity** to operate the rapid mix unit you sized for your water treatment plant in NY.
 

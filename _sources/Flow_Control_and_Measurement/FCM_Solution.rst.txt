@@ -1,3 +1,11 @@
+.. raw:: html
+
+    <embed>
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Solution.html" />
+       <script src="https://hypothes.is/embed.js" async></script>
+    </embed>
+
+
 *************************************
 Flow Control and Measurement Solution
 *************************************
