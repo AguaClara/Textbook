@@ -94,7 +94,7 @@ A numeric way to determine whether flow is laminar or turbulent is by finding th
 
     {\rm Re = \frac{inertia}{viscosity}} = \frac{\bar vD}{\nu}
 
-`The transition between laminar and turbulent flow is not yet well understood <https://en.wikipedia.org/wiki/Laminar%E2%80%93turbulent_transition>`_, which is why the concept of transitional flow is often simplified and neglected to make it possible to code for laminar or turbulent flow, which are better understood. We will assume that the transition occurs at :math:`\rm{Re} = 2100`. In aguaclara, this parameter shows us as ``pc.RE_TRANSITION_PIPE``.
+`The transition between laminar and turbulent flow is not yet well understood <https://en.wikipedia.org/wiki/Laminar%E2%80%93turbulent_transition>`_, which is why the concept of transitional flow is often simplified and neglected to make it possible to code for laminar or turbulent flow, which are better understood. We will assume that the transition occurs at :math:`\rm{Re} = 2100`. In aguaclara, this parameter is ``pc.RE_TRANSITION_PIPE``.
 
 Fluid can flow through very many different geometries, like a pipe, a rectangular channel, or any other shape. To account for this, the characteristic length scale for the Reynolds number, which was written in the equation above as :math:`D`, is quantified as the `hydraulic diameter <https://www.engineeringtoolbox.com/hydraulic-equivalent-diameter-d_458.html>`_, :math:`D_h` when considering a general cross-sectional area. For circular pipes, which are the most common geometry you’ll encounter in this class, the hydraulic diameter is simply the pipe's diameter, :math:`D_h = D`.
 
@@ -207,7 +207,7 @@ The assumption necessary to use the Bernoulli equation, which is stated above, r
 
    \frac{p_{1}}{\rho g} + z_{1} + \alpha_{1} \frac{\bar v_{1}^2}{2g} + h_P = \frac{p_{2}}{\rho g} + z_{2} + {\alpha_{2}} \frac{\bar v_{2}^2}{2g} + h_T + h_L
 
-You’ll also notice the :math:`\alpha` term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class; we assume that its value is 1. In the Bernoulli equation, the velocity of a streamline of the fluid is considered, :math:`v`. The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface many not all be the same. Hence, :math:`\bar v` is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, :math:`h_P = h_T = 0`. With these simplifications, the energy equation can be written as follows:
+You’ll also notice the :math:`\alpha` term attached to the velocity head. This is a correction factor for kinetic energy, and will be neglected in this class; we assume that its value is 1. In the Bernoulli equation, the velocity of a streamline of the fluid is considered, :math:`v`. The energy equation, however compares control surfaces instead of streamlines, and the velocities across a control surface may not all be the same. Hence, :math:`\bar v` is used to represent the average velocity. Since AguaClara does not use pumps nor turbines, :math:`h_P = h_T = 0`. With these simplifications, the energy equation can be written as follows:
 
 .. math::
   :label: energy_equation

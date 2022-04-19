@@ -1,10 +1,15 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Introduction/Challenges.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
+.. _title_Challenges:
+
+****************
+Challenges
+****************
 
 Introduction
 ============

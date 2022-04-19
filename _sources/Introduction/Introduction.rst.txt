@@ -1,7 +1,7 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Introduction/Introduction.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
@@ -190,7 +190,7 @@ A water treatment system must be able to handle the likely range of contaminant 
 Particles
 ^^^^^^^^^^^
 
-Surface waters (rivers, streams, lakes) and some ground water (especially ground water under the influence of surface water) inevitable carry some suspended particles. "`Particles transported by rivers are composed of resistant primary minerals (e.g., quartz and zircon), secondary minerals (clays, metallic oxides and oxyhydroxides) and biogenic remains." <https://www.sciencedirect.com/science/article/pii/S0048969708010103>`_ Many of these particles may be harmless, but there is good reason to be hesitant to drink water with a high concentration of suspended particles.
+Surface waters (rivers, streams, lakes) and some ground water (especially ground water under the influence of surface water) inevitably carry some suspended particles. "`Particles transported by rivers are composed of resistant primary minerals (e.g., quartz and zircon), secondary minerals (clays, metallic oxides and oxyhydroxides) and biogenic remains." <https://www.sciencedirect.com/science/article/pii/S0048969708010103>`_ Many of these particles may be harmless, but there is good reason to be hesitant to drink water with a high concentration of suspended particles.
 
 .. _heading_Pathogens:
 
@@ -290,7 +290,7 @@ The AguaClara Treatment Train
 Why does flocculation precede sedimentation?
 Which process removes the largest quantity of contaminants?
 
-Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:
+Sedimentation is the process of particles ‘falling’ because they have a higher density than the water, and its governing equation is:
 
 .. math::
   :label: eq_laminar_terminal_velocity

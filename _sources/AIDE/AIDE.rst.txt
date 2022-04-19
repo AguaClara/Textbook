@@ -1,7 +1,7 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/AIDE.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
@@ -13,7 +13,7 @@ AguaClara Infrastructure Design Engine
 
 The AguaClara Infrastructure Design Engine (AIDE) is created and continuously improved by AguaClara Reach in `Onshape <https://www.onshape.com/en/>`_.  AIDE is a long term effort that began in 2005 and represents the contributions of thousands of individuals. AguaClara Reach is providing open access to AIDE Smart Parts for educational purposes and so AguaClara implementation partners can explore our technologies.
 
-We rely on donor support and payment from AguaClara implementation partners for our services. Please `support our mission of developing and providing the next generation of drinking water treatment plant design so that many more communities can have safe water on tap <https://www.aguaclarareach.org/donate-now>`_.
+We rely on donor support and payment from AguaClara implementation partners for our services. Please `support our mission of developing and providing the next generation of drinking water treatment plant designs so that many more communities can have safe water on tap <https://www.aguaclarareach.org/donate-now>`_.
 
 AIDE uses parametric design, a part studio tree, and a parts database to generate 3-D models of Smart Parts as well as complete AguaClara municipal water treatment plants. The part studio tree architecture makes it possible to pass design parameters between Smart Parts and thus achieve an integrated design. Part dimensions and other parameters can be optimized to achieve a compact plant layout.
 
@@ -35,7 +35,7 @@ The full plant can take up to several minutes to generate a new model that shows
 
 The bill of materials does not include internal components if "Show internal components" is not selected. The bill of materials DOES include all of the parts even if "Replicate all parts" is not selected.
 
-The configurations have minimum and maximum values. This does not imply that the models created in that range are appropriate designs. The intent of providing the configuration options is to allow exploration to see how the model changes when the input configurations are changed. If a configuration input is red it is out of range.
+Vary the values in the configurations to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are appropriate designs. The intent of providing the configuration options is to allow exploration to see how the model changes when the input configurations are changed. If a configuration input is red it is out of range.
 
 .. _table_AIDE Smart Parts:
 
@@ -66,7 +66,7 @@ Please fill out the following survey to provide us with feedback on your experie
 Next Steps for Potential Implementation Partners
 ================================================
 
-AguaClara Reach provides customized hydraulic designs, training, and technical support to AguaClara Implementation Partners.
+AguaClara Reach provides customized hydraulic designs, training, and technical support to AguaClara Implementation Partners. AguaClara Reach can add pipes and fittings from preferred vendors
 
 Please fill out the following survey if your organization is interested in becoming an AguaClara Implementation Partner. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. AguaClara Reach is ready to develop partnerships with both non profit organizations and engineering firms.
 
@@ -81,29 +81,33 @@ Please fill out the following survey if your organization is interested in becom
 
 .. |EntranceTank| image:: https://cad.onshape.com/api/thumbnails/d/4c47a124da3abec33e0ce813/w/3955cd0d266daedd3eabf165/s/300x170?t=1649886532899
   :width: 200
-  :target: https://cad.onshape.com/documents/4c47a124da3abec33e0ce813/v/681623cbdbace9c98f5de80d/e/bcf152c5be02d9ab5b2b5285?configuration=L%3D7.0%2Bmeter%3BQm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BflocUpstreamHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=625d673f8af6832b8558818d
+  :target: https://cad.onshape.com/documents/4c47a124da3abec33e0ce813/v/f01ded5c2680373255e82e1b/e/bcf152c5be02d9ab5b2b5285?configuration=L%3D7.0%2Bmeter%3BQm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BflocUpstreamHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=625ec7a55c378525bc83ffd9
 
 
 .. |FlocculatorVH| image:: https://cad.onshape.com/api/thumbnails/d/673077f4fa843a817d4cd55d/w/8bd189f4769c2a64aa07a8c0/s/300x170?t=1649865038786
   :width: 200
-  :target: https://cad.onshape.com/documents/673077f4fa843a817d4cd55d/v/37ba2391d04e6cb2532e1734/e/cdc0c6cfa0e8b64f179ced51?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BL%3D7.0%2Bmeter%3BQm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BoutletHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=625d7e029b46084bd645164b
+  :target: https://cad.onshape.com/documents/673077f4fa843a817d4cd55d/v/e6f2a6bd2505a78f737a1639/e/cdc0c6cfa0e8b64f179ced51?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BL%3D7.0%2Bmeter%3BQm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BoutletHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=625ec25bb1bc2120a9bd6e05
 
 .. |FlocculatorHV| image:: https://cad.onshape.com/api/thumbnails/d/9742e8c019b742df4ae4db85/w/cbe4d0f58d318c45281687ae/s/300x170?t=1649677284979
   :width: 200
-  :target: https://cad.onshape.com/documents/9742e8c019b742df4ae4db85/v/0233fce9cc90e70e4818de1e/e/05162587e7127122572d3a10?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BL%3D7.0%2Bmeter%3BQm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BoutletHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=625d7ea08af6832b8559403b
+  :target: https://cad.onshape.com/documents/9742e8c019b742df4ae4db85/v/e0aea8791324f51f18c9a510/e/05162587e7127122572d3a10?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BL%3D7.0%2Bmeter%3BQm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BoutletHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=625ec2866d3c833cc78926b2
 
 .. |FlocculatorHH| image:: https://cad.onshape.com/api/thumbnails/d/84c4c94f9773b67506cd35bb/w/58a1f53fe5ebbbbc808a3541/s/300x170?t=1649677285361
   :width: 200
-  :target: https://cad.onshape.com/documents/84c4c94f9773b67506cd35bb/v/c36d7c9a99f05eba8c85cc2b/e/aa5906755ba02b0a3925ec10?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BQm_max%3D200.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BoutletHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=625d7ef26b52ee6acd9c4c1d
+  :target: https://cad.onshape.com/documents/84c4c94f9773b67506cd35bb/v/174393504e42dc8b50c7fbb3/e/aa5906755ba02b0a3925ec10?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BQm_max%3D200.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BoutletHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=625ec2afc764e815c111b434
 
-.. |Clarifier| image:: https://cad.onshape.com/api/thumbnails/d/e05915c533ee7568c402981a/w/56de4202f426e6443151ca07/s/300x170?t=1649677324668
+.. |Clarifier| image:: https://cad.onshape.com/api/thumbnails/d/e05915c533ee7568c402981a/w/56de4202f426e6443151ca07/s/300x170
   :width: 200
-  :target: https://cad.onshape.com/documents/e05915c533ee7568c402981a/v/cbdd3b25514ca4314aaabb0c/e/3f94eabd115787bc33ae755d?configuration=G_max%3D140.0%3BQm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BcaptureVm%3D0.12%3BprintParams%3Dfalse%3Brep%3Dfalse%3BupVm%3D1.0&renderMode=0&uiState=625d6cbea0700c52f6a028b2
+  :target: https://cad.onshape.com/documents/e05915c533ee7568c402981a/v/8167b6e10d8ef4e059c901fd/e/3f94eabd115787bc33ae755d?configuration=G_max%3D140.0%3BQm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BcaptureVm%3D0.12%3BprintParams%3Dfalse%3Brep%3Dfalse%3BupVm%3D1.0&renderMode=0&uiState=625ec730b1bc2120a9bd87a9
 
-.. |OStaRS| image:: https://cad.onshape.com/api/thumbnails/d/8a1a990f01575e6e5eed1922/w/3811cfb89da77b076395fdc0/s/300x170?t=1649677431578
+.. |OStaRS| image:: https://cad.onshape.com/api/thumbnails/d/8a1a990f01575e6e5eed1922/w/3811cfb89da77b076395fdc0/s/300x170?t=1649677285361
   :width: 200
-  :target: https://cad.onshape.com/documents/8a1a990f01575e6e5eed1922/v/9a97a9f9901798ac60fe7320/e/fd576f076cd3757b426c7f20?configuration=Qm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BprintParams%3Dfalse%3Brep%3Dfalse%3BspareFilter%3Dtrue&renderMode=0&uiState=625d6ca7a0700c52f6a0280b
+  :target: https://cad.onshape.com/documents/8a1a990f01575e6e5eed1922/v/b1543bbfbf42cb55e76d80ef/e/fd576f076cd3757b426c7f20?configuration=Qm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BprintParams%3Dfalse%3Brep%3Dfalse%3BspareFilter%3Dtrue&renderMode=0&uiState=625ec21f5c378525bc83cf89
 
-.. |20-80Lpsplant| image:: https://cad.onshape.com/api/thumbnails/d/0e9ede93e11e5a54f68f8606/w/2744164cc6e56e3693a3190f/s/300x170?t=1649678173676
+.. |20-80Lpsplant| image:: https://cad.onshape.com/api/thumbnails/d/0e9ede93e11e5a54f68f8606/w/2744164cc6e56e3693a3190f/s/300x170?t=1649677285361
   :width: 200
-  :target: https://cad.onshape.com/documents/0e9ede93e11e5a54f68f8606/v/93bda17622a90ffea94a81ad/e/723e9e9d93f3008c9815e2d6?configuration=Qm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=625d6d2fd68ae752b3bc4446
+  :target: https://cad.onshape.com/documents/0e9ede93e11e5a54f68f8606/v/4789087215251a13420221aa/e/723e9e9d93f3008c9815e2d6?configuration=Qm_max%3D20.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D5.0%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=625ec36a6b52ee6acda26ee3
+
+what
+
+.. |v20-80Lpsplant| version:: "0e9ede93e11e5a54f68f8606/v/4789087215251a13420221aa"
