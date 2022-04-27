@@ -19,12 +19,14 @@
 Open Stacked Rapid Sand Filter Configurable Component
 *****************************************************
 
+Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornell program in response to the need for a new technology that would both eliminate the need for backwash pumps AND not require the construction of 6 filters for small towns.
+
 .. _figure_OStaRS:
 
 .. figure:: OStaRS.png
     :width: 350px
     :align: center
-    :alt: Location of the Entrance Tank
+    :alt: OStaRS
 
     The open stacked rapid sand filter uses hydraulic controls to ensure steady flow through the filter media and an innovative system to inject and extract water from the sand bed to create six filters working in parallel.
 
@@ -32,32 +34,32 @@ Open Stacked Rapid Sand Filter Configurable Component
 .. _figure_OStaRSinPlant:
 
 .. figure:: OStaRSinPlant.png
-    :width: 350px
+    :width: 250px
     :align: center
-    :alt: Location of the StaRS filter
+    :alt: Location of the OStaRS filter
 
-    The open stacked rapid sand filter (outlined in red) is .
+    The open stacked rapid sand filter (outlined in red) is a compact unit next to the chemical platform.
 
 
-The entrance tank has four main functions:
-==========================================
+The Stacked Rapid Sand Filter Includes Four Innovations:
+========================================================
 
-  #. Remove trash and debris that could potentially clog the diffusers in the inlet manifold to the clarifier.
-  #. Remove grit and sand that would otherwise settle in the flocculator.
-  #. Measure the flow rate entering the plant using a Linear Flow Orifice Meter.
-  #. Automatically vary the chemical feed rates as the plant flow rate changes with the chemical doser.
+  #. No pumps are required for backwash.
+  #. The filter switches between filtration and backwash modes without changing the flow rate through the filter.
+  #. A single small air valve controls changing the mode from filter to backwash and back again.
+  #. Water is injected into and extracted from the sand bed.
 
-Generate New Models of the Entrance Tank
-========================================
+Generate New Models of the Stacked Rapid Sand Filter
+====================================================
 
-Edit the configurations to create new models of the entrance tank. Some models may fail because the constraints can't all be met.
+Edit the configurations to create new models of the stacked rapid sand filter.
 
 .. _figure_configOStaRS:
 
-.. figure:: configET.png
-    :width: 400px
+.. figure:: configOStaRS.png
+    :width: 300px
     :align: center
-    :alt: Location of the Entrance Tank
+    :alt: configuration for OStaRS
 
     The configuration options for the Entrance Tank.
 
@@ -66,11 +68,12 @@ Edit the configurations to create new models of the entrance tank. Some models m
    :align: left
    :widths: 50, 100
 
-   "Flow (L/s)", "The maximum flow rate sets the size of the entrance tank. Vary it to see how the dimensions change."
-   Minimum temperature (˚C), The flow is turbulent throughout the entrance tank and thus temperature doesn’t have a significant effect on the design.
+   "Flow (L/s)", "The maximum flow rate sets the size and number of the filters. Vary it to see how the dimensions change."
+   Minimum temperature (˚C), The temperature has a small effect on the head loss through the clean filter bed.
+   Spare Filter, If selected this will add filter capacity so that one filter can be taken off line while operating at the plant maximum flow rate.
 
 
-Additional information is available in the chapter on `Entrance Tank Design <https://aguaclara.github.io/Textbook/Filtration/Filtration_Design.html>`_
+Additional information is available in the chapter on `Filter Design <https://aguaclara.github.io/Textbook/Filtration/Filtration_Design.html>`_
 
 
 .. |donate| image:: donate.png

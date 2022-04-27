@@ -24,7 +24,7 @@ Entrance Tank Configurable Component
 .. figure:: ET.png
     :width: 500px
     :align: center
-    :alt: Location of the Entrance Tank
+    :alt: Entrance Tank
 
     The entrance tank is where the raw water first enters the water treatment plant. It enters through the pipe on the right, passes through the 2 trash racks, flows through the grit removal zone, and exits through the linear flow orifice meter.
 
