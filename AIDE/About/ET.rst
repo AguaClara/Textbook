@@ -7,7 +7,7 @@
 
 .. list-table::
    :widths: 60 50 30
-   :header-rows: 1
+   :header-rows: 0
 
    * - |ACRlogowithname|
      - |textbook|
@@ -26,7 +26,7 @@ Entrance Tank Configurable Component
     :align: center
     :alt: Location of the Entrance Tank
 
-    The Entrance Tank is where the raw water first enters the water treatment plant. It enters through the pipe on the right, passes through the 2 trash racks, flows through the grit removal zone, and exits through the linear flow orifice meter.
+    The entrance tank is where the raw water first enters the water treatment plant. It enters through the pipe on the right, passes through the 2 trash racks, flows through the grit removal zone, and exits through the linear flow orifice meter.
 
 
 .. _figure_ETinPlant:
@@ -36,9 +36,11 @@ Entrance Tank Configurable Component
     :align: center
     :alt: Location of the Entrance Tank
 
-    The Entrance Tank (outlined in red) is attached to the flocculator to create a compact plant layout.
+    The entrance tank (outlined in red) is attached to the flocculator to create a compact plant layout.
+
 
 The entrance tank has four main functions:
+==========================================
 
   #. Remove trash and debris that could potentially clog the diffusers in the inlet manifold to the clarifier.
   #. Remove grit and sand that would otherwise settle in the flocculator.
@@ -48,7 +50,7 @@ The entrance tank has four main functions:
 Generate New Models of the Entrance Tank
 ========================================
 
-Edit the configurations to create new models of the entrance tank. Some models may completely fail because the constraints can't all be met.
+Edit the configurations to create new models of the entrance tank. Some models may fail because the constraints can't all be met.
 
 .. _figure_configET:
 
@@ -79,7 +81,6 @@ Additional information is available in the chapter on `Entrance Tank Design <htt
 
 .. |textbook| image:: textbook.png
   :target: https://aguaclara.github.io/Textbook/AIDE/AIDE.html
-  :alttext: what
   :height: 40
 
 .. |ACRlogowithname| image:: ACRlogowithname.png
