@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Open Stacked Rapid Sand Filter Configurable Component &mdash; AguaClara Textbook 297/merge documentation</title>
+  <title>Open Stacked Rapid Sand Filter Configurable Component &mdash; AguaClara Textbook 298/merge documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                297/merge
+                298/merge
               </div>
             
           
@@ -265,30 +265,31 @@
 </table>
 <div class="section" id="open-stacked-rapid-sand-filter-configurable-component">
 <span id="title-open-stacked-rapid-sand-filter-configurable-component"></span><h1>Open Stacked Rapid Sand Filter Configurable Component<a class="headerlink" href="#open-stacked-rapid-sand-filter-configurable-component" title="Permalink to this headline">¶</a></h1>
+<p>Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornell program in response to the need for a new technology that would both eliminate the need for backwash pumps AND not require the construction of 6 filters for small towns.</p>
 <div class="figure align-center" id="id1">
-<span id="figure-ostars"></span><a class="reference internal image-reference" href="../../_images/OStaRS.png"><img alt="Location of the Entrance Tank" src="../../_images/OStaRS.png" style="width: 350px;" /></a>
+<span id="figure-ostars"></span><a class="reference internal image-reference" href="../../_images/OStaRS.png"><img alt="OStaRS" src="../../_images/OStaRS.png" style="width: 350px;" /></a>
 <p class="caption"><span class="caption-text">The open stacked rapid sand filter uses hydraulic controls to ensure steady flow through the filter media and an innovative system to inject and extract water from the sand bed to create six filters working in parallel.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id2">
-<span id="figure-ostarsinplant"></span><a class="reference internal image-reference" href="../../_images/OStaRSinPlant.png"><img alt="Location of the StaRS filter" src="../../_images/OStaRSinPlant.png" style="width: 350px;" /></a>
-<p class="caption"><span class="caption-text">The open stacked rapid sand filter (outlined in red) is .</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<span id="figure-ostarsinplant"></span><a class="reference internal image-reference" href="../../_images/OStaRSinPlant.png"><img alt="Location of the OStaRS filter" src="../../_images/OStaRSinPlant.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">The open stacked rapid sand filter (outlined in red) is a compact unit next to the chemical platform.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="the-entrance-tank-has-four-main-functions">
-<h2>The entrance tank has four main functions:<a class="headerlink" href="#the-entrance-tank-has-four-main-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-stacked-rapid-sand-filter-includes-four-innovations">
+<h2>The Stacked Rapid Sand Filter Includes Four Innovations:<a class="headerlink" href="#the-stacked-rapid-sand-filter-includes-four-innovations" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Remove trash and debris that could potentially clog the diffusers in the inlet manifold to the clarifier.</p></li>
-<li><p>Remove grit and sand that would otherwise settle in the flocculator.</p></li>
-<li><p>Measure the flow rate entering the plant using a Linear Flow Orifice Meter.</p></li>
-<li><p>Automatically vary the chemical feed rates as the plant flow rate changes with the chemical doser.</p></li>
+<li><p>No pumps are required for backwash.</p></li>
+<li><p>The filter switches between filtration and backwash modes without changing the flow rate through the filter.</p></li>
+<li><p>A single small air valve controls changing the mode from filter to backwash and back again.</p></li>
+<li><p>Water is injected into and extracted from the sand bed.</p></li>
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="generate-new-models-of-the-entrance-tank">
-<h2>Generate New Models of the Entrance Tank<a class="headerlink" href="#generate-new-models-of-the-entrance-tank" title="Permalink to this headline">¶</a></h2>
-<p>Edit the configurations to create new models of the entrance tank. Some models may fail because the constraints can’t all be met.</p>
+<div class="section" id="generate-new-models-of-the-stacked-rapid-sand-filter">
+<h2>Generate New Models of the Stacked Rapid Sand Filter<a class="headerlink" href="#generate-new-models-of-the-stacked-rapid-sand-filter" title="Permalink to this headline">¶</a></h2>
+<p>Edit the configurations to create new models of the stacked rapid sand filter.</p>
 <div class="figure align-center" id="id3">
-<span id="figure-configostars"></span><a class="reference internal image-reference" href="../../_images/configET.png"><img alt="Location of the Entrance Tank" src="../../_images/configET.png" style="width: 400px;" /></a>
+<span id="figure-configostars"></span><a class="reference internal image-reference" href="../../_images/configOStaRS.png"><img alt="configuration for OStaRS" src="../../_images/configOStaRS.png" style="width: 300px;" /></a>
 <p class="caption"><span class="caption-text">The configuration options for the Entrance Tank.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <table class="colwidths-given docutils align-left" id="id4">
@@ -304,14 +305,17 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Flow (L/s)</p></td>
-<td><p>The maximum flow rate sets the size of the entrance tank. Vary it to see how the dimensions change.</p></td>
+<td><p>The maximum flow rate sets the size and number of the filters. Vary it to see how the dimensions change.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Minimum temperature (˚C)</p></td>
-<td><p>The flow is turbulent throughout the entrance tank and thus temperature doesn’t have a significant effect on the design.</p></td>
+<td><p>The temperature has a small effect on the head loss through the clean filter bed.</p></td>
+</tr>
+<tr class="row-even"><td><p>Spare Filter</p></td>
+<td><p>If selected this will add filter capacity so that one filter can be taken off line while operating at the plant maximum flow rate.</p></td>
 </tr>
 </tbody>
 </table>
-<p>Additional information is available in the chapter on <a class="reference external" href="https://aguaclara.github.io/Textbook/Filtration/Filtration_Design.html">Entrance Tank Design</a></p>
+<p>Additional information is available in the chapter on <a class="reference external" href="https://aguaclara.github.io/Textbook/Filtration/Filtration_Design.html">Filter Design</a></p>
 </div>
 </div>
 
