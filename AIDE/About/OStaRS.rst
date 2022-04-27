@@ -22,21 +22,21 @@ Open Stacked Rapid Sand Filter Configurable Component
 .. _figure_OStaRS:
 
 .. figure:: OStaRS.png
-    :width: 500px
+    :width: 350px
     :align: center
     :alt: Location of the Entrance Tank
 
-    The entrance tank is where the raw water first enters the water treatment plant. It enters through the pipe on the right, passes through the 2 trash racks, flows through the grit removal zone, and exits through the linear flow orifice meter.
+    The open stacked rapid sand filter uses hydraulic controls to ensure steady flow through the filter media and an innovative system to inject and extract water from the sand bed to create six filters working in parallel.
 
 
 .. _figure_OStaRSinPlant:
 
 .. figure:: OStaRSinPlant.png
-    :width: 500px
+    :width: 350px
     :align: center
-    :alt: Location of the Entrance Tank
+    :alt: Location of the StaRS filter
 
-    The entrance tank (outlined in red) is attached to the flocculator to create a compact plant layout.
+    The open stacked rapid sand filter (outlined in red) is .
 
 
 The entrance tank has four main functions:
@@ -73,7 +73,7 @@ Edit the configurations to create new models of the entrance tank. Some models m
 Additional information is available in the chapter on `Entrance Tank Design <https://aguaclara.github.io/Textbook/Filtration/Filtration_Design.html>`_
 
 
-.. |donate| image:: Donate.png
+.. |donate| image:: donate.png
   :target: https://www.aguaclarareach.org/donate-now
   :height: 40
 

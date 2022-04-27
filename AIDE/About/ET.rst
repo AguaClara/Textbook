@@ -75,7 +75,7 @@ Edit the configurations to create new models of the entrance tank. Some models m
 Additional information is available in the chapter on `Entrance Tank Design <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/ET_Design.html>`_
 
 
-.. |donate| image:: Donate.png
+.. |donate| image:: donate.png
   :target: https://www.aguaclarareach.org/donate-now
   :height: 40
 

@@ -6,7 +6,7 @@
 
 |donate|
 
-.. _title_Chemistry_of_Water_Treatment_Introduction:
+.. _title_AguaClara_Infrastructure_Design_Engine:
 
 **************************************
 AguaClara Infrastructure Design Engine
@@ -122,6 +122,6 @@ Please fill out the following survey if your organization is interested in becom
   :target: https://cad.onshape.com/
   :height: 16
 
-.. |donate| image:: /Images/Donate.png
+.. |donate| image:: /Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
   :height: 30

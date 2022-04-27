@@ -73,7 +73,7 @@ Edit the configurations to create new models of the flocculator. Some models may
 Additional information is available in the chapter on `Flocculator Design <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html>`_
 
 
-.. |donate| image:: Donate.png
+.. |donate| image:: donate.png
   :target: https://www.aguaclarareach.org/donate-now
   :height: 40
 
