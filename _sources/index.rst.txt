@@ -1,26 +1,21 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/index.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
 .. _toc:
 
+
+
 =====================================
 The Physics of Water Treatment Design
 =====================================
-This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in `aguaclara <https://github.com/AguaClara/aguaclara>`_. Listed below are the versions of the programs we use:
 
-.. _software_versions:
-.. csv-table:: These are the software versions used to compile this textbook
-   :header: "Software", "version"
-   :widths: 10, 10
-   :align: center
-
-   "Sphinx", "1.8.1"
-   "aguaclara", "0.3.0"
-   "Python", "3.8"
+.. image:: /Images/ACRlogowithname.png
+  :width: 200
+  :target: https://www.aguaclarareach.org/
 
 .. toctree::
   :caption: Acknowledgements
@@ -152,6 +147,18 @@ This textbook is written and maintained in `Github <https://github.com/AguaClara
   Textbook_Creation_Help/example_aguaclara_rst.rst
   Textbook_Creation_Help/parameter_convention_list.rst
 
+
+This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in the `aguaclara <https://github.com/AguaClara/aguaclara>`_ python library. Listed below are the versions of the programs we use:
+
+.. _software_versions:
+.. csv-table:: These are the software versions used to compile this textbook
+   :header: "Software", "version"
+   :widths: 10, 10
+   :align: center
+
+   "Sphinx", "1.8.1"
+   "aguaclara", "0.3.0"
+   "Python", "3.8"
 
 Please use the annotation sidebar to leave comments with requests for improvements, additions, and corrections.
 

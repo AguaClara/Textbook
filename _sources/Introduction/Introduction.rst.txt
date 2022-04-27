@@ -37,7 +37,7 @@ We want to encourage skepticism and we want to develop insights to guide thought
 
 .. _figure_short_walk:
 
-.. figure:: ../Images/Short_walk_to_the_edge.jpg
+.. figure:: /Images/Short_walk_to_the_edge.jpg
     :width: 500px
     :align: center
     :alt: internal figure
