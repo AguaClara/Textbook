@@ -1,6 +1,6 @@
 .. raw:: html
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/About/ET.html" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/About/FlocVH.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
@@ -13,26 +13,26 @@
      - |textbook|
      - |donate|
 
-.. _title_Flocculator_HV_Configurable_Component:
+.. _title_Flocculator_VH_Configurable_Component:
 
 ********************************************
-Flocculator HV Configurable Component
+Flocculator VH Configurable Component
 ********************************************
 
-.. _figure_FlocHV:
+.. _figure_FlocVH:
 
-.. figure:: FlocHV.png
-    :width: 500px
+.. figure:: FlocVH.png
+    :width: 180px
     :align: center
     :alt: Location of the Entrance Tank
 
     The flocculator use baffles to create a flow path with 180˚ bends. The flow contracts as it goes around the bend, expands, generates turbulence, and then deforms the fluid as viscosity converts the turbulent kinetic energy into heat. The fluid deformation causes collisions between particles.
 
 
-.. _figure_FlocHVinPlant:
+.. _figure_FlocVHinPlant:
 
-.. figure:: FlocHVinPlant.png
-    :width: 400px
+.. figure:: FlocVHinPlant.png
+    :width: 150px
     :align: center
     :alt: Location of the Entrance Tank
 
@@ -52,23 +52,24 @@ Edit the configurations to create new models of the flocculator. Some models may
 
 .. _figure_configFloc:
 
-.. figure:: configFloc.png
+.. figure:: configFlocVH.png
     :width: 300px
     :align: center
     :alt: Flocculator configuration
 
     The configuration options for the Flocculator.
 
-.. csv-table:: Flocculator HV configurations.
+.. csv-table:: Flocculator VH configurations.
    :header: "Configuration", "Description"
    :align: left
    :widths: 50, 100
 
    "Flow (L/s)", "The maximum flow rate sets the size of the flocculator. Vary it to see how the dimensions change."
    Minimum temperature (˚C), The water viscosity increases for low temperatures and thus more energy is required (greater head loss) to achieve the same total fluid deformation.
-   Channel length (m), The inside length of the flocculator that enables fitting the flocculator next to the clarifier to make a compact plant layout. Specify a long channel length to create a flocculator with a single channel.
    Water depth at exit (m), The flocculator is built on the same slab as the clarifier and the elevation of the water leaving the flocculator must match the water level at the entrance of the clarifier.
    Collision potential (Gt), The collision potential is created by the total fluid deformation in the flocculator.
+   Velocity gradient (1/s), The velocity gradient influences the size of the flocs leaving the flocculator. High velocity gradients all require more energy input (more head loss).
+
 
 Additional information is available in the chapter on `Flocculator Design <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html>`_
 

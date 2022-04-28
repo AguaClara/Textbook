@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Full Plant (20-80 L/s) Configurable Component &mdash; AguaClara Textbook 298/merge documentation</title>
+  <title>Flocculator HV Configurable Component &mdash; AguaClara Textbook 298/merge documentation</title>
   
 
   
@@ -231,13 +231,13 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Full Plant (20-80 L/s) Configurable Component</li>
+      <li>Flocculator HV Configurable Component</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/AIDE/About/Plant20-80.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/AIDE/About/FlocHV.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -263,21 +263,35 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="full-plant-20-80-l-s-configurable-component">
-<span id="title-full-plant-20-80"></span><h1>Full Plant (20-80 L/s) Configurable Component<a class="headerlink" href="#full-plant-20-80-l-s-configurable-component" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="flocculator-hv-configurable-component">
+<span id="title-flocculator-hv-configurable-component"></span><h1>Flocculator HV Configurable Component<a class="headerlink" href="#flocculator-hv-configurable-component" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center" id="id1">
-<span id="figure-plant20-80"></span><a class="reference internal image-reference" href="../../_images/Plant20-80.png"><img alt="Entrance Tank" src="../../_images/Plant20-80.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">The full plant includes a gravity powered chemical dosing system, trash removal, flow measurement, hydraulic flocculation, floc filter, plate settlers, and stacked rapid sand filtration.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<span id="figure-flochv"></span><a class="reference internal image-reference" href="../../_images/FlocHV.png"><img alt="Location of the Entrance Tank" src="../../_images/FlocHV.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">The flocculator use baffles to create a flow path with 180˚ bends. The flow contracts as it goes around the bend, expands, generates turbulence, and then deforms the fluid as viscosity converts the turbulent kinetic energy into heat. The fluid deformation causes collisions between particles.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="generate-new-models-of-the-full-plant">
-<h2>Generate New Models of the Full Plant<a class="headerlink" href="#generate-new-models-of-the-full-plant" title="Permalink to this headline">¶</a></h2>
-<p>Edit the configurations to create new models of the full plant.</p>
 <div class="figure align-center" id="id2">
-<span id="figure-configplant20-80"></span><a class="reference internal image-reference" href="../../_images/configPlant20-80.png"><img alt="configure Plant20-80" src="../../_images/configPlant20-80.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">The configuration options for the full plant.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<span id="figure-flochvinplant"></span><a class="reference internal image-reference" href="../../_images/FlocHVinPlant.png"><img alt="Location of the Entrance Tank" src="../../_images/FlocHVinPlant.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">The flocculator (outlined in red) is where the raw water particles collide and grow into flocs.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<table class="colwidths-given docutils align-left" id="id3">
-<caption><span class="caption-text">Full plant configurations.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<div class="section" id="the-flocculator-has-three-design-constraints">
+<h2>The flocculator has three design constraints:<a class="headerlink" href="#the-flocculator-has-three-design-constraints" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Deform the fluid so there are sufficient collision opportunities for particles.</p></li>
+<li><p>Maintain a flow expansion geometric ratio (flow width to distance between expansions) that is greater than 4.</p></li>
+<li><p>Limit the velocity gradient so that flocs can grow large enough to be captured by the plate settlers in the clarifier.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="generate-new-models-of-the-flocculator">
+<h2>Generate New Models of the Flocculator<a class="headerlink" href="#generate-new-models-of-the-flocculator" title="Permalink to this headline">¶</a></h2>
+<p>Edit the configurations to create new models of the flocculator. Some models may fail because the constraints can’t all be met.</p>
+<div class="figure align-center" id="id3">
+<span id="figure-configfloc"></span><a class="reference internal image-reference" href="../../_images/configFlocHV.png"><img alt="Flocculator configuration" src="../../_images/configFlocHV.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">The configuration options for the Flocculator.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<table class="colwidths-given docutils align-left" id="id4">
+<caption><span class="caption-text">Flocculator HV configurations.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -289,13 +303,26 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Flow (L/s)</p></td>
-<td><p>The maximum flow rate sets the size of all of the processes in the plant. Vary it to see how everything changes.</p></td>
+<td><p>The maximum flow rate sets the size of the flocculator. Vary it to see how the dimensions change.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Minimum temperature (˚C)</p></td>
-<td><p>Temperature changes the design for the flocculator, clarifier, and filter.</p></td>
+<td><p>The water viscosity increases for low temperatures and thus more energy is required (greater head loss) to achieve the same total fluid deformation.</p></td>
+</tr>
+<tr class="row-even"><td><p>Channel length (m)</p></td>
+<td><p>The inside length of the flocculator that enables fitting the flocculator next to the clarifier to make a compact plant layout. Specify a long channel length to create a flocculator with a single channel.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Water depth at exit (m)</p></td>
+<td><p>The flocculator is built on the same slab as the clarifier and the elevation of the water leaving the flocculator must match the water level at the entrance of the clarifier.</p></td>
+</tr>
+<tr class="row-even"><td><p>Collision potential (Gt)</p></td>
+<td><p>The collision potential is created by the total fluid deformation in the flocculator.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velocity gradient (1/s)</p></td>
+<td><p>The velocity gradient influences the size of the flocs leaving the flocculator. High velocity gradients all require more energy input (more head loss).</p></td>
 </tr>
 </tbody>
 </table>
+<p>Additional information is available in the chapter on <a class="reference external" href="https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html">Flocculator Design</a></p>
 </div>
 </div>
 
