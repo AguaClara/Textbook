@@ -4,7 +4,13 @@
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
-|donate|
+
+.. list-table::
+   :widths: 100 30
+   :header-rows: 0
+
+   * - |ACRlogowithname|
+     - |donate|
 
 .. _title_AguaClara_Infrastructure_Design_Engine:
 
@@ -12,7 +18,7 @@
 AguaClara Infrastructure Design Engine
 **************************************
 
-The AguaClara Infrastructure Design Engine (AIDE) is created and continuously improved by |ACRlogowithname| using the |Onshape| platform.  AIDE is a long term effort that began in 2005 and represents the contributions of thousands of individuals. AguaClara Reach is providing open access to AIDE configurable components for educational purposes and so AguaClara implementation partners can explore our technologies.
+The AguaClara Infrastructure Design Engine (AIDE) is created and continuously improved by AguaClara Reach using the |Onshape| platform.  AIDE is a long term effort that began in 2005 and represents the contributions of thousands of individuals. AguaClara Reach is providing open access to AIDE configurable components for educational purposes and so AguaClara implementation partners can explore our technologies.
 
 We rely on donor support to develop AIDE and to create this textbook. Please |donate| to support our mission of developing and providing the next generation of drinking water treatment plant designs so that many more communities can have safe water on tap.
 
@@ -58,8 +64,8 @@ Vary the values in the configurations to generate new models. The configurations
    |OStaRS|, "OStaRS: Open Stacked Rapid Sand Filter", 25
    |20-80Lpsplant|, "20-80 L/s plant: Integrated plant for flows between 20 and 80 L/s", 180
 
-Smart Part User Survey
-======================
+Configurable Components User Survey
+===================================
 
 Please fill out the following survey to provide us with feedback on your experience exploring AIDE configurable components.
 
@@ -116,11 +122,11 @@ Please fill out the following survey if your organization is interested in becom
 
 .. |ACRlogowithname| image:: /Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
-  :height: 16
+  :height: 50
 
 .. |Onshape| image:: /Images/Onshape.png
   :target: https://cad.onshape.com/
-  :height: 16
+  :height: 18
 
 .. |donate| image:: /Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
