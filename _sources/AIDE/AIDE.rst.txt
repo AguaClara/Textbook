@@ -1,8 +1,11 @@
 .. raw:: html
+
     <embed>
        <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/AIDE.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
+
+.. _title_AguaClara_Infrastructure_Design_Engine:
 
 
 .. list-table::
@@ -11,8 +14,6 @@
 
    * - |ACRlogowithname|
      - |donate|
-
-.. _title_AguaClara_Infrastructure_Design_Engine:
 
 **************************************
 AguaClara Infrastructure Design Engine
