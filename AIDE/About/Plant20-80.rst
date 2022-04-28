@@ -48,7 +48,7 @@ Edit the configurations to create new models of the full plant.
    :widths: 50, 100
 
    "Flow (L/s)", "The maximum flow rate sets the size of all of the processes in the plant. Vary it to see how everything changes."
-   Minimum temperature (˚C), Temperature changes the design for the flocculator, clarifier, and filter.
+   Minimum temperature (˚C), "Temperature changes the design for the flocculator, clarifier, and filter."
 
 
 .. |donate| image:: donate.png
