@@ -7,15 +7,26 @@
 
 .. _toc:
 
+.. list-table::
+   :widths: 100 30
+   :header-rows: 0
+
+   * - |ACRlogowithname|
+     - |donate|
+
+.. |donate| image:: AIDE/About/donate.png
+  :target: https://www.aguaclarareach.org/donate-now
+  :height: 40
+
+.. |ACRlogowithname| image:: AIDE/About/ACRlogowithname.png
+  :target: https://www.aguaclarareach.org/
+  :height: 40
+
 
 
 =====================================
 The Physics of Water Treatment Design
 =====================================
-
-.. image:: /Images/ACRlogowithname.png
-  :width: 200
-  :target: https://www.aguaclarareach.org/
 
 .. toctree::
   :caption: Acknowledgements
