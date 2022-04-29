@@ -19,11 +19,11 @@
 AguaClara Infrastructure Design Engine
 **************************************
 
-The AguaClara Infrastructure Design Engine (AIDE) is created and continuously improved by AguaClara Reach using the |Onshape| platform.  AIDE is a long term effort that began in 2005 and represents the contributions of thousands of individuals. AguaClara Reach is providing open access to AIDE configurable components for educational purposes and so AguaClara implementation partners can explore our technologies.
+The AguaClara Infrastructure Design Engine (AIDE) is created and continuously improved by AguaClara Reach using the |Onshape| platform.  AIDE is a long term effort that began in 2005 and represents the contributions of thousands of individuals. AguaClara Reach is providing open access to this beta release of AIDE configurable components for educational purposes and so AguaClara implementation partners can explore our technologies.
 
-We rely on donor support to develop AIDE and to create this textbook. Please |donate| to support our mission of developing and providing the next generation of drinking water treatment plant designs so that many more communities can have safe water on tap.
+We rely on donor support to develop AIDE and to create this textbook. Please |donate| to support our mission of developing and providing the next generation of drinking water treatment plants so that many more communities can have safe water on tap.
 
-AIDE uses parametric design, a part studio tree, and a parts database to generate 3-D models of configurable components as well as complete AguaClara municipal water treatment plants. The part studio tree architecture makes it possible to pass design parameters between configurable components and thus achieve an integrated design. Part dimensions and other parameters can be optimized to achieve a compact plant layout.
+AIDE uses parametric design, a part studio tree, and a parts database to generate 3-D models of configurable components as well as complete AguaClara municipal water treatment plants. The part studio tree architecture makes it possible to pass parameters between configurable components and thus achieve an integrated model. Part dimensions and other parameters can be optimized to achieve a compact plant layout.
 
 The AIDE configurable components are not engineering designs. AguaClara Reach uses AIDE configurable components, expertise in drinking water treatment, and site specific conditions detailed by AguaClara Implementation Partners to develop customized designs for community-scale water treatment plants.
 
@@ -39,16 +39,16 @@ Using AIDE to Explore AguaClara Technologies
 
 If you do not yet have an |Onshape| account, then you will be able to make changes to the component configuration by using the `view only toolbar <https://cad.onshape.com/help/Content/viewonlytoolbar.htm>`_. You can sign up for a `free public Onshape account <https://www.onshape.com/en/products/free>`_ that will enable you to access the parts lists and ESTIMATED materials cost for each of the AIDE configurable components.
 
-Each model has three check boxes that provide increasing level of design detail.
-  #. Show internal components - Enables the design of pipes, baffles, and other internal components and creates a complete bill of materials. For some of the components it will only show an example rather than fully replicating all of the parts.
-  #. Replicate all parts - Fully replicates all parts and may significantly extend the time required to generate a new design.
-  #. Print parameter map - Prints a full map in the FeatureScript notices of all of the design inputs. Only a small fraction of the available inputs are available in the configurations of the models.
+Each model has three check boxes that provide increasing level of model detail.
+  #. Show internal components - Enables the modeling of pipes, baffles, and other internal components and creates a complete bill of materials. For some of the components it will only show an example rather than fully replicating all of the parts.
+  #. Replicate all parts - Fully replicates all parts and may significantly extend the time required to generate a new model.
+  #. Print parameter map - Prints a full map in the FeatureScript notices of all of the model inputs. Only a small fraction of the available inputs are available in the configurations of the models.
 
 The full plant can take up to several minutes to generate a new model that shows internal components fully replicated. If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.
 
 The bill of materials does not include internal components if "Show internal components" is not selected. The bill of materials DOES include all of the parts even if "Replicate all parts" is not selected.
 
-Vary the values in the configurations to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are appropriate designs. The intent of providing the configuration options is to allow exploration to see how the model changes when the input configurations are changed. If a configuration input is red it is out of range.
+Vary the values in the configurations to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red it is out of range.
 
 .. _table_AIDE_configurable_components:
 
@@ -79,7 +79,7 @@ Please fill out the following survey to provide us with feedback on your experie
 Next Steps for Potential Implementation Partners
 ================================================
 
-AguaClara Reach provides customized hydraulic designs, training, and technical support to AguaClara Implementation Partners. AguaClara Reach can add pipes and fittings from preferred vendors
+AguaClara Reach provides customized hydraulic designs, training, and technical support to AguaClara Implementation Partners. AguaClara Reach can add pipes and fittings from preferred vendors and customize the dimensions used for the civil work based on the construction methods used by each Implementation Partner.
 
 Please fill out the following survey if your organization is interested in becoming an AguaClara Implementation Partner. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. AguaClara Reach is ready to develop partnerships with both non profit organizations and engineering firms.
 
