@@ -9,7 +9,7 @@
 
 
 .. list-table::
-   :widths: 100 30
+   :widths: 150 30
    :header-rows: 0
 
    * - |ACRlogowithname|
