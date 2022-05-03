@@ -101,12 +101,13 @@ Chemical Dosing System
 
 .. _figure_spec_chemDoseController:
 
-.. figure:: Images/chemDoseController.png
+.. figure:: ./Images/chemDoseController.png
     :width: 500px
     :align: center
     :alt: chemDoseController
 
     Chemical dose controller
+
 
    b. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
 
