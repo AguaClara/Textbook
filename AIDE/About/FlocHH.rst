@@ -22,10 +22,10 @@ Flocculator HH Configurable Component
 
 .. _figure_FlocHH:
 
-.. figure:: FlocHH.png
+.. figure:: ./Images/FlocHH.png
     :width: 500px
     :align: center
-    :alt: Location of the Entrance Tank
+    :alt: Flocculator
 
     The flocculator use baffles to create a flow path with 180˚ bends. The flow contracts as it goes around the bend, expands, generates turbulence, and then deforms the fluid as viscosity converts the turbulent kinetic energy into heat. The fluid deformation causes collisions between particles.
 
@@ -40,11 +40,11 @@ The flocculator has three design constraints:
 Generate New Models of the Flocculator
 ========================================
 
-Edit the configurations to create new models of the flocculator. Some models may fail because the constraints can't all be met.
+Edit the configurations to create new models of the flocculator. Some models may fail because the constraints can't all be met. Send us |feedback| to share how you are using the Flocculator HH model and to give us suggestions for how to make these models easier to use.
 
 .. _figure_configFloc:
 
-.. figure:: configFlocHH.png
+.. figure:: ./Images/configFlocHH.png
     :width: 300px
     :align: center
     :alt: Flocculator configuration
@@ -56,23 +56,32 @@ Edit the configurations to create new models of the flocculator. Some models may
    :align: left
    :widths: 50, 100
 
+   "",""
    "Flow (L/s)", "The maximum flow rate sets the size of the flocculator. Vary it to see how the dimensions change."
+   "",""
    Minimum temperature (˚C), The water viscosity increases for low temperatures and thus more energy is required (greater head loss) to achieve the same total fluid deformation.
+   "",""
    Water depth at exit (m), The flocculator is built on the same slab as the clarifier and the elevation of the water leaving the flocculator must match the water level at the entrance of the clarifier.
+   "",""
    Collision potential (Gt), The collision potential is created by the total fluid deformation in the flocculator.
+   "",""
    Velocity gradient (1/s), The velocity gradient influences the size of the flocs leaving the flocculator. High velocity gradients all require more energy input (more head loss).
 
 Additional information is available in the chapter on `Flocculator Design <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html>`_
 
 
-.. |donate| image:: donate.png
+.. |donate| image:: ./Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
   :height: 40
 
-.. |textbook| image:: textbook.png
+.. |textbook| image:: ./Images/textbook.png
   :target: https://aguaclara.github.io/Textbook/AIDE/AIDE.html
   :height: 40
 
-.. |ACRlogowithname| image:: ACRlogowithname.png
+.. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
   :height: 40
+
+.. |feedback| image:: ./Images/feedback.png
+  :target: https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?
+  :height: 25
