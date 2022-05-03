@@ -99,12 +99,12 @@ Chemical Dosing System
    #. The plant shall be equipped with a chemical dose controller configured as shown in :numref:`figure_spec_LFOM`.
 
 
-.. _figure_spec_LFOM:
+.. _figure_spec_chemDoseController:
 
 .. figure:: Images/chemDoseController.png
     :width: 500px
     :align: center
-    :alt: LFOM
+    :alt: chemDoseController
 
     Chemical dose controller
 
@@ -122,7 +122,7 @@ Chemical Dosing System
 
 #. Chemical flows from the constant head tank into dosing tubes, which terminate in a free discharge at the dose slider on the doser lever.
 #. The dosing tubes shall be straight, to minimize minor losses and maintain a nearly linear relationship between flow and driving head.
-#. There shall be three dosing tubes functioning in parallel, and the diameter of the tubes shall be designed to provide laminar flow over the desired range of chemical flows. Given the laminar flow, the flowrate through the dosing tubes will be directly proportional to elevation difference between the chemical level in the constant head tank and the dose slider.
+#. The diameter of the tubes shall be designed to provide laminar flow over the desired range of chemical flows. Given the laminar flow, the flowrate through the dosing tubes will be directly proportional to elevation difference between the chemical level in the constant head tank and the dose slider.
 #. The plant shall have a spare set of dosing tubes on hand so that one set of tubes can be cleaned while the other set is in use.
 #. Head loss through all other tubes and fittings other than the dosing tubes shall be minimal and far less than the head loss through the dosing tubes.
 
