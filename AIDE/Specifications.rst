@@ -80,7 +80,7 @@ Chemical Dosing System
 
 .. _figure_spec_LFOM:
 
-.. figure:: ./About/Images/LFOM.png
+.. figure:: /AIDE/About/Images/LFOM.png
     :width: 100px
     :align: center
     :alt: LFOM
@@ -101,7 +101,7 @@ Chemical Dosing System
 
 .. _figure_spec_chemDoseController:
 
-.. figure:: ./Images/chemDoseController.png
+.. figure:: /AIDE/Images/chemDoseController.png
     :width: 500px
     :align: center
     :alt: chemDoseController
