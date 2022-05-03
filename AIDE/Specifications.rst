@@ -192,7 +192,7 @@ Clarifier
 
 3. Influent manifold: Water exits the influent manifold through a series of orifices and diffusers in the bottom of the pipe. The end of the influent manifold is capped.
 
-4. Diffusers: The orifices and diffusers point down to the bottom of the clarifier bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. Diffusers are designed **to introduce 1 cm of head loss to uniformly increase the head loss through all flow paths in the sedimentation tank.
+4. Diffusers: The orifices and diffusers point down to the bottom of the clarifier bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. Diffusers are designed **to introduce 1 cm of head loss to uniformly increase the head loss through all flow paths in the sedimentation tank.**
 
 8. Diffusers are shaped so that one end is a circular pipe that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle. This deformation is done to create a line jet entering the jet reverser in the bottom of the clarifier bay.
 
