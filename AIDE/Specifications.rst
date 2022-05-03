@@ -98,6 +98,8 @@ Chemical Dosing System
 
    #. The plant shall be equipped with a chemical dose controller configured as shown in :numref:`figure_spec_LFOM`.
 
+   #. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
+
 
 .. _figure_spec_chemDoseController:
 
@@ -107,9 +109,6 @@ Chemical Dosing System
     :alt: chemDoseController
 
     Chemical dose controller
-
-
-   b. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
 
 #. Key components
 
