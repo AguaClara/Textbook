@@ -14,11 +14,11 @@
    * - |ACRlogowithname|
      - |donate|
 
-.. |donate| image:: AIDE/About/donate.png
+.. |donate| image:: AIDE/About/Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
   :height: 40
 
-.. |ACRlogowithname| image:: AIDE/About/ACRlogowithname.png
+.. |ACRlogowithname| image:: AIDE/About/Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
   :height: 40
 
