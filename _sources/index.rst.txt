@@ -125,15 +125,23 @@ The Physics of Water Treatment Design
   Filtration/Filtration_Theory_and_Future_Work.rst
   Filtration/Filtration_Design_Solution.rst
 
+
 .. toctree::
-  :caption: Chapter 10: Dissolved Gas
+  :caption: Chapter 10: AguaClara Infrastructure Design Engine
+  :maxdepth: 1
+
+  AIDE/AIDE.rst
+  AIDE/Specifications.rst
+
+.. toctree::
+  :caption: Chapter 11: Dissolved Gas
   :maxdepth: 1
 
   Dissolved_Gas/DG_Intro.rst
 
 
 .. toctree::
-  :caption: Chapter 11: Operation
+  :caption: Chapter 12: Operation
   :maxdepth: 1
 
   Operation/Coagulant_Automation.rst
@@ -144,7 +152,6 @@ The Physics of Water Treatment Design
   :caption: Appendix 1 + Resources
   :maxdepth: 1
 
-  AIDE/AIDE.rst
   Introduction/Python_Tutorial.rst
   equations.rst
   glossary.rst

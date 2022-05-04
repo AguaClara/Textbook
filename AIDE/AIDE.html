@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara Textbook 304/merge documentation</title>
+  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara Textbook 305/merge documentation</title>
   
 
   
@@ -40,8 +40,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python Tutorial" href="../Introduction/Python_Tutorial.html" />
-    <link rel="prev" title="Plant Operation Troubleshooting" href="../Operation/Troubleshooting.html" /> 
+    <link rel="next" title="AguaClara Specifications" href="Specifications.html" />
+    <link rel="prev" title="Filtration Design Solution" href="../Filtration/Filtration_Design_Solution.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                304/merge
+                305/merge
               </div>
             
           
@@ -164,16 +164,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Dissolved Gas</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Chapter 11: Operation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Operation/Coagulant_Automation.html">Coagulant Automation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Operation/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
+<p class="caption"><span class="caption-text">Chapter 10: AguaClara Infrastructure Design Engine</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">AguaClara Infrastructure Design Engine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
@@ -182,6 +173,19 @@
 <li class="toctree-l2"><a class="reference internal" href="#next-steps-for-potential-implementation-partners">Next Steps for Potential Implementation Partners</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Specifications.html">AguaClara Specifications</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chapter 12: Operation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Operation/Coagulant_Automation.html">Coagulant Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
@@ -296,11 +300,11 @@
 </ol>
 </dd>
 </dl>
-<p>The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of <em>time to generate model component</em> in <a class="reference internal" href="#table-aide-configurable-components"><span class="std std-numref">Table 22</span></a> for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.</p>
+<p>The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of <em>time to generate model component</em> in <a class="reference internal" href="#table-aide-configurable-components"><span class="std std-numref">Table 21</span></a> for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.</p>
 <p>The bill of materials does not include internal components if <em>Show internal components</em> is not selected. The bill of materials does include all of the parts even if <em>Replicate all parts</em> is not selected.</p>
 <p>If you would like to explore possible configurations, vary the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.</p>
 <span id="table-aide-configurable-components"></span><table class="colwidths-given docutils align-left" id="id1">
-<caption><span class="caption-number">Table 22 </span><span class="caption-text">AIDE configurable components.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 21 </span><span class="caption-text">AIDE configurable components.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 30%" />
 <col style="width: 60%" />
@@ -365,8 +369,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../Introduction/Python_Tutorial.html" class="btn btn-neutral float-right" title="Python Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../Operation/Troubleshooting.html" class="btn btn-neutral float-left" title="Plant Operation Troubleshooting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Specifications.html" class="btn btn-neutral float-right" title="AguaClara Specifications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../Filtration/Filtration_Design_Solution.html" class="btn btn-neutral float-left" title="Filtration Design Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
