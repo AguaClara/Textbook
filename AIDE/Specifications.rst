@@ -48,9 +48,9 @@ Chemical Dosing System
 Design Goals
 ------------
 
-#. The system will be capable of dosing chemicals for the following purposes. All materials shall be compatible with the chemicals being dosed.
+A. The system will be capable of dosing chemicals for the following purposes. All materials shall be compatible with the chemicals being dosed.
 
-   #. Disinfectant (normally sodium or calcium hypochlorite)
+   1. Disinfectant (normally sodium or calcium hypochlorite)
 
    #. Coagulant (typically polyaluminum chloride [PACl], but other coagulants such as alum can be used if justification is provided. Bench-scale jar testing should be performed to confirm that the proposed coagulant is able to successfully form flocs.)
 
@@ -67,7 +67,7 @@ Design Goals
 Linear Flow Orifice Meter (LFOM) or Equivalent
 ----------------------------------------------
 
-#. The plant entrance chamber shall be equipped with a device that will result in a linear relationship between the plant flow and the water level in the entrance chamber. The Linear Flow Orifice Meter (LFOM), which is a pattern of orifices through which flow exits the entrance chamber, is described below. An equivalent device, such as a Sutro weir, can also be used if demonstrated to function equivalently.
+A. The plant entrance chamber shall be equipped with a device that will result in a linear relationship between the plant flow and the water level in the entrance chamber. The Linear Flow Orifice Meter (LFOM), which is a pattern of orifices through which flow exits the entrance chamber, is described below. An equivalent device, such as a Sutro weir, can also be used if demonstrated to function equivalently.
 
 #. The pattern of orifices shall be designed so that the water level in the entrance chamber (equal to the hydrostatic head pushing water through the offices) is linearly proportional to the total flow through the orifices (equal to the plant flow). An example of an LFOM is shown in :numref:`figure_spec_LFOM`. The orifices may be drilled in a flat plate or in the walls of a vertical pipe.
 
