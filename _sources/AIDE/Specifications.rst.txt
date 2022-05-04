@@ -45,16 +45,16 @@ Before beginning construction of an AguaClara treatment plant, bench-scale jar t
 Chemical Dosing System
 ======================
 
-Design goals for chemical dosing system
----------------------------------------
+Design Goals
+------------
 
 #. The system will be capable of dosing chemicals for the following purposes. All materials shall be compatible with the chemicals being dosed.
 
-  #. Disinfectant (normally sodium or calcium hypochlorite)
+   #. Disinfectant (normally sodium or calcium hypochlorite)
 
-  #. Coagulant (typically polyaluminum chloride [PACl], but other coagulants such as alum can be used if justification is provided. Bench-scale jar testing should be performed to confirm that the proposed coagulant is able to successfully form flocs.)
+   #. Coagulant (typically polyaluminum chloride [PACl], but other coagulants such as alum can be used if justification is provided. Bench-scale jar testing should be performed to confirm that the proposed coagulant is able to successfully form flocs.)
 
-  #. pH adjustment (if necessary)
+   #. pH adjustment (if necessary)
 
 #. The chemical dosing system shall function by gravity and not depend on pumps or electrical power.
 
@@ -64,7 +64,7 @@ Design goals for chemical dosing system
 
 #. The chemical dose (mass chemical per volume water passing through the plant) shall be easily adjustable by the plant operator.
 
-Linear Flow Orifice Meter (LFOM) or equivalent
+Linear Flow Orifice Meter (LFOM) or Equivalent
 ----------------------------------------------
 
 #. The plant entrance chamber shall be equipped with a device that will result in a linear relationship between the plant flow and the water level in the entrance chamber. The Linear Flow Orifice Meter (LFOM), which is a pattern of orifices through which flow exits the entrance chamber, is described below. An equivalent device, such as a Sutro weir, can also be used if demonstrated to function equivalently.
@@ -87,14 +87,14 @@ Linear Flow Orifice Meter (LFOM) or equivalent
     Example of a Linear Flow Orifice Meter
 
 
-Chemical storage
+Chemical Storage
 ----------------
 
 #. For each chemical, the plant shall include two or more storage tanks. The tank and fitting materials shall be compatible with the chemical. Storage tanks can be plastic or concrete, as long as they are confirmed to be compatible with the chemical being stored.
 
 #. The combined volume of all tanks used for a chemical shall allow for storage of sufficient chemical to supply the plant at maximum flow and maximum chemical dose for at least 48 hours.
 
-Chemical dose controller
+Chemical Dose Controller
 ------------------------
 
 #. The plant shall be equipped with a chemical dose controller configured as shown in :numref:`figure_spec_LFOM`. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
@@ -108,7 +108,7 @@ Chemical dose controller
 
     Chemical dose controller
 
-#. Constant head tank
+#. Constant Level Tank
 
    #. From the chemical storage tanks, the chemical passes via gravity to a constant head tank. The chemical enters the constant head tank via a float valve, which maintains a constant level of chemical in the constant head tank, providing a constant head to drive the chemical through the doser.
 
@@ -116,7 +116,7 @@ Chemical dose controller
 
    #. The vertical distance from the constant head tank level to the end of the dosing hose at max flow and max dose shall be 20 cm.
 
-#. Dosing tubes
+#. Dosing Tubes
 
    #. Chemical flows from the constant head tank into dosing tubes, which terminate in a free discharge at the dose slider on the doser lever.
 
@@ -169,7 +169,7 @@ The AguaClara flocculator is designed with the following goals:
 
 #. Facilitate the draining of sludge and maintenance manually by one person
 
-Flow paths
+Flow Paths
 ----------
 
 #. The length of the flocculator channels is determined by the length of the sedimentation tanks plus the inlet and outlet channels for the sedimentation tanks.
@@ -183,9 +183,6 @@ Flow paths
 #. The velocity gradient G for each flocculator baffle is calculated based on minor losses through the baffles as detailed in the Flocculator section of the AguaClara textbook. Other obstacles can also be added to the flocculator to increase head loss under low flow conditions.
 
 #. The ports between flocculator channels should be designed with the same flow area as the space between the baffles so that the port improves flocculation without breaking flocs.
-
-Port between channels
----------------------
 
 Channel Construction
 --------------------
@@ -213,8 +210,7 @@ Clarifier
 Design Goals
 ------------
 
-The Clarifier is high-rate and vertical flow designed with the following
-   goals:
+The Clarifier is high-rate and vertical flow designed with the following goals:
 
 #. To produce a stable floc filter (suspended layer of flocs) that acts like a primary filter that reduces the settled water turbidity.
 
@@ -230,14 +226,12 @@ The Clarifier is high-rate and vertical flow designed with the following
 
 #. To be able to take any clarifier bay offline for maintenance while the other clarifier bays continue to operate.
 
-#. Clarifiers use an upflow velocity of 1 mm/s in the floc filter.
-
 Influent Channel
 ----------------
 
 Flocculated water enters a pipe in the bottom of  the influent channel. Water flows down the pipe, through a 90-degree bend, into the influent manifold.
 
-Influent manifold
+Influent Manifold
 -----------------
 
 Water exits the influent manifold through a series of orifices and diffusers in the bottom of the pipe. The end of the influent manifold is capped.
@@ -249,7 +243,7 @@ The orifices and diffusers point down to the bottom of the clarifier bay and ext
 
 Diffusers are shaped so that one end is a circular pipe that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle. This deformation is done to create a line jet entering the jet reverser in the bottom of the clarifier bay.
 
-Jet reverser
+Jet Reverser
 ------------
 
 The jet reverser consists of a longitudinally-cut half-pipe that is laid in the bottom of the bay. It functions as a way to keep flocs suspended in the sedimentation tank by ensuring that any sludge that settles will be propelled back up by the force of the diffuser jet.
@@ -257,12 +251,14 @@ The jet reverser consists of a longitudinally-cut half-pipe that is laid in the 
 The diffusers are offset from the jet reverser centerline. This is intentionally done to promote the resuspension of flocs, which form a floc filter for primary filtration.
 
 
-Floc filter (Floc Blanket)
+Floc Filter (Floc Blanket)
 --------------------------
 
 Floc filters significantly improve the performance of a clarifier and reduce settled water.
 
 #. The line jet from the diffusers enters the jet reverser to force flow up through the clarifier bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the clarifier bay. The resuspended flocs form a fluidized bed which is called a floc filter. The bed is fluidized because flocs are kept in suspension by the upflowing water.
+
+#. Clarifiers use an upflow velocity of 1 mm/s in the floc filter.
 
 #. For a floc filter to form, a clarifier requires that:
 
@@ -270,7 +266,7 @@ Floc filters significantly improve the performance of a clarifier and reduce set
 
    #. All settled flocs are resuspended by incoming water.
 
-Sloped bottom geometry
+Sloped Bottom Geometry
 ----------------------
 
 The clarifier bottom geometry prevents sludge accumulation while also ensuring good flow distribution. The slope on either side of the diffusers is at a 50 degree angle above horizontal. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the main clarifier bays.
@@ -405,3 +401,6 @@ Sand Dump
 #. A sand dump pipe shall be installed in the filter box to allow for the filter media to be removed when the filter is in backwash mode and the sand bed is fluidized.
 
 #. The sand dump pipe must be designed so that if the flow of the sand slurry is stopped, that the sand doesn’t collect at one location in the pipe and cause a clog.
+
+Backwash Recycle
+----------------
