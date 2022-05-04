@@ -90,14 +90,14 @@ A. The plant entrance chamber shall be equipped with a device that will result i
 Chemical Storage
 ----------------
 
-#. For each chemical, the plant shall include two or more storage tanks. The tank and fitting materials shall be compatible with the chemical. Storage tanks can be plastic or concrete, as long as they are confirmed to be compatible with the chemical being stored.
+A. For each chemical, the plant shall include two or more storage tanks. The tank and fitting materials shall be compatible with the chemical. Storage tanks can be plastic or concrete, as long as they are confirmed to be compatible with the chemical being stored.
 
 #. The combined volume of all tanks used for a chemical shall allow for storage of sufficient chemical to supply the plant at maximum flow and maximum chemical dose for at least 48 hours.
 
 Chemical Dose Controller
 ------------------------
 
-#. The plant shall be equipped with a chemical dose controller configured as shown in :numref:`figure_spec_LFOM`. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
+The plant shall be equipped with a chemical dose controller configured as shown in :numref:`figure_spec_LFOM`. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
 
 .. _figure_spec_chemDoseController:
 
@@ -106,11 +106,11 @@ Chemical Dose Controller
     :align: center
     :alt: chemDoseController
 
-    Chemical dose controller
+    Chemical dose controller schematic.
 
-#. Constant Level Tank
+A. Constant Level Tank
 
-   #. From the chemical storage tanks, the chemical passes via gravity to a constant head tank. The chemical enters the constant head tank via a float valve, which maintains a constant level of chemical in the constant head tank, providing a constant head to drive the chemical through the doser.
+   1. From the chemical storage tanks, the chemical passes via gravity to a constant head tank. The chemical enters the constant head tank via a float valve, which maintains a constant level of chemical in the constant head tank, providing a constant head to drive the chemical through the doser.
 
    #. The chemical level in the constant head tank shall be level with the fulcrum of the dosing lever.
 
@@ -118,7 +118,7 @@ Chemical Dose Controller
 
 #. Dosing Tubes
 
-   #. Chemical flows from the constant head tank into dosing tubes, which terminate in a free discharge at the dose slider on the doser lever.
+   1. Chemical flows from the constant head tank into dosing tubes, which terminate in a free discharge at the dose slider on the doser lever.
 
    #. The diameter of the tubes shall be designed to provide laminar flow over the desired range of chemical flows. Given the laminar flow, the flowrate through the dosing tubes will be directly proportional to elevation difference between the chemical level in the constant head tank and the dose slider.
 
@@ -128,7 +128,7 @@ Chemical Dose Controller
 
 #. Lever
 
-   #. One end of the doser lever is connected to a float in the plant entrance tank. The dose slider and thus the ends of the doser hoses are located on the other half of the lever.
+   1. One end of the doser lever is connected to a float in the plant entrance tank. The dose slider and thus the ends of the doser hoses are located on the other half of the lever.
 
    #. To provide a reasonable maximum angle of the lever system the lever shall be at least four times as long as the LFOM change in water depth.
 
@@ -144,7 +144,7 @@ Chemical Dose Controller
 
 D. Function
 
-   #. The doser is designed so that the operator can select a chemical dose (mass of chemical per volume of water) by moving the dose slider to a specific position along the lever. The lever, LFOM and constant head tank then work together to adjust the chemical flow proportional to the plant flow to maintain a constant chemical dose.
+   1. The doser is designed so that the operator can select a chemical dose (mass of chemical per volume of water) by moving the dose slider to a specific position along the lever. The lever, LFOM and constant head tank then work together to adjust the chemical flow proportional to the plant flow to maintain a constant chemical dose.
 
    #. When the plant flow is zero, the lever is horizontal and chemical flow is zero.
 
@@ -162,7 +162,7 @@ Design Goals
 
 The AguaClara flocculator is designed with the following goals:
 
-#. Velocity gradient and residence time to aggregate individual particles and small flocs into flocs large enough to settle out in the sedimentation tanks. The product of velocity gradient (G) and residence time (ϴ) is a dimensionless number known as collision potential or Gϴ.
+A. Velocity gradient and residence time to aggregate individual particles and small flocs into flocs large enough to settle out in the sedimentation tanks. The product of velocity gradient (G) and residence time (ϴ) is a dimensionless number known as collision potential or Gϴ.
 #. Minimize retention time to reach a design Gϴ of approximately 37,000. This determines the minimum total volume of the flocculator. The design volume of the flocculator may be larger due to construction constraints, such as making the length of the flocculator the same as the length of the sedimentation tanks or keeping the flocculator channels wide enough to fit a human body for ease of cleaning and maintenance. 
 
 #. Minimize “dead zones” in the flocculator and reduce the opportunity for short circuiting of the flocculator.
@@ -172,7 +172,7 @@ The AguaClara flocculator is designed with the following goals:
 Flow Paths
 ----------
 
-#. The length of the flocculator channels is determined by the length of the sedimentation tanks plus the inlet and outlet channels for the sedimentation tanks.
+A. The length of the flocculator channels is determined by the length of the sedimentation tanks plus the inlet and outlet channels for the sedimentation tanks.
 
 #. The width of each flocculation channel is determined by material constraints and to facilitate cleaning and maintenance. The flocculator baffles are made of polycarbonate sheets, so the width of the channel should be no larger than the width of a polycarbonate sheet. The width of the channel should be no smaller than 50 cm so an operator can safely enter the tank. Large plants treating more than 100 L/s may be designed with horizontal flocculation channels and may use ferrocement baffles.
 
@@ -187,7 +187,7 @@ Flow Paths
 Channel Construction
 --------------------
 
-#. The walls of the flocculation channels should be vertical, maintaining the channel width along both the length and height of each flocculator channel.
+A. The walls of the flocculation channels should be vertical, maintaining the channel width along both the length and height of each flocculator channel.
 
 #. The floor of each flocculation channel should be sloped toward the drain channel, and one or more drain valves should be installed to periodically remove sludge from the flocculator. The slope and valves also allow the flocculation channels to be completely emptied for more in-depth maintenance.
 
@@ -198,7 +198,7 @@ Channel Construction
 Baffles
 -------
 
-#. The flocculation baffles must be constructed to be removable. A baffle module should be raisable by one operator working alone so that water can flow beneath the baffle and drain from the flocculator channel. Large flocculators may have baffle modules that require more than one person to completely remove from the flocculator channel.
+A. The flocculation baffles must be constructed to be removable. A baffle module should be raisable by one operator working alone so that water can flow beneath the baffle and drain from the flocculator channel. Large flocculators may have baffle modules that require more than one person to completely remove from the flocculator channel.
 
 #. The flocculation baffles should be constructed from polycarbonate sheets, and the frame for holding together baffle modules should be made from PVC. Other materials may be used if justification is provided, including the use of ferrocement baffles for horizontal flocculators in large plants.
 
@@ -212,7 +212,7 @@ Design Goals
 
 The Clarifier is high-rate and vertical flow designed with the following goals:
 
-#. To produce a stable floc filter (suspended layer of flocs) that acts like a primary filter that reduces the settled water turbidity.
+A. To produce a stable floc filter (suspended layer of flocs) that acts like a primary filter that reduces the settled water turbidity.
 
 #. To provide evenly distributed low-velocity flow through the plate settlers.
 
@@ -256,13 +256,13 @@ Floc Filter (Floc Blanket)
 
 Floc filters significantly improve the performance of a clarifier and reduce settled water.
 
-#. The line jet from the diffusers enters the jet reverser to force flow up through the clarifier bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the clarifier bay. The resuspended flocs form a fluidized bed which is called a floc filter. The bed is fluidized because flocs are kept in suspension by the upflowing water.
+A. The line jet from the diffusers enters the jet reverser to force flow up through the clarifier bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the clarifier bay. The resuspended flocs form a fluidized bed which is called a floc filter. The bed is fluidized because flocs are kept in suspension by the upflowing water.
 
 #. Clarifiers use an upflow velocity of 1 mm/s in the floc filter.
 
 #. For a floc filter to form, a clarifier requires that:
 
-   #. All flocs are returned to the bottom of the clarifier bay.
+   1. All flocs are returned to the bottom of the clarifier bay.
 
    #. All settled flocs are resuspended by incoming water.
 
@@ -324,7 +324,7 @@ Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornel
 Operation
 ---------
 
-#. The filter operates with the same design flow rate for both backwash and filtration modes and uses settled water for backwash. This eliminates the startup problem for rapid sand filters that do not have an initial source of backwash water.
+A. The filter operates with the same design flow rate for both backwash and filtration modes and uses settled water for backwash. This eliminates the startup problem for rapid sand filters that do not have an initial source of backwash water.
 
 #. Filtration Mode:
 
@@ -333,7 +333,7 @@ Operation
 Design Goals
 ------------
 
-#. Stacked Rapid Sand (StaRS) filters were developed to eliminate the need for backwash pumps and minimize the plan area required.
+A. Stacked Rapid Sand (StaRS) filters were developed to eliminate the need for backwash pumps and minimize the plan area required.
 
 #. The filters should be designed so that the process of emptying the sand from the filter, removing the modules, cleaning the modules, replacing the modules, and replacing the sand is as easy as possible.
 
@@ -344,7 +344,7 @@ Design Goals
 Configurations
 --------------
 
-#. Open StaRS (OStaRS) - used for flow rates greater than about 20 L/s. Minimum plan view area of **85 cm x 85 cm (minimum size that can be constructed with a human working inside the filter)**
+A. Open StaRS (OStaRS) - used for flow rates greater than about 20 L/s. Minimum plan view area of **85 cm x 85 cm (minimum size that can be constructed with a human working inside the filter)**
 
 #. Enclosed StaRS (EStaRS) filters - used for lower flow rates
 
@@ -367,9 +367,9 @@ Filter Modules
 
 Each layer of sand sits in between an inlet and outlet filter module. Each module consists of a large diameter trunk inlet/outlet pipe, which branches off into rows of smaller branch pipes. The branch pipes are supported along the filter walls by receptor pipes.
 
-#. Inlet Filter Module
+A. Inlet Filter Module
 
-   #. Small holes (orifices) are drilled into the inlet branches. The orifice diameter is selected based on constructability and not being too small to risk clogging (between 4 and 10 mm).
+   1. Small holes (orifices) are drilled into the inlet branches. The orifice diameter is selected based on constructability and not being too small to risk clogging (between 4 and 10 mm).
 
    #. During filtration mode, water flows into the inlet filter modules through the inlet trunk and into the branches. Water flows out of the branches through small holes and into the sand layer.
 
@@ -377,7 +377,7 @@ Each layer of sand sits in between an inlet and outlet filter module. Each modul
 
 #. Outlet Filter Module
 
-   #. The slots in the outlet branches should be designed so they are small enough to prevent sand from passing through. The filter modules shall be adequately supported to limit deflection of any of the module pipes to 2 millimeters or less to prevent significant opening or closing of the slots.
+   1. The slots in the outlet branches should be designed so they are small enough to prevent sand from passing through. The filter modules shall be adequately supported to limit deflection of any of the module pipes to 2 millimeters or less to prevent significant opening or closing of the slots.
 
    #. During filtration mode, water flows from the filter media into the slots and then through the branches and into the trunk pipes.
 
@@ -391,14 +391,14 @@ The siphon should be designed **so that it is triggered when the filters are rea
 Backwash Flow Control Weirs
 ---------------------------
 
-#. The backwash flow control weirs ensure there is adequate flow to backwash one filter at all times
+A. The backwash flow control weirs ensure there is adequate flow to backwash one filter at all times
 
 #. Removing the flow control weir in front of the desired backwash filter will create the desired backwash flow rate for the filter, while evenly distributing the remaining flow rate to the other filters
 
 Sand Dump
 ---------
 
-#. A sand dump pipe shall be installed in the filter box to allow for the filter media to be removed when the filter is in backwash mode and the sand bed is fluidized.
+A. A sand dump pipe shall be installed in the filter box to allow for the filter media to be removed when the filter is in backwash mode and the sand bed is fluidized.
 
 #. The sand dump pipe must be designed so that if the flow of the sand slurry is stopped, that the sand doesn’t collect at one location in the pipe and cause a clog.
 
