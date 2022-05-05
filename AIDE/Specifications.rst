@@ -129,7 +129,7 @@ A. Constant Level Tank
 
     Constant level tank module for coagulant and chlorine.
 
-#. Dosing Tubes
+B. Dosing Tubes
 
    1. Chemical flows from the constant head tank into dosing tubes, which terminate in a free discharge at the dose slider on the doser lever.
 
@@ -139,9 +139,9 @@ A. Constant Level Tank
 
    #. Head loss through all other tubes and fittings other than the dosing tubes shall be less than 5% of the head loss through the dosing tubes.
 
-#. Lever
+#. Chemical Dose Controller |Doser|
 
-   1. One end of the doser lever is connected to a float in the plant entrance tank. The dose slider and thus the ends of the doser hoses are located on the other half of the lever.
+   1. One end of the chemical dose controller is connected to a float in the plant entrance tank. The dose slider and thus the ends of the doser hoses are located on the other half of the chemical dose controller lever.
 
    #. To provide a reasonable maximum angle of the lever system the lever shall be at least four times as long as the LFOM change in water depth.
 
@@ -446,6 +446,10 @@ Backwash Recycle
 .. |LFOM| image:: https://cad.onshape.com/api/thumbnails/d/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/s/300x170
   :width: 100
   :target: https://cad.onshape.com/documents/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/e/c063acb14de8f1f558b02d2d?configuration=HL_min%3D0.2%2Bmeter%3BND_max%3D12.0%3BQm_max%3D5.0%3BTEMP_min%3D10.0%3BdrillD_max%3D0.1%2Bmeter%3BprintParams%3Dfalse&renderMode=0&uiState=626fea458d39dd1e3b6106e1
+
+.. |Doser| image:: https://cad.onshape.com/api/thumbnails/d/e71bb0c05d9e7241822776b7/w/533d9612b07de271291829dc/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/e71bb0c05d9e7241822776b7/w/533d9612b07de271291829dc/e/20f111b627e4c6d59c3f0ff9?configuration=HL_max%3D0.2%2Bmeter%3BQ_pi%3D1.0%3BchlorineC_pi%3D0.6%3BcoagC_pi%3D0.5%3BprintParams%3Dfalse%3Brep%3Dtrue%3BtankOW%3D1.0%2Bmeter&renderMode=0&uiState=6273e0ecd685467dff5c17c4
 
 .. |EntranceTank| image:: https://cad.onshape.com/api/thumbnails/d/4c47a124da3abec33e0ce813/w/3955cd0d266daedd3eabf165/s/300x170
   :width: 100

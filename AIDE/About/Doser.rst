@@ -1,11 +1,3 @@
-.. raw:: html
-
-    <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/About/Doser.html" />
-       <script src="https://hypothes.is/embed.js" async></script>
-    </embed>
-
-
 .. list-table::
    :widths: 60 50 30
    :header-rows: 0
@@ -20,11 +12,9 @@
 Chemical Dose Controller Configurable Component
 ************************************************
 
-What
-
 .. _figure_Doser:
 
-.. figure:: /Images/doser.png
+.. figure:: ./Images/doser.png
     :width: 500px
     :align: center
     :alt: Chemical Dose Controller
@@ -35,7 +25,7 @@ What
 .. _figure_DoserinET:
 
 .. figure:: ./Images/DoserinET.png
-    :width: 450px
+    :width: 300px
     :align: center
     :alt: Location of the Chemical Dose Controller in the Entrance Tank
 
