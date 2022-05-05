@@ -6,28 +6,16 @@
     </embed>
 
 
-
-
 .. _title_AguaClara_Specifications:
 
 ************************
 AguaClara Specifications
 ************************
 
-.. include:: include.rst
-
-|summary-of-thing1|
-
-|OStaRS|
-
-|donate|
-
-|Onshape|
-
 This document specifies the design goals, the raw water quality parameters, and the design and construction requirements for an AguaClara drinking water treatment plant. The plant will produce safe, potable drinking water from a source water that may be contaminated with particles, pathogens, and dissolved organics.
 
-AguaClara Plant Design Goals
-============================
+AguaClara Plant Design Goals |20-80Lpsplant|
+============================================
 
 AguaClara drinking water treatment technologies remove turbidity and pathogens from raw water and to deactivate remaining pathogens before distribution. AguaClara technologies are best suited for centralized water treatment in communities of at least 200 people. AguaClara technologies would not be appropriate for treatment of low-turbidity groundwater where the primary contamination issues are chemical, such as nitrate or heavy metals. AguaClara technologies are gravity-driven and do not require electricity. When required by the topography, pumps can raise the source water to the elevation necessary for water treatment and water distribution.
 
@@ -79,10 +67,8 @@ A. The system will be capable of dosing chemicals for the following purposes. Al
 
 #. The chemical dose (mass chemical per volume water passing through the plant) shall be easily adjustable by the plant operator.
 
-Linear Flow Orifice Meter (LFOM) or Equivalent
-----------------------------------------------
-
-|LFOM|
+Linear Flow Orifice Meter (LFOM) or Equivalent |LFOM|
+-----------------------------------------------------
 
 A. The plant entrance chamber shall be equipped with a device that will result in a linear relationship between the plant flow and the water level in the entrance chamber. The Linear Flow Orifice Meter (LFOM), which is a pattern of orifices through which flow exits the entrance chamber, is described below. An equivalent device, such as a Sutro weir, can also be used if demonstrated to function equivalently.
 
@@ -184,11 +170,11 @@ Flocculator
 
 For more detailed information see :ref:`Flocculation Design <title_Flocculation_Design>`. AguaClara flocculators have three potential flow patterns (see :numref:`figure_flocculator_Geometry`) depending on the flow rate, plant layout, and velocity gradient.
 
-#. Vertical - Horizontal: Flows between 0.5 L/s and 20 L/s are efficiently handled by a Vertical-Horizontal flow flocculator as shown in :numref:`figure_VHflocculator`.
+#. |FlocculatorVH| Vertical - Horizontal: Flows between 0.5 L/s and 20 L/s are efficiently handled by a Vertical-Horizontal flow flocculator as shown in :numref:`figure_VHflocculator`.
 
-#. Horizontal - Vertical: The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s as shown in :numref:`figure_HVflocculator`.
+#. |FlocculatorHV| Horizontal - Vertical: The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s as shown in :numref:`figure_HVflocculator`.
 
-#. Horizontal - Horizontal: As the flow increases above 200 L/s the optimal design will switch to a horizontal-horizontal flocculator as shown in :numref:`figure_HHflocculator`.
+#. |FlocculatorHH| Horizontal - Horizontal: As the flow increases above 200 L/s the optimal design will switch to a horizontal-horizontal flocculator as shown in :numref:`figure_HHflocculator`.
 
 .. _figure_flocculator_Geometry:
 
@@ -247,8 +233,8 @@ A. The flocculation baffles must be constructed to be removable. A baffle module
 
 #. Baffle modules may also include other PVC obstacles to increase flocculation efficiency and reduce the volume and residence time of the flocculator.
 
-Clarifier
-=========
+Clarifier |Clarifier|
+=====================
 
 For more detailed information see :ref:`Clarifier Design <title_Clarifier_Design>`.
 
@@ -274,7 +260,7 @@ A. To produce a stable floc filter (suspended layer of flocs) that acts like a p
 Influent Channel
 ----------------
 
-Flocculated water enters a pipe in the bottom of  the influent channel. Water flows down the pipe, through a 90-degree bend, into the influent manifold.
+Flocculated water enters a pipe in the bottom of the influent channel. Water flows down the pipe, through a 90-degree bend, into the influent manifold.
 
 Influent Manifold
 -----------------
@@ -346,20 +332,24 @@ The plate settlers are made from clear polycarbonate sheets. The sheets are asse
 Submerged Effluent Manifold
 ---------------------------
 
-The submerged effluent manifold, sometimes called a launder, collects settled water from the clarifier. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the clarifier bay.
+The submerged effluent manifold, sometimes called a launder, collects clarified water from the top of the clarifier. It is a horizontal pipe that extends along the length of the clarifier bay and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the clarifier bay.
+
+The effluent launder is designed to have 5 cm of head loss to ensure uniform flow distribution between clarifier bays and to have the majority of the head loss through the orifices to obtain uniform flow distribution between the orifices.
 
 Exit Weir
 ---------
 
 The submerged effluent manifold transports water from the clarifier bay to a channel that runs perpendicular to the clarifier bays. The channel collects water from all of the clarifier bays. Water leaves this channel by flowing over the exit weir. The elevation of the exit weir controls the water levels in the clarifier and in the flocculator.
 
+The exit weir makes it possible to refill and emptied clarifier bay with clarified water to ensure that after returning a clarifier bay to service the first water is of high quality.
+
 Effluent Channel
 ----------------
 
-After the water flows over the exit weir, it is collected in the effluent channel. The effluent channel has pipes embedded in the bottom of it which lead the clarified water to the filter inlet channel.
+After the water flows over the exit weir, it is collected in the effluent channel. The effluent channel has pipes embedded in the bottom of it which transport the clarified water to the filter inlet channel.
 
-Stacked Rapid Sand Filter
-=========================
+Stacked Rapid Sand Filter |OStaRS|
+==================================
 
 For more detailed information see :ref:`Filtration Design <title_Filtration_Design>`.
 
@@ -451,3 +441,41 @@ A. A sand dump pipe shall be installed in the filter box to allow for the filter
 
 Backwash Recycle
 ----------------
+
+
+.. |LFOM| image:: https://cad.onshape.com/api/thumbnails/d/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/e/c063acb14de8f1f558b02d2d?configuration=HL_min%3D0.2%2Bmeter%3BND_max%3D12.0%3BQm_max%3D5.0%3BTEMP_min%3D10.0%3BdrillD_max%3D0.1%2Bmeter%3BprintParams%3Dfalse&renderMode=0&uiState=626fea458d39dd1e3b6106e1
+
+.. |EntranceTank| image:: https://cad.onshape.com/api/thumbnails/d/4c47a124da3abec33e0ce813/w/3955cd0d266daedd3eabf165/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/4c47a124da3abec33e0ce813/w/3955cd0d266daedd3eabf165/e/bcf152c5be02d9ab5b2b5285?configuration=L%3D8.0%2Bmeter%3BQm_max%3D40.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D10.0%3BcaptureVm%3D20.0%3BflocUpstreamHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dtrue&renderMode=0&uiState=626fea87ee1eae4ff2291321
+
+
+.. |FlocculatorVH| image:: https://cad.onshape.com/api/thumbnails/d/673077f4fa843a817d4cd55d/w/8bd189f4769c2a64aa07a8c0/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/673077f4fa843a817d4cd55d/w/8bd189f4769c2a64aa07a8c0/e/cdc0c6cfa0e8b64f179ced51?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BQm_max%3D1.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D5.0%3BoutletHW%3D1.7%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dtrue&renderMode=0&uiState=626feb5ffb767608344ad1ad
+
+.. |FlocculatorHV| image:: https://cad.onshape.com/api/thumbnails/d/9742e8c019b742df4ae4db85/w/cbe4d0f58d318c45281687ae/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/9742e8c019b742df4ae4db85/w/cbe4d0f58d318c45281687ae/e/05162587e7127122572d3a10?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BL%3D6.0%2Bmeter%3BQm_max%3D30.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D25.0%3BoutletHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dtrue&renderMode=0&uiState=626feb168bd195153bbbe9af
+
+.. |FlocculatorHH| image:: https://cad.onshape.com/api/thumbnails/d/84c4c94f9773b67506cd35bb/w/58a1f53fe5ebbbbc808a3541/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/84c4c94f9773b67506cd35bb/w/58a1f53fe5ebbbbc808a3541/e/aa5906755ba02b0a3925ec10?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BQm_max%3D200.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D0.0%3BoutletHW%3D3.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dtrue&renderMode=0&uiState=626fead687c54745ef4c039f
+
+.. |Clarifier| image:: https://cad.onshape.com/api/thumbnails/d/e05915c533ee7568c402981a/w/56de4202f426e6443151ca07/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/e05915c533ee7568c402981a/w/56de4202f426e6443151ca07/e/3f94eabd115787bc33ae755d?configuration=G_max%3D140.0%3BQm_max%3D20.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D10.0%3BcaptureVm%3D0.12%3BprintParams%3Dfalse%3Brep%3Dtrue%3BupVm%3D1.0&renderMode=0&uiState=626feb84ea2b4863d1373f90
+
+.. |OStaRS| image:: https://cad.onshape.com/api/thumbnails/d/8a1a990f01575e6e5eed1922/w/3811cfb89da77b076395fdc0/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/8a1a990f01575e6e5eed1922/w/3811cfb89da77b076395fdc0/e/fd576f076cd3757b426c7f20?configuration=Qm_max%3D40.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D10.0%3BprintParams%3Dtrue%3Brep%3Dtrue%3BrepInternalPiping%3Dtrue%3BspareFilter%3Dfalse&renderMode=0&uiState=626fec07e062eb5a0476b08c
+
+.. |20-80Lpsplant| image:: https://cad.onshape.com/api/thumbnails/d/0e9ede93e11e5a54f68f8606/w/2744164cc6e56e3693a3190f/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/0e9ede93e11e5a54f68f8606/w/2744164cc6e56e3693a3190f/e/723e9e9d93f3008c9815e2d6?configuration=Qm_max%3D40.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D10.0%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=626fedaca473381cd632eede
+
+.. |ACRlogowithname| image:: ../Images/ACRlogowithname.png
+  :target: https://www.aguaclarareach.org/
+  :height: 50
