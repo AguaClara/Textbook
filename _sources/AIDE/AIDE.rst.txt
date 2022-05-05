@@ -62,6 +62,7 @@ If you would like to explore possible configurations, vary the values to generat
    :widths: 30 60 10
 
    |LFOM|, "Linear Flow Orifice Meter", 5
+   |Doser|, "Chemical Dose Controller", 5
    |EntranceTank|,  "Entrance Tank: trash racks, grit removal, chemical dose controller, and linear flow orifice meter", 20
    |FlocculatorVH|, "Flocculator VH: Vertical-Horizontal Flocculator for flows below about 20 L/s", 15
    |FlocculatorHV|, "Flocculator HV: Horizontal-Vertical Flocculator for flows between about 10 and 100 L/s", 15
@@ -96,6 +97,10 @@ Please fill out the following survey if your organization is interested in becom
 .. |LFOM| image:: https://cad.onshape.com/api/thumbnails/d/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/s/300x170
   :width: 200
   :target: https://cad.onshape.com/documents/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/e/c063acb14de8f1f558b02d2d?configuration=HL_min%3D0.2%2Bmeter%3BND_max%3D12.0%3BQm_max%3D5.0%3BTEMP_min%3D10.0%3BdrillD_max%3D0.1%2Bmeter%3BprintParams%3Dfalse&renderMode=0&uiState=626fea458d39dd1e3b6106e1
+
+.. |Doser| image:: https://cad.onshape.com/api/thumbnails/d/e71bb0c05d9e7241822776b7/w/533d9612b07de271291829dc/s/300x170
+  :width: 200
+  :target: https://cad.onshape.com/documents/e71bb0c05d9e7241822776b7/w/533d9612b07de271291829dc/e/20f111b627e4c6d59c3f0ff9?configuration=HL_max%3D0.2%2Bmeter%3BQ_pi%3D1.0%3BchlorineC_pi%3D0.6%3BcoagC_pi%3D0.5%3BprintParams%3Dfalse%3Brep%3Dtrue%3BtankOW%3D1.0%2Bmeter&renderMode=0&uiState=6273e0ecd685467dff5c17c4
 
 .. |EntranceTank| image:: https://cad.onshape.com/api/thumbnails/d/4c47a124da3abec33e0ce813/w/3955cd0d266daedd3eabf165/s/300x170
   :width: 200
