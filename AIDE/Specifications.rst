@@ -1,15 +1,28 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/AIDE.html" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/Specifications.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
+
+
+
 
 .. _title_AguaClara_Specifications:
 
 ************************
 AguaClara Specifications
 ************************
+
+.. include:: include.rst
+
+|summary-of-thing1|
+
+|OStaRS|
+
+|donate|
+
+|Onshape|
 
 This document specifies the design goals, the raw water quality parameters, and the design and construction requirements for an AguaClara drinking water treatment plant. The plant will produce safe, potable drinking water from a source water that may be contaminated with particles, pathogens, and dissolved organics.
 
@@ -45,6 +58,8 @@ Before beginning construction of an AguaClara treatment plant, bench-scale jar t
 Chemical Dosing System
 ======================
 
+For more detailed information see :ref:`Linear chemical dosing system <heading_linear_cdc>`.
+
 Design Goals
 ------------
 
@@ -66,6 +81,8 @@ A. The system will be capable of dosing chemicals for the following purposes. Al
 
 Linear Flow Orifice Meter (LFOM) or Equivalent
 ----------------------------------------------
+
+|LFOM|
 
 A. The plant entrance chamber shall be equipped with a device that will result in a linear relationship between the plant flow and the water level in the entrance chamber. The Linear Flow Orifice Meter (LFOM), which is a pattern of orifices through which flow exits the entrance chamber, is described below. An equivalent device, such as a Sutro weir, can also be used if demonstrated to function equivalently.
 
@@ -97,9 +114,9 @@ A. For each chemical, the plant shall include two or more storage tanks. The tan
 Chemical Dose Controller
 ------------------------
 
-The plant shall be equipped with a chemical dose controller configured as shown in :numref:`figure_spec_LFOM`. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
+The plant shall be equipped with a chemical dose controller configured as shown in :numref:`figure_chemDoseController`. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
 
-.. _figure_spec_chemDoseController:
+.. _figure_chemDoseController:
 
 .. figure:: ../Images/CDC_derivation.png
     :width: 500px
@@ -115,6 +132,16 @@ A. Constant Level Tank
    #. The chemical level in the constant head tank shall be level with the fulcrum of the dosing lever.
 
    #. The vertical distance from the constant head tank level to the end of the dosing hose at max flow and max dose shall be 20 cm.
+
+
+.. _figure_constantLevelTank:
+
+.. figure:: ../Images/CLT.png
+    :width: 600px
+    :align: center
+    :alt: Constant Level Tank
+
+    Constant level tank module for coagulant and chlorine.
 
 #. Dosing Tubes
 
@@ -155,7 +182,22 @@ D. Function
 Flocculator
 ===========
 
-The AguaClara flocculator is a hydraulic flocculator that can be designed as either a **horizontal or vertical flocculator.**
+For more detailed information see :ref:`Flocculation Design <title_Flocculation_Design>`. AguaClara flocculators have three potential flow patterns (see :numref:`figure_flocculator_Geometry`) depending on the flow rate, plant layout, and velocity gradient.
+
+#. Vertical - Horizontal: Flows between 0.5 L/s and 20 L/s are efficiently handled by a Vertical-Horizontal flow flocculator as shown in :numref:`figure_VHflocculator`.
+
+#. Horizontal - Vertical: The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s as shown in :numref:`figure_HVflocculator`.
+
+#. Horizontal - Horizontal: As the flow increases above 200 L/s the optimal design will switch to a horizontal-horizontal flocculator as shown in :numref:`figure_HHflocculator`.
+
+.. _figure_flocculator_Geometry:
+
+.. figure:: ../Images/flocculator_Geometry.png
+  :align: center
+  :width: 500px
+  :alt:  3 flocculator geometries
+
+  The optimal flocculator geometry transitions as the flow rate increases. Note that each of these flocculators has approximately the same depth.
 
 Design Goals
 ------------
@@ -163,6 +205,7 @@ Design Goals
 The AguaClara flocculator is designed with the following goals:
 
 A. Velocity gradient and residence time to aggregate individual particles and small flocs into flocs large enough to settle out in the sedimentation tanks. The product of velocity gradient (G) and residence time (ϴ) is a dimensionless number known as collision potential or Gϴ.
+
 #. Minimize retention time to reach a design Gϴ of approximately 37,000. This determines the minimum total volume of the flocculator. The design volume of the flocculator may be larger due to construction constraints, such as making the length of the flocculator the same as the length of the sedimentation tanks or keeping the flocculator channels wide enough to fit a human body for ease of cleaning and maintenance. 
 
 #. Minimize “dead zones” in the flocculator and reduce the opportunity for short circuiting of the flocculator.
@@ -172,7 +215,7 @@ A. Velocity gradient and residence time to aggregate individual particles and sm
 Flow Paths
 ----------
 
-A. The length of the flocculator channels is determined by the length of the sedimentation tanks plus the inlet and outlet channels for the sedimentation tanks.
+A. The length of the flocculator channels is typically determined by the length of the clarifier to create a compact plant layout.
 
 #. The width of each flocculation channel is determined by material constraints and to facilitate cleaning and maintenance. The flocculator baffles are made of polycarbonate sheets, so the width of the channel should be no larger than the width of a polycarbonate sheet. The width of the channel should be no smaller than 50 cm so an operator can safely enter the tank. Large plants treating more than 100 L/s may be designed with horizontal flocculation channels and may use ferrocement baffles.
 
@@ -182,7 +225,7 @@ A. The length of the flocculator channels is determined by the length of the sed
 
 #. The velocity gradient G for each flocculator baffle is calculated based on minor losses through the baffles as detailed in the Flocculator section of the AguaClara textbook. Other obstacles can also be added to the flocculator to increase head loss under low flow conditions.
 
-#. The ports between flocculator channels should be designed with the same flow area as the space between the baffles so that the port improves flocculation without breaking flocs.
+#. The ports between flocculator channels should be designed with the same flow area as the space between the baffles so that the port improves flocculation without breaking flocs. The width of the port is equal to the spacing between baffles and the height of the port is equal to the channel width.
 
 Channel Construction
 --------------------
@@ -191,9 +234,9 @@ A. The walls of the flocculation channels should be vertical, maintaining the ch
 
 #. The floor of each flocculation channel should be sloped toward the drain channel, and one or more drain valves should be installed to periodically remove sludge from the flocculator. The slope and valves also allow the flocculation channels to be completely emptied for more in-depth maintenance.
 
-#. The drain valve or valves to drain the flocculation channel must be large enough to empty the flocculation channels in a reasonable time.
+#. The drain pipes are activated by removing a vertical pipe stub. The drain pipes must be large enough to empty the flocculation channels in 20 minutes. The drains are placed near a port between channels so that each drain can serve two channels.
 
-#. The flocculation channels should have sufficient lighting for the operator to observe floc formation. The operator should also have a flashlight to observe floc formation during power outages.
+#. The flocculator should have sufficient lighting for the operator to observe floc formation. The operator should also have a flashlight to observe floc formation during power outages.
 
 Baffles
 -------
@@ -206,6 +249,8 @@ A. The flocculation baffles must be constructed to be removable. A baffle module
 
 Clarifier
 =========
+
+For more detailed information see :ref:`Clarifier Design <title_Clarifier_Design>`.
 
 Design Goals
 ------------
@@ -315,6 +360,8 @@ After the water flows over the exit weir, it is collected in the effluent channe
 
 Stacked Rapid Sand Filter
 =========================
+
+For more detailed information see :ref:`Filtration Design <title_Filtration_Design>`.
 
 Description
 -----------
