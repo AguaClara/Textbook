@@ -67,28 +67,6 @@ A. The system will be capable of dosing chemicals for the following purposes. Al
 
 #. The chemical dose (mass chemical per volume water passing through the plant) shall be easily adjustable by the plant operator.
 
-Linear Flow Orifice Meter (LFOM) or Equivalent |LFOM|
------------------------------------------------------
-
-A. The plant entrance chamber shall be equipped with a device that will result in a linear relationship between the plant flow and the water level in the entrance chamber. The Linear Flow Orifice Meter (LFOM), which is a pattern of orifices through which flow exits the entrance chamber, is described below. An equivalent device, such as a Sutro weir, can also be used if demonstrated to function equivalently.
-
-#. The pattern of orifices shall be designed so that the water level in the entrance chamber (equal to the hydrostatic head pushing water through the offices) is linearly proportional to the total flow through the orifices (equal to the plant flow). An example of an LFOM is shown in :numref:`figure_spec_LFOM`. The orifices may be drilled in a flat plate or in the walls of a vertical pipe.
-
-#. The LFOM shall be capable of measuring flow ranging from 10 percent to 100 percent of the maximum plant design flow.
-
-#. To ensure that plant flow is measured with adequate resolution the water level should change a minimum of 20 cm from no flow to the design flow rate. Larger water level changes can be used to enable use of smaller diameter LFOMs.
-
-#. Depending on the plant flow, the LFOM may consist of orifices in one or multiple riser pipes or in a flat plate.
-
-.. _figure_spec_LFOM:
-
-.. figure:: ../Images/LFOM.png
-    :width: 100px
-    :align: center
-    :alt: LFOM
-
-    Example of a Linear Flow Orifice Meter
-
 
 Chemical Storage
 ----------------
@@ -97,10 +75,10 @@ A. For each chemical, the plant shall include two or more storage tanks. The tan
 
 #. The combined volume of all tanks used for a chemical shall allow for storage of sufficient chemical to supply the plant at maximum flow and maximum chemical dose for at least 48 hours.
 
-Chemical Dose Controller
-------------------------
+Chemical Feed System
+--------------------
 
-The plant shall be equipped with a chemical dose controller configured as shown in :numref:`figure_chemDoseController`. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
+The plant shall be equipped with a chemical feed system configured as shown in :numref:`figure_chemDoseController`. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
 
 .. _figure_chemDoseController:
 
@@ -109,7 +87,7 @@ The plant shall be equipped with a chemical dose controller configured as shown 
     :align: center
     :alt: chemDoseController
 
-    Chemical dose controller schematic.
+    Gravity powered chemical feed system schematic.
 
 A. Constant Level Tank
 
@@ -165,6 +143,64 @@ D. Function
 
    #. Because the entrance tank level (due to the LFOM) is directly proportional to the plant flow rate, the dose slider elevation is directly proportional to the entrance chamber level, and the chemical flow is directly proportional to the dose slider elevation, the chemical flow is directly proportional to the plant flow.
 
+Entrance Tank |EntranceTank|
+============================
+
+For more detailed information see :ref:`Entrance Tank Design <title_entrance_tank_design>`. The entrance tank has multiple functions in a drinking water treatment plant.
+
+#. Remove air bubbles to reduce splashing, turbulence, and unsteady motion of the chemical feed surface tracking lever system
+#. Remove grit to prevent accumulation in the flocculator
+#. Remove leaves and other debris to prevent clogging of the diffusers in the clarifier inlet
+#. Dissipate kinetic energy to keep the water level steady for accurate flow measurement
+#. Measure the incoming flow rate so that operators can make adjustments and respond to changes in water demand
+#. Inject the coagulant and any other amendments required for flocculation
+
+.. _figure_ET_Diagram_Labeled:
+
+.. figure:: ../Images/ET_Diagram_Labeled.png
+    :width: 900px
+    :align: center
+    :alt: entrance tank diagram
+
+    Cross-section of an entrance tank. Lever arm of chemical dosing system not pictured.
+
+Grit Removal
+------------
+
+A. The entrance tank shall be designed as a horizontal flow sedimentation tank for the removal of grit with a recommended capture velocity of less than 15 mm/s .
+
+#. The bottom of the entrance tank shall be a series of grit hoppers that can easily be cleaned by temporarily removing the pipe stub that blocks the outlet.
+
+Trash Rack
+----------
+
+A. The trash rack shall have an opening size that is smaller than the diffusers in the clarifier and the orifices in the stacked rapid sand filter inlet branches.
+
+#. The trash rack area shall be sufficient that it can be at least 80% clogged before exceeding the available head loss in the entrance tank.
+
+Linear Flow Orifice Meter (LFOM) or Equivalent |LFOM|
+-----------------------------------------------------
+
+A. The plant entrance tank shall be equipped with a device that will result in a linear relationship between the plant flow and the water level in the entrance chamber. The Linear Flow Orifice Meter (LFOM), which is a pattern of orifices through which flow exits the entrance tank, is described below. An equivalent device, such as a Sutro weir, can also be used if demonstrated to function equivalently.
+
+#. The pattern of orifices shall be designed so that the water level in the entrance chamber (equal to the hydrostatic head pushing water through the offices) is linearly proportional to the total flow through the orifices (equal to the plant flow). An example of an LFOM is shown in :numref:`figure_spec_LFOM`. The orifices may be drilled in a flat plate or in the walls of a vertical pipe.
+
+#. The LFOM shall be capable of measuring flow ranging from 10 percent to 100 percent of the maximum plant design flow.
+
+#. To ensure that plant flow is measured with adequate resolution the water level should change a minimum of 20 cm from no flow to the design flow rate. Larger water level changes can be used to enable use of smaller diameter LFOMs.
+
+#. Depending on the plant flow, the LFOM may consist of orifices in one or multiple riser pipes or in a flat plate.
+
+.. _figure_spec_LFOM:
+
+.. figure:: ../Images/LFOM.png
+    :width: 100px
+    :align: center
+    :alt: LFOM
+
+    Example of a Linear Flow Orifice Meter
+
+
 Flocculator
 ===========
 
@@ -209,7 +245,7 @@ A. The length of the flocculator channels is typically determined by the length 
 
 #. The overall volume of the flocculator is determined by the individual constraints on each dimension of the flocculator, but the collision potential, Gϴ, of the flocculator must be at least 37,000.
 
-#. The velocity gradient G for each flocculator baffle is calculated based on minor losses through the baffles as detailed in the Flocculator section of the AguaClara textbook. Other obstacles can also be added to the flocculator to increase head loss under low flow conditions.
+#. The spacing between baffles is designed to achieve the target velocity gradient, G, at the design flow rate.
 
 #. The ports between flocculator channels should be designed with the same flow area as the space between the baffles so that the port improves flocculation without breaking flocs. The width of the port is equal to the spacing between baffles and the height of the port is equal to the channel width.
 
@@ -227,23 +263,34 @@ A. The walls of the flocculation channels should be vertical, maintaining the ch
 Baffles
 -------
 
-A. The flocculation baffles must be constructed to be removable. A baffle module should be raisable by one operator working alone so that water can flow beneath the baffle and drain from the flocculator channel. Large flocculators may have baffle modules that require more than one person to completely remove from the flocculator channel.
+A. The flocculation baffles must be constructed to be removable. A baffle module (see :numref:`figure_baffleModule`) should be raisable by one operator working alone so that water can flow beneath the baffle and drain from the flocculator channel. Large flocculators may have baffle modules that require more than one person to completely remove from the flocculator channel.
 
 #. The flocculation baffles should be constructed from polycarbonate sheets, and the frame for holding together baffle modules should be made from PVC. Other materials may be used if justification is provided, including the use of ferrocement baffles for horizontal flocculators in large plants.
 
-#. Baffle modules may also include other PVC obstacles to increase flocculation efficiency and reduce the volume and residence time of the flocculator.
+
+.. _figure_baffleModule:
+
+.. figure:: ../Images/baffleModule.png
+  :align: center
+  :width: 500px
+  :alt:  Baffle Module
+
+  The baffle modules transfer the force of the water to the downstream wall through the PVC pipe frame. Each flocculator channels holds one baffle module.
+
 
 Clarifier |Clarifier|
 =====================
 
-For more detailed information see :ref:`Clarifier Design <title_Clarifier_Design>`.
+For more detailed information see :ref:`Clarifier Design <title_Clarifier_Design>`. The clarifier must be designed based on the coldest water temperature and based on the lowest density primary particles that will need to be captured. Surface waters with high concentrations of dissolved organic matter and low concentrations of suspended solids produce low density flocs and thus the velocity gradient in the inlet manifold and jet reverser must be reduced.
 
 Design Goals
 ------------
 
-The Clarifier is high-rate and vertical flow designed with the following goals:
+The high-rate, vertical flow Clarifier is designed with the following goals:
 
-A. To produce a stable floc filter (suspended layer of flocs) that acts like a primary filter that reduces the settled water turbidity.
+A. To deliver flocs to the clarifier bay without breaking them into pieces with terminal velocities below the capture velocity of the plate settlers.
+
+#. To produce a stable floc filter (fluidized suspension of flocs) that is a primary filter that reduces the settled water turbidity.
 
 #. To provide evenly distributed low-velocity flow through the plate settlers.
 
@@ -257,15 +304,27 @@ A. To produce a stable floc filter (suspended layer of flocs) that acts like a p
 
 #. To be able to take any clarifier bay offline for maintenance while the other clarifier bays continue to operate.
 
-Influent Channel
+#. To be able to refill a clarifier bay with clarified water for rapid return to service.
+
+
+Inlet Channel
 ----------------
 
-Flocculated water enters a pipe in the bottom of the influent channel. Water flows down the pipe, through a 90-degree bend, into the influent manifold.
+The inlet channel (see :numref:`figure_ClarifierInletOutletHydraulics`) is designed to have a velocity head that is very small compared with the head loss in the outlet manifold orifices to achieve uniform flow distribution between clarifier bays. The inlet channel is sloped up in the direction of flow to maintain relatively uniform velocity for improved flow distribution and to reduce floc deposition in the channel.
 
-Influent Manifold
+.. _figure_ClarifierInletOutletHydraulics:
+
+.. figure:: ../Images/ClarifierInletOutletHydraulics.png
+  :align: center
+  :width: 500px
+  :alt:  Clarifier Inlet Outlet Hydraulics
+
+  Flocculated water flows from the inlet channel to the inlet manifold and then through the diffusers, jet reverser, floc filter, and plate settlers. Clarified water flows into the outlet manifold, the collector channel, across the outlet weir, and into the outlet channel.
+
+Inlet Manifold
 -----------------
 
-Water exits the influent manifold through a series of orifices and diffusers in the bottom of the pipe. The end of the influent manifold is capped.
+Flocculated water enters a pipe in the bottom of the inlet channel. Water flows down the pipe, through a 90-degree elbow, into the inlet manifold. Water exits the inlet manifold through a series of orifices and diffusers in the bottom of the pipe. The end of the inlet manifold is capped. The minimum diameter of the inlet manifold is set by the velocity gradient downstream of the 90-degree elbow (see Equation :eq:`D_pipe_min_of_K_and_jet_G_max`).
 
 Diffusers
 ---------
@@ -329,24 +388,24 @@ The plate settlers are made from clear polycarbonate sheets. The sheets are asse
    Plate spacing, Clogging and floc rollup constraints, Plate settler length, 2.5 cm
    Plate settler length, "Upflow velocity, Capture velocity, Plate angle, Plate spacing ", Tank depth, Calculated for each plant
 
-Submerged Effluent Manifold
+Submerged Outlet Manifold
 ---------------------------
 
-The submerged effluent manifold, sometimes called a launder, collects clarified water from the top of the clarifier. It is a horizontal pipe that extends along the length of the clarifier bay and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the clarifier bay.
+The submerged outlet manifold, sometimes called a launder, collects clarified water from the top of the clarifier. It is a horizontal pipe that extends along the length of the clarifier bay and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the clarifier bay.
 
-The effluent launder is designed to have 5 cm of head loss to ensure uniform flow distribution between clarifier bays and to have the majority of the head loss through the orifices to obtain uniform flow distribution between the orifices.
+The outlet manifold is designed to have 5 cm of head loss to ensure uniform flow distribution between clarifier bays and to have the majority of the head loss through the orifices to obtain uniform flow distribution between the orifices.
 
-Exit Weir
----------
+Outlet Weir
+-----------
 
-The submerged effluent manifold transports water from the clarifier bay to a channel that runs perpendicular to the clarifier bays. The channel collects water from all of the clarifier bays. Water leaves this channel by flowing over the exit weir. The elevation of the exit weir controls the water levels in the clarifier and in the flocculator.
+The submerged outlet manifold transports water from the clarifier bay to a channel that runs perpendicular to the clarifier bays. The channel collects water from all of the clarifier bays. Water leaves this channel by flowing over the outlet weir. The elevation of the oulet weir controls the water levels in the clarifier and in the flocculator.
 
-The exit weir makes it possible to refill and emptied clarifier bay with clarified water to ensure that after returning a clarifier bay to service the first water is of high quality.
+The outlet weir makes it possible to refill and emptied clarifier bays with clarified water to ensure that after returning a clarifier bay to service the first water is of high quality.
 
-Effluent Channel
+Outlet Channel
 ----------------
 
-After the water flows over the exit weir, it is collected in the effluent channel. The effluent channel has pipes embedded in the bottom of it which transport the clarified water to the filter inlet channel.
+After the water flows over the outlet weir, it is collected in the outlet channel. The outlet channel has pipes embedded in the bottom of it which transport the clarified water to the filter inlet channel.
 
 Stacked Rapid Sand Filter |OStaRS|
 ==================================
