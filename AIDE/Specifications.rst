@@ -78,9 +78,9 @@ A. For each chemical, the plant shall include two or more storage tanks. The tan
 Chemical Feed System
 --------------------
 
-The plant shall be equipped with a chemical feed system configured as shown in :numref:`figure_chemDoseController`. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
+The plant shall be equipped with a chemical feed system configured as shown in :numref:`figure_spec_chemDoseController`. Materials that will be in contact with chemicals must be compatible with the chemical and suitable for use with potable water.
 
-.. _figure_chemDoseController:
+.. _figure_spec_chemDoseController:
 
 .. figure:: ../Images/CDC_derivation.png
     :width: 500px
@@ -91,14 +91,14 @@ The plant shall be equipped with a chemical feed system configured as shown in :
 
 A. Constant Level Tank
 
-   1. From the chemical storage tanks, the chemical passes via gravity to a constant head tank. The chemical enters the constant head tank via a float valve, which maintains a constant level of chemical in the constant head tank, providing a constant head to drive the chemical through the doser.
+   1. From the chemical storage tanks, the chemical passes via gravity to a constant level tank (see :numref:`figure_spec_constantLevelTank`). The chemical enters the constant level tank via a float valve, which maintains a constant level of chemical, providing a constant head to drive the chemical through the doser.
 
-   #. The chemical level in the constant head tank shall be level with the fulcrum of the dosing lever.
+   #. The chemical level in the constant level tank shall be level with the fulcrum of the dosing lever.
 
-   #. The vertical distance from the constant head tank level to the end of the dosing hose at max flow and max dose shall be 20 cm.
+   #. The vertical distance from the constant level tank level to the end of the dosing hose at max flow and max dose shall be 20 cm.
 
 
-.. _figure_constantLevelTank:
+.. _figure_spec_constantLevelTank:
 
 .. figure:: ../Images/CLT.png
     :width: 600px
@@ -109,9 +109,9 @@ A. Constant Level Tank
 
 B. Dosing Tubes
 
-   1. Chemical flows from the constant head tank into dosing tubes, which terminate in a free discharge at the dose slider on the doser lever.
+   1. Chemical flows from the constant level tank into dosing tubes, which terminate in a free discharge at the dose slider on the doser lever.
 
-   #. The diameter of the tubes shall be designed to provide laminar flow over the desired range of chemical flows. Given the laminar flow, the flowrate through the dosing tubes will be directly proportional to elevation difference between the chemical level in the constant head tank and the dose slider.
+   #. The diameter of the tubes shall be designed to provide laminar flow over the desired range of chemical flows. Given the laminar flow, the flowrate through the dosing tubes will be directly proportional to elevation difference between the chemical level in the constant level tank and the dose slider.
 
    #. The plant shall have a spare set of dosing tubes on hand so that one set of tubes can be cleaned while the other set is in use.
 
@@ -119,7 +119,7 @@ B. Dosing Tubes
 
 #. Chemical Dose Controller |Doser|
 
-   1. One end of the chemical dose controller is connected to a float in the plant entrance tank. The dose slider and thus the ends of the doser hoses are located on the other half of the chemical dose controller lever.
+   1. One end of the chemical dose controller (see :numref:`figure_spec_doser`) is connected to a float in the plant entrance tank. The dose slider and thus the ends of the doser hoses are located on the other half of the chemical dose controller lever.
 
    #. To provide a reasonable maximum angle of the lever system the lever shall be at least four times as long as the LFOM change in water depth.
 
@@ -135,18 +135,18 @@ B. Dosing Tubes
 
 D. Function
 
-   1. The doser is designed so that the operator can select a chemical dose (mass of chemical per volume of water) by moving the dose slider to a specific position along the lever. The lever, LFOM and constant head tank then work together to adjust the chemical flow proportional to the plant flow to maintain a constant chemical dose.
+   1. The doser is designed so that the operator can select a chemical dose (mass of chemical per volume of water) by moving the dose slider to a specific position along the lever. The lever, LFOM and constant level tank then work together to adjust the chemical flow proportional to the plant flow to maintain a constant chemical dose.
 
    #. When the plant flow is zero, the lever is horizontal and chemical flow is zero.
 
    #. When plant flow increases, the water level in the entrance tank increases (due additional head loss through the LFOM), causing one end of the doser lever to rise. This, in turn, causes the other end of the lever, and the dose slider, to fall, increasing the elevation difference between the chemical level in the constant level tank and the dose slider. The greater driving head increases the chemical flow through the doser.
 
-   #. Because the entrance tank level (due to the LFOM) is directly proportional to the plant flow rate, the dose slider elevation is directly proportional to the entrance chamber level, and the chemical flow is directly proportional to the dose slider elevation, the chemical flow is directly proportional to the plant flow.
+   #. Because the entrance tank level is directly proportional to the plant flow rate (due to the LFOM), the dose slider elevation is directly proportional to the entrance tank level, and the chemical flow is directly proportional to the dose slider elevation, the chemical flow is directly proportional to the plant flow.
 
 Entrance Tank |EntranceTank|
 ============================
 
-For more detailed information see :ref:`Entrance Tank Design <title_entrance_tank_design>`. The entrance tank has multiple functions in a drinking water treatment plant.
+For more detailed information see :ref:`Entrance Tank Design <title_entrance_tank_design>`. The entrance tank (see :numref:`figure_spec_ET_Diagram_Labeled`) has multiple functions in a drinking water treatment plant.
 
 #. Remove air bubbles to reduce splashing, turbulence, and unsteady motion of the chemical feed surface tracking lever system
 #. Remove grit to prevent accumulation in the flocculator
@@ -155,7 +155,7 @@ For more detailed information see :ref:`Entrance Tank Design <title_entrance_tan
 #. Measure the incoming flow rate so that operators can make adjustments and respond to changes in water demand
 #. Inject the coagulant and any other amendments required for flocculation
 
-.. _figure_ET_Diagram_Labeled:
+.. _figure_spec_ET_Diagram_Labeled:
 
 .. figure:: ../Images/ET_Diagram_Labeled.png
     :width: 900px
@@ -204,7 +204,7 @@ A. The plant entrance tank shall be equipped with a device that will result in a
 Flocculator
 ===========
 
-For more detailed information see :ref:`Flocculation Design <title_Flocculation_Design>`. AguaClara flocculators have three potential flow patterns (see :numref:`figure_flocculator_Geometry`) depending on the flow rate, plant layout, and velocity gradient.
+For more detailed information see :ref:`Flocculation Design <title_Flocculation_Design>`. AguaClara flocculators have three potential flow patterns (see :numref:`figure_spec_flocculator_Geometry`) depending on the flow rate, plant layout, and velocity gradient.
 
 #. |FlocculatorVH| Vertical - Horizontal: Flows between 0.5 L/s and 20 L/s are efficiently handled by a Vertical-Horizontal flow flocculator as shown in :numref:`figure_VHflocculator`.
 
@@ -212,7 +212,7 @@ For more detailed information see :ref:`Flocculation Design <title_Flocculation_
 
 #. |FlocculatorHH| Horizontal - Horizontal: As the flow increases above 200 L/s the optimal design will switch to a horizontal-horizontal flocculator as shown in :numref:`figure_HHflocculator`.
 
-.. _figure_flocculator_Geometry:
+.. _figure_spec_flocculator_Geometry:
 
 .. figure:: ../Images/flocculator_Geometry.png
   :align: center
@@ -263,12 +263,12 @@ A. The walls of the flocculation channels should be vertical, maintaining the ch
 Baffles
 -------
 
-A. The flocculation baffles must be constructed to be removable. A baffle module (see :numref:`figure_baffleModule`) should be raisable by one operator working alone so that water can flow beneath the baffle and drain from the flocculator channel. Large flocculators may have baffle modules that require more than one person to completely remove from the flocculator channel.
+A. The flocculation baffles must be constructed to be removable. A baffle module (see :numref:`figure_spec_baffleModule`) should be raisable by one operator working alone so that water can flow beneath the baffle and drain from the flocculator channel. Large flocculators may have baffle modules that require more than one person to completely remove from the flocculator channel.
 
 #. The flocculation baffles should be constructed from polycarbonate sheets, and the frame for holding together baffle modules should be made from PVC. Other materials may be used if justification is provided, including the use of ferrocement baffles for horizontal flocculators in large plants.
 
 
-.. _figure_baffleModule:
+.. _figure_spec_baffleModule:
 
 .. figure:: ../Images/baffleModule.png
   :align: center
@@ -281,9 +281,11 @@ A. The flocculation baffles must be constructed to be removable. A baffle module
 Clarifier |Clarifier|
 =====================
 
-For more detailed information see :ref:`Clarifier Design <title_Clarifier_Design>`. The clarifier must be designed based on the coldest water temperature and based on the lowest density primary particles that will need to be captured. Surface waters with high concentrations of dissolved organic matter and low concentrations of suspended solids produce low density flocs and thus the velocity gradient in the inlet manifold and jet reverser must be reduced.
+For more detailed information see :ref:`Clarifier Design <title_Clarifier_Design>`. The clarifier (see :numref:`figure_spec_clarifierElevation`) contains three separate processes: floc filter, plate settlers, and floc hopper.
 
-.. _figure_clarifierElevation:
+The clarifier must be designed based on the coldest water temperature and based on the lowest density primary particles that will need to be captured. Surface waters with high concentrations of dissolved organic matter and low concentrations of suspended solids produce low density flocs and thus the velocity gradient in the inlet manifold and jet reverser must be reduced.
+
+.. _figure_spec_clarifierElevation:
 
 .. figure:: ../Images/clarifierElevation.png
   :align: center
@@ -295,7 +297,7 @@ For more detailed information see :ref:`Clarifier Design <title_Clarifier_Design
 Design Goals
 ------------
 
-The high-rate, vertical flow Clarifier is designed with the following goals:
+The high-rate, vertical flow clarifier is designed with the following goals:
 
 A. To deliver flocs to the clarifier bay without breaking them into pieces with terminal velocities below the capture velocity of the plate settlers. This sets the maximum velocity gradient for the transfer of the flocs from the flocculator to the floc filter in the clarifier bay. The maximum velocity gradient shall be less than 250 Hz and lower values will be required for raw waters with high concentrations of dissolved organic matter.
 
@@ -319,9 +321,9 @@ A. To deliver flocs to the clarifier bay without breaking them into pieces with 
 Inlet Channel
 ----------------
 
-The inlet channel (see :numref:`figure_ClarifierInletOutletHydraulics`) is designed to have a velocity head that is very small compared with the head loss in the outlet manifold orifices to achieve uniform flow distribution between clarifier bays. The inlet channel is sloped up in the direction of flow to maintain relatively uniform velocity for improved flow distribution and to reduce floc deposition in the channel.
+The inlet channel (see :numref:`figure_spec_ClarifierInletOutletHydraulics`) is designed to have a velocity head that is very small compared with the head loss in the outlet manifold orifices to achieve uniform flow distribution between clarifier bays. The inlet channel is sloped up in the direction of flow to maintain relatively uniform velocity for improved flow distribution and to reduce floc deposition in the channel.
 
-.. _figure_ClarifierInletOutletHydraulics:
+.. _figure_spec_ClarifierInletOutletHydraulics:
 
 .. figure:: ../Images/ClarifierInletOutletHydraulics.png
   :align: center
@@ -340,11 +342,11 @@ Achieving reasonable flow distribution between diffusers may require a flow equa
 Diffusers
 ---------
 
-The orifices and diffusers point down to the bottom of the clarifier bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. Diffusers are designed to ensure that the jet exiting the jet reverser has a maximum velocity gradient that meets the same design constraint as the inlet manifold (see Equation :eq:`planejet_v_max_of_q`).
+The orifices and diffusers point down to the bottom of the clarifier bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. Diffusers are designed to ensure that the jet exiting the jet reverser has a maximum velocity gradient that is less than the design constraint to prevent excessive floc breakup (see Equation :eq:`planejet_v_max_of_q`).
 
-Diffusers are shaped so that one end is molded to be a reduced diameter that fits into the influent manifold port, and the other end is deformed to the shape of a rectangle. This deformation is done to create a line jet entering the jet reverser in the bottom of the clarifier bay and to enhance flow distribution by maximizing the jet velocity given the constraints of Equation :eq:`planejet_v_max_of_q`.
+Diffusers are shaped so that one end is molded to be a reduced diameter that fits into the influent manifold port, and the other end is deformed to the shape of a rectangle (:numref:`figure_spec_diffuser_dimensions`). This deformation is done to create a line jet entering the jet reverser in the bottom of the clarifier bay and to enhance flow distribution by maximizing the jet velocity given the constraints of Equation :eq:`planejet_v_max_of_q`.
 
-.. _figure_diffuser_dimensions:
+.. _figure_spec_diffuser_dimensions:
 
 .. figure:: ../Images/diffuser_dimensions.png
    :width: 500px
@@ -356,11 +358,11 @@ Diffusers are shaped so that one end is molded to be a reduced diameter that fit
 Jet Reverser
 ------------
 
-The jet reverser consists of a longitudinally-cut half-pipe that is laid in the bottom of the bay (see :numref:`figure_clarifierEndView`). It functions as a way to keep flocs suspended in the sedimentation tank by ensuring that any sludge that settles will be propelled back up by the force of the diffuser jet.
+The jet reverser consists of a longitudinally-cut half-pipe that is laid in the bottom of the bay (see :numref:`figure_spec_clarifierEndView`). It functions as a way to keep flocs suspended in the sedimentation tank by ensuring that any sludge that settles will be propelled back up by the force of the diffuser jet.
 
 The diffusers are offset from the jet reverser centerline. This is intentionally done to promote the resuspension of flocs, which form a floc filter for primary filtration.
 
-.. _figure_clarifierEndView:
+.. _figure_spec_clarifierEndView:
 
 .. figure:: ../Images/clarifierEndView.png
    :width: 500px
@@ -387,16 +389,16 @@ A. The line jet from the diffusers enters the jet reverser to force flow up thro
 Sloped Bottom Geometry
 ----------------------
 
-The clarifier bottom geometry (see :numref:`figure_clarifierEndView`) prevents sludge accumulation while also ensuring good flow distribution. The slope on either side of the diffusers is at a 50 degree angle above horizontal. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can return to the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the main clarifier bays.
+The clarifier bottom geometry (see :numref:`figure_spec_clarifierEndView`) prevents sludge accumulation while also ensuring good flow distribution. The slope on either side of the diffusers is at a 50 degree angle above horizontal. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can return to the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the main clarifier bays.
 
 Floc Hopper
 -----------
 
-The floc hopper (:numref:`figure_flocHopper`) provides an opportunity for floc consolidation. The floc weir controls the depth of the floc filter because as the floc filter grows, it will eventually reach the top of the floc weir. Because flocs are more dense than water, the flocs “spill” over the edge of the floc weir which allows the floc filter to stay a constant height while sludge accumulates and consolidates in the floc hopper.
+The floc hopper (:numref:`figure_spec_flocHopper`) provides an opportunity for floc consolidation. The floc weir controls the depth of the floc filter because as the floc filter grows, it will eventually reach the top of the floc weir. Because flocs are more dense than water, the flocs “spill” over the edge of the floc weir which allows the floc filter to stay a constant height while sludge accumulates and consolidates in the floc hopper.
 
 There is a manual valve at the drain of the floc hopper. Operators can open the floc hopper drain valve whenever they want to easily drain the sludge. The floc hopper allows for a self-cleaning clarifier. Operators only have to clean the clarifier once every three to six months because there is no stagnant accumulation of anoxic sludge.
 
-.. _figure_flocHopper:
+.. _figure_spec_flocHopper:
 
 .. figure:: ../Images/flocHopper.png
    :width: 400px
@@ -410,9 +412,9 @@ Plate Settlers
 
 After flowing through the floc filter, flocs reach the plate settlers. Plate settlers are sloped surfaces that provide additional settling area for flocs, thereby increasing the effective settling area of the clarifier without increasing the plan view area. AguaClara plate settlers are sloped at 60 degrees. The spacing between plates is 2.5 cm.
 
-The plate settlers are made from clear polycarbonate sheets. The sheets are assembled in modules. The modules are light enough to be removed from the clarifier by hand. The plate settler modules are supported by ledges along the clarifier bay walls and by a PVC pipe frame.
+The plate settlers are made from clear polycarbonate sheets. The sheets are assembled in modules (see :numref:`figure_spec_plateSettlerModule`). The modules are light enough to be removed from the clarifier by hand. The plate settler modules are supported by ledges along the clarifier bay walls and by a PVC pipe frame.
 
-.. _figure_plateSettlerModule:
+.. _figure_spec_plateSettlerModule:
 
 .. figure:: ../Images/plateSettlerModule.png
    :width: 300px
@@ -457,12 +459,21 @@ After the water flows over the outlet weir, it is collected in the outlet channe
 Stacked Rapid Sand Filter |OStaRS|
 ==================================
 
-For more detailed information see :ref:`Filtration Design <title_Filtration_Design>`. Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornell program in response to the need for a new technology that would both eliminate the need for backwash pumps and not require the construction of 6 filters for small towns. As shown in the figure below, StaRS filters use six 20 cm deep layers of sand with the layers stacked vertically. The six layers give a total active sand depth of 1.2 m.
+For more detailed information see :ref:`Filtration Design <title_Filtration_Design>`. Stacked Rapid Sand, StaRS, filters (see :numref:`figure_spec_OStaRSoverview`) were invented in 2010 by the AguaClara Cornell program in response to the need for a new technology that would both eliminate the need for backwash pumps and not require the construction of 6 filters for small towns. As shown in the figure below, StaRS filters use six 20 cm deep layers of sand with the layers stacked vertically. The six layers give a total active sand depth of 1.2 m.
+
+.. _figure_spec_OStaRSoverview:
+
+.. figure:: ../Images/OStaRSoverview.png
+   :width: 500px
+   :align: center
+   :alt: Floc Hopper
+
+   The open stacked rapid sand filters include advanced hydraulic controls to ensure stable operation during both filtration and backwash modes.
 
 Operation
 ---------
 
-A. The filter operates with the same design flow rate for both backwash and filtration modes and uses settled water for backwash. This eliminates the startup problem for rapid sand filters that do not have an initial source of backwash water.
+A. The filter operates with the same design flow rate for both backwash and filtration modes and uses clarified water for backwash. This eliminates the need for backwash pumps and ensures that the filters can be backwashed as long as clarified water is available.
 
 #. Filtration Mode:
 

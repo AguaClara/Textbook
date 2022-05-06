@@ -8,9 +8,18 @@
 .. _title_Filtration_Design:
 
 
-********************************
-Stacked Rapid Sand Filter Design
-********************************
+*************************************
+Open Stacked Rapid Sand Filter Design
+*************************************
+
+.. _figure_OStaRSoverview:
+
+.. figure:: ../Images/OStaRSoverview.png
+   :width: 400px
+   :align: center
+   :alt: Floc Hopper
+
+   The open stacked rapid sand filters include advanced hydraulic controls to ensure stable operation during both filtration and backwash modes.
 
 Nomenclature
 ============
