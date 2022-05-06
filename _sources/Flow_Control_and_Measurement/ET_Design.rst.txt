@@ -28,6 +28,7 @@ Water enters the entrance tank via the influent pipe and passes through the tras
 
 
 .. _figure_ET_Diagram_Labeled:
+
 .. figure:: ../Images/ET_Diagram_Labeled.png
     :width: 900px
     :align: center

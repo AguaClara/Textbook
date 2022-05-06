@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Introduction &mdash; AguaClara Textbook v1.3.27 documentation</title>
+  <title>Introduction &mdash; AguaClara Textbook v1.3.28 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.27
+                v1.3.28
               </div>
             
           
@@ -292,7 +292,7 @@
 <p>The reason that flocculation is widely used in water treatment is because it converts small particles into much larger flocs that have a higher terminal velocity for removal by sedimentation and because they are larger they are easier to capture in filters. Clarification is the process that actually removes particles like clay, dirt, organic matter, and bacteria from water. As you learned in the
 <a class="reference internal" href="../Introduction/Introduction.html#heading-treatment-trains"><span class="std std-ref">introduction on treatment trains</span></a>, sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-0">
-<span class="eqno">(432)<a class="headerlink" href="#equation-flocculation-floc-intro-0" title="Permalink to this equation">¶</a></span>\[\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\]</div>
+<span class="eqno">(433)<a class="headerlink" href="#equation-flocculation-floc-intro-0" title="Permalink to this equation">¶</a></span>\[\bar v_t = \frac{D_{particle}^2 g}{18 \nu} \frac{\rho_p - \rho_w}{\rho_w}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\bar v_t\)</span> = terminal velocity of a particle, its downwards speed if it were in quiescent (still) water</div>
@@ -368,7 +368,7 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 <h3>Viscous Shear Dominates<a class="headerlink" href="#viscous-shear-dominates" title="Permalink to this headline">¶</a></h3>
 <p>Relative velocities between particles are dominated by viscous shear because the separation distances are smaller than the inner viscous length scale. The average particle separation distance is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-spacing-of-number-concentration">
-<span class="eqno">(433)<a class="headerlink" href="#equation-eq-spacing-of-number-concentration" title="Permalink to this equation">¶</a></span>\[ \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{-} V_{\rm{Surround}}}^\frac{1}{3}\]</div>
+<span class="eqno">(434)<a class="headerlink" href="#equation-eq-spacing-of-number-concentration" title="Permalink to this equation">¶</a></span>\[ \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{-} V_{\rm{Surround}}}^\frac{1}{3}\]</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\bar \Lambda\)</span> is the average separation distance</div>
@@ -377,7 +377,7 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 </div>
 <p>The number concentration of particles is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-number-concentration-of-diameter">
-<span class="eqno">(434)<a class="headerlink" href="#equation-eq-number-concentration-of-diameter" title="Permalink to this equation">¶</a></span>\[ n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi \bar{D_P}^3} \frac{C_P}{\rho_P}\]</div>
+<span class="eqno">(435)<a class="headerlink" href="#equation-eq-number-concentration-of-diameter" title="Permalink to this equation">¶</a></span>\[ n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi \bar{D_P}^3} \frac{C_P}{\rho_P}\]</div>
 <div class="line-block">
 <div class="line">Where:</div>
 <div class="line"><span class="math notranslate nohighlight">\(C_P\)</span> is the particle concentration</div>
@@ -385,9 +385,9 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 <div class="line"><span class="math notranslate nohighlight">\(\rho_P\)</span> is the particle density</div>
 <div class="line"><span class="math notranslate nohighlight">\(\bar{D_P}\)</span> is the average particle diameter</div>
 </div>
-<p>Equations <a class="reference internal" href="#equation-eq-spacing-of-number-concentration">(433)</a> and <a class="reference internal" href="#equation-eq-number-concentration-of-diameter">(434)</a> can be combined to obtain the relationship between separation distance and particle diameter.</p>
+<p>Equations <a class="reference internal" href="#equation-eq-spacing-of-number-concentration">(434)</a> and <a class="reference internal" href="#equation-eq-number-concentration-of-diameter">(435)</a> can be combined to obtain the relationship between separation distance and particle diameter.</p>
 <div class="math notranslate nohighlight" id="equation-eq-spacing-of-diameter">
-<span class="eqno">(435)<a class="headerlink" href="#equation-eq-spacing-of-diameter" title="Permalink to this equation">¶</a></span>\[ \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} =  \bar{D_P} \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{\frac{1}{3}}\]</div>
+<span class="eqno">(436)<a class="headerlink" href="#equation-eq-spacing-of-diameter" title="Permalink to this equation">¶</a></span>\[ \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} =  \bar{D_P} \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{\frac{1}{3}}\]</div>
 <div class="figure align-center" id="id11">
 <span id="figure-particle-separation"></span><a class="reference internal image-reference" href="../_images/Particle_separation.png"><img alt="Particle separation" src="../_images/Particle_separation.png" style="width: 200px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 103 </span><span class="caption-text">The average particle separation distance is defined as the distance between centers of cubes that each contain the volume of the suspension occupied by a single particle.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
@@ -398,7 +398,7 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 <span id="figure-nclay-vs-cclay"></span><a class="reference internal image-reference" href="../_images/NClay_vs_CClay.png"><img alt="NClay vs CClay" src="../_images/NClay_vs_CClay.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 104 </span><span class="caption-text">Diagram of number of clay particles per liter as a function of the clay concentration. Note that even 1 NTU water has millions of primary particles per liter.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
-<p>The next step is to calculate the separation distance between the clay particles over this range of clay concentrations using Equation <a class="reference internal" href="#equation-eq-spacing-of-diameter">(435)</a>.</p>
+<p>The next step is to calculate the separation distance between the clay particles over this range of clay concentrations using Equation <a class="reference internal" href="#equation-eq-spacing-of-diameter">(436)</a>.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=53IFiKIAsZdK&amp;line=9&amp;uniqifier=1">The code to generate this graph can be found here</a></p>
 <div class="figure align-center" id="id13">
 <span id="figure-lambdaclay-vs-cclay"></span><a class="reference internal image-reference" href="../_images/LambdaClay_vs_CClay.png"><img alt="LambdaClay vs CClay" src="../_images/LambdaClay_vs_CClay.png" style="width: 400px;" /></a>
@@ -412,7 +412,7 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 <p class="caption"><span class="caption-number">Fig. 106 </span><span class="caption-text">The inner viscous length scale is approximately 3 to 10 mm for velocity gradients that are typically used in flocculators. Clay separation distances are smaller than the inner viscous length scale and thus viscous shear dominates particle collisions in flocculation.</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 <p>By comparing <a class="reference internal" href="#figure-lambdaclay-vs-cclay"><span class="std std-numref">Fig. 105</span></a> and <a class="reference internal" href="#figure-innerviscous-vs-g"><span class="std std-numref">Fig. 106</span></a> it is apparent that the particle separation distances commonly found in surface water treatment plants are much smaller than the inner viscous length scale for all practical flocculation velocity gradients. Thus viscosity will dominate the flocculation process. This key insight reveals why turbulent flow flocculators have been designed using the dimensionless grouping <span class="math notranslate nohighlight">\(G \theta\)</span> which is fundamentally <span class="math notranslate nohighlight">\(\sqrt\frac{\epsilon}{\nu} \theta\)</span>. Given that flocculation is viscous dominated implies that the flocculation process will slow down as the temperature increases and the viscosity increases.</p>
-<p>The flocculation model (see Equation <a class="reference internal" href="Floc_Model.html#equation-cplamint">(466)</a>) reveals that the velocity gradient multiplied by the residence time in the flocculator will determine the final spacing between the primary particles. Our goal is to maximize the spacing between particles and thus to minimize the number of particles and potential pathogens in our drinking water.</p>
+<p>The flocculation model (see Equation <a class="reference internal" href="Floc_Model.html#equation-cplamint">(467)</a>) reveals that the velocity gradient multiplied by the residence time in the flocculator will determine the final spacing between the primary particles. Our goal is to maximize the spacing between particles and thus to minimize the number of particles and potential pathogens in our drinking water.</p>
 <p>There are diminishing returns on investment in larger flocculators to produce cleaner water because the time between collisions increases as the primary particles are spaced further apart. Eventually other processes  including fluidized floc filters (floc filters), plate settlers, and sand-floc filter (stacked rapid sand filter) are able to reduce the primary particle concentration at a lower cost.</p>
 </div>
 <div class="section" id="collision-potential-g-cs-theta-and-energy-dissipation-rate-varepsilon">
@@ -420,13 +420,13 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 <p>Collision potential <span class="math notranslate nohighlight">\((G_{CS} \theta)\)</span> represents the number of potential particle collisions in a volume of fluid. It is a <em>dimensionless</em> parameter which is a logical design parameter for flocculators; large <span class="math notranslate nohighlight">\(G_{CS} \theta\)</span> values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). AguaClara flocculators usually aim for a collision potential of <span class="math notranslate nohighlight">\((G_{CS} \theta) = 37,000\)</span>, which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying <span class="math notranslate nohighlight">\(G_{CS}\)</span>, a parameter for average fluid shear with units of <span class="math notranslate nohighlight">\(\frac{1}{[T]}\)</span>, and <span class="math notranslate nohighlight">\(\theta\)</span> , the residence time of water in the flocculator, with units of :<span class="math notranslate nohighlight">\([T]\)</span> . <span class="math notranslate nohighlight">\(\theta\)</span> is intuitive to measure, calculate, and understand. <span class="math notranslate nohighlight">\(G_{CS}\)</span> is a bit more difficult.</p>
 <p>In any control volume or reactor, the total energy dissipated is equal to the mechanical energy that is converted to heat, <span class="math notranslate nohighlight">\(g h_L\)</span>. The amount of time required to dissipate that energy is the residence time of the water in the reactor, <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-edr-of-headloss">
-<span class="eqno">(436)<a class="headerlink" href="#equation-edr-of-headloss" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = \frac{g h_L}{\theta}\]</div>
+<span class="eqno">(437)<a class="headerlink" href="#equation-edr-of-headloss" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = \frac{g h_L}{\theta}\]</div>
 <p>Note that the equation above is for <span class="math notranslate nohighlight">\(\bar \varepsilon\)</span>, not <span class="math notranslate nohighlight">\(\varepsilon\)</span>. Since the head loss term we are using, <span class="math notranslate nohighlight">\(h_L\)</span>, occurs over the entire reactor, it can only be used to find an average energy dissipation rate for the entire reactor. Combining the equations above, <span class="math notranslate nohighlight">\(G = \sqrt{\frac{\varepsilon}{\nu}}\)</span> and <span class="math notranslate nohighlight">\(\bar \varepsilon = \frac{g h_L}{\theta}\)</span>, we can get an equation for <span class="math notranslate nohighlight">\(G_{CS}\)</span> in terms of easily measureable parameters:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-1">
-<span class="eqno">(437)<a class="headerlink" href="#equation-flocculation-floc-intro-1" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{g h_L}{\nu \theta}}\]</div>
+<span class="eqno">(438)<a class="headerlink" href="#equation-flocculation-floc-intro-1" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{g h_L}{\nu \theta}}\]</div>
 <p>We can use this to obtain a final equation for collision potential of a reactor:</p>
 <div class="math notranslate nohighlight" id="equation-gtheta-of-hl">
-<span class="eqno">(438)<a class="headerlink" href="#equation-gtheta-of-hl" title="Permalink to this equation">¶</a></span>\[G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}\]</div>
+<span class="eqno">(439)<a class="headerlink" href="#equation-gtheta-of-hl" title="Permalink to this equation">¶</a></span>\[G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}\]</div>
 <p><strong>Note:</strong> When we say <span class="math notranslate nohighlight">\(G \theta\)</span> we are almost always referring to <span class="math notranslate nohighlight">\(G_{CS} \theta\)</span>.</p>
 </div>
 <div class="section" id="generating-head-loss-with-baffles">
@@ -459,10 +459,10 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 </div>
 <p>We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or <span class="math notranslate nohighlight">\(A_{contracted} = \Pi_{vc}^{baffle} A_{expanded}\)</span>. Through the <cite>:ref:`third form of the minor loss equation &lt;heading_minor_losses&gt;</cite>, <span class="math notranslate nohighlight">\(h_e = K \frac{\bar v_{out}^2}{2g}\)</span> and its definition of the minor loss coefficient, <span class="math notranslate nohighlight">\(K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2\)</span>, we can determine the minimum minor loss coefficient for flow around a single baffle:</p>
 <div class="math notranslate nohighlight" id="equation-k-baffle-min">
-<span class="eqno">(439)<a class="headerlink" href="#equation-k-baffle-min" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}K_{baffle_{min}} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2\\= \left( \frac{1}{\Pi_{vc}^{baffle}} -1 \right)^2\\
+<span class="eqno">(440)<a class="headerlink" href="#equation-k-baffle-min" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}K_{baffle_{min}} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2\\= \left( \frac{1}{\Pi_{vc}^{baffle}} -1 \right)^2\\
 = \left( \frac{1}{0.384} -1 \right)^2\\\color{red} {= 2.56}\end{aligned}\end{align} \]</div>
 <p>This <span class="math notranslate nohighlight">\(K_{baffle_{min}}\)</span> has been used to design flocculators in AguaClara plants until 2021. The plant at Gracias revealed that the observed head loss was greater than predicted.  <a class="reference external" href="https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators">This paper by Haarhoff in 1998</a>  (DOI: 10.2166/aqua.1998.20), the <span class="math notranslate nohighlight">\(K_{baffle}\)</span> values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a <span class="math notranslate nohighlight">\(K_{baffle}\)</span> value between <span class="math notranslate nohighlight">\(2.5\)</span> and <span class="math notranslate nohighlight">\(4\)</span>.</p>
-<p>Equation <a class="reference internal" href="#equation-k-baffle-min">(439)</a> doesn’t account for the fact that for a series of baffles (or flow contractions) the flow might not be able to fully expand before entering the next baffle (or contraction). The distance required for the contracted flow to expand can be estimated from jet equations (see section on <a class="reference internal" href="Floc_Derivations.html#heading-baffle-loss-coefficient"><span class="std std-ref">Baffle Minor Loss Coefficient</span></a> for an estimate of how the minor loss coefficient increases when the flow doesn’t fully expand).</p>
+<p>Equation <a class="reference internal" href="#equation-k-baffle-min">(440)</a> doesn’t account for the fact that for a series of baffles (or flow contractions) the flow might not be able to fully expand before entering the next baffle (or contraction). The distance required for the contracted flow to expand can be estimated from jet equations (see section on <a class="reference internal" href="Floc_Derivations.html#heading-baffle-loss-coefficient"><span class="std std-ref">Baffle Minor Loss Coefficient</span></a> for an estimate of how the minor loss coefficient increases when the flow doesn’t fully expand).</p>
 </div>
 </div>
 <div class="section" id="flocculator-efficiency">
@@ -474,30 +474,30 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 </ol>
 <p>Fortunately for us, both problems can be quantified with a single ratio:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-2">
-<span class="eqno">(440)<a class="headerlink" href="#equation-flocculation-floc-intro-2" title="Permalink to this equation">¶</a></span>\[\Pi_{G_{CS}}^{G_{Max}} = \frac{G_{Max}}{G_{CS}}\]</div>
+<span class="eqno">(441)<a class="headerlink" href="#equation-flocculation-floc-intro-2" title="Permalink to this equation">¶</a></span>\[\Pi_{G_{CS}}^{G_{Max}} = \frac{G_{Max}}{G_{CS}}\]</div>
 <p>High values of <span class="math notranslate nohighlight">\(\Pi_{G_{CS}}^{G_{Max}}\)</span> occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local <span class="math notranslate nohighlight">\(G\)</span> values, then <span class="math notranslate nohighlight">\(G_{Max}\)</span> becomes large. If the flocculator has a lot of dead space, then <span class="math notranslate nohighlight">\(G_{CS}\)</span> becomes small. Either way, <span class="math notranslate nohighlight">\(\Pi_{G_{CS}}^{G_{Max}}\)</span> becomes larger.</p>
 <p><strong>Note:</strong> Recall the relationship between <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span> : <span class="math notranslate nohighlight">\(G = \sqrt{ \frac{\varepsilon}{\nu} }\)</span>. From this relationship, we can see that <span class="math notranslate nohighlight">\(G \propto \sqrt{\varepsilon}\)</span>. Thus, by defining  <span class="math notranslate nohighlight">\(\Pi_{G_{CS}}^{G_{Max}}\)</span>, we can also define a ratio for Max to average energy dissipation rate:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-3">
-<span class="eqno">(441)<a class="headerlink" href="#equation-flocculation-floc-intro-3" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{G_{CS}}^{G_{Max}} \right)^2\]</div>
+<span class="eqno">(442)<a class="headerlink" href="#equation-flocculation-floc-intro-3" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{G_{CS}}^{G_{Max}} \right)^2\]</div>
 <p>Therefore, by making our <span class="math notranslate nohighlight">\(\Pi_{G_{CS}}^{G_{Max}}\)</span> as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. <a class="reference external" href="https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the">A paper by Haarhoff and van der Walt in 2001</a> (DOI: 10.2166/aqua.2001.0014) uses CFD to show that the minimum <span class="math notranslate nohighlight">\(\Pi_{G_{CS}}^{G_{Max}}\)</span> attainable in a hydraulic flocculator is <span class="math notranslate nohighlight">\(\Pi_{G_{CS}}^{G_{Max}} = \sqrt{2} \approx 1.4\)</span>, which means that <span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{G_{CS}}^{G_{Max}} \right)^2 \approx 2\)</span>. So how do we optimize an AguaClara flocculator to make sure <span class="math notranslate nohighlight">\(\Pi_{G_{CS}}^{G_{Max}} = \sqrt{2}\)</span>?</p>
 <p>We define and optimize a performance metric:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-4">
-<span class="eqno">(442)<a class="headerlink" href="#equation-flocculation-floc-intro-4" title="Permalink to this equation">¶</a></span>\[\frac{H_e}{S} = \Pi_{H_eS}\]</div>
+<span class="eqno">(443)<a class="headerlink" href="#equation-flocculation-floc-intro-4" title="Permalink to this equation">¶</a></span>\[\frac{H_e}{S} = \Pi_{H_eS}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(H_e\)</span> is the distance between flow expansions in the flocculator and <span class="math notranslate nohighlight">\(S\)</span> is the spacing between baffles. For now, <span class="math notranslate nohighlight">\(H_e\)</span> is approximated as the height of water in the flocculator.</p>
 <p>Since <span class="math notranslate nohighlight">\(G_{Max}\)</span> is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on <span class="math notranslate nohighlight">\(\frac{H_e}{S}\)</span>. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length. If this is confusing, refer to the equation and image below:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-5">
-<span class="eqno">(443)<a class="headerlink" href="#equation-flocculation-floc-intro-5" title="Permalink to this equation">¶</a></span>\[\Pi_{PlaneJet_{exp}}x = D - D_{cp}\]</div>
+<span class="eqno">(444)<a class="headerlink" href="#equation-flocculation-floc-intro-5" title="Permalink to this equation">¶</a></span>\[\Pi_{PlaneJet_{exp}}x = D - D_{cp}\]</div>
 <div class="figure align-center" id="id19">
 <span id="figure-jet-expansion-flocculator"></span><a class="reference internal image-reference" href="../_images/Jet_expansion_flocculator.jpg"><img alt="jet expansion in the flocculator" src="../_images/Jet_expansion_flocculator.jpg" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 111 </span><span class="caption-text">A turbulent jet expands in width by one unit for every 10 units downstream.</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
 </div>
 <p>Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing <span class="math notranslate nohighlight">\(S\)</span>. We do this by substituting  <span class="math notranslate nohighlight">\(D_{cp} = (0.384 S)\)</span> along with <span class="math notranslate nohighlight">\(D = S\)</span> to approximate how much distance, <span class="math notranslate nohighlight">\(x = H_e\)</span>, the contracted flow has to cover.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-6">
-<span class="eqno">(444)<a class="headerlink" href="#equation-flocculation-floc-intro-6" title="Permalink to this equation">¶</a></span>\[\Pi_{PlaneJet_{exp}} H_e = S - (0.384 S)\]</div>
+<span class="eqno">(445)<a class="headerlink" href="#equation-flocculation-floc-intro-6" title="Permalink to this equation">¶</a></span>\[\Pi_{PlaneJet_{exp}} H_e = S - (0.384 S)\]</div>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-7">
-<span class="eqno">(445)<a class="headerlink" href="#equation-flocculation-floc-intro-7" title="Permalink to this equation">¶</a></span>\[\Pi_{PlaneJet_{exp}} H_e= 0.616 S\]</div>
+<span class="eqno">(446)<a class="headerlink" href="#equation-flocculation-floc-intro-7" title="Permalink to this equation">¶</a></span>\[\Pi_{PlaneJet_{exp}} H_e= 0.616 S\]</div>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-8">
-<span class="eqno">(446)<a class="headerlink" href="#equation-flocculation-floc-intro-8" title="Permalink to this equation">¶</a></span>\[\Pi_{H_eS_{Max}} = \frac{H_e}{S} = 5.3\]</div>
+<span class="eqno">(447)<a class="headerlink" href="#equation-flocculation-floc-intro-8" title="Permalink to this equation">¶</a></span>\[\Pi_{H_eS_{Max}} = \frac{H_e}{S} = 5.3\]</div>
 <p>This is the highest allowable <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> that we can design while ensuring that there is no dead space in the flocculator.</p>
 <div class="figure align-center" id="id20">
 <span id="figure-cfd-baffle-image"></span><a class="reference internal image-reference" href="../_images/CFD_baffle_image.jpg"><img alt="CFD baffle image" src="../_images/CFD_baffle_image.jpg" style="width: 50%;" /></a>
@@ -521,10 +521,10 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 </div>
 <p>Thus, <span class="math notranslate nohighlight">\(\Pi_{H_eS_{Min}}\)</span> should be at least twice the slot width ratio, <span class="math notranslate nohighlight">\(\Pi_{H_eS_{Min}} = 2\)</span>. Historically, AguaClara plants have been designed using <span class="math notranslate nohighlight">\(\Pi_{H_eS_{Min}} = 3\)</span>. This adds a safety factor of sorts, ensuring that the flow does not short-circuit through the flocculator and also allowing more space for the flow to expand after each contraction.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-9">
-<span class="eqno">(447)<a class="headerlink" href="#equation-flocculation-floc-intro-9" title="Permalink to this equation">¶</a></span>\[\Pi_{H_eS_{Min}} = \frac{H_e}{S} = 3\]</div>
+<span class="eqno">(448)<a class="headerlink" href="#equation-flocculation-floc-intro-9" title="Permalink to this equation">¶</a></span>\[\Pi_{H_eS_{Min}} = \frac{H_e}{S} = 3\]</div>
 <p>Finally, we describe a range of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> that we can use to design an AguaClara Horizontal-Vertical flocculator:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-10">
-<span class="eqno">(448)<a class="headerlink" href="#equation-flocculation-floc-intro-10" title="Permalink to this equation">¶</a></span>\[3 &lt; \Pi_{H_eS} &lt; 6\]</div>
+<span class="eqno">(449)<a class="headerlink" href="#equation-flocculation-floc-intro-10" title="Permalink to this equation">¶</a></span>\[3 &lt; \Pi_{H_eS} &lt; 6\]</div>
 <div class="section" id="obstacles">
 <h4>Obstacles<a class="headerlink" href="#obstacles" title="Permalink to this headline">¶</a></h4>
 <p>Knowing that efficient flocculators require an <span class="math notranslate nohighlight">\(\frac{H_e}{S}\)</span> ratio that lies between 3 and 6, we need to understand how that impacts the flocculator design. Keeping <span class="math notranslate nohighlight">\(\frac{H_e}{S}\)</span> between two specific values limits the options for baffle spacing and quantity, due to the flocculator having certain size constraints before beginning the design of the baffles. This limitation places an upper limit on the amount of head loss that a baffled flocculator can generate, since the number of baffles is limited by space and baffles are what cause head loss. This is unfortunate, it means that baffled flocculators under certain size specifications can’t be designed to generate certain values of <span class="math notranslate nohighlight">\(\bar \varepsilon\)</span> and <span class="math notranslate nohighlight">\(G_{CS}\)</span> <em>while remaining efficient and maintaining</em> <span class="math notranslate nohighlight">\(3 &lt; \Pi_{H_eS} &lt; 6\)</span>. This problem only arises for low flow plants, usually below <span class="math notranslate nohighlight">\(Q_{Plant} = 20 {\rm \frac{L}{s}}\)</span>.</p>
@@ -546,17 +546,17 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 <p>The geometry of hydraulic flocculators changes rather dramatically as the flow rate increases from a fraction of a L/s up to thousands of L/s. The transition from one geometry to another is dependent on economic, fabrication, and integration with the rest of the plant design. Thus the transition flows will evolve as design optimization progresses. Flows between 0.5 L/s and 20 L/s are efficiently handled by a Vertical-Horizontal flow flocculator as shown in <a class="reference internal" href="#figure-vhflocculator"><span class="std std-numref">Fig. 118</span></a>.</p>
 <div class="figure align-center" id="id26">
 <span id="figure-vhflocculator"></span><a class="reference internal image-reference" href="../_images/VHflocculator.png"><img alt="vertical - horizontal flocculator" src="../_images/VHflocculator.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 118 </span><span class="caption-text">The vertical-horizontal flocculator has vertical flow in the channels and horizontal flow between baffles. This design is for 1 L/s with 40 cm of head loss.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 118 </span><span class="caption-text">The vertical-horizontal flocculator has vertical flow in the channels and horizontal flow between baffles. This design is for 6 L/s with 23.5 cm of head loss.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </div>
 <p>As the flows increase the spacing between baffles grows larger and a vertical-horizontal flocculator would need to be very deep in order to accommodate a reasonable number of baffle spaces per channel. The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s as shown in <a class="reference internal" href="#figure-hvflocculator"><span class="std std-numref">Fig. 119</span></a>.</p>
 <div class="figure align-center" id="id27">
 <span id="figure-hvflocculator"></span><a class="reference internal image-reference" href="../_images/HVflocculator.png"><img alt="horizontal-vertical flocculator" src="../_images/HVflocculator.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 119 </span><span class="caption-text">The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles.This design is for 80 L/s with 1 m wide channels and 40 cm of head loss.</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 119 </span><span class="caption-text">The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles.This design is for 60 L/s with 1 m wide channels and 25 cm of head loss.</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
 </div>
-<p>As the flow increases above 200 L/s the required depth to accommodate a reasonable H/S ratio will exceed the desired depth (from a construction and maintenance perspective) and the optimal design will switch to a horizontal-horizontal flocculator  as shown in <a class="reference internal" href="#figure-hhflocculator"><span class="std std-numref">Fig. 120</span></a>.</p>
+<p>As the flow increases above 200 L/s the required depth to accommodate a reasonable H/S ratio will exceed the desired depth (from a construction and maintenance perspective) and the optimal design will switch to a horizontal-horizontal flocculator as shown in <a class="reference internal" href="#figure-hhflocculator"><span class="std std-numref">Fig. 120</span></a>.</p>
 <div class="figure align-center" id="id28">
 <span id="figure-hhflocculator"></span><a class="reference internal image-reference" href="../_images/HHflocculator.png"><img alt="horizontal-vertical flocculator" src="../_images/HHflocculator.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 120 </span><span class="caption-text">The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles. This design has 10 flocculators working in parallel to treat 20 kL/s. The channels are 4 m deep and there is 40 cm head loss.</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 120 </span><span class="caption-text">The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles. This design is for a 500 L/s flow with 29 cm of head loss. The channels are 2.6 m deep.</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>

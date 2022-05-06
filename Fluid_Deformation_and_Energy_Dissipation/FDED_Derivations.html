@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Fluid Deformation and Energy Dissipation Derivations &mdash; AguaClara Textbook v1.3.27 documentation</title>
+  <title>Fluid Deformation and Energy Dissipation Derivations &mdash; AguaClara Textbook v1.3.28 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.27
+                v1.3.28
               </div>
             
           
@@ -815,6 +815,10 @@ to obtain</p>
 <p>then the jet thickness can be obtained.</p>
 <div class="math notranslate nohighlight" id="equation-planejet-s-of-q">
 <span class="eqno">(216)<a class="headerlink" href="#equation-planejet-s-of-q" title="Permalink to this equation">¶</a></span>\[ S_{Jet_{Min}}= \left(\frac{\Pi_{JetPlane} q^3}{\nu G_{Max}^2}\right)^\frac{1}{4}\]</div>
+<p>In that case the maximum jet velocity is give by</p>
+<div class="math notranslate nohighlight" id="equation-planejet-v-max-of-q">
+<span class="eqno">(217)<a class="headerlink" href="#equation-planejet-v-max-of-q" title="Permalink to this equation">¶</a></span>\[ \bar v_{Jet_{max}} = \left(\frac{q\nu G_{Max}^2}{\Pi_{JetPlane} }\right)^\frac{1}{4}\]</div>
+<p>Equation <a class="reference internal" href="#equation-planejet-v-max-of-q">(217)</a> defines the maximum velocity exiting the diffusers for the inlet manifold in the clarifier.</p>
 </div>
 <div class="section" id="behind-a-flat-plate">
 <span id="heading-behind-a-flat-plate"></span><h3>Behind a Flat Plate<a class="headerlink" href="#behind-a-flat-plate" title="Permalink to this headline">¶</a></h3>
@@ -826,12 +830,12 @@ to obtain</p>
 <p class="caption"><span class="caption-number">Fig. 46 </span><span class="caption-text">The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of <span class="math notranslate nohighlight">\(1 m/s\)</span>. The maximum energy dissipation rate was approximately <span class="math notranslate nohighlight">\(0.04 W/kg\)</span>.</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-88">
-<span class="eqno">(217)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-88" title="Permalink to this equation">¶</a></span>\[\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\]</div>
+<span class="eqno">(218)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-88" title="Permalink to this equation">¶</a></span>\[\varepsilon _{Max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\]</div>
 <p>The maximum velocity gradient is thus</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-89">
-<span class="eqno">(218)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-89" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}\]</div>
+<span class="eqno">(219)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-89" title="Permalink to this equation">¶</a></span>\[G_{Max} = \bar v\sqrt{\frac{\Pi_{Plate} \bar v}{\nu W_{Plate}}}\]</div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-90">
-<span class="eqno">(219)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-90" title="Permalink to this equation">¶</a></span>\[\Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}\]</div>
+<span class="eqno">(220)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-90" title="Permalink to this equation">¶</a></span>\[\Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)}{\bar v^3}\]</div>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=juEleCKZLNuk">here</a></p>
 <p>The flat plate <span class="math notranslate nohighlight">\(\Pi_{Plate}\)</span> has a value of 0.04 which is identical to our estimate for <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span>.</p>
 </div>
@@ -839,40 +843,40 @@ to obtain</p>
 <h3>Flow expansion in a baffled flocculators<a class="headerlink" href="#flow-expansion-in-a-baffled-flocculators" title="Permalink to this headline">¶</a></h3>
 <p>The flow expansion in a baffled flocculator occurs after the flow bends around the end of a baffle. The flow contracts against the baffle that defines the outside of the bend and thus one side of the flow is unable to expand because it is already against the baffle. This results in lower energy dissipation rate than would be obtained for a free jet. The first approximation would be that the baffle can be treated as the center of a virtual jet that is twice as large as the real jet. Alternately the energy dissipation can be neflected on the side of the jet that is against the baffle. Either assumption results half of the energy dissipation rate that would be expected for a similar dimensioned free jet.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-91">
-<span class="eqno">(220)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-91" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} =  \frac{1}{2} \Pi_{JetPlane} = 0.02\]</div>
+<span class="eqno">(221)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-91" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} =  \frac{1}{2} \Pi_{JetPlane} = 0.02\]</div>
 <p>An alternate estimate can be obtained by applying conservation of energy to the control volume defined by one baffle space in a baffled flocculator. The ratio of the maximum energy dissipation rate, <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to the average energy dissipation rate, <span class="math notranslate nohighlight">\({\bar \varepsilon}\)</span> is given by</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-92">
-<span class="eqno">(221)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-92" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}\]</div>
+<span class="eqno">(222)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-92" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}\]</div>
 <p>The maximum energy dissipation rate is defined using the same form of the equation as in the previous sections.</p>
 <div class="math notranslate nohighlight" id="equation-edr-flocbaffle">
-<span class="eqno">(222)<a class="headerlink" href="#equation-edr-flocbaffle" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{FlocBaffle}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
+<span class="eqno">(223)<a class="headerlink" href="#equation-edr-flocbaffle" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max} = \Pi_{FlocBaffle}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
 <p>An equivalent relationship can be defined for the velocity gradient by using Equation <a class="reference internal" href="#equation-g-camp-stein">(104)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-g-flocbaffle">
-<span class="eqno">(223)<a class="headerlink" href="#equation-eq-g-flocbaffle" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{FlocBaffle} \bar v_{Jet}}{\nu S_{Jet}}}\]</div>
+<span class="eqno">(224)<a class="headerlink" href="#equation-eq-g-flocbaffle" title="Permalink to this equation">¶</a></span>\[ G_{Max} = \bar v_{Jet}\sqrt{\frac{\Pi_{FlocBaffle} \bar v_{Jet}}{\nu S_{Jet}}}\]</div>
 <p>The relationship between velocity and the flow dimensions in a baffle are given by</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-93">
-<span class="eqno">(224)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-93" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{SW}\]</div>
+<span class="eqno">(225)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-93" title="Permalink to this equation">¶</a></span>\[\bar v = \frac{Q}{SW}\]</div>
 <p>where Q is the flow rate, S is the distance between baffles, and W is the width of the flow. The velocity of the jet (the contracted flow) is obtained from continuity.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-94">
-<span class="eqno">(225)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-94" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}\]</div>
+<span class="eqno">(226)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-94" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet} = \frac{\bar v}{\Pi_{VCBaffle}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Pi_{VCBaffle}\)</span> is the <em>vena contracta</em> for the 180° bend.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-95">
-<span class="eqno">(226)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-95" title="Permalink to this equation">¶</a></span>\[S_{Jet} = S \Pi_{VCBaffle}\]</div>
+<span class="eqno">(227)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-95" title="Permalink to this equation">¶</a></span>\[S_{Jet} = S \Pi_{VCBaffle}\]</div>
 <p>The average hydraulic residence time for the fluid between two baffles is given by</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-96">
-<span class="eqno">(227)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-96" title="Permalink to this equation">¶</a></span>\[\theta_B = \frac{H}{\bar v}\]</div>
+<span class="eqno">(228)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-96" title="Permalink to this equation">¶</a></span>\[\theta_B = \frac{H}{\bar v}\]</div>
 <p>where <span class="math notranslate nohighlight">\(H\)</span> is the depth of water. Substituting into the equation for <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to get the equation in terms of the average velocity <span class="math notranslate nohighlight">\(\bar v\)</span> and flow dimension <span class="math notranslate nohighlight">\(S\)</span></p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-97">
-<span class="eqno">(228)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-97" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max}= \frac{\Pi_{FlocBaffle}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3\]</div>
+<span class="eqno">(229)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-97" title="Permalink to this equation">¶</a></span>\[\varepsilon_{Max}= \frac{\Pi_{FlocBaffle}}{S \Pi_{VCBaffle}} \left( \frac{ \bar v}{\Pi_{VCBaffle}} \right)^3\]</div>
 <p>From the control volume analysis the average energy dissipation rate is</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-98">
-<span class="eqno">(229)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-98" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}\]</div>
+<span class="eqno">(230)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-98" title="Permalink to this equation">¶</a></span>\[\bar \varepsilon = K \frac{\bar v^2}{2} \frac{1}{\theta_B} = \frac{K}{2} \frac{\bar v^3}{H_e}\]</div>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is the minor loss coefficient for flow around the end of a baffle with a <span class="math notranslate nohighlight">\(180^\circ\)</span> turn.</p>
 <p>Substitute the values for <span class="math notranslate nohighlight">\(\bar \varepsilon\)</span> and
 <span class="math notranslate nohighlight">\(\varepsilon_{Max}\)</span> to obtain the ratio,
 <span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-99">
-<span class="eqno">(230)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-99" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{FlocBaffle}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\]</div>
+<span class="eqno">(231)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-99" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \frac{\Pi_{FlocBaffle}}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K S}\]</div>
 <p><span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}\)</span> has a value of 2 for
 <span class="math notranslate nohighlight">\(H_e/S &lt;5\)</span> (CFD analysis and <a class="reference external" href="https://search-proquest-com.proxy.library.cornell.edu/docview/1943098053?accountid=10267">Haarhoff, 2001</a>)
 The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</span> is at 5 (from CFD analysis, our weakest assumption).</p>
@@ -881,11 +885,11 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
 <span class="math notranslate nohighlight">\(H_e/S&gt;5\)</span>. Thus we can solve for <span class="math notranslate nohighlight">\(\Pi_{FlocBaffle}\)</span> at
 <span class="math notranslate nohighlight">\(H_e/S=5\)</span></p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-100">
-<span class="eqno">(231)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-100" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} \approx \left(
+<span class="eqno">(232)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-100" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} \approx \left(
 \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} \Pi_{VCBaffle}^4 \frac{K}{2} \frac{S}{H_e}
 \right)\]</div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-101">
-<span class="eqno">(232)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-101" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} \approx 0.0124\]</div>
+<span class="eqno">(233)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-101" title="Permalink to this equation">¶</a></span>\[\Pi_{FlocBaffle} \approx 0.0124\]</div>
 <p>This value for <span class="math notranslate nohighlight">\(\Pi_{FlocBaffle}\)</span> is lower than we estimated based on 50% of the <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span>. Additional research is needed to measure <span class="math notranslate nohighlight">\(\Pi_{FlocBaffle}\)</span>.</p>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=WQtdrsP9egHB">here</a></p>
 </div>
