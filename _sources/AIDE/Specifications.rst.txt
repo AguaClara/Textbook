@@ -283,14 +283,23 @@ Clarifier |Clarifier|
 
 For more detailed information see :ref:`Clarifier Design <title_Clarifier_Design>`. The clarifier must be designed based on the coldest water temperature and based on the lowest density primary particles that will need to be captured. Surface waters with high concentrations of dissolved organic matter and low concentrations of suspended solids produce low density flocs and thus the velocity gradient in the inlet manifold and jet reverser must be reduced.
 
+.. _figure_clarifierElevation:
+
+.. figure:: ../Images/clarifierElevation.png
+  :align: center
+  :width: 500px
+  :alt:  Clarifier Elevation view
+
+  Elevation view of a clarifier bay showing location of the floc filter, plate settlers, and floc hopper.
+
 Design Goals
 ------------
 
 The high-rate, vertical flow Clarifier is designed with the following goals:
 
-A. To deliver flocs to the clarifier bay without breaking them into pieces with terminal velocities below the capture velocity of the plate settlers.
+A. To deliver flocs to the clarifier bay without breaking them into pieces with terminal velocities below the capture velocity of the plate settlers. This sets the maximum velocity gradient for the transfer of the flocs from the flocculator to the floc filter in the clarifier bay. The maximum velocity gradient shall be less than 250 Hz and lower values will be required for raw waters with high concentrations of dissolved organic matter.
 
-#. To produce a stable floc filter (fluidized suspension of flocs) that is a primary filter that reduces the settled water turbidity.
+#. To produce a stable floc filter (fluidized suspension of flocs) that reduces the clarified water turbidity.
 
 #. To provide evenly distributed low-velocity flow through the plate settlers.
 
@@ -326,40 +335,59 @@ Inlet Manifold
 
 Flocculated water enters a pipe in the bottom of the inlet channel. Water flows down the pipe, through a 90-degree elbow, into the inlet manifold. Water exits the inlet manifold through a series of orifices and diffusers in the bottom of the pipe. The end of the inlet manifold is capped. The minimum diameter of the inlet manifold is set by the velocity gradient downstream of the 90-degree elbow (see Equation :eq:`D_pipe_min_of_K_and_jet_G_max`).
 
+Achieving reasonable flow distribution between diffusers may require a flow equalization chamber inside the inlet manifold (see :numref:`figure_2stageInletManifold`).
+
 Diffusers
 ---------
 
-The orifices and diffusers point down to the bottom of the clarifier bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. Diffusers are designed **to introduce 1 cm of head loss to uniformly increase the head loss through all flow paths in the sedimentation tank.**
+The orifices and diffusers point down to the bottom of the clarifier bay and extend along the length of the pipe at regular intervals to ensure that water is evenly distributed within the bay. Diffusers are designed to ensure that the jet exiting the jet reverser has a maximum velocity gradient that meets the same design constraint as the inlet manifold (see Equation :eq:`planejet_v_max_of_q`).
 
-Diffusers are shaped so that one end is a circular pipe that fits into the influent manifold orifice, and the other end is deformed to the shape of a thin rectangle. This deformation is done to create a line jet entering the jet reverser in the bottom of the clarifier bay.
+Diffusers are shaped so that one end is molded to be a reduced diameter that fits into the influent manifold port, and the other end is deformed to the shape of a rectangle. This deformation is done to create a line jet entering the jet reverser in the bottom of the clarifier bay and to enhance flow distribution by maximizing the jet velocity given the constraints of Equation :eq:`planejet_v_max_of_q`.
+
+.. _figure_diffuser_dimensions:
+
+.. figure:: ../Images/diffuser_dimensions.png
+   :width: 500px
+   :align: center
+   :alt: Diffuser dimension definition
+
+   Dimensions of the diffusers.
 
 Jet Reverser
 ------------
 
-The jet reverser consists of a longitudinally-cut half-pipe that is laid in the bottom of the bay. It functions as a way to keep flocs suspended in the sedimentation tank by ensuring that any sludge that settles will be propelled back up by the force of the diffuser jet.
+The jet reverser consists of a longitudinally-cut half-pipe that is laid in the bottom of the bay (see :numref:`figure_clarifierEndView`). It functions as a way to keep flocs suspended in the sedimentation tank by ensuring that any sludge that settles will be propelled back up by the force of the diffuser jet.
 
 The diffusers are offset from the jet reverser centerline. This is intentionally done to promote the resuspension of flocs, which form a floc filter for primary filtration.
 
+.. _figure_clarifierEndView:
+
+.. figure:: ../Images/clarifierEndView.png
+   :width: 500px
+   :align: center
+   :alt: Clarifier showing jet reverser
+
+   End view of a clarifier bay showing the sloped bottom, inlet manifold, diffusers, and jet reverser. The diffusers direct a jet of water into one side of the jet reverser.
 
 Floc Filter (Floc Blanket)
 --------------------------
 
 Floc filters significantly improve the performance of a clarifier and reduce settled water.
 
-A. The line jet from the diffusers enters the jet reverser to force flow up through the clarifier bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the clarifier bay. The resuspended flocs form a fluidized bed which is called a floc filter. The bed is fluidized because flocs are kept in suspension by the upflowing water.
+A. The line jet from the diffusers enters the jet reverser to force flow up through the clarifier bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the clarifier bay. The resuspended flocs form a fluidized bed which is a floc filter. Small particles are captured by the flocs in the floc filter as the small particles flow into a floc.  The bed is fluidized because flocs are kept in suspension by the upflowing water.
 
-#. Clarifiers use an upflow velocity of 1 mm/s in the floc filter.
+#. Clarifiers use an upflow velocity of 1 mm/s in the floc filter. This velocity is measured  above the sloped bottom in the section of the clarifier bay with vertical walls.
 
 #. For a floc filter to form, a clarifier requires that:
 
-   1. All flocs are returned to the bottom of the clarifier bay.
+   1. The plate settlers capture small flocs and cause them to aggregate into larger flocs as they avalanche back into the floc filter zone.
 
-   #. All settled flocs are resuspended by incoming water.
+   #. All settled flocs are resuspended by the vertical jet of water exiting the jet reverser.
 
 Sloped Bottom Geometry
 ----------------------
 
-The clarifier bottom geometry prevents sludge accumulation while also ensuring good flow distribution. The slope on either side of the diffusers is at a 50 degree angle above horizontal. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can fall into the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the main clarifier bays.
+The clarifier bottom geometry (see :numref:`figure_clarifierEndView`) prevents sludge accumulation while also ensuring good flow distribution. The slope on either side of the diffusers is at a 50 degree angle above horizontal. The bottom geometry allows for smooth flow expansion to the entire plan view area of the bay, and ensures that all flocs that settle are transported to the jet reverser. The diffusers do not touch the bottom of the tank so that flocs on both sides of the diffuser can return to the jet reverser for resuspension. Thus, there is no accumulation of settled flocs in the main clarifier bays.
 
 Floc Hopper
 -----------
@@ -387,6 +415,15 @@ The plate settlers are made from clear polycarbonate sheets. The sheets are asse
    Plate angle, Self-cleaning requirement, Plate settler length, 60 deg
    Plate spacing, Clogging and floc rollup constraints, Plate settler length, 2.5 cm
    Plate settler length, "Upflow velocity, Capture velocity, Plate angle, Plate spacing ", Tank depth, Calculated for each plant
+
+.. _figure_plateSettlerModule:
+
+.. figure:: ../Images/plateSettlerModule.png
+   :width: 500px
+   :align: center
+   :alt: Plate settler module
+
+   Plate settler module assembled from polycarbonate sheets and PVC piping.
 
 Submerged Outlet Manifold
 ---------------------------
