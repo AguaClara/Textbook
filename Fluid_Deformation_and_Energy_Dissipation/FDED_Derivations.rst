@@ -1035,6 +1035,12 @@ then the jet thickness can be obtained.
 
    S_{Jet_{Min}}= \left(\frac{\Pi_{JetPlane} q^3}{\nu G_{Max}^2}\right)^\frac{1}{4}
 
+In that case the maximum jet velocity is give by
+
+.. math::
+  :label: planejet_v_max_of_q
+
+   \bar v_{Jet_{max}} = \left(\frac{q\nu G_{Max}^2}{\Pi_{JetPlane} }\right)^\frac{1}{4}
 
 .. _heading_Behind_a_flat_plate:
 

@@ -352,9 +352,9 @@ A. The line jet from the diffusers enters the jet reverser to force flow up thro
 
 #. For a floc filter to form, a clarifier requires that:
 
-   1. All flocs are returned to the bottom of the clarifier bay.
+   1. The plate settlers capture small flocs and cause them to aggregate into larger flocs as they avalanche back into the floc filter zone.
 
-   #. All settled flocs are resuspended by incoming water.
+   #. All settled flocs are resuspended by the vertical jet of water exiting the jet reverser.
 
 Sloped Bottom Geometry
 ----------------------
