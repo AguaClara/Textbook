@@ -305,7 +305,6 @@ The diffuser delivers water from the flow equalizer to the jet reverser. The cri
 .. _figure_diffuser_dimensions:
 
 .. figure:: ../Images/diffuser_dimensions.png
-   :target: https://youtu.be/xh9dTjWRoto
    :width: 500px
    :align: center
    :alt: Diffuser dimension definition

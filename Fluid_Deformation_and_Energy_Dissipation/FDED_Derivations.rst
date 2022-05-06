@@ -1042,6 +1042,8 @@ In that case the maximum jet velocity is give by
 
    \bar v_{Jet_{max}} = \left(\frac{q\nu G_{Max}^2}{\Pi_{JetPlane} }\right)^\frac{1}{4}
 
+Equation :eq:`planejet_v_max_of_q` defines the maximum velocity exiting the diffusers for the inlet manifold in the clarifier.
+
 .. _heading_Behind_a_flat_plate:
 
 Behind a Flat Plate
