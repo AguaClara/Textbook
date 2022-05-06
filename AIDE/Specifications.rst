@@ -380,7 +380,7 @@ A. The line jet from the diffusers enters the jet reverser to force flow up thro
 
 #. For a floc filter to form, a clarifier requires that:
 
-   1. The plate settlers capture small flocs and cause them to aggregate into larger flocs as they avalanche back into the floc filter zone.
+   1. The plate settlers capture small flocs and cause them to aggregate into larger flocs as they avalanche back into the floc filter zone. The increased terminal velocity of the larger flocs enables them to create a stable floc filter.
 
    #. All settled flocs are resuspended by the vertical jet of water exiting the jet reverser.
 
@@ -392,16 +392,34 @@ The clarifier bottom geometry (see :numref:`figure_clarifierEndView`) prevents s
 Floc Hopper
 -----------
 
-The floc hopper provides an opportunity for floc consolidation. The floc weir controls the depth of the floc filter because as the floc filter grows, it will eventually reach the top of the floc weir. Because flocs are more dense than water, the flocs “spill” over the edge of the floc weir which allows the floc filter to stay a constant height while sludge accumulates and consolidates in the floc hopper.
+The floc hopper (:numref:`figure_flocHopper`) provides an opportunity for floc consolidation. The floc weir controls the depth of the floc filter because as the floc filter grows, it will eventually reach the top of the floc weir. Because flocs are more dense than water, the flocs “spill” over the edge of the floc weir which allows the floc filter to stay a constant height while sludge accumulates and consolidates in the floc hopper.
 
 There is a manual valve at the drain of the floc hopper. Operators can open the floc hopper drain valve whenever they want to easily drain the sludge. The floc hopper allows for a self-cleaning clarifier. Operators only have to clean the clarifier once every three to six months because there is no stagnant accumulation of anoxic sludge.
+
+.. _figure_flocHopper:
+
+.. figure:: ../Images/flocHopper.png
+   :width: 400px
+   :align: center
+   :alt: Floc Hopper
+
+   The floc hopper is located beneath the inlet and outlet channels. Flocs enter the hopper by flowing over the floc weir. Sludge is drained from the bottom of the hopper.
 
 Plate Settlers
 --------------
 
 After flowing through the floc filter, flocs reach the plate settlers. Plate settlers are sloped surfaces that provide additional settling area for flocs, thereby increasing the effective settling area of the clarifier without increasing the plan view area. AguaClara plate settlers are sloped at 60 degrees. The spacing between plates is 2.5 cm.
 
-The plate settlers are made from clear polycarbonate sheets. The sheets are assembled in modules. The modules are light enough to be removed from the clarifier by hand. The plate settler modules are supported by ledges along the clarifier bay walls and by a PVC pipe frame.  
+The plate settlers are made from clear polycarbonate sheets. The sheets are assembled in modules. The modules are light enough to be removed from the clarifier by hand. The plate settler modules are supported by ledges along the clarifier bay walls and by a PVC pipe frame.
+
+.. _figure_plateSettlerModule:
+
+.. figure:: ../Images/plateSettlerModule.png
+   :width: 300px
+   :align: center
+   :alt: Plate settler module
+
+   Plate settler module assembled from polycarbonate sheets and PVC piping. 
 
 
 .. _table_Plate_Settler:
@@ -416,43 +434,30 @@ The plate settlers are made from clear polycarbonate sheets. The sheets are asse
    Plate spacing, Clogging and floc rollup constraints, Plate settler length, 2.5 cm
    Plate settler length, "Upflow velocity, Capture velocity, Plate angle, Plate spacing ", Tank depth, Calculated for each plant
 
-.. _figure_plateSettlerModule:
-
-.. figure:: ../Images/plateSettlerModule.png
-   :width: 500px
-   :align: center
-   :alt: Plate settler module
-
-   Plate settler module assembled from polycarbonate sheets and PVC piping.
 
 Submerged Outlet Manifold
 ---------------------------
 
 The submerged outlet manifold, sometimes called a launder, collects clarified water from the top of the clarifier. It is a horizontal pipe that extends along the length of the clarifier bay and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the clarifier bay.
 
-The outlet manifold is designed to have 5 cm of head loss to ensure uniform flow distribution between clarifier bays and to have the majority of the head loss through the orifices to obtain uniform flow distribution between the orifices.
+The outlet manifold is designed to generate 5 cm of head loss to ensure uniform flow distribution between clarifier bays and to have the majority of the head loss through the orifices to obtain uniform flow distribution between the orifices.
 
 Outlet Weir
 -----------
 
-The submerged outlet manifold transports water from the clarifier bay to a channel that runs perpendicular to the clarifier bays. The channel collects water from all of the clarifier bays. Water leaves this channel by flowing over the outlet weir. The elevation of the oulet weir controls the water levels in the clarifier and in the flocculator.
+The submerged outlet manifold transports water from the clarifier bay to a collector channel that runs perpendicular to the clarifier bays. All of the clarifier bay outlet manifolds deliver the clarified water to the collector channel. Water leaves the collector channel by flowing over the outlet weir. The elevation of the outlet weir controls the water levels in the clarifier and in the flocculator.
 
 The outlet weir makes it possible to refill and emptied clarifier bays with clarified water to ensure that after returning a clarifier bay to service the first water is of high quality.
 
 Outlet Channel
-----------------
+--------------
 
-After the water flows over the outlet weir, it is collected in the outlet channel. The outlet channel has pipes embedded in the bottom of it which transport the clarified water to the filter inlet channel.
+After the water flows over the outlet weir, it is collected in the outlet channel. The water can be transported from the clarifier outlet channel to the filter inlet channel by pipes or by a channel.
 
 Stacked Rapid Sand Filter |OStaRS|
 ==================================
 
-For more detailed information see :ref:`Filtration Design <title_Filtration_Design>`.
-
-Description
------------
-
-Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornell program in response to the need for a new technology that would both eliminate the need for backwash pumps and not require the construction of 6 filters for small towns. As shown in the figure below, StaRS filters use six 20 cm deep layers of sand with the layers stacked vertically. The six layers give a total active sand depth of 1.2 m.
+For more detailed information see :ref:`Filtration Design <title_Filtration_Design>`. Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornell program in response to the need for a new technology that would both eliminate the need for backwash pumps and not require the construction of 6 filters for small towns. As shown in the figure below, StaRS filters use six 20 cm deep layers of sand with the layers stacked vertically. The six layers give a total active sand depth of 1.2 m.
 
 Operation
 ---------
