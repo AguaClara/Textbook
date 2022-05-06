@@ -489,7 +489,7 @@ The geometry of hydraulic flocculators changes rather dramatically as the flow r
    :width: 500px
    :alt: vertical - horizontal flocculator
 
-   The vertical-horizontal flocculator has vertical flow in the channels and horizontal flow between baffles. This design is for 1 L/s with 40 cm of head loss.
+   The vertical-horizontal flocculator has vertical flow in the channels and horizontal flow between baffles. This design is for 6 L/s with 23.5 cm of head loss.
 
 As the flows increase the spacing between baffles grows larger and a vertical-horizontal flocculator would need to be very deep in order to accommodate a reasonable number of baffle spaces per channel. The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s as shown in :numref:`figure_HVflocculator`.
 
@@ -500,10 +500,10 @@ As the flows increase the spacing between baffles grows larger and a vertical-ho
   :width: 500px
   :alt:  horizontal-vertical flocculator
 
-  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles.This design is for 80 L/s with 1 m wide channels and 40 cm of head loss.
+  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles.This design is for 60 L/s with 1 m wide channels and 25 cm of head loss.
 
 
-As the flow increases above 200 L/s the required depth to accommodate a reasonable H/S ratio will exceed the desired depth (from a construction and maintenance perspective) and the optimal design will switch to a horizontal-horizontal flocculator  as shown in :numref:`figure_HHflocculator`.
+As the flow increases above 200 L/s the required depth to accommodate a reasonable H/S ratio will exceed the desired depth (from a construction and maintenance perspective) and the optimal design will switch to a horizontal-horizontal flocculator as shown in :numref:`figure_HHflocculator`.
 
 .. _figure_HHflocculator:
 
@@ -512,4 +512,4 @@ As the flow increases above 200 L/s the required depth to accommodate a reasonab
   :width: 500px
   :alt:  horizontal-vertical flocculator
 
-  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles. This design has 10 flocculators working in parallel to treat 20 kL/s. The channels are 4 m deep and there is 40 cm head loss.
+  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles. This design is for a 500 L/s flow with 29 cm of head loss. The channels are 2.6 m deep.
