@@ -75,6 +75,10 @@ Edit the configurations to create new models of the stacked rapid sand filter. S
    Minimum temperature (˚C), The temperature has a small effect on the head loss through the clean filter bed.
    "",""
    Spare Filter, If selected this will add filter capacity so that one filter can be taken off line while operating at the plant maximum flow rate.
+   "",""
+   "Fraction of clogged bed head loss", "A clean filter corresponds to a value of 0 and a clogged filter corresponds to a value of 1. The water levels change to reflect this head loss."
+   "",""
+   Filter Mode, "If selected the filter is in filtration mode, otherwise the filter is in backwash mode. The water levels change to reflect the filter mode."
 
 
 Additional information is available in the chapter on `Filter Design <https://aguaclara.github.io/Textbook/Filtration/Filtration_Design.html>`_
