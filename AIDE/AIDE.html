@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara Textbook v1.3.28 documentation</title>
+  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara Textbook v1.3.29 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.28
+                v1.3.29
               </div>
             
           
@@ -159,7 +159,7 @@
 <p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Stacked Rapid Sand Filter Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Open Stacked Rapid Sand Filter Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Challenge.html">Filtration Design Challenge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
@@ -167,6 +167,7 @@
 <p class="caption"><span class="caption-text">Chapter 10: AguaClara Infrastructure Design Engine</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">AguaClara Infrastructure Design Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-aide">Introduction to AIDE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-aide-to-explore-aguaclara-technologies">Using AIDE to Explore AguaClara Technologies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configurable-components-user-survey">Configurable Components User Survey</a></li>
@@ -278,31 +279,9 @@
 </table>
 <div class="section" id="aguaclara-infrastructure-design-engine">
 <h1>AguaClara Infrastructure Design Engine<a class="headerlink" href="#aguaclara-infrastructure-design-engine" title="Permalink to this headline">¶</a></h1>
-<p>The AguaClara Infrastructure Design Engine (AIDE) is created and continuously improved by AguaClara Reach using the <a class="reference external" href="https://cad.onshape.com/"><img alt="Onshape" src="../_images/Onshape.png" style="height: 18px;" /></a> platform.  AIDE is a long term effort that began in 2005 and represents the contributions of thousands of individuals. AguaClara Reach is providing open access to this beta release of AIDE configurable components for educational purposes and so AguaClara implementation partners can explore our technologies.</p>
+<p>The AguaClara Infrastructure Design Engine (AIDE) is created and continuously improved by AguaClara Reach using the <a class="reference external" href="https://cad.onshape.com/"><img alt="Onshape" src="../_images/Onshape.png" style="height: 18px;" /></a> platform.  AIDE is a long term effort that began in 2005 and represents the contributions of thousands of individuals. AguaClara Reach is providing open access to this beta release of AIDE configurable components for educational purposes and so AguaClara implementation partners can explore our technologies (see our <a class="reference internal" href="#heading-disclaimer"><span class="std std-ref">Disclaimer</span></a>).</p>
 <p>We rely on donor support to develop AIDE and to create this textbook. Please <a class="reference external" href="https://www.aguaclarareach.org/donate-now"><img alt="donate" src="../_images/donate.png" style="height: 30px;" /></a> to support our mission of developing and providing the next generation of drinking water treatment plants so that many more communities can have safe water on tap.</p>
-<p>AIDE is based on parametric design. The vast majority of the dimensions are calculated from hydraulic constraints. Pipe diameters are sometimes based on a head loss constraint, sometimes are designed to not break up flocs, and in the chemical doser are designed to ensure laminar flow. Wall thicknesses are based on the construction methods used by the implementation partner and vary based on the depth of water in the tank. Thus the filter has thicker walls than the clarifier.</p>
-<p>AIDE is built from many modular components that are all connected as a part studio tree. The entire water treatment plant is an example of a top level component, a parent, that has an entrance tank, flocculator, clarifier, and filter as children. Each of the children also has multiple subcomponents. The entire part studio tree is assembled level by level in a way that allows the parent to know everything about all of the subcomponents. This sharing of design parameters between components enables an integrated design and an optimized plant layout.</p>
-<p>All of the parts used to assemble the design originate in a parts database.  The database can be customized for different implementation partners so that the part dimensions and costs match their requirements.  The database approach to design ensures that when an alternative part is selected that all plant dimensions update to accommodate the new part dimensions.</p>
-<p>The AIDE configurable components are not engineering designs. AguaClara Reach uses AIDE configurable components, expertise in drinking water treatment, and site specific conditions detailed by AguaClara Implementation Partners to develop customized designs for community-scale water treatment plants.</p>
-<div class="section" id="disclaimer">
-<h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">¶</a></h2>
-<p>The configurable components created by AIDE are not engineering designs. The configurable components are provided for educational purposes. The configurable components create models that have not been reviewed and are likely NOT suitability for any particular application.</p>
-<p><strong>In no event shall AguaClara Reach, or their employees be liable to any party for direct, indirect, special, incidental, or consequential damages, including lost profits, arising out of the use of AIDE, even if AguaClara Reach may have been advised of the possibility of such damage.</strong></p>
-</div>
-<div class="section" id="using-aide-to-explore-aguaclara-technologies">
-<h2>Using AIDE to Explore AguaClara Technologies<a class="headerlink" href="#using-aide-to-explore-aguaclara-technologies" title="Permalink to this headline">¶</a></h2>
-<p>If you do not yet have an <a class="reference external" href="https://cad.onshape.com/"><img alt="Onshape" src="../_images/Onshape.png" style="height: 18px;" /></a> account, then you will be able to make changes to the component configuration by using the <a class="reference external" href="https://cad.onshape.com/help/Content/viewonlytoolbar.htm">view only toolbar</a>. You can sign up for a <a class="reference external" href="https://www.onshape.com/en/products/free">free public Onshape account</a> that will enable you to access the parts lists and <em>estimated</em> materials cost for each of the AIDE configurable components.</p>
-<dl class="simple">
-<dt>Each model has three check boxes that provide increasing level of model detail.</dt><dd><ol class="arabic simple">
-<li><p><em>Show internal components</em> - Enables the modeling of pipes, baffles, and other internal components and creates a complete bill of materials. For some of the components it will only show an example rather than fully replicating all of the parts.</p></li>
-<li><p><em>Replicate all parts</em> - Fully replicates all parts and may significantly extend the time required to generate a new model.</p></li>
-<li><p><em>Print parameter map</em> - Prints a full map in the FeatureScript notices of all of the model inputs. Only a small fraction of the available inputs are exposed in the model configurations. Click on showFeatureScript Notices <a class="reference internal" href="../_images/showFeatureScriptNotices.png"><img alt="showFSNotices" src="../_images/showFeatureScriptNotices.png" style="height: 30px;" /></a> to open a new pane at the bottom of the browser window where the full parameter map will be displayed.</p></li>
-</ol>
-</dd>
-</dl>
-<p>The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of <em>time to generate model component</em> in <a class="reference internal" href="#table-aide-configurable-components"><span class="std std-numref">Table 21</span></a> for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.</p>
-<p>The bill of materials does not include internal components if <em>Show internal components</em> is not selected. The bill of materials does include all of the parts even if <em>Replicate all parts</em> is not selected.</p>
-<p>If you would like to explore possible configurations, vary the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.</p>
+<p>In the <a class="reference internal" href="#table-aide-configurable-components"><span class="std std-ref">table below</span></a> are links to configurable component models. Information on how to <a class="reference internal" href="#heading-using-aide"><span class="std std-ref">access and modify the models is given below the table</span></a>. We welcome <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?">your feedback on the AIDE models</a>. If you are interested in AguaClara technologies to produce safe water on tap please fill out our <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSdU7ZrWlnugDqEutdELWLoj5jq8JW6yzOeUg3Al4R7LUSYzRA/viewform?">survey for potential implementation partners</a>.</p>
 <span id="table-aide-configurable-components"></span><table class="colwidths-given docutils align-left" id="id1">
 <caption><span class="caption-number">Table 21 </span><span class="caption-text">AIDE configurable components.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -341,11 +320,11 @@
 <td><p>Flocculator HH: Horizontal-Horizontal Flocculator for flows above about 100 L/s</p></td>
 <td><p>5</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="https://cad.onshape.com/documents/e05915c533ee7568c402981a/w/56de4202f426e6443151ca07/e/3f94eabd115787bc33ae755d?configuration=G_max%3D140.0%3BQm_max%3D20.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D10.0%3BcaptureVm%3D0.12%3BprintParams%3Dfalse%3Brep%3Dtrue%3BupVm%3D1.0&amp;renderMode=0&amp;uiState=626feb84ea2b4863d1373f90"><img alt="Clarifier" src="https://cad.onshape.com/api/thumbnails/d/e05915c533ee7568c402981a/w/56de4202f426e6443151ca07/s/300x170" style="width: 200px;" /></a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://cad.onshape.com/documents/e05915c533ee7568c402981a/w/56de4202f426e6443151ca07/e/3f94eabd115787bc33ae755d?configuration=G_max%3D140.0%3BQm_max%3D20.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D10.0%3BcaptureVm%3D0.12%3BprintParams%3Dfalse%3Brep%3Dtrue%3BrepBayInternals%3Dfalse%3BupVm%3D1.0&amp;renderMode=0&amp;uiState=627688ef04309300574a09f6"><img alt="Clarifier" src="https://cad.onshape.com/api/thumbnails/d/e05915c533ee7568c402981a/w/56de4202f426e6443151ca07/s/300x170" style="width: 200px;" /></a></p></td>
 <td><p>Clarifier: floc filter, plate settlers, and floc hopper</p></td>
 <td><p>32</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://cad.onshape.com/documents/8a1a990f01575e6e5eed1922/w/3811cfb89da77b076395fdc0/e/fd576f076cd3757b426c7f20?configuration=Qm_max%3D40.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D10.0%3BprintParams%3Dtrue%3Brep%3Dtrue%3BrepInternalPiping%3Dtrue%3BspareFilter%3Dfalse&amp;renderMode=0&amp;uiState=626fec07e062eb5a0476b08c"><img alt="OStaRS" src="https://cad.onshape.com/api/thumbnails/d/8a1a990f01575e6e5eed1922/w/3811cfb89da77b076395fdc0/s/300x170" style="width: 200px;" /></a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="https://cad.onshape.com/documents/8a1a990f01575e6e5eed1922/w/3811cfb89da77b076395fdc0/e/fd576f076cd3757b426c7f20?configuration=Qm_max%3D20.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D10.0%3BfilterHL_pi%3D0.5%3BfilterMode%3Dfalse%3BprintParams%3Dfalse%3Brep%3Dtrue%3BrepBayInternals%3Dfalse%3BrepInternalPiping%3Dfalse%3BspareFilter%3Dfalse&amp;renderMode=0&amp;uiState=6276885764a43e34bd8c13b9"><img alt="OStaRS" src="https://cad.onshape.com/api/thumbnails/d/8a1a990f01575e6e5eed1922/w/3811cfb89da77b076395fdc0/s/300x170" style="width: 200px;" /></a></p></td>
 <td><p>OStaRS: Open Stacked Rapid Sand Filter</p></td>
 <td><p>25</p></td>
 </tr>
@@ -355,6 +334,32 @@
 </tr>
 </tbody>
 </table>
+<div class="section" id="introduction-to-aide">
+<h2>Introduction to AIDE<a class="headerlink" href="#introduction-to-aide" title="Permalink to this headline">¶</a></h2>
+<p>AIDE is based on parametric design. The vast majority of the dimensions are calculated from hydraulic constraints. Pipe diameters are sometimes based on a head loss constraint, sometimes are designed to not break up flocs, and in the chemical doser are designed to ensure laminar flow. Wall thicknesses are based on the construction methods used by the implementation partner and vary based on the depth of water in the tank. Thus the filter has thicker walls than the clarifier.</p>
+<p>AIDE is built from many modular components that are all connected as a part studio tree. The entire water treatment plant is an example of a top level component, a parent, that has an entrance tank, flocculator, clarifier, and filter as children. Each of the children also has its own children. The entire part studio tree is assembled level by level in a way that allows the parent to know everything about all of the children and their children. This sharing of design parameters between components enables an integrated design and an optimized plant layout.</p>
+<p>All of the parts used to assemble the design originate in a parts database.  The database can be customized for different implementation partners so that the part dimensions and costs match their requirements.  The database approach to design ensures that when an alternative part is selected that all plant dimensions update to accommodate the new part dimensions.</p>
+<p>The AIDE configurable components are not engineering designs. AguaClara Reach uses AIDE configurable components, expertise in drinking water treatment, and site specific conditions detailed by AguaClara Implementation Partners to develop customized designs for community-scale water treatment plants.</p>
+</div>
+<div class="section" id="disclaimer">
+<span id="heading-disclaimer"></span><h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">¶</a></h2>
+<p>The configurable components created by AIDE are not engineering designs. The configurable components are provided for educational purposes. The configurable components create models that have not been reviewed and are likely NOT suitability for any particular application.</p>
+<p><strong>In no event shall AguaClara Reach, or their employees be liable to any party for direct, indirect, special, incidental, or consequential damages, including lost profits, arising out of the use of AIDE, even if AguaClara Reach may have been advised of the possibility of such damage.</strong></p>
+</div>
+<div class="section" id="using-aide-to-explore-aguaclara-technologies">
+<span id="heading-using-aide"></span><h2>Using AIDE to Explore AguaClara Technologies<a class="headerlink" href="#using-aide-to-explore-aguaclara-technologies" title="Permalink to this headline">¶</a></h2>
+<p>If you do not yet have an <a class="reference external" href="https://cad.onshape.com/"><img alt="Onshape" src="../_images/Onshape.png" style="height: 18px;" /></a> account, then you will be able to make changes to the component configuration by using the <a class="reference external" href="https://cad.onshape.com/help/Content/viewonlytoolbar.htm">view only toolbar</a>. You can sign up for a <a class="reference external" href="https://www.onshape.com/en/products/free">free public Onshape account</a> that will enable you to access the parts lists and <em>estimated</em> materials cost for each of the AIDE configurable components.</p>
+<dl class="simple">
+<dt>Most models have two check boxes that provide increasing level of model detail. A few models have more options to turn on computationally intensive parts of the design.</dt><dd><ol class="arabic simple">
+<li><p><em>Show internal components</em> - Enables the modeling of pipes, baffles, and other internal components and creates a complete bill of materials. For some of the components it will only show an example rather than fully replicating all of the parts.</p></li>
+<li><p><em>Replicate all parts</em> - Fully replicates all parts and may significantly extend the time required to generate a new model.</p></li>
+<li><p><em>Print parameter map</em> - Prints a full map in the FeatureScript notices of all of the model inputs. Only a small fraction of the available inputs are exposed in the model configurations. Click on showFeatureScript Notices <a class="reference internal" href="../_images/showFeatureScriptNotices.png"><img alt="showFSNotices" src="../_images/showFeatureScriptNotices.png" style="height: 30px;" /></a> to open a new pane at the bottom of the browser window where the full parameter map will be displayed.</p></li>
+</ol>
+</dd>
+</dl>
+<p>The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of <em>time to generate model component</em> in <a class="reference internal" href="#table-aide-configurable-components"><span class="std std-numref">Table 21</span></a> for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.</p>
+<p>The bill of materials does not include internal components if <em>Show internal components</em> is not selected. The bill of materials does include all of the parts even if <em>Replicate all parts</em> is not selected.</p>
+<p>If you would like to explore possible configurations, vary the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.</p>
 </div>
 <div class="section" id="configurable-components-user-survey">
 <h2>Configurable Components User Survey<a class="headerlink" href="#configurable-components-user-survey" title="Permalink to this headline">¶</a></h2>
