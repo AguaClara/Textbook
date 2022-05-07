@@ -8,9 +8,18 @@
 .. _title_Filtration_Design:
 
 
-********************************
-Stacked Rapid Sand Filter Design
-********************************
+*************************************
+Open Stacked Rapid Sand Filter Design
+*************************************
+
+.. _figure_OStaRSoverview:
+
+.. figure:: ../Images/OStaRSoverview.png
+   :width: 400px
+   :align: center
+   :alt: Floc Hopper
+
+   The open stacked rapid sand filters include advanced hydraulic controls to ensure stable operation during both filtration and backwash modes.
 
 Nomenclature
 ============
@@ -98,7 +107,7 @@ Now we can solve for maximum manifold channel velocity.
 
 The channel depth of water above the weir, :math:`\bar H_{channel}`, and the flow uniformity target set the maximum velocity in the manifold channel (see :numref:`figure_Filter_channel_v_max`).
 
-`Geneeate the following plot <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=MyYpzYxOU5px&line=5&uniqifier=1>`_
+`Generate the following plot <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=MyYpzYxOU5px&line=5&uniqifier=1>`_
 
 
 .. _figure_Filter_channel_v_max:
