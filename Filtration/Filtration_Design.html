@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Open Stacked Rapid Sand Filter Design &mdash; AguaClara Textbook v1.3.29 documentation</title>
+  <title>Open Stacked Rapid Sand Filter Design &mdash; AguaClara Textbook v1.3.30 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.29
+                v1.3.30
               </div>
             
           
@@ -648,11 +648,11 @@
 <p>At the beginning of backwash the sand is clogged and thus it requires more pressure to achieve the flow through the sand required to fluidize the sand. Instead, it is likely that one or more layers of sand begin to lift as a unit before falling apart and beginning to fluidize. During that transition the forces of the sand to lift the internal piping of the filter are quite large. We had structural failures in several of the early StaRS filters before we recognized the importance of a strong cable system to prevent the filter piping from lifting.</p>
 <p>The maximum hydrostatic force acting on the bottom of the filter occurs when the inlet box is still full of water when the filter water depth is reduced by the siphon. The force in excess of the weight of the sand and water in the filter is equal to the height of water in the inlet box that is in excess of the backwash height of about 10 cm. This excess height is approximately equal to the terminal head loss through the filter during filtration, <span class="math notranslate nohighlight">\(HL_{fi_{max}}\)</span>. The width of the filter bed that is contributing force to the receptor pipe is equal to 1/2 of the length of the branches. This force most likely acts uniformly on two layers of sand and associated piping at a time. The top two layers fluidize first when the water first stops going through the top inlet and thus all of the water is passing up through the top two layers. Thus the force is most likely shared by an inlet module and an outlet module.</p>
 <p>There are two factors of 2 that show up in the equation. First, the total force is distributed between two layers. Second, half of the force from one side of the filter is carried by the trunk. Thus the force per unit length of the receptor pipe, <span class="math notranslate nohighlight">\(\omega\)</span>, in one module is</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-8">
-<span class="eqno">(740)<a class="headerlink" href="#equation-filtration-filtration-design-8" title="Permalink to this equation">¶</a></span>\[\omega = \rho g h_{l_{sand_{max}}} \frac{L_{branch}}{4}\]</div>
+<div class="math notranslate nohighlight" id="equation-branchbackwashinitiationforce">
+<span class="eqno">(740)<a class="headerlink" href="#equation-branchbackwashinitiationforce" title="Permalink to this equation">¶</a></span>\[\omega = \rho g h_{l_{sand_{max}}} \frac{L_{branch}}{4}\]</div>
 <p>The total force acting upward that must be resisted by the receptor supports is</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-9">
-<span class="eqno">(741)<a class="headerlink" href="#equation-filtration-filtration-design-9" title="Permalink to this equation">¶</a></span>\[F_{up} = \rho g h_{l_{sand_{max}}} \frac{Q_{Fi}}{v_{Fi} N_{layer}}\]</div>
+<div class="math notranslate nohighlight" id="equation-receptorbackwashinitiationforce">
+<span class="eqno">(741)<a class="headerlink" href="#equation-receptorbackwashinitiationforce" title="Permalink to this equation">¶</a></span>\[F_{up} = \rho g h_{l_{sand_{max}}} \frac{Q_{Fi}}{v_{Fi} N_{layer}}\]</div>
 </div>
 <div class="section" id="receptor-pipe-support-spacing">
 <span id="heading-stars-dead-end-support"></span><h2>Receptor Pipe Support Spacing<a class="headerlink" href="#receptor-pipe-support-spacing" title="Permalink to this headline">¶</a></h2>
@@ -677,11 +677,11 @@
 <div class="math notranslate nohighlight" id="equation-sdr">
 <span class="eqno">(747)<a class="headerlink" href="#equation-sdr" title="Permalink to this equation">¶</a></span>\[\Pi_{SDR} = \frac{OD}{t}\]</div>
 <p>Substituting Equation <a class="reference internal" href="#equation-sdr">(747)</a> into Equation <a class="reference internal" href="#equation-pipe-ix-of-od-id">(746)</a></p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-10">
-<span class="eqno">(748)<a class="headerlink" href="#equation-filtration-filtration-design-10" title="Permalink to this equation">¶</a></span>\[I = \frac{\pi}{4}\left[OD^4 - \left(\Pi_{SDR}t - t\right)^4\right]\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-8">
+<span class="eqno">(748)<a class="headerlink" href="#equation-filtration-filtration-design-8" title="Permalink to this equation">¶</a></span>\[I = \frac{\pi}{4}\left[OD^4 - \left(\Pi_{SDR}t - t\right)^4\right]\]</div>
 <p>simplifying</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-11">
-<span class="eqno">(749)<a class="headerlink" href="#equation-filtration-filtration-design-11" title="Permalink to this equation">¶</a></span>\[I = \frac{\pi}{4}OD^4\left[1 - \left(1-\frac{1}{\Pi_{SDR}}\right)^4\right]\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-9">
+<span class="eqno">(749)<a class="headerlink" href="#equation-filtration-filtration-design-9" title="Permalink to this equation">¶</a></span>\[I = \frac{\pi}{4}OD^4\left[1 - \left(1-\frac{1}{\Pi_{SDR}}\right)^4\right]\]</div>
 <p>If we set a maximum deflection, then we can solve Equation <a class="reference internal" href="#equation-supported-at-both-ends">(743)</a> for the maximum length between supports.</p>
 <div class="math notranslate nohighlight" id="equation-l-of-supported-at-both-ends">
 <span class="eqno">(750)<a class="headerlink" href="#equation-l-of-supported-at-both-ends" title="Permalink to this equation">¶</a></span>\[L_{both} = \left(\frac{384EI\delta_{max}}{5\omega}\right)^{\frac{1}{4}}\]</div>
@@ -695,8 +695,8 @@
 <span id="heading-stars-dead-end-strength"></span><h2>Receptor Support Strength<a class="headerlink" href="#receptor-support-strength" title="Permalink to this headline">¶</a></h2>
 <p>The supports for the receptors could have a cable or a threaded rod coming up on both sides or only on one side. Single sided support would be preferred to reduce the extra width of the filter required to accommodate the double sided support. The single sided support would have the cable coming up on one side. When the sand lifts on the dead pipe the support will tend to rotate around the cable and put the support in compression on the other side of the cable. The question is then the required dimensions of the compression area given the strength of the PVC.</p>
 <p>The force acting on one receptor support is</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-12">
-<span class="eqno">(751)<a class="headerlink" href="#equation-filtration-filtration-design-12" title="Permalink to this equation">¶</a></span>\[F_{up} = \rho g h_{l_{sand_{max}}}\frac{W_{filter}}{4} B_{support}\]</div>
+<div class="math notranslate nohighlight" id="equation-receptorsupportbackwashinitiationforce">
+<span class="eqno">(751)<a class="headerlink" href="#equation-receptorsupportbackwashinitiationforce" title="Permalink to this equation">¶</a></span>\[F_{up} = \rho g h_{l_{sand_{max}}}\frac{W_{filter}}{4} B_{support}\]</div>
 <p>This force must be resisted by the PVC support. Given that the lift force <span class="math notranslate nohighlight">\(F_{up}\)</span> is on the order of 2000 N and the PVC compressive strength is approximately 55 MPa this requires less than a square centimeter of PVC. This suggests that a single sided support for the receptors with only one cable will be adequate.</p>
 </div>
 <div class="section" id="slotted-pipe-upgrade">
@@ -717,11 +717,11 @@
 <p>The goal will be to drain the sand as quickly as possible to limit the amount of water wasted. The sand bed must be fluidized during the operation and thus the upflow velocity in the sand bed will need to be about half of the backwash velocity. This flow rate and the target pipe velocity required to keep the sand moving (3 m/s) set the MAXIMUM pipe diameter.</p>
 <p>The available piezometric head to drive the sand slurry through the sand dump pipe is equal to the depth of water in the filter during backwash. The maximum elevation of the sand dump discharge must take into account the density of the sand slurry.</p>
 <p>The maximum density of the slurry in the sand dump pipe would be the case where the sand is just beginning to fluidize with a porosity equal to the normal settled sand porosity.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-13">
-<span class="eqno">(752)<a class="headerlink" href="#equation-filtration-filtration-design-13" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \frac{M_{water} + M_{sand}}{{\rlap{-} V_{sandbed}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-10">
+<span class="eqno">(752)<a class="headerlink" href="#equation-filtration-filtration-design-10" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \frac{M_{water} + M_{sand}}{{\rlap{-} V_{sandbed}}}\]</div>
 <p>The mass of sand is given by its density and volume.</p>
-<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-14">
-<span class="eqno">(753)<a class="headerlink" href="#equation-filtration-filtration-design-14" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \frac{\rlap{-} V_{water} \rho_{water} + \rlap{-} V_{sand}\rho_{sand}}{{\rlap{-} V_{sandbed}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-filtration-filtration-design-11">
+<span class="eqno">(753)<a class="headerlink" href="#equation-filtration-filtration-design-11" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \frac{\rlap{-} V_{water} \rho_{water} + \rlap{-} V_{sand}\rho_{sand}}{{\rlap{-} V_{sandbed}}}\]</div>
 <p>The water volume fraction is the porosity.</p>
 <div class="math notranslate nohighlight" id="equation-density-suspension">
 <span class="eqno">(754)<a class="headerlink" href="#equation-density-suspension" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \phi \rho_{water} + (1-\phi)\rho_{sand}\]</div>
