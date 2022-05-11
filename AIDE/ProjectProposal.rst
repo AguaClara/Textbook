@@ -6,11 +6,11 @@
     </embed>
 
 
-.. _title_AguaClara_Specifications:
+.. _title_First_Project_Proposal:
 
-************************
+**********************
 First Project Proposal
-************************
+**********************
 
 This draft proposal represents how AguaClara Reach (ACR) would work with a new Implementation Partner (IP) to provide hydraulic designs, technical support, training, and assistance in procuring components for the IP's **first** AguaClara plant project. It is anticipated that for subsequent projects the IP will require less technical assistance from ACR.
 
@@ -27,6 +27,7 @@ This draft proposal represents how AguaClara Reach (ACR) would work with a new I
    IP, Implementation Partner
    PER, Preliminary Engineering Report
 
+.. _heading_Preliminary_Engineering:
 
 Phase 1 - Preliminary Engineering
 =================================
@@ -35,6 +36,8 @@ The Preliminary Engineering Phase will provide definition to that Project’s sc
 
 ACR shall provide the Implementation Partner (IP) with regular schedule and progress updates during the Preliminary Engineering Phase. ACR shall provide information requested by IP to ensure that all requirements are met for approvals and permits necessary.
 
+.. _heading_Kickoff_Meeting:
+
 Task 1.1 Kickoff Meeting
 ------------------------
 
@@ -42,19 +45,21 @@ The Preliminary Design phase will begin with a Project Kick-Off Meeting held bet
 
 During this meeting, lines of communication, team member responsibilities, document distribution, scope of work (goals, expectations, measurements of success) and project schedule will be discussed. Meeting minutes will be developed and distributed by IP. This meeting will be conducted virtually.
 
+.. _heading_Project_Definition:
+
 Task 1.1.a Project Definition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This project consists of the design and construction of a drinking water treatment system to treat a surface water source using AguaClara technology to supplement IP’s existing supply. IP will provide regulatory limits and standards for the treated water. The required flow rate will be verified during Phase 1.
 
-The AguaClara treatment process design will include electricity-free chemical feed of coagulant and chlorine, flocculation, clarification, filtration, and disinfection. If required for water conservation, ACR will provide a design for backwash recycling that will require a small pump.
+The AguaClara treatment process design will include electricity-free chemical feed of coagulant and chlorine, flocculation, floc filtration, sedimentation, sand filtration, and disinfection. If required for water conservation, ACR will provide a design for backwash recycling that will require a small pump.
 
 IP and ACR shall further update and refine the purpose of this project and its relation to system-wide water provisions following the Kickoff Meeting. 
 
+.. _heading_Conditions_Assessment:
+
 Task 1.2 Conditions Assessment
 ------------------------------
-
-Water Quality Monitoring and Testing
 
 It would be ideal to have a year’s worth of turbidity and color measurements prior to building a water treatment plant on a new water source. ACR recognizes that extensive sampling is often not and thus the goal is to target sampling to minimize the risk of an unexpected treatment challenge.
 
@@ -66,18 +71,22 @@ ACR shall provide guidance to IP to conduct jar tests on a minimum of two sampl
 - IP shall obtain water samples and chemical coagulants as required, and shall conduct the jar tests.
 - IP shall provide ACR with the test results, and ACR shall analyze the results.
 
+.. _heading_Conditions_Assessment_Workshop:
 
 Task 1.2.a. Conditions Assessment Workshop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ACR shall conduct a workshop to review water quality results, and confirm relevant proposed site data and integration. During this task, ACR shall assess if a site visit is needed as part of Phase 2. Meeting minutes will be developed by ACR and distributed within ten (10) business days following the workshop. This workshop will be conducted virtually.
 
+.. _heading_Feasibility_Assessment:
 
 Task 1.2.b. Feasibility Assessment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ACR shall conduct a feasibility assessment based on the Project Definition and Conditions Assessment. ACR shall provide IP with a memo for review and approval in advance of the Preliminary Engineering Report
 (PER) sections that will be provided by ACR. An Action Plan detailing next steps will be included in the Feasibility Assessment memo.
+
+.. _heading_PER:
 
 Task 1.3  Preliminary Engineering Report (PER) Sections
 -------------------------------------------------------
@@ -147,12 +156,14 @@ Attachments
    - Operation and maintenance cost breakdown by category included
    (chemical and equipment usage)
 
+.. _heading_PER_Workshops:
 
 Task 1.4 PER Workshops
 ----------------------
 
 ACR shall conduct a workshop to review the draft sections of the PER and solicit feedback, to facilitate the review of design progress by Stakeholders, and shall respond to comments. IP may request that ACR conduct follow-up workshops necessary to review specific critical issues that are raised by Stakeholder review. ACR shall identify follow-up workshops, as necessary, to meet Project objectives and goals. Meeting minutes will be developed by ACR and distributed within ten (10) business days following the workshop. This workshop will be conducted virtually.
 
+.. _heading_Phase_1_Assumptions:
 
 Phase 1 Assumptions
 -------------------
@@ -162,19 +173,23 @@ Phase 1 Assumptions
 - IP will add the PER sections provided by ACR to the PER.
 
 - IP will provide the Project Schedule.
-- IP shall provide a site plan showing preferred location(s) of the new water treatment plant and the following:
+- IP will provide a site plan showing preferred location(s) of the new water treatment plant and the following:
 
 - Field verification of existing conditions
 - Completion of a topographic survey of the project area
 
-- IP shall provide a plan for an access road if necessary.
+- IP will provide a plan for an access road if necessary.
+
+.. _heading_Phase_2_Design:
 
 Phase 2 - Design
 ================
 
 The Design Phase will provide the Construction Documents required for the Construction, Installation, Training, and Commissioning Phase.
 
-The Design Phase will require close collaboration between IP and ACR to ensure that the design meets the site constraints, is based on the available generic materials, and addresses the water quality issues identified in Task 1.2.
+The Design Phase will require close collaboration between IP and ACR to ensure that the design meets the site constraints, is based on the available generic materials, and addresses the water quality issues identified in :ref:`heading_Conditions_Assessment`.
+
+.. _heading_Personnel_Plan:
 
 Task 2.1 Personnel Plan
 -----------------------
@@ -190,6 +205,8 @@ IP will be responsible for providing these staff who will learn the details of A
 
 ACR and the IP will determine the best mechanism to hire APP staff and bring them to work along side of IP staff. If required the IP will provide a staff member who is fluent in Spanish to translate for the APP staff.
 
+.. _heading_Key_Materials_Selection_and_Sourcing:
+
 Task 2.2 Key Materials Selection and Sourcing
 ---------------------------------------------
 
@@ -197,9 +214,10 @@ The corrugated polycarbonate sheets used for flocculator baffles and plate settl
 
 ACR and IP will review the list of materials required for construction and operation and determine if any materials need to be ordered before Phase 3 begins and based on a conservative preliminary design.
 
+.. _heading_Hydraulic_and_Process_Design:
 
-Task 2.3 Hydraulic & Process Design
------------------------------------
+Task 2.3 Hydraulic and Process Design
+-------------------------------------
 
 ACR will develop a detailed 3-D model of the hydraulic components in Onshape. ACR will base these drawings off of the required structural wall thicknesses provided by IP, as indicated in the Phase
 2. Onshape is a cloud-based CAD environment that facilitates full parametric design and the ability to share documents and collaborate in real time. Onshape is free for open-source projects and ACR encourages IP to consider developing expertise in using Onshape. The Onshape 3-D model can be exported and opened by other CAD programs.
@@ -239,16 +257,21 @@ The Onshape 3-D model will include a bill of materials and a cut list for materi
    - Self backwashing hydraulic control system
    - 6-layer filter system
 
+.. _heading_Tool_List_for_Fabrication:
+
 Task 2.4 Tool List for Fabrication
 ----------------------------------
 
 ACR will provide a detailed tool list required for fabrication of the hydraulic components including free-standing machinery, hand tools, and pipe molding equipment. These tools will enable IP to fabricate the vast majority of the hydraulic components from generic parts.
+
+.. _heading_Replacement_Parts:
 
 Task 2.5  Replacement Parts
 ---------------------------
 
 ACR will provide a list of replacement parts that should be maintained for component repairs and replacements.
 
+.. _heading_Hydraulic_Component_Fabrication_Documentation:
 
 Task 2.6 Hydraulic Component Fabrication Documentation
 ------------------------------------------------------
@@ -276,10 +299,14 @@ ACR will provide a digital fabrication manual with step-by-step instructions for
   - Inlet and outlet modules
   - Siphon manifold
 
+.. _heading_Hydraulic_and_Process_Design_Calculations:
+
 Task 2.7 Hydraulic and Process Design Calculations
 --------------------------------------------------
 
 A report detailing the hydraulic and process design calculations will connect the design equations to this specific design and provide the basis of design and relevant calculations for all of the included unit processes.
+
+.. _heading_Webinars:
 
 Task 2.8 Webinars
 -----------------
@@ -294,6 +321,8 @@ ACR will provide the following remote hour-long webinars for IP staff
    of materials
 
 Additional webinars can be requested if needed.
+
+.. _heading_Phase_2_Assumptions:
 
 Phase 2 Assumptions
 -------------------
@@ -325,13 +354,17 @@ Material Sourcing for Construction and Operation
 
 IP will prepare to source construction materials, chemicals including the coagulant and calcium hypochlorite required for plant operations, and required water quality meters (at minimum a portable turbidity meter).
 
+.. _heading_Construction:
+
 Phase 3 - Construction, Installation, Training, Commissioning
 =============================================================
 
-Task 3.1 Project Site Staffing
-------------------------------
+.. _heading_Project_Staffing:
 
-There are several areas of specialized knowledge for Phase 3, as detailed in :numref:`table_Expertise`, that can most effectively be transferred to IP by experienced staff who have built plants in Central America.
+Task 3.1 Project Staffing
+-------------------------
+
+There are several areas of specialized knowledge for Phase 3, as detailed in :numref:`table_Expertise`, that can most effectively be transferred to IP by experienced staff who have built AguaClara plants in Central America.
 
 .. _table_Expertise:
 
@@ -353,6 +386,8 @@ The AguaClara technician will supervise fabrication of the hydraulic components.
 
 The AguaClara technician will train the plant operators. ACR recommends that IP provide a minimum of 5 operators for training to be able to provide 24/7 plant operation. IP may elect to provide more operators to prepare for staff transitions.
 
+.. _heading_Material_Acquisition_Support:
+
 Task 3.2  Material Acquisition Support
 --------------------------------------
 
@@ -360,10 +395,14 @@ ACR will provide vendor and part numbers for hydraulic components of the plant 
 
 There are several specialized components (pipe molds, constant head tank for the chemical feeds, and doser system) that could either be purchased directly from specialty parts suppliers or potentially could be purchased from ACR. ACR will work with IP to determine which approach is best.
 
+.. _heading_Remote_Technical_Support:
+
 Task 3.3 Remote Technical Support
 ---------------------------------
 
 In addition to the construction advisor and AguaClara technician, ACR will provide remote technical support throughout Phase 3 and for the first year of operation. IP can invite ACR staff to relevant meetings and can contact ACR with questions that arise during the construction phase and the first year of operation.
+
+.. _heading_Webinars_for_Water_Professionals:
 
 Task 3.4 Webinars for Water Professionals
 -----------------------------------------
@@ -378,33 +417,40 @@ ACR will provide the following remote hour-long training sessions (total of 5 ho
 
 This training could be exclusively for IP staff or it could be extended to include water professionals from the region. ACR also welcomes IP recommendations for additional training.
 
+.. _heading_Phase_3_Assumptions:
 Phase 3 Assumptions
 -------------------
 
 Staffing
+~~~~~~~~
 
 - IP will identify individuals that they want to be trained as construction foreman and AguaClara technician so that IP has these capabilities in-house for future projects.
 - IP plant operators will be responsible for plant operation as soon as the plant begins operating. This includes during the initial startup and commissioning.
 
 Transport to site
+~~~~~~~~~~~~~~~~~
 
-- IP will provide transport to the worksite for ACR staff.
+- IP will provide transport to the worksite for APP staff.
 
 Material acquisition
+~~~~~~~~~~~~~~~~~~~~
 
 - IP will be responsible for acquiring materials for both the civil work and for the hydraulic components.
-- IP will be responsible for acquiring the tools as detailed in Task 2.4.
+- IP will be responsible for acquiring the tools as detailed in :ref:`heading_Tool_List_for_Fabrication`.
 - IP is responsible for all freight, customs and duty charges.
 
 Fabrication Workshop
+~~~~~~~~~~~~~~~~~~~~
 
-- IP will provide an enclosed space where the tools (see Task 2.4) can be setup and the hydraulic components can be fabricated. The workshop can either be adjoining the plant construction site or it can be at a more convenient location for electricity and for the workers. The workshop will be used to assemble hydraulic components including flocculator baffle modules, settler modules, manifolds, and filter piping. The workshop should have dimensions of at least 12 m x 5 m and will require electricity and lighting.
+- IP will provide an enclosed space where the tools (see :ref:`heading_Tool_List_for_Fabrication`) can be setup and the hydraulic components can be fabricated. The workshop can either be adjoining the plant construction site or it can be at a more convenient location for electricity and for the workers. The workshop will be used to assemble hydraulic components including flocculator baffle modules, settler modules, manifolds, and filter piping. The workshop should have dimensions of at least 12 m x 5 m and will require electricity and lighting.
 
 Access Road
+~~~~~~~~~~~
 
 - IP shall provide an access road to facilitate construction and operations
 
 Electricity
+~~~~~~~~~~~
 
 Construction activities require electricity for:
 
