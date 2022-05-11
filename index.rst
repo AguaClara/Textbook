@@ -127,11 +127,12 @@ The Physics of Water Treatment Design
 
 
 .. toctree::
-  :caption: Chapter 10: AguaClara Infrastructure Design Engine
+  :caption: Chapter 10: Design and Implementation
   :maxdepth: 1
 
   AIDE/AIDE.rst
   AIDE/Specifications.rst
+  AIDE/ProjectProposal.rst
 
 .. toctree::
   :caption: Chapter 11: Dissolved Gas
