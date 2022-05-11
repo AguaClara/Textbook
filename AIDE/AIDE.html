@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara Textbook v1.3.31 documentation</title>
+  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara Textbook v1.3.32 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.31
+                v1.3.32
               </div>
             
           
@@ -167,15 +167,16 @@
 <p class="caption"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">AguaClara Infrastructure Design Engine</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-aide">Introduction to AIDE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-aide">Introduction to AIDE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-aide-to-explore-aguaclara-technologies">Using AIDE to Explore AguaClara Technologies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configurable-components-user-survey">Configurable Components User Survey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-aguaclara-reach-uses-aide">How AguaClara Reach Uses AIDE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#next-steps-for-potential-implementation-partners">Next Steps for Potential Implementation Partners</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Specifications.html">AguaClara Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ProjectProposal.html">First Project Proposal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ProjectProposal.html">Example First Project Proposal</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
 <ul>
@@ -335,17 +336,17 @@
 </tr>
 </tbody>
 </table>
+<div class="section" id="disclaimer">
+<span id="heading-disclaimer"></span><h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">¶</a></h2>
+<p>The configurable components created by AIDE are not engineering designs. The configurable components are provided for educational purposes. The configurable components create models that have not been reviewed and are likely NOT suitability for any particular application.</p>
+<p><strong>In no event shall AguaClara Reach, or their employees be liable to any party for direct, indirect, special, incidental, or consequential damages, including lost profits, arising out of the use of AIDE, even if AguaClara Reach may have been advised of the possibility of such damage.</strong></p>
+</div>
 <div class="section" id="introduction-to-aide">
 <h2>Introduction to AIDE<a class="headerlink" href="#introduction-to-aide" title="Permalink to this headline">¶</a></h2>
 <p>AIDE is based on parametric design. The vast majority of the dimensions are calculated from hydraulic constraints. Pipe diameters are sometimes based on a head loss constraint, sometimes are designed to not break up flocs, and in the chemical doser are designed to ensure laminar flow. Wall thicknesses are based on the construction methods used by the implementation partner and vary based on the depth of water in the tank. Thus the filter has thicker walls than the clarifier.</p>
 <p>AIDE is built from many modular components that are all connected as a part studio tree. The entire water treatment plant is an example of a top level component, a parent, that has an entrance tank, flocculator, clarifier, and filter as children. Each of the children also has its own children. The entire part studio tree is assembled level by level in a way that allows the parent to know everything about all of the children and their children. This sharing of design parameters between components enables an integrated design and an optimized plant layout.</p>
 <p>All of the parts used to assemble the design originate in a parts database.  The database can be customized for different implementation partners so that the part dimensions and costs match their requirements.  The database approach to design ensures that when an alternative part is selected that all plant dimensions update to accommodate the new part dimensions.</p>
 <p>The AIDE configurable components are not engineering designs. AguaClara Reach uses AIDE configurable components, expertise in drinking water treatment, and site specific conditions detailed by AguaClara Implementation Partners to develop customized designs for community-scale water treatment plants.</p>
-</div>
-<div class="section" id="disclaimer">
-<span id="heading-disclaimer"></span><h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">¶</a></h2>
-<p>The configurable components created by AIDE are not engineering designs. The configurable components are provided for educational purposes. The configurable components create models that have not been reviewed and are likely NOT suitability for any particular application.</p>
-<p><strong>In no event shall AguaClara Reach, or their employees be liable to any party for direct, indirect, special, incidental, or consequential damages, including lost profits, arising out of the use of AIDE, even if AguaClara Reach may have been advised of the possibility of such damage.</strong></p>
 </div>
 <div class="section" id="using-aide-to-explore-aguaclara-technologies">
 <span id="heading-using-aide"></span><h2>Using AIDE to Explore AguaClara Technologies<a class="headerlink" href="#using-aide-to-explore-aguaclara-technologies" title="Permalink to this headline">¶</a></h2>
@@ -366,10 +367,15 @@
 <h2>Configurable Components User Survey<a class="headerlink" href="#configurable-components-user-survey" title="Permalink to this headline">¶</a></h2>
 <p>Please fill out the following survey to provide us with feedback on your experience exploring AIDE configurable components. We will use this feedback to improve the models with the goal of making them even easier to explore.</p>
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+<div class="section" id="how-aguaclara-reach-uses-aide">
+<h2>How AguaClara Reach Uses AIDE<a class="headerlink" href="#how-aguaclara-reach-uses-aide" title="Permalink to this headline">¶</a></h2>
+<p>AguaClara Reach (ACR) uses AIDE to provide Implementation Partners (IPs) with customized hydraulic designs. AguaClara Reach works with IPs to customize the AIDE parts database so that the design reflects construction practices and part availability in the IP’s region. This includes pipes and fittings from preferred vendors and custom dimensions used for the civil work based on the construction methods used by each Implementation Partner. ACR also provides training and technical support to IPs. The designs are also customized based on water quality.</p>
+<p>There are approximately 300 input parameters required to design a full AguaClara water treatment plant. In addition there are many hundreds of parts in the parts database that each require dimensions. AIDE makes it possible to modify both the parts database and the input parameters for each IP.</p>
+<p>ACR developed AIDE to reduce the time required to customize the designs and to make it possible to provide detailed designs quickly. AIDE has the additional benefit of enabling ACR to upgrade the design algorithms as new insights come in from both IPs and the AguaClara academic partners. New design algorithms can be deployed across the entire suite of AIDE components and updated designs can be provided to IPs when they are ready to adopt the new features.</p>
+</div>
 <div class="section" id="next-steps-for-potential-implementation-partners">
 <h2>Next Steps for Potential Implementation Partners<a class="headerlink" href="#next-steps-for-potential-implementation-partners" title="Permalink to this headline">¶</a></h2>
-<p>AguaClara Reach provides customized hydraulic designs, training, and technical support to AguaClara Implementation Partners. AguaClara Reach can add pipes and fittings from preferred vendors and customize the dimensions used for the civil work based on the construction methods used by each Implementation Partner.</p>
-<p>Please fill out the following survey if your organization is interested in becoming an AguaClara Implementation Partner. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. AguaClara Reach is ready to develop partnerships with both non-profit organizations and engineering firms.</p>
+<p>Please fill out the following survey if your organization is interested in becoming an AguaClara Implementation Partner. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. AguaClara Reach is ready to develop partnerships with both non-profit organizations and engineering firms. The types of services that ACR offers can be seen in the <a class="reference internal" href="ProjectProposal.html#title-first-project-proposal"><span class="std std-ref">Example First Project Proposal</span></a>. The <a class="reference internal" href="Specifications.html#title-aguaclara-specifications"><span class="std std-ref">AguaClara Specifications</span></a> are also available for IP reference.</p>
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdU7ZrWlnugDqEutdELWLoj5jq8JW6yzOeUg3Al4R7LUSYzRA/viewform?embedded=true" width="640" height="2500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
 </div>
 
