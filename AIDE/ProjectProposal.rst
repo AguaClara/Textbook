@@ -19,6 +19,7 @@ This draft proposal represents how AguaClara Reach (ACR) would work with a new I
 .. csv-table:: Abbreviations
    :header: "Abbreviation", "Description"
    :align: left
+   :widths: 10, 90
 
 
    ACR, AguaClara Reach
