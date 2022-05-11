@@ -173,14 +173,18 @@ Phase 1 Assumptions
 -------------------
 
 - IP will provide all Project Management Services including meeting preparation and facilitation.
+
 - IP shall establish the regulatory compliance roles and responsibilities and strategy for permit compliance at the initiation of the Preliminary Engineering Phase.
+
 - IP will add the PER sections provided by ACR to the PER.
 
 - IP will provide the Project Schedule.
+
 - IP will provide a site plan showing preferred location(s) of the new water treatment plant and the following:
 
-- Field verification of existing conditions
-- Completion of a topographic survey of the project area
+- IP will provide field verification of existing conditions
+
+- IP will provide a topographic survey of the project area
 
 - IP will provide a plan for an access road if necessary.
 
@@ -387,7 +391,7 @@ There are several areas of specialized knowledge for Phase 3, as detailed in :nu
    :widths: 30 10 60
 
 
-   Construction advisor, 3, "Construction methods for the civil work (weirs, hoppers, jet reverser, etc)"
+   Construction advisor, 3, "Construction methods for the civil work (weirs, hoppers, jet reverser, etc.)"
    AguaClara technician, 6, "Fabrication of hydraulic components (plate settler modules, diffusers, filter modules, etc.)
 
       - includes helping to set up the workshop
@@ -466,7 +470,7 @@ IP will provide an enclosed space where the tools (see :ref:`heading_Tool_List_f
 Access Road
 ~~~~~~~~~~~
 
-IP shall provide an access road to facilitate construction and operations
+IP shall provide an access road to facilitate construction and operations.
 
 Electricity
 ~~~~~~~~~~~
