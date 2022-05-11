@@ -31,7 +31,7 @@ In the :ref:`table below <table_AIDE_configurable_components>` are links to conf
 .. csv-table:: AIDE configurable components.
    :header: "Link to Onshape", "Description", "Time to generate model component (s)"
    :align: left
-   :widths: 30 60 10
+   :widths: 30 60 15
 
    |LFOM|, "Linear Flow Orifice Meter", 5
    |Doser|, "Chemical Dose Controller", 5
