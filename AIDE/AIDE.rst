@@ -43,6 +43,15 @@ In the :ref:`table below <table_AIDE_configurable_components>` are links to conf
    |OStaRS|, "OStaRS: Open Stacked Rapid Sand Filter", 25
    |20-80Lpsplant|, "20-80 L/s plant: Integrated plant for flows between 20 and 80 L/s", 180
 
+.. _heading_Disclaimer:
+
+Disclaimer
+==========
+
+The configurable components created by AIDE are not engineering designs. The configurable components are provided for educational purposes. The configurable components create models that have not been reviewed and are likely NOT suitability for any particular application.
+
+**In no event shall AguaClara Reach, or their employees be liable to any party for direct, indirect, special, incidental, or consequential damages, including lost profits, arising out of the use of AIDE, even if AguaClara Reach may have been advised of the possibility of such damage.**
+
 
 Introduction to AIDE
 ====================
@@ -55,14 +64,6 @@ All of the parts used to assemble the design originate in a parts database.  The
 
 The AIDE configurable components are not engineering designs. AguaClara Reach uses AIDE configurable components, expertise in drinking water treatment, and site specific conditions detailed by AguaClara Implementation Partners to develop customized designs for community-scale water treatment plants.
 
-.. _heading_Disclaimer:
-
-Disclaimer
-==========
-
-The configurable components created by AIDE are not engineering designs. The configurable components are provided for educational purposes. The configurable components create models that have not been reviewed and are likely NOT suitability for any particular application.
-
-**In no event shall AguaClara Reach, or their employees be liable to any party for direct, indirect, special, incidental, or consequential damages, including lost profits, arising out of the use of AIDE, even if AguaClara Reach may have been advised of the possibility of such damage.**
 
 .. _heading_Using_AIDE:
 
@@ -82,7 +83,6 @@ The bill of materials does not include internal components if *Show internal com
 
 If you would like to explore possible configurations, vary the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.
 
-
 Configurable Components User Survey
 ===================================
 
@@ -92,14 +92,19 @@ Please fill out the following survey to provide us with feedback on your experie
 
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
+How AguaClara Reach Uses AIDE
+=============================
 
+AguaClara Reach (ACR) uses AIDE to provide Implementation Partners (IPs) with customized hydraulic designs. AguaClara Reach works with IPs to customize the AIDE parts database so that the design reflects construction practices and part availability in the IP's region. This includes pipes and fittings from preferred vendors and custom dimensions used for the civil work based on the construction methods used by each Implementation Partner. ACR also provides training and technical support to IPs. The designs are also customized based on water quality.
+
+There are approximately 300 input parameters required to design a full AguaClara water treatment plant. In addition there are many hundreds of parts in the parts database that each require dimensions. AIDE makes it possible to modify both the parts database and the input parameters for each IP.
+
+ACR developed AIDE to reduce the time required to customize the designs and to make it possible to provide detailed designs quickly. AIDE has the additional benefit of enabling ACR to upgrade the design algorithms as new insights come in from both IPs and the AguaClara academic partners. New design algorithms can be deployed across the entire suite of AIDE components and updated designs can be provided to IPs when they are ready to adopt the new features.
 
 Next Steps for Potential Implementation Partners
 ================================================
 
-AguaClara Reach provides customized hydraulic designs, training, and technical support to AguaClara Implementation Partners. AguaClara Reach can add pipes and fittings from preferred vendors and customize the dimensions used for the civil work based on the construction methods used by each Implementation Partner.
-
-Please fill out the following survey if your organization is interested in becoming an AguaClara Implementation Partner. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. AguaClara Reach is ready to develop partnerships with both non-profit organizations and engineering firms.
+Please fill out the following survey if your organization is interested in becoming an AguaClara Implementation Partner. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. AguaClara Reach is ready to develop partnerships with both non-profit organizations and engineering firms. The types of services that ACR offers can be seen in the :ref:`title_First_Project_Proposal`. The :ref:`title_AguaClara_Specifications` are also available for IP reference.
 
 .. raw:: html
 
