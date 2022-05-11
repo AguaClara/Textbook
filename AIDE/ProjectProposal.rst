@@ -1,16 +1,16 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/Specifications.html" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/ProjectProposal.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
 
 .. _title_First_Project_Proposal:
 
-**********************
-First Project Proposal
-**********************
+******************************
+Example First Project Proposal
+******************************
 
 This draft proposal represents how AguaClara Reach (ACR) would work with a new Implementation Partner (IP) to provide hydraulic designs, technical support, training, and assistance in procuring components for the IP's **first** AguaClara plant project. It is anticipated that for subsequent projects the IP will require less technical assistance from ACR.
 
@@ -26,6 +26,7 @@ This draft proposal represents how AguaClara Reach (ACR) would work with a new I
    CAD, Computer Aided Design
    IP, Implementation Partner
    PER, Preliminary Engineering Report
+
 
 .. _heading_Preliminary_Engineering:
 
