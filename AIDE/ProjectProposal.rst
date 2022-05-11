@@ -12,7 +12,7 @@
 First Project Proposal
 ************************
 
-This draft proposal represents how AguaClara Reach (ACR) would work with a new Implementation Partner (IP) to provide hydraulic designs, technical support, training, and assistance procuring components.
+This draft proposal represents how AguaClara Reach (ACR) would work with a new Implementation Partner (IP) to provide hydraulic designs, technical support, training, and assistance in procuring components for the IP's **first** AguaClara plant project. It is anticipated that for subsequent projects the IP will require less technical assistance from ACR.
 
 .. _table_Abbreviations:
 
@@ -25,8 +25,6 @@ This draft proposal represents how AguaClara Reach (ACR) would work with a new I
    APP, Agua Para el Pueblo
    CAD, Computer Aided Design
    IP, Implementation Partner
-   LPS, Liters per second
-   LPD, Liters per day
    PER, Preliminary Engineering Report
 
 
@@ -52,8 +50,6 @@ This project consists of the design and construction of a drinking water treatme
 The AguaClara treatment process design will include electricity-free chemical feed of coagulant and chlorine, flocculation, clarification, filtration, and disinfection. If required for water conservation, ACR will provide a design for backwash recycling that will require a small pump.
 
 IP and ACR shall further update and refine the purpose of this project and its relation to system-wide water provisions following the Kickoff Meeting. 
-
-
 
 Task 1.2 Conditions Assessment
 ------------------------------
@@ -216,20 +212,20 @@ The Onshape 3-D model will include a bill of materials and a cut list for materi
 
    - Flow measurement columns
    - Constant level tanks
-   - AguaClara doser
+   - AguaClara doser |Doser|
 
-- Entrance tank
+- Entrance tank |EntranceTank|
 
    - Trash rack
    - Grit removal hoppers
-   - Linear flow orifice meter for plant flow rate measurement
+   - Linear flow orifice meter for plant flow rate measurement |LFOM|
 
-- Hydraulic flocculator
+- Hydraulic flocculator |FlocculatorHV|
 
    - Baffle modules for uniform velocity gradients
    - Valveless drain system
 
-- Clarifier
+- Clarifier |Clarifier|
 
    - Inlet channel with valveless isolation of individual tanks
    - Inlet manifold and diffusers
@@ -238,7 +234,7 @@ The Onshape 3-D model will include a bill of materials and a cut list for materi
    - Outlet manifold
    - Outlet channel with level control weir
 
-- Stacked rapid sand (StaRS) filter
+- Stacked rapid sand (StaRS) filter |OStaRS|
 
    - Self backwashing hydraulic control system
    - 6-layer filter system
@@ -335,7 +331,7 @@ Phase 3 - Construction, Installation, Training, Commissioning
 Task 3.1 Project Site Staffing
 ------------------------------
 
-There are several areas of specialized knowledge for Phase 3, as detailed in\ `Table 3 <#tab_expertise>`__\ , that can most effectively be transferred to IP by experienced staff who have built plants in Central America.
+There are several areas of specialized knowledge for Phase 3, as detailed in :numref:`table_Expertise`, that can most effectively be transferred to IP by experienced staff who have built plants in Central America.
 
 .. _table_Expertise:
 
@@ -425,3 +421,40 @@ Although AguaClara plants can be operated off-grid there are several critical po
 The electricity needs for operation could be met by connecting the plant to the electrical grid or by adding solar panels to the roof. IP is responsible for selecting and installing the best option. 
 
 Emergency operation without power could be facilitated by discontinuing backwash recycle. IP is responsible for provision of emergency lighting during power failures.
+
+.. |LFOM| image:: https://cad.onshape.com/api/thumbnails/d/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/e/c063acb14de8f1f558b02d2d?configuration=HL_min%3D0.2%2Bmeter%3BND_max%3D12.0%3BQm_max%3D5.0%3BTEMP_min%3D10.0%3BdrillD_max%3D0.1%2Bmeter%3BprintParams%3Dfalse&renderMode=0&uiState=626fea458d39dd1e3b6106e1
+
+.. |Doser| image:: https://cad.onshape.com/api/thumbnails/d/e71bb0c05d9e7241822776b7/w/533d9612b07de271291829dc/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/e71bb0c05d9e7241822776b7/w/533d9612b07de271291829dc/e/20f111b627e4c6d59c3f0ff9?configuration=HL_max%3D0.2%2Bmeter%3BQ_pi%3D1.0%3BchlorineC_pi%3D0.6%3BcoagC_pi%3D0.5%3BprintParams%3Dfalse%3Brep%3Dtrue%3BtankOW%3D1.0%2Bmeter&renderMode=0&uiState=6273e0ecd685467dff5c17c4
+
+.. |EntranceTank| image:: https://cad.onshape.com/api/thumbnails/d/4c47a124da3abec33e0ce813/w/3955cd0d266daedd3eabf165/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/4c47a124da3abec33e0ce813/w/3955cd0d266daedd3eabf165/e/bcf152c5be02d9ab5b2b5285?configuration=L%3D8.0%2Bmeter%3BQm_max%3D40.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D10.0%3BcaptureVm%3D20.0%3BflocUpstreamHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dtrue&renderMode=0&uiState=626fea87ee1eae4ff2291321
+
+
+.. |FlocculatorVH| image:: https://cad.onshape.com/api/thumbnails/d/673077f4fa843a817d4cd55d/w/8bd189f4769c2a64aa07a8c0/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/673077f4fa843a817d4cd55d/w/8bd189f4769c2a64aa07a8c0/e/cdc0c6cfa0e8b64f179ced51?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BQm_max%3D1.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D5.0%3BoutletHW%3D1.7%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dtrue&renderMode=0&uiState=626feb5ffb767608344ad1ad
+
+.. |FlocculatorHV| image:: https://cad.onshape.com/api/thumbnails/d/9742e8c019b742df4ae4db85/w/cbe4d0f58d318c45281687ae/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/9742e8c019b742df4ae4db85/w/cbe4d0f58d318c45281687ae/e/05162587e7127122572d3a10?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BL%3D6.0%2Bmeter%3BQm_max%3D30.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D25.0%3BoutletHW%3D2.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dtrue&renderMode=0&uiState=626feb168bd195153bbbe9af
+
+.. |FlocculatorHH| image:: https://cad.onshape.com/api/thumbnails/d/84c4c94f9773b67506cd35bb/w/58a1f53fe5ebbbbc808a3541/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/84c4c94f9773b67506cd35bb/w/58a1f53fe5ebbbbc808a3541/e/aa5906755ba02b0a3925ec10?configuration=GT_min%3D35000.0%3BG_bod%3D50.0%3BQm_max%3D200.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D0.0%3BoutletHW%3D3.0%2Bmeter%3BprintParams%3Dfalse%3Brep%3Dtrue&renderMode=0&uiState=626fead687c54745ef4c039f
+
+.. |Clarifier| image:: https://cad.onshape.com/api/thumbnails/d/e05915c533ee7568c402981a/w/56de4202f426e6443151ca07/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/e05915c533ee7568c402981a/w/56de4202f426e6443151ca07/e/3f94eabd115787bc33ae755d?configuration=G_max%3D140.0%3BQm_max%3D20.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D10.0%3BcaptureVm%3D0.12%3BprintParams%3Dfalse%3Brep%3Dtrue%3BrepBayInternals%3Dfalse%3BupVm%3D1.0&renderMode=0&uiState=627688ef04309300574a09f6
+
+.. |OStaRS| image:: https://cad.onshape.com/api/thumbnails/d/8a1a990f01575e6e5eed1922/w/3811cfb89da77b076395fdc0/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/8a1a990f01575e6e5eed1922/w/3811cfb89da77b076395fdc0/e/fd576f076cd3757b426c7f20?configuration=Qm_max%3D20.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D10.0%3BfilterHL_pi%3D0.5%3BfilterMode%3Dfalse%3BprintParams%3Dfalse%3Brep%3Dtrue%3BrepBayInternals%3Dfalse%3BrepInternalPiping%3Dfalse%3BspareFilter%3Dfalse&renderMode=0&uiState=6276885764a43e34bd8c13b9
+
+.. |20-80Lpsplant| image:: https://cad.onshape.com/api/thumbnails/d/0e9ede93e11e5a54f68f8606/w/2744164cc6e56e3693a3190f/s/300x170
+  :width: 100
+  :target: https://cad.onshape.com/documents/0e9ede93e11e5a54f68f8606/w/2744164cc6e56e3693a3190f/e/723e9e9d93f3008c9815e2d6?configuration=Qm_max%3D40.0%3BShow_Internal_Components%3Dfalse%3BTEMP_min%3D10.0%3BprintParams%3Dfalse%3Brep%3Dfalse&renderMode=0&uiState=626fedaca473381cd632eede
