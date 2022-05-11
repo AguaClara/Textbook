@@ -1,16 +1,16 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/Specifications.html" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/ProjectProposal.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
 
 .. _title_First_Project_Proposal:
 
-**********************
-First Project Proposal
-**********************
+******************************
+Example First Project Proposal
+******************************
 
 This draft proposal represents how AguaClara Reach (ACR) would work with a new Implementation Partner (IP) to provide hydraulic designs, technical support, training, and assistance in procuring components for the IP's **first** AguaClara plant project. It is anticipated that for subsequent projects the IP will require less technical assistance from ACR.
 
@@ -26,6 +26,7 @@ This draft proposal represents how AguaClara Reach (ACR) would work with a new I
    CAD, Computer Aided Design
    IP, Implementation Partner
    PER, Preliminary Engineering Report
+
 
 .. _heading_Preliminary_Engineering:
 
@@ -143,18 +144,21 @@ Attachments
 - Drawings
 
    - Hydraulic profile
+
    - Liquids and solids process flow diagrams
+
    - Example architectural floor plans from previous projects
+
    - Example floor plans and sections
 
 - Preliminary equipment and valve List
 
 - Cost estimates
 
-   - Materials and supplies with basis of estimate report (co-developed
-   with IP)
-   - Operation and maintenance cost breakdown by category included
-   (chemical and equipment usage)
+   - Materials and supplies with basis of estimate report (co-developed with IP)
+
+   - Operation and maintenance cost breakdown by category including chemical and equipment usage
+
 
 .. _heading_PER_Workshops:
 
@@ -314,11 +318,10 @@ Task 2.8 Webinars
 ACR will provide the following remote hour-long webinars for IP staff
 
 - AguaClara: flow through the plant and treatment process overview
-- Introduction to Onshape (and why ACR chose Onshape as the platform
-   for our designs)
-- AguaClara Infrastructure Design Engine: from a parts database,
-   process physics, and geometric constraints to a 3-D model and a bill
-   of materials
+
+- Introduction to Onshape (and why ACR chose Onshape as the platform for our designs)
+
+- AguaClara Infrastructure Design Engine: from a parts database, process physics, and geometric constraints to a 3-D model and a bill of materials
 
 Additional webinars can be requested if needed.
 
@@ -330,27 +333,37 @@ Phase 2 Assumptions
 IP will be responsible for the following tasks.
 
 Staffing
+~~~~~~~~
 
 - IP will facilitate support with any necessary visas in preparation for Phase 3.
+
 - IP will prepare to provide plant operators from the start of construction through commissioning to work with the APP AguaClara technician.
 
 Structural and Architectural Design, Site Constraints, and Access Road
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - IP will provide final thickness (and possibly unit costs) of structural elements as required by the hydraulic design. These will include slabs, suspended slabs, tank walls for various water depths, and weirs. ACR will add these items to our parts database for customization of the hydraulic design for IP.
+
 - IP will inform ACR of any site constraints that would influence plant layout.
+
 - IP will design an access road and a temporary construction site building to store construction materials.
 
 - IP will create the structural and architectural design.
+
 - IP will create the required construction and fabrication drawings from the Onshape model provided by ACR. The Onshape model can either be exported for use in other CAD programs or the drawings can be created directly in Onshape.
 
 AguaClara plants require a full building enclosure, built to local code and in consideration of appropriate structural, electrical, mechanical and other considerations appropriate to the locale. The enclosure serves to extend the life of the components and to provide a safe work environment for the plant operators. The enclosure will protect:
 
 - the hydraulic components from direct sunlight that would degrade the plastics;
+
 - the plant operators from adverse weather and intruders;
+
 - the granular coagulants from rain;
+
 - the clarifier with a floc filter from sunlight, wind, and rain that would cause thermal/density currents and increase the clarified water turbidity.
 
 Material Sourcing for Construction and Operation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 IP will prepare to source construction materials, chemicals including the coagulant and calcium hypochlorite required for plant operations, and required water quality meters (at minimum a portable turbidity meter).
 
@@ -371,10 +384,12 @@ There are several areas of specialized knowledge for Phase 3, as detailed in :nu
 .. csv-table:: Expertise required for civil work and hydraulic components
    :header: Role, months, Area of expertise
    :align: left
+   :widths: 30 10 60
 
 
    Construction advisor, 3, "Construction methods for the civil work (weirs, hoppers, jet reverser, etc)"
    AguaClara technician, 6, "Fabrication of hydraulic components (plate settler modules, diffusers, filter modules, etc.)
+
       - includes helping to set up the workshop
       - Operator training
       - Installation of hydraulic components in the plant
@@ -418,6 +433,7 @@ ACR will provide the following remote hour-long training sessions (total of 5 ho
 This training could be exclusively for IP staff or it could be extended to include water professionals from the region. ACR also welcomes IP recommendations for additional training.
 
 .. _heading_Phase_3_Assumptions:
+
 Phase 3 Assumptions
 -------------------
 
@@ -425,6 +441,7 @@ Staffing
 ~~~~~~~~
 
 - IP will identify individuals that they want to be trained as construction foreman and AguaClara technician so that IP has these capabilities in-house for future projects.
+
 - IP plant operators will be responsible for plant operation as soon as the plant begins operating. This includes during the initial startup and commissioning.
 
 Transport to site
@@ -436,18 +453,20 @@ Material acquisition
 ~~~~~~~~~~~~~~~~~~~~
 
 - IP will be responsible for acquiring materials for both the civil work and for the hydraulic components.
+
 - IP will be responsible for acquiring the tools as detailed in :ref:`heading_Tool_List_for_Fabrication`.
+
 - IP is responsible for all freight, customs and duty charges.
 
 Fabrication Workshop
 ~~~~~~~~~~~~~~~~~~~~
 
-- IP will provide an enclosed space where the tools (see :ref:`heading_Tool_List_for_Fabrication`) can be setup and the hydraulic components can be fabricated. The workshop can either be adjoining the plant construction site or it can be at a more convenient location for electricity and for the workers. The workshop will be used to assemble hydraulic components including flocculator baffle modules, settler modules, manifolds, and filter piping. The workshop should have dimensions of at least 12 m x 5 m and will require electricity and lighting.
+IP will provide an enclosed space where the tools (see :ref:`heading_Tool_List_for_Fabrication`) can be setup and the hydraulic components can be fabricated. The workshop can either be adjoining the plant construction site or it can be at a more convenient location for electricity and for the workers. The workshop will be used to assemble hydraulic components including flocculator baffle modules, settler modules, manifolds, and filter piping. The workshop should have dimensions of at least 12 m x 5 m and will require electricity and lighting.
 
 Access Road
 ~~~~~~~~~~~
 
-- IP shall provide an access road to facilitate construction and operations
+IP shall provide an access road to facilitate construction and operations
 
 Electricity
 ~~~~~~~~~~~
@@ -455,13 +474,17 @@ Electricity
 Construction activities require electricity for:
 
 - power tools
+
 - lighting
+
 - charging batteries
 
 Although AguaClara plants can be operated off-grid there are several critical power requirements for operation:
 
 - Lighting for nighttime operations
+
 - Charging station for cell phones
+
 - Backwash recycle (option that ACR recommends if there are water shortages in the dry season).
 
 The electricity needs for operation could be met by connecting the plant to the electrical grid or by adding solar panels to the roof. IP is responsible for selecting and installing the best option. 
