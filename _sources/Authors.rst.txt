@@ -24,6 +24,7 @@ This text is a collaborative effort involving hundreds of people. Innovation req
 - Anna Doyle
 - Susan McGrattan
 - Emily Wood
+- Andrew Pennock
 
 Reviewers have contributed by catching errors and suggesting improvements. Reviewers include:
 
