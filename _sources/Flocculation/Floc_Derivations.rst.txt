@@ -106,14 +106,35 @@ Equation :eq:`baffle_unexpanded_velocity_ratio` has a minimum value of 1 represe
 Equation :eq:`K_baffle_expanding_messy` can be simplified to obtain
 
 .. math::
-  :label: K_baffle_expanding
+  :label: K_baffle_expanding_guess
 
    K_{baffle_{exp}} = \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_{e}S}}\right) ^ 2
 
-Equation :eq:`K_baffle_expanding` incorporates two assumptions that need to be checked with computational fluid dynamics.
+Equation :eq:`K_baffle_expanding_guess` incorporates two assumptions that need to be checked with computational fluid dynamics.
 
-1. The :math:`\Pi_{PlaneJet_{exp}}` may be missing a correction to account for the slower jet expansion along the baffle that is in contact with the jet.
-1. The distance for the jet to expand may be greater or less than :math:`H_e`.
+#. The :math:`\Pi_{PlaneJet_{exp}}` may be missing a correction to account for the slower jet expansion along the baffle that is in contact with the jet.
+
+#. The distance for the jet to expand may be greater or less than :math:`H_e`.
+
+Andrew Pennock conducted CFD analysis (see :numref:`figure_K_baffle_CFD`) to estimate the baffle loss coefficient as a function of the :math:`\Pi_{H_{e}S}` (see :numref:`figure_K_baffle`) and used error minimization to estimate the previous two factors. The jet expansion rate was found to be significantly less than :math:`\Pi_{PlaneJet_{exp}}`. The expansion rate between two baffles, :math:`\Pi_{BaffleJet_{exp}}`, had a value of 0.078.
+
+.. _figure_K_baffle_CFD:
+
+.. figure:: ../Images/K_baffle_CFD.png
+   :align: center
+   :width: 500px
+   :alt: CFD vc baffle
+
+   CFD analysis of flow around baffles with :math:`\Pi_{H_{e}S} = 8` showing the gradual flow expansion and return to a nearly uniform velocity before making the next bend (Andrew Pennock, 2022).
+
+The dimensionless distance for the jet to fully expand was found to be :math:`\Pi_{H_{e}S} + 2`. Finally, the :math:`\Pi_{vc}^{baffle}` was estimated to be 0.366. Equation :eq:`K_baffle_expanding_guess` can now be corrected given the CFD results to obtain
+
+
+.. math::
+  :label: K_baffle_expanding
+
+   K_{baffle_{exp}} = \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{BaffleJet_{exp}} (\Pi_{H_{e}S} + 2)}\right) ^ 2
+
 
 .. _figure_K_baffle:
 
@@ -122,9 +143,9 @@ Equation :eq:`K_baffle_expanding` incorporates two assumptions that need to be c
    :width: 300px
    :alt: CFD vc baffle
 
-   Baffle minor loss coefficient (Equation :eq:`K_baffle_expanding`) is predicted to increase rapidly as the H/S ratio decreases.
+   Baffle minor loss coefficient (Equation :eq:`K_baffle_expanding`) was fit to the CFD analysis by Andrew Pennock.
 
-:numref:`figure_K_baffle` reveals that the baffle minor loss coefficient increases rapidly as :math:`\Pi_{H_{e}S}` decreases below about 5.6. This suggests that estimating the baffle minor loss coefficient correctly will be critical and more difficult for low values of :math:`\Pi_{H_{e}S}`.
+:numref:`figure_K_baffle` reveals that the baffle minor loss coefficient increases rapidly as :math:`\Pi_{H_{e}S}` decreases below about 6.
 
 
 Linking head loss, velocity gradient, and geometry
