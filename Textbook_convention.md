@@ -26,7 +26,7 @@ Whenever a new equation is introduced, it should be followed by a list explainin
 $$Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}$$
 
 Where:  
-$\Pi_{vc}$ = 0.62 = vena contracta coefficient, in aide_design as `pc.VC_ORIFICE_RATIO`  
+$\Pi_{vc}$ = 0.62 = *vena contracta* coefficient, in aide_design as `pc.VC_ORIFICE_RATIO`  
 $A_{or}$ = orifice area- NOT contracted flow area  
 $\Delta h$ = elevation difference between orifice and water level
 

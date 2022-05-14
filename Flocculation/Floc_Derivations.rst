@@ -61,7 +61,7 @@ The maximum width of the expanding jet, :math:`W_{jet_{max}}`, occurs immediatel
 
   W_{jet_{min}} = W_{jet_{max}} \Pi_{vc}^{baffle}
 
-Similarly the maximum jet width is determined by how much it can expand in distance :math:`L_{jet}`.
+where :math:`\Pi_{vc}^{baffle}` is given by Equation :eq:`theta_slot_vena_contracta_analytical` with an angle of :math:`\pi`. :math:`\Pi_{vc}^{baffle}` has a value of 0.3733.  The maximum jet width is determined by how much it can expand in distance :math:`L_{jet}`.
 
 .. math::
   :label: W_jet_max_of_W_jet_min
@@ -116,7 +116,7 @@ Equation :eq:`K_baffle_expanding_guess` incorporates two assumptions that need t
 
 #. The distance for the jet to expand may be greater or less than :math:`H_e`.
 
-Andrew Pennock conducted CFD analysis (see :numref:`figure_K_baffle_CFD`) to estimate the baffle loss coefficient as a function of the :math:`\Pi_{H_{e}S}` (see :numref:`figure_K_baffle`) and used error minimization to estimate the previous two factors. The jet expansion rate was found to be significantly less than :math:`\Pi_{PlaneJet_{exp}}`. The expansion rate between two baffles, :math:`\Pi_{BaffleJet_{exp}}`, had a value of 0.078.
+Andrew Pennock conducted CFD analysis (see :numref:`figure_K_baffle_CFD`) to estimate the baffle loss coefficient as a function of the :math:`\Pi_{H_{e}S}` (see :numref:`figure_K_baffle`) and used error minimization to estimate the previous two factors. The jet expansion rate was found to be significantly less than :math:`\Pi_{PlaneJet_{exp}}`. The expansion rate between two baffles, :math:`\Pi_{BaffleJet_{exp}}`, had a value of approximately :math:`0.5 \Pi_{PlaneJet_{exp}}`. This result is consistent with the idea that the jet is expanding into the zone of recirculation and is not expanding on the side of the jet that is against the baffle.
 
 .. _figure_K_baffle_CFD:
 
@@ -127,7 +127,7 @@ Andrew Pennock conducted CFD analysis (see :numref:`figure_K_baffle_CFD`) to est
 
    CFD analysis of flow around baffles with :math:`\Pi_{H_{e}S} = 8` showing the gradual flow expansion and return to a nearly uniform velocity before making the next bend (Andrew Pennock, 2022).
 
-The dimensionless distance for the jet to fully expand was found to be :math:`\Pi_{H_{e}S} + 2`. Finally, the :math:`\Pi_{vc}^{baffle}` was estimated to be 0.366. Equation :eq:`K_baffle_expanding_guess` can now be corrected given the CFD results to obtain
+The dimensionless distance for the jet to fully expand was found to be approximately :math:`\Pi_{H_{e}S} + 2`. Finally, the :math:`\Pi_{vc}^{baffle}` was estimated to be 0.366. Equation :eq:`K_baffle_expanding_guess` can now be corrected given the CFD results to obtain
 
 
 .. math::
