@@ -125,17 +125,16 @@ Finally, our fabricated equivalence, :math:`\frac{Q_0}{A_{Tank}} = \frac{h_{Tank
 .. math::
   :label: Q_tank_with_valve
 
-  \color{purple}{
+
   \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}
-   }
+
 
 Which can be slightly rearranged to yield:
 
 .. math::
 
-  \color{purple}{
    Q(t) = Q_0 \left( 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0} \right)
-   }
+
 
 | Such that:
 | :math:`Q = Q(t)` = flow of hypochlorite through valve at time :math:`t`
@@ -194,17 +193,13 @@ Finally, we arrive at the equation for drain pipe sizing:
 
 .. math::
 
-  \color{purple}{
    D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} \left( \frac{H_{Tank} \sum K}{2g} \right)^{\frac{1}{4}}
-   }
 
 We can also easily rearrange to find the time required to drain a tank given a drain diameter:
 
 .. math::
 
-  \color{purple}{
    t_{Drain} = \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} \sqrt{ \frac{H_{Tank} \sum K}{2g} }
-   }
 
 Such that the variables are as the appear in the image below.
 
@@ -334,7 +329,7 @@ Here is a plot of the three colored equations above. Our goal is to minimize the
 
 Designing for the Error Constraint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. important:: The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), :math:`\color{purple}{\bar v_{Max} }`.
+.. important:: The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), :math:`{\bar v_{Max} }`.
 
 Minor losses will never be 0, so how much error in our linearity are we willing to accept? Let’s define a new parameter, :math:`\Pi_{Error}`, as the maximum amount of error we are willing to accept. We are ok with 10% error or less, so :math:`\Pi_{Error} = 0.1`.
 
@@ -389,17 +384,16 @@ Unfortunately, both :math:`L_{Min, \, \Pi_{Error}}` and :math:`Q_{Max}` are unkn
 
 .. seealso:: **Function in aguaclara** ``cdc.max_linear_flow(Diam, HeadlossCDC, Ratio_Error, KMinor)`` Returns the maximum flow :math:`Q_{Max}` that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.
 
-From this equation for :math:`Q_{Max}`, we can get to our first design equation, :math:`\color{purple}{\bar v_{Max}}` by using the continuity Equation :math:`\bar v_{Max} = \frac{Q_{Max}}{\frac{\pi D^2}{4}}`
+From this equation for :math:`Q_{Max}`, we can get to our first design equation, :math:`{\bar v_{Max}}` by using the continuity Equation :math:`\bar v_{Max} = \frac{Q_{Max}}{\frac{\pi D^2}{4}}`
 
 .. math::
 
-  \color{purple}{
+
   \bar v_{Max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}
-     }
 
 Designing for Head Loss
 ^^^^^^^^^^^^^^^^^^^^^^^^
-.. important:: The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), :math:`\color{purple}{L_{Min} }`.
+.. important:: The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), :math:`{L_{Min}`.
 
 We previously derived an equation for the minimum length of the dosing tube(s), :math:`L_{Min, \, \Pi_{Error}}`, which was the minimum length needed to ensure that our linearity constraint was met. This equation is shown again below, in red:
 
@@ -426,9 +420,9 @@ Now that we know all of the parameters in this equation except for :math:`L`, we
      L_{Min, \, head loss} = L = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)
      }
 
-.. seealso:: **Function in aguaclara:** ``cdc._length_cdc_tube_array(FlowPlant, ConcDoseMax, ConcStock, DiamTubeAvail, HeadlossCDC, temp, en_chem, KMinor)`` Returns :math:`\color{purple}{L_{Min}}`, takes in the flow rate input of *plant design flow rate*.
+.. seealso:: **Function in aguaclara:** ``cdc._length_cdc_tube_array(FlowPlant, ConcDoseMax, ConcStock, DiamTubeAvail, HeadlossCDC, temp, en_chem, KMinor)`` Returns :math:`{L_{Min}`, takes in the flow rate input of *plant design flow rate*.
 
-.. seealso:: **Function in aguaclara:** ``cdc._len_tube(Flow, Diam, HeadLoss, conc_chem, temp, en_chem, KMinor)`` Returns :math:`\color{purple}{L_{Min}}`, takes in the flow rate input of *max flow rate through the dosing tube(s)*.
+.. seealso:: **Function in aguaclara:** ``cdc._len_tube(Flow, Diam, HeadLoss, conc_chem, temp, en_chem, KMinor)`` Returns :math:`{L_{Min}`, takes in the flow rate input of *max flow rate through the dosing tube(s)*.
 
 If you decrease the max flow :math:`Q_{Max}` and hold :math:`h_{L_{Max}}` constant, :math:`\color{green}{L_{Min, \, head loss}}` becomes larger. This means that a CDC system for a plant of 40 :math:`\frac{L}{s}` must be different than one for a plant of 20 :math:`\frac{L}{s}`. If we want to maintain the same head loss at maximum flow in both plants, then the dosing tube(s) will need to be a lot longer for the 20 :math:`\frac{L}{s}` plant.
 
@@ -447,13 +441,11 @@ As you can see, the head loss constraint is more limiting than the linearity con
 
 .. math::
 
-  \color{purple}{
    L_{Min} = L_{Min, \, head loss} = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)
-   }
 
 
 
-The equations for :math:`\color{purple}{\bar v_{Max}}` and :math:`\color{purple}{L_{Min}}` are the only ones you **need** to manually design a CDC.
+The equations for :math:`\bar v_{Max}` and :math:`L_{Min}` are the only ones you **need** to manually design a CDC.
 
 
 Designing for Dosing Tube Diameter

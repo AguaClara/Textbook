@@ -36,11 +36,11 @@ A Brief Design Challenge guide
 Vertical Orifice Equation
 =========================
 
-**1)** Find the vena contracta (VC) coefficient ratio for an orifice in the expert_inputs and print the result in a sentence. Please display 2 significant figures.
+**1)** Find the *vena contracta* (VC) coefficient ratio for an orifice in the expert_inputs and print the result in a sentence. Please display 2 significant figures.
 
 `Solution Here  adding <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=CZ5G4LzBRz6y&line=1&uniqifier=1>`_
 
-The vena contracta coefficient for an orifice is 0.63.
+The *vena contracta* coefficient for an orifice is 0.63.
 
 **2)** The simple orifice Equation :math:`Q = {\Pi _{vc}}{A_{or}}\sqrt {2g\Delta h}` that we normally use is not applicable for vertically oriented orifices that are partially or barely submerged. The `USGS published a great solution <https://il.water.usgs.gov/proj/feq/fequtl98.i2h/4_7aupdate.html>`__ for flow through partially submerged vertically oriented orifices. AguaClara uses a general solution for a vertically oriented orifice, which is available in the physchem file as ``pc.flow_orifice_vert``. That function handles vertically oriented orifices even if they are only partially submerged.
 
