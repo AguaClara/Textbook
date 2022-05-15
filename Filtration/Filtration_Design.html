@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Open Stacked Rapid Sand Filter Design &mdash; AguaClara Textbook v1.3.35 documentation</title>
+  <title>Open Stacked Rapid Sand Filter Design &mdash; AguaClara Textbook v1.3.36 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.35
+                v1.3.36
               </div>
             
           
@@ -320,7 +320,7 @@
 <div class="section" id="side-exit-sharp-crested-weir">
 <h3>Side Exit Sharp Crested Weir<a class="headerlink" href="#side-exit-sharp-crested-weir" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight" id="equation-sharp-weir-q-of-channel-depth">
-<span class="eqno">(674)<a class="headerlink" href="#equation-sharp-weir-q-of-channel-depth" title="Permalink to this equation">¶</a></span>\[ Q = \Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{channel}\right)^\frac{3}{2}\]</div>
+<span class="eqno">(673)<a class="headerlink" href="#equation-sharp-weir-q-of-channel-depth" title="Permalink to this equation">¶</a></span>\[ Q = \Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{channel}\right)^\frac{3}{2}\]</div>
 <p>where <span class="math notranslate nohighlight">\(H_{channel}\)</span> is the height of the water in the channel above the top of the weir. (see equation 10.30 in Fundamentals of Fluid Mechanics, Fifth Edition by Munson, Young, and Okiishi)</p>
 </div>
 <div class="section" id="inlet-channel-design-for-equal-filter-flow">
@@ -328,17 +328,17 @@
 <p>We will simplify this manifold problem by assuming that the average water height in the channel above the weirs corresponds to the average flow across the weirs and that the upstream depth is decreased by 1/2 of the channel velocity head and the downstream depth is increased by 1/2 the channel velocity head.</p>
 <p>The ratio of flows from the first filter and the last filter in the channel is given by</p>
 <div class="math notranslate nohighlight" id="equation-sharp-weir-flow-ratio-messy">
-<span class="eqno">(675)<a class="headerlink" href="#equation-sharp-weir-flow-ratio-messy" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{weir}} = \frac{Q_{Filter_1}}{Q_{Filter_n}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span> is the average height of water in the channel relative to the top of the weir. Equation <a class="reference internal" href="#equation-sharp-weir-flow-ratio-messy">(675)</a> simplifies to</p>
+<span class="eqno">(674)<a class="headerlink" href="#equation-sharp-weir-flow-ratio-messy" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{weir}} = \frac{Q_{Filter_1}}{Q_{Filter_n}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span> is the average height of water in the channel relative to the top of the weir. Equation <a class="reference internal" href="#equation-sharp-weir-flow-ratio-messy">(674)</a> simplifies to</p>
 <div class="math notranslate nohighlight" id="equation-sharp-weir-flow-ratio1">
-<span class="eqno">(676)<a class="headerlink" href="#equation-sharp-weir-flow-ratio1" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{weir}} = \frac{ \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}\]</div>
+<span class="eqno">(675)<a class="headerlink" href="#equation-sharp-weir-flow-ratio1" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{weir}} = \frac{ \left(\bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}{\left(\bar H_{channel} + \frac{\bar v_{M_1}^2}{4g}\right)^\frac{3}{2}}\]</div>
 <p>The slower the velocity in the channel the more uniform the flow distribution will be between the filters.</p>
 <p>Solve for the maximum velocity in the channel given the average depth of water above the weirs and the required flow distribution.</p>
 <div class="math notranslate nohighlight" id="equation-sharp-weir-flow-ratio2">
-<span class="eqno">(677)<a class="headerlink" href="#equation-sharp-weir-flow-ratio2" title="Permalink to this equation">¶</a></span>\[ \bar H_{channel}\Pi_{Q_{weir}}^\frac{2}{3} + \frac{\bar v_{M_1}^2}{4g}\Pi_{Q_{weir}}^\frac{2}{3}= { \bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}}\]</div>
+<span class="eqno">(676)<a class="headerlink" href="#equation-sharp-weir-flow-ratio2" title="Permalink to this equation">¶</a></span>\[ \bar H_{channel}\Pi_{Q_{weir}}^\frac{2}{3} + \frac{\bar v_{M_1}^2}{4g}\Pi_{Q_{weir}}^\frac{2}{3}= { \bar H_{channel} - \frac{\bar v_{M_1}^2}{4g}}\]</div>
 <p>Now we can solve for maximum manifold channel velocity.</p>
 <div class="math notranslate nohighlight" id="equation-inlet-channel-v-max">
-<span class="eqno">(678)<a class="headerlink" href="#equation-inlet-channel-v-max" title="Permalink to this equation">¶</a></span>\[\bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_{Q_{weir}}^\frac{2}{3}\right)}{\left(\Pi_{Q_{weir}}^\frac{2}{3} + 1\right)}}\]</div>
+<span class="eqno">(677)<a class="headerlink" href="#equation-inlet-channel-v-max" title="Permalink to this equation">¶</a></span>\[\bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_{Q_{weir}}^\frac{2}{3}\right)}{\left(\Pi_{Q_{weir}}^\frac{2}{3} + 1\right)}}\]</div>
 <p>The channel depth of water above the weir, <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span>, and the flow uniformity target set the maximum velocity in the manifold channel (see <a class="reference internal" href="#figure-filter-channel-v-max"><span class="std std-numref">Fig. 211</span></a>).</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=MyYpzYxOU5px&amp;line=5&amp;uniqifier=1">Generate the following plot</a></p>
 <div class="figure align-center" id="id4">
@@ -350,12 +350,12 @@
 <h3>Backwash Weir Slot Design<a class="headerlink" href="#backwash-weir-slot-design" title="Permalink to this headline">¶</a></h3>
 <p>The goal of the backwash weir slot is to provide close to the design flow rate to a filter while it is in backwash mode. To accomplish this the wide gate weir is opened and the weir slot controls the flow of water into the inlet box. During backwash the water level in the inlet box is much lower and thus the backwash weir slot can extend deep into the box. The design constraint for this slot is that it must deliver the design flow when the water level in the inlet channel is at the design flow height and it must deliver at least 80% of the design flow  when there is no flow going to any of the other filters. The difference in water level between the two cases is <span class="math notranslate nohighlight">\(H_{channel}\)</span> because this is the height of water flowing over the wide weir at the design flow rate. The height of the slot, <span class="math notranslate nohighlight">\(H_{slot}\)</span>, is measured relative to the design flow water level in the inlet channel.</p>
 <p>This design will result in more water available for backwash than is absolutely needed and if it turns out that too much water is directed to this filter than the bottom of the slot can be elevated by adding a few stop logs.</p>
-<p>The equation is based on the sharp crested weir (Equation <a class="reference internal" href="#equation-sharp-weir-q-of-channel-depth">(674)</a>). The head loss through the gate weir should be subtracted from both the top and bottom terms</p>
+<p>The equation is based on the sharp crested weir (Equation <a class="reference internal" href="#equation-sharp-weir-q-of-channel-depth">(673)</a>). The head loss through the gate weir should be subtracted from both the top and bottom terms</p>
 <div class="math notranslate nohighlight" id="equation-flow-ratio-backwash">
-<span class="eqno">(679)<a class="headerlink" href="#equation-flow-ratio-backwash" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{BW}} = \frac{Q_{BW_{min}}}{Q_{BW_{max}}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot} - H_{channel} - HL_{Gate}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot}- HL_{Gate}\right)^\frac{3}{2}}\]</div>
+<span class="eqno">(678)<a class="headerlink" href="#equation-flow-ratio-backwash" title="Permalink to this equation">¶</a></span>\[\Pi_{Q_{BW}} = \frac{Q_{BW_{min}}}{Q_{BW_{max}}} = \frac{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot} - H_{channel} - HL_{Gate}\right)^\frac{3}{2}}{\Pi_{vc}\frac{2}{3} \sqrt{2g} w \left(H_{slot}- HL_{Gate}\right)^\frac{3}{2}}\]</div>
 <p>Simplify and solve for <span class="math notranslate nohighlight">\(H_{slot}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-backwash-slot-height">
-<span class="eqno">(680)<a class="headerlink" href="#equation-backwash-slot-height" title="Permalink to this equation">¶</a></span>\[   H_{slot} = \frac{H_{channel}}{1-\Pi_{Q_{BW}}^\frac{2}{3}} + HL_{Gate}\]</div>
+<span class="eqno">(679)<a class="headerlink" href="#equation-backwash-slot-height" title="Permalink to this equation">¶</a></span>\[   H_{slot} = \frac{H_{channel}}{1-\Pi_{Q_{BW}}^\frac{2}{3}} + HL_{Gate}\]</div>
 <p>There are two possible constraints on the trunk size. Either the trunk size is dictated by backwash flow distribution requirements or the trunk size is dictated by the need to have uniform flow distribution between filter layers and hence to have exactly twice the flow rate through the inner inlets.</p>
 <p>There are 4 levels of flow distribution in StaRS filters. The direction of the design (top-down or bottom-up) is determined by the fact that when there is head loss in series that all of the head loss helps to achieve flow distribution. Thus the head loss through the orifices will be a required part of the design of the branches and that head loss will be an input for the trunk design. Thus we need to start at the bottom and work up.</p>
 <blockquote>
@@ -364,7 +364,7 @@
 <blockquote>
 <div><ul class="simple">
 <li><p>The velocity constraint will determine the maximum length of a branch given its diameter.</p></li>
-<li><p>Use Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(86)</a> combined with the maximum branch velocity constraint to calculate the port velocity. Calculate the required branch diameter given the length (or vice versa).</p></li>
+<li><p>Use Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(88)</a> combined with the maximum branch velocity constraint to calculate the port velocity. Calculate the required branch diameter given the length (or vice versa).</p></li>
 <li><p>The orifice diameter will be selected based on constructability and not being too small to risk clogging (between 4 and 10 mm)</p></li>
 <li><p>Calculate the orifice spacing for the inner branches based on mass conservation and the maximum port velocity.</p></li>
 <li><p>Calculate the maximum length of the branches given mass conservation and the maximum branch velocity.</p></li>
@@ -374,7 +374,7 @@
 <li><p>between branches (trunkPortQ_pi): aided considerably by the head loss through the sand and is helped by the head loss though the orifices. Suggest using a value of 0.9 for this constraint. This constraint will be combined with a maximum permissible head loss during backwash to determine the required diameter of the trunk lines and will be combined with the equal trunk head loss constraint to obtain the diameter of the orifices.</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Use Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-with-hl-series">(85)</a> to solve for the maximum trunk velocity.</p></li>
+<li><p>Use Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-with-hl-series">(87)</a> to solve for the maximum trunk velocity.</p></li>
 <li><p>Use the fact that the head loss is the same for outer and inner inlets to determine the <span class="math notranslate nohighlight">\(K_{e_{outerOrifices}}\)</span>.</p></li>
 </ul>
 </div></blockquote>
@@ -391,103 +391,103 @@
 <div class="section" id="inner-trunk">
 <span id="heading-stars-inner-trunk"></span><h3>Inner Trunk<a class="headerlink" href="#inner-trunk" title="Permalink to this headline">¶</a></h3>
 <p>The diameter of the trunk lines is set by the filtration flow distribution between ports in the inner trunks and the maximum acceptable inlet head loss during backwash. The backwash head loss constraint is directly connected to the head loss during filtration because the velocity in the backwash trunk changes by a factor of the number of filter layers. The backwash inlet head loss sets the required depth of the open filter box and so is an important constraint for O-StaRS. Both the inner and outer inlet head loss during filtration is <span class="math notranslate nohighlight">\(\frac{1}{N_{layers}^2}\)</span> times the backwash inlet head loss because the head loss is proportional to the flow ratio squared and because we will set the inlet head losses to be identical during filtration.</p>
-<p>The equation for flow distribution between branches with additional head loss in series is <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-with-hl-series">(85)</a>.</p>
+<p>The equation for flow distribution between branches with additional head loss in series is <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-with-hl-series">(87)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-trunk-to-branch-flow-distribution">
-<span class="eqno">(681)<a class="headerlink" href="#equation-trunk-to-branch-flow-distribution" title="Permalink to this equation">¶</a></span>\[ \frac{\bar v_{T_{innerMax}}^2}{2g}=  \left(h_{e_{B_{inner}}} + h_{e_{P_{inner}}} + h_{l_{sand}} \right)\Pi_{\Psi_B}\]</div>
-<p>The head loss through the inner ports or orifices required to achieve reasonable flow distribution into the winged area of the inlet branches can be expressed in the minor loss equation form. The flow distribution constraint is given by Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(86)</a>.</p>
+<span class="eqno">(680)<a class="headerlink" href="#equation-trunk-to-branch-flow-distribution" title="Permalink to this equation">¶</a></span>\[ \frac{\bar v_{T_{innerMax}}^2}{2g}=  \left(h_{e_{B_{inner}}} + h_{e_{P_{inner}}} + h_{l_{sand}} \right)\Pi_{\Psi_B}\]</div>
+<p>The head loss through the inner ports or orifices required to achieve reasonable flow distribution into the winged area of the inlet branches can be expressed in the minor loss equation form. The flow distribution constraint is given by Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(88)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-he-port">
-<span class="eqno">(682)<a class="headerlink" href="#equation-eq-he-port" title="Permalink to this equation">¶</a></span>\[h_{e_{P_{inner}}} = \frac{\bar v_{P_{inner}}^2}{2g} = \frac{\bar v_{B_{inner}}^2}{2g}\frac{1}{\Pi_{\Psi_P}}\]</div>
+<span class="eqno">(681)<a class="headerlink" href="#equation-eq-he-port" title="Permalink to this equation">¶</a></span>\[h_{e_{P_{inner}}} = \frac{\bar v_{P_{inner}}^2}{2g} = \frac{\bar v_{B_{inner}}^2}{2g}\frac{1}{\Pi_{\Psi_P}}\]</div>
 <p>where the port velocity <span class="math notranslate nohighlight">\(\bar v_{P_{inner}}\)</span> is the <em>contracted</em> velocity out of the orifice.</p>
 <p>The branch entrance loss is given by</p>
 <div class="math notranslate nohighlight" id="equation-he-branch">
-<span class="eqno">(683)<a class="headerlink" href="#equation-he-branch" title="Permalink to this equation">¶</a></span>\[h_{e_{B_{inner}}} = K_{e_B}\frac{\bar v_{B_{innerMax}}^2}{2g}\]</div>
-<p>The minor loss associated with entering the branch is given by Equation <a class="reference internal" href="#equation-he-branch">(683)</a>). The <span class="math notranslate nohighlight">\(h_{l_{series}}\)</span> is the sum of the orifice head loss (see Equation <a class="reference internal" href="#equation-eq-he-port">(682)</a>) and the head loss through the sand. Making those substitutions into Equation <a class="reference internal" href="#equation-trunk-to-branch-flow-distribution">(681)</a> we obtain</p>
+<span class="eqno">(682)<a class="headerlink" href="#equation-he-branch" title="Permalink to this equation">¶</a></span>\[h_{e_{B_{inner}}} = K_{e_B}\frac{\bar v_{B_{innerMax}}^2}{2g}\]</div>
+<p>The minor loss associated with entering the branch is given by Equation <a class="reference internal" href="#equation-he-branch">(682)</a>). The <span class="math notranslate nohighlight">\(h_{l_{series}}\)</span> is the sum of the orifice head loss (see Equation <a class="reference internal" href="#equation-eq-he-port">(681)</a>) and the head loss through the sand. Making those substitutions into Equation <a class="reference internal" href="#equation-trunk-to-branch-flow-distribution">(680)</a> we obtain</p>
 <div class="math notranslate nohighlight" id="equation-trunk-max-v-flow-distribution">
-<span class="eqno">(684)<a class="headerlink" href="#equation-trunk-max-v-flow-distribution" title="Permalink to this equation">¶</a></span>\[ \bar v_{T_{innerMax}}^2 =  \Pi_{\Psi_B}\left[\bar v_{B_{innerMax}}^2\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}}\right) + 2gh_{l_{sand}} \right]\]</div>
+<span class="eqno">(683)<a class="headerlink" href="#equation-trunk-max-v-flow-distribution" title="Permalink to this equation">¶</a></span>\[ \bar v_{T_{innerMax}}^2 =  \Pi_{\Psi_B}\left[\bar v_{B_{innerMax}}^2\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}}\right) + 2gh_{l_{sand}} \right]\]</div>
 <p>This is a constraint on the maximum branch velocity assuming that the port velocity is set to achieve flow distribution to the wings within a branch (rather than setting the port velocity to achieve flow distribution between branches).</p>
 <p>This shows that the trunk velocity is limited by the branch velocity even without applying the head loss constraint. However, even if the branch velocity approaches zero, the trunk velocity can still be quite high because of the balancing effect of the sand head loss. This constraint ends up not being useful because flow division between branches is not a critical constraint.</p>
 <p>The head loss constraint is</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-0">
-<span class="eqno">(685)<a class="headerlink" href="#equation-filtration-filtration-design-0" title="Permalink to this equation">¶</a></span>\[h_{e_{outerInlet_{Bw}}} = N_{layer}^2 h_{e_{innerInlet}} = N_{layer}^2 \left(h_{e_{T_{inner}}} + h_{e_{B_{inner}}} + h_{e_{P_{inner}}} \right)\]</div>
+<span class="eqno">(684)<a class="headerlink" href="#equation-filtration-filtration-design-0" title="Permalink to this equation">¶</a></span>\[h_{e_{outerInlet_{Bw}}} = N_{layer}^2 h_{e_{innerInlet}} = N_{layer}^2 \left(h_{e_{T_{inner}}} + h_{e_{B_{inner}}} + h_{e_{P_{inner}}} \right)\]</div>
 <p>The trunk entrance and elbow losses are given by</p>
 <div class="math notranslate nohighlight" id="equation-he-t-inner">
-<span class="eqno">(686)<a class="headerlink" href="#equation-he-t-inner" title="Permalink to this equation">¶</a></span>\[h_{e_{T_{inner}}} = K_{e_T}\frac{\bar v_{T_{innerMax}}^2}{2g}\]</div>
+<span class="eqno">(685)<a class="headerlink" href="#equation-he-t-inner" title="Permalink to this equation">¶</a></span>\[h_{e_{T_{inner}}} = K_{e_T}\frac{\bar v_{T_{innerMax}}^2}{2g}\]</div>
 <p>Substitute with minor loss relationships.</p>
 <div class="math notranslate nohighlight" id="equation-he-t-inner-of-v">
-<span class="eqno">(687)<a class="headerlink" href="#equation-he-t-inner-of-v" title="Permalink to this equation">¶</a></span>\[2gh_{e_{outerInlet_{Bw}}} = N_{layer}^2 \left(K_{e_T}\bar v_{T_{innerMax}}^2 + K_{e_B}\bar v_{B_{innerMax}}^2 + \bar v_{B_{innerMax}}^2\frac{1}{\Pi_{\Psi_P}} \right)\]</div>
+<span class="eqno">(686)<a class="headerlink" href="#equation-he-t-inner-of-v" title="Permalink to this equation">¶</a></span>\[2gh_{e_{outerInlet_{Bw}}} = N_{layer}^2 \left(K_{e_T}\bar v_{T_{innerMax}}^2 + K_{e_B}\bar v_{B_{innerMax}}^2 + \bar v_{B_{innerMax}}^2\frac{1}{\Pi_{\Psi_P}} \right)\]</div>
 <p>Solve for <span class="math notranslate nohighlight">\(\bar v_{T_{innerMax}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-v-trunk-of-he">
-<span class="eqno">(688)<a class="headerlink" href="#equation-v-trunk-of-he" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{innerMax}} = \sqrt{\frac{2gh_{e_{outerInlet_{Bw}}}}{K_{e_T} N_{layer}^2} -\frac{\bar v_{B_{innerMax}}^2}{K_{e_T}}\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}} \right)}\]</div>
+<span class="eqno">(687)<a class="headerlink" href="#equation-v-trunk-of-he" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{innerMax}} = \sqrt{\frac{2gh_{e_{outerInlet_{Bw}}}}{K_{e_T} N_{layer}^2} -\frac{\bar v_{B_{innerMax}}^2}{K_{e_T}}\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}} \right)}\]</div>
 <p>The head loss constraint reveals that we can achieve the highest trunk velocity by setting the branch velocity to zero! This is because the branch head loss is not needed to achieve flow distribution between branches. Thus we will design the branches to have low velocities to increase the flow that can be achieved with a given size trunk. First define a dimensionless ratio of branch to trunk kinetic energy that will be used as a user specified constraint to allow the exploration of the tradeoff.</p>
 <div class="math notranslate nohighlight" id="equation-branch-trunk-pi">
-<span class="eqno">(689)<a class="headerlink" href="#equation-branch-trunk-pi" title="Permalink to this equation">¶</a></span>\[\bar v_{B_{innerMax}}^2 = \Pi_{BT} \bar v_{T_{innerMax}}^2\]</div>
-<p>Use Equation <a class="reference internal" href="#equation-branch-trunk-pi">(689)</a> to eliminate <span class="math notranslate nohighlight">\(\bar v_{B_{innerMax}}\)</span> in Equation <a class="reference internal" href="#equation-he-t-inner-of-v">(687)</a>.</p>
+<span class="eqno">(688)<a class="headerlink" href="#equation-branch-trunk-pi" title="Permalink to this equation">¶</a></span>\[\bar v_{B_{innerMax}}^2 = \Pi_{BT} \bar v_{T_{innerMax}}^2\]</div>
+<p>Use Equation <a class="reference internal" href="#equation-branch-trunk-pi">(688)</a> to eliminate <span class="math notranslate nohighlight">\(\bar v_{B_{innerMax}}\)</span> in Equation <a class="reference internal" href="#equation-he-t-inner-of-v">(686)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-he-t-inner-of-v2">
-<span class="eqno">(690)<a class="headerlink" href="#equation-he-t-inner-of-v2" title="Permalink to this equation">¶</a></span>\[2gh_{e_{outerInlet_{Bw}}} = N_{layer}^2 \left(K_{e_T}\bar v_{T_{innerMax}}^2 + K_{e_B}\Pi_{BT} \bar v_{T_{innerMax}}^2 + \Pi_{BT} \bar v_{T_{innerMax}}^2\frac{1}{\Pi_{\Psi_P}} \right)\]</div>
+<span class="eqno">(689)<a class="headerlink" href="#equation-he-t-inner-of-v2" title="Permalink to this equation">¶</a></span>\[2gh_{e_{outerInlet_{Bw}}} = N_{layer}^2 \left(K_{e_T}\bar v_{T_{innerMax}}^2 + K_{e_B}\Pi_{BT} \bar v_{T_{innerMax}}^2 + \Pi_{BT} \bar v_{T_{innerMax}}^2\frac{1}{\Pi_{\Psi_P}} \right)\]</div>
 <p>solve for <span class="math notranslate nohighlight">\(\bar v_{T_{innerMax}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-v-trunk-of-he-bw">
-<span class="eqno">(691)<a class="headerlink" href="#equation-v-trunk-of-he-bw" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{innerMax}} = \sqrt{\frac{2gh_{e_{outerInlet_{Bw}}}}{N_{layer}^2 \left[K_{e_T} + \Pi_{BT}\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}} \right)\right]}}\]</div>
+<span class="eqno">(690)<a class="headerlink" href="#equation-v-trunk-of-he-bw" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{innerMax}} = \sqrt{\frac{2gh_{e_{outerInlet_{Bw}}}}{N_{layer}^2 \left[K_{e_T} + \Pi_{BT}\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}} \right)\right]}}\]</div>
 </div>
 <div class="section" id="inner-branch">
 <span id="heading-stars-inner-branch"></span><h3>Inner branch<a class="headerlink" href="#inner-branch" title="Permalink to this headline">¶</a></h3>
-<p>Use Equation <a class="reference internal" href="#equation-branch-trunk-pi">(689)</a> to solve for the maximum branch velocity given the results from Equation <a class="reference internal" href="#equation-v-trunk-of-he-bw">(691)</a>.</p>
-<p>Given the constraint of maximum branch velocity use the relationship between port velocity and branch velocity given by Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(86)</a> to solve for the port velocity.</p>
+<p>Use Equation <a class="reference internal" href="#equation-branch-trunk-pi">(688)</a> to solve for the maximum branch velocity given the results from Equation <a class="reference internal" href="#equation-v-trunk-of-he-bw">(690)</a>.</p>
+<p>Given the constraint of maximum branch velocity use the relationship between port velocity and branch velocity given by Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(88)</a> to solve for the port velocity.</p>
 <div class="math notranslate nohighlight" id="equation-v-port-inner-branch">
-<span class="eqno">(692)<a class="headerlink" href="#equation-v-port-inner-branch" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{innerMax}} = \bar v_{B_{innerMax}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}\]</div>
+<span class="eqno">(691)<a class="headerlink" href="#equation-v-port-inner-branch" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{innerMax}} = \bar v_{B_{innerMax}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}\]</div>
 <p>The orifice diameter will be constrained by the wing fabrication. Apply conservation of mass to obtain the port velocity to filter velocity ratio. Each port serves an area equal to the branch spacing times the port spacing.</p>
 <div class="math notranslate nohighlight" id="equation-v-port-inner-to-v-fi">
-<span class="eqno">(693)<a class="headerlink" href="#equation-v-port-inner-to-v-fi" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{P_{innerMax}}}{2 v_{Fi}} = \frac{B_{branch} B_{orifice_{inner}}}{\Pi_{vc}\frac{\pi}{4} D_{orifice}^2}\]</div>
-<p>where the factor of 2 is because the inner trunks serve two layers of sand. Combine equations <a class="reference internal" href="#equation-v-port-inner-branch">(692)</a> and <a class="reference internal" href="#equation-v-port-inner-to-v-fi">(693)</a> and solve for the center to center spacing of the orifices.</p>
+<span class="eqno">(692)<a class="headerlink" href="#equation-v-port-inner-to-v-fi" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{P_{innerMax}}}{2 v_{Fi}} = \frac{B_{branch} B_{orifice_{inner}}}{\Pi_{vc}\frac{\pi}{4} D_{orifice}^2}\]</div>
+<p>where the factor of 2 is because the inner trunks serve two layers of sand. Combine equations <a class="reference internal" href="#equation-v-port-inner-branch">(691)</a> and <a class="reference internal" href="#equation-v-port-inner-to-v-fi">(692)</a> and solve for the center to center spacing of the orifices.</p>
 <div class="math notranslate nohighlight" id="equation-b-orifice-inner">
-<span class="eqno">(694)<a class="headerlink" href="#equation-b-orifice-inner" title="Permalink to this equation">¶</a></span>\[B_{orifice_{inner}} = \frac{\bar v_{B_{innerMax}}\Pi_{vc}\pi D_{orifice}^2}{8 v_{Fi}B_{branch}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}\]</div>
+<span class="eqno">(693)<a class="headerlink" href="#equation-b-orifice-inner" title="Permalink to this equation">¶</a></span>\[B_{orifice_{inner}} = \frac{\bar v_{B_{innerMax}}\Pi_{vc}\pi D_{orifice}^2}{8 v_{Fi}B_{branch}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}\]</div>
 <p>We will assume that the user sets the target branch diameter as an input. The maximum length of a branch is set by mass conservation and the flow required to serve the filter area corresponding to the length of the branch.</p>
 <div class="math notranslate nohighlight" id="equation-l-branch-max-conserveq">
-<span class="eqno">(695)<a class="headerlink" href="#equation-l-branch-max-conserveq" title="Permalink to this equation">¶</a></span>\[2 v_{Fi} L_{branch_{max}} B_{branch} = \bar v_{B_{innerMax}} A_{pipe}\]</div>
+<span class="eqno">(694)<a class="headerlink" href="#equation-l-branch-max-conserveq" title="Permalink to this equation">¶</a></span>\[2 v_{Fi} L_{branch_{max}} B_{branch} = \bar v_{B_{innerMax}} A_{pipe}\]</div>
 <p>Solve for <span class="math notranslate nohighlight">\(L_{branch_{max}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-l-branch-max">
-<span class="eqno">(696)<a class="headerlink" href="#equation-l-branch-max" title="Permalink to this equation">¶</a></span>\[ L_{branch_{max}} = \frac{\bar v_{B_{innerMax}} A_{pipe}}{2 v_{Fi}  B_{branch}}\]</div>
+<span class="eqno">(695)<a class="headerlink" href="#equation-l-branch-max" title="Permalink to this equation">¶</a></span>\[ L_{branch_{max}} = \frac{\bar v_{B_{innerMax}} A_{pipe}}{2 v_{Fi}  B_{branch}}\]</div>
 <p>Solve for the minimum pipe ID.</p>
 <div class="math notranslate nohighlight" id="equation-d-branch-min">
-<span class="eqno">(697)<a class="headerlink" href="#equation-d-branch-min" title="Permalink to this equation">¶</a></span>\[ D_{branch_{min}}= \sqrt\frac{8 v_{Fi}  B_{branch} L_{branch}}{\pi \bar v_{B_{innerMax}}}\]</div>
+<span class="eqno">(696)<a class="headerlink" href="#equation-d-branch-min" title="Permalink to this equation">¶</a></span>\[ D_{branch_{min}}= \sqrt\frac{8 v_{Fi}  B_{branch} L_{branch}}{\pi \bar v_{B_{innerMax}}}\]</div>
 <p>At this stage in the design process we have set the flow rate through the filter, the trunk and branch diameters (except for the backwash branches), the length of the branches, and the orifice spacing on the inner inlets.</p>
 </div>
 <div class="section" id="outer-branch">
 <span id="heading-stars-outer-branch"></span><h3>Outer branch<a class="headerlink" href="#outer-branch" title="Permalink to this headline">¶</a></h3>
-<p>The outer trunk branch orifices must be designed so that the head loss during filtration is identical between inner and outer inlets. This will result spacing between the outer branch orifices that is more than double that of the inner branch orifices. The derivation is similar to that used to obtain Equation <a class="reference internal" href="#equation-b-orifice-inner">(694)</a>. Equate the head loss in the inner and outer inlets during filtration. We will use the maximum velocity in the inner trunks as our reference velocity. Note that the results would be the same if we used the actual velocity in the inner trunks because the velocity will drop out of the equation in the end. First the head loss from the inlet box to the orifices in the inner inlets is given by</p>
+<p>The outer trunk branch orifices must be designed so that the head loss during filtration is identical between inner and outer inlets. This will result spacing between the outer branch orifices that is more than double that of the inner branch orifices. The derivation is similar to that used to obtain Equation <a class="reference internal" href="#equation-b-orifice-inner">(693)</a>. Equate the head loss in the inner and outer inlets during filtration. We will use the maximum velocity in the inner trunks as our reference velocity. Note that the results would be the same if we used the actual velocity in the inner trunks because the velocity will drop out of the equation in the end. First the head loss from the inlet box to the orifices in the inner inlets is given by</p>
 <div class="math notranslate nohighlight" id="equation-he-t-inner-of-v-draft">
-<span class="eqno">(698)<a class="headerlink" href="#equation-he-t-inner-of-v-draft" title="Permalink to this equation">¶</a></span>\[2gh_{e_{innerInlet}} = \left(K_{e_T}\bar v_{T_{inner}}^2 + K_{e_B}\bar v_{B_{inner}}^2 + \bar v_{B_{inner}}^2\frac{1}{\Pi_{\Psi_P}} \right)\]</div>
-<p>Substitute Equation <a class="reference internal" href="#equation-branch-trunk-pi">(689)</a> to eliminate <span class="math notranslate nohighlight">\(\bar v_{B_{inner}}\)</span>.</p>
+<span class="eqno">(697)<a class="headerlink" href="#equation-he-t-inner-of-v-draft" title="Permalink to this equation">¶</a></span>\[2gh_{e_{innerInlet}} = \left(K_{e_T}\bar v_{T_{inner}}^2 + K_{e_B}\bar v_{B_{inner}}^2 + \bar v_{B_{inner}}^2\frac{1}{\Pi_{\Psi_P}} \right)\]</div>
+<p>Substitute Equation <a class="reference internal" href="#equation-branch-trunk-pi">(688)</a> to eliminate <span class="math notranslate nohighlight">\(\bar v_{B_{inner}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-he-t-inner-of-v3">
-<span class="eqno">(699)<a class="headerlink" href="#equation-he-t-inner-of-v3" title="Permalink to this equation">¶</a></span>\[2gh_{e_{innerInlet}} = \left[K_{e_T} + \Pi_{BT}\left( K_{e_B}  + \frac{1}{\Pi_{\Psi_P}}\right) \right]\bar v_{T_{inner}}^2\]</div>
+<span class="eqno">(698)<a class="headerlink" href="#equation-he-t-inner-of-v3" title="Permalink to this equation">¶</a></span>\[2gh_{e_{innerInlet}} = \left[K_{e_T} + \Pi_{BT}\left( K_{e_B}  + \frac{1}{\Pi_{\Psi_P}}\right) \right]\bar v_{T_{inner}}^2\]</div>
 <p>The orifices for the outer inlets are not constrained by the flow distribution to the ports. Thus the factor <span class="math notranslate nohighlight">\(\frac{1}{\Pi_{\Psi_P}}\)</span> does not apply. The unknown that we are solving for is port velocity which we will obtain from the ratio between port and branch kinetic energy.</p>
 <div class="math notranslate nohighlight" id="equation-port-branch-pi">
-<span class="eqno">(700)<a class="headerlink" href="#equation-port-branch-pi" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{outer}}^2 = \Pi_{PB_{outer}} \bar v_{B_{outer}}^2\]</div>
+<span class="eqno">(699)<a class="headerlink" href="#equation-port-branch-pi" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{outer}}^2 = \Pi_{PB_{outer}} \bar v_{B_{outer}}^2\]</div>
 <p>The head loss in the outer inlet is given by</p>
 <div class="math notranslate nohighlight" id="equation-he-t-outer-of-v4">
-<span class="eqno">(701)<a class="headerlink" href="#equation-he-t-outer-of-v4" title="Permalink to this equation">¶</a></span>\[2gh_{e_{outerInlet}} = \left(K_{e_T} + K_{e_B}\Pi_{BT}  + \Pi_{BT} \Pi_{PB_{outer}} \right)\frac{1}{4}\bar v_{T_{inner}}^2\]</div>
+<span class="eqno">(700)<a class="headerlink" href="#equation-he-t-outer-of-v4" title="Permalink to this equation">¶</a></span>\[2gh_{e_{outerInlet}} = \left(K_{e_T} + K_{e_B}\Pi_{BT}  + \Pi_{BT} \Pi_{PB_{outer}} \right)\frac{1}{4}\bar v_{T_{inner}}^2\]</div>
 <p>where the factor of 4 difference is because the velocity in the outer inlets is half the inner inlets because each inner inlet serves 2 filter layers. Now set the inner and outer head loss to be equal.</p>
 <div class="math notranslate nohighlight" id="equation-he-inner-equal-he-outer">
-<span class="eqno">(702)<a class="headerlink" href="#equation-he-inner-equal-he-outer" title="Permalink to this equation">¶</a></span>\[\left(K_{e_T} + K_{e_B}\Pi_{BT}  + \Pi_{BT} \Pi_{PB_{outer}} \right)\frac{1}{4}\bar v_{T_{inner}}^2 = \left(K_{e_T} + K_{e_B}\Pi_{BT}  + \Pi_{BT} \frac{1}{\Pi_{\Psi_P}} \right)\bar v_{T_{inner}}^2\]</div>
+<span class="eqno">(701)<a class="headerlink" href="#equation-he-inner-equal-he-outer" title="Permalink to this equation">¶</a></span>\[\left(K_{e_T} + K_{e_B}\Pi_{BT}  + \Pi_{BT} \Pi_{PB_{outer}} \right)\frac{1}{4}\bar v_{T_{inner}}^2 = \left(K_{e_T} + K_{e_B}\Pi_{BT}  + \Pi_{BT} \frac{1}{\Pi_{\Psi_P}} \right)\bar v_{T_{inner}}^2\]</div>
 <p>Simplify and solve for the unknown, <span class="math notranslate nohighlight">\(\Pi_{PB}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-pi-pb-outer">
-<span class="eqno">(703)<a class="headerlink" href="#equation-pi-pb-outer" title="Permalink to this equation">¶</a></span>\[\Pi_{PB_{outer}}= \left(3\frac{K_{e_T}}{\Pi_{BT}} + 3K_{e_B}  + 4\frac{1}{\Pi_{\Psi_P}} \right)\]</div>
+<span class="eqno">(702)<a class="headerlink" href="#equation-pi-pb-outer" title="Permalink to this equation">¶</a></span>\[\Pi_{PB_{outer}}= \left(3\frac{K_{e_T}}{\Pi_{BT}} + 3K_{e_B}  + 4\frac{1}{\Pi_{\Psi_P}} \right)\]</div>
 <p>Apply conservation of mass to obtain the port velocity to filter velocity ratio. Each port serves an area equal to the branch spacing times the port spacing.</p>
 <div class="math notranslate nohighlight" id="equation-v-port-outer-to-v-fi">
-<span class="eqno">(704)<a class="headerlink" href="#equation-v-port-outer-to-v-fi" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{P_{outer}}}{v_{Fi}} = \frac{B_{branch} B_{orifice_{outer}}}{\Pi_{vc}\frac{\pi}{4} D_{orifice}^2}\]</div>
+<span class="eqno">(703)<a class="headerlink" href="#equation-v-port-outer-to-v-fi" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{P_{outer}}}{v_{Fi}} = \frac{B_{branch} B_{orifice_{outer}}}{\Pi_{vc}\frac{\pi}{4} D_{orifice}^2}\]</div>
 <p>We need an equation for <span class="math notranslate nohighlight">\(\bar v_{P_{outer}}\)</span> as a function of <span class="math notranslate nohighlight">\(\bar v_{T_{inner}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-1">
-<span class="eqno">(705)<a class="headerlink" href="#equation-filtration-filtration-design-1" title="Permalink to this equation">¶</a></span>\[\frac{1}{4} \bar v_{T_{innerMax}}^2 = \bar v_{T_{outerMax}}^2\]</div>
+<span class="eqno">(704)<a class="headerlink" href="#equation-filtration-filtration-design-1" title="Permalink to this equation">¶</a></span>\[\frac{1}{4} \bar v_{T_{innerMax}}^2 = \bar v_{T_{outerMax}}^2\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-2">
-<span class="eqno">(706)<a class="headerlink" href="#equation-filtration-filtration-design-2" title="Permalink to this equation">¶</a></span>\[\bar v_{B_{outerMax}}^2 = \Pi_{BT} \bar v_{T_{outerMax}}^2\]</div>
+<span class="eqno">(705)<a class="headerlink" href="#equation-filtration-filtration-design-2" title="Permalink to this equation">¶</a></span>\[\bar v_{B_{outerMax}}^2 = \Pi_{BT} \bar v_{T_{outerMax}}^2\]</div>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-3">
-<span class="eqno">(707)<a class="headerlink" href="#equation-filtration-filtration-design-3" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{outerMax}}^2 = \Pi_{PB_{outer}} \bar v_{B_{outerMax}}^2\]</div>
+<span class="eqno">(706)<a class="headerlink" href="#equation-filtration-filtration-design-3" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{outerMax}}^2 = \Pi_{PB_{outer}} \bar v_{B_{outerMax}}^2\]</div>
 <p>Combine the previous 3 equations to obtain</p>
 <div class="math notranslate nohighlight" id="equation-v-p-outer-of-v-t-inner">
-<span class="eqno">(708)<a class="headerlink" href="#equation-v-p-outer-of-v-t-inner" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{outerMax}} = \frac{\bar v_{T_{innerMax}}}{2} \sqrt{\Pi_{PB_{outer}}  \Pi_{BT}}\]</div>
+<span class="eqno">(707)<a class="headerlink" href="#equation-v-p-outer-of-v-t-inner" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{outerMax}} = \frac{\bar v_{T_{innerMax}}}{2} \sqrt{\Pi_{PB_{outer}}  \Pi_{BT}}\]</div>
 <p>The orifice spacing should be designed based on the maximum inner trunk velocity rather than the actual inner trunk velocity so that the branches have the same design for all filters. Otherwise the orifice spacing would be different for every design and that would only make fabrication needlessly confusing.</p>
-<p>Substitute Equation <a class="reference internal" href="#equation-v-p-outer-of-v-t-inner">(708)</a> into Equation <a class="reference internal" href="#equation-v-port-outer-to-v-fi">(704)</a> and solve for <span class="math notranslate nohighlight">\(B_{orifice_{outer}}\)</span>.</p>
+<p>Substitute Equation <a class="reference internal" href="#equation-v-p-outer-of-v-t-inner">(707)</a> into Equation <a class="reference internal" href="#equation-v-port-outer-to-v-fi">(703)</a> and solve for <span class="math notranslate nohighlight">\(B_{orifice_{outer}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-b-orifice-outer">
-<span class="eqno">(709)<a class="headerlink" href="#equation-b-orifice-outer" title="Permalink to this equation">¶</a></span>\[B_{orifice_{outer}} = \frac{\bar v_{T_{innerMax}} \Pi_{vc} \pi D_{orifice}^2 \sqrt{\Pi_{PB_{outer}}  \Pi_{BT}} }{8 v_{Fi} B_{branch}}\]</div>
+<span class="eqno">(708)<a class="headerlink" href="#equation-b-orifice-outer" title="Permalink to this equation">¶</a></span>\[B_{orifice_{outer}} = \frac{\bar v_{T_{innerMax}} \Pi_{vc} \pi D_{orifice}^2 \sqrt{\Pi_{PB_{outer}}  \Pi_{BT}} }{8 v_{Fi} B_{branch}}\]</div>
 <p>The backwash branches have an additional constraint. Those branches have two additional challenges. First, during backwash the sand doesn’t provide head loss to help equalize flow. Second, the velocity is <span class="math notranslate nohighlight">\(N_{layer}\)</span> faster than during filtration. We will ensure that the flow is reasonably distributed by applying the flow distribution requirement without any additional head loss in series. We will use the orifice spacing that is used for the outer inlets.</p>
 </div>
 </div>
@@ -503,7 +503,7 @@
 <div><ul class="simple">
 <li><p>find the maximum velocity in the outlet branches to get flow distribution through the slots using the filter clean bed head loss. assume branch length and branch ND (or an array of paired options)</p></li>
 <li><p>calculate branch velocity from mass conservation</p></li>
-<li><p>calculate max trunk velocity using Equation <a class="reference internal" href="#equation-v-trunk-of-he">(688)</a></p></li>
+<li><p>calculate max trunk velocity using Equation <a class="reference internal" href="#equation-v-trunk-of-he">(687)</a></p></li>
 <li><p>size the trunk, then calculate number of filters, flow per filter, filter width, filter length</p></li>
 </ul>
 </div></blockquote>
@@ -519,130 +519,130 @@
 <div class="section" id="outlet-branch">
 <span id="heading-stars-outlet-branch"></span><h3>Outlet branch<a class="headerlink" href="#outlet-branch" title="Permalink to this headline">¶</a></h3>
 <p>The velocity in the outlet branches must be limited to prevent the change in piezometric head in the branch from causing significant differences in the velocity through the slots. The head loss through the filter bed helps keep this flow uniform. We could increase the head loss through the slots to make this flow more uniform, but that is a big failure mode because it is already too easy for these slots to clog over time and thus that problem would be made even worse. Instead we should be designing the outlet branches to have as much slot area as is structurally possible.</p>
-<p>Flow distribution through the slots is described by Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-with-hl-series">(85)</a>. We will neglect the head loss through the slots because if done well it will be small compared with the head loss through the sand. We can check this assumption later!</p>
+<p>Flow distribution through the slots is described by Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-with-hl-series">(87)</a>. We will neglect the head loss through the slots because if done well it will be small compared with the head loss through the sand. We can check this assumption later!</p>
 <p>The maximum outlet branch velocity is</p>
 <div class="math notranslate nohighlight" id="equation-outlet-branch-v-max">
-<span class="eqno">(710)<a class="headerlink" href="#equation-outlet-branch-v-max" title="Permalink to this equation">¶</a></span>\[ \bar v_{B_{outletMax}}= \sqrt{2gh_{l_{sand}}\Pi_{\Psi}}\]</div>
+<span class="eqno">(709)<a class="headerlink" href="#equation-outlet-branch-v-max" title="Permalink to this equation">¶</a></span>\[ \bar v_{B_{outletMax}}= \sqrt{2gh_{l_{sand}}\Pi_{\Psi}}\]</div>
 <p>This velocity is approximately 0.6 m/s and may be high enough so that it may not be a constraint. It isn’t necessary that the flow distribution be extremely uniform given that as the sand bed head loss increases the flow distribution will improve. It will be included in the design code to ensure that we don’t miss this constraint.</p>
 </div>
 <div class="section" id="inlet-branch">
 <span id="heading-stars-inlet-branch"></span><h3>Inlet branch<a class="headerlink" href="#inlet-branch" title="Permalink to this headline">¶</a></h3>
 <p>Use mass conservation to determine the velocity in the branch given the branch length, ID, spacing and the filter velocity. The following equation could be corrected for the receptor length. The entire OD of the trunk should be counted as inactive.</p>
 <div class="math notranslate nohighlight" id="equation-branch-v">
-<span class="eqno">(711)<a class="headerlink" href="#equation-branch-v" title="Permalink to this equation">¶</a></span>\[v_{B} = \frac{8 v_{Fi} B_{B} L_{B}}{\pi D_{B}^2}\]</div>
+<span class="eqno">(710)<a class="headerlink" href="#equation-branch-v" title="Permalink to this equation">¶</a></span>\[v_{B} = \frac{8 v_{Fi} B_{B} L_{B}}{\pi D_{B}^2}\]</div>
 <p>The orifice diameter will be constrained by the wing fabrication. Apply conservation of mass to obtain the port velocity to velocity ratio. Each port serves an area equal to the branch spacing times the port spacing.</p>
 <div class="math notranslate nohighlight" id="equation-v-p-to-v-fi">
-<span class="eqno">(712)<a class="headerlink" href="#equation-v-p-to-v-fi" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{P}}{N_{sided} v_{Fi}} = \frac{B_{B} B_{P}}{\Pi_{vc}\frac{\pi}{4} D_{P}^2}\]</div>
-<p>where <span class="math notranslate nohighlight">\(N_{sided}\)</span> is 2 for inner trunks that serve two layers of sand. Combine equations <a class="reference internal" href="#equation-v-port-inner-branch">(692)</a> and <a class="reference internal" href="#equation-v-port-inner-to-v-fi">(693)</a> and solve for the center to center spacing of the ports.</p>
+<span class="eqno">(711)<a class="headerlink" href="#equation-v-p-to-v-fi" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{P}}{N_{sided} v_{Fi}} = \frac{B_{B} B_{P}}{\Pi_{vc}\frac{\pi}{4} D_{P}^2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(N_{sided}\)</span> is 2 for inner trunks that serve two layers of sand. Combine equations <a class="reference internal" href="#equation-v-port-inner-branch">(691)</a> and <a class="reference internal" href="#equation-v-port-inner-to-v-fi">(692)</a> and solve for the center to center spacing of the ports.</p>
 <div class="math notranslate nohighlight" id="equation-b-orifice-inner2">
-<span class="eqno">(713)<a class="headerlink" href="#equation-b-orifice-inner2" title="Permalink to this equation">¶</a></span>\[B_{P_{inner}} = \frac{\bar v_{B}\Pi_{vc}\pi D_{P}^2}{8 v_{Fi}B_{B}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}\]</div>
+<span class="eqno">(712)<a class="headerlink" href="#equation-b-orifice-inner2" title="Permalink to this equation">¶</a></span>\[B_{P_{inner}} = \frac{\bar v_{B}\Pi_{vc}\pi D_{P}^2}{8 v_{Fi}B_{B}}\sqrt{\frac{1}{\Pi_{\Psi_P}}}\]</div>
 </div>
 <div class="section" id="trunk-diameter">
 <span id="heading-stars-trunk-diameter"></span><h3>Trunk Diameter<a class="headerlink" href="#trunk-diameter" title="Permalink to this headline">¶</a></h3>
 <p>The head loss for the inner inlets is</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-4">
-<span class="eqno">(714)<a class="headerlink" href="#equation-filtration-filtration-design-4" title="Permalink to this equation">¶</a></span>\[h_{e_{innerInlet}} = \left(h_{e_{T_{inner}}} + h_{e_{B_{inner}}} + h_{e_{P_{inner}}} \right)\]</div>
+<span class="eqno">(713)<a class="headerlink" href="#equation-filtration-filtration-design-4" title="Permalink to this equation">¶</a></span>\[h_{e_{innerInlet}} = \left(h_{e_{T_{inner}}} + h_{e_{B_{inner}}} + h_{e_{P_{inner}}} \right)\]</div>
 <p>The trunk entrance and elbow losses are given by</p>
 <div class="math notranslate nohighlight" id="equation-he-t-inner2">
-<span class="eqno">(715)<a class="headerlink" href="#equation-he-t-inner2" title="Permalink to this equation">¶</a></span>\[h_{e_{T_{inner}}} = K_{e_T}\frac{\bar v_{T_{innerMax}}^2}{2g}\]</div>
+<span class="eqno">(714)<a class="headerlink" href="#equation-he-t-inner2" title="Permalink to this equation">¶</a></span>\[h_{e_{T_{inner}}} = K_{e_T}\frac{\bar v_{T_{innerMax}}^2}{2g}\]</div>
 <p>Substitute with minor loss relationships.</p>
 <div class="math notranslate nohighlight" id="equation-he-t-inner-of-v5">
-<span class="eqno">(716)<a class="headerlink" href="#equation-he-t-inner-of-v5" title="Permalink to this equation">¶</a></span>\[2gh_{e_{innerInlet}} = \left(K_{e_T}\bar v_{T_{innerMax}}^2 + K_{e_B}\bar v_{B_{inner}}^2 + \bar v_{B_{inner}}^2\frac{1}{\Pi_{\Psi_P}} \right)\]</div>
+<span class="eqno">(715)<a class="headerlink" href="#equation-he-t-inner-of-v5" title="Permalink to this equation">¶</a></span>\[2gh_{e_{innerInlet}} = \left(K_{e_T}\bar v_{T_{innerMax}}^2 + K_{e_B}\bar v_{B_{inner}}^2 + \bar v_{B_{inner}}^2\frac{1}{\Pi_{\Psi_P}} \right)\]</div>
 <p>Solve for <span class="math notranslate nohighlight">\(\bar v_{T_{innerMax}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-v-trunk-of-he2">
-<span class="eqno">(717)<a class="headerlink" href="#equation-v-trunk-of-he2" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{innerMax}} = \sqrt{\frac{1}{K_{e_T}}\left[2g  h_{e_{innerInlet}} -\bar v_{B_{inner}}^2\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}} \right)\right]}\]</div>
-<p>Use Equation <a class="reference internal" href="#equation-v-trunk-of-he2">(717)</a> to find the maximum trunk velocity. Use that constraint and the plant flow rate to find the trunk diameter, the number of filters, the filter flow rate, filter width, and filter length.</p>
+<span class="eqno">(716)<a class="headerlink" href="#equation-v-trunk-of-he2" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{innerMax}} = \sqrt{\frac{1}{K_{e_T}}\left[2g  h_{e_{innerInlet}} -\bar v_{B_{inner}}^2\left(K_{e_B} + \frac{1}{\Pi_{\Psi_P}} \right)\right]}\]</div>
+<p>Use Equation <a class="reference internal" href="#equation-v-trunk-of-he2">(716)</a> to find the maximum trunk velocity. Use that constraint and the plant flow rate to find the trunk diameter, the number of filters, the filter flow rate, filter width, and filter length.</p>
 <p>At this stage in the design process we have set the flow rate through the filter, the trunk and branch diameters (except for the backwash branches), the length of the branches, and the orifice spacing on the inner inlets.</p>
 </div>
 <div class="section" id="heading-stars-outer-branch2">
 <span id="id1"></span><h3>Outer branch<a class="headerlink" href="#heading-stars-outer-branch2" title="Permalink to this headline">¶</a></h3>
-<p>The outer trunk branch orifices must be designed so that the head loss during filtration is identical between inner and outer inlets. This will result spacing between the outer branch orifices that is more than double that of the inner branch orifices. The derivation is similar to that used to obtain Equation <a class="reference internal" href="#equation-b-orifice-inner">(694)</a>. Equate the head loss in the inner and outer inlets during filtration. We will use the maximum velocity in the inner trunks as our reference velocity. Note that the results would be the same if we used the actual velocity in the inner trunks because the velocity will drop out of the equation in the end.</p>
-<p>The head loss from the inlet box to the orifices in the inner inlets is given by Equation <a class="reference internal" href="#equation-he-t-inner-of-v">(687)</a>. The head loss in the top inlet is similar. We will likely treat the backwash inlet as a separate design. The unknown we are solving for is the port velocity for the top inlet. That port velocity is not constrained by flow distribution and so we will enter it directly in the head loss equation knowing that all of the port kinetic energy is lost.</p>
+<p>The outer trunk branch orifices must be designed so that the head loss during filtration is identical between inner and outer inlets. This will result spacing between the outer branch orifices that is more than double that of the inner branch orifices. The derivation is similar to that used to obtain Equation <a class="reference internal" href="#equation-b-orifice-inner">(693)</a>. Equate the head loss in the inner and outer inlets during filtration. We will use the maximum velocity in the inner trunks as our reference velocity. Note that the results would be the same if we used the actual velocity in the inner trunks because the velocity will drop out of the equation in the end.</p>
+<p>The head loss from the inlet box to the orifices in the inner inlets is given by Equation <a class="reference internal" href="#equation-he-t-inner-of-v">(686)</a>. The head loss in the top inlet is similar. We will likely treat the backwash inlet as a separate design. The unknown we are solving for is the port velocity for the top inlet. That port velocity is not constrained by flow distribution and so we will enter it directly in the head loss equation knowing that all of the port kinetic energy is lost.</p>
 <div class="math notranslate nohighlight" id="equation-he-t-top-of-v">
-<span class="eqno">(718)<a class="headerlink" href="#equation-he-t-top-of-v" title="Permalink to this equation">¶</a></span>\[2gh_{e_{topInlet}} = \left(K_{e_T}\bar v_{T_{top}}^2 + K_{e_B}\bar v_{B_{top}}^2 + \bar v_{P_{top}}^2 \right)\]</div>
+<span class="eqno">(717)<a class="headerlink" href="#equation-he-t-top-of-v" title="Permalink to this equation">¶</a></span>\[2gh_{e_{topInlet}} = \left(K_{e_T}\bar v_{T_{top}}^2 + K_{e_B}\bar v_{B_{top}}^2 + \bar v_{P_{top}}^2 \right)\]</div>
 <p>Assuming that we use the same size branches and trunks for the top and inner inlets, then the velocities in the top trunk and branch are 1/2 of the velocities in the inner trunk and branch.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-5">
-<span class="eqno">(719)<a class="headerlink" href="#equation-filtration-filtration-design-5" title="Permalink to this equation">¶</a></span>\[\left(K_{e_T}\bar v_{T_{inner}}^2 + K_{e_B}\bar v_{B_{inner}}^2 + \bar v_{B_{inner}}^2\frac{1}{\Pi_{\Psi_P}} \right) = \frac{1}{4} \left(K_{e_T}\bar v_{T_{inner}}^2 + K_{e_B}\bar v_{B_{inner}}^2 \right) + \bar v_{P_{top}}^2\]</div>
+<span class="eqno">(718)<a class="headerlink" href="#equation-filtration-filtration-design-5" title="Permalink to this equation">¶</a></span>\[\left(K_{e_T}\bar v_{T_{inner}}^2 + K_{e_B}\bar v_{B_{inner}}^2 + \bar v_{B_{inner}}^2\frac{1}{\Pi_{\Psi_P}} \right) = \frac{1}{4} \left(K_{e_T}\bar v_{T_{inner}}^2 + K_{e_B}\bar v_{B_{inner}}^2 \right) + \bar v_{P_{top}}^2\]</div>
 <p>Solve for the port velocity, <span class="math notranslate nohighlight">\(v_{P_{top}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-v-p-outer">
-<span class="eqno">(720)<a class="headerlink" href="#equation-v-p-outer" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{top}} = \sqrt{\frac{3}{4} \left(K_{e_T}\bar v_{T_{inner}}^2 + K_{e_B}\bar v_{B_{inner}}^2\right) +  \frac{\bar v_{B_{inner}}^2}{\Pi_{\Psi_P}}}\]</div>
-<p>The port spacing can be obtained from Equation <a class="reference internal" href="#equation-b-p-top">(721)</a>.</p>
+<span class="eqno">(719)<a class="headerlink" href="#equation-v-p-outer" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{top}} = \sqrt{\frac{3}{4} \left(K_{e_T}\bar v_{T_{inner}}^2 + K_{e_B}\bar v_{B_{inner}}^2\right) +  \frac{\bar v_{B_{inner}}^2}{\Pi_{\Psi_P}}}\]</div>
+<p>The port spacing can be obtained from Equation <a class="reference internal" href="#equation-b-p-top">(720)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-b-p-top">
-<span class="eqno">(721)<a class="headerlink" href="#equation-b-p-top" title="Permalink to this equation">¶</a></span>\[B_{P_{top}} = \frac{\Pi_{vc} \pi D_{P}^2\bar v_{P_{top}}}{4 v_{Fi}B_{B}}\]</div>
+<span class="eqno">(720)<a class="headerlink" href="#equation-b-p-top" title="Permalink to this equation">¶</a></span>\[B_{P_{top}} = \frac{\Pi_{vc} \pi D_{P}^2\bar v_{P_{top}}}{4 v_{Fi}B_{B}}\]</div>
 </div>
 <div class="section" id="backwash-inlet">
 <span id="heading-stars-backwash-inlet"></span><h3>Backwash_Inlet<a class="headerlink" href="#backwash-inlet" title="Permalink to this headline">¶</a></h3>
 <p>The backwash inlet design is dominated by the flow distribution under backwash conditions when there is no head loss after the ports to promote flow distribution. Flow distribution can always be improved by increasing the port velocity and hence head loss and thus the maximum head loss is a second constraint.</p>
 <p>The backwash branch requires some flow distribution to ensure that the sand bed fluidizes along the entire length of the pipe. This raises the question of what happens when the sand bed begins fluidizing and part of the branch is in fluidized sand and part of the branch is buried in settled sand. Either the interface between the settled sand and the fluidized sand moves into the settled sand and the bed is slowly completely fluidized or the interface moves toward the fluidized sand and much of the sand bed never fluidizes. The sand bed will form the angle of repose and thus the toe of the solid sand bed will be narrow. This toe is likely eroded by the water. Given that water velocity leaving the wing is much higher than is needed to fluidize the sand (because the wing is narrower than the spacing of the branches) there is plenty of fluid energy to erode the toe of the sand and fluidize it.</p>
 <p>Another possible mechanism is erosion of the sand under the wing based on the high horizontal velocity of the water in the wing as the water travels in the direction of the pipe axis toward the fluidized bed.</p>
-<p>In either case, it appears that the wing design results in high velocity at the toe of and settled sand that can then rapidly erode and fluidize the entire bed. This suggests that the flow uniformity from the orifices into the winged space does not need to be great and so a factor of 0.8 is likely reasonable in Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-with-hl-series">(85)</a>.</p>
+<p>In either case, it appears that the wing design results in high velocity at the toe of and settled sand that can then rapidly erode and fluidize the entire bed. This suggests that the flow uniformity from the orifices into the winged space does not need to be great and so a factor of 0.8 is likely reasonable in Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-with-hl-series">(87)</a>.</p>
 <p>The backwash inlet design is driven by the need for flow distribution at the port and branch levels and thus there are required relationships between port and branch and between branch and trunk velocities. In addition the total head loss will be a design constraint and thus we have 3 equations (2 flow distribution and 1 head loss) and 3 unknown velocities.</p>
 <div class="math notranslate nohighlight" id="equation-v-p-to-v-b-bw">
-<span class="eqno">(722)<a class="headerlink" href="#equation-v-p-to-v-b-bw" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{BW}}^2 = \frac{\bar v_{B_{BW}}^2}{\Pi_{\Psi_{P_{BW}}}}\]</div>
-<p>Flow distribution between the trunk and branches is more important than the flow distribution into the wings because a whole branch could remain unfluidized if it received significantly less water. Thus a higher flow distribution criteria of perhaps 0.9 could be applied to the trunk-branch system. The port head loss is available to help achieve this flow distribution. Thus Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-with-hl-series">(85)</a> applies.</p>
+<span class="eqno">(721)<a class="headerlink" href="#equation-v-p-to-v-b-bw" title="Permalink to this equation">¶</a></span>\[\bar v_{P_{BW}}^2 = \frac{\bar v_{B_{BW}}^2}{\Pi_{\Psi_{P_{BW}}}}\]</div>
+<p>Flow distribution between the trunk and branches is more important than the flow distribution into the wings because a whole branch could remain unfluidized if it received significantly less water. Thus a higher flow distribution criteria of perhaps 0.9 could be applied to the trunk-branch system. The port head loss is available to help achieve this flow distribution. Thus Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-with-hl-series">(87)</a> applies.</p>
 <div class="math notranslate nohighlight" id="equation-v-b-to-v-t-bw-draft">
-<span class="eqno">(723)<a class="headerlink" href="#equation-v-b-to-v-t-bw-draft" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{BW}}= \sqrt{2 g (h_{e_{B}} + h_{e_{P}})\Pi_{\Psi_{B_{BW}}}}\]</div>
+<span class="eqno">(722)<a class="headerlink" href="#equation-v-b-to-v-t-bw-draft" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{BW}}= \sqrt{2 g (h_{e_{B}} + h_{e_{P}})\Pi_{\Psi_{B_{BW}}}}\]</div>
 <p>where</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-6">
-<span class="eqno">(724)<a class="headerlink" href="#equation-filtration-filtration-design-6" title="Permalink to this equation">¶</a></span>\[h_{e_{B}} = K_{e_{B}}\frac{\bar v_{B_{BW}}^2}{2g}\]</div>
+<span class="eqno">(723)<a class="headerlink" href="#equation-filtration-filtration-design-6" title="Permalink to this equation">¶</a></span>\[h_{e_{B}} = K_{e_{B}}\frac{\bar v_{B_{BW}}^2}{2g}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-7">
-<span class="eqno">(725)<a class="headerlink" href="#equation-filtration-filtration-design-7" title="Permalink to this equation">¶</a></span>\[h_{e_{P}} = \frac{\bar v_{P_{BW}}^2}{2g}\]</div>
+<span class="eqno">(724)<a class="headerlink" href="#equation-filtration-filtration-design-7" title="Permalink to this equation">¶</a></span>\[h_{e_{P}} = \frac{\bar v_{P_{BW}}^2}{2g}\]</div>
 <p>Substitute to obtain a relationship between the three velocities.</p>
 <div class="math notranslate nohighlight" id="equation-v-b-to-v-t-bw-draft2">
-<span class="eqno">(726)<a class="headerlink" href="#equation-v-b-to-v-t-bw-draft2" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{BW}}^2= \left( K_{e_{B}}\bar v_{B_{BW}}^2 + \bar v_{P_{BW}}^2\right)\Pi_{\Psi_{B_{BW}}}\]</div>
-<p>Eliminate the port velocity by substituting Equation <a class="reference internal" href="#equation-v-p-to-v-b-bw">(722)</a> and solve for <span class="math notranslate nohighlight">\(\bar v_{B_{BW}}^2\)</span>.</p>
+<span class="eqno">(725)<a class="headerlink" href="#equation-v-b-to-v-t-bw-draft2" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{BW}}^2= \left( K_{e_{B}}\bar v_{B_{BW}}^2 + \bar v_{P_{BW}}^2\right)\Pi_{\Psi_{B_{BW}}}\]</div>
+<p>Eliminate the port velocity by substituting Equation <a class="reference internal" href="#equation-v-p-to-v-b-bw">(721)</a> and solve for <span class="math notranslate nohighlight">\(\bar v_{B_{BW}}^2\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-v-b-to-v-t-bw">
-<span class="eqno">(727)<a class="headerlink" href="#equation-v-b-to-v-t-bw" title="Permalink to this equation">¶</a></span>\[\bar v_{B_{BW}}^2 = \bar v_{T_{BW}}^2 \frac{1}{\left( K_{e_{B}} + \frac{1}{\Pi_{\Psi_{P_{BW}}}} \right)\Pi_{\Psi_{B_{BW}}}}\]</div>
+<span class="eqno">(726)<a class="headerlink" href="#equation-v-b-to-v-t-bw" title="Permalink to this equation">¶</a></span>\[\bar v_{B_{BW}}^2 = \bar v_{T_{BW}}^2 \frac{1}{\left( K_{e_{B}} + \frac{1}{\Pi_{\Psi_{P_{BW}}}} \right)\Pi_{\Psi_{B_{BW}}}}\]</div>
 <p>The total head loss in the backwash inlet will be a design constraint.</p>
 <div class="math notranslate nohighlight" id="equation-he-t-bw-of-v-draft1">
-<span class="eqno">(728)<a class="headerlink" href="#equation-he-t-bw-of-v-draft1" title="Permalink to this equation">¶</a></span>\[2gh_{e_{BW}} = \left(K_{e_T}\bar v_{T_{BW}}^2 + K_{e_B}\bar v_{B_{BW}}^2 + \bar v_{P_{BW}}^2 \right)\]</div>
+<span class="eqno">(727)<a class="headerlink" href="#equation-he-t-bw-of-v-draft1" title="Permalink to this equation">¶</a></span>\[2gh_{e_{BW}} = \left(K_{e_T}\bar v_{T_{BW}}^2 + K_{e_B}\bar v_{B_{BW}}^2 + \bar v_{P_{BW}}^2 \right)\]</div>
 <p>Substitute to obtain an equation for the maximum trunk velocity.</p>
 <div class="math notranslate nohighlight" id="equation-he-t-bw-of-v-draft2">
-<span class="eqno">(729)<a class="headerlink" href="#equation-he-t-bw-of-v-draft2" title="Permalink to this equation">¶</a></span>\[2gh_{e_{BW}} = \left[K_{e_T}\bar v_{T_{BW}}^2 + \bar v_{B_{BW}}^2\left(K_{e_B} + \frac{1}{\Pi_{\Psi_{P_{BW}}}}\right) \right]\]</div>
+<span class="eqno">(728)<a class="headerlink" href="#equation-he-t-bw-of-v-draft2" title="Permalink to this equation">¶</a></span>\[2gh_{e_{BW}} = \left[K_{e_T}\bar v_{T_{BW}}^2 + \bar v_{B_{BW}}^2\left(K_{e_B} + \frac{1}{\Pi_{\Psi_{P_{BW}}}}\right) \right]\]</div>
 <p>Substitute again to eliminate the branch velocity.</p>
 <div class="math notranslate nohighlight" id="equation-he-t-bw-of-v-draft3">
-<span class="eqno">(730)<a class="headerlink" href="#equation-he-t-bw-of-v-draft3" title="Permalink to this equation">¶</a></span>\[2gh_{e_{BW}} = \bar v_{T_{BW}}^2\left[K_{e_T} +  \frac{1}{\Pi_{\Psi_{B_{BW}}}} \right]\]</div>
+<span class="eqno">(729)<a class="headerlink" href="#equation-he-t-bw-of-v-draft3" title="Permalink to this equation">¶</a></span>\[2gh_{e_{BW}} = \bar v_{T_{BW}}^2\left[K_{e_T} +  \frac{1}{\Pi_{\Psi_{B_{BW}}}} \right]\]</div>
 <p>Solve for the maximum trunk velocity.</p>
 <div class="math notranslate nohighlight" id="equation-v-t-bw">
-<span class="eqno">(731)<a class="headerlink" href="#equation-v-t-bw" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{BWmax}} = \sqrt\frac{2gh_{e_{BW}}}{K_{e_T} +  \frac{1}{\Pi_{\Psi_{B_{BW}}}}}\]</div>
-<p>The backwash trunk may be the same diameter as the other trunk lines or it may be larger depending on the maximum velocities calculated from equations <a class="reference internal" href="#equation-v-trunk-of-he2">(717)</a> and <a class="reference internal" href="#equation-v-t-bw">(731)</a>.</p>
-<p>The maximum branch velocity is now obtained by solving Equation <a class="reference internal" href="#equation-v-b-to-v-t-bw">(727)</a> for <span class="math notranslate nohighlight">\(\bar v_{T_{BW}}\)</span>.</p>
+<span class="eqno">(730)<a class="headerlink" href="#equation-v-t-bw" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{BWmax}} = \sqrt\frac{2gh_{e_{BW}}}{K_{e_T} +  \frac{1}{\Pi_{\Psi_{B_{BW}}}}}\]</div>
+<p>The backwash trunk may be the same diameter as the other trunk lines or it may be larger depending on the maximum velocities calculated from equations <a class="reference internal" href="#equation-v-trunk-of-he2">(716)</a> and <a class="reference internal" href="#equation-v-t-bw">(730)</a>.</p>
+<p>The maximum branch velocity is now obtained by solving Equation <a class="reference internal" href="#equation-v-b-to-v-t-bw">(726)</a> for <span class="math notranslate nohighlight">\(\bar v_{T_{BW}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-v-b-of-v-t-bw">
-<span class="eqno">(732)<a class="headerlink" href="#equation-v-b-of-v-t-bw" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{BW}} = \bar v_{B_{BW}} \sqrt{\left( K_{e_{B}} + \frac{1}{\Pi_{\Psi_{P_{BW}}}} \right)\Pi_{\Psi_{B_{BW}}}}\]</div>
-<p>The branch minimum area is from Equation <a class="reference internal" href="#equation-branch-v">(711)</a>.</p>
+<span class="eqno">(731)<a class="headerlink" href="#equation-v-b-of-v-t-bw" title="Permalink to this equation">¶</a></span>\[\bar v_{T_{BW}} = \bar v_{B_{BW}} \sqrt{\left( K_{e_{B}} + \frac{1}{\Pi_{\Psi_{P_{BW}}}} \right)\Pi_{\Psi_{B_{BW}}}}\]</div>
+<p>The branch minimum area is from Equation <a class="reference internal" href="#equation-branch-v">(710)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-branch-a">
-<span class="eqno">(733)<a class="headerlink" href="#equation-branch-a" title="Permalink to this equation">¶</a></span>\[A_{B} = \frac{N_{layer} v_{Fi} B_{B} L_{B}}{v_{B}}\]</div>
-<p>The port velocity is obtained from Equation <a class="reference internal" href="#equation-v-p-to-v-b-bw">(722)</a> and the backwash port spacing is obtained by rewriting <code class="xref eq docutils literal notranslate"><span class="pre">v_P_to_v_Fi1</span></code> to include the relationship that the backwash velocity is the filtration velocity times the number of filter layers.</p>
+<span class="eqno">(732)<a class="headerlink" href="#equation-branch-a" title="Permalink to this equation">¶</a></span>\[A_{B} = \frac{N_{layer} v_{Fi} B_{B} L_{B}}{v_{B}}\]</div>
+<p>The port velocity is obtained from Equation <a class="reference internal" href="#equation-v-p-to-v-b-bw">(721)</a> and the backwash port spacing is obtained by rewriting <code class="xref eq docutils literal notranslate"><span class="pre">v_P_to_v_Fi1</span></code> to include the relationship that the backwash velocity is the filtration velocity times the number of filter layers.</p>
 <div class="math notranslate nohighlight" id="equation-v-p-to-v-fi2">
-<span class="eqno">(734)<a class="headerlink" href="#equation-v-p-to-v-fi2" title="Permalink to this equation">¶</a></span>\[B_{P_{bw}} = \frac{\Pi_{vc} \pi D_{P}^2\bar v_{P_{BW}}}{4 v_{Fi} N_{layer} B_{B}}\]</div>
+<span class="eqno">(733)<a class="headerlink" href="#equation-v-p-to-v-fi2" title="Permalink to this equation">¶</a></span>\[B_{P_{bw}} = \frac{\Pi_{vc} \pi D_{P}^2\bar v_{P_{BW}}}{4 v_{Fi} N_{layer} B_{B}}\]</div>
 </div>
 <div class="section" id="backwash-flow-control-orifice">
 <span id="heading-stars-backwash-orifice"></span><h3>Backwash Flow Control Orifice<a class="headerlink" href="#backwash-flow-control-orifice" title="Permalink to this headline">¶</a></h3>
-<p>The head loss through the backwash inlet system must be increased during filtration to match the head loss of the other inlets under conditions of ideal flow distribution between the filter layers. The orifice will likely be placed right on the inlet and thus this orifice will replace the entrance loss. The unknown is the inner diameter of the orifice. We know the expanded area (trunk area) and velocity and thus we can use the third form of the expansion head loss Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html#equation-minor-loss-equation">(68)</a>.</p>
+<p>The head loss through the backwash inlet system must be increased during filtration to match the head loss of the other inlets under conditions of ideal flow distribution between the filter layers. The orifice will likely be placed right on the inlet and thus this orifice will replace the entrance loss. The unknown is the inner diameter of the orifice. We know the expanded area (trunk area) and velocity and thus we can use the third form of the expansion head loss Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html#equation-minor-loss-equation">(70)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-bw-orifice-draft">
-<span class="eqno">(736)<a class="headerlink" href="#equation-bw-orifice-draft" title="Permalink to this equation">¶</a></span>\[   h_{e_{orifice}} = \left( \frac{A_{T}}{\Pi_{vc}A_{orifice}} -1 \right)^2 \, \frac{\bar v_{T_{bw}}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{T_{bw}}^2}{2g}\]</div>
+<span class="eqno">(735)<a class="headerlink" href="#equation-bw-orifice-draft" title="Permalink to this equation">¶</a></span>\[   h_{e_{orifice}} = \left( \frac{A_{T}}{\Pi_{vc}A_{orifice}} -1 \right)^2 \, \frac{\bar v_{T_{bw}}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{T_{bw}}^2}{2g}\]</div>
 <p>Solve for the area of the orifice, <span class="math notranslate nohighlight">\(A_{orifice}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-bw-orifice-draft">
-<span class="eqno">(736)<a class="headerlink" href="#equation-bw-orifice-draft" title="Permalink to this equation">¶</a></span>\[   D_{orifice} =  \frac{D_{T}}{\left[\Pi_{vc}\left( \frac{\sqrt{2gh_{e_{orifice}}}}{\bar v_{T_{bw}}} + 1\right)\right]^\frac{1}{2}}\]</div>
+<span class="eqno">(735)<a class="headerlink" href="#equation-bw-orifice-draft" title="Permalink to this equation">¶</a></span>\[   D_{orifice} =  \frac{D_{T}}{\left[\Pi_{vc}\left( \frac{\sqrt{2gh_{e_{orifice}}}}{\bar v_{T_{bw}}} + 1\right)\right]^\frac{1}{2}}\]</div>
 </div>
 </div>
 <div class="section" id="backwash-siphon">
 <span id="heading-stars-backwash-siphon"></span><h2>Backwash Siphon<a class="headerlink" href="#backwash-siphon" title="Permalink to this headline">¶</a></h2>
-<p>The siphon manifold is designed to get reasonable flow distribution based on Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(86)</a>. The siphon diameter is based on dumping the water in the filter box in a reasonable amount of time, currently set to yield an average dump velocity in the filter box equal to the backwash velocity.</p>
-<p>The siphon manifold is designed to have reasonable port flow distribution. The port flow distribution doesn’t have to be very uniform because the sand-water interface has a very high density difference and thus is quite stable. Thus the velocity up out of the fluidized sand will not be harmed by a poor design of the manifold. A flow distribution, <span class="math notranslate nohighlight">\(\Pi_{Q}\)</span> of 0.8 will be very good. The required orifice area is obtained by solving <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(86)</a> for the total port area.</p>
+<p>The siphon manifold is designed to get reasonable flow distribution based on Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(88)</a>. The siphon diameter is based on dumping the water in the filter box in a reasonable amount of time, currently set to yield an average dump velocity in the filter box equal to the backwash velocity.</p>
+<p>The siphon manifold is designed to have reasonable port flow distribution. The port flow distribution doesn’t have to be very uniform because the sand-water interface has a very high density difference and thus is quite stable. Thus the velocity up out of the fluidized sand will not be harmed by a poor design of the manifold. A flow distribution, <span class="math notranslate nohighlight">\(\Pi_{Q}\)</span> of 0.8 will be very good. The required orifice area is obtained by solving <a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html#equation-manifold-max-v-no-hl-series">(88)</a> for the total port area.</p>
 <div class="math notranslate nohighlight" id="equation-siphon-port-area">
-<span class="eqno">(737)<a class="headerlink" href="#equation-siphon-port-area" title="Permalink to this equation">¶</a></span>\[ A_{P} = A_{M_1}\sqrt{\Pi_{\Psi}}\]</div>
+<span class="eqno">(736)<a class="headerlink" href="#equation-siphon-port-area" title="Permalink to this equation">¶</a></span>\[ A_{P} = A_{M_1}\sqrt{\Pi_{\Psi}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(A_{P}\)</span> is the contracted port area.</p>
 <p>The ports will need to be large in diameter to achieve the required total port area. The port diameter must meet the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-siphon-port-diameter-min">
-<span class="eqno">(738)<a class="headerlink" href="#equation-siphon-port-diameter-min" title="Permalink to this equation">¶</a></span>\[  floor\left(\frac{L_{manifold}}{D_P + S_P}\right) \Pi_{vc} \frac{\pi}{4}D_P^2 = A_P\]</div>
+<span class="eqno">(737)<a class="headerlink" href="#equation-siphon-port-diameter-min" title="Permalink to this equation">¶</a></span>\[  floor\left(\frac{L_{manifold}}{D_P + S_P}\right) \Pi_{vc} \frac{\pi}{4}D_P^2 = A_P\]</div>
 <p>where the first term is an estimate of the number of ports and the second term is the contracted port area. This equation can be solved by iteration over an array of drill bit sizes. A first estimate can be obtained by setting <span class="math notranslate nohighlight">\(S_P = 0\)</span></p>
 <div class="math notranslate nohighlight" id="equation-siphon-port-diameter-est">
-<span class="eqno">(739)<a class="headerlink" href="#equation-siphon-port-diameter-est" title="Permalink to this equation">¶</a></span>\[  D_{P_{est}} = \frac{4 A_P}{\pi L_{manifold} \Pi_{vc} }\]</div>
+<span class="eqno">(738)<a class="headerlink" href="#equation-siphon-port-diameter-est" title="Permalink to this equation">¶</a></span>\[  D_{P_{est}} = \frac{4 A_P}{\pi L_{manifold} \Pi_{vc} }\]</div>
 <p>Use the quadratic equation to get a good estimate.</p>
 <div class="math notranslate nohighlight" id="equation-siphon-port-correction">
-<span class="eqno">(740)<a class="headerlink" href="#equation-siphon-port-correction" title="Permalink to this equation">¶</a></span>\[  L_{manifold} \Pi_{vc} \frac{\pi}{4}D_P^2 - A_P D_P - A_P S_P = 0\]</div>
+<span class="eqno">(739)<a class="headerlink" href="#equation-siphon-port-correction" title="Permalink to this equation">¶</a></span>\[  L_{manifold} \Pi_{vc} \frac{\pi}{4}D_P^2 - A_P D_P - A_P S_P = 0\]</div>
 </div>
 <div class="section" id="backwash-initiation-forces">
 <span id="heading-stars-backwash-forces"></span><h2>Backwash Initiation Forces<a class="headerlink" href="#backwash-initiation-forces" title="Permalink to this headline">¶</a></h2>
@@ -650,42 +650,42 @@
 <p>The maximum hydrostatic force acting on the bottom of the filter occurs when the inlet box is still full of water when the filter water depth is reduced by the siphon. The force in excess of the weight of the sand and water in the filter is equal to the height of water in the inlet box that is in excess of the backwash height of about 10 cm. This excess height is approximately equal to the terminal head loss through the filter during filtration, <span class="math notranslate nohighlight">\(HL_{fi_{max}}\)</span>. The width of the filter bed that is contributing force to the receptor pipe is equal to 1/2 of the length of the branches. This force most likely acts uniformly on two layers of sand and associated piping at a time. The top two layers fluidize first when the water first stops going through the top inlet and thus all of the water is passing up through the top two layers. Thus the force is most likely shared by an inlet module and an outlet module.</p>
 <p>There are two factors of 2 that show up in the equation. First, the total force is distributed between two layers. Second, half of the force from one side of the filter is carried by the trunk. Thus the force per unit length of the receptor pipe, <span class="math notranslate nohighlight">\(\omega\)</span>, in one module is</p>
 <div class="math notranslate nohighlight" id="equation-branchbackwashinitiationforce">
-<span class="eqno">(741)<a class="headerlink" href="#equation-branchbackwashinitiationforce" title="Permalink to this equation">¶</a></span>\[\omega = \rho g h_{l_{sand_{max}}} \frac{L_{branch}}{4}\]</div>
+<span class="eqno">(740)<a class="headerlink" href="#equation-branchbackwashinitiationforce" title="Permalink to this equation">¶</a></span>\[\omega = \rho g h_{l_{sand_{max}}} \frac{L_{branch}}{4}\]</div>
 <p>The total force acting upward that must be resisted by the receptor supports is</p>
 <div class="math notranslate nohighlight" id="equation-receptorbackwashinitiationforce">
-<span class="eqno">(742)<a class="headerlink" href="#equation-receptorbackwashinitiationforce" title="Permalink to this equation">¶</a></span>\[F_{up} = \rho g h_{l_{sand_{max}}} \frac{Q_{Fi}}{v_{Fi} N_{layer}}\]</div>
+<span class="eqno">(741)<a class="headerlink" href="#equation-receptorbackwashinitiationforce" title="Permalink to this equation">¶</a></span>\[F_{up} = \rho g h_{l_{sand_{max}}} \frac{Q_{Fi}}{v_{Fi} N_{layer}}\]</div>
 </div>
 <div class="section" id="receptor-pipe-support-spacing">
 <span id="heading-stars-dead-end-support"></span><h2>Receptor Pipe Support Spacing<a class="headerlink" href="#receptor-pipe-support-spacing" title="Permalink to this headline">¶</a></h2>
 <p>The optimal spacing of the supports allows the same deflection at the ends of the pipes (cantilever beam) and in the middle of the supports (beam simply supported at both ends). In both cases the load is uniformly distributed along the pipe (see <a class="reference external" href="../_static/references/Beam_Deflection_Formulae.pdf">Beam Deflection Formulae</a>).</p>
 <div class="math notranslate nohighlight" id="equation-cantelever">
-<span class="eqno">(743)<a class="headerlink" href="#equation-cantelever" title="Permalink to this equation">¶</a></span>\[\delta_{max} = \frac{\omega L_{cantilever}^4}{8EI}\]</div>
+<span class="eqno">(742)<a class="headerlink" href="#equation-cantelever" title="Permalink to this equation">¶</a></span>\[\delta_{max} = \frac{\omega L_{cantilever}^4}{8EI}\]</div>
 <p>The equivalent equation for a beam with simply supported ends is</p>
 <div class="math notranslate nohighlight" id="equation-supported-at-both-ends">
-<span class="eqno">(744)<a class="headerlink" href="#equation-supported-at-both-ends" title="Permalink to this equation">¶</a></span>\[\delta_{max} = \frac{5\omega L_{both}^4}{384EI}\]</div>
+<span class="eqno">(743)<a class="headerlink" href="#equation-supported-at-both-ends" title="Permalink to this equation">¶</a></span>\[\delta_{max} = \frac{5\omega L_{both}^4}{384EI}\]</div>
 <p>We’d like the deflection to be the same in the cantilever ends of the receptor pipe as in the middle sections of the pipe where it is simply supported. Set the deflections to be the same.</p>
 <div class="math notranslate nohighlight" id="equation-draft">
-<span class="eqno">(746)<a class="headerlink" href="#equation-draft" title="Permalink to this equation">¶</a></span>\[\frac{5\omega L_{both}^4}{384EI} = \frac{\omega L_{cantilever}^4}{8EI}\]</div>
+<span class="eqno">(745)<a class="headerlink" href="#equation-draft" title="Permalink to this equation">¶</a></span>\[\frac{5\omega L_{both}^4}{384EI} = \frac{\omega L_{cantilever}^4}{8EI}\]</div>
 <p>Solve for the ratio of the length of the respective beams</p>
 <div class="math notranslate nohighlight" id="equation-draft">
-<span class="eqno">(746)<a class="headerlink" href="#equation-draft" title="Permalink to this equation">¶</a></span>\[\frac{ L_{cantilever}}{L_{both}} = \left(\frac{5 }{48}\right)^\frac{1}{4} = 0.57\]</div>
+<span class="eqno">(745)<a class="headerlink" href="#equation-draft" title="Permalink to this equation">¶</a></span>\[\frac{ L_{cantilever}}{L_{both}} = \left(\frac{5 }{48}\right)^\frac{1}{4} = 0.57\]</div>
 <p>This result is a bit surprising until we recognize that the cantilever beam is not allowed to rotate at the point where it is connected while the simple beam was allowed to rotate. The simple conclusion from all of this is that the cantilever sections can be 1/2 the length of the simply supported sections of the receptor pipe.</p>
 <p>We previously supported the receptor pipe at the ends. That wasn’t optimal. With the new StaRS design it is possible to make larger filters and it isn’t get clear what the optimal ratio of width to length of the filters will be. In any case, the length of the receptor pipe is likely to be significantly longer than in our previous designs for the highest flow rates. It will be necessary to ensure that the deflection isn’t too large.</p>
-<p>The deflection of the receptor pipe is given by Equation <a class="reference internal" href="#equation-supported-at-both-ends">(744)</a>. The area moment of inertia, <span class="math notranslate nohighlight">\(I\)</span> is</p>
+<p>The deflection of the receptor pipe is given by Equation <a class="reference internal" href="#equation-supported-at-both-ends">(743)</a>. The area moment of inertia, <span class="math notranslate nohighlight">\(I\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-pipe-ix-of-od-id">
-<span class="eqno">(747)<a class="headerlink" href="#equation-pipe-ix-of-od-id" title="Permalink to this equation">¶</a></span>\[I = \frac{\pi}{4}\left(OD^4 - ID^4\right)\]</div>
+<span class="eqno">(746)<a class="headerlink" href="#equation-pipe-ix-of-od-id" title="Permalink to this equation">¶</a></span>\[I = \frac{\pi}{4}\left(OD^4 - ID^4\right)\]</div>
 <p>The standard diameter ratio for PVC pipes is</p>
 <div class="math notranslate nohighlight" id="equation-sdr">
-<span class="eqno">(748)<a class="headerlink" href="#equation-sdr" title="Permalink to this equation">¶</a></span>\[\Pi_{SDR} = \frac{OD}{t}\]</div>
-<p>Substituting Equation <a class="reference internal" href="#equation-sdr">(748)</a> into Equation <a class="reference internal" href="#equation-pipe-ix-of-od-id">(747)</a></p>
+<span class="eqno">(747)<a class="headerlink" href="#equation-sdr" title="Permalink to this equation">¶</a></span>\[\Pi_{SDR} = \frac{OD}{t}\]</div>
+<p>Substituting Equation <a class="reference internal" href="#equation-sdr">(747)</a> into Equation <a class="reference internal" href="#equation-pipe-ix-of-od-id">(746)</a></p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-8">
-<span class="eqno">(749)<a class="headerlink" href="#equation-filtration-filtration-design-8" title="Permalink to this equation">¶</a></span>\[I = \frac{\pi}{4}\left[OD^4 - \left(\Pi_{SDR}t - t\right)^4\right]\]</div>
+<span class="eqno">(748)<a class="headerlink" href="#equation-filtration-filtration-design-8" title="Permalink to this equation">¶</a></span>\[I = \frac{\pi}{4}\left[OD^4 - \left(\Pi_{SDR}t - t\right)^4\right]\]</div>
 <p>simplifying</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-9">
-<span class="eqno">(750)<a class="headerlink" href="#equation-filtration-filtration-design-9" title="Permalink to this equation">¶</a></span>\[I = \frac{\pi}{4}OD^4\left[1 - \left(1-\frac{1}{\Pi_{SDR}}\right)^4\right]\]</div>
-<p>If we set a maximum deflection, then we can solve Equation <a class="reference internal" href="#equation-supported-at-both-ends">(744)</a> for the maximum length between supports.</p>
+<span class="eqno">(749)<a class="headerlink" href="#equation-filtration-filtration-design-9" title="Permalink to this equation">¶</a></span>\[I = \frac{\pi}{4}OD^4\left[1 - \left(1-\frac{1}{\Pi_{SDR}}\right)^4\right]\]</div>
+<p>If we set a maximum deflection, then we can solve Equation <a class="reference internal" href="#equation-supported-at-both-ends">(743)</a> for the maximum length between supports.</p>
 <div class="math notranslate nohighlight" id="equation-l-of-supported-at-both-ends">
-<span class="eqno">(751)<a class="headerlink" href="#equation-l-of-supported-at-both-ends" title="Permalink to this equation">¶</a></span>\[L_{both} = \left(\frac{384EI\delta_{max}}{5\omega}\right)^{\frac{1}{4}}\]</div>
+<span class="eqno">(750)<a class="headerlink" href="#equation-l-of-supported-at-both-ends" title="Permalink to this equation">¶</a></span>\[L_{both} = \left(\frac{384EI\delta_{max}}{5\omega}\right)^{\frac{1}{4}}\]</div>
 <p>Agua Para el Pueblo successfully used 2” PVC pipe with SDR 17 for the receptor at Gracias where the support spacing was 1 meter, the filter length was 1.34 meter, filter width was 1.58 meter, and the branch length of 0.63 meter. The maximum receptor deflection was estimated to be about 2 mm under these conditions.</p>
 </div>
 <div class="section" id="branch-deflection">
@@ -697,7 +697,7 @@
 <p>The supports for the receptors could have a cable or a threaded rod coming up on both sides or only on one side. Single sided support would be preferred to reduce the extra width of the filter required to accommodate the double sided support. The single sided support would have the cable coming up on one side. When the sand lifts on the dead pipe the support will tend to rotate around the cable and put the support in compression on the other side of the cable. The question is then the required dimensions of the compression area given the strength of the PVC.</p>
 <p>The force acting on one receptor support is</p>
 <div class="math notranslate nohighlight" id="equation-receptorsupportbackwashinitiationforce">
-<span class="eqno">(752)<a class="headerlink" href="#equation-receptorsupportbackwashinitiationforce" title="Permalink to this equation">¶</a></span>\[F_{up} = \rho g h_{l_{sand_{max}}}\frac{W_{filter}}{4} B_{support}\]</div>
+<span class="eqno">(751)<a class="headerlink" href="#equation-receptorsupportbackwashinitiationforce" title="Permalink to this equation">¶</a></span>\[F_{up} = \rho g h_{l_{sand_{max}}}\frac{W_{filter}}{4} B_{support}\]</div>
 <p>This force must be resisted by the PVC support. Given that the lift force <span class="math notranslate nohighlight">\(F_{up}\)</span> is on the order of 2000 N and the PVC compressive strength is approximately 55 MPa this requires less than a square centimeter of PVC. This suggests that a single sided support for the receptors with only one cable will be adequate.</p>
 </div>
 <div class="section" id="slotted-pipe-upgrade">
@@ -719,29 +719,29 @@
 <p>The available piezometric head to drive the sand slurry through the sand dump pipe is equal to the depth of water in the filter during backwash. The maximum elevation of the sand dump discharge must take into account the density of the sand slurry.</p>
 <p>The maximum density of the slurry in the sand dump pipe would be the case where the sand is just beginning to fluidize with a porosity equal to the normal settled sand porosity.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-10">
-<span class="eqno">(753)<a class="headerlink" href="#equation-filtration-filtration-design-10" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \frac{M_{water} + M_{sand}}{{\rlap{-} V_{sandbed}}}\]</div>
+<span class="eqno">(752)<a class="headerlink" href="#equation-filtration-filtration-design-10" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \frac{M_{water} + M_{sand}}{{\rlap{-} V_{sandbed}}}\]</div>
 <p>The mass of sand is given by its density and volume.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-design-11">
-<span class="eqno">(754)<a class="headerlink" href="#equation-filtration-filtration-design-11" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \frac{\rlap{-} V_{water} \rho_{water} + \rlap{-} V_{sand}\rho_{sand}}{{\rlap{-} V_{sandbed}}}\]</div>
+<span class="eqno">(753)<a class="headerlink" href="#equation-filtration-filtration-design-11" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \frac{\rlap{-} V_{water} \rho_{water} + \rlap{-} V_{sand}\rho_{sand}}{{\rlap{-} V_{sandbed}}}\]</div>
 <p>The water volume fraction is the porosity.</p>
 <div class="math notranslate nohighlight" id="equation-density-suspension">
-<span class="eqno">(755)<a class="headerlink" href="#equation-density-suspension" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \phi \rho_{water} + (1-\phi)\rho_{sand}\]</div>
+<span class="eqno">(754)<a class="headerlink" href="#equation-density-suspension" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed} = \phi \rho_{water} + (1-\phi)\rho_{sand}\]</div>
 <p>which has a value of about 2000 <span class="math notranslate nohighlight">\(\frac{kg}{m^3}\)</span> for silica sand. The total energy at the bottom of the sand dump pipe must equal the potential energy provided by the water column in the filter when the sand has all been removed.</p>
 <div class="math notranslate nohighlight" id="equation-sand-dump-energy-final">
-<span class="eqno">(756)<a class="headerlink" href="#equation-sand-dump-energy-final" title="Permalink to this equation">¶</a></span>\[\rho_{water}g H_{water} = \rho_{sandbed}g \left(H_{discharge} + K\frac{\bar v^2}{2g}\right)\]</div>
+<span class="eqno">(755)<a class="headerlink" href="#equation-sand-dump-energy-final" title="Permalink to this equation">¶</a></span>\[\rho_{water}g H_{water} = \rho_{sandbed}g \left(H_{discharge} + K\frac{\bar v^2}{2g}\right)\]</div>
 <p>We will use a relatively short straight section of pipe as the sand drain and thus entrance and exit minor losses will dominate. The entrance will be a reentrant pipe and thus the total minor loss will be 2.</p>
-<p>Substitute Equation <a class="reference internal" href="#equation-density-suspension">(755)</a> for <span class="math notranslate nohighlight">\(\rho_{sandbed}\)</span> and solve Equation <a class="reference internal" href="#equation-sand-dump-energy-final">(756)</a> for the maximum discharge height.</p>
+<p>Substitute Equation <a class="reference internal" href="#equation-density-suspension">(754)</a> for <span class="math notranslate nohighlight">\(\rho_{sandbed}\)</span> and solve Equation <a class="reference internal" href="#equation-sand-dump-energy-final">(755)</a> for the maximum discharge height.</p>
 <div class="math notranslate nohighlight" id="equation-sand-dump-energy-fail">
-<span class="eqno">(757)<a class="headerlink" href="#equation-sand-dump-energy-fail" title="Permalink to this equation">¶</a></span>\[H_{discharge_{max}} = \frac{\rho_{water}H_{water}}{\phi \rho_{water} + (1-\phi)\rho_{sand}}  - K\frac{\bar v^2}{2g}\]</div>
+<span class="eqno">(756)<a class="headerlink" href="#equation-sand-dump-energy-fail" title="Permalink to this equation">¶</a></span>\[H_{discharge_{max}} = \frac{\rho_{water}H_{water}}{\phi \rho_{water} + (1-\phi)\rho_{sand}}  - K\frac{\bar v^2}{2g}\]</div>
 <p>There isn’t sufficient head available in backwash mode to achieve the 3 m/s. We know that the sand drain system that has an outlet slightly below the filter sand level works fine. Presumably the velocity in the pipe is much less than the 3 m/s that is suggested as the minimum by the mining industry. It is also expected that the vertical pipe in the filter box would work with much lower velocities because there is no horizontal surface for the sand to settle on.</p>
 <p>If it is possible to force the sand out during filtration mode, then the available head is much larger. We will test the ability to unload the sand while in filtration mode at a plant in Honduras.</p>
 <p>The backwash trunk prevents sand from moving between sides of the filter and thus there should be a sand drain on each side of the trunks.</p>
-<p>Instead of designing for the end of the sand removal process, design for the beginning when the hydrostatic pressure at the bottom of the filter is highest because of the column of fluidized sand. Under that assumption the left side of Equation <a class="reference internal" href="#equation-sand-dump-energy-final">(756)</a> changes to be the height of the sand column plus water.</p>
+<p>Instead of designing for the end of the sand removal process, design for the beginning when the hydrostatic pressure at the bottom of the filter is highest because of the column of fluidized sand. Under that assumption the left side of Equation <a class="reference internal" href="#equation-sand-dump-energy-final">(755)</a> changes to be the height of the sand column plus water.</p>
 <div class="math notranslate nohighlight" id="equation-sand-dump-energy-initial">
-<span class="eqno">(758)<a class="headerlink" href="#equation-sand-dump-energy-initial" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed}g H_{sandbed} + \rho_{water}g H_{water} = \rho_{sandbed}g \left(H_{discharge} + K\frac{\bar v^2}{2g}\right)\]</div>
+<span class="eqno">(757)<a class="headerlink" href="#equation-sand-dump-energy-initial" title="Permalink to this equation">¶</a></span>\[\rho_{sandbed}g H_{sandbed} + \rho_{water}g H_{water} = \rho_{sandbed}g \left(H_{discharge} + K\frac{\bar v^2}{2g}\right)\]</div>
 <p>Solve for the maximum discharge height assuming we empty the sand in backwash mode.</p>
 <div class="math notranslate nohighlight" id="equation-sand-dump-discharge">
-<span class="eqno">(759)<a class="headerlink" href="#equation-sand-dump-discharge" title="Permalink to this equation">¶</a></span>\[ H_{discharge} = H_{sandbed} + \frac{\rho_{water}}{\rho_{sandbed}} H_{water} - K\frac{\bar v^2}{2g}\]</div>
+<span class="eqno">(758)<a class="headerlink" href="#equation-sand-dump-discharge" title="Permalink to this equation">¶</a></span>\[ H_{discharge} = H_{sandbed} + \frac{\rho_{water}}{\rho_{sandbed}} H_{water} - K\frac{\bar v^2}{2g}\]</div>
 <p>The maximum sand dump height can either be achieved by dumping the sand in filtration mode or using backwash mode. In backwash mode the initial head will be sufficient to drive the sand through the sand dump, but as the sand empties the hydrostatic pressure at the bottom of the filter will decrease. The pressure could be increased by increasing the height of the siphon outlet.</p>
 </div>
 </div>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>AguaClara Flow Control and Measurement Technologies &mdash; AguaClara Textbook v1.3.35 documentation</title>
+  <title>AguaClara Flow Control and Measurement Technologies &mdash; AguaClara Textbook v1.3.36 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.35
+                v1.3.36
               </div>
             
           
@@ -360,22 +360,22 @@
 <li><p>Calculate the maximum flow rate, <span class="math notranslate nohighlight">\(Q_{Max, \, Tube}\)</span>, through each available dosing tube diameter <span class="math notranslate nohighlight">\(D\)</span> that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-cdc-tube-q-max">
-<span class="eqno">(326)<a class="headerlink" href="#equation-cdc-tube-q-max" title="Permalink to this equation">¶</a></span>\[  Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
+<span class="eqno">(328)<a class="headerlink" href="#equation-cdc-tube-q-max" title="Permalink to this equation">¶</a></span>\[  Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
 <ol class="arabic simple" start="2">
 <li><p>Calculate how much flow of chemical needs to pass through the CDC at maximum plant flow and maximum chemical dose. This depends on the concentration of chemicals in the stock tank.</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-0">
-<span class="eqno">(327)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
+<span class="eqno">(329)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation">¶</a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
 <ol class="arabic simple" start="3">
 <li><p>Calculate the number of dosing tubes required if the tubes flow at  maximum capacity (round up)</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-1">
-<span class="eqno">(328)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
+<span class="eqno">(330)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation">¶</a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
 <ol class="arabic simple" start="4">
 <li><p>Calculate the length of dosing tube(s) that correspond to each available tube diameter.</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-2">
-<span class="eqno">(329)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
+<span class="eqno">(331)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation">¶</a></span>\[L_{Min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
 <ol class="arabic simple" start="5">
 <li><p>Select a tube length from your array of solutions. Pick the longest dosing tube that you can, keeping in mind that the tube(s) must be able to fit in the plant and can’t be longer than the length of the plant wall it will be placed along.</p></li>
 <li><p>Finally, select the dosing tube diameter and flow rate corresponding to the selected tube length.</p></li>
