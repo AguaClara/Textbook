@@ -482,17 +482,31 @@ Before describing the equation, we must first understand the concept of a `vena 
 
 The flow contracts as the fluid moves past the gate. This happens because the fluid can’t make a sharp turn as it tries to go around the gate, as indicated by the streamline in the figure. Instead, the most extreme streamline makes a gradual change in direction. As a result of this gradual turn, the flow contracts and the cross-sectional area the fluid is flowing decreases.
 
-The term ‘vena contracta’ describes the phenomenon of contracting flow due to streamlines being unable to make sharp turns. :math:`\Pi_{vc}` is a dimensionless ratio comparing the flow area at the point of maximal contraction, :math:`A_{downstream}`, and the flow area *before* the contraction, :math:`A_{gate}`. In the figure above, the equation for the vena contracta coefficient would be:
+The term ‘vena contracta’ describes the phenomenon of contracting flow due to streamlines being unable to make sharp turns. :math:`\Pi_{vc}` is a dimensionless ratio comparing the flow area at the point of maximal contraction, :math:`A_{downstream}`, and the flow area *before* the contraction, :math:`A_{gate}`. In the figure above, the equation for the *vena contracta* coefficient would be:
 
 .. math::
 
    \Pi_{vc} = \frac{A_{downstream}}{A_{gate}}
 
-When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter value, 0.62, is in aguaclara as ``pc.VC_ORIFICE_RATIO``. The vena contracta coefficient value is a function of the flow geometry. Since the ratio always puts the most contracted area over the least contracted area, :math:`\Pi_{vc}` is always less than 1.
+The *vena contracta* for an infinite slot such as the sluice gate in :numref:`figure_sluice_gate_vena_contracta` has an analytical solution (see `McDonald, 2005: Vena Contracta <../_static/references/vena_contracta.pdf>`_) given by
 
-.. important:: **A vena contracta coefficient is not a minor loss coefficient.** Though the equations for the two both involve contracted and non-contracted areas, these coefficients are not the same. Minor losses coefficients imply energy loss, and vena contractas do not. Minor losses coefficients deal with flow expansions, and vena contractas deal with flow contractions. Confusing the two coefficients is common mistake that this paragraph will hopefully help you to avoid.
+.. math::
+   :label: 90_slot_vena_contracta_analytical
 
-.. note:: Note that what this class calls :math:`\Pi_{vc}` is often referred to as a ‘Coefficient of Contraction,’ :math:`C_c`, in other engineering courses and settings.
+   \Pi_{vc_{\frac{\pi}{2}}} = \frac{\pi}{\pi + 2} = 0.611
+
+where Equation :eq:`90_slot_vena_contracta_analytical` assumes the most extreme turn a streamline must make is :math:`\frac{\pi}{2}`. This parameter value, 0.611, is in aguaclara python library as ``pc.VC_ORIFICE_RATIO``. The *vena contracta* coefficient value is a function of the flow geometry and specifically the most extreme turn a streamline takes. Equation :eq:`90_slot_vena_contracta_analytical` can be generalized to any streamline angle, :math:`\theta`, with the assumption that we need a function that returns 1 for an angle of 0 and for an angle of :math:`\pi` it must return :math:`\left(\Pi_{vc_{\frac{\pi}{2}}}\right)^2`.
+
+.. math::
+   :label: theta_slot_vena_contracta_analytical
+
+   \Pi_{vc_{\theta}} = \left(\frac{\pi}{\pi + 2}\right)^\frac{2\theta}{\pi}
+
+Equation :eq:`theta_slot_vena_contracta_analytical` will be useful when we evaluate flocculator baffles that have an angle of :math:`\pi` as the water flows around the end of a baffle.
+
+.. important:: A *vena contracta* coefficient is not a minor loss coefficient. Though the equations for the two both involve contracted and non-contracted areas, these coefficients are not the same. Minor losses coefficients imply energy loss, and *vena contractas* do not. Minor losses coefficients deal with flow expansions, and *vena contractas* deal with flow contractions. Confusing the two coefficients is common mistake that this paragraph will hopefully help you to avoid.
+
+.. note:: Note that :math:`\Pi_{vc}` is often referred to as a ‘Coefficient of Contraction,’ :math:`C_c`, in other engineering courses and textbooks.
 
 The Orifice Equation
 ------------------------------
@@ -514,7 +528,7 @@ At point 1, the pressure is atmospheric and the instantaneous velocity is neglig
 
    \Delta h = \frac{\bar v_2^2}{2g}
 
-Substituting the continuity Equation :math:`Q = \bar v A` in the form of :math:`\bar v_2^2 = \frac{Q^2}{A_{vc}^2}`, the vena contracta coefficient in the form of :math:`A_{vc} = \Pi_{vc} A_{or}` yields:
+Substituting the continuity Equation :math:`Q = \bar v A` in the form of :math:`\bar v_2^2 = \frac{Q^2}{A_{vc}^2}`, the *vena contracta* coefficient in the form of :math:`A_{vc} = \Pi_{vc} A_{or}` yields:
 
 .. math::
 
@@ -528,7 +542,7 @@ Which, rearranged to solve for :math:`Q` gives **The Orifice Equation:**
     Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}
 
 | Such that:
-| :math:`\Pi_{vc}` = 0.62 = vena contracta coefficient, as ``pc.VC_ORIFICE_RATIO``
+| :math:`\Pi_{vc}` = 0.62 = *vena contracta* coefficient, as ``pc.VC_ORIFICE_RATIO``
 | :math:`A_{or}` = orifice area- NOT contracted flow area
 | :math:`\Delta h` = elevation difference between orifice and water level
 

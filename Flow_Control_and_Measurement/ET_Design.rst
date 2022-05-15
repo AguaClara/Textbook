@@ -58,7 +58,7 @@ The minimum trash rack area is set to minimize head loss through the plant while
 
    Q = (1-\Pi_{clogged})\Pi_{vc} \phi A_{trashrack}\sqrt{2gh}
 
-where :math:`\phi_{trashrack}` is the fraction of clean trash rack that is open, :math:`\Pi_{vc}` is the vena contracta coefficient, and :math:`\Pi_{clogged}` is the clogged fraction of the trash rack. The ideal trash rack has a high porosity and a large vena contracta coefficient. The vena contracta coefficient is set by the entrance geometry of the trash rack openings. If the entrance has a sharp edge, then the vena contract coefficient will have a value of approximately 0.62. If the entrance is rounded then the vena contracta could approach 1.0. Thus, it is more efficient for a trash rack to have rounded openings.
+where :math:`\phi_{trashrack}` is the fraction of clean trash rack that is open, :math:`\Pi_{vc}` is the *vena contracta* coefficient, and :math:`\Pi_{clogged}` is the clogged fraction of the trash rack. The ideal trash rack has a high porosity and a large *vena contracta* coefficient. The *vena contracta* coefficient is set by the entrance geometry of the trash rack openings. If the entrance has a sharp edge, then the vena contract coefficient will have a value of approximately 0.62. If the entrance is rounded then the *vena contracta* could approach 1.0. Thus, it is more efficient for a trash rack to have rounded openings.
 
 The area of the trash rack can be solved for as follows:
 
@@ -67,7 +67,7 @@ The area of the trash rack can be solved for as follows:
 
    A_{trashrack} = \frac{Q}{(1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}}
 
-Set the fraction clogged to between 80 and 90%. The vena contracta coefficient is 0.62 for sharp edged orifices and could be 1 for round wire.
+Set the fraction clogged to between 80 and 90%. The *vena contracta* coefficient is 0.62 for sharp edged orifices and could be 1 for round wire.
 Porosity varies widely depending on the fabrication method.
 For AguaClara plants, a maximum head loss of 5 cm is recommended.
 
@@ -78,7 +78,7 @@ Also of interest is the effective velocity taking into account the whole area of
 
    v_{trashrack} = \frac{Q}{A_{trashrack} } = (1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}
 
-The trash rack characteristic velocity is 50 mm/s for 50% porosity, 90% clogged, vena contracta of 1, and a maximum head loss of 5 cm.
+The trash rack characteristic velocity is 50 mm/s for 50% porosity, 90% clogged, *vena contracta* of 1, and a maximum head loss of 5 cm.
 
 Grit Chamber Design
 ===============================
