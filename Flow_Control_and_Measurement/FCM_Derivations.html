@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Flow Control and Measurement Derivations &mdash; AguaClara Textbook 318/merge documentation</title>
+  <title>Flow Control and Measurement Derivations &mdash; AguaClara Textbook 319/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                318/merge
+                319/merge
               </div>
             
           
@@ -417,7 +417,7 @@
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(D\)</span> = tube diameter. only certain tubing diameters are manufactured (like <span class="math notranslate nohighlight">\(\frac{x}{16}\)</span> inch), so an array of available tube diameters is set initially.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\sum K\)</span> = sum of minor loss coefficients for the whole system. This is also set initially, it is usually 2.</p></li>
-<li><p><span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span> = maximum elevation difference between CHT water level and outlet of solution. This parameter is usually 20 cm.</p></li>
+<li><p><span class="math notranslate nohighlight">\(h_{L_{max}}\)</span> = maximum elevation difference between CHT water level and outlet of solution. This parameter is usually 20 cm.</p></li>
 </ol>
 <p>We begin by defining the head loss through the system <span class="math notranslate nohighlight">\(h_L\)</span>, which is equivalent to defining the driving head <span class="math notranslate nohighlight">\(\Delta h\)</span>. Major losses will be coded as red.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-20">
@@ -448,10 +448,10 @@
 <span class="eqno">(356)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-23" title="Permalink to this equation">¶</a></span>\[\color{blue}{
    h_L(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q}{g \pi ^2 D^4} \sum{K} \right) Q
    }\]</div>
-<p>This equation is not linear with respect to flow. We can make it linear by turning the variable <span class="math notranslate nohighlight">\(Q\)</span> in the <span class="math notranslate nohighlight">\(\frac{8Q}{g \pi ^2 D^4} \sum{K}\)</span> term into a constant. To do this, we pick a maximum flow rate of coagulant/chlorine through the dose controller, <span class="math notranslate nohighlight">\(Q_{Max}\)</span>, and put that into the term in place of <span class="math notranslate nohighlight">\(Q\)</span>. The term becomes <span class="math notranslate nohighlight">\(\frac{8Q_{Max}}{g \pi ^2 D^4} \sum{K}\)</span>, and our linearized model of head loss, coded as green, becomes:</p>
+<p>This equation is not linear with respect to flow. We can make it linear by turning the variable <span class="math notranslate nohighlight">\(Q\)</span> in the <span class="math notranslate nohighlight">\(\frac{8Q}{g \pi ^2 D^4} \sum{K}\)</span> term into a constant. To do this, we pick a maximum flow rate of coagulant/chlorine through the dose controller, <span class="math notranslate nohighlight">\(Q_{max}\)</span>, and put that into the term in place of <span class="math notranslate nohighlight">\(Q\)</span>. The term becomes <span class="math notranslate nohighlight">\(\frac{8Q_{max}}{g \pi ^2 D^4} \sum{K}\)</span>, and our linearized model of head loss, coded as green, becomes:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-24">
 <span class="eqno">(357)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-24" title="Permalink to this equation">¶</a></span>\[\color{green}{
-   h_{L_{linear}}(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q_{Max}}{g \pi ^2 D^4} \sum{K} \right) Q
+   h_{L_{linear}}(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q_{max}}{g \pi ^2 D^4} \sum{K} \right) Q
    }\]</div>
 <p>Here is a plot of the three colored equations above. Our goal is to minimize the minor losses in the system; to bring the red and blue curves as close as possible to the green one.</p>
 <div class="figure align-center" id="id7">
@@ -462,7 +462,7 @@
 <h3>Designing for the Error Constraint<a class="headerlink" href="#designing-for-the-error-constraint" title="Permalink to this headline">¶</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), <span class="math notranslate nohighlight">\({\bar v_{Max} }\)</span>.</p>
+<p>The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), <span class="math notranslate nohighlight">\({\bar v_{max} }\)</span>.</p>
 </div>
 <p>Minor losses will never be 0, so how much error in our linearity are we willing to accept? Let’s define a new parameter, <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span>, as the maximum amount of error we are willing to accept. We are ok with 10% error or less, so <span class="math notranslate nohighlight">\(\Pi_{Error} = 0.1\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-25">
@@ -478,61 +478,61 @@
 \right) Q
    }}
    {\color{green}{
-\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right) Q
+\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{max}}{g \pi^2 D^4} \sum{K} \right) Q
    }}
-   =  \frac{\left( \frac{128 \nu L}{g \pi D^4} \right)}{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right)}\]</div>
+   =  \frac{\left( \frac{128 \nu L}{g \pi D^4} \right)}{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{max}}{g \pi^2 D^4} \sum{K} \right)}\]</div>
 <p>The next steps are algebraic rearrangements to solve for <span class="math notranslate nohighlight">\(L\)</span>. This <span class="math notranslate nohighlight">\(L\)</span> describes the <em>minimum</em> length of dosing tube necessary to meet our error constraint at <em>maximum</em> flow. Thus, we will refer to it as <span class="math notranslate nohighlight">\(L_{Min, \, \Pi_{Error}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-28">
-<span class="eqno">(361)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-28" title="Permalink to this equation">¶</a></span>\[\left( 1 - \Pi_{Error} \right)  \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{Max}}{g \pi ^2 D^4} \sum{K}  =  \frac{128 \nu L}{g \pi D^4}\]</div>
+<span class="eqno">(361)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-28" title="Permalink to this equation">¶</a></span>\[\left( 1 - \Pi_{Error} \right)  \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{max}}{g \pi ^2 D^4} \sum{K}  =  \frac{128 \nu L}{g \pi D^4}\]</div>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-29">
-<span class="eqno">(362)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-29" title="Permalink to this equation">¶</a></span>\[- \Pi_{Error} \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K}  = 0\]</div>
+<span class="eqno">(362)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-29" title="Permalink to this equation">¶</a></span>\[- \Pi_{Error} \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{max}}{g \pi^2 D^4} \sum{K}  = 0\]</div>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-30">
-<span class="eqno">(363)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-30" title="Permalink to this equation">¶</a></span>\[L = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{Max}}{16 \nu \pi} \sum{K}\]</div>
+<span class="eqno">(363)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-30" title="Permalink to this equation">¶</a></span>\[L = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{max}}{16 \nu \pi} \sum{K}\]</div>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-31">
-<span class="eqno">(364)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-31" title="Permalink to this equation">¶</a></span>\[L_{Min, \, \Pi_{Error}} = L = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{Max}}{16 \nu \pi} \sum{K}\]</div>
+<span class="eqno">(364)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-31" title="Permalink to this equation">¶</a></span>\[L_{Min, \, \Pi_{Error}} = L = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{max}}{16 \nu \pi} \sum{K}\]</div>
 <div class="line-block">
 <div class="line">Note that this equation is independent of head loss.</div>
 </div>
-<p>Unfortunately, both <span class="math notranslate nohighlight">\(L_{Min, \, \Pi_{Error}}\)</span> and <span class="math notranslate nohighlight">\(Q_{Max}\)</span> are unknowns. We can plug this equation for <span class="math notranslate nohighlight">\(L_{Min, \, \Pi_{Error}}\)</span> back into the head loss equation at maximum flow, which is <span class="math notranslate nohighlight">\(h_{L_{Max}} = \left( \frac{128\nu L Q_{Max}}{g \pi D^4} + \frac{8Q_{Max}^2}{g \pi ^2 D^4} \sum{K} \right)\)</span> and rearrange for <span class="math notranslate nohighlight">\(Q_{Max}\)</span> to get:</p>
+<p>Unfortunately, both <span class="math notranslate nohighlight">\(L_{Min, \, \Pi_{Error}}\)</span> and <span class="math notranslate nohighlight">\(Q_{max}\)</span> are unknowns. We can plug this equation for <span class="math notranslate nohighlight">\(L_{Min, \, \Pi_{Error}}\)</span> back into the head loss equation at maximum flow, which is <span class="math notranslate nohighlight">\(h_{L_{max}} = \left( \frac{128\nu L Q_{max}}{g \pi D^4} + \frac{8Q_{max}^2}{g \pi ^2 D^4} \sum{K} \right)\)</span> and rearrange for <span class="math notranslate nohighlight">\(Q_{max}\)</span> to get:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-32">
-<span class="eqno">(365)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-32" title="Permalink to this equation">¶</a></span>\[Q_{Max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_{L_{Max}} g \Pi_{Error}}{\sum K }}\]</div>
+<span class="eqno">(365)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-32" title="Permalink to this equation">¶</a></span>\[Q_{max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_{L_{max}} g \Pi_{Error}}{\sum K }}\]</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><strong>Function in aguaclara</strong> <code class="docutils literal notranslate"><span class="pre">cdc.max_linear_flow(Diam,</span> <span class="pre">HeadlossCDC,</span> <span class="pre">Ratio_Error,</span> <span class="pre">KMinor)</span></code> Returns the maximum flow <span class="math notranslate nohighlight">\(Q_{Max}\)</span> that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.</p>
+<p><strong>Function in aguaclara</strong> <code class="docutils literal notranslate"><span class="pre">cdc.max_linear_flow(Diam,</span> <span class="pre">HeadlossCDC,</span> <span class="pre">Ratio_Error,</span> <span class="pre">KMinor)</span></code> Returns the maximum flow <span class="math notranslate nohighlight">\(Q_{max}\)</span> that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.</p>
 </div>
-<p>From this equation for <span class="math notranslate nohighlight">\(Q_{Max}\)</span>, we can get to our first design equation, <span class="math notranslate nohighlight">\({\bar v_{Max}}\)</span> by using the continuity Equation <span class="math notranslate nohighlight">\(\bar v_{Max} = \frac{Q_{Max}}{\frac{\pi D^2}{4}}\)</span></p>
+<p>From this equation for <span class="math notranslate nohighlight">\(Q_{max}\)</span>, we can get to our first design equation, <span class="math notranslate nohighlight">\({\bar v_{max}}\)</span> by using the continuity Equation <span class="math notranslate nohighlight">\(\bar v_{max} = \frac{Q_{max}}{\frac{\pi D^2}{4}}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-33">
-<span class="eqno">(366)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-33" title="Permalink to this equation">¶</a></span>\[\bar v_{Max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
+<span class="eqno">(366)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-33" title="Permalink to this equation">¶</a></span>\[\bar v_{max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
 </div>
 <div class="section" id="designing-for-head-loss">
 <h3>Designing for Head Loss<a class="headerlink" href="#designing-for-head-loss" title="Permalink to this headline">¶</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), <span class="math notranslate nohighlight">\({L_{Min}\)</span>.</p>
+<p>The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), <span class="math notranslate nohighlight">\({L_{min}\)</span>.</p>
 </div>
 <p>We previously derived an equation for the minimum length of the dosing tube(s), <span class="math notranslate nohighlight">\(L_{Min, \, \Pi_{Error}}\)</span>, which was the minimum length needed to ensure that our linearity constraint was met. This equation is shown again below, in red:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-34">
 <span class="eqno">(367)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-34" title="Permalink to this equation">¶</a></span>\[\color{red}{
-   L_{Min, \, \Pi_{Error}} = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{Max}}{16 \nu \pi} \sum{K}
+   L_{Min, \, \Pi_{Error}} = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{max}}{16 \nu \pi} \sum{K}
    }\]</div>
-<p>This equation does not, however, account for getting to the proper amount of head loss. If we were to use this equation to design the dosing tubes, we might not end up with the proper amount of flow <span class="math notranslate nohighlight">\(Q_{Max}\)</span> at the maximum head loss <span class="math notranslate nohighlight">\(h_{L{Max}}\)</span>. So we need to double check to make sure that we get our desired head loss.</p>
-<p>First, consider the head loss at maximum flow that was used to get the equation for <span class="math notranslate nohighlight">\(Q_{Max}\)</span>:</p>
+<p>This equation does not, however, account for getting to the proper amount of head loss. If we were to use this equation to design the dosing tubes, we might not end up with the proper amount of flow <span class="math notranslate nohighlight">\(Q_{max}\)</span> at the maximum head loss <span class="math notranslate nohighlight">\(h_{L{max}}\)</span>. So we need to double check to make sure that we get our desired head loss.</p>
+<p>First, consider the head loss at maximum flow that was used to get the equation for <span class="math notranslate nohighlight">\(Q_{max}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-35">
-<span class="eqno">(368)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-35" title="Permalink to this equation">¶</a></span>\[h_{L_{Max}} = \left( \frac{128 \nu L{Q_{Max}}}{g \pi D^4} + \frac{8 Q_{Max}^2}{g \pi^2 D^4} \sum{K} \right)\]</div>
-<p>Now that we know all of the parameters in this equation except for <span class="math notranslate nohighlight">\(L\)</span>, we can solve the equation for <span class="math notranslate nohighlight">\(L\)</span>. This the <em>shortest</em> tube that generates our required head loss, <span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span>.</p>
+<span class="eqno">(368)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-35" title="Permalink to this equation">¶</a></span>\[h_{L_{max}} = \left( \frac{128 \nu L{Q_{max}}}{g \pi D^4} + \frac{8 Q_{max}^2}{g \pi^2 D^4} \sum{K} \right)\]</div>
+<p>Now that we know all of the parameters in this equation except for <span class="math notranslate nohighlight">\(L\)</span>, we can solve the equation for <span class="math notranslate nohighlight">\(L\)</span>. This the <em>shortest</em> tube that generates our required head loss, <span class="math notranslate nohighlight">\(h_{L_{max}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-36">
 <span class="eqno">(369)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-36" title="Permalink to this equation">¶</a></span>\[\color{green}{
-   L_{Min, \, head loss} = L = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)
+   L_{Min, \, head loss} = L = \left( \frac{g h_{L_{max}} \pi D^4}{128 \nu Q_{max}} - \frac{Q_{max}}{16 \pi \nu} \sum{K} \right)
    }\]</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">cdc._length_cdc_tube_array(FlowPlant,</span> <span class="pre">ConcDoseMax,</span> <span class="pre">ConcStock,</span> <span class="pre">DiamTubeAvail,</span> <span class="pre">HeadlossCDC,</span> <span class="pre">temp,</span> <span class="pre">en_chem,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\({L_{Min}\)</span>, takes in the flow rate input of <em>plant design flow rate</em>.</p>
+<p><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">cdc._length_cdc_tube_array(FlowPlant,</span> <span class="pre">ConcDoseMax,</span> <span class="pre">ConcStock,</span> <span class="pre">DiamTubeAvail,</span> <span class="pre">HeadlossCDC,</span> <span class="pre">temp,</span> <span class="pre">en_chem,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\({L_{min}\)</span>, takes in the flow rate input of <em>plant design flow rate</em>.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">cdc._len_tube(Flow,</span> <span class="pre">Diam,</span> <span class="pre">HeadLoss,</span> <span class="pre">conc_chem,</span> <span class="pre">temp,</span> <span class="pre">en_chem,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\({L_{Min}\)</span>, takes in the flow rate input of <em>max flow rate through the dosing tube(s)</em>.</p>
+<p><strong>Function in aguaclara:</strong> <code class="docutils literal notranslate"><span class="pre">cdc._len_tube(Flow,</span> <span class="pre">Diam,</span> <span class="pre">HeadLoss,</span> <span class="pre">conc_chem,</span> <span class="pre">temp,</span> <span class="pre">en_chem,</span> <span class="pre">KMinor)</span></code> Returns <span class="math notranslate nohighlight">\({L_{min}\)</span>, takes in the flow rate input of <em>max flow rate through the dosing tube(s)</em>.</p>
 </div>
-<p>If you decrease the max flow <span class="math notranslate nohighlight">\(Q_{Max}\)</span> and hold <span class="math notranslate nohighlight">\(h_{L_{Max}}\)</span> constant, <span class="math notranslate nohighlight">\(\color{green}{L_{Min, \, head loss}}\)</span> becomes larger. This means that a CDC system for a plant of 40 <span class="math notranslate nohighlight">\(\frac{L}{s}\)</span> must be different than one for a plant of 20 <span class="math notranslate nohighlight">\(\frac{L}{s}\)</span>. If we want to maintain the same head loss at maximum flow in both plants, then the dosing tube(s) will need to be a lot longer for the 20 <span class="math notranslate nohighlight">\(\frac{L}{s}\)</span> plant.</p>
+<p>If you decrease the max flow <span class="math notranslate nohighlight">\(Q_{max}\)</span> and hold <span class="math notranslate nohighlight">\(h_{L_{max}}\)</span> constant, <span class="math notranslate nohighlight">\(\color{green}{L_{Min, \, head loss}}\)</span> becomes larger. This means that a CDC system for a plant of 40 <span class="math notranslate nohighlight">\(\frac{L}{s}\)</span> must be different than one for a plant of 20 <span class="math notranslate nohighlight">\(\frac{L}{s}\)</span>. If we want to maintain the same head loss at maximum flow in both plants, then the dosing tube(s) will need to be a lot longer for the 20 <span class="math notranslate nohighlight">\(\frac{L}{s}\)</span> plant.</p>
 <p>To visualize the distinction between <span class="math notranslate nohighlight">\(\color{red}{  L_{Min, \, \Pi_{Error}}}\)</span> and <span class="math notranslate nohighlight">\(\color{green}{ L_{Min, \, head loss}}\)</span>, see the following plot. <span class="math notranslate nohighlight">\(\color{green}{ L_{Min, \, head loss}}\)</span> is discontinuous because it takes in the smallest allowable tube diameter as an input. As the chemical flow rate through the dosing tube(s) decreases, the dosing tube diameter does as well. Whenever you see a jump in the green points, that means the tubing diameter has changed.</p>
 <div class="figure align-center" id="id8">
 <span id="figure-cdc-length-model"></span><a class="reference internal image-reference" href="../_images/CDC_length_model.png"><img alt="CDC length model" src="../_images/CDC_length_model.png" style="width: 600px;" /></a>
@@ -540,26 +540,26 @@
 </div>
 <p>As you can see, the head loss constraint is more limiting than the linearity constraint when designing for tube length. Therefore, the design equation for tube length is the one which accounts for head loss. This is the second and final design equation for designing the CDC:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-37">
-<span class="eqno">(370)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-37" title="Permalink to this equation">¶</a></span>\[L_{Min} = L_{Min, \, head loss} = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)\]</div>
-<p>The equations for <span class="math notranslate nohighlight">\(\bar v_{Max}\)</span> and <span class="math notranslate nohighlight">\(L_{Min}\)</span> are the only ones you <strong>need</strong> to manually design a CDC.</p>
+<span class="eqno">(370)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-37" title="Permalink to this equation">¶</a></span>\[L_{min} = L_{Min, \, head loss} = \left( \frac{g h_{L_{max}} \pi D^4}{128 \nu Q_{max}} - \frac{Q_{max}}{16 \pi \nu} \sum{K} \right)\]</div>
+<p>The equations for <span class="math notranslate nohighlight">\(\bar v_{max}\)</span> and <span class="math notranslate nohighlight">\(L_{min}\)</span> are the only ones you <strong>need</strong> to manually design a CDC.</p>
 </div>
 <div class="section" id="designing-for-dosing-tube-diameter">
 <h3>Designing for Dosing Tube Diameter<a class="headerlink" href="#designing-for-dosing-tube-diameter" title="Permalink to this headline">¶</a></h3>
 <p>Below are equations which also govern the CDC and greatly aid in understanding the physics behind it, but are not strictly necessary in design.</p>
-<p>By rearranging <span class="math notranslate nohighlight">\(Q_{Max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum K }}\)</span>, we can solve for <span class="math notranslate nohighlight">\(D\)</span> to get the <em>minimum</em> diameter we can use assuming the shortest tube possible that meets the error constraint, <span class="math notranslate nohighlight">\(\color{red}{L_{Min, \, \Pi_{Error}}}\)</span>. If we use a diameter smaller than <span class="math notranslate nohighlight">\(D_{Min, \, \Pi_{Error}}\)</span>, we will not be able to simultaneously reach <span class="math notranslate nohighlight">\(Q_{Max}\)</span> and meet the error constraint <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span>.</p>
+<p>By rearranging <span class="math notranslate nohighlight">\(Q_{max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum K }}\)</span>, we can solve for <span class="math notranslate nohighlight">\(D\)</span> to get the <em>minimum</em> diameter we can use assuming the shortest tube possible that meets the error constraint, <span class="math notranslate nohighlight">\(\color{red}{L_{Min, \, \Pi_{Error}}}\)</span>. If we use a diameter smaller than <span class="math notranslate nohighlight">\(D_{Min, \, \Pi_{Error}}\)</span>, we will not be able to simultaneously reach <span class="math notranslate nohighlight">\(Q_{max}\)</span> and meet the error constraint <span class="math notranslate nohighlight">\(\Pi_{Error}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-38">
 <span class="eqno">(371)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-38" title="Permalink to this equation">¶</a></span>\[\color{blue}{
- D_{Min, \, \Pi_{Error}} = \left[ \frac{8 Q_{Max}^2 \sum K}{\Pi_{Error} h_l g \pi^2} \right]^{\frac{1}{4}}
+ D_{Min, \, \Pi_{Error}} = \left[ \frac{8 Q_{max}^2 \sum K}{\Pi_{Error} h_l g \pi^2} \right]^{\frac{1}{4}}
  }\]</div>
-<p>We can also find the minimum diameter needed to guarantee laminar flow, which is another critical condition in the CDC design. We can do this by combining the equation for Reynolds number at the maximum <span class="math notranslate nohighlight">\(\rm{Re}\)</span> for laminar flow, <span class="math notranslate nohighlight">\({\rm{Re}}_{Max} = 2100\)</span> with the continuity equation at maximum flow:</p>
+<p>We can also find the minimum diameter needed to guarantee laminar flow, which is another critical condition in the CDC design. We can do this by combining the equation for Reynolds number at the maximum <span class="math notranslate nohighlight">\(\rm{Re}\)</span> for laminar flow, <span class="math notranslate nohighlight">\({\rm{Re}}_{max} = 2100\)</span> with the continuity equation at maximum flow:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-39">
-<span class="eqno">(372)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-39" title="Permalink to this equation">¶</a></span>\[{\rm Re}_{Max}  = \frac{\bar v_{Max} D}{\nu}\]</div>
+<span class="eqno">(372)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-39" title="Permalink to this equation">¶</a></span>\[{\rm Re}_{max}  = \frac{\bar v_{max} D}{\nu}\]</div>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-40">
-<span class="eqno">(373)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-40" title="Permalink to this equation">¶</a></span>\[\bar v_{Max} = \frac{4 Q_{Max}}{\pi D^2}\]</div>
+<span class="eqno">(373)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-40" title="Permalink to this equation">¶</a></span>\[\bar v_{max} = \frac{4 Q_{max}}{\pi D^2}\]</div>
 <p>To get:</p>
 <div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-derivations-41">
 <span class="eqno">(374)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-derivations-41" title="Permalink to this equation">¶</a></span>\[\color{red}{
- D_{Min, \, Laminar} = \frac{4 Q_{Max}}{\pi \nu {\rm{Re}}_{Max}}
+ D_{Min, \, Laminar} = \frac{4 Q_{max}}{\pi \nu {\rm{Re}}_{max}}
  }\]</div>
 <p>Combined with the discrete amount of tubing sizes (shown in dark green), we can create a graph of the three diameter constraints:</p>
 <div class="figure align-center" id="id9">

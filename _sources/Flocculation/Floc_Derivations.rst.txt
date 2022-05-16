@@ -32,6 +32,7 @@ where x is the distance along the path of the jet centerline and :math:`\Pi_{Pla
 
    \Pi_{BaffleJet_{exp}} = 0.5 \Pi_{PlaneJet_{exp}}
 
+where :math:`\Pi_{BaffleJet_{exp}}` is the dimensionless rate of expansion for the jet that has a baffle on the one side.
 
 .. _figure_baffle_geometry:
 
@@ -138,11 +139,13 @@ Given the slight disagreement between the two sources of information, CFD and a 
    :width: 300px
    :alt: CFD vc baffle
 
-   Baffle minor loss coefficient (Equation :eq:`K_baffle_expanding`) was fit to the CFD analysis by Andrew Pennock. Additional data is needed to resolve the difference between the CFD analysis and the data point from the Gracias AguaClara plant.  
+   Baffle minor loss coefficient (Equation :eq:`K_baffle_expanding`) was fit to the CFD analysis by Andrew Pennock. Additional data is needed to resolve the difference between the CFD analysis and the data point from the Gracias AguaClara plant.
 
 Until further results are obtained we need to make an engineering judgement to select the least risky model for the baffle loss coefficient. Given a fully fabricated flocculator it is easier to reduce the baffle spacing by shortening the spacers between baffles than it is to increase the baffle spacing. Thus it would be best to err on the side of obtaining less head loss than the design specifications. To obtain less head loss than predicted we need to use the maximum estimate of :math:`K_{baffle_{exp}}`. The Gracias measurement gives the maximum estimate of :math:`K_{baffle_{exp}}` based on :math:`\Pi _{LS_{curve}}' = 3`.
 
 Equation :eq:`K_baffle_expanding` may need to be modified when we have more experimental or CFD results to provide a better estimate of the baffle loss coefficient.
+
+The insight that the jet expands at half the rate of a free jet means that the jet doesn't fully expand as quickly as we had thought prior to 2022. It isn't until a :math:`\Pi_{H_eS}` of about 8 that the jet is fully expanded and thus it is very reasonable to use :math:`\Pi_{H_eS}` of 8 for design.
 
 Linking head loss, velocity gradient, and geometry
 ==================================================
