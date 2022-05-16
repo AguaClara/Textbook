@@ -32,6 +32,7 @@ where x is the distance along the path of the jet centerline and :math:`\Pi_{Pla
 
    \Pi_{BaffleJet_{exp}} = 0.5 \Pi_{PlaneJet_{exp}}
 
+where :math:`\Pi_{BaffleJet_{exp}}` is the dimensionless rate of expansion for the jet that has a baffle on the one side.
 
 .. _figure_baffle_geometry:
 
@@ -96,7 +97,7 @@ Substitute Equation :eq:`L_jetS_ratio` into Equation :eq:`baffle_expanded_jet_wi
 
   \frac{S}{W_{jet_{max}}}  =   \frac{1 - \Pi_{vc}^{baffle}}{\Pi_{BaffleJet_{exp}}(\Pi_{H_eS} + \Pi _{LS_{curve}}')}
 
-Equation :eq:`baffle_unexpanded_velocity_ratio` has a minimum value of 1 representing fully expanded flow. For small values of :math:`\Pi_{H_eS}` the equation would incorrectly predict values less than 1. The square of this velocity ratio can be factored into the baffle minor loss equation (Equation :eq:`K_baffle_min`) to obtain an equation that handles baffles in series where the flow doesn't fully expand between baffles.
+Equation :eq:`baffle_unexpanded_velocity_ratio` has a minimum value of 1 representing fully expanded flow. For large values of :math:`\Pi_{H_eS}` the equation would incorrectly predict values less than 1. This length ratio is also a velocity ratio given continuity and can be factored into the baffle minor loss equation (Equation :eq:`K_baffle_min`) to handle baffles in series where the flow doesn't fully expand between baffles.
 
 .. math::
   :label: K_baffle_expanding_messy
@@ -127,9 +128,9 @@ Andrew Pennock conducted CFD analysis (see :numref:`figure_K_baffle_CFD`) to est
 
    CFD analysis of flow around baffles with :math:`\Pi_{H_{e}S} = 8` showing the gradual flow expansion and return to a nearly uniform velocity before making the next bend (Andrew Pennock, 2022).
 
-If we take :math:`\Pi_{BaffleJet_{exp}} = 0.5 \Pi_{PlaneJet_{exp}}` as a given, then the remaining unknown is the dimensionless length of the curved and contracted flow path, :math:`\Pi _{LS_{curve}}'`. Andrew Pennock found :math:`\Pi _{LS_{curve}}' = 4.3` using CFD. We also obtained one head loss measurement from the Gracias AguaClara plant shortly after the plant was first commissioned. It became apparent that the flocculator head loss exceeded the expected values because water was overflowing at the upstream end of the flocculator. The calculated :math:`K_{baffle_{exp}` for the original design of the Gracias flocculator is plotted in :numref:`figure_K_baffle`. The model fit through that single data point requires the dimensionless distance for the jet to fully expand to be :math:`\Pi _{LS_{curve}}' = 3`.
+If we take :math:`\Pi_{BaffleJet_{exp}} = 0.5 \Pi_{PlaneJet_{exp}}` as a given, then the remaining unknown is the dimensionless length of the curved and contracted flow path, :math:`\Pi _{LS_{curve}}'`. Andrew Pennock found :math:`\Pi _{LS_{curve}}' = 4.3` using CFD. We also obtained one head loss measurement from the Gracias AguaClara plant shortly after the plant was first commissioned. It became apparent that the flocculator head loss exceeded the expected values because water was overflowing at the upstream end of the flocculator. The calculated :math:`K_{baffle_{exp}}` for the original design of the Gracias flocculator is plotted in :numref:`figure_K_baffle`. The model fit through that single data point requires the dimensionless distance for the jet to fully expand to be :math:`\Pi _{LS_{curve}}' = 3`.
 
-Given the slight disagreement between the two sources of information, CFD and a single head loss measurement at the Gracias AguaClara plant, it isn't clear which value to use for :math:`\Pi _{LS_{curve}}'. Further research is required and hydraulic flume experiments could provide the most definitive answer.
+Given the slight disagreement between the two sources of information, CFD and a single head loss measurement at the Gracias AguaClara plant, it isn't clear which value to use for :math:`\Pi _{LS_{curve}}'`. Further research is required and hydraulic flume experiments could provide the most definitive answer.
 
 .. _figure_K_baffle:
 
@@ -138,11 +139,13 @@ Given the slight disagreement between the two sources of information, CFD and a 
    :width: 300px
    :alt: CFD vc baffle
 
-   Baffle minor loss coefficient (Equation :eq:`K_baffle_expanding`) was fit to the CFD analysis by Andrew Pennock.
+   Baffle minor loss coefficient (Equation :eq:`K_baffle_expanding`) was fit to the CFD analysis by Andrew Pennock. Additional data is needed to resolve the difference between the CFD analysis and the data point from the Gracias AguaClara plant.
 
 Until further results are obtained we need to make an engineering judgement to select the least risky model for the baffle loss coefficient. Given a fully fabricated flocculator it is easier to reduce the baffle spacing by shortening the spacers between baffles than it is to increase the baffle spacing. Thus it would be best to err on the side of obtaining less head loss than the design specifications. To obtain less head loss than predicted we need to use the maximum estimate of :math:`K_{baffle_{exp}}`. The Gracias measurement gives the maximum estimate of :math:`K_{baffle_{exp}}` based on :math:`\Pi _{LS_{curve}}' = 3`.
 
 Equation :eq:`K_baffle_expanding` may need to be modified when we have more experimental or CFD results to provide a better estimate of the baffle loss coefficient.
+
+The insight that the jet expands at half the rate of a free jet means that the jet doesn't fully expand as quickly as we had thought prior to 2022. It isn't until a :math:`\Pi_{H_eS}` of about 8 that the jet is fully expanded and thus it is very reasonable to use :math:`\Pi_{H_eS}` of 8 for design.
 
 Linking head loss, velocity gradient, and geometry
 ==================================================

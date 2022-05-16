@@ -268,7 +268,7 @@ We will use the ‘head loss trick’ that was introduced in the Fluids Review s
 
 1. :math:`D` = tube diameter. only certain tubing diameters are manufactured (like :math:`\frac{x}{16}` inch), so an array of available tube diameters is set initially.
 2. :math:`\sum K` = sum of minor loss coefficients for the whole system. This is also set initially, it is usually 2.
-3. :math:`h_{L_{Max}}` = maximum elevation difference between CHT water level and outlet of solution. This parameter is usually 20 cm.
+3. :math:`h_{L_{max}}` = maximum elevation difference between CHT water level and outlet of solution. This parameter is usually 20 cm.
 
 We begin by defining the head loss through the system :math:`h_L`, which is equivalent to defining the driving head :math:`\Delta h`. Major losses will be coded as red.
 
@@ -308,12 +308,12 @@ Blue will be used to reference *actual* head loss from now on. This is the same 
      h_L(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q}{g \pi ^2 D^4} \sum{K} \right) Q
      }
 
-This equation is not linear with respect to flow. We can make it linear by turning the variable :math:`Q` in the :math:`\frac{8Q}{g \pi ^2 D^4} \sum{K}` term into a constant. To do this, we pick a maximum flow rate of coagulant/chlorine through the dose controller, :math:`Q_{Max}`, and put that into the term in place of :math:`Q`. The term becomes :math:`\frac{8Q_{Max}}{g \pi ^2 D^4} \sum{K}`, and our linearized model of head loss, coded as green, becomes:
+This equation is not linear with respect to flow. We can make it linear by turning the variable :math:`Q` in the :math:`\frac{8Q}{g \pi ^2 D^4} \sum{K}` term into a constant. To do this, we pick a maximum flow rate of coagulant/chlorine through the dose controller, :math:`Q_{max}`, and put that into the term in place of :math:`Q`. The term becomes :math:`\frac{8Q_{max}}{g \pi ^2 D^4} \sum{K}`, and our linearized model of head loss, coded as green, becomes:
 
 .. math::
 
   \color{green}{
-     h_{L_{linear}}(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q_{Max}}{g \pi ^2 D^4} \sum{K} \right) Q
+     h_{L_{linear}}(Q) = \left( \frac{128\nu L}{g \pi D^4} + \frac{8Q_{max}}{g \pi ^2 D^4} \sum{K} \right) Q
      }
 
 Here is a plot of the three colored equations above. Our goal is to minimize the minor losses in the system; to bring the red and blue curves as close as possible to the green one.
@@ -329,7 +329,7 @@ Here is a plot of the three colored equations above. Our goal is to minimize the
 
 Designing for the Error Constraint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. important:: The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), :math:`{\bar v_{Max} }`.
+.. important:: The first step in the design is to make sure that major losses far exceed minor losses. This will result in an equation for the maximum velocity that can go through the dosing tube(s), :math:`{\bar v_{max} }`.
 
 Minor losses will never be 0, so how much error in our linearity are we willing to accept? Let’s define a new parameter, :math:`\Pi_{Error}`, as the maximum amount of error we are willing to accept. We are ok with 10% error or less, so :math:`\Pi_{Error} = 0.1`.
 
@@ -352,79 +352,79 @@ Now we plug :math:`\color{blue}{ h_L(Q) }` and :math:`\color{green}{ h_{L_{linea
   \right) Q
      }}
      {\color{green}{
-  \left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right) Q
+  \left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{max}}{g \pi^2 D^4} \sum{K} \right) Q
      }}
-     =  \frac{\left( \frac{128 \nu L}{g \pi D^4} \right)}{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K} \right)}
+     =  \frac{\left( \frac{128 \nu L}{g \pi D^4} \right)}{\left( \frac{128 \nu L}{g \pi D^4} + \frac{8 Q_{max}}{g \pi^2 D^4} \sum{K} \right)}
 
 The next steps are algebraic rearrangements to solve for :math:`L`. This :math:`L` describes the *minimum* length of dosing tube necessary to meet our error constraint at *maximum* flow. Thus, we will refer to it as :math:`L_{Min, \, \Pi_{Error}}`.
 
 .. math::
 
-   \left( 1 - \Pi_{Error} \right)  \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{Max}}{g \pi ^2 D^4} \sum{K}  =  \frac{128 \nu L}{g \pi D^4}
+   \left( 1 - \Pi_{Error} \right)  \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{max}}{g \pi ^2 D^4} \sum{K}  =  \frac{128 \nu L}{g \pi D^4}
 
 .. math::
 
-    - \Pi_{Error} \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{Max}}{g \pi^2 D^4} \sum{K}  = 0
+    - \Pi_{Error} \frac{128 \nu L}{g \pi D^4} + \left( 1 - \Pi_{Error} \right) \frac{8 Q_{max}}{g \pi^2 D^4} \sum{K}  = 0
 
 .. math::
 
-    L = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{Max}}{16 \nu \pi} \sum{K}
+    L = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{max}}{16 \nu \pi} \sum{K}
 
 .. math::
 
-    L_{Min, \, \Pi_{Error}} = L = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{Max}}{16 \nu \pi} \sum{K}
+    L_{Min, \, \Pi_{Error}} = L = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{max}}{16 \nu \pi} \sum{K}
 
 | Note that this equation is independent of head loss.
 
-Unfortunately, both :math:`L_{Min, \, \Pi_{Error}}` and :math:`Q_{Max}` are unknowns. We can plug this equation for :math:`L_{Min, \, \Pi_{Error}}` back into the head loss equation at maximum flow, which is :math:`h_{L_{Max}} = \left( \frac{128\nu L Q_{Max}}{g \pi D^4} + \frac{8Q_{Max}^2}{g \pi ^2 D^4} \sum{K} \right)` and rearrange for :math:`Q_{Max}` to get:
+Unfortunately, both :math:`L_{Min, \, \Pi_{Error}}` and :math:`Q_{max}` are unknowns. We can plug this equation for :math:`L_{Min, \, \Pi_{Error}}` back into the head loss equation at maximum flow, which is :math:`h_{L_{max}} = \left( \frac{128\nu L Q_{max}}{g \pi D^4} + \frac{8Q_{max}^2}{g \pi ^2 D^4} \sum{K} \right)` and rearrange for :math:`Q_{max}` to get:
 
 .. math::
 
-    Q_{Max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_{L_{Max}} g \Pi_{Error}}{\sum K }}
+    Q_{max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_{L_{max}} g \Pi_{Error}}{\sum K }}
 
-.. seealso:: **Function in aguaclara** ``cdc.max_linear_flow(Diam, HeadlossCDC, Ratio_Error, KMinor)`` Returns the maximum flow :math:`Q_{Max}` that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.
+.. seealso:: **Function in aguaclara** ``cdc.max_linear_flow(Diam, HeadlossCDC, Ratio_Error, KMinor)`` Returns the maximum flow :math:`Q_{max}` that can go through a dosing tube will making sure that linearity between head loss and flow is conserved.
 
-From this equation for :math:`Q_{Max}`, we can get to our first design equation, :math:`{\bar v_{Max}}` by using the continuity Equation :math:`\bar v_{Max} = \frac{Q_{Max}}{\frac{\pi D^2}{4}}`
+From this equation for :math:`Q_{max}`, we can get to our first design equation, :math:`{\bar v_{max}}` by using the continuity Equation :math:`\bar v_{max} = \frac{Q_{max}}{\frac{\pi D^2}{4}}`
 
 .. math::
 
 
-  \bar v_{Max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}
+  \bar v_{max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K} }}
 
 Designing for Head Loss
 ^^^^^^^^^^^^^^^^^^^^^^^^
-.. important:: The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), :math:`{L_{Min}`.
+.. important:: The second step in the design is to make sure that the maximum head loss corresponds to the maximum flow of chemicals. This will result in an equation for the length of the dosing tube(s), :math:`{L_{min}`.
 
 We previously derived an equation for the minimum length of the dosing tube(s), :math:`L_{Min, \, \Pi_{Error}}`, which was the minimum length needed to ensure that our linearity constraint was met. This equation is shown again below, in red:
 
 .. math::
 
   \color{red}{
-     L_{Min, \, \Pi_{Error}} = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{Max}}{16 \nu \pi} \sum{K}
+     L_{Min, \, \Pi_{Error}} = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{Q_{max}}{16 \nu \pi} \sum{K}
      }
 
-This equation does not, however, account for getting to the proper amount of head loss. If we were to use this equation to design the dosing tubes, we might not end up with the proper amount of flow :math:`Q_{Max}` at the maximum head loss :math:`h_{L{Max}}`. So we need to double check to make sure that we get our desired head loss.
+This equation does not, however, account for getting to the proper amount of head loss. If we were to use this equation to design the dosing tubes, we might not end up with the proper amount of flow :math:`Q_{max}` at the maximum head loss :math:`h_{L{max}}`. So we need to double check to make sure that we get our desired head loss.
 
-First, consider the head loss at maximum flow that was used to get the equation for :math:`Q_{Max}`:
+First, consider the head loss at maximum flow that was used to get the equation for :math:`Q_{max}`:
 
 .. math::
 
-    h_{L_{Max}} = \left( \frac{128 \nu L{Q_{Max}}}{g \pi D^4} + \frac{8 Q_{Max}^2}{g \pi^2 D^4} \sum{K} \right)
+    h_{L_{max}} = \left( \frac{128 \nu L{Q_{max}}}{g \pi D^4} + \frac{8 Q_{max}^2}{g \pi^2 D^4} \sum{K} \right)
 
-Now that we know all of the parameters in this equation except for :math:`L`, we can solve the equation for :math:`L`. This the *shortest* tube that generates our required head loss, :math:`h_{L_{Max}}`.
+Now that we know all of the parameters in this equation except for :math:`L`, we can solve the equation for :math:`L`. This the *shortest* tube that generates our required head loss, :math:`h_{L_{max}}`.
 
 
 .. math::
 
   \color{green}{
-     L_{Min, \, head loss} = L = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)
+     L_{Min, \, head loss} = L = \left( \frac{g h_{L_{max}} \pi D^4}{128 \nu Q_{max}} - \frac{Q_{max}}{16 \pi \nu} \sum{K} \right)
      }
 
-.. seealso:: **Function in aguaclara:** ``cdc._length_cdc_tube_array(FlowPlant, ConcDoseMax, ConcStock, DiamTubeAvail, HeadlossCDC, temp, en_chem, KMinor)`` Returns :math:`{L_{Min}`, takes in the flow rate input of *plant design flow rate*.
+.. seealso:: **Function in aguaclara:** ``cdc._length_cdc_tube_array(FlowPlant, ConcDoseMax, ConcStock, DiamTubeAvail, HeadlossCDC, temp, en_chem, KMinor)`` Returns :math:`{L_{min}`, takes in the flow rate input of *plant design flow rate*.
 
-.. seealso:: **Function in aguaclara:** ``cdc._len_tube(Flow, Diam, HeadLoss, conc_chem, temp, en_chem, KMinor)`` Returns :math:`{L_{Min}`, takes in the flow rate input of *max flow rate through the dosing tube(s)*.
+.. seealso:: **Function in aguaclara:** ``cdc._len_tube(Flow, Diam, HeadLoss, conc_chem, temp, en_chem, KMinor)`` Returns :math:`{L_{min}`, takes in the flow rate input of *max flow rate through the dosing tube(s)*.
 
-If you decrease the max flow :math:`Q_{Max}` and hold :math:`h_{L_{Max}}` constant, :math:`\color{green}{L_{Min, \, head loss}}` becomes larger. This means that a CDC system for a plant of 40 :math:`\frac{L}{s}` must be different than one for a plant of 20 :math:`\frac{L}{s}`. If we want to maintain the same head loss at maximum flow in both plants, then the dosing tube(s) will need to be a lot longer for the 20 :math:`\frac{L}{s}` plant.
+If you decrease the max flow :math:`Q_{max}` and hold :math:`h_{L_{max}}` constant, :math:`\color{green}{L_{Min, \, head loss}}` becomes larger. This means that a CDC system for a plant of 40 :math:`\frac{L}{s}` must be different than one for a plant of 20 :math:`\frac{L}{s}`. If we want to maintain the same head loss at maximum flow in both plants, then the dosing tube(s) will need to be a lot longer for the 20 :math:`\frac{L}{s}` plant.
 
 To visualize the distinction between :math:`\color{red}{  L_{Min, \, \Pi_{Error}}}` and :math:`\color{green}{ L_{Min, \, head loss}}`, see the following plot. :math:`\color{green}{ L_{Min, \, head loss}}` is discontinuous because it takes in the smallest allowable tube diameter as an input. As the chemical flow rate through the dosing tube(s) decreases, the dosing tube diameter does as well. Whenever you see a jump in the green points, that means the tubing diameter has changed.
 
@@ -441,41 +441,41 @@ As you can see, the head loss constraint is more limiting than the linearity con
 
 .. math::
 
-   L_{Min} = L_{Min, \, head loss} = \left( \frac{g h_{L_{Max}} \pi D^4}{128 \nu Q_{Max}} - \frac{Q_{Max}}{16 \pi \nu} \sum{K} \right)
+   L_{min} = L_{Min, \, head loss} = \left( \frac{g h_{L_{max}} \pi D^4}{128 \nu Q_{max}} - \frac{Q_{max}}{16 \pi \nu} \sum{K} \right)
 
 
 
-The equations for :math:`\bar v_{Max}` and :math:`L_{Min}` are the only ones you **need** to manually design a CDC.
+The equations for :math:`\bar v_{max}` and :math:`L_{min}` are the only ones you **need** to manually design a CDC.
 
 
 Designing for Dosing Tube Diameter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Below are equations which also govern the CDC and greatly aid in understanding the physics behind it, but are not strictly necessary in design.
 
-By rearranging :math:`Q_{Max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum K }}`, we can solve for :math:`D` to get the *minimum* diameter we can use assuming the shortest tube possible that meets the error constraint, :math:`\color{red}{L_{Min, \, \Pi_{Error}}}`. If we use a diameter smaller than :math:`D_{Min, \, \Pi_{Error}}`, we will not be able to simultaneously reach :math:`Q_{Max}` and meet the error constraint :math:`\Pi_{Error}`.
+By rearranging :math:`Q_{max} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum K }}`, we can solve for :math:`D` to get the *minimum* diameter we can use assuming the shortest tube possible that meets the error constraint, :math:`\color{red}{L_{Min, \, \Pi_{Error}}}`. If we use a diameter smaller than :math:`D_{Min, \, \Pi_{Error}}`, we will not be able to simultaneously reach :math:`Q_{max}` and meet the error constraint :math:`\Pi_{Error}`.
 
 .. math::
 
   \color{blue}{
-   D_{Min, \, \Pi_{Error}} = \left[ \frac{8 Q_{Max}^2 \sum K}{\Pi_{Error} h_l g \pi^2} \right]^{\frac{1}{4}}
+   D_{Min, \, \Pi_{Error}} = \left[ \frac{8 Q_{max}^2 \sum K}{\Pi_{Error} h_l g \pi^2} \right]^{\frac{1}{4}}
    }
 
-We can also find the minimum diameter needed to guarantee laminar flow, which is another critical condition in the CDC design. We can do this by combining the equation for Reynolds number at the maximum :math:`\rm{Re}` for laminar flow, :math:`{\rm{Re}}_{Max} = 2100` with the continuity equation at maximum flow:
+We can also find the minimum diameter needed to guarantee laminar flow, which is another critical condition in the CDC design. We can do this by combining the equation for Reynolds number at the maximum :math:`\rm{Re}` for laminar flow, :math:`{\rm{Re}}_{max} = 2100` with the continuity equation at maximum flow:
 
 .. math::
 
-    {\rm Re}_{Max}  = \frac{\bar v_{Max} D}{\nu}
+    {\rm Re}_{max}  = \frac{\bar v_{max} D}{\nu}
 
 .. math::
 
-   \bar v_{Max} = \frac{4 Q_{Max}}{\pi D^2}
+   \bar v_{max} = \frac{4 Q_{max}}{\pi D^2}
 
 To get:
 
 .. math::
 
   \color{red}{
-   D_{Min, \, Laminar} = \frac{4 Q_{Max}}{\pi \nu {\rm{Re}}_{Max}}
+   D_{Min, \, Laminar} = \frac{4 Q_{max}}{\pi \nu {\rm{Re}}_{max}}
    }
 
 Combined with the discrete amount of tubing sizes (shown in dark green), we can create a graph of the three diameter constraints:

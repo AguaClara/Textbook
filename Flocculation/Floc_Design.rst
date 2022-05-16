@@ -15,7 +15,7 @@ Flocculation Design
 
 AguaClara's approach to flocculator design is the same as it is for any other unit process. First, critical design criteria, called inputs, are established. These criteria represent the priorities that the rest of the design will be based around. Once these parameters are established, then the other parameters of the design, which are dependent on the inputs, are calculated based on certain constraints.
 
-Take the CDC as an example of this design process in :ref:`title_flow_control_design`; its inputs are :math:`h_{L_{Max}}`, :math:`\sum K`, :math:`\Pi_{Error}`, and the discrete dosing tube diameters  :math:`D` that are available at hardware stores or pipe suppliers. Its dependent variables include the number and length of the dosing tubes and the flow through the CDC system.
+Take the CDC as an example of this design process in :ref:`title_flow_control_design`; its inputs are :math:`h_{L_{max}}`, :math:`\sum K`, :math:`\Pi_{Error}`, and the discrete dosing tube diameters  :math:`D` that are available at hardware stores or pipe suppliers. Its dependent variables include the number and length of the dosing tubes and the flow through the CDC system.
 
 The flocculator is more complex to design than the CDC, as it has more details and parameters and the equations for those details and parameters are very interdependent. Therefore, there are many ways to design an AguaClara flocculator, and many different sets of critical design criteria to begin with. Below are design approaches for several of the different potential flocculator geometries.
 
@@ -165,16 +165,16 @@ Group the parameters so that the dimensions inside the exponents are a simple as
 
 This equation represents the absolute smallest width of a flocculator channel if we consider the lowest value of :math:`\Pi_{H_eS}` and the highest possible value of :math:`H_e`:
 
-:math:`H_e = H_{e_{Max}} = H = 2 \, {\rm m}`, this implies that there are no obstacles between baffles
-:math:`\Pi_{H_eS} = \Pi_{ {HS}_{Min} } = 3`
+:math:`H_e = H_{e_{max}} = H = 2 \, {\rm m}`, this implies that there are no obstacles between baffles
+:math:`\Pi_{H_eS} = \Pi_{ {HS}_{min} } = 3`
 
-Recall our other width constraint, :math:`W_{Min, \, human} = 45 \, {\rm cm}`, which is based on our desire to have a human be able to fit into the channels. The governing constraint is the *larger* value of :math:`W_{Min}`:
+Recall our other width constraint, :math:`W_{Min, \, human} = 45 \, {\rm cm}`, which is based on our desire to have a human be able to fit into the channels. The governing constraint is the *larger* value of :math:`W_{min}`:
 
 .. math::
 
-  W_{Min} = {\rm max}(W_{Min, \, \Pi_{H_eS}}, \, W_{Min, \, human})
+  W_{min} = {\rm max}(W_{Min, \, \Pi_{H_eS}}, \, W_{Min, \, human})
 
-We can find the number of channels, :math:`n_{channels}` and their actual width in one last step, by finding the *total flocculator width* if there were no channels and dividing that by the minimum flocculator width, :math:`W_{Min}`, found above. The equation for total flocculator width is based on our target volume:
+We can find the number of channels, :math:`n_{channels}` and their actual width in one last step, by finding the *total flocculator width* if there were no channels and dividing that by the minimum flocculator width, :math:`W_{min}`, found above. The equation for total flocculator width is based on our target volume:
 
 .. math::
 
@@ -184,7 +184,7 @@ Finally:
 
 .. math::
 
-    n_{channels} = \frac{W_{total}}{W_{Min}}
+    n_{channels} = \frac{W_{total}}{W_{min}}
 
 
 | Such that:
@@ -204,36 +204,36 @@ Now that the physical dimensions of the flocculator have been defined, the baffl
 Height Between Expansions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-We have a range of possible :math:`H_e` values based on our window of :math:`3 < \frac{H_e}{S} < 6`. However, we have a limitation and a preference which shape how we design :math:`H_e`. Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want :math:`\frac{H_e}{S}` to be closer to :math:`6` than it is to :math:`3`; we are looking for :math:`H_{e_{Max}}`.
+We have a range of possible :math:`H_e` values based on our window of :math:`3 < \frac{H_e}{S} < 6`. However, we have a limitation and a preference which shape how we design :math:`H_e`. Our limitation is that there can only be an integer number of obstacles. Our preference is to have as few obstacles as possible to make the baffle module as easy to fabricate as possible. Therefore, we want :math:`\frac{H_e}{S}` to be closer to :math:`6` than it is to :math:`3`; we are looking for :math:`H_{e_{max}}`.
 
-We calculate :math:`H_{e_{Max}}` based on the physical flocculator dimensions. The equation for :math:`H_e` is obtained by rearranging Equation :eq:`floc_channel_W_min_var_K`. Because we have already designed the channel width, we substitute :math:`W_{channel}` for :math:`W_{Min_{H_eS}}`. Since we are looking for :math:`H_{e_{Max}}`, we also substitute :math:`\Pi_{{H_eS}_{Max}}` for :math:`\Pi_{H_eS}`. The result is:
+We calculate :math:`H_{e_{max}}` based on the physical flocculator dimensions. The equation for :math:`H_e` is obtained by rearranging Equation :eq:`floc_channel_W_min_var_K`. Because we have already designed the channel width, we substitute :math:`W_{channel}` for :math:`W_{Min_{H_eS}}`. Since we are looking for :math:`H_{e_{max}}`, we also substitute :math:`\Pi_{{H_eS}_{max}}` for :math:`\Pi_{H_eS}`. The result is:
 
 .. math::
   :label: floc_He_max_var_K
 
-  H_{e_{Max}}^\frac{4}{3}= \frac{Q}{W_{Min_{H_eS}} \left(\nu G_{CS}^2 \right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{{H_eS}_{Max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
+  H_{e_{max}}^\frac{4}{3}= \frac{Q}{W_{Min_{H_eS}} \left(\nu G_{CS}^2 \right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{{H_eS}_{max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
 
 raise to 3/4
 
 .. math::
   :label: floc_He_max_var_K2
 
-  H_{e_{Max}}= \left[ \left(\frac{Q^3}{W_{Min_{H_eS}}^3 \nu G_{CS}^2}\right)\frac{  \Pi_{{H_eS}_{Max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right]^\frac{1}{4} \left(1 - \Pi_{vc}^{baffle}\right)
+  H_{e_{max}}= \left[ \left(\frac{Q^3}{W_{Min_{H_eS}}^3 \nu G_{CS}^2}\right)\frac{  \Pi_{{H_eS}_{max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right]^\frac{1}{4} \left(1 - \Pi_{vc}^{baffle}\right)
 
 For :math:`\Pi_{H_eS}` large enough such that the flow has fully expanded the following equation applies.
 
 .. math::
   :label: floc_He_max_const_K
 
-  H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}
+  H_{e_{max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}
 
 Note that this is the *maximum* distance between flow expansions, and does not account for the limitation that there must be an integer number of obstacles per baffle space. Thus, we need to find the *actual* distance between flow expansions. To do this, we determine and round up the number of expansions per baffle space using the ceiling function:
 
 .. math::
 
-  n_{expansions} = {\rm ceil}\left( \frac{H}{H_{e_{Max}}} \right)
+  n_{expansions} = {\rm ceil}\left( \frac{H}{H_{e_{max}}} \right)
 
-If we had used the floor() function instead, we would find that :math:`H_e` would be larger than our upper bound, :math:`H_{e_{Max}}`. From here, we can easily get to the actual number of flow expansions per baffle spacing:
+If we had used the floor() function instead, we would find that :math:`H_e` would be larger than our upper bound, :math:`H_{e_{max}}`. From here, we can easily get to the actual number of flow expansions per baffle spacing:
 
 .. math::
 

@@ -240,21 +240,21 @@ The plane jet velocity gradient given in Equation :eq:`planejet_V_max` can be co
 .. math::
   :label: v_port_max_of_G
 
-  \bar v_{Port_{Max}} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}
+  \bar v_{Port_{max}} = G_{max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}
 
 Now we can combine Equations :eq:`D_port_min_continuity` and :eq:`v_port_max_of_G` and solve for the minimum port diameter.
 
 .. math::
   :label: D_port_min
 
-   D_{port_{min}} = \left[\left(\frac{16 \Pi_{JetPlane} }{\nu \pi  G_{Max}^2 }\right) \left(\frac{4 \Pi_r^L Q_{manifold}}{ \Pi_{vc} L_{jetreverser}\pi} \right)^3 \right]^{\frac{1}{4}}
+   D_{port_{min}} = \left[\left(\frac{16 \Pi_{JetPlane} }{\nu \pi  G_{max}^2 }\right) \left(\frac{4 \Pi_r^L Q_{manifold}}{ \Pi_{vc} L_{jetreverser}\pi} \right)^3 \right]^{\frac{1}{4}}
 
 The port diameter will be rounded up to the next available pipe diameter. The maximum length of the port is given by the maximum flow from the port. The maximum port velocity is given by Equation :eq:`v_port_max_of_G`. The maximum port flow is obtained by multiplying by the port area.
 
 .. math::
   :label: port_max_spacing
 
-  Q_{port_{max}} = \bar v_{Port_{Max}} \frac{\pi D_{port}^2}{8} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
+  Q_{port_{max}} = \bar v_{Port_{max}} \frac{\pi D_{port}^2}{8} = G_{max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
 
 The port center to center distance is obtained by matching the port flow to the flow through the diffusers.
 
@@ -268,14 +268,14 @@ where :math:`B_{port}` is the center to center spacing of the ports. Combining E
 .. math::
   :label: max_port_spacing_draft
 
-  G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8} = \frac{Q_{manifold}}{L_{jetreverser}} B_{port_{max}}
+  G_{max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8} = \frac{Q_{manifold}}{L_{jetreverser}} B_{port_{max}}
 
 Solve for the port spacing.
 
 .. math::
   :label: max_port_spacing
 
-  B_{port_{max}} = \frac{L_{jetreverser}}{Q_{manifold}}  \left(\frac{\nu G_{Max}^2 \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
+  B_{port_{max}} = \frac{L_{jetreverser}}{Q_{manifold}}  \left(\frac{\nu G_{max}^2 \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
 
 Round down to the port spacing that works given the total length of the jet reverser and the requirement that there be an integer number of ports.
 
