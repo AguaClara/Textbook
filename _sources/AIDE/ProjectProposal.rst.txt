@@ -16,16 +16,25 @@ This draft proposal represents how AguaClara Reach (ACR) would work with a new I
 
 This proposal was prepared by AguaClara Reach (hereafter referred to as “ACR”) to support [INSERT IMPLEMENTATION PARTNER NAME HERE] (hereafter referred to as the “Implementation Partner” or the “IP” ) during the Preliminary Engineering, Design, Construction, Installation, Training and Commissioning phases of the development of a drinking water treatment system to treat a surface water source using AguaClara technology. Preliminary design parameters are summarized below and will be confirmed and/or refined during Phase 1 of the project. Any significant changes to these parameters could result in a change of the costs included in this proposal.
 
-Plant location: [INSERT HERE]
-Approximate current population to be served: [INSERT HERE]
-Approximate future population to be served: [INSERT HERE]
-Design maximum flowrate (to be verified during Phase 1): [INSERT HERE]
-Chemicals to be dosed: Coagulant and Chlorine
-Treatment processes to be included: Coagulant Addition and Mixing, Flocculation, Floc Filtration, Sedimentation, Filtration, and Disinfection
-Other functionality to be included: Backwash recycling with a small pump (if required for water conservation)
-Known water quality issues to address: [INSERT HERE]
-Regulatory requirements (finished water quality and other) to be met: [INSERT HERE]
-Expected alterations from the AguaClara standard design: [INSERT HERE]
+- Plant location: [INSERT HERE]
+
+- Approximate current population to be served: [INSERT HERE]
+
+- Approximate future population to be served: [INSERT HERE]
+
+- Design maximum flowrate (to be verified during Phase 1): [INSERT HERE]
+
+- Chemicals to be dosed: Coagulant and Chlorine
+
+- Treatment processes to be included: Coagulant Addition and Mixing, Flocculation, Floc Filtration, Sedimentation, Stacked Rapid Sand Filtration, and Disinfection
+
+- Other functionality to be included: Backwash recycling with a small pump (if required for water conservation)
+
+- Known water quality issues to address: [INSERT HERE]
+
+- Regulatory requirements (finished water quality and other) to be met: [INSERT HERE]
+
+- Expected alterations from the AguaClara standard design: [INSERT HERE]
 
 .. _table_Abbreviations:
 
@@ -176,21 +185,21 @@ After the IP has reviewed ACR’s PER deliverables, ACR shall conduct a workshop
 Phase 1 Assumptions
 -------------------
 
-- IP will provide all Project Management Services including meeting preparation and facilitation.
+- The IP will provide all Project Management Services including meeting preparation and facilitation.
 
-- IP shall establish the regulatory compliance roles and responsibilities and strategy for permit compliance at the initiation of the Preliminary Engineering Phase.
+- The IP shall establish the regulatory compliance roles and responsibilities and strategy for permit compliance at the initiation of the Preliminary Engineering Phase.
 
-- IP will add the PER sections provided by ACR to the PER.
+- The IP will add the PER sections provided by ACR to the PER.
 
-- IP will provide the Project Schedule.
+- The IP will provide the Project Schedule.
 
-- IP will provide a site plan showing preferred location(s) of the new water treatment plant and the following:
+- The IP will provide a site plan showing preferred location(s) of the new water treatment plant and the following:
 
-- IP will provide field verification of existing conditions
+- The IP will provide field verification of existing conditions
 
-- IP will provide a topographic survey of the project area
+- The IP will provide a topographic survey of the project area
 
-- IP will provide a plan for an access road if necessary.
+- The IP will provide a plan for an access road if necessary.
 
 .. _heading_Phase_2_Design:
 
@@ -415,7 +424,9 @@ AguaClara Technician
 
 The AguaClara technician will supervise fabrication of the removable hydraulic components, such as the chemical dosing system and flocculator modules. The IP must provide all tools and labor for fabrication. The time and personnel requirements for fabrication of the removable hydraulic components will depend on the size of the treatment plant designed.
 
-The AguaClara technician will train community members to operate the AguaClara plant. If the country where the project is being implemented has a relevant water treatment plant operator certification process which the trainees have not yet completed, the IP should arrange for them to also receive that training. The AguaClara training and the country specific certification training will ideally occur simultaneously. ACR recommends that the IP provide a minimum of 5 operators for training to be able to provide 24/7 plant operation. In addition to the personnel who are expected to operate the plant, ACR recommends training additional potential operators to prepare for staff transitions and also other staff from the entity (water board or municipality for instance) that will manage the plant.
+The AguaClara technician will train community members to operate the AguaClara plant. If the country where the project is being implemented has a relevant water treatment plant operator certification process which the trainees have not yet completed, the IP should arrange for them to also receive that training. The AguaClara training and the country specific certification training will ideally occur simultaneously.
+
+ACR recommends that the IP provide a minimum of 8 operator candidates for training. The IP can select the final group of operators from the candidates to be able to provide 24/7 plant operation. In addition to the personnel who are expected to operate the plant, ACR recommends training potential operators to prepare for staff transitions and also other staff from the entity (water board or municipality for instance) that will manage the plant.
 
 .. _heading_Material_Acquisition_Support:
 
@@ -424,18 +435,26 @@ Task 3.2  Material Acquisition Support
 
 ACR will provide vendor and part numbers for hydraulic components of the plant and will review alternatives proposed by IP.
 
-There are several specialized components (pipe molds, constant head tank for the chemical feeds, and doser system) that could either be purchased directly from specialty parts suppliers or potentially could be purchased from ACR. ACR will work with IP to determine which approach is best.
+There are several specialized components (pipe molds, constant head tank for the chemical feeds, and doser system) that could either be purchased directly from specialty parts suppliers or potentially could be purchased from ACR. ACR will work with the IP to determine which approach is best.
+
+.. _heading_Operation_and_Maintenance_Manual:
+
+Task 3.3 Operation and Maintenance Manual
+-----------------------------------------
+
+ACR will provide an Operation and Maintenance Manual in English or Spanish. Translation to any other language will be the responsibility of the Implementation Partner. The Operation and Maintenance Manual complements the training received by AguaClara certified operators, but it does not replace AguaClara operator training.
+
 
 .. _heading_Remote_Technical_Support:
 
-Task 3.3 Remote Technical Support
+Task 3.4 Remote Technical Support
 ---------------------------------
 
-In addition to the construction advisor and AguaClara technician, ACR will provide remote technical support throughout Phase 3 and for the first year of operation. IP can invite ACR staff to relevant meetings and can contact ACR with questions that arise during the construction phase and the first year of operation.
+In addition to the construction advisor and AguaClara technician, ACR will provide remote technical support throughout Phase 3 and for the first year of operation. The IP can invite ACR staff to relevant meetings and can contact ACR with questions that arise during the construction phase and the first year of operation.
 
 .. _heading_Webinars_for_Water_Professionals:
 
-Task 3.4 Webinars for Water Professionals
+Task 3.5 Webinars for Water Professionals
 -----------------------------------------
 
 ACR will provide the following remote hour-long training sessions (total of 5 hours) for water professionals
@@ -446,7 +465,7 @@ ACR will provide the following remote hour-long training sessions (total of 5 ho
 - Plate Settlers
 - Stacked Rapid Sand Filters
 
-This training could be exclusively for IP staff or it could be extended to include water professionals from the region. ACR also welcomes IP recommendations for additional training.
+This training could be exclusively for the IP staff or it could be extended to include water professionals from the region. ACR also welcomes recommendations from the IP for additional relevant training topics.
 
 .. _heading_Phase_3_Assumptions:
 
@@ -456,36 +475,38 @@ Phase 3 Assumptions
 Staffing
 ~~~~~~~~
 
-- IP will identify individuals that they want to be trained as construction foreman and AguaClara technician so that IP has these capabilities in-house for future projects.
+- The IP will identify individuals to be trained as construction foreman and AguaClara technician so that IP has these capabilities in-house for future projects.
 
-- IP plant operators will be responsible for plant operation as soon as the plant begins operating. This includes during the initial startup and commissioning.
+- The IP plant operators will be responsible for plant operation as soon as the plant begins operating. This includes during the initial startup and commissioning.
 
 Transport to site
 ~~~~~~~~~~~~~~~~~
 
-- IP will provide transport to the worksite for APP staff.
+- The IP will provide transport to the worksite for APP staff.
 
 Material acquisition
 ~~~~~~~~~~~~~~~~~~~~
 
-- IP will be responsible for acquiring materials for both the civil work and for the hydraulic components.
+- The IP will be responsible for acquiring materials for both the civil work and for the hydraulic components.
 
-- IP will be responsible for acquiring the tools as detailed in :ref:`heading_Tool_List_for_Fabrication`.
+- The IP will be responsible for acquiring the tools as detailed in :ref:`heading_Tool_List_for_Fabrication`.
 
-- IP is responsible for all freight, customs and duty charges.
+- The IP is responsible for all freight, customs and duty charges.
 
 Fabrication Workshop
 ~~~~~~~~~~~~~~~~~~~~
 
-IP will provide an enclosed space where the tools (see :ref:`heading_Tool_List_for_Fabrication`) can be setup and the hydraulic components can be fabricated. The workshop can either be adjoining the plant construction site or it can be at a more convenient location for electricity and for the workers. The workshop will be used to assemble hydraulic components including flocculator baffle modules, settler modules, manifolds, and filter piping. The workshop should have dimensions of at least 12 m x 5 m and will require electricity and lighting.
+The IP will provide an enclosed space where the tools (see :ref:`heading_Tool_List_for_Fabrication`) can be setup and the hydraulic components can be fabricated. The workshop can either be adjoining the plant construction site or it can be at a more convenient location for electricity and for the workers. The workshop will be used to assemble hydraulic components including flocculator baffle modules, settler modules, manifolds, and filter piping. The workshop should have dimensions of at least 12 m x 5 m and will require electricity and lighting.
 
 Access Road
 ~~~~~~~~~~~
 
-IP shall provide an access road to facilitate construction and operations.
+The IP shall provide an access road to facilitate construction and operation of the treatment plant.
 
 Electricity
 ~~~~~~~~~~~
+
+The IP is responsible for electricity supply during construction and for minor ancillary power requirements during normal plant operation.
 
 Construction activities require electricity for:
 
@@ -505,7 +526,7 @@ Although AguaClara plants can be operated off-grid there are several critical po
 
 The electricity needs for operation could be met by connecting the plant to the electrical grid or by adding solar panels to the roof. IP is responsible for selecting and installing the best option. 
 
-Emergency operation without power could be facilitated by discontinuing backwash recycle. IP is responsible for provision of emergency lighting during power failures.
+The IP is responsible for provision of emergency lighting during power failures.
 
 .. |LFOM| image:: https://cad.onshape.com/api/thumbnails/d/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/s/300x170
   :width: 100
