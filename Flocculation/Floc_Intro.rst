@@ -322,7 +322,7 @@ We can therefore state with reasonable accuracy that, when most contracted, the 
 
   \color{red} {= 2.82}
 
-This :math:`K_{baffle_{min}}` has been used to design flocculators in AguaClara plants until 2021. The plant at Gracias revealed that the observed head loss was greater than predicted.  `This paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. Further analysis of how :math:`K_{baffle}` varies with the geometry of the flocculator is given :ref:`heading_Baffle_Loss_Coefficient`.
+This :math:`K_{baffle_{min}}` has been used to design flocculators in AguaClara plants until 2021. The plant at Gracias revealed that the observed head loss was greater than predicted.  `This paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. Further analysis of how :math:`K_{baffle}` varies with the geometry of the flocculator is given in the section on :ref:`heading_Baffle_Loss_Coefficient`.
 
 Equation :eq:`K_baffle_min` doesn't account for the fact that for a series of baffles (or flow contractions) the flow might not be able to fully expand before entering the next baffle (or contraction). The distance required for the contracted flow to expand can be estimated from jet equations (see section on :ref:`Baffle Minor Loss Coefficient<heading_Baffle_Loss_Coefficient>` for an estimate of how the minor loss coefficient increases when the flow doesn't fully expand).
 
