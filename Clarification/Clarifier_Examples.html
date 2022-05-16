@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Clarification Examples &mdash; AguaClara Textbook v1.3.36 documentation</title>
+  <title>Clarification Examples &mdash; AguaClara Textbook v1.3.37 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.36
+                v1.3.37
               </div>
             
           
@@ -278,12 +278,12 @@
 <h2>Tube Settler Design<a class="headerlink" href="#tube-settler-design" title="Permalink to this headline">¶</a></h2>
 <p>Design a tube settler for a laboratory scale clarifier. The vertical section of the clarifier, <span class="math notranslate nohighlight">\(v_{z_{ff}}\)</span>, has a net upflow velocity of 3 mm/s. This velocity is maintained in the tube settler, <span class="math notranslate nohighlight">\(v_{\alpha}\)</span>. The target capture velocity is 0.2 mm/s. The tube settler diameter is 2.54 cm.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-0">
-<span class="eqno">(640)<a class="headerlink" href="#equation-clarification-clarifier-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{z_{ff}}}{\bar v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
+<span class="eqno">(638)<a class="headerlink" href="#equation-clarification-clarifier-examples-0" title="Permalink to this equation">¶</a></span>\[\frac{\bar v_{z_{ff}}}{\bar v_c} = \frac{L}{D} \cos \alpha \sin \alpha + \sin ^2 \alpha\]</div>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-1">
-<span class="eqno">(641)<a class="headerlink" href="#equation-clarification-clarifier-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{ff}} = \bar v_\alpha\sin \alpha\]</div>
+<span class="eqno">(639)<a class="headerlink" href="#equation-clarification-clarifier-examples-1" title="Permalink to this equation">¶</a></span>\[\bar v_{z_{ff}} = \bar v_\alpha\sin \alpha\]</div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=qxeWciqaZnPZ&amp;line=4&amp;uniqifier=1">Solve for the length of the tube settler.</a></p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-2">
-<span class="eqno">(642)<a class="headerlink" href="#equation-clarification-clarifier-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
+<span class="eqno">(640)<a class="headerlink" href="#equation-clarification-clarifier-examples-2" title="Permalink to this equation">¶</a></span>\[L = \frac{D}{\cos \alpha}\left(\frac{\bar v_\alpha}{\bar v_c} - \sin \alpha\right)\]</div>
 <p>The tube settler above the floc hopper needs to be 72 cm long. The tube settler should provide a capture velocity of at least 1 mm/s prior to the floc hopper. Thus there should be 11 cm below the floc hopper.</p>
 </div>
 <div class="section" id="determining-flow-through-a-diffuser">
@@ -291,28 +291,28 @@
 <p>What is the flow rate of a single diffuser in the bottom of the clarifier? Consider a clarifier that is 6 m long, 1 m wide and 2 m deep, with an upflow velocity of 1 mm/s and a diffuser spacing of 5 cm.</p>
 <p>What is this question really asking? This question is asking us to understand that each diffuser “serves” a specific cross-sectional area of the clarifier; all of the diffusers together serve the entire area of the clarifier. So, let’s imagine a single diffuser serving a slice of a clarifier. With this in mind, we can easily solve this using <span class="math notranslate nohighlight">\(Q = \bar vA\)</span>. The area, <span class="math notranslate nohighlight">\(A\)</span>, is the slice of the clarifier that we are serving. We are told that the tank is 1 m wide, so <span class="math notranslate nohighlight">\(W_{tank} = 1\)</span> m. The length of the slice is dictated by the spacing of the diffusers, <span class="math notranslate nohighlight">\(B_{diff}\)</span>, so <span class="math notranslate nohighlight">\(B_{diff} = 5\)</span> cm.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-3">
-<span class="eqno">(643)<a class="headerlink" href="#equation-clarification-clarifier-examples-3" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
+<span class="eqno">(641)<a class="headerlink" href="#equation-clarification-clarifier-examples-3" title="Permalink to this equation">¶</a></span>\[A = B_{diff}W_{tank}\]</div>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-4">
-<span class="eqno">(644)<a class="headerlink" href="#equation-clarification-clarifier-examples-4" title="Permalink to this equation">¶</a></span>\[A = 5 cm * 1 m\]</div>
+<span class="eqno">(642)<a class="headerlink" href="#equation-clarification-clarifier-examples-4" title="Permalink to this equation">¶</a></span>\[A = 5 cm * 1 m\]</div>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-5">
-<span class="eqno">(645)<a class="headerlink" href="#equation-clarification-clarifier-examples-5" title="Permalink to this equation">¶</a></span>\[A = 50,000 mm^2\]</div>
+<span class="eqno">(643)<a class="headerlink" href="#equation-clarification-clarifier-examples-5" title="Permalink to this equation">¶</a></span>\[A = 50,000 mm^2\]</div>
 <p>The problem statement includes that <span class="math notranslate nohighlight">\(\bar v_{z_{ff}} = 1\)</span> mm/s. Plugging into our flow equation,</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-6">
-<span class="eqno">(646)<a class="headerlink" href="#equation-clarification-clarifier-examples-6" title="Permalink to this equation">¶</a></span>\[Q_{diff} = \bar v_{z_{ff}}A\]</div>
+<span class="eqno">(644)<a class="headerlink" href="#equation-clarification-clarifier-examples-6" title="Permalink to this equation">¶</a></span>\[Q_{diff} = \bar v_{z_{ff}}A\]</div>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-7">
-<span class="eqno">(647)<a class="headerlink" href="#equation-clarification-clarifier-examples-7" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
+<span class="eqno">(645)<a class="headerlink" href="#equation-clarification-clarifier-examples-7" title="Permalink to this equation">¶</a></span>\[Q_{diff} = (1 \frac{mm}{s})(50,000mm^2)\]</div>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-8">
-<span class="eqno">(648)<a class="headerlink" href="#equation-clarification-clarifier-examples-8" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
+<span class="eqno">(646)<a class="headerlink" href="#equation-clarification-clarifier-examples-8" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50,000 \frac{mm^3}{s}\]</div>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-9">
-<span class="eqno">(649)<a class="headerlink" href="#equation-clarification-clarifier-examples-9" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50 \frac{mL}{s}\]</div>
+<span class="eqno">(647)<a class="headerlink" href="#equation-clarification-clarifier-examples-9" title="Permalink to this equation">¶</a></span>\[Q_{diff} = 50 \frac{mL}{s}\]</div>
 <p>The flow rate of each diffuser is <span class="math notranslate nohighlight">\(50 \frac{mL}{s}\)</span>.</p>
 </div>
 <div class="section" id="identify-failure-modes-from-old-design">
 <h2>Identify Failure Modes from Old Design<a class="headerlink" href="#identify-failure-modes-from-old-design" title="Permalink to this headline">¶</a></h2>
-<p>Look at a proposed design for the bottom of the clarifier, shown in <a class="reference internal" href="#figure-failure-mode-example"><span class="std std-numref">Fig. 200</span></a>. This design has an influent manifold at the bottom of the tank. Water flows upwards from the influent manifold. At one end of the influent manifold, there is a drain port. Above the influent manifold, there is a single slot that extends the length of the clarifier. There are no diffusers in this design.</p>
+<p>Look at a proposed design for the bottom of the clarifier, shown in <a class="reference internal" href="#figure-failure-mode-example"><span class="std std-numref">Fig. 198</span></a>. This design has an influent manifold at the bottom of the tank. Water flows upwards from the influent manifold. At one end of the influent manifold, there is a drain port. Above the influent manifold, there is a single slot that extends the length of the clarifier. There are no diffusers in this design.</p>
 <div class="figure align-center" id="id1">
 <span id="figure-failure-mode-example"></span><a class="reference internal image-reference" href="../_images/failure_mode_example.png"><img alt="Proposed clarifier design." src="../_images/failure_mode_example.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 200 </span><span class="caption-text">Proposed clarifier design.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 198 </span><span class="caption-text">Proposed clarifier design.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>What are the failure modes for this design?</p>
 <p>Some issues are:</p>
@@ -332,10 +332,10 @@
 <p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=VE_1JE-pasAm&amp;line=6&amp;uniqifier=1">Use these given parameters</a></p>
 <p>To find the maximum velocity based on maximum headloss we will use the minor loss equation.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-10">
-<span class="eqno">(650)<a class="headerlink" href="#equation-clarification-clarifier-examples-10" title="Permalink to this equation">¶</a></span>\[h_{e,inlet} = K \frac{\bar v_{jet}^2}{2g}\]</div>
+<span class="eqno">(648)<a class="headerlink" href="#equation-clarification-clarifier-examples-10" title="Permalink to this equation">¶</a></span>\[h_{e,inlet} = K \frac{\bar v_{jet}^2}{2g}\]</div>
 <p>To find the minimum width based on the maximum velocity through the diffuser, we will use conservation of mass. Since it is an incompressible fluid the flow rate entering from the diffuser line jet must be equal to the flow rate up through the clarifier.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-11">
-<span class="eqno">(651)<a class="headerlink" href="#equation-clarification-clarifier-examples-11" title="Permalink to this equation">¶</a></span>\[\bar v_{jet}W_{diff} L_{sed} = \bar v_{z_{ff}}W_{sed}L_{sed}\]</div>
+<span class="eqno">(649)<a class="headerlink" href="#equation-clarification-clarifier-examples-11" title="Permalink to this equation">¶</a></span>\[\bar v_{jet}W_{diff} L_{sed} = \bar v_{z_{ff}}W_{sed}L_{sed}\]</div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=VE_1JE-pasAm&amp;line=2&amp;uniqifier=1">Code for calculations found here</a></p>
 <p><strong>Answer:</strong> The maximum velocity of the clarifier diffusers is 0.4429 meters / second.
 The minimum width of the clarifier diffusers is 2.409 millimeter.</p>
@@ -408,17 +408,17 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <p><span class="math notranslate nohighlight">\(\Delta{H}_{Manifold}\)</span> is the variability in piezometric head in the manifold that is driving the flow through the parallel paths.</p>
 <p>The ratio of minimum (first diffuser port) to maximum (last diffuser port) flow is given by:</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-12">
-<span class="eqno">(652)<a class="headerlink" href="#equation-clarification-clarifier-examples-12" title="Permalink to this equation">¶</a></span>\[\Pi_{DiffuserFlow} = \sqrt{\frac{h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}}{h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2}}}\]</div>
+<span class="eqno">(650)<a class="headerlink" href="#equation-clarification-clarifier-examples-12" title="Permalink to this equation">¶</a></span>\[\Pi_{DiffuserFlow} = \sqrt{\frac{h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}}{h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2}}}\]</div>
 <p>The change in piezometric head is given by: <span class="math notranslate nohighlight">\(\Delta{H}_{Manifold} = \frac{{v_{manifold}}^{2}}{2g}\)</span></p>
 <p>The maximum allowable velocity in the manifold is given by:</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-13">
-<span class="eqno">(653)<a class="headerlink" href="#equation-clarification-clarifier-examples-13" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left(h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2} \right) = h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}\]</div>
+<span class="eqno">(651)<a class="headerlink" href="#equation-clarification-clarifier-examples-13" title="Permalink to this equation">¶</a></span>\[{\Pi_{DiffuserFlow}}^{2} * \left(h_{L,parallelpath} + \frac{\Delta{H}_{Manifold}}{2} \right) = h_{L,parallelpath} - \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-14">
-<span class="eqno">(654)<a class="headerlink" href="#equation-clarification-clarifier-examples-14" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) h_{L,parallelpath} + \left({\Pi{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
+<span class="eqno">(652)<a class="headerlink" href="#equation-clarification-clarifier-examples-14" title="Permalink to this equation">¶</a></span>\[\left({\Pi_{DiffuserFlow}}^{2} - 1 \right) h_{L,parallelpath} + \left({\Pi{DiffuserFlow}}^{2} + 1 \right) \frac{\Delta{H}_{Manifold}}{2} = 0\]</div>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-15">
-<span class="eqno">(655)<a class="headerlink" href="#equation-clarification-clarifier-examples-15" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{\Delta{H}_{Manifold}}{2}\]</div>
+<span class="eqno">(653)<a class="headerlink" href="#equation-clarification-clarifier-examples-15" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{\Delta{H}_{Manifold}}{2}\]</div>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-examples-16">
-<span class="eqno">(656)<a class="headerlink" href="#equation-clarification-clarifier-examples-16" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{{v_{manifold}}^{2}}{4g}\]</div>
+<span class="eqno">(654)<a class="headerlink" href="#equation-clarification-clarifier-examples-16" title="Permalink to this equation">¶</a></span>\[\left(\frac{1 - {\Pi_{DiffuserFlow}}^{2}}{{\Pi_{DiffuserFlow}}^{2} + 1} \right) h_{L,parallelpath} = \frac{{v_{manifold}}^{2}}{4g}\]</div>
 <p>Now, we want to find the maximum velocity for an inlet manifold which is dependent on the given flow distribution constraint, <span class="math notranslate nohighlight">\(\Pi_{DiffuserFlow}\)</span>, and the head loss in the parallel paths, <span class="math notranslate nohighlight">\(h_{L,ParallelPath}\)</span>.</p>
 <ol class="arabic simple" start="2">
 <li><p>Determine an equation for maximum velocity for an inlet manifold in terms of diffuser exit velocity and the flow distribution constraint.</p></li>

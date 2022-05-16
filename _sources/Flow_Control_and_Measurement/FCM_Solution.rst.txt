@@ -190,7 +190,7 @@ The maximum average velocity in a dosing tube is 0.443 m/s
 
 **16)** Create an array of the maximum flow rates corresponding to the array of tubing diameters. The flow rates must meet the error constraint.
 
-.. math:: Q_{Max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}
+.. math:: Q_{max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}
 
  - First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``ac.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
  - Create the array of maximum flow rates using the array of tubing diameters and the maximum head loss through the dosing tubes.
@@ -209,7 +209,7 @@ The maximum average velocity in a dosing tube is 0.443 m/s
 
 **19)** We now know the target flow in the dosing tubes, the diameter of the tubes, and the target head loss through the tubes. Thus, we can solve for the length of the tube that will deliver that target flow. Write a function to find the length of each tube that could handle the entire flow. Your function should use the following equation:
 
-.. math:: L = \frac{g h_{L}\pi D^4}{128 \nu Q_{Max}}-\frac{Q_{Max}}{16 \pi \nu}\sum K_{e}
+.. math:: L = \frac{g h_{L}\pi D^4}{128 \nu Q_{max}}-\frac{Q_{max}}{16 \pi \nu}\sum K_{e}
 
 Call your function to return the length of tubing required for each tube
 size.
