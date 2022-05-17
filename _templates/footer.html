@@ -1,0 +1,21 @@
+{%- if (theme_prev_next_buttons_location == 'bottom' or theme_prev_next_buttons_location == 'both') and (next or prev) %} {#- Translators: This is an ARIA section label for the footer section of the page. -#}
+{%- if prev %} {{ _('Previous') }} {%- endif %} {%- if next %} {{ _('Next') }} {%- endif %}
+{%- endif %}
+{%- block contentinfo %}
+{%- if show_copyright %} {%- if hasdoc('copyright') %} {%- trans path=pathto('copyright'), copyright=copyright|e %}© Copyright {{ copyright }}.{% endtrans %} {%- else %} {%- trans copyright=copyright|e %}© Copyright {{ copyright }}.{% endtrans %} {%- endif %} {%- endif %} {%- if build_id and build_url %} {#- Translators: Build is a noun, not a verb -#} {%- trans %}Build{% endtrans -%} {{ build_id }}. {%- elif commit %} {#- Translators: the phrase "revision" comes from Git, referring to a commit #} {%- trans %}Revision{% endtrans %} {{ commit }}. {%- endif %} {%- if last_updated %} {%- trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %} {%- endif -%}
+
+{%- endblock %}
+{% if show_sphinx %} {%- set sphinx_web = 'Sphinx' %} {%- set readthedocs_web = 'Read the Docs' %} {#- Translators: the variable "sphinx_web" is a link to the Sphinx project documentation with the text "Sphinx" #} {%- trans sphinx_web=sphinx_web, readthedocs_web=readthedocs_web %}Built with {{ sphinx_web }} using a{% endtrans %} {#- Translators: "theme" refers to a theme for Sphinx, which alters the appearance of the generated documentation #} {% trans %}theme{% endtrans %} {#- Translators: this is always used as "provided by Read the Docs", and should not imply Read the Docs is an author of the generated documentation. #} {% trans %}provided by {{ readthedocs_web }}{% endtrans %}. {% endif %} {%- block extrafooter %} {% endblock %}
+{%- block scripts %}
+    <!-- Hotjar Tracking Code for https://aguaclara.github.io/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2936859,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+{%- endblock %}
