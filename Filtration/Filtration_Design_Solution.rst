@@ -248,7 +248,7 @@ The velocity in the constriction is 166.1 millimeter / second
 
   The flow rate through each pore is 1.071 microliter / second
 
-`What is the inner diameter of the flow constriction created by the flocs if the vena contracta is 0.62? <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=1P7WvFqRma4G&line=2&uniqifier=1>`_
+`What is the inner diameter of the flow constriction created by the flocs if the *vena contracta* is 0.62? <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=1P7WvFqRma4G&line=2&uniqifier=1>`_
 
 The inner diameter of the flow constriction created by the flocs is 115.1 micrometer
 

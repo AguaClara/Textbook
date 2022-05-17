@@ -295,7 +295,7 @@ Before beginning this section, it is important to understand how water flows thr
 
    Flow path through a vertical flow hydraulic flocculator
 
-Since baffles are the source of head loss via minor losses, we need to find the minor loss coefficient of one baffle if we want to be able to quantify its head loss. To do this, we apply fluid mechanics intuition and check it against a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a vena contracta value of around :math:`\Pi_{vc} = 0.62`. Flow around a 180° bend therefore has a value of :math:`\color{red}{\Pi_{vc}^{baffle} = \Pi_{vc}^2 = 0.384}`. This number is roughly confirmed with CFD, as shown in the image below.
+Since baffles are the source of head loss via minor losses, we need to find the minor loss coefficient of one baffle if we want to be able to quantify its head loss. To do this, we apply fluid mechanics intuition and check it against a computational fluid dynamics (CFD) simulation. Flow around a 90° bend has a *vena contracta* value of :math:`\Pi_{vc} = 0.611` as given by Equation :eq:`theta_slot_vena_contracta_analytical`. Flow around a 180° bend therefore has a value of :math:`\color{red}{\Pi_{vc}^{baffle} = \Pi_{vc}^2 = 0.373}`. This number is roughly confirmed with CFD, as shown in the image below.
 
 .. _figure_cfd_VC_baffle:
 
@@ -308,7 +308,7 @@ Since baffles are the source of head loss via minor losses, we need to find the 
 
 
 
-We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 38.4% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc}^{baffle} A_{expanded}`. Through the `:ref:`third form of the minor loss equation <heading_minor_losses>`, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine the minimum minor loss coefficient for flow around a single baffle:
+We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 37.3% of the area it does when expanded, or :math:`A_{contracted} = \Pi_{vc}^{baffle} A_{expanded}`. Through the `:ref:`third form of the minor loss equation <heading_minor_losses>`, :math:`h_e = K \frac{\bar v_{out}^2}{2g}` and its definition of the minor loss coefficient, :math:`K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2`, we can determine the minimum minor loss coefficient for flow around a single baffle:
 
 .. math::
   :label: K_baffle_min
@@ -318,11 +318,11 @@ We can therefore state with reasonable accuracy that, when most contracted, the 
   = \left( \frac{1}{\Pi_{vc}^{baffle}} -1 \right)^2
 
 
-  = \left( \frac{1}{0.384} -1 \right)^2
+  = \left( \frac{1}{0.373} -1 \right)^2
 
-  \color{red} {= 2.56}
+  \color{red} {= 2.82}
 
-This :math:`K_{baffle_{min}}` has been used to design flocculators in AguaClara plants until 2021. The plant at Gracias revealed that the observed head loss was greater than predicted.  `This paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. For AguaClara flocculator parameters, literature suggest a :math:`K_{baffle}` value between :math:`2.5` and :math:`4`.
+This :math:`K_{baffle_{min}}` has been used to design flocculators in AguaClara plants until 2021. The plant at Gracias revealed that the observed head loss was greater than predicted.  `This paper by Haarhoff in 1998 <https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators>`_  (DOI: 10.2166/aqua.1998.20), the :math:`K_{baffle}` values found are context dependent and empirically based. Further analysis of how :math:`K_{baffle}` varies with the geometry of the flocculator is given in the section on :ref:`heading_Baffle_Loss_Coefficient`.
 
 Equation :eq:`K_baffle_min` doesn't account for the fact that for a series of baffles (or flow contractions) the flow might not be able to fully expand before entering the next baffle (or contraction). The distance required for the contracted flow to expand can be estimated from jet equations (see section on :ref:`Baffle Minor Loss Coefficient<heading_Baffle_Loss_Coefficient>` for an estimate of how the minor loss coefficient increases when the flow doesn't fully expand).
 
@@ -338,18 +338,18 @@ Fortunately for us, both problems can be quantified with a single ratio:
 
 .. math::
 
-  \Pi_{G_{CS}}^{G_{Max}} = \frac{G_{Max}}{G_{CS}}
+  \Pi_{G_{CS}}^{G_{max}} = \frac{G_{max}}{G_{CS}}
 
 
-High values of :math:`\Pi_{G_{CS}}^{G_{Max}}` occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local :math:`G` values, then :math:`G_{Max}` becomes large. If the flocculator has a lot of dead space, then :math:`G_{CS}` becomes small. Either way, :math:`\Pi_{G_{CS}}^{G_{Max}}` becomes larger.
+High values of :math:`\Pi_{G_{CS}}^{G_{max}}` occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local :math:`G` values, then :math:`G_{max}` becomes large. If the flocculator has a lot of dead space, then :math:`G_{CS}` becomes small. Either way, :math:`\Pi_{G_{CS}}^{G_{max}}` becomes larger.
 
-**Note:** Recall the relationship between :math:`G` and :math:`\varepsilon` : :math:`G = \sqrt{ \frac{\varepsilon}{\nu} }`. From this relationship, we can see that :math:`G \propto \sqrt{\varepsilon}`. Thus, by defining  :math:`\Pi_{G_{CS}}^{G_{Max}}`, we can also define a ratio for Max to average energy dissipation rate:
+**Note:** Recall the relationship between :math:`G` and :math:`\varepsilon` : :math:`G = \sqrt{ \frac{\varepsilon}{\nu} }`. From this relationship, we can see that :math:`G \propto \sqrt{\varepsilon}`. Thus, by defining  :math:`\Pi_{G_{CS}}^{G_{max}}`, we can also define a ratio for Max to average energy dissipation rate:
 
 .. math::
 
-  \Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{G_{CS}}^{G_{Max}} \right)^2
+  \Pi_{\bar \varepsilon}^{\varepsilon_{max}} = \left( \Pi_{G_{CS}}^{G_{max}} \right)^2
 
-Therefore, by making our :math:`\Pi_{G_{CS}}^{G_{Max}}` as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. `A paper by Haarhoff and van der Walt in 2001 <https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the>`_ (DOI: 10.2166/aqua.2001.0014) uses CFD to show that the minimum :math:`\Pi_{G_{CS}}^{G_{Max}}` attainable in a hydraulic flocculator is :math:`\Pi_{G_{CS}}^{G_{Max}} = \sqrt{2} \approx 1.4`, which means that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}} = \left( \Pi_{G_{CS}}^{G_{Max}} \right)^2 \approx 2`. So how do we optimize an AguaClara flocculator to make sure :math:`\Pi_{G_{CS}}^{G_{Max}} = \sqrt{2}`?
+Therefore, by making our :math:`\Pi_{G_{CS}}^{G_{max}}` as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. `A paper by Haarhoff and van der Walt in 2001 <https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the>`_ (DOI: 10.2166/aqua.2001.0014) uses CFD to show that the minimum :math:`\Pi_{G_{CS}}^{G_{max}}` attainable in a hydraulic flocculator is :math:`\Pi_{G_{CS}}^{G_{max}} = \sqrt{2} \approx 1.4`, which means that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{max}} = \left( \Pi_{G_{CS}}^{G_{max}} \right)^2 \approx 2`. So how do we optimize an AguaClara flocculator to make sure :math:`\Pi_{G_{CS}}^{G_{max}} = \sqrt{2}`?
 
 We define and optimize a performance metric:
 
@@ -359,13 +359,11 @@ We define and optimize a performance metric:
 
 Where :math:`H_e` is the distance between flow expansions in the flocculator and :math:`S` is the spacing between baffles. For now, :math:`H_e` is approximated as the height of water in the flocculator.
 
-Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on :math:`\frac{H_e}{S}`. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle. We base this on the rule of thumb for flow expansion, a jet doubles its initial diameter/length once it travels 10 times the distance of its original diameter/length. If this is confusing, refer to the equation and image below:
-
-.. todo:: Find a reference from CorMix to support this rule of thumb.
+Since :math:`G_{max}` is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on :math:`\frac{H_e}{S}`. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle.
 
 .. math::
 
-  \Pi_{PlaneJet_{exp}}x = D - D_{cp}
+  \Pi_{BaffleJet_{exp}}x = D - D_{cp}
 
 .. _figure_jet_expansion_flocculator:
 
@@ -374,23 +372,21 @@ Since :math:`G_{Max}` is determined by the fluid mechanics of flow around a baff
    :width: 400px
    :alt: jet expansion in the flocculator
 
-   A turbulent jet expands in width by one unit for every 10 units downstream.
+   A turbulent jet expands in width by approximately one unit for every 10 units downstream (see Equation :eq:`PlaneJet_expansion`).
 
-Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting  :math:`D_{cp} = (0.384 S)` along with :math:`D = S` to approximate how much distance, :math:`x = H_e`, the contracted flow has to cover.
-
-.. math::
-
-  \Pi_{PlaneJet_{exp}} H_e = S - (0.384 S)
+Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing :math:`S`. We do this by substituting  :math:`D_{cp} = (0.373 S)` along with :math:`D = S` to approximate how much distance, :math:`x = L_{jet}`, the contracted flow has to cover.
 
 .. math::
 
-  \Pi_{PlaneJet_{exp}} H_e= 0.616 S
+  \Pi_{BaffleJet_{exp}} L_{jet} = S - (0.373 S)
+
+where :math:`\Pi_{BaffleJet_{exp}}` is the dimensionless rate of expansion for the jet that has a baffle on one side.
 
 .. math::
 
-  \Pi_{H_eS_{Max}} = \frac{H_e}{S} = 5.3
+   L_{jet_{max}} = \frac{0.627 S}{\Pi_{BaffleJet_{exp}}} = 10.8S
 
-This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuring that there is no dead space in the flocculator.
+This gives a rough estimate of the maximum distance between flow expansions while ensuring that there are no zones of low turbulence in the flocculator. The relationship between :math:`L_{jet_{max}}` and the flocculator geometry is given in Equation :eq:`L_jet`.
 
 .. _figure_CFD_baffle_image:
 
@@ -410,9 +406,9 @@ This is the highest allowable :math:`\Pi_{H_eS}` that we can design while ensuri
 
    Each bend creates a flow contraction and when the flow expands it converts kinetic energy into turbulent eddies and fluid deformation. The fluid deformation is what ultimately creates collisions between particles.
 
-In order to have a robust design process for a baffle module, we need to have some flexibility in the :math:`\Pi_{H_eS} = \frac{H_e}{S}` ratio. Since we found :math:`\Pi_{H_eS_{Max}}` previously, we must now find the lowest functional :math:`\frac{H_e}{S}` ratio, :math:`\Pi_{H_eS_{Min}}`.
+The lowest functional :math:`\frac{H_e}{S}` ratio, :math:`\Pi_{H_eS_{min}}` is an important constraint for the design of flocculators that have vertical flow between baffles because it sets the minimum water depth in the flocculator channel. The absolute minimum value of :math:`\frac{H_e}{S}` is set by the flow geometry to ensure that water can't flow straight through the flocculator without going back and forth or up and down around the baffles. This short circuiting would depend on the slot width, defined below.
 
-AguaClara uses a fairly straightforward way of setting :math:`\Pi_{H_eS_{Min}}`. It is based on the distance between the water level and the bottom baffle (which is the same distance between the flocculator floor and a top baffle). This distance is referred to as the slot width (`Haarhoff 1998 <http://aqua.iwaponline.com/content/47/3/142>`_)  DOI: 10.2166/aqua.1998.20") and is defined by the slot width ratio, which describes the slot width as a function of baffle spacing :math:`S`. Slot width is shown in the following image:
+Slot width is the distance between the water level and the top of an upper baffle (which is the same distance between the flocculator floor and the bottom of an upper baffle). This distance is referred to as the slot width (`Haarhoff 1998 <http://aqua.iwaponline.com/content/47/3/142>`_)  DOI: 10.2166/aqua.1998.20") and is defined by the slot width ratio, which describes the slot width as a function of baffle spacing :math:`S`. Slot width is shown in the following image:
 
 .. _figure_slot_width_description:
 
@@ -436,51 +432,18 @@ The minimum :math:`\Pi_{H_eS}` allowable depends on the slot with ratio. If :mat
 
    The minimum :math:`\frac{H_e}{S}` ratio is set by the need to prevent short circuiting through the flocculator.
 
-Thus, :math:`\Pi_{H_eS_{Min}}` should be at least twice the slot width ratio, :math:`\Pi_{H_eS_{Min}} = 2`. Historically, AguaClara plants have been designed using :math:`\Pi_{H_eS_{Min}} = 3`. This adds a safety factor of sorts, ensuring that the flow does not short-circuit through the flocculator and also allowing more space for the flow to expand after each contraction.
+Thus, :math:`\Pi_{H_eS_{min}}` should be at least twice the slot width ratio, :math:`\Pi_{H_eS_{min}} = 2`. Historically, AguaClara plants have been designed using :math:`\Pi_{H_eS_{min}} = 3`. This adds a safety factor of sorts, ensuring that the flow does not short-circuit through the flocculator and also allowing more space for the flow to expand after each contraction.
 
 .. math::
 
-  \Pi_{H_eS_{Min}} = \frac{H_e}{S} = 3
+  \Pi_{H_eS_{min}} = \frac{H_e}{S} = 3
 
-Finally, we describe a range of :math:`\Pi_{H_eS}` that we can use to design an AguaClara Horizontal-Vertical flocculator:
-
-.. math::
-
-  3 < \Pi_{H_eS} < 6
-
-Obstacles
-^^^^^^^^^^^^^^^^^^^^^
-
-Knowing that efficient flocculators require an :math:`\frac{H_e}{S}` ratio that lies between 3 and 6, we need to understand how that impacts the flocculator design. Keeping :math:`\frac{H_e}{S}` between two specific values limits the options for baffle spacing and quantity, due to the flocculator having certain size constraints before beginning the design of the baffles. This limitation places an upper limit on the amount of head loss that a baffled flocculator can generate, since the number of baffles is limited by space and baffles are what cause head loss. This is unfortunate, it means that baffled flocculators under certain size specifications can't be designed to generate certain values of :math:`\bar \varepsilon` and :math:`G_{CS}` *while remaining efficient and maintaining* :math:`3 < \Pi_{H_eS} < 6`. This problem only arises for low flow plants, usually below :math:`Q_{Plant} = 20 {\rm \frac{L}{s}}`.
-
-To get around this problem, AguaClara included 'obstacles,' or half-pipes to contract the flow after the flow expands around one baffle and before it reaches the next baffle. The purpose of these obstacles is to provide extra head loss in between baffles. They also generate head loss via minor losses, and one obstacle is designed to have the same :math:`K` as one baffle. Introducing obstacles slightly alters how we think about :math:`H_e`. In a flocculator where there are just baffles and no obstacles, then :math:`H_e = H`, since the height of water in the flocculator is equal to the distance between expansions. When obstacles are added, however, then :math:`H_e = \frac{H}{1 + n_{obstacles}}`, where :math:`n_{obstacles}` is the number of obstacles between two baffles.
-
-**Baffle space** is the term we use for the space between two baffles. The number of flow expansions per baffle space is :math:`n_{expansions} = 1 + n_{obstacles}`. The :math:`1` is because the baffle itself causes a flow expansion.
-
-These obstacles serve as 'pseudo-baffles'. They allow for :math:`\frac{H}{S}`` to exceed 6, while maintaining maximum flocculator efficiency since, :math:`\frac{H_e}{S}` can still be between 3 and 6. Obstacles make it possible to design smaller flocculators without compromising flocculation efficiency. :numref:`figure_Floc_module_with_obstacles` and :numref:`figure_Floc_flow_with_obstacles` show these obstacles and how they affect the flow in a flocculator.
-
-.. _figure_floc_module_with_obstacles:
-
-.. figure:: ../Images/Floc_module_with_obstacles.jpg
-   :width: 800px
-   :align: center
-   :alt: floc module with obstacles
-
-   Obstacles are added so that the flow continually contracts and expands. Additional obstacles are needed for low flow plants where the spacing between baffles is small realtive to the flocculator depth.
-
-.. _figure_floc_flow_with_obstacles:
-
-.. figure:: ../Images/Floc_flow_with_obstacles.jpg
-   :align: center
-   :width: 900px
-   :alt: floc flow with obstacles
-
-   Obstacles ensure that there aren't any zones with low velocity gradients.
+Although this value of :math:`\Pi_{H_eS}` meets the geometric constraints it is not necessarily the best design since the flow doesn't come close to fully expanding between contractions. This results in a much higher baffle loss coefficient and a higher level of uncertainty of the exact value of that loss coefficient. Thus we recommend using higher values of :math:`\Pi_{H_eS}` when possible.
 
 Flocculator Geometry
 --------------------
 
-The geometry of hydraulic flocculators changes rather dramatically as the flow rate increases from a fraction of a L/s up to thousands of L/s. The transition from one geometry to another is dependent on economic, fabrication, and integration with the rest of the plant design. Thus the transition flows will evolve as design optimization progresses. Flows between 0.5 L/s and 20 L/s are efficiently handled by a Vertical-Horizontal flow flocculator as shown in :numref:`figure_VHflocculator`.
+The geometry of hydraulic flocculators changes rather dramatically as the flow rate increases from a fraction of a L/s up to thousands of L/s. The transition from one geometry to another is dependent on economic factors, fabrication constraints, and integration with the rest of the plant design. Thus the flow transition between each of the distinct geometries will evolve as design optimization progresses. Flows between 0.5 L/s and 20 L/s are efficiently handled by a Vertical-Horizontal flow flocculator as shown in :numref:`figure_VHflocculator`.
 
 .. _figure_VHflocculator:
 
@@ -489,7 +452,7 @@ The geometry of hydraulic flocculators changes rather dramatically as the flow r
    :width: 500px
    :alt: vertical - horizontal flocculator
 
-   The vertical-horizontal flocculator has vertical flow in the channels and horizontal flow between baffles. This design is for 1 L/s with 40 cm of head loss.
+   The vertical-horizontal flocculator has vertical flow in the channels and horizontal flow between baffles. This design is for 6 L/s with 23.5 cm of head loss.
 
 As the flows increase the spacing between baffles grows larger and a vertical-horizontal flocculator would need to be very deep in order to accommodate a reasonable number of baffle spaces per channel. The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s as shown in :numref:`figure_HVflocculator`.
 
@@ -500,10 +463,10 @@ As the flows increase the spacing between baffles grows larger and a vertical-ho
   :width: 500px
   :alt:  horizontal-vertical flocculator
 
-  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles.This design is for 80 L/s with 1 m wide channels and 40 cm of head loss.
+  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles.This design is for 60 L/s with 1 m wide channels and 25 cm of head loss.
 
 
-As the flow increases above 200 L/s the required depth to accommodate a reasonable H/S ratio will exceed the desired depth (from a construction and maintenance perspective) and the optimal design will switch to a horizontal-horizontal flocculator  as shown in :numref:`figure_HHflocculator`.
+As the flow increases above 200 L/s the required depth to accommodate a reasonable H/S ratio will exceed the desired depth (from a construction and maintenance perspective) and the optimal design will switch to a horizontal-horizontal flocculator as shown in :numref:`figure_HHflocculator`.
 
 .. _figure_HHflocculator:
 
@@ -512,4 +475,4 @@ As the flow increases above 200 L/s the required depth to accommodate a reasonab
   :width: 500px
   :alt:  horizontal-vertical flocculator
 
-  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles. This design has 10 flocculators working in parallel to treat 20 kL/s. The channels are 4 m deep and there is 40 cm head loss.
+  The horizontal-vertical flocculator has horizontal flow in the channels and vertical flow between baffles. This design is for a 500 L/s flow with 29 cm of head loss. The channels are 2.6 m deep.

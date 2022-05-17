@@ -22,8 +22,8 @@ Linear Flow Orifice Meter Configurable Component
 
 .. _figure_LFOM:
 
-.. figure:: LFOM.png
-    :width: 150px
+.. figure:: ./Images/LFOM.png
+    :width: 100px
     :align: center
     :alt: Linear Flow Orifice Meter
 
@@ -32,8 +32,8 @@ Linear Flow Orifice Meter Configurable Component
 
 .. _figure_LFOMinPlant:
 
-.. figure:: LFOMinET.png
-    :width: 500px
+.. figure:: ./Images/LFOMinET.png
+    :width: 450px
     :align: center
     :alt: Location of the Linear Flow Orifice Meter
 
@@ -42,11 +42,11 @@ Linear Flow Orifice Meter Configurable Component
 Generate New Models of the Linear Flow Orifice Meter
 ====================================================
 
-Edit the configurations to create new models of the Linear Flow Orifice Meter.
+Edit the configurations to create new models of the Linear Flow Orifice Meter. Send us |feedback| to share how you are using the LFOM model and to give us suggestions for how to make these models easier to use.
 
 .. _figure_configLFOM:
 
-.. figure:: configLFOM.png
+.. figure:: ./Images/configLFOM.png
     :width: 300px
     :align: center
     :alt: Linear Flow Orifice Meter configuration
@@ -58,24 +58,33 @@ Edit the configurations to create new models of the Linear Flow Orifice Meter.
    :align: left
    :widths: 50, 100
 
+   "",""
    "Flow (L/s)", "The maximum flow rate sets the size of the Linear Flow Orifice Meter. Vary it to see how the dimensions change."
+   "",""
    Minimum temperature (˚C), The flow is turbulent throughout the Linear Flow Orifice Meter and thus temperature doesn’t have a significant effect on the design.
+   "",""
    Water elevation range (m), Change in water elevation in the entrance tank that corresponds to the flow varying from 0 L/s up to the maximum design flow rate.
+   "",""
    Maximum drill diameter (m), Used to limit the drill bit size required to fabricate the LFOM.
+   "",""
    Maximum nominal diameter (inch), Used to set a maximum pipe size. For higher flow rates the LFOM will increase the water elevation range so the pipe can carry more flow.
 
 
 Additional information is available in *The Physics of Water Treatment* in the section on `Linear Flow Orifice Meter <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#linear-flow-orifice-meter-lfom>`_
 
 
-.. |donate| image:: donate.png
+.. |donate| image:: ./Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
   :height: 40
 
-.. |textbook| image:: textbook.png
+.. |textbook| image:: ./Images/textbook.png
   :target: https://aguaclara.github.io/Textbook/AIDE/AIDE.html
   :height: 40
 
-.. |ACRlogowithname| image:: ACRlogowithname.png
+.. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
   :height: 40
+
+.. |feedback| image:: ./Images/feedback.png
+  :target: https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?
+  :height: 25
