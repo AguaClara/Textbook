@@ -36,11 +36,11 @@ A Brief Design Challenge guide
 Vertical Orifice Equation
 =========================
 
-**1)** Find the vena contracta (VC) coefficient ratio for an orifice in the expert_inputs and print the result in a sentence. Please display 2 significant figures.
+**1)** Find the *vena contracta* (VC) coefficient ratio for an orifice in the expert_inputs and print the result in a sentence. Please display 2 significant figures.
 
 `Solution Here  adding <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=CZ5G4LzBRz6y&line=1&uniqifier=1>`_
 
-The vena contracta coefficient for an orifice is 0.63.
+The *vena contracta* coefficient for an orifice is 0.63.
 
 **2)** The simple orifice Equation :math:`Q = {\Pi _{vc}}{A_{or}}\sqrt {2g\Delta h}` that we normally use is not applicable for vertically oriented orifices that are partially or barely submerged. The `USGS published a great solution <https://il.water.usgs.gov/proj/feq/fequtl98.i2h/4_7aupdate.html>`__ for flow through partially submerged vertically oriented orifices. AguaClara uses a general solution for a vertically oriented orifice, which is available in the physchem file as ``pc.flow_orifice_vert``. That function handles vertically oriented orifices even if they are only partially submerged.
 
@@ -190,7 +190,7 @@ The maximum average velocity in a dosing tube is 0.443 m/s
 
 **16)** Create an array of the maximum flow rates corresponding to the array of tubing diameters. The flow rates must meet the error constraint.
 
-.. math:: Q_{Max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}
+.. math:: Q_{max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}
 
  - First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``ac.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
  - Create the array of maximum flow rates using the array of tubing diameters and the maximum head loss through the dosing tubes.
@@ -209,7 +209,7 @@ The maximum average velocity in a dosing tube is 0.443 m/s
 
 **19)** We now know the target flow in the dosing tubes, the diameter of the tubes, and the target head loss through the tubes. Thus, we can solve for the length of the tube that will deliver that target flow. Write a function to find the length of each tube that could handle the entire flow. Your function should use the following equation:
 
-.. math:: L = \frac{g h_{L}\pi D^4}{128 \nu Q_{Max}}-\frac{Q_{Max}}{16 \pi \nu}\sum K_{e}
+.. math:: L = \frac{g h_{L}\pi D^4}{128 \nu Q_{max}}-\frac{Q_{max}}{16 \pi \nu}\sum K_{e}
 
 Call your function to return the length of tubing required for each tube
 size.

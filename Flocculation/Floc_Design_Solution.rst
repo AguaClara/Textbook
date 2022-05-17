@@ -99,7 +99,7 @@ The total width of the flocculator channels is is 1.067 meters.
 
 **8) Calculate the minimum channel width** required to achieve H/S>3. The channel can be wider than this, but this is the absolute minimum width for a channel. The minimum width occurs when there is only one expansion per baffle and thus the distance between expansions is the same as the depth of water at the end of the flocculator.
 
-:math:`{W_{Min}} = \frac{{\Pi _{HS}}Q}{H_e}{\left( {\frac{K_e}{2{H_e}\nu {\bar G}^2}} \right)^{\frac{1}{3}}}`
+:math:`{W_{min}} = \frac{{\Pi _{HS}}Q}{H_e}{\left( {\frac{K_e}{2{H_e}\nu {\bar G}^2}} \right)^{\frac{1}{3}}}`
 
 `Calculate the minimum width <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=r5K7ayIQnM_I&line=3&uniqifier=1>`_
 
@@ -127,7 +127,7 @@ The actual flocculator channel width is 53.35 centimeter
 
 .. math::
 
-  {H_{{e_{Max}}}} = {\left[ {\frac{{{K_e}}}{{2\nu {{\bar G}^2}}}{{\left( {\frac{{Q{\Pi _{H{S_{Max}}}}}}{W}} \right)}^3}} \right]^{\frac{1}{4}}}
+  {H_{{e_{max}}}} = {\left[ {\frac{{{K_e}}}{{2\nu {{\bar G}^2}}}{{\left( {\frac{{Q{\Pi _{H{S_{max}}}}}}{W}} \right)}^3}} \right]^{\frac{1}{4}}}
 
 `Find the maximum distance <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=wzCaYvVSnY3Q&line=5&uniqifier=1>`_
 

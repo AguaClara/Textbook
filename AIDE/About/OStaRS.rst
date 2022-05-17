@@ -24,7 +24,7 @@ Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornel
 
 .. _figure_OStaRS:
 
-.. figure:: OStaRS.png
+.. figure:: ./Images/OStaRS.png
     :width: 350px
     :align: center
     :alt: OStaRS
@@ -34,7 +34,7 @@ Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornel
 
 .. _figure_OStaRSinPlant:
 
-.. figure:: OStaRSinPlant.png
+.. figure:: ./Images/OStaRSinPlant.png
     :width: 250px
     :align: center
     :alt: Location of the OStaRS filter
@@ -53,38 +53,49 @@ The Stacked Rapid Sand Filter Includes Four Innovations:
 Generate New Models of the Stacked Rapid Sand Filter
 ====================================================
 
-Edit the configurations to create new models of the stacked rapid sand filter.
+Edit the configurations to create new models of the stacked rapid sand filter. Send us |feedback| to share how you are using the OStaRS model and to give us suggestions for how to make these models easier to use.
 
 .. _figure_configOStaRS:
 
-.. figure:: configOStaRS.png
+.. figure:: ./Images/configOStaRS.png
     :width: 300px
     :align: center
     :alt: configuration for OStaRS
 
-    The configuration options for the Entrance Tank.
+    The configuration options for the Open Stacked Rapid Sand Filter.
 
-.. csv-table:: Entrance tank configurations.
+.. csv-table:: Open Stacked Rapid Sand Filter configurations.
    :header: "Configuration", "Description"
    :align: left
    :widths: 50, 100
 
+   "",""
    "Flow (L/s)", "The maximum flow rate sets the size and number of the filters. Vary it to see how the dimensions change."
+   "",""
    Minimum temperature (˚C), The temperature has a small effect on the head loss through the clean filter bed.
+   "",""
    Spare Filter, If selected this will add filter capacity so that one filter can be taken off line while operating at the plant maximum flow rate.
+   "",""
+   "Fraction of clogged bed head loss", "A clean filter corresponds to a value of 0 and a clogged filter corresponds to a value of 1. The water levels change to reflect this head loss."
+   "",""
+   Filter Mode, "If selected the filter is in filtration mode, otherwise the filter is in backwash mode. The water levels change to reflect the filter mode."
 
 
 Additional information is available in the chapter on `Filter Design <https://aguaclara.github.io/Textbook/Filtration/Filtration_Design.html>`_
 
 
-.. |donate| image:: donate.png
+.. |donate| image:: ./Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
   :height: 40
 
-.. |textbook| image:: textbook.png
+.. |textbook| image:: ./Images/textbook.png
   :target: https://aguaclara.github.io/Textbook/AIDE/AIDE.html
   :height: 40
 
-.. |ACRlogowithname| image:: ACRlogowithname.png
+.. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
   :height: 40
+
+.. |feedback| image:: ./Images/feedback.png
+  :target: https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?
+  :height: 25

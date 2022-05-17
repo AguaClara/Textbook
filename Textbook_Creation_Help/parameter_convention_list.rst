@@ -112,8 +112,8 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`\Lambda`,Distance Between Particles,:math:`[L]`
     :math:`\Pi`,Dimensionless Proportionality Ratio, Dimensionless
     :math:`\Pi_{Error}`,Linearity Error Ratio, Dimensionless
-    :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}`,:math:`\frac{\varepsilon_{Max}}{\bar \varepsilon}` Ratio in a Reactor, Dimensionless
-    :math:`\Pi_{\bar G}^{G_{Max}}`,:math:`\frac{G_{Max}}{\bar G}` Ratio in a Reactor, Dimensionless
+    :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{max}}`,:math:`\frac{\varepsilon_{max}}{\bar \varepsilon}` Ratio in a Reactor, Dimensionless
+    :math:`\Pi_{\bar G}^{G_{max}}`,:math:`\frac{G_{max}}{\bar G}` Ratio in a Reactor, Dimensionless
     :math:`\Pi_{HS}`,Height to Baffle Spacing in a Flocculator, Dimensionless
     :math:`\Pi_{K\nu}`,Ratio of Inner Viscous Length Scale to Kolmogorov Length Scale, Dimensionless
     :math:`\Pi_{vc}`,Vena Contracta Area Ratio, Dimensionless
