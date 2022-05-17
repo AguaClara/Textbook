@@ -33,9 +33,9 @@ jobs:
     - name: Test Publish Docs
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: test # The branch the action should deploy to.
-        FOLDER: _build/html/ # The folder the action should deploy.
+        token: ${{ secrets.ACCESS_TOKEN }}
+        branch: test # The branch the action should deploy to.
+        folder: _build/html/ # The folder the action should deploy.
   #  - name: Test Build LaTeX
   #    run: make latex
    # - name: Test Build PDF
