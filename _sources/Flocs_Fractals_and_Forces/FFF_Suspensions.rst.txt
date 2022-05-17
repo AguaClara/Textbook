@@ -96,7 +96,7 @@ The following equation is used to find the porosity of a fluidized bed.
 .. math::
   :label: fluidized_bed_porosity
 
- \phi=\left(\frac{\bar v_z}{v_{t_w}}\right)^{1 / z}\left(1-\phi_{\mathrm{SB}}\right)+\phi_{\mathrm{SB}}
+  \phi=\left(\frac{\bar v_z}{v_{t_w}}\right)^{1 / z}\left(1-\phi_{\mathrm{SB}}\right)+\phi_{\mathrm{SB}}
 
 | where
 | :math:`v_{t_w}` particle terminal velocity corrected for wall effect
