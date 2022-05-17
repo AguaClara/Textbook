@@ -31,7 +31,7 @@ Equation Quick Reference
     :eq:`Q_max_served_per_injection_port`, Flow per chemical injection port, :math:`Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}`, 7
     :eq:`Gtheta_of_hL`, Collision potential, :math:`G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}`, 8
     :eq:`W_min_HVFloc`, Channel width, :math:`W_{Min \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}`, 8
-    :eq:`floc_He_max_const_K`, Distance between expansions, :math:`H_{e_{Max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{Max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}`, 8
+    :eq:`floc_He_max_const_K`, Distance between expansions, :math:`H_{e_{max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}`, 8
     :eq:`Floc_baffle_spacing_of_K`, Baffle spacing, :math:`S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}`, 8
     :eq:`max_clarifier_jet_velocity_of_G`, Maximum jet velocity , :math:`\frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}`, 9
     :eq:`Q_tube_settler`, Tube settler flow, :math:`Q_{Tube}=\frac{\bar v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)`, 9

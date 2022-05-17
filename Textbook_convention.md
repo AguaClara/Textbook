@@ -26,7 +26,7 @@ Whenever a new equation is introduced, it should be followed by a list explainin
 $$Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}$$
 
 Where:  
-$\Pi_{vc}$ = 0.62 = vena contracta coefficient, in aide_design as `pc.VC_ORIFICE_RATIO`  
+$\Pi_{vc}$ = 0.62 = *vena contracta* coefficient, in aide_design as `pc.VC_ORIFICE_RATIO`  
 $A_{or}$ = orifice area- NOT contracted flow area  
 $\Delta h$ = elevation difference between orifice and water level
 
@@ -53,7 +53,7 @@ For parameters to use in Python code, [follow this convention](https://github.co
 
 Units should not be _italicized_. For example, 3 meters should be written as $3 \, {\rm m}$ instead of $3 \, m$ to firmly distinguish units from parameters/variables.
 
-Once more textbook sections are done, we should consider reorganizing this into easier to follow sections. Perhaps have a list of frequently used parameters (like $Q$, $h_L$ $v$, etc) along with parameters specific to each unit process ($\Pi_{Error}$, $\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}$, $\Pi_{\bar G}^{G_{Max}}$), and have them neatly separated and ennumerated.
+Once more textbook sections are done, we should consider reorganizing this into easier to follow sections. Perhaps have a list of frequently used parameters (like $Q$, $h_L$ $v$, etc) along with parameters specific to each unit process ($\Pi_{Error}$, $\Pi_{\bar \varepsilon}^{\varepsilon_{max}}$, $\Pi_{\bar G}^{G_{max}}$), and have them neatly separated and ennumerated.
 
 Base units
 
@@ -102,8 +102,8 @@ Parameters
 |                   $\theta$                   |                         Residence Time                          |          $[T]$           |
 |                     $G$                      |               Velocity Gradient/Fluid Deformation               |     $\frac{1}{[T]}$      |
 |                $\varepsilon$                 |                     Energy Dissipation Rate                     |  $\frac{[L]^2}{[T]^3}$   |
-|           $\Pi_{\bar G}^{G_{Max}}$           |           $\frac{G_{Max}}{\bar G}$ Ratio in a Reactor           |            -             |
-| $\Pi_{\bar \varepsilon}^{\varepsilon_{Max}}$ | $\frac{\varepsilon_{Max}}{\bar \varepsilon}$ Ratio in a Reactor |            -             |
+|           $\Pi_{\bar G}^{G_{max}}$           |           $\frac{G_{max}}{\bar G}$ Ratio in a Reactor           |            -             |
+| $\Pi_{\bar \varepsilon}^{\varepsilon_{max}}$ | $\frac{\varepsilon_{max}}{\bar \varepsilon}$ Ratio in a Reactor |            -             |
 |                  $\Pi_{HS}$                  |            Height to Baffle Spacing in a Flocculator            |            -             |
 |                    $H_e$                     |         Height Between Flow Expansions in a Flocculator         |          $[L]$           |
 |                     $S$                      |                   Spacing Between Two Objects                   |          $[L]$           |

@@ -14,11 +14,11 @@
    * - |ACRlogowithname|
      - |donate|
 
-.. |donate| image:: AIDE/About/donate.png
+.. |donate| image:: AIDE/About/Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
   :height: 40
 
-.. |ACRlogowithname| image:: AIDE/About/ACRlogowithname.png
+.. |ACRlogowithname| image:: AIDE/About/Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
   :height: 40
 
@@ -125,15 +125,24 @@ The Physics of Water Treatment Design
   Filtration/Filtration_Theory_and_Future_Work.rst
   Filtration/Filtration_Design_Solution.rst
 
+
 .. toctree::
-  :caption: Chapter 10: Dissolved Gas
+  :caption: Chapter 10: Design and Implementation
+  :maxdepth: 1
+
+  AIDE/AIDE.rst
+  AIDE/Specifications.rst
+  AIDE/ProjectProposal.rst
+
+.. toctree::
+  :caption: Chapter 11: Dissolved Gas
   :maxdepth: 1
 
   Dissolved_Gas/DG_Intro.rst
 
 
 .. toctree::
-  :caption: Chapter 11: Operation
+  :caption: Chapter 12: Operation
   :maxdepth: 1
 
   Operation/Coagulant_Automation.rst
@@ -144,7 +153,6 @@ The Physics of Water Treatment Design
   :caption: Appendix 1 + Resources
   :maxdepth: 1
 
-  AIDE/AIDE.rst
   Introduction/Python_Tutorial.rst
   equations.rst
   glossary.rst

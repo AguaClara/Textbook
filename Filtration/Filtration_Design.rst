@@ -8,9 +8,18 @@
 .. _title_Filtration_Design:
 
 
-********************************
-Stacked Rapid Sand Filter Design
-********************************
+*************************************
+Open Stacked Rapid Sand Filter Design
+*************************************
+
+.. _figure_OStaRSoverview:
+
+.. figure:: ../Images/OStaRSoverview.png
+   :width: 400px
+   :align: center
+   :alt: Floc Hopper
+
+   The open stacked rapid sand filters include advanced hydraulic controls to ensure stable operation during both filtration and backwash modes.
 
 Nomenclature
 ============
@@ -98,7 +107,7 @@ Now we can solve for maximum manifold channel velocity.
 
 The channel depth of water above the weir, :math:`\bar H_{channel}`, and the flow uniformity target set the maximum velocity in the manifold channel (see :numref:`figure_Filter_channel_v_max`).
 
-`Geneeate the following plot <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=MyYpzYxOU5px&line=5&uniqifier=1>`_
+`Generate the following plot <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=MyYpzYxOU5px&line=5&uniqifier=1>`_
 
 
 .. _figure_Filter_channel_v_max:
@@ -720,14 +729,14 @@ The maximum hydrostatic force acting on the bottom of the filter occurs when the
 There are two factors of 2 that show up in the equation. First, the total force is distributed between two layers. Second, half of the force from one side of the filter is carried by the trunk. Thus the force per unit length of the receptor pipe, :math:`\omega`, in one module is
 
 .. math::
-  :label:
+  :label: BranchbackwashInitiationForce
 
   \omega = \rho g h_{l_{sand_{max}}} \frac{L_{branch}}{4}
 
 The total force acting upward that must be resisted by the receptor supports is
 
 .. math::
-  :label:
+  :label: ReceptorbackwashInitiationForce
 
   F_{up} = \rho g h_{l_{sand_{max}}} \frac{Q_{Fi}}{v_{Fi} N_{layer}}
 
@@ -822,7 +831,7 @@ The supports for the receptors could have a cable or a threaded rod coming up on
 The force acting on one receptor support is
 
 .. math::
-  :label:
+  :label: receptorSupportbackwashInitiationForce
 
   F_{up} = \rho g h_{l_{sand_{max}}}\frac{W_{filter}}{4} B_{support}
 

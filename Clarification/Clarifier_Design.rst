@@ -54,7 +54,7 @@ In electrical circuits, electrons will travel the path of least resistance in a 
 
     Clarification tank as a circuit.
 
-:numref:`figure_circuit_base` shows flow through a clarifier in which there are two clarifier bays working in parallel. Each bay has multiple components through which piezometric head changes; wherever a resistor symbol is shown, it means that there is a difference in piezometric head in that section of pipe. We want to understand what is going on between the influent channel and the effluent channel so that we can design to control head loss and fluid flow.
+:numref:`figure_circuit_base` shows flow through a clarifier in which there are two clarifier bays working in parallel. Each bay has multiple components through which piezometric head changes; wherever a resistor symbol is shown, it means that there is a difference in piezometric head in that section of pipe. We want to understand what is going on between the inlet channel and the outlet channel so that we can design to control head loss and fluid flow.
 
 Remember, the goal is to have even flow distribution. It is bad if different flow paths have different loss coefficients. We must consider this between clarifier bays (comparing each bay to each other) and within a single clarifier bay (comparing the flows at different points within the clarifier bay). We want to limit differences in "resistance" to ensure equal flow distribution.
 
@@ -64,26 +64,26 @@ Remember, the goal is to have even flow distribution. It is bad if different flo
 Inlet Channel
 -------------
 
-After water exits the flocculator, it is ready for clarification. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple clarifiers operating in parallel; we call each of these clarifier units a 'bay'. Because there may be multiple clarifier bays, we have to distribute flocculated water between the bays. To do this, we have an **influent channel** shown in :numref:`figure_influent_channel_bays`, which receives water from the flocculator and passes it to the clarifier bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the clarifier bays without allowing any settling of flocs in the influent channel. The minimum velocity in the influent channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each clarifier bay.
+After water exits the flocculator, it is ready for clarification. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple clarifiers operating in parallel; we call each of these clarifier units a 'bay'. Because there may be multiple clarifier bays, we have to distribute flocculated water between the bays. To do this, we have an inlet channel shown in :numref:`figure_inlet_channel_bays`, which receives water from the flocculator and passes it to the clarifier bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the clarifier bays without allowing any settling of flocs in the inlet channel. The minimum velocity in the inlet channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each clarifier bay.
 
-.. _figure_influent_channel_bays:
+.. _figure_inlet_channel_bays:
 
-.. figure:: ../Images/influent_channel_bays.png
+.. figure:: ../Images/inlet_channel_bays.png
     :height: 300px
     :align: center
     :alt: Influent channel with pipes leading to different clarifier bays.
 
-    Influent channel with pipes leading to different clarifier bays.
+    Inlet channel with pipes leading to different clarifier bays.
 
-An important question is consider is whether or not the water in the influent channel gets evenly distributed between the different bays. If it does not get evenly distributed, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to conversion of kinetic energy into potential energy as the flow decelerates. This deceleration results in an increase in the piezometric head in the direction of flow.
+An important question is consider is whether or not the water in the inlet channel gets evenly distributed between the different bays. If it does not get evenly distributed, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to conversion of kinetic energy into potential energy as the flow decelerates. This deceleration results in an increase in the piezometric head in the direction of flow.
 
 Where else in fluids have we discussed decelerating flow? We have discussed this in flow expansions. We know that in flow expansions, there are higher pressures and slower velocities downstream. At the end of the pipe, there is low velocity and thus high pressure, driving the flow through the orifices at the end. For this same reason, a channel with multiple exits will have greatest flow thru the last exit.
 
-So, is this type of head loss "good" or "bad"? In our :ref:`definition of "good" and "bad" <heading_Good_v_Bad_Hl>`, we stated that "bad" head loss creates unequal flow in parallel flow paths. The head loss in the influent channel is therefore "bad" head loss because it can lead to different bays in parallel receiving different flows.
+So, is this type of head loss "good" or "bad"? Bad head loss creates unequal flow in parallel flow paths. The head loss (and pressure recovery) in the inlet channel is therefore "bad" because it causes unequal flow distribution to the clarifier bays.
 
-Clarification units have multiple bays for a few different reasons. Plants with higher flow rates require more clarifier bays because the flow through each bay is limited by other design constraints, namely upflow velocity, which will be discussed later. Additionally, it is good to have more than one bay for maintenance purposes; if one bay needs to be cleaned, we want to always have another that can be working. Pipe stubs can be used to plug the entrance hole to a clarifier bay to shut it down for maintenance.
+Clarifiers have multiple bays for a few different reasons. Plants with higher flow rates require more clarifier bays because the flow through each bay is limited by other design constraints, namely upflow velocity, which will be discussed later. Additionally, it is good to have more than one bay for maintenance purposes; if one bay needs to be cleaned, we want to always have another that can be working. Pipe stubs can be used to plug the entrance hole to a clarifier bay to shut it down for maintenance.
 
-Of note is that the clarifier influent channel is located directly next to a drain channel. This drain channel was built to remove poorly flocculated water from the treatment train. If an operator observes poor flocculation, they can change the chemical dosing in an attempt to improve flocculation. In the meantime, they will want to dump the poorly flocculated water to avoid poor effluent quality. Operators can plug the entrance hole to the clarifier bays, allowing the influent channel to fill with water. Once water reaches the height of the wall separating it from the drain channel, the water will pour over from the influent channel into the drain channel. This allows operators to easily dump poorly treated water and then easily restart the clarifier once flocculation performance improves.
+Of note is that the clarifier inlet channel is located directly next to a drain channel. This drain channel was built to remove poorly flocculated water from the treatment train. If an operator observes poor flocculation, they can change the chemical dosing in an attempt to improve flocculation. In the meantime, they will want to dump the poorly flocculated water to avoid poor clarified water quality. Operators can plug the entrance ports to the clarifier bays, allowing the inlet channel to fill with water. Once water reaches the height of the weir separating it from the drain channel, the water will pour over from the inlet channel into the drain channel. This allows operators to easily dump poorly treated water and then easily restart the clarifier once flocculation performance improves.
 
 The clarifier inlet channel is designed to distribute the flow uniformly between the clarifiers. The flow paths through the various clarifiers are identical except for the difference in the length of the path in the clarifier inlet channel. Thus the difference in piezometric head in the clarifier inlet channel must be small compared with the head loss through a clarifier. The head loss through a clarifier is dominated by the outlet manifold which is designed to have a head loss of 5 cm. This 5 cm of head loss is in turn dominated by the orifice head loss as required to achieve uniform flow distribution between the orifices (see :ref:`clarifier outlet manifold <heading_clarifier_outlet_manifold>`)
 
@@ -128,18 +128,18 @@ The flocculated water dump channel maintains the water level in the flocculator 
 Inlet Manifold
 --------------
 
-Now, we will focus on a single clarifier bay. Flocculated water enters a pipe in the bottom of the influent channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the clarifier bay. This section of pipe that distributes water at the bottom of the clarifier bay is referred to as the **influent manifold** shown in :numref:`figure_influent_channel_manifold`.
+Now, we will focus on a single clarifier bay. Flocculated water enters a pipe in the bottom of the inlet channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the clarifier bay. This section of pipe that distributes water at the bottom of the clarifier bay is referred to as the inlet manifold shown in :numref:`figure_ClarifierInletOutletHydraulics`.
 
-.. _figure_influent_channel_manifold:
+.. _figure_ClarifierInletOutletHydraulics:
 
-.. figure:: ../Images/influent_channel_manifold.png
-    :height: 300px
-    :align: center
-    :alt: Influent channel with pipe leading to one inlet manifold.
+.. figure:: ../Images/ClarifierInletOutletHydraulics.png
+  :align: center
+  :width: 500px
+  :alt:  Clarifier Inlet Outlet Hydraulics
 
-    Influent channel with pipe leading to one inlet manifold.
+  Flocculated water flows from the inlet channel to the inlet manifold and then through the diffusers, jet reverser, floc filter, and plate settlers. Clarified water flows into the outlet manifold, the collector channel, across the outlet weir, and into the outlet channel.
 
-Clarification tank design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the clarifier, Equation :eq:`max_clarifier_jet_velocity_of_G` provides the maximum jet reverser velocity.
+Clarifier design is strongly influenced by the goal of not breaking flocs down to a size that can't be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation :eq:`G_of_vc_and_floc_props`. Our goal is to eventually provide clear guidance on setting :math:`G_{max}`. In the meantime, given a maximum velocity gradient for the inlet to the clarifier, Equation :eq:`planejet_v_max_of_q` provides the maximum jet reverser velocity.
 
 The ratio of manifold velocity to port velocity can be obtained as the inverse of Equation :eq:`Manifold_max_v_no_hl_series`.
 
@@ -148,11 +148,11 @@ The ratio of manifold velocity to port velocity can be obtained as the inverse o
 
   \frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}
 
-where the port velocity, :math:`\bar v_{P}`, is equal to the jet velocity, :math:`v_{Jet_{max}}`, from Equation :eq:`max_clarifier_jet_velocity_of_G`. Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_clarifier_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
+where the port velocity, :math:`\bar v_{P}`, is equal to the jet velocity, :math:`v_{Jet_{max}}`, from Equation :eq:`planejet_v_max_of_q`. Given a flow uniformity goal, :math:`\Pi_Q`, of 0.85 the manifold velocity must be less than 0.57 of the jet velocity. This constraint ends up being rather severe. Given a maximum velocity gradient of 100 Hz, the maximum jet velocity for a 1 m wide floc filter operating at 5°C and 1 mm/s upflow velocity is 170 mm/s. Equation :eq:`max_clarifier_manifold_velocity` sets the maximum manifold velocity at 97 mm/s. This low velocity results in large diameter manifold pipes and can significantly increase the cost of the unit process.
 
-.. _figure_influent_manifold_diffuser_flow:
+.. _figure_inlet_manifold_diffuser_flow:
 
-.. figure:: ../Images/influent_manifold_diffuser_flow.png
+.. figure:: ../Images/inlet_manifold_diffuser_flow.png
     :height: 300px
     :align: center
     :alt: Influent manifold and diffuser flow paths.
@@ -240,21 +240,21 @@ The plane jet velocity gradient given in Equation :eq:`planejet_V_max` can be co
 .. math::
   :label: v_port_max_of_G
 
-  \bar v_{Port_{Max}} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}
+  \bar v_{Port_{max}} = G_{max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}
 
 Now we can combine Equations :eq:`D_port_min_continuity` and :eq:`v_port_max_of_G` and solve for the minimum port diameter.
 
 .. math::
   :label: D_port_min
 
-   D_{port_{min}} = \left[\left(\frac{16 \Pi_{JetPlane} }{\nu \pi  G_{Max}^2 }\right) \left(\frac{4 \Pi_r^L Q_{manifold}}{ \Pi_{vc} L_{jetreverser}\pi} \right)^3 \right]^{\frac{1}{4}}
+   D_{port_{min}} = \left[\left(\frac{16 \Pi_{JetPlane} }{\nu \pi  G_{max}^2 }\right) \left(\frac{4 \Pi_r^L Q_{manifold}}{ \Pi_{vc} L_{jetreverser}\pi} \right)^3 \right]^{\frac{1}{4}}
 
 The port diameter will be rounded up to the next available pipe diameter. The maximum length of the port is given by the maximum flow from the port. The maximum port velocity is given by Equation :eq:`v_port_max_of_G`. The maximum port flow is obtained by multiplying by the port area.
 
 .. math::
   :label: port_max_spacing
 
-  Q_{port_{max}} = \bar v_{Port_{Max}} \frac{\pi D_{port}^2}{8} = G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
+  Q_{port_{max}} = \bar v_{Port_{max}} \frac{\pi D_{port}^2}{8} = G_{max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
 
 The port center to center distance is obtained by matching the port flow to the flow through the diffusers.
 
@@ -268,14 +268,14 @@ where :math:`B_{port}` is the center to center spacing of the ports. Combining E
 .. math::
   :label: max_port_spacing_draft
 
-  G_{Max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8} = \frac{Q_{manifold}}{L_{jetreverser}} B_{port_{max}}
+  G_{max}^{\frac{2}{3}} \left(\frac{\nu \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8} = \frac{Q_{manifold}}{L_{jetreverser}} B_{port_{max}}
 
 Solve for the port spacing.
 
 .. math::
   :label: max_port_spacing
 
-  B_{port_{max}} = \frac{L_{jetreverser}}{Q_{manifold}}  \left(\frac{\nu G_{Max}^2 \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
+  B_{port_{max}} = \frac{L_{jetreverser}}{Q_{manifold}}  \left(\frac{\nu G_{max}^2 \pi D_{port}}{16 \Pi_{JetPlane} }\right)^{\frac{1}{3}}\frac{\pi D_{port}^2}{8}
 
 Round down to the port spacing that works given the total length of the jet reverser and the requirement that there be an integer number of ports.
 
@@ -305,7 +305,6 @@ The diffuser delivers water from the flow equalizer to the jet reverser. The cri
 .. _figure_diffuser_dimensions:
 
 .. figure:: ../Images/diffuser_dimensions.png
-   :target: https://youtu.be/xh9dTjWRoto
    :width: 500px
    :align: center
    :alt: Diffuser dimension definition
@@ -462,37 +461,37 @@ The solution steps are as follows:
 #. Calculate the required orifice head loss by subtracting the manifold exit head loss from the desired total head loss.
 #. Calculate the orifice diameter from the orifice head loss and the orifice flow rate given the number of orifices.
 
-The **submerged effluent manifold**, sometimes called a launder, collects settled water from the clarifier. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the clarifier. Recall that the influent manifold also uses a submerged pipe and orifice design to distribute flow. However, unlike the influent manifold, the effluent manifold does not include diffusers because we do not need to precisely control velocity and flow direction.
+The **submerged outlet manifold**, sometimes called a launder, collects settled water from the clarifier. It is a horizontal pipe that extends along the length of the tank and is located above the plate settlers but below the surface of the water. The submerged pipe has orifices drilled into its top; water enters the pipe through the orifices and the pipe leads out of the clarifier. Recall that the inlet manifold also uses a submerged pipe and orifice design to distribute flow. However, unlike the inlet manifold, the outlet manifold does not include diffusers because we do not need to precisely control velocity and flow direction.
 
-.. _figure_effluent_manifold:
+.. _figure_outlet_manifold:
 
-.. figure:: ../Images/effluent_manifold.png
+.. figure:: ../Images/outlet_manifold.png
     :height: 300px
     :align: center
     :alt: Effluent manifold from the side- and top-view.
 
     Effluent manifold from the side- and top-view.
 
-The orifices in the pipe are evenly distributed along the length of the pipe to promote even flow collection from the tank. The orifices are designed create uniform head loss. Is this head loss "good" or "bad"? Like the diffusers, the orifices in the effluent manifold create "good" head loss because they increase head loss through all flow paths. This is critical because there is pressure recovery within the effluent manifold that creates a changing piezometric head inside the manifold and thus unequal flow through the orifices.
+The orifices in the pipe are evenly distributed along the length of the pipe to promote even flow collection from the tank. The orifices are designed create uniform head loss. Is this head loss "good" or "bad"? Like the diffusers, the orifices in the outlet manifold create "good" head loss because they increase head loss through all flow paths. This is critical because there is pressure recovery within the outlet manifold that creates a changing piezometric head inside the manifold and thus unequal flow through the orifices.
 
-Are there effluent manifold exit losses? What type of head loss would it be? This head loss is a result of exit loss into its receiving channel. Is it "good" or "bad"? This head loss is also "good" head loss because it impacts all flow paths the same; each clarifier bay and all water within a single bay is subject to the same amount of exit loss.
+Are there outlet manifold exit losses? What type of head loss would it be? This head loss is a result of exit loss into its receiving channel. Is it "good" or "bad"? This head loss is also "good" head loss because it impacts all flow paths the same; each clarifier bay and all water within a single bay is subject to the same amount of exit loss.
 
-The effluent manifold is submerged for three main reasons.
+The outlet manifold is submerged for three main reasons.
 
-#. It is designed to be submerged because sometimes there are particles or substances that rise to the top of clarifiers and float on the water surface. These particles or substances may be flocs that escaped capture and remain buoyant, or may be foam or scum that results from organic matter in the water. No matter what it is that is rising to the water surface, we want to avoid it entering the settled water effluent pipe. Placing the effluent manifold below the surface allows particles or substances floating on the surface to remain separate from the effluent water headed towards filtration. Operators can then skim the water surface to remove and dispose of anything that floats.
+#. It is designed to be submerged because sometimes there are particles or substances that rise to the top of clarifiers and float on the water surface. These particles or substances may be flocs that escaped capture and remain buoyant, or may be foam or scum that results from organic matter in the water. No matter what it is that is rising to the water surface, we want to avoid it entering the settled water outlet pipe. Placing the outlet manifold below the surface allows particles or substances floating on the surface to remain separate from the outlet water headed towards filtration. Operators can then skim the water surface to remove and dispose of anything that floats.
 
 #. The launders were also designed to be submerged to simplify construction. Effluent launders that also act as weirs must be installed perfectly level. This is difficult to ensure during construction and thus we have elected to use a single weir to regulate the water level in all of the clarifiers. The water from all of the clarifiers in one treatment train joins together in a common channel before flowing over the exit weir.
 
 #. The submerged launder and exit weir system also make it possible to refill and empty a clarifier with clean water. This innovation significantly reduces the time required to return a clarifier bay to service after maintenance.
 
-The orifices in the effluent manifold are located at the top of the manifold to promote even flow collection and for ease of operation and maintenance. The orifices need to be either located on the top or bottom so that they are symmetrical about the tank because if the orifices were put on the sides, then they might not draw water evenly from the entire tank. The top is better because orifices located on the top of the pipe can be easily observed and maintained by operators in case any clogging occurs. We also want to limit the number of flocs that rise through the plate settlers and enter the effluent manifold. Locating the orifices on the top discourages that from happening by not drawing up directly from the top of plate settlers and by giving more time for flocs to potentially settle. Finally, the flow enters the orifices from all directions and creates high velocities near the orifice. We maximize the distance of these high velocities from the plate settlers by placing these orifices on the top of the manifold.
+The orifices in the outlet manifold are located at the top of the manifold to promote even flow collection and for ease of operation and maintenance. The orifices need to be either located on the top or bottom so that they are symmetrical about the tank because if the orifices were put on the sides, then they might not draw water evenly from the entire tank. The top is better because orifices located on the top of the pipe can be easily observed and maintained by operators in case any clogging occurs. We also want to limit the number of flocs that rise through the plate settlers and enter the outlet manifold. Locating the orifices on the top discourages that from happening by not drawing up directly from the top of plate settlers and by giving more time for flocs to potentially settle. Finally, the flow enters the orifices from all directions and creates high velocities near the orifice. We maximize the distance of these high velocities from the plate settlers by placing these orifices on the top of the manifold.
 
 .. _heading_Clarifier_Exit_Weir_Channel:
 
 Outlet Weir and Channel
 ------------------------
 
-The submerged effluent manifold transports water from the clarifier to a channel that runs perpendicular to the clarifier bays. The channel collects water from all of the clarifier bays. Water leaves this channel by flowing over a small wall, called the **exit weir**. The clarifier exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and clarifier. In construction, great care is taken to ensure that this weir is at the right elevation and is level. After the water flows over the exit weir, it is collected in the **effluent channel**. The effluent channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box.
+The submerged outlet manifold transports water from the clarifier to a collector channel that runs perpendicular to the clarifier bays. The channel collects water from all of the clarifier bays. Water leaves this channel by flowing over a small wall, called the **exit weir**. The clarifier exit weir controls water levels all the way upstream to the previous free-fall, which was the LFOM. So, the height of the exit weir is critical to ensuring appropriate water levels in the flocculator and clarifier. In construction, great care is taken to ensure that this weir is at the right elevation and is level. After the water flows over the exit weir, it is collected in the **outlet channel**. The outlet channel has pipes embedded in the bottom of it which lead the settled water to the filter inlet box.
 
 .. _figure_channel_labeled:
 
