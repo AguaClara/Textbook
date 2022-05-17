@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>The Physics of Water Treatment Design &mdash; AguaClara Textbook v1.3.38 documentation</title>
+  <title>The Physics of Water Treatment Design &mdash; AguaClara Textbook v1.2.10 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.38
+                v1.2.10
               </div>
             
           
@@ -596,7 +596,7 @@ Which process removes the largest quantity of contaminants?</p>
 <p>The filter approach velocity (the velocity of water before it enters the sand bed) for CWTP is 4.42 mm/s. This is significantly higher than the 1.85 mm/s filtration velocity currently used in StaRS filters. StaRS filters are a stack of 6 filters and the net filtration velocity is 11 mm/s. Thus by that metric the StaRS filters are significantly smaller than the CWTP filters.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#the unit registry has been imported above and does not need to be imported again</span>
 <span class="kn">import</span> <span class="nn">aguaclara</span>
-<span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="kn">as</span> <span class="nn">pc</span>
+<span class="kn">import</span> <span class="nn">aguaclara.core.physchem</span> <span class="k">as</span> <span class="nn">pc</span>
 <span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
 <span class="n">Q_Croton</span> <span class="o">=</span><span class="p">(</span><span class="mi">290</span> <span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">Mgal</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">day</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
 <span class="n">Cost_Croton</span> <span class="o">=</span> <span class="mf">3.2</span> <span class="o">*</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">USD</span>

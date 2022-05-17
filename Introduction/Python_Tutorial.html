@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Python Tutorial &mdash; AguaClara Textbook v1.3.38 documentation</title>
+  <title>Python Tutorial &mdash; AguaClara Textbook v1.2.10 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.3.38
+                v1.2.10
               </div>
             
           
@@ -349,11 +349,11 @@
 </table>
 <div class="section" id="import-statements">
 <h2>Import statements<a class="headerlink" href="#import-statements" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="kn">as</span> <span class="nn">ac</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara</span> <span class="k">as</span> <span class="nn">ac</span>
 <span class="kn">from</span> <span class="nn">aguaclara.core.units</span> <span class="kn">import</span> <span class="n">unit_registry</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">constants</span><span class="p">,</span> <span class="n">interpolate</span>
 </pre></div>
 </div>
@@ -419,8 +419,8 @@ can do the following import inspect inspect.getsource(foo)</p>
 <p>Operations on values with units follow very clear algebraic rules and thus units can be attached to numerical values and carried through math operations. This capability is implemented in Python using <a class="reference external" href="https://pint.readthedocs.io/en/latest/">Pint</a> . The Pint package includes a host of units and prefixes (such as <span class="math notranslate nohighlight">\(\mu\)</span> for <span class="math notranslate nohighlight">\(10^{-6}\)</span>). As you master using Python and Pint you will say goodbye to mindless unit conversions forever!</p>
 <p>Environmental engineers historically described surface loading rates for clarifiers using units of gal/min per square foot. How fast is <span class="math notranslate nohighlight">\(\frac{1 gpm}{ft^2}\)</span> in <span class="math notranslate nohighlight">\(\frac{mm}{s}\)</span>?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">V_surface_loading_rate</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gal</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">min</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">ft</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">mm</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">V_surface_loading_rate</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">ac</span><span class="o">.</span><span class="n">round_sig_figs</span><span class="p">(</span><span class="n">V_surface_loading_rate</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">V_surface_loading_rate</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The surface loading rate is&#39;</span><span class="p">,</span> <span class="n">ac</span><span class="o">.</span><span class="n">round_sig_figs</span><span class="p">(</span><span class="n">V_surface_loading_rate</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>The surface loading rate is 0.6791 millimeter / second</p>
@@ -431,8 +431,8 @@ The surface loading rate is 0.68 millimeter / second</p>
 <span class="n">friction_coefficient</span> <span class="o">=</span> <span class="mf">0.5</span>
 <span class="n">deceleration</span> <span class="o">=</span> <span class="n">friction_coefficient</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">standard_gravity</span>
 <span class="n">t_deceleration</span> <span class="o">=</span> <span class="n">v_0</span><span class="o">/</span><span class="n">deceleration</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The time to stop the car is&#39;</span><span class="p">,</span><span class="n">t_deceleration</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The time to stop the car is&#39;</span><span class="p">,</span><span class="n">t_deceleration</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time to stop the car is&#39;</span><span class="p">,</span><span class="n">t_deceleration</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The time to stop the car is&#39;</span><span class="p">,</span><span class="n">t_deceleration</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>The time to stop the car is 120 mile / hour / standard_gravity</p>
@@ -442,11 +442,11 @@ The surface loading rate is 0.68 millimeter / second</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">gal</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">min</span>
 <span class="n">fill_time</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">hr</span>
 <span class="n">Volume</span> <span class="o">=</span> <span class="n">Q</span> <span class="o">*</span> <span class="n">fill_time</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The volume is&#39;</span><span class="p">,</span><span class="n">Volume</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the Volume is&#39;</span><span class="p">,</span> <span class="n">Volume</span><span class="o">.</span><span class="n">magnitude</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The units of the flow are&#39;</span><span class="p">,</span> <span class="n">Volume</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The volume is&#39;</span><span class="p">,</span><span class="n">Volume</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The magnitude of the Volume is&#39;</span><span class="p">,</span> <span class="n">Volume</span><span class="o">.</span><span class="n">magnitude</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The units of the flow are&#39;</span><span class="p">,</span> <span class="n">Volume</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
 <span class="c1">#force pint to display in a selected set of Units</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The volume is&#39;</span><span class="p">,</span><span class="n">Volume</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kL</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The volume is&#39;</span><span class="p">,</span><span class="n">Volume</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kL</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>The volume is 15 gallon * hour / minute</p>
@@ -482,13 +482,13 @@ The surface loading rate is 0.68 millimeter / second</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n_rows</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">Flow</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span>
 <span class="n">Flow_array</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n_rows</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="n">n_rows</span><span class="p">)</span> <span class="o">*</span> <span class="n">Flow</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The array of flow rates is&#39;</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The array of flow rates is&#39;</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
 
 <span class="n">Flow_array</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n_rows</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="n">n_rows</span><span class="p">)</span> <span class="o">*</span> <span class="n">Flow</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The array of flow rates is&#39;</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The array of flow rates is&#39;</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
 
 <span class="n">Flow_array</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="n">n_rows</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">Flow</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">L</span><span class="o">/</span><span class="n">u</span><span class="o">.</span><span class="n">s</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The array of flow rates is&#39;</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The array of flow rates is&#39;</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">magnitude</span><span class="p">,</span><span class="n">Flow_array</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>[  2.   4.   6.   8.  10.  12.  14.  16.  18.  20.] liter / second</p>
@@ -532,13 +532,13 @@ The surface loading rate is 0.68 millimeter / second</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;water depth (&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">units</span><span class="p">)</span> <span class="o">+</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
 <span class="c1">#ax.set(ylabel=&#39;Flow rate (&#39;+str(Q_max1.units)+&#39;)&#39;)</span>
 <span class="c1">#Below is the method for using latex to format the units</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Flow rate &#39;</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;$\left (\frac{L}{s}\right )$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Flow rate &#39;</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;$\left (\frac</span><span class="si">{L}{s}</span><span class="s1">\right )$&#39;</span><span class="p">)</span>
 
 <span class="c1"># options: linear or log</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">yscale</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xscale</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1">#options:</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
@@ -582,8 +582,8 @@ The surface loading rate is 0.68 millimeter / second</p>
 <span class="c1"># Use the equation PV=nRT and solve for n, the number of moles.</span>
 <span class="c1"># The universal gas constant is available in pint.</span>
 <span class="n">nmolesmethane</span> <span class="o">=</span> <span class="p">(</span><span class="n">P</span><span class="o">*</span><span class="n">V</span><span class="o">/</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">R</span><span class="o">*</span><span class="n">T</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">kelvin</span><span class="p">)))</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">nmolesmethane</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;There are &#39;</span><span class="p">,</span> <span class="n">nmolesmethane</span> <span class="p">,</span><span class="s1">&#39; of methane in the container.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nmolesmethane</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are &#39;</span><span class="p">,</span> <span class="n">nmolesmethane</span> <span class="p">,</span><span class="s1">&#39; of methane in the container.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>There are  1.625 mole  of methane in the container.</p>
@@ -607,7 +607,7 @@ The surface loading rate is 0.68 millimeter / second</p>
 </pre></div>
 </div>
 <p>Try using the new function to solve the same problem as above. You can reuse the variables. You can use the new function call inside the print statement.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;There are&#39;</span><span class="p">,</span> <span class="n">nmoles</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">V</span><span class="p">,</span><span class="n">T</span><span class="p">),</span><span class="s1">&#39;of methane in the container.&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are&#39;</span><span class="p">,</span> <span class="n">nmoles</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">V</span><span class="p">,</span><span class="n">T</span><span class="p">),</span><span class="s1">&#39;of methane in the container.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">There</span> <span class="n">are</span> <span class="mf">1.62</span> <span class="n">mol</span> <span class="n">of</span> <span class="n">methane</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">container</span><span class="o">.</span>
@@ -617,7 +617,7 @@ The surface loading rate is 0.68 millimeter / second</p>
 <div class="section" id="pipe-database">
 <h2>Pipe Database<a class="headerlink" href="#pipe-database" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/core/pipes.py">pipes</a> has many useful functions concerning pipe sizing. It provides functions that calculate actual pipe inner and outer diameters given the nominal diameter of the pipe. Note that nominal diameter just means the diameter that it is called (hence the discriptor “nominal”) and thus a 1 inch nominal diameter pipe might not have any dimensions that are actually 1 inch!</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.pipes</span> <span class="kn">as</span> <span class="nn">pipe</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">aguaclara.core.pipes</span> <span class="k">as</span> <span class="nn">pipe</span>
 <span class="c1"># The OD function in pipedatabase returns the outer diameter of a pipe given the nominal diameter, ND.</span>
 <span class="n">pipe</span><span class="o">.</span><span class="n">OD</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="n">u</span><span class="o">.</span><span class="n">inch</span><span class="p">)</span>
 </pre></div>
@@ -633,7 +633,7 @@ The surface loading rate is 0.68 millimeter / second</p>
 <p>3.0 inch</p>
 <p>The actual inner diameter of this pipe is</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ID_my_pipe</span> <span class="o">=</span> <span class="n">ac</span><span class="o">.</span><span class="n">ID_SDR</span><span class="p">(</span><span class="n">ND_my_pipe</span><span class="p">,</span><span class="n">SDR</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">ID_my_pipe</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ID_my_pipe</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">8.2</span> <span class="n">cm</span>
