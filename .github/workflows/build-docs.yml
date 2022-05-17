@@ -23,7 +23,7 @@ jobs:
         make html
         touch _build/html/.nojekyll
     - name: Publish Docs Master
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
