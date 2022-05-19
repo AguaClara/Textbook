@@ -1,16 +1,9 @@
-.. raw:: html
-
-    <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/About/FlocHV.html" />
-       <script src="https://hypothes.is/embed.js" async></script>
-    </embed>
-
-
 .. list-table::
-   :widths: 60 50 30
+   :widths: 40 45 35 30
    :header-rows: 0
 
    * - |ACRlogowithname|
+     - |feedback|
      - |textbook|
      - |donate|
 
@@ -49,7 +42,7 @@ The flocculator has three design constraints:
 Generate New Models of the Flocculator
 ========================================
 
-Edit the configurations to create new models of the flocculator. Some models may fail because the constraints can't all be met. Send us |feedback| to share how you are using the Flocculator HV model and to give us suggestions for how to make these models easier to use.
+Edit the configurations to create new models of the flocculator. Some models may fail because the constraints can't all be met. Send us |feedback| to share how you are using the flocculator HV model, to give us suggestions for how to make these models easier to use, and to report any bugs.
 
 .. _figure_configFloc:
 
@@ -83,16 +76,16 @@ Additional information is available in the chapter on `Flocculator Design <https
 
 .. |donate| image:: ./Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
-  :height: 40
+  :height: 30
 
 .. |textbook| image:: ./Images/textbook.png
   :target: https://aguaclara.github.io/Textbook/AIDE/AIDE.html
-  :height: 40
+  :height: 30
 
 .. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
-  :height: 40
+  :height: 30
 
 .. |feedback| image:: ./Images/feedback.png
-  :target: https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?
-  :height: 25
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 30
