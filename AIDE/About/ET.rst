@@ -1,11 +1,9 @@
-.. list-table::
-   :widths: 40 45 35 30
-   :header-rows: 0
+.. csv-table::
+   :widths: 45 35 25
 
-   * - |ACRlogowithname|
-     - |feedback|
-     - |textbook|
-     - |donate|
+   |ACRlogowithname|,  |textbook|, |donate|
+
+|reportabugbig|
 
 .. _title_Entrance_Tank_Configurable_Component:
 
@@ -26,7 +24,7 @@ Entrance Tank Configurable Component
 .. _figure_ETinPlant:
 
 .. figure:: ./Images/ETinPlant.png
-    :width: 500px
+    :width: 400px
     :align: center
     :alt: Location of the Entrance Tank
 
@@ -44,18 +42,9 @@ The entrance tank has four main functions:
 Generate New Models of the Entrance Tank
 ========================================
 
-Edit the configurations to create new models of the entrance tank. Some models may fail because the constraints can't all be met. Send us |feedback| to share how you are using the entrance tank model, to give us suggestions for how to make these models easier to use, and to report any bugs.
+Edit the configurations to create new models of the entrance tank. Some models may fail because the constraints can't all be met. Send us `feedback to share how you are using the entrance tank model, to give us suggestions for how to make these models easier to use, and to <https://forms.gle/cqDPapYkcSmLnDu4A>`_ |reportabug|.
 
-.. _figure_configET:
-
-.. figure:: ./Images/configET.png
-    :width: 400px
-    :align: center
-    :alt: Location of the Entrance Tank
-
-    The configuration options for the Entrance Tank.
-
-.. csv-table:: Entrance tank configurations.
+.. csv-table:: Entrance tank configuration parameters.
    :header: "Configuration", "Description"
    :align: left
    :widths: 50, 100
@@ -84,8 +73,13 @@ Additional information is available in the chapter on `Entrance Tank Design <htt
 
 .. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
-  :height: 30
+  :height: 40
 
-.. |feedback| image:: ./Images/feedback.png
+
+.. |reportabug| image:: ./Images/reportabug.png
   :target: https://forms.gle/cqDPapYkcSmLnDu4A
-  :height: 30
+  :height: 20
+
+.. |reportabugbig| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 40

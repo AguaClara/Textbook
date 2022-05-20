@@ -1,11 +1,9 @@
-.. list-table::
-   :widths: 40 45 35 30
-   :header-rows: 0
+.. csv-table::
+   :widths: 45 35 25
 
-   * - |ACRlogowithname|
-     - |feedback|
-     - |textbook|
-     - |donate|
+   |ACRlogowithname|,  |textbook|, |donate|
+
+|reportabugbig|
 
 .. _title_Flocculator_HV_Configurable_Component:
 
@@ -16,7 +14,7 @@ Flocculator HV Configurable Component
 .. _figure_FlocHV:
 
 .. figure:: ./Images/FlocHV.png
-    :width: 500px
+    :width: 450px
     :align: center
     :alt: Location of the Entrance Tank
 
@@ -26,7 +24,7 @@ Flocculator HV Configurable Component
 .. _figure_FlocHVinPlant:
 
 .. figure:: ./Images/FlocHVinPlant.png
-    :width: 400px
+    :width: 350px
     :align: center
     :alt: Location of the Entrance Tank
 
@@ -42,18 +40,9 @@ The flocculator has three design constraints:
 Generate New Models of the Flocculator
 ========================================
 
-Edit the configurations to create new models of the flocculator. Some models may fail because the constraints can't all be met. Send us |feedback| to share how you are using the flocculator HV model, to give us suggestions for how to make these models easier to use, and to report any bugs.
+Edit the configurations to create new models of the flocculator. Some models may fail because the constraints can't all be met. Send us `feedback to share how you are using the flocculator HV model, to give us suggestions for how to make these models easier to use, and to <https://forms.gle/cqDPapYkcSmLnDu4A>`_ |reportabug|.
 
-.. _figure_configFloc:
-
-.. figure:: ./Images/configFlocHV.png
-    :width: 300px
-    :align: center
-    :alt: Flocculator configuration
-
-    The configuration options for the Flocculator.
-
-.. csv-table:: Flocculator HV configurations.
+.. csv-table:: Flocculator HV configuration parameters.
    :header: "Configuration", "Description"
    :align: left
    :widths: 50, 100
@@ -84,8 +73,13 @@ Additional information is available in the chapter on `Flocculator Design <https
 
 .. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
-  :height: 30
+  :height: 40
 
-.. |feedback| image:: ./Images/feedback.png
+
+.. |reportabug| image:: ./Images/reportabug.png
   :target: https://forms.gle/cqDPapYkcSmLnDu4A
-  :height: 30
+  :height: 20
+
+.. |reportabugbig| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 40

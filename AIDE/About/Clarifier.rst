@@ -1,18 +1,9 @@
-.. raw:: html
-    <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/About/Clarifier.html" />
-       <script src="https://hypothes.is/embed.js" async></script>
-    </embed>
+.. csv-table::
+   :widths: 45 35 25
 
+   |ACRlogowithname|,  |textbook|, |donate|
 
-.. list-table::
-   :widths: 40 45 35 30
-   :header-rows: 0
-
-   * - |ACRlogowithname|
-     - |feedback|
-     - |textbook|
-     - |donate|
+|reportabugbig|
 
 .. _title_Clarifier_Configurable_Component:
 
@@ -23,7 +14,7 @@ Clarifier Configurable Component
 .. _figure_Clarifier:
 
 .. figure:: ./Images/Clarifier.png
-    :width: 400px
+    :width: 350px
     :align: center
     :alt: Clarifier
 
@@ -39,7 +30,6 @@ Clarifier Configurable Component
 
     The clarifier (outlined in red) is attached to the flocculator to create a compact plant layout.
 
-
 The Clarifier Features:
 ==========================================
 
@@ -53,18 +43,10 @@ The Clarifier Features:
 Generate New Models of the Clarifier
 ========================================
 
-Edit the configurations to create new models of the clarifier. Send us |feedback| to share how you are using the clarifier model, to give us suggestions for how to make these models easier to use, and to report any bugs.
+Edit the configurations to create new models of the clarifier. Send us `feedback to share how you are using the clarifier model, to give us suggestions for how to make these models easier to use, and to <https://forms.gle/cqDPapYkcSmLnDu4A>`_ |reportabug|.
 
-.. _figure_configClarifier:
 
-.. figure:: ./Images/configClarifier.png
-    :width: 300px
-    :align: center
-    :alt: Location of the Clarifier
-
-    The configuration options for the Clarifier.
-
-.. csv-table:: Clarifier configurations.
+.. csv-table:: Clarifier configuration parameters.
    :header: "Configuration", "Description"
    :align: left
    :widths: 50, 100
@@ -93,8 +75,13 @@ Additional information is available in the chapter on `Clarifier Design <https:/
 
 .. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
-  :height: 30
+  :height: 40
 
-.. |feedback| image:: ./Images/feedback.png
+
+.. |reportabug| image:: ./Images/reportabug.png
   :target: https://forms.gle/cqDPapYkcSmLnDu4A
-  :height: 30
+  :height: 20
+
+.. |reportabugbig| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 40

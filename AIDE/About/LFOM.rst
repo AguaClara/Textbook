@@ -1,11 +1,9 @@
-.. list-table::
-   :widths: 40 45 35 30
-   :header-rows: 0
+.. csv-table::
+   :widths: 45 35 25
 
-   * - |ACRlogowithname|
-     - |feedback|
-     - |textbook|
-     - |donate|
+   |ACRlogowithname|,  |textbook|, |donate|
+
+|reportabugbig|
 
 .. _title_Linear_Flow_Orifice_Meter_Configurable_Component:
 
@@ -35,18 +33,9 @@ Linear Flow Orifice Meter Configurable Component
 Generate New Models of the Linear Flow Orifice Meter
 ====================================================
 
-Edit the configurations to create new models of the Linear Flow Orifice Meter. Send us |feedback| to share how you are using the LFOM model, to give us suggestions for how to make these models easier to use, and to report any bugs.
+Edit the configurations to create new models of the Linear Flow Orifice Meter. Send us `feedback to share how you are using the LFOM model, to give us suggestions for how to make these models easier to use, and to <https://forms.gle/cqDPapYkcSmLnDu4A>`_  |reportabug|.
 
-.. _figure_configLFOM:
-
-.. figure:: ./Images/configLFOM.png
-    :width: 300px
-    :align: center
-    :alt: Linear Flow Orifice Meter configuration
-
-    The configuration options for the Linear Flow Orifice Meter.
-
-.. csv-table:: Linear Flow Orifice Meter configurations.
+.. csv-table:: Linear Flow Orifice Meter configuration parameters.
    :header: "Configuration", "Description"
    :align: left
    :widths: 50, 100
@@ -76,8 +65,13 @@ Additional information is available in *The Physics of Water Treatment* in the s
 
 .. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
-  :height: 30
+  :height: 40
 
-.. |feedback| image:: ./Images/feedback.png
+
+.. |reportabug| image:: ./Images/reportabug.png
   :target: https://forms.gle/cqDPapYkcSmLnDu4A
-  :height: 30
+  :height: 20
+
+.. |reportabugbig| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 40
