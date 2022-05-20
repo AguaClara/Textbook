@@ -1,18 +1,9 @@
-.. raw:: html
+.. csv-table::
+   :widths: 45 35 25
 
-    <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/About/ET.html" />
-       <script src="https://hypothes.is/embed.js" async></script>
-    </embed>
+   |ACRlogowithname|,  |textbook|, |donate|
 
-
-.. list-table::
-   :widths: 60 50 30
-   :header-rows: 0
-
-   * - |ACRlogowithname|
-     - |textbook|
-     - |donate|
+|reportabugbig|
 
 .. _title_Entrance_Tank_Configurable_Component:
 
@@ -33,7 +24,7 @@ Entrance Tank Configurable Component
 .. _figure_ETinPlant:
 
 .. figure:: ./Images/ETinPlant.png
-    :width: 500px
+    :width: 400px
     :align: center
     :alt: Location of the Entrance Tank
 
@@ -51,18 +42,9 @@ The entrance tank has four main functions:
 Generate New Models of the Entrance Tank
 ========================================
 
-Edit the configurations to create new models of the entrance tank. Some models may fail because the constraints can't all be met. Send us |feedback| to share how you are using the entrance tank model and to give us suggestions for how to make these models easier to use.
+Edit the configurations to create new models of the entrance tank. Some models may fail because the constraints can't all be met. Send us `feedback to share how you are using the entrance tank model, to give us suggestions for how to make these models easier to use, and to <https://forms.gle/cqDPapYkcSmLnDu4A>`_ |reportabug|.
 
-.. _figure_configET:
-
-.. figure:: ./Images/configET.png
-    :width: 400px
-    :align: center
-    :alt: Location of the Entrance Tank
-
-    The configuration options for the Entrance Tank.
-
-.. csv-table:: Entrance tank configurations.
+.. csv-table:: Entrance tank configuration parameters.
    :header: "Configuration", "Description"
    :align: left
    :widths: 50, 100
@@ -83,16 +65,21 @@ Additional information is available in the chapter on `Entrance Tank Design <htt
 
 .. |donate| image:: ./Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
-  :height: 40
+  :height: 30
 
 .. |textbook| image:: ./Images/textbook.png
   :target: https://aguaclara.github.io/Textbook/AIDE/AIDE.html
-  :height: 40
+  :height: 30
 
 .. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
   :height: 40
 
-.. |feedback| image:: ./Images/feedback.png
-  :target: https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?
-  :height: 25
+
+.. |reportabug| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 20
+
+.. |reportabugbig| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 40

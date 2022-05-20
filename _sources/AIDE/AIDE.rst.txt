@@ -25,15 +25,22 @@ We rely on donor support to develop AIDE and to create this textbook. Please |do
 
 In the :ref:`table below <table_AIDE_configurable_components>` are links to configurable component models. Information on how to :ref:`access and modify the models is given below the table <heading_Using_AIDE>`. We welcome `your feedback on the AIDE models <https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?>`_. If you are interested in AguaClara technologies to produce safe water on tap please fill out our `survey for potential implementation partners <https://docs.google.com/forms/d/e/1FAIpQLSdU7ZrWlnugDqEutdELWLoj5jq8JW6yzOeUg3Al4R7LUSYzRA/viewform?>`_.
 
+.. raw:: html
+
+    <embed>
+       <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/272ed6d0570a4b489ca630a10aa5a65d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+    </embed>
+
 
 .. _table_AIDE_configurable_components:
 
 .. csv-table:: AIDE configurable components.
-   :header: "Link to Onshape", "Description", "Time to generate model component (s)"
+   :header: "Link to Onshape", "Description", "Approximate time to generate model component (s)"
    :align: left
    :widths: 30 60 15
 
-   |LFOM|, "Linear Flow Orifice Meter", 5
+   |20-80Lpsplant|, "20-80 L/s plant: Integrated plant for flows between 20 and 80 L/s (see `AIDE: Introductory Video <https://www.loom.com/share/272ed6d0570a4b489ca630a10aa5a65d>`_)", 180
+   |LFOM|, "Linear Flow Orifice Meter (see `AIDE: Linear Flow Orifice Meter <https://https://www.loom.com/share/59c642e57000459290eeeaf4eae794c2>`_)", 5
    |Doser|, "Chemical Dose Controller", 5
    |EntranceTank|,  "Entrance Tank: trash racks, grit removal, chemical dose controller, and linear flow orifice meter", 20
    |FlocculatorVH|, "Flocculator VH: Vertical-Horizontal Flocculator for flows below about 20 L/s", 15
@@ -41,14 +48,15 @@ In the :ref:`table below <table_AIDE_configurable_components>` are links to conf
    |FlocculatorHH|, "Flocculator HH: Horizontal-Horizontal Flocculator for flows above about 100 L/s", 5
    |Clarifier|, "Clarifier: floc filter, plate settlers, and floc hopper", 32
    |OStaRS|, "OStaRS: Open Stacked Rapid Sand Filter", 25
-   |20-80Lpsplant|, "20-80 L/s plant: Integrated plant for flows between 20 and 80 L/s", 180
+
+The AIDE components will be updated as we continue to improve the designs and we will be adding new components as we extend our designs to a wide range of flow rates.
 
 .. _heading_Disclaimer:
 
 Disclaimer
 ==========
 
-The configurable components created by AIDE are not engineering designs. The configurable components are provided for educational purposes. The configurable components create models that have not been reviewed and are likely NOT suitability for any particular application.
+The configurable components created by AIDE are not engineering designs. The configurable components are provided for educational purposes. The configurable components create models that have not been reviewed and are likely NOT suitable for any particular application.
 
 **In no event shall AguaClara Reach, or their employees be liable to any party for direct, indirect, special, incidental, or consequential damages, including lost profits, arising out of the use of AIDE, even if AguaClara Reach may have been advised of the possibility of such damage.**
 
@@ -58,7 +66,7 @@ Introduction to AIDE
 
 AIDE is based on parametric design. The vast majority of the dimensions are calculated from hydraulic constraints. Pipe diameters are sometimes based on a head loss constraint, sometimes are designed to not break up flocs, and in the chemical doser are designed to ensure laminar flow. Wall thicknesses are based on the construction methods used by the implementation partner and vary based on the depth of water in the tank. Thus the filter has thicker walls than the clarifier.
 
-AIDE is built from many modular components that are all connected as a part studio tree. The entire water treatment plant is an example of a top level component, a parent, that has an entrance tank, flocculator, clarifier, and filter as children. Each of the children also has its own children. The entire part studio tree is assembled level by level in a way that allows the parent to know everything about all of the children and their children. This sharing of design parameters between components enables an integrated design and an optimized plant layout.
+AIDE is built from many modular components that are all connected so they can share design information. The entire water treatment plant is an example of a top level component, a trunk, that has an entrance tank, flocculator, clarifier, and filter as branches. Each of the branches also has its own twigs. We call the connections between trunk, branch, and twigs a part studio tree. The part studio tree is assembled level by level in a way that allows the trunk to know everything about all of the branches and their twigs. This sharing of design parameters between components enables an integrated design and an optimized plant layout.
 
 All of the parts used to assemble the design originate in a parts database.  The database can be customized for different implementation partners so that the part dimensions and costs match their requirements.  The database approach to design ensures that when an alternative part is selected that all plant dimensions update to accommodate the new part dimensions.
 
@@ -75,40 +83,27 @@ If you do not yet have an |Onshape| account, then you will be able to make chang
 Most models have two check boxes that provide increasing level of model detail. A few models have more options to turn on computationally intensive parts of the design.
   #. *Show internal components* - Enables the modeling of pipes, baffles, and other internal components and creates a complete bill of materials. For some of the components it will only show an example rather than fully replicating all of the parts.
   #. *Replicate all parts* - Fully replicates all parts and may significantly extend the time required to generate a new model.
-  #. *Print parameter map* - Prints a full map in the FeatureScript notices of all of the model inputs. Only a small fraction of the available inputs are exposed in the model configurations. Click on showFeatureScript Notices |showFSNotices| to open a new pane at the bottom of the browser window where the full parameter map will be displayed.
+  #. *Print parameter map* - Prints a full map in the FeatureScript notices of all of the model inputs. Only a small fraction of the available inputs are exposed in the model configuration parameters. Click on show FeatureScript Notices |showFSNotices| to open a new pane at the bottom of the browser window where the full parameter map will be displayed.
 
 The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of *time to generate model component* in :numref:`table_AIDE_configurable_components` for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.
 
-The bill of materials does not include internal components if *Show internal components* is not selected. The bill of materials does include all of the parts even if *Replicate all parts* is not selected.
+The bill of materials does not include internal components if *Show internal components* is not selected. The bill of materials includes all of the parts even if *Replicate all parts* is not selected.
 
 If you would like to explore possible configurations, vary the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.
-
-Configurable Components User Survey
-===================================
-
-Please fill out the following survey to provide us with feedback on your experience exploring AIDE configurable components. We will use this feedback to improve the models with the goal of making them even easier to explore.
-
-.. raw:: html
-
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 How AguaClara Reach Uses AIDE
 =============================
 
-AguaClara Reach (ACR) uses AIDE to provide Implementation Partners (IPs) with customized hydraulic designs. AguaClara Reach works with IPs to customize the AIDE parts database so that the design reflects construction practices and part availability in the IP's region. This includes pipes and fittings from preferred vendors and custom dimensions used for the civil work based on the construction methods used by each Implementation Partner. ACR also provides training and technical support to IPs. The designs are also customized based on water quality.
+AguaClara Reach (ACR) uses AIDE to provide Implementation Partners (IPs) with customized hydraulic designs. AguaClara Reach works with IPs to customize the AIDE parts database so that the design reflects construction practices and part availability in the IP's region. This includes pipes and fittings from preferred vendors and custom dimensions used for the civil work based on the construction methods used by each Implementation Partner. The designs are customized based on water quality. ACR also provides training and technical support to IPs.
 
 There are approximately 300 input parameters required to design a full AguaClara water treatment plant. In addition there are many hundreds of parts in the parts database that each require dimensions. AIDE makes it possible to modify both the parts database and the input parameters for each IP.
 
-ACR developed AIDE to reduce the time required to customize the designs and to make it possible to provide detailed designs quickly. AIDE has the additional benefit of enabling ACR to upgrade the design algorithms as new insights come in from both IPs and the AguaClara academic partners. New design algorithms can be deployed across the entire suite of AIDE components and updated designs can be provided to IPs when they are ready to adopt the new features.
+ACR developed AIDE to reduce the time required to customize the designs and to make it possible to provide detailed designs quickly. With AIDE ACR can provide an IP with a quick bill of materials so they can see if the parts are available in country and a quick **estimate** of material cost. AIDE has the additional benefit of enabling ACR to upgrade the design algorithms as new insights come in from both IPs and the AguaClara academic partners. New design algorithms can be deployed across the entire suite of AIDE components and updated designs can be provided to IPs when they are ready to adopt the new features.
 
 Next Steps for Potential Implementation Partners
 ================================================
 
-Please fill out the following survey if your organization is interested in becoming an AguaClara Implementation Partner. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. AguaClara Reach is ready to develop partnerships with both non-profit organizations and engineering firms. The types of services that ACR offers can be seen in the :ref:`title_First_Project_Proposal`. The :ref:`title_AguaClara_Specifications` are also available for IP reference.
-
-.. raw:: html
-
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdU7ZrWlnugDqEutdELWLoj5jq8JW6yzOeUg3Al4R7LUSYzRA/viewform?embedded=true" width="640" height="2500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+AguaClara Reach is ready to develop partnerships with both non-profit organizations and engineering firms. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. The types of services that ACR offers can be seen in the :ref:`title_First_Project_Proposal`. The :ref:`title_AguaClara_Specifications` are also available for IP reference.
 
 
 .. |LFOM| image:: https://cad.onshape.com/api/thumbnails/d/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/s/300x170
