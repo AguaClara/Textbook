@@ -94,7 +94,7 @@ If you would like to explore possible configurations, vary the values to generat
 How AguaClara Reach Uses AIDE
 =============================
 
-AguaClara Reach (ACR) uses AIDE to provide Implementation Partners (IPs) with customized hydraulic designs. AguaClara Reach works with IPs to customize the AIDE parts database so that the design reflects construction practices and part availability in the IP's region. This includes pipes and fittings from preferred vendors and custom dimensions used for the civil work based on the construction methods used by each Implementation Partner. ACR also provides training and technical support to IPs. The designs are also customized based on water quality.
+AguaClara Reach (ACR) uses AIDE to provide Implementation Partners (IPs) with customized hydraulic designs. AguaClara Reach works with IPs to customize the AIDE parts database so that the design reflects construction practices and part availability in the IP's region. This includes pipes and fittings from preferred vendors and custom dimensions used for the civil work based on the construction methods used by each Implementation Partner. The designs are customized based on water quality. ACR also provides training and technical support to IPs.
 
 There are approximately 300 input parameters required to design a full AguaClara water treatment plant. In addition there are many hundreds of parts in the parts database that each require dimensions. AIDE makes it possible to modify both the parts database and the input parameters for each IP.
 
