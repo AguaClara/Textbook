@@ -1,18 +1,9 @@
-.. raw:: html
+.. csv-table::
+   :widths: 45 35 25
 
-    <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/About/LFOM.html" />
-       <script src="https://hypothes.is/embed.js" async></script>
-    </embed>
+   |ACRlogowithname|,  |textbook|, |donate|
 
-
-.. list-table::
-   :widths: 60 50 30
-   :header-rows: 0
-
-   * - |ACRlogowithname|
-     - |textbook|
-     - |donate|
+|reportabugbig|
 
 .. _title_Linear_Flow_Orifice_Meter_Configurable_Component:
 
@@ -42,18 +33,9 @@ Linear Flow Orifice Meter Configurable Component
 Generate New Models of the Linear Flow Orifice Meter
 ====================================================
 
-Edit the configurations to create new models of the Linear Flow Orifice Meter. Send us |feedback| to share how you are using the LFOM model and to give us suggestions for how to make these models easier to use.
+Edit the configurations to create new models of the Linear Flow Orifice Meter. Send us `feedback to share how you are using the LFOM model, to give us suggestions for how to make these models easier to use, and to <https://forms.gle/cqDPapYkcSmLnDu4A>`_  |reportabug|.
 
-.. _figure_configLFOM:
-
-.. figure:: ./Images/configLFOM.png
-    :width: 300px
-    :align: center
-    :alt: Linear Flow Orifice Meter configuration
-
-    The configuration options for the Linear Flow Orifice Meter.
-
-.. csv-table:: Linear Flow Orifice Meter configurations.
+.. csv-table:: Linear Flow Orifice Meter configuration parameters.
    :header: "Configuration", "Description"
    :align: left
    :widths: 50, 100
@@ -75,16 +57,21 @@ Additional information is available in *The Physics of Water Treatment* in the s
 
 .. |donate| image:: ./Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
-  :height: 40
+  :height: 30
 
 .. |textbook| image:: ./Images/textbook.png
   :target: https://aguaclara.github.io/Textbook/AIDE/AIDE.html
-  :height: 40
+  :height: 30
 
 .. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
   :height: 40
 
-.. |feedback| image:: ./Images/feedback.png
-  :target: https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?
-  :height: 25
+
+.. |reportabug| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 20
+
+.. |reportabugbig| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 40

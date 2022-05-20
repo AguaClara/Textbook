@@ -1,18 +1,9 @@
-.. raw:: html
+.. csv-table::
+   :widths: 45 35 25
 
-    <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/About/FlocHV.html" />
-       <script src="https://hypothes.is/embed.js" async></script>
-    </embed>
+   |ACRlogowithname|,  |textbook|, |donate|
 
-
-.. list-table::
-   :widths: 60 50 30
-   :header-rows: 0
-
-   * - |ACRlogowithname|
-     - |textbook|
-     - |donate|
+|reportabugbig|
 
 .. _title_Flocculator_HV_Configurable_Component:
 
@@ -23,7 +14,7 @@ Flocculator HV Configurable Component
 .. _figure_FlocHV:
 
 .. figure:: ./Images/FlocHV.png
-    :width: 500px
+    :width: 450px
     :align: center
     :alt: Location of the Entrance Tank
 
@@ -33,7 +24,7 @@ Flocculator HV Configurable Component
 .. _figure_FlocHVinPlant:
 
 .. figure:: ./Images/FlocHVinPlant.png
-    :width: 400px
+    :width: 350px
     :align: center
     :alt: Location of the Entrance Tank
 
@@ -49,18 +40,9 @@ The flocculator has three design constraints:
 Generate New Models of the Flocculator
 ========================================
 
-Edit the configurations to create new models of the flocculator. Some models may fail because the constraints can't all be met. Send us |feedback| to share how you are using the Flocculator HV model and to give us suggestions for how to make these models easier to use.
+Edit the configurations to create new models of the flocculator. Some models may fail because the constraints can't all be met. Send us `feedback to share how you are using the flocculator HV model, to give us suggestions for how to make these models easier to use, and to <https://forms.gle/cqDPapYkcSmLnDu4A>`_ |reportabug|.
 
-.. _figure_configFloc:
-
-.. figure:: ./Images/configFlocHV.png
-    :width: 300px
-    :align: center
-    :alt: Flocculator configuration
-
-    The configuration options for the Flocculator.
-
-.. csv-table:: Flocculator HV configurations.
+.. csv-table:: Flocculator HV configuration parameters.
    :header: "Configuration", "Description"
    :align: left
    :widths: 50, 100
@@ -83,16 +65,21 @@ Additional information is available in the chapter on `Flocculator Design <https
 
 .. |donate| image:: ./Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
-  :height: 40
+  :height: 30
 
 .. |textbook| image:: ./Images/textbook.png
   :target: https://aguaclara.github.io/Textbook/AIDE/AIDE.html
-  :height: 40
+  :height: 30
 
 .. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
   :height: 40
 
-.. |feedback| image:: ./Images/feedback.png
-  :target: https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?
-  :height: 25
+
+.. |reportabug| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 20
+
+.. |reportabugbig| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 40

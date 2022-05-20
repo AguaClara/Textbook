@@ -1,18 +1,9 @@
-.. raw:: html
+.. csv-table::
+   :widths: 45 35 25
 
-    <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/About/OStaRS.html" />
-       <script src="https://hypothes.is/embed.js" async></script>
-    </embed>
+   |ACRlogowithname|,  |textbook|, |donate|
 
-
-.. list-table::
-   :widths: 60 50 30
-   :header-rows: 0
-
-   * - |ACRlogowithname|
-     - |textbook|
-     - |donate|
+|reportabugbig|
 
 .. _title_Open_Stacked_Rapid_Sand_Filter_Configurable_Component:
 
@@ -25,7 +16,7 @@ Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornel
 .. _figure_OStaRS:
 
 .. figure:: ./Images/OStaRS.png
-    :width: 350px
+    :width: 250px
     :align: center
     :alt: OStaRS
 
@@ -53,18 +44,9 @@ The Stacked Rapid Sand Filter Includes Four Innovations:
 Generate New Models of the Stacked Rapid Sand Filter
 ====================================================
 
-Edit the configurations to create new models of the stacked rapid sand filter. Send us |feedback| to share how you are using the OStaRS model and to give us suggestions for how to make these models easier to use.
+Edit the configurations to create new models of the stacked rapid sand filter. Send us `feedback to share how you are using the OStaRS model, to give us suggestions for how to make these models easier to use, and to <https://forms.gle/cqDPapYkcSmLnDu4A>`_  |reportabug|.
 
-.. _figure_configOStaRS:
-
-.. figure:: ./Images/configOStaRS.png
-    :width: 300px
-    :align: center
-    :alt: configuration for OStaRS
-
-    The configuration options for the Open Stacked Rapid Sand Filter.
-
-.. csv-table:: Open Stacked Rapid Sand Filter configurations.
+.. csv-table:: Open Stacked Rapid Sand Filter configuration parameters.
    :header: "Configuration", "Description"
    :align: left
    :widths: 50, 100
@@ -86,16 +68,21 @@ Additional information is available in the chapter on `Filter Design <https://ag
 
 .. |donate| image:: ./Images/donate.png
   :target: https://www.aguaclarareach.org/donate-now
-  :height: 40
+  :height: 30
 
 .. |textbook| image:: ./Images/textbook.png
   :target: https://aguaclara.github.io/Textbook/AIDE/AIDE.html
-  :height: 40
+  :height: 30
 
 .. |ACRlogowithname| image:: ./Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
   :height: 40
 
-.. |feedback| image:: ./Images/feedback.png
-  :target: https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?
-  :height: 25
+
+.. |reportabug| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 20
+
+.. |reportabugbig| image:: ./Images/reportabug.png
+  :target: https://forms.gle/cqDPapYkcSmLnDu4A
+  :height: 40
