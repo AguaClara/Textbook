@@ -40,7 +40,7 @@ In the :ref:`table below <table_AIDE_configurable_components>` are links to conf
    :widths: 30 60 15
 
    |20-80Lpsplant|, "20-80 L/s plant: Integrated plant for flows between 20 and 80 L/s (see `AIDE: Introductory Video <https://www.loom.com/share/272ed6d0570a4b489ca630a10aa5a65d>`_)", 180
-   |LFOM|, "Linear Flow Orifice Meter (see `AIDE: Linear Flow Orifice Meter <https://https://www.loom.com/share/59c642e57000459290eeeaf4eae794c2>`_)", 5
+   |LFOM|, "Linear Flow Orifice Meter (see `AIDE: Linear Flow Orifice Meter <https://www.loom.com/share/59c642e57000459290eeeaf4eae794c2>`_)", 5
    |Doser|, "Chemical Dose Controller", 5
    |EntranceTank|,  "Entrance Tank: trash racks, grit removal, chemical dose controller, and linear flow orifice meter", 20
    |FlocculatorVH|, "Flocculator VH: Vertical-Horizontal Flocculator for flows below about 20 L/s", 15
@@ -78,18 +78,32 @@ The AIDE configurable components are not engineering designs. AguaClara Reach us
 Using AIDE to Explore AguaClara Technologies
 ============================================
 
-If you do not yet have an |Onshape| account, then you will be able to make changes to the component configuration by using the `view only toolbar <https://cad.onshape.com/help/Content/viewonlytoolbar.htm>`_. You can sign up for a `free public Onshape account <https://www.onshape.com/en/products/free>`_ that will enable you to access the parts lists and *estimated* materials cost for each of the AIDE configurable components.
+If you do not yet have an |Onshape| account, then you will be able to make changes to the component configuration by using the `view only toolbar <https://cad.onshape.com/help/Content/viewonlytoolbar.htm>`_. You can sign up for a `free public Onshape account <https://www.onshape.com/en/products/free>`_ that will enable you to access the parts lists and *estimated* materials cost for each of the AIDE configurable components. The AIDE videos see :numref:`able_AIDE_videos` introduce the core AIDE features.
 
-Most models have two check boxes that provide increasing level of model detail. A few models have more options to turn on computationally intensive parts of the design.
-  #. *Show internal components* - Enables the modeling of pipes, baffles, and other internal components and creates a complete bill of materials. For some of the components it will only show an example rather than fully replicating all of the parts.
-  #. *Replicate all parts* - Fully replicates all parts and may significantly extend the time required to generate a new model.
+.. _table_AIDE_videos:
+
+.. csv-table:: AIDE play list of videos.
+   :header: "Link to video", "Description"
+   :align: left
+   :widths: 50 50
+
+   |AIDEIntroduction|, "AIDE | Introduction"
+   |AIDEConfigurations| , "AIDE | Configurations"
+   |AIDEBOM|, "AIDE | Bill of Materials"
+   |AIDEconfigurableComponent|, "AIDE | Configurable component example"
+
+
+Most of the configurable component models have two or more check boxes that provide increasing level of model detail. A few models have more options to turn on computationally intensive parts of the design.
+
+  #. *Add plastic components* - Enables the modeling of pipes, baffles, and other plastic components and creates a complete bill of materials. For some of the components it will only show an example rather than fully replicating all of the parts.
+
+  #. *Replicate all parts* - Fully replicates all parts and may significantly extend the time required to generate a new model. Note that the Bill of Materials includes the correct quantity of each of the parts even if the parts are not all replicated.
+
   #. *Print parameter map* - Prints a full map in the FeatureScript notices of all of the model inputs. Only a small fraction of the available inputs are exposed in the model configuration parameters. Click on show FeatureScript Notices |showFSNotices| to open a new pane at the bottom of the browser window where the full parameter map will be displayed.
 
 The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of *time to generate model component* in :numref:`table_AIDE_configurable_components` for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.
 
-The bill of materials does not include internal components if *Show internal components* is not selected. The bill of materials includes all of the parts even if *Replicate all parts* is not selected.
-
-If you would like to explore possible configurations, vary the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.
+If you would like to explore possible configurations, change the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.
 
 How AguaClara Reach Uses AIDE
 =============================
@@ -157,3 +171,22 @@ AguaClara Reach is ready to develop partnerships with both non-profit organizati
 
 .. |showFSNotices| image:: /Images/showFeatureScriptNotices.png
   :height: 30
+
+
+.. |AIDEIntroduction| image:: /Images/AIDEIntroductionThumbnail.png
+  :width: 200
+  :target: https://www.loom.com/share/272ed6d0570a4b489ca630a10aa5a65d
+
+
+.. |AIDEConfigurations| image:: /Images/AIDEconfigurationsThumbnail.png
+  :width: 200
+  :target: https://www.loom.com/share/50cfe59aef434cc8a421af959aef5b61
+
+
+.. |AIDEBOM| image:: /Images/AIDEBOMthumbnail.png
+  :width: 200
+  :target: https://www.loom.com/share/b501b6205ac84776980953c4368efec8
+
+.. |AIDEconfigurableComponent| image:: /Images/AIDEConfigComponentThumbnail.png
+  :width: 200
+  :target: https://www.loom.com/share/59c642e57000459290eeeaf4eae794c2
