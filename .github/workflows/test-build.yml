@@ -29,7 +29,7 @@ jobs:
     - name: Run HTML Proofer and Doctest
       run: |
         make doctest
-        htmlproofer _build/html --typhoeus-config='{"headers":{"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"}}' --allow_hash_href --only_4xx --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html
+        htmlproofer _build/html --help --typhoeus-config='{"headers":{"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"}}' --allow_hash_href --only_4xx --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html
     - name: Test Publish Docs
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
