@@ -29,5 +29,6 @@ This text is a collaborative effort involving hundreds of people. Innovation req
 Reviewers have contributed by catching errors and suggesting improvements. Reviewers include:
 
 - Andrew Pennock
+- Ron Martin Jr
 
 This text would not have been possible without the advice, mentoring, and publishing system assembled by Ethan Keller.
