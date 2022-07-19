@@ -78,7 +78,7 @@ The AIDE configurable components are not engineering designs. AguaClara Reach us
 Using AIDE to Explore AguaClara Technologies
 ============================================
 
-If you do not yet have an |Onshape| account, then you will be able to make changes to the component configuration by using the `view only toolbar <https://cad.onshape.com/help/Content/viewonlytoolbar.htm>`_. You can sign up for a `free public Onshape account <https://www.onshape.com/en/products/free>`_ that will enable you to access the parts lists and *estimated* materials cost for each of the AIDE configurable components. The AIDE videos see :numref:`able_AIDE_videos` introduce the core AIDE features.
+If you do not yet have an |Onshape| account, then you will be able to make changes to the component configuration by using the `view only toolbar <https://cad.onshape.com/help/Content/viewonlytoolbar.htm>`_. You can sign up for a `free public Onshape account <https://www.onshape.com/en/products/free>`_ that will enable you to access the parts lists and *estimated* materials cost for each of the AIDE configurable components. The AIDE videos (see :numref:`table_AIDE_videos`) introduce the core AIDE features.
 
 .. _table_AIDE_videos:
 
