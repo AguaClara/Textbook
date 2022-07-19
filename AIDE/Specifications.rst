@@ -17,9 +17,9 @@ This document specifies the design goals, the raw water quality parameters, and 
 AguaClara Plant Design Goals |20-80Lpsplant|
 ============================================
 
-AguaClara drinking water treatment technologies remove turbidity and pathogens from raw water and to deactivate remaining pathogens before distribution. AguaClara technologies are best suited for centralized water treatment in communities of at least 200 people. AguaClara technologies would not be appropriate for treatment of low-turbidity groundwater where the primary contamination issues are chemical, such as nitrate or heavy metals. AguaClara technologies are gravity-driven and do not require electricity. When required by the topography, pumps can raise the source water to the elevation necessary for water treatment and water distribution.
+AguaClara drinking water treatment technologies remove turbidity and pathogens from raw water and to deactivate remaining pathogens before distribution. AguaClara technologies are best suited for centralized water treatment in communities of at least 200 people. AguaClara technologies would not be appropriate for treatment of low-turbidity groundwater where the primary contamination issues are chemical, such as nitrate, fluoride, or heavy metals. AguaClara technologies are gravity-driven and do not require electricity. When required by the topography, pumps can raise the source water to the elevation necessary for water treatment and water distribution.
 
-AguaClara treatment technologies include trash and grit removal, flow measurement, chemical dosing, rapid mix, flocculation, floc filter, sedimentation, filtration, and disinfection. An AguaClara treatment plant may be designed with all of these processes, or if raw water turbidity is consistently less than about 3 NTU, the treatment plant may be designed without flocculation, floc filter, and sedimentation.
+AguaClara treatment technologies include trash and grit removal, flow measurement, chemical dosing, rapid mix, flocculation, floc filter, sedimentation, filtration, and disinfection. The  :ref:`floc filter <title_Clarification_Intro>` is a fluidized suspension of flocs located in the bottom of the clarifier.  An AguaClara treatment plant may be designed with all of these processes, or if raw water turbidity is consistently less than about 3 NTU, the treatment plant may be designed without flocculation, floc filter, and sedimentation.
 
 
 Water Quality Parameters
@@ -33,12 +33,12 @@ The tables below summarize the raw water quality parameters for which AguaClara 
    :header: "Water Quality Parameter", "Comments"
    :align: left
 
-   Turbidity, "Raw water with turbidity up to 1,000 NTU can consistently be treated to less than 1 NTU."
+   Turbidity, "Raw water with turbidity less than 600 NTU can consistently be treated to less than 1 NTU. Treatment of higher turbidities may require a customized clarifier design."
    "Color/Dissolved Organic Matter (DOM)", "For raw water with high color or total organic matter content, pilot studies are recommended to confirm the efficacy of the coagulant and the ability of the flocs to settle."
    pH, "pH can be lowered to prevent calcium carbonate scaling in distribution piping or increased to reduce corrosion potential."
-   Microbiological contamination, "The AguaClara treatment processes are designed to remove pathogens through particle removal and disinfection."
+   Microbiological contamination, "The AguaClara treatment processes are designed to remove pathogens through particle removal and deactivate pathogens through disinfection."
 
-AguaClara plants are designed to treat the water quality parameters listed above. All other parameters should be within acceptable ranges in the raw water or should be treated by other means.
+AguaClara plants are designed to treat the water quality parameters listed above. Some other contaminants may also be removed, but that must be verified by jar and/or pilot scale testing. All other parameters should be within acceptable ranges in the raw water or should be treated by other means.
 
 Before beginning construction of an AguaClara treatment plant, bench-scale jar testing should be performed to confirm that polyaluminum chloride or another proposed coagulant is able to successfully form flocs that settle.
 
@@ -51,7 +51,7 @@ For more detailed information see :ref:`Entrance Tank Design <title_entrance_tan
 #. Remove grit to prevent accumulation in the flocculator
 #. Remove leaves and other debris to prevent clogging of the diffusers in the clarifier inlet
 #. Dissipate kinetic energy to keep the water level steady for accurate flow measurement
-#. Measure the incoming flow rate so that operators can make adjustments and respond to changes in water demand
+#. Measure the incoming flow rate with the Linear Flow Orifice Meter (LFOM) so that operators can make adjustments and respond to changes in water demand
 #. Inject the coagulant and any other amendments required for flocculation
 
 .. _figure_spec_ET_Diagram_Labeled:
@@ -80,11 +80,11 @@ A. The trash rack shall have an opening size that is smaller than the diffusers 
 Linear Flow Orifice Meter (LFOM) or Equivalent |LFOM|
 -----------------------------------------------------
 
-A. The plant entrance tank shall be equipped with a device that will result in a linear relationship between the plant flow and the water level in the entrance chamber. The Linear Flow Orifice Meter (LFOM), which is a pattern of orifices through which flow exits the entrance tank, is described below. An equivalent device, such as a Sutro weir, can also be used if demonstrated to function equivalently.
+A. The plant entrance tank shall be equipped with a device that will result in a linear relationship between the plant flow and the water level in the entrance chamber. The Linear Flow Orifice Meter (LFOM), which has a pattern of orifices through which flow exits the entrance tank, is described below. An equivalent device, such as a Sutro weir, can also be used if demonstrated to function equivalently.
 
 #. The pattern of orifices shall be designed so that the water level in the entrance chamber (equal to the hydrostatic head pushing water through the offices) is linearly proportional to the total flow through the orifices (equal to the plant flow). An example of an LFOM is shown in :numref:`figure_spec_LFOM`. The orifices may be drilled in a flat plate or in the walls of a vertical pipe.
 
-#. The LFOM shall be capable of measuring flow ranging from 25 percent to 100 percent of the maximum plant design flow. If needed the lowest flow rate measured can be further reduced.
+#. At a minimum, the LFOM shall be capable of measuring flow ranging from 25 percent to 100 percent of the maximum plant design flow. If needed the lowest flow rate measured can be further reduced.
 
 #. To ensure that plant flow is measured with adequate resolution the water level should change a minimum of 20 cm from no flow to the design flow rate. Larger water level changes can be used to enable use of smaller diameter LFOMs.
 
@@ -120,7 +120,7 @@ A. The system will be capable of dosing chemicals for the following purposes. Al
 
 #. The chemical dosing shall be flow-paced, meaning that the rate of chemical application is automatically adjusted proportional to the flow rate of water moving through the plant.
 
-#. The system shall be easily disassembled by the plant operator for cleaning with vinegar to remove calcium carbonate deposits.
+#. The system shall be easily disassembled by the plant operator for cleaning, including with vinegar to remove calcium carbonate deposits.
 
 #. The chemical dose (mass chemical per volume water passing through the plant) shall be easily adjustable by the plant operator.
 
@@ -172,13 +172,13 @@ B. Dosing Tubes
 
    #. The plant shall have a spare set of dosing tubes on hand for each chemical feed so that one set of tubes can be cleaned while the other set is in use.
 
-   #. Head loss through all other tubes and fittings other than the dosing tubes shall be less than 5% of the head loss through the dosing tubes.
+   #. Head loss through all other tubes and fittings connecting the constant level tank to the free discharge at the dose slide shall be less than 5% of the head loss through the dosing tubes.
 
 #. Chemical Dose Controller |Doser|
 
-   1. One end of the chemical dose controller (see :numref:`figure_spec_doser`) is connected to a float in the plant entrance tank. The dose slider and thus the ends of the doser hoses are located on the other half of the chemical dose controller lever.
+   1. One end of the chemical dose controller (see :numref:`figure_spec_doser`) is connected to a float in the plant entrance tank. The dose slider and thus the ends of the doser hoses are located on the other end of the chemical dose controller lever.
 
-   #. To provide a reasonable maximum angle of the lever system the lever on the float side shall be at least two times as long as the LFOM change in water depth.
+   #. The lever on the float side shall be at least two times as long as the LFOM change in water depth (typically 20 cm) to provide a reasonable maximum angle of the lever system.
 
 .. _figure_spec_doser:
 
@@ -198,19 +198,21 @@ D. Function
 
    #. When plant flow increases, the water level in the entrance tank increases (due additional head loss through the LFOM), causing one end of the doser lever to rise. This, in turn, causes the other end of the lever, and the dose slider, to fall, increasing the elevation difference between the chemical level in the constant level tank and the dose slider. The greater driving head increases the chemical flow through the doser.
 
-   #. Because the entrance tank level is directly proportional to the plant flow rate (due to the LFOM), the dose slider elevation is directly proportional to the entrance tank level, and the chemical flow is directly proportional to the dose slider elevation, the chemical flow is directly proportional to the plant flow.
+   #. The water level in the entrance tank level is directly proportional to the plant flow rate (due to the LFOM). The dose slider elevation is directly proportional to the entrance tank water level. The chemical flow is directly proportional to the dose slider elevation. Therefore the chemical flow is directly proportional to the plant flow and changes in the slider position directly set the chemical dose.
 
 
 Flocculator
 ===========
 
-For more detailed information see :ref:`Flocculation Design <title_Flocculation_Design>`. AguaClara flocculators have three potential flow patterns (see :numref:`figure_spec_flocculator_Geometry`) depending on the flow rate, plant layout, and velocity gradient.
+For more detailed information see :ref:`Flocculation Design <title_Flocculation_Design>`. AguaClara flocculators have three potential flow patterns (see :numref:`figure_spec_flocculator_Geometry`) depending on the flow rate, plant layout, and velocity gradient. There is overlap between the different flow geometries and ongoing work to assess how to select the best type of flocculator given a flow that could be handled by two different types.
 
-#. |FlocculatorVH| Vertical - Horizontal: Flows between 0.5 L/s and 20 L/s are efficiently handled by a Vertical-Horizontal flow flocculator as shown in :numref:`figure_VHflocculator`.
+The flocculator geometries are specified by two flow directions. The first direction is the flow direction in a channel from the channel inlet to the channel outlet. The second direction is the flow direction around a baffle.
 
-#. |FlocculatorHV| Horizontal - Vertical: The geometry switches to horizontal-vertical for flows between about 20 and 200 L/s as shown in :numref:`figure_HVflocculator`.
+#. |FlocculatorVH| Vertical - Horizontal: Plant design flows between about 0.5 L/s and 20 L/s. See :numref:`figure_VHflocculator`.
 
-#. |FlocculatorHH| Horizontal - Horizontal: As the flow increases above 200 L/s the optimal design will switch to a horizontal-horizontal flocculator as shown in :numref:`figure_HHflocculator`.
+#. |FlocculatorHV| Horizontal - Vertical: Plant design flows between about 3 and 200 L/s. See :numref:`figure_HVflocculator`. This geometry is also referred to as over-under.
+
+#. |FlocculatorHH| Horizontal - Horizontal: Plant design flows above about 100 L/s. See :numref:`figure_HHflocculator`. This geometry is also referred to as around-the-end.
 
 .. _figure_spec_flocculator_Geometry:
 
@@ -226,9 +228,9 @@ Design Goals
 
 The AguaClara flocculator is designed with the following goals:
 
-A. Velocity gradient and residence time to aggregate individual particles and small flocs into flocs large enough to settle out in the sedimentation tanks. The product of velocity gradient (G) and residence time (ϴ) is a dimensionless number known as collision potential or Gϴ.
+A. Provide a velocity gradient and residence time allowing aggregation of individual particles and small flocs into flocs large enough to settle out in the clarifier. The product of velocity gradient (G) and residence time (ϴ) is a dimensionless number known as collision potential or Gϴ.
 
-#. Minimize retention time to reach a design Gϴ of approximately 35,000. This determines the minimum total volume of the flocculator. The design volume of the flocculator may be larger due to construction constraints, such as making the length of the flocculator the same as the length of the sedimentation tanks or keeping the flocculator channels wide enough to fit a human body for ease of cleaning and maintenance. 
+#. Set the retention time to reach a design Gϴ of approximately 35,000. This determines the minimum total volume of the flocculator. The design volume of the flocculator may be larger due to construction constraints, such as making the length of the flocculator the same as the length of the clarifier bays or keeping the flocculator channels wide enough to fit a human body for ease of cleaning and maintenance. 
 
 #. Minimize “dead zones” in the flocculator and reduce the opportunity for short circuiting of the flocculator.
 
@@ -241,13 +243,22 @@ A. The length of the flocculator channels is typically determined by the length 
 
 #. The width of each flocculation channel is determined by material constraints and to facilitate cleaning and maintenance. The flocculator baffles are made of polycarbonate sheets, so the width of the channel should be no larger than the width of a polycarbonate sheet. The width of the channel should be no smaller than 50 cm so an operator can safely enter the tank. Large plants treating more than about 200 L/s may be designed with horizontal flocculation channels and may use ferrocement baffles.
 
-#. The depth of the flocculation channels is determined by construction constraints and to minimize the plan view area of the flocculators and thus the plant.
+#. The depth of the flocculation channels is determined by construction constraints and to minimize the plan view area of the flocculators and thus the plant. Typically the flocculator and clarifier share the same slab.
 
-#. The overall volume of the flocculator is determined by the individual constraints on each dimension of the flocculator, but the collision potential, Gϴ, of the flocculator must be at least 35,000.
+#. The overall volume of the flocculator is determined by the individual constraints on each dimension of the flocculator, but the collision potential, Gϴ, of the flocculator must be at least 35,000 at the plant design flow.
 
 #. The spacing between baffles is designed to achieve the target velocity gradient, G, at the design flow rate.
 
-#. The ports between flocculator channels should be designed with the same flow area as the space between the baffles so that the port improves flocculation without breaking flocs. The width of the port is equal to the spacing between baffles and the height of the port is equal to the channel width.
+#. The ports between flocculator channels (see :numref:`figure_flocChannelPort` should be designed with the same flow area as the space between the baffles so that the port improves flocculation without breaking flocs. The width of the port is equal to the spacing between baffles and the height of the port is equal to the channel width.
+
+.. _figure_flocChannelPort:
+
+.. figure:: ../Images/flocChannelPort.png
+  :align: center
+  :width: 500px
+  :alt:  ports
+
+  Flocculator with end and side walls removed to show the port between channels. Water flows between flocculator channels through a port that has the same flow dimensions as the space between baffles.
 
 Channel Construction
 --------------------
@@ -265,9 +276,9 @@ Baffles
 
 A. The flocculation baffles must be constructed to be removable. A baffle module (see :numref:`figure_spec_baffleModule`) should be raisable by one operator working alone so that water can flow beneath the baffle and drain from the flocculator channel. Large flocculators may have baffle modules that require more than one person to completely remove from the flocculator channel.
 
-#. The flocculation baffles should be constructed from polycarbonate sheets, and the frame for holding together baffle modules should be made from PVC. Other materials may be used if justification is provided, including the use of ferrocement baffles for horizontal flocculators in large plants.
+#. The flocculation baffles should be constructed from polycarbonate sheets, and the frame for holding together baffle modules should be made from PVC pipe. Other materials may be used if justification is provided, including the use of ferrocement baffles for horizontal flocculators in large plants.
 
-#. The baffles should be about 5 millimeters wider than the channel width so they deform slightly and created a tighter seal with the channel wall.
+#. The width of each baffle should be approximately 5 millimeters wider than the channel width so they deform slightly and created a tighter seal with the channel wall.
 
 
 .. _figure_spec_baffleModule:
@@ -283,9 +294,9 @@ A. The flocculation baffles must be constructed to be removable. A baffle module
 Clarifier |Clarifier|
 =====================
 
-For more detailed information see :ref:`Clarifier Design <title_Clarifier_Design>`. The clarifier (see :numref:`figure_spec_clarifierElevation`) contains three separate processes: floc filter, plate settlers, and floc hopper.
+For more detailed information see :ref:`Clarifier Design <title_Clarifier_Design>`. The clarifier (see :numref:`figure_spec_clarifierElevation`) contains three separate processes: filtration in the floc filter, sedimentation in the plate settlers, and consolidation in the floc hopper.
 
-The clarifier must be designed based on the coldest water temperature and based on the lowest density primary particles that will need to be captured. Surface waters with high concentrations of dissolved organic matter and low concentrations of suspended solids produce low density flocs and thus the velocity gradient in the inlet manifold and jet reverser must be reduced. In some cases it may also be necessary to reduce the floc filter upflow velocity and plate settler capture velocity.
+The clarifier must be designed based on the coldest water temperature and based on the lowest density primary particles that will need to be captured. Surface waters with high concentrations of dissolved organic matter and low concentrations of suspended solids produce low density flocs and thus the velocity gradient in the inlet manifold and jet reverser must be reduced. In some cases it may also be necessary to reduce the floc filter upflow velocity and plate settler capture velocity by increasing the clarifier plan view area.
 
 .. _figure_spec_clarifierElevation:
 
@@ -295,6 +306,18 @@ The clarifier must be designed based on the coldest water temperature and based 
   :alt:  Clarifier Elevation view
 
   Elevation view of a clarifier bay showing location of the floc filter, plate settlers, and floc hopper.
+
+The clarifier may have multiple bays (see :numref:`figure_clarifier_with_4_bay`) that work in parallel to treat the required plant flow.
+
+
+.. _figure_clarifier_with_4_bays:
+
+.. figure:: ../Images/clarifier_with_4_bays.png
+  :align: center
+  :width: 500px
+  :alt:  Clarifier showing 4 bays
+
+  Clarifier with four bays. Each bay has its own inlet, outlet, floc filter, plate settlers, and floc hopper so that a bay can be taken offline while the other bays continue to operate.
 
 Design Goals
 ------------
@@ -355,12 +378,12 @@ Diffusers are shaped so that one end is molded to be a reduced diameter that fit
    :align: center
    :alt: Diffuser dimension definition
 
-   Dimensions and geometry of the diffusers.
+   Dimensions and geometry of a diffuser. The first image at the left shows a view of a diffuser from the end of a clarifier bay. The second image shows a view of a diffuser from the side of a clarifier bay.
 
 Jet Reverser
 ------------
 
-The jet reverser consists of a longitudinally-cut half-pipe that is laid in the bottom of the bay (see :numref:`figure_spec_clarifierEndView`). It functions as a way to keep flocs suspended in the sedimentation tank by ensuring that any sludge that settles will be propelled back up by the force of the diffuser jet.
+The jet reverser consists of a longitudinally-cut half-pipe that is laid in the bottom of the bay (see :numref:`figure_spec_clarifierEndView`). It functions as a way to keep flocs suspended in the clarifier by ensuring that any sludge that settles will be propelled back up by the force of the diffuser jet.
 
 The diffusers are offset from the jet reverser centerline. This is intentionally done to promote the resuspension of flocs, which form a floc filter for primary filtration.
 
@@ -376,7 +399,7 @@ The diffusers are offset from the jet reverser centerline. This is intentionally
 Floc Filter (Floc Blanket)
 --------------------------
 
-Floc filters significantly improve the performance of a clarifier and reduce settled water.
+Floc filters significantly improve the performance of a clarifier and reduce the clarified water turbidity.
 
 A. The line jet from the diffusers enters the jet reverser to force flow up through the clarifier bay. The vertical upward jet momentum is used to resuspend flocs that have settled to the bottom of the clarifier bay. The resuspended flocs form a fluidized bed which is a floc filter. Small particles are captured by the flocs in the floc filter as the small particles flow into a floc.  The bed is fluidized because flocs are kept in suspension by the upflowing water.
 
@@ -396,9 +419,9 @@ The clarifier bottom geometry (see :numref:`figure_spec_clarifierEndView`) preve
 Floc Hopper
 -----------
 
-The floc hopper (:numref:`figure_spec_flocHopper`) provides an opportunity for floc consolidation. The floc weir controls the depth of the floc filter because as the floc filter grows, it will eventually reach the top of the floc weir. Because flocs are more dense than water, the flocs “spill” over the edge of the floc weir which allows the floc filter to stay a constant height while sludge accumulates and consolidates in the floc hopper.
+The floc hopper (:numref:`figure_spec_flocHopper`) provides an opportunity for floc consolidation. The floc weir controls the depth of the floc filter because as the floc filter grows, it will eventually reach the top of the floc weir. Because flocs are more dense than water, the flocs “spill” over the edge of the floc weir which allows the floc filter to stay a constant height while sludge accumulates and consolidates in the floc hopper. Operators can use a flashlight to observe the floc filter moving into the lower end of the plate settlers indicating that the floc hopper is full. The sludge is drained from the floc hopper by opening a valve. The operator can observe that the sludge has completely drained from the floc hopper by the clarity of the water exiting from the drain valve.
 
-There is a manual valve at the drain of the floc hopper. Operators can open the floc hopper drain valve whenever they want to easily drain the sludge. The floc hopper allows for a self-cleaning clarifier. Operators only have to clean the clarifier once every three to six months because there is no stagnant accumulation of anoxic sludge.
+The floc hopper allows for a self-cleaning clarifier. Operators only have to clean the clarifier once every three to six months because there is no stagnant accumulation of anoxic sludge.
 
 .. _figure_spec_flocHopper:
 
@@ -432,8 +455,8 @@ The plate settlers are made from clear polycarbonate sheets. The sheets are asse
    :header: Parameter, Determined by:, Determines , Value
    :align: left
 
-   Upflow velocity, Floc blanket,Plan view area of tank,1 mm/s
-   Capture velocity, Target turbidity, Particle size distribution, 0.12 mm/s
+   Upflow velocity, Floc blanket,Plan view area of tank, 1 mm/s maximum value
+   Capture velocity, Target turbidity, Particle size distribution, 0.12 mm/s maximum value
    Plate angle, Self-cleaning requirement, Plate settler length, 60 deg
    Plate spacing, Clogging and floc rollup constraints, Plate settler length, 2.5 cm
    Plate settler length, "Upflow velocity, Capture velocity, Plate angle, Plate spacing ", Tank depth, Calculated for each plant
@@ -449,9 +472,9 @@ The outlet manifold is designed to generate 5 cm of head loss to ensure uniform 
 Outlet Weir
 -----------
 
-The submerged outlet manifold transports water from the clarifier bay to a collector channel that runs perpendicular to the clarifier bays. All of the clarifier bay outlet manifolds deliver the clarified water to the collector channel. Water leaves the collector channel by flowing over the outlet weir. The elevation of the outlet weir controls the water levels in the clarifier and in the flocculator.
+The submerged outlet manifold transports water from the clarifier bay to a collector channel that runs perpendicular to the clarifier bays (see :numref:`figure_spec_diffuser_dimensions`). All of the clarifier bay outlet manifolds deliver the clarified water to the collector channel. Water leaves the collector channel by flowing over the outlet weir. The elevation of the outlet weir controls the water levels in the clarifier and in the flocculator. The outlet weir does not need to be adjustable and small elevation errors are accommodated because water can flow in the collector channel with less head loss than the orifice head loss.
 
-The outlet weir makes it possible to refill and emptied clarifier bays with clarified water to ensure that after returning a clarifier bay to service the first water is of high quality.
+The outlet weir makes it possible to refill and empty individual clarifier bays with clarified water to ensure that after returning a clarifier bay to service the first water is of high quality.
 
 Outlet Channel
 --------------
@@ -511,9 +534,11 @@ A. Stacked Rapid Sand (StaRS) filters were developed to eliminate the need for b
 Configurations
 --------------
 
-A. Open StaRS (OStaRS) - used for flow rates greater than about 20 L/s. The minimum OStaRS flow rate is set by the minimum dimensions of the filter box that can be constructed and that enable filter maintenance.
+A. Open StaRS (OStaRS) with 6 filter layers - used for flow rates greater than about 20 L/s. The minimum OStaRS flow rate is set by the minimum dimensions of the filter box that can be constructed and that enable filter maintenance.
 
-#. Enclosed StaRS (EStaRS) filters - used for lower flow rates.
+#. Open StaRS (OStaRS) with 2 filter layers - used for flow between about 3 and 12 L/s. This technology is under development.
+
+#. Enclosed StaRS (EStaRS) filters - used for lower flow rates. This technology is under development
 
    1. Can be located on the same slab as the clarifier and flocculator because the EStaRS is operated under vacuum in backwash mode to achieve the necessary head for fluidizing the sand.
    #. Assembled using PVC pipe as the body of the filter
@@ -527,7 +552,7 @@ StaRS filters use (6) six 20 cm deep layers of silica sand (no dual-media requir
 Filter Modules
 --------------
 
-Each layer of sand sits in between an inlet and outlet filter module. Each module consists of a large diameter trunk inlet/outlet pipe, which connects to a row of smaller branch pipes. The branch pipes are supported along the filter walls by receptor pipes.
+The sand layers are contiguous and the only distinction between layers is the direction of flow during filtration. Each layer of sand sits in between an inlet and outlet filter module. Each module consists of a large diameter trunk inlet/outlet pipe, which connects to a row of smaller branch pipes. The branch pipes are supported along the filter walls by receptor pipes.
 
 The filter modules are anchored to the concrete slab to prevent uplift at the transition to backwash. The uplift forces are considerable and are detailed in :ref:`Backwash Initiation Forces <heading_StaRS_Backwash_Force>`.
 
@@ -578,16 +603,16 @@ A. Inlet Filter Module
 Backwash Siphon
 ---------------
 
-The siphon should be designed so the airlock can hold the water in the filter box until the filter reaches the design maximum head loss. The siphon should initiate backwash by lowering the water in the filter at an average velocity that is equal to or exceeds the backwash velocity.
+The siphon should be designed so the airlock can hold the water in the filter box at least until the filter reaches the design maximum head loss. Backwash is initiated when the operator briefly opens a small diameter air release valve to remove the trapped air from the siphon pipe. The siphon diameter must be sufficient to lower the water in the filter at an average velocity that is equal to or exceeds the backwash velocity.
 
 Backwash Flow Control Weirs
 ---------------------------
 
-A. The backwash gate (see :numref:`figure_spec_OStaRShydraulicControls`) ensures there is adequate flow to backwash one filter as long as there is at least that much flow entering the plant.
+A. The backwash gate (see :numref:`figure_spec_OStaRShydraulicControls`) ensures there is adequate flow to backwash one filter as long as there is at least that much flow entering the plant. This is important because many water treatment plants operate under reduced flow during the dry season.
 
-#. Removing the backwash gate in front of the desired backwash filter will create the desired backwash flow rate for the filter, while evenly distributing the remaining flow rate to the other filters
+#. Removing the backwash gate in front of the desired backwash filter will create the desired backwash flow rate for the filter, while evenly distributing the remaining flow rate to the other filters. By removing the backwash gate the flow control for that filter is shifted from the wide weir to the slot weir.
 
-#. The slot weir ensures that the backwash flow doesn't cause sand loss by expanding the sand bed excessively. The slot weir can be partially filled at plant commissioning to reduce the maximum backwash flow if needed.
+#. The slot weir sets the backwash flow rate and ensures that the backwash flow doesn't cause sand loss by expanding the sand bed excessively. The slot weir can be partially filled at plant commissioning to reduce the maximum backwash flow if needed.
 
 .. _figure_spec_OStaRShydraulicControls:
 
@@ -606,9 +631,9 @@ The sand dump is critical for StaRS filters because the filter bed piping would 
 
 A. A sand dump pipe shall be installed in the filter box to allow for the filter media to be removed when the filter is in backwash mode and the sand bed is fluidized.
 
-#. The sand dump pipe must be designed so that if the flow of the sand slurry is stopped, that the sand doesn’t collect at one location in the pipe and cause a clog.
+#. The sand dump pipe must be designed so that the sand doesn’t collect at one location in the pipe and cause a clog when the flow of the sand slurry is stopped. This requirement is met by using a single straight pipe with a slope less than the angle of repose of sand in water.
 
-#. A single straight pipe is designed with a slope less than the angle of repose of sand in water. The sand dump velocity shall be at least 3 m/s to prevent the sand from settling in the sand dump pipe.
+#. The sand dump velocity shall be at least 3 m/s to prevent the sand from settling in the sand dump pipe during operation.
 
 #. The sand dump is activated by removing a clamp on connector and cap assembly from the end of the pipe.
 
@@ -628,7 +653,13 @@ Backwash Recycle
 
 Backwash recycle is recommended for all communities where low flow conditions are likely to require water rationing. The backwash water storage tank is designed to hold the flow from one backwash event. A centrifugal pump can then be used to meter the water back to the entrance tank at a flow rate that empties the backwash water storage tank before the next filter needs to be backwashed.
 
-In the event of a power failure the backwash recycle system will not be used and the plant will continue to operate as intended.
+In the event of a power failure the backwash recycle system will instead use backwash to waste to dispose of the spent backwash filter water.
+
+Disinfection
+============
+
+Sodium or calcium hypochlorite is metered into the filtered water as it exits the filter hydraulic controls and enters the pipe that carries the water to a chlorine contact tank or directly to the community distribution tank. The chlorine is added after the previous treatment processes to reduce the production of disinfection byproducts and to enable biofiltration. The chlorine concentration is set by adjusting the position of the slider on the doser (see :numref:`figure_spec_doser`).
+
 
 .. |LFOM| image:: https://cad.onshape.com/api/thumbnails/d/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/s/300x170
   :width: 100
