@@ -12,9 +12,6 @@ Clarification Introduction
 **************************
 
 
-AguaClara Clarifier
-===================
-
 .. |empty_floc_filter| image:: ../Images/empty_floc_filter.png
   :width: 20
 .. |full_floc_filter| image:: ../Images/full_floc_filter.png
@@ -24,6 +21,13 @@ AguaClara Clarifier
 .. |small_floc| image:: ../Images/small_floc.png
   :width: 5
 
+
+The floc interactions in the clarifier include four processes.
+
+#. Floc filter: fluidized suspension of flocs that filter out smaller particles
+#. Plate settler particle capture: capture small flocs that settle slower than the upflow velocity in the floc filter
+#. Plate settler aggregation: small flocs aggregate into large flocs as they slide down the plate settler incline
+#. Floc hopper consolidation: excess flocs flow into the floc hopper where they consolidate before being wasted
 
 
 
@@ -40,7 +44,8 @@ AguaClara Clarifier
      |full_floc_filter|, Floc filters that no longer have capacity to capture |small_floc| , :math:`v_t > \bar v_{z_{ff}}`
 
 
-The floc interactions in the clarifier include multiple steps. The video linked to :numref:`figure_clarifier_flocs` provides the context for the following description of the processes.
+
+The video linked to :numref:`figure_clarifier_flocs` provides the context for the following description of the processes.
 
 
 .. _figure_clarifier_flocs:
