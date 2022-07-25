@@ -132,7 +132,6 @@ The Physics of Water Treatment Design
 
   AIDE/AIDE.rst
   AIDE/Specifications.rst
-  AIDE/ProjectProposal.rst
 
 .. toctree::
   :caption: Chapter 11: Dissolved Gas
