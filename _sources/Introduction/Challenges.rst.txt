@@ -48,7 +48,7 @@ Drinking Water Challenges
 The potential to make a dramatic improvement in the quality of life of communities will guide our journey. Although the AguaClara program invented numerous technologies and contributed to a new understanding of the physics of drinking water treatment, there are still many unanswered questions.
 
 * Why is reducing the turbidity to less than 0.01 NTU not currently possible for most surface water treatment plants that rely on flocculation, sedimentation and sand filtration? Or stated another way, what controls the particle removal efficiency of surface water treatment plants?
-* How can we take measurements of raw water quality and use that to optimize the design of a water treatment plant? This will require creating the models that describe the physics of each unit process and that is a recurring theme of the research introduced below. We are making significant progress in making the connection between
+* How can we take measurements of raw water quality and use that to optimize the design of a water treatment plant? This will require creating the models that describe the physics of each unit process and that is a recurring theme of the research introduced below. We are making significant progress in making the connection between the properties of primary particles and the density of the resulting floc.
 * How can we invent new and improved technologies that enable communities to reliably produce high quality drinking water without needing to rely on expensive, energy consuming, expendable proprietary components?
 
 Fractal Floc Model
@@ -60,8 +60,6 @@ The FFM will build the average floc in a series of ordered steps that capture th
 The primary particles could include powdered activated carbon (PAC) or biochar that is added to aid in the removal of dissolved species. In that case the dissolved species will partition between adsorption to the PAC or biochar and to the coagulant nanoparticles.
 
 The floc properties calculated by the FFM will enable prediction of the terminal size and concentration of flocs in the Fluidized Floc Primary Filter, the head loss per pore in the Granular Media Secondary Filter, and the optimal coagulant dose. The FFM will be a core component of unit process models because the floc properties must be understood in order to model the floc behavior.
-
-
 
 Flocculation
 ------------
@@ -75,7 +73,12 @@ An enabling measurement will be particle size and count in a flocculating suspen
 1. The AguaClara Cornell program developed an `image based system of floc sizing <https://www.liebertpub.com/doi/10.1089/ees.2015.0311>`_ that uses a 1 cm square sample cell and that uses image analysis to eliminate flocs that are blurry and hence aren't in the target analysis volume.
 2. The floc suspension could be diluted and then sent through a commercial particle counter.
 
-There are challenges associated with both strategies and a review of the literature may uncover additional options.
+Coagulant Dosing
+----------------
+
+Automated coagulant dosing and the ability to provide guidance to operators to optimize plant performance are potentially within our reach now that we have a flocculation model. The model predicts the concentration of small particles after flocculation. We can measure the concentration of small particles after flocculation by passing a continuous sample of flocculated water through a tube settler to remove the large flocs. The supernatant particle concentration from the tube settler can be measured either with a turbidimeter or a particle counter. Research will identify what is required to obtain the model parameters that will be used to set the next coagulant dose.
+See :ref:`title_Coagulant_Automation`.
+
 
 Floc Filter
 -----------
