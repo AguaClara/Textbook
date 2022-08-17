@@ -11,7 +11,7 @@
 AguaClara Hydraulic Flocculation Model
 *****************************************
 
-The AguaClara hydraulic flocculation model was developed over 15 years of extensive laboratory and field research and is based on the physics of interactions between particles in the raw water, dissolved organic molecules, and coagulant nanoparticles in a shear flow. The AguaClara model is based on the physics of these interactions and is the first non-empirical flocculation model. The AguaClara Hydraulic Flocculation model is described in detail in :ref:`title_Flocculation_Model`.
+The AguaClara hydraulic flocculation model was developed over 15 years of extensive laboratory and field research and is based on the physics of interactions between particles in the raw water, dissolved organic molecules, and coagulant nanoparticles in a shear flow. The AguaClara model is based on the physics of these interactions and is the first non-empirical flocculation model.
 
 2005 - We used conventional guidelines based on velocity gradient to design the first low flow vertical flocculator
 
@@ -22,6 +22,8 @@ The AguaClara hydraulic flocculation model was developed over 15 years of extens
 2016 – Learned that particle/floc collisions are dominated by viscous shear (not by turbulent eddies). Began designing flocculators based on a target head loss of 40 cm. Used a :math:`G\theta` of 37,000.
 
 2017 - Designed a pipe flocculator for the 1 L/s plant with a :math:`G\theta` of 20,000 and a residence time of about 100 s.
+
+2020 - Realized that flocs with a high fraction of organic matter have a lower density and thus must be larger to settle in the clarifier. This requires a lower velocity gradient in the flocculator and the inlet to the clarifier.
 
 Conventional vs AguaClara Flocculation
 ---------------------------------------
