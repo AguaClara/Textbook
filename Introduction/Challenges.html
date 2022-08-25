@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Challenges &mdash; AguaClara Textbook v1.4.10 documentation</title>
+  <title>Challenges &mdash; AguaClara Textbook v1.4.11 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.4.10
+                v1.4.11
               </div>
             
           
@@ -138,38 +138,38 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#low-cost-turbidimeter">Low Cost Turbidimeter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#floc-filter">Floc Filter</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id10">Tasks and Goals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Tasks and Goals</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#plate-settlers">Plate Settlers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#granular-media-filtration">Granular Media Filtration</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id11">Tasks and Goals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Tasks and Goals</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#gravity-exclusion-zones">Gravity Exclusion Zones</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id12">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id13">Tasks and Goals</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id14">Resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Tasks and Goals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#dissolved-organic-matter-dom-removal">Dissolved Organic Matter (DOM) Removal</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id15">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id16">Tasks and Goals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">Tasks and Goals</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#relevant-research">Relevant research</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#disinfection">Disinfection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ram-pump">RAM Pump</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id17">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id18">Tasks and Goals</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id19">Resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">Tasks and Goals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">Resources</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#wastewater-treatment-challenges">Wastewater Treatment Challenges</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#anaerobic-pulsed-bed">Anaerobic Pulsed Bed</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id20">Tasks and Goals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">Tasks and Goals</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#aerobic-string-digester-asd">Aerobic String Digester (ASD)</a></li>
@@ -177,7 +177,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#research-enabling-tools">Research Enabling Tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#procoda-python-transition">ProCoDA Python Transition</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id22">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">Introduction</a></li>
 </ul>
 </li>
 </ul>
@@ -189,6 +189,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html">Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html">Fluid Mechanics Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Plant_Hydraulics.html">Plant Hydraulics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html">Manifold Hydraulics</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
@@ -527,12 +528,9 @@ The FFM will build the average floc in a series of ordered steps that capture th
 </ol>
 <p>Floc filters with recycled flocs could dramatically reduce settled water turbidity and make the AguaClara clarifier even better. Kevin Sarmiento has demonstrated that flocs in the floc filter capture particles by having flow go right through the floc. Then the flocs slowly become less porous as they fill up with particles and eventually the flocs become useless. There is also strong evidence that the flocs that come from the flocculator all go to the plate settlers where they settle and  grow in size as they avalanche back into the floc filter. Those newly formed flocs are very porous (have a low fractal dimension) and hence are useful for capturing particles. The challenge is to figure out how to increase the number of low fractal dimension (highly porous) flocs in the floc filter. One source of flocs is the floc hopper. Many of those flocs aren’t very porous anymore. The idea is to break those flocs by sending them through an orifice and then either return them to the flocculator or if they are still large enough to be captured by the plate settlers (unlikely), then they could be returned directly to the clarifier.</p>
 <p>A second line of research would be to investigate an improved method of floc wasting. Our current floc wasting system removes flocs from the top of the floc filter and thus tends to remove flocs that have just returned from the plate settlers. Thus our current floc wasting system is the worst possible design. This may be why we have been unable to get good performance from the laboratory scale reactors that have a single 1” PVC pipe with a bend in it for the tube settler and a wasting port that intercepts most of the flocs returning from the plate settlers.</p>
-<dl class="simple">
-<dt>High fractal dimension flocs are more dense and thus settle faster and thus they might be more concentrated at the bottom of the floc filter. Thus it may be better to waste flocs from the sloped surface at the bottom of the floc filter where flocs slide down into the jet reverser. This hypothesis could be tested by comparing the performance of the glass walled clarifier with floc extraction from the bottom slope. Kevin Sarmiento has already experimented with this approach and thus begin by reviewing his <a href="#id8"><span class="problematic" id="id9">`</span></a>thesis, Particle Removal in Floc Blanket Clarifiers via Internal Flow Through Porous Fractal Aggregates</dt><dd><p>&lt;<a class="reference external" href="https://doi.org/10.7298/3zv3-ya45">https://doi.org/10.7298/3zv3-ya45</a>&gt;`_.</p>
-</dd>
-</dl>
-<div class="section" id="id10">
-<h4>Tasks and Goals<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>High fractal dimension flocs are more dense and thus settle faster and thus they might be more concentrated at the bottom of the floc filter. Thus it may be better to waste flocs from the sloped surface at the bottom of the floc filter where flocs slide down into the jet reverser. This hypothesis could be tested by comparing the performance of the glass walled clarifier with floc extraction from the bottom slope. Kevin Sarmiento has already experimented with this approach and thus begin by reviewing his <a class="reference external" href="https://doi.org/10.7298/3zv3-ya45">thesis, Particle Removal in Floc Blanket Clarifiers via Internal Flow Through Porous Fractal Aggregates</a>.</p>
+<div class="section" id="id8">
+<h4>Tasks and Goals<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>Learn how the floc filter is formed and how flocs transition from flocculator to plate settlers to floc filter and then finally to the floc hopper <a class="reference internal" href="../Clarification/Clarifier_Intro.html#title-clarification-intro"><span class="std std-ref">Clarification Introduction</span></a>.</p></li>
 </ul>
@@ -553,8 +551,8 @@ The FFM will build the average floc in a series of ordered steps that capture th
 <li><p>How much of a change in flow can a fully formed flow constriction withstand before the fluid forces exceed its strength and how does the constriction fail? Specifically, what size flocs do ruptured flow constrictions shed?</p></li>
 <li><p>What size of flocs is optimal for producing partially formed flow constrictions that are then able to efficiently capture primary particles?</p></li>
 </ol>
-<div class="section" id="id11">
-<h4>Tasks and Goals<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id9">
+<h4>Tasks and Goals<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>Build a sand filter that allows for varying sand particles</p></li>
@@ -567,13 +565,13 @@ The FFM will build the average floc in a series of ordered steps that capture th
 <div class="section" id="gravity-exclusion-zones">
 <h3>Gravity Exclusion Zones<a class="headerlink" href="#gravity-exclusion-zones" title="Permalink to this headline">¶</a></h3>
 <p>Technology to completely eliminate slotted pipes in the StaRS filters.</p>
-<div class="section" id="id12">
-<h4>Introduction<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id10">
+<h4>Introduction<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
 <p>The StaRS Filter is filled with alternating influent and effluent pipes. The biggest challenge with the effluent pipes is figuring out how to allow water to enter the pipe without letting sand exit the filter. StaRS filters currently use slotted pipes, but that method has multiple disadvantages including challenges sourcing the slotted pipes and clogging with sand grains.</p>
 <p>Gravity Exclusion Zones (GEZs) are an alternative method that would eliminate the need for slotted pipes. The GEZ rely on the weight of the sand to create pockets of clean water that are big enough to not allow sand to get through. This is achieved by creating a zone with a sand-water interface that is large enough to prevent sand fluidization. The efficacy of this design needs to be tested at small scale specifically to learn what causes the GEZ to fail as the effluent flow rate is gradually increased.</p>
 </div>
-<div class="section" id="id13">
-<h4>Tasks and Goals<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id11">
+<h4>Tasks and Goals<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>Study the current design of the StaRS Filter, specifically the influent and effluent pipes</p></li>
@@ -585,8 +583,8 @@ The FFM will build the average floc in a series of ordered steps that capture th
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id14">
-<h4>Resources<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id12">
+<h4>Resources<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=Y5BJtLSR1uU&amp;list=PLhsGtpY8ipdZL4lExJA8KC0zCkaxwfs8R&amp;index=17&amp;ab_channel=AguaClaraCornell">StaRS FInE Presentation</a></p></li>
@@ -598,14 +596,14 @@ The FFM will build the average floc in a series of ordered steps that capture th
 </div>
 <div class="section" id="dissolved-organic-matter-dom-removal">
 <h3>Dissolved Organic Matter (DOM) Removal<a class="headerlink" href="#dissolved-organic-matter-dom-removal" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id15">
-<h4>Introduction<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id13">
+<h4>Introduction<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
 <p>The goal of the DOM team is to develop a method to remove DOM from water. One of the challenges with DOM is that when DOM forms flocs by attaching to coagulant nanoparticles the resulting flocs have a density that is very close to the density of water and in some cases the resulting flocs are buoyant.  Dissolved Air Floatation (DAF) would be a great method to separate these flocs from water, but DAF requires an air compressor, a completely different clarifier design, and it can’t be used with a floc filter. Thus we would like to explore options for increasing the density of the resulting flocs so they can be removed in an AguaClara clarifier.</p>
 <p>There are two very different approaches to this problem. (We should also explore other options that might result in improved removal of DOM!) One is to add clay so that the flocs have a sufficient clay concentration so they are dense enough to settle to the plate settlers. The other solution is to add Powdered Activated Carbon (PAC) that will both absorb DOM and increase the density of the flocs. In both cases PACl will need to be added to form the flocs.</p>
 <p>Both of these methods are expected to work. The questions are which strategy produces the best quality of water and which strategy is the most economical.</p>
 </div>
-<div class="section" id="id16">
-<h4>Tasks and Goals<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id14">
+<h4>Tasks and Goals<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>Use a single high concentration of humic acid (perhaps 15 mg/L as humic acid salt).</p></li>
@@ -630,12 +628,12 @@ The FFM will build the average floc in a series of ordered steps that capture th
 <div class="section" id="ram-pump">
 <h3>RAM Pump<a class="headerlink" href="#ram-pump" title="Permalink to this headline">¶</a></h3>
 <p>Create a reliable and efficient ram pump for plant implementation</p>
-<div class="section" id="id17">
-<h4>Introduction<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id15">
+<h4>Introduction<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
 <p>The goal is to design and develop an efficient hydraulic ram pump for implementation in AguaClara plants. The ram pump is needed to deliver filtered water from the end of the treatment process to the higher elevation chemical platform for utilization in chemical stock tanks and possibly for the plant bathroom. The conventional ram pump that spills the wasted water have been used in AguaClara plants for many years. The AguaClara design uses a closed pipe system that facilitates returning the “wasted” water to the pipe that goes to the community water storage tank. In January 2020, a prototype ram pump was tested at the AguaClara plant in Gracias, Honduras.</p>
 </div>
-<div class="section" id="id18">
-<h4>Tasks and Goals<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id16">
+<h4>Tasks and Goals<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>Repair the ram pump using stronger components that will resist the cyclical high pressures</p></li>
@@ -650,8 +648,8 @@ The FFM will build the average floc in a series of ordered steps that capture th
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id19">
-<h4>Resources<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id17">
+<h4>Resources<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference external" href="https://github.com/monroews/Hydraulics/raw/master/06_Hydraulic_Transients.pptx">Hydraulic Engineering Lecture on ram pumps</a></p></li>
@@ -708,8 +706,8 @@ The FFM will build the average floc in a series of ordered steps that capture th
 </ul>
 </div></blockquote>
 <p>One tipping bucket UASB has been operating and successfully treating wastewater for many months.</p>
-<div class="section" id="id20">
-<h4>Tasks and Goals<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id18">
+<h4>Tasks and Goals<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><ul class="simple">
 <li><p>Finish fabricating the 2nd UASB. Transfer half of the granules from the 1st UASB to the 2nd UASB and begin operation.</p></li>
@@ -748,8 +746,8 @@ Trickling filters are an old wastewater treatment technology that is much more e
 <div class="section" id="procoda-python-transition">
 <h3>ProCoDA Python Transition<a class="headerlink" href="#procoda-python-transition" title="Permalink to this headline">¶</a></h3>
 <p>Convert existing ProCoDA software to run in Python</p>
-<div class="section" id="id22">
-<h4>Introduction<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id20">
+<h4>Introduction<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
 <p>The ProCoDA software has been serving research teams for many years. Although the software used to run our long term bench top experiments has experienced many updates and improvements it’s major flaw is that maintenance and upgrades require coding in LabVIEW.</p>
 <p>In order to improve access to this vital piece of AguaClara Research technology this team aims to transition the entirety of the code and all of its functionality to Python so that the open source community can provide upgrades and maintenance.</p>
 <p>ProCoDA is a very large application built from many modules that can be developed in parallel by different teams. This project has the advantage of having a working example of the code that can be explored to learn how ProCoDA is structured and how to create the many modules needed for the ProCoDA package.</p>
