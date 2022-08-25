@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Filtration Introduction &mdash; AguaClara Textbook 335/merge documentation</title>
+  <title>Filtration Introduction &mdash; AguaClara Textbook 336/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                335/merge
+                336/merge
               </div>
             
           
@@ -105,6 +105,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html">Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html">Fluid Mechanics Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Plant_Hydraulics.html">Plant Hydraulics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html">Manifold Hydraulics</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
@@ -435,7 +436,7 @@
 <span id="heading-porosity"></span><h2>Porosity<a class="headerlink" href="#porosity" title="Permalink to this headline">¶</a></h2>
 <p>Porosity of a sand bed refers to the ratio of the void volume to the total volume of the sand bed.</p>
 <div class="math notranslate nohighlight" id="equation-porosity">
-<span class="eqno">(655)<a class="headerlink" href="#equation-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}\]</div>
+<span class="eqno">(656)<a class="headerlink" href="#equation-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSand} = \frac{\rlap{-} V_{voids}}{\rlap{-} V_{total}}\]</div>
 <p>Porosity is determined by the geometry of the material and the size distribution (or uniformity of the particle sizes) and not by the average size of the particles. If you have three different sized spheres (such as  1 um clay, 0.2 mm sand, and 1 cm gravel) in three different buckets, each bucket will have the same porosity as seen in <a class="reference internal" href="#figure-porosity"><span class="std std-numref">Fig. 204</span></a>. To minimize the porosity, the three materials could be mixed because the smaller materials would be filling the pore space of the larger material.</p>
 <div class="figure align-center" id="id8">
 <span id="figure-porosity"></span><img alt="This figure illustrates how different sized materials have the same total bulk porosity" src="../_images/figure_porosity.png" />
@@ -447,11 +448,11 @@
 <p><span class="math notranslate nohighlight">\(D_{10}\)</span> is used for particle removal models, and <span class="math notranslate nohighlight">\(D_{60}\)</span> is used for hydraulic modeling.</p>
 <p>The ratio of the two is the uniformity coefficient:</p>
 <div class="math notranslate nohighlight" id="equation-uniformity-coefficient">
-<span class="eqno">(656)<a class="headerlink" href="#equation-uniformity-coefficient" title="Permalink to this equation">¶</a></span>\[  UC = \frac{D_{60}}{D_{10}}\]</div>
+<span class="eqno">(657)<a class="headerlink" href="#equation-uniformity-coefficient" title="Permalink to this equation">¶</a></span>\[  UC = \frac{D_{60}}{D_{10}}\]</div>
 <p>The uniformity coefficient describes the uniformity of the sand. A <span class="math notranslate nohighlight">\(UC = 1\)</span> indicates that every grain of sand is the same size, which is the ideal case. A large <span class="math notranslate nohighlight">\(UC\)</span> is indicative of a wide range of grain sizes which will result in stratification of the sand bed after backwash with fine sand on top. This will result in more rapid development of head loss during filtration. The fine sand on top will also expand more during backwash and could result in loss of sand during backwash.</p>
 <p>During backwash, the sand is fluidized and the sand bed expands. This expansion causes a change in porosity of the sand bed (as the volume of water occupied by the sand is increased). The porosity and height of the sand bed are directly related through the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-backwash-porosity">
-<span class="eqno">(657)<a class="headerlink" href="#equation-backwash-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}\]</div>
+<span class="eqno">(658)<a class="headerlink" href="#equation-backwash-porosity" title="Permalink to this equation">¶</a></span>\[ \phi_{FiSandBw} = \frac{\phi_{FiSand} H_{FiSand} A_{Fi} + \left( H_{FiSandBw} - H_{FiSand} \right) A_{Fi}}{H_{FiSandBw} A_{Fi}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\phi_{FiSandBw}\)</span> = sand porosity during backwash</div>
@@ -462,7 +463,7 @@
 </div>
 <p>From this it becomes possible to directly relate porosity (as above) to the filter expansion ratio, which is simply the ratio of the heights of the expanded sand bed and the settled sand bed:</p>
 <div class="math notranslate nohighlight" id="equation-filter-expansion-ratio">
-<span class="eqno">(658)<a class="headerlink" href="#equation-filter-expansion-ratio" title="Permalink to this equation">¶</a></span>\[H_{FiSandBw} = \Pi_{Fi}^{Bw} H_{FiSand}\]</div>
+<span class="eqno">(659)<a class="headerlink" href="#equation-filter-expansion-ratio" title="Permalink to this equation">¶</a></span>\[H_{FiSandBw} = \Pi_{Fi}^{Bw} H_{FiSand}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(\Pi_{Fi}^{Bw}\)</span> = the expansion ratio value</div>
@@ -474,7 +475,7 @@
 <span id="clean-sand-head-loss"></span><h2>Clean Bed Head Loss<a class="headerlink" href="#clean-bed-head-loss" title="Permalink to this headline">¶</a></h2>
 <p>The Carman Kozeny Equation, an adaptation of the Hagen-Poiseuille Equation :eq:`` describes the head loss through a clean bed during filtration. The Ergun Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-ergun">(172)</a> can also be used to estimate head loss in porous media.</p>
 <div class="math notranslate nohighlight" id="equation-eq-carman-kozeny">
-<span class="eqno">(659)<a class="headerlink" href="#equation-eq-carman-kozeny" title="Permalink to this equation">¶</a></span>\[ \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu \bar v_a}{g D_{60}^2}\]</div>
+<span class="eqno">(660)<a class="headerlink" href="#equation-eq-carman-kozeny" title="Permalink to this equation">¶</a></span>\[ \frac{h_l}{H_{FiSand}} = 36 k \frac{\left( 1 - \phi_{FiSand} \right)^2}{\phi_{FiSand}^3} \frac{\nu \bar v_a}{g D_{60}^2}\]</div>
 <div class="line-block">
 <div class="line">where</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_l\)</span> = head loss in sand bed</div>
@@ -498,7 +499,7 @@
 </div>
 <p>The pressure from the water in the manometer:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-0">
-<span class="eqno">(660)<a class="headerlink" href="#equation-filtration-filtration-intro-0" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\]</div>
+<span class="eqno">(661)<a class="headerlink" href="#equation-filtration-filtration-intro-0" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(P_{Manometer} =\)</span> total height from the bottom of the filter to the inlet box</div>
@@ -511,27 +512,27 @@
 </div>
 <p>The pressure from the sand and water in the filter:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-1">
-<span class="eqno">(661)<a class="headerlink" href="#equation-filtration-filtration-intro-1" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
+<span class="eqno">(662)<a class="headerlink" href="#equation-filtration-filtration-intro-1" title="Permalink to this equation">¶</a></span>\[P_{Manometer} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(h_{l_{FiBw}} =\)</span> the difference in height of the inlet and water surface height during backwash; the backwash head loss</div>
 </div>
 <p>Setting them equal for a force balance:</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-2">
-<span class="eqno">(662)<a class="headerlink" href="#equation-filtration-filtration-intro-2" title="Permalink to this equation">¶</a></span>\[\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
+<span class="eqno">(663)<a class="headerlink" href="#equation-filtration-filtration-intro-2" title="Permalink to this equation">¶</a></span>\[\rho_{Water} g \left( H_{W_1} + H_{W_2} + \phi_{FiSand} H_{FiSand} \right) + \rho_{Sand} g \left( 1 - \phi_{FiSand} \right) H_{FiSand} = \rho_{Water} g \left( H_{W_1} + H_{W_2} + H_{FiSand} + h_{l_{FiBw}} \right)\]</div>
 <p>Which simplifies to:</p>
 <div class="math notranslate nohighlight" id="equation-headloss-bw-sand">
-<span class="eqno">(663)<a class="headerlink" href="#equation-headloss-bw-sand" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
+<span class="eqno">(664)<a class="headerlink" href="#equation-headloss-bw-sand" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = H_{FiSand} \left( 1 - \phi_{FiSand} \right)  \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
 <p>This result gives a ratio of the head loss during backwash to the height difference during forward operation. With <span class="math notranslate nohighlight">\(\phi_{FiSand} = 0.4\)</span> and <span class="math notranslate nohighlight">\(\rho_{Sand} = 2650 kg/m^3\)</span> the value of this ratio is:</p>
 <div class="math notranslate nohighlight" id="equation-eq-min-fluidization-velocity">
-<span class="eqno">(664)<a class="headerlink" href="#equation-eq-min-fluidization-velocity" title="Permalink to this equation">¶</a></span>\[\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\]</div>
+<span class="eqno">(665)<a class="headerlink" href="#equation-eq-min-fluidization-velocity" title="Permalink to this equation">¶</a></span>\[\left( 1- \Phi_{FiSand} \right) \left( \frac{\rho_{FiSand}}{\rho_{Water}} - 1 \right) = 0.99\]</div>
 </div>
 <div class="section" id="minimum-fluidization-velocity">
 <h2>Minimum Fluidization Velocity<a class="headerlink" href="#minimum-fluidization-velocity" title="Permalink to this headline">¶</a></h2>
-<p>The minimum fluidization velocity for a sand bed can be obtained by setting the head loss through the sand (Equation <a class="reference internal" href="#equation-eq-carman-kozeny">(659)</a>) equal to the head required to suspend the sand bed (Equation <a class="reference internal" href="#equation-eq-min-fluidization-velocity">(664)</a>).</p>
+<p>The minimum fluidization velocity for a sand bed can be obtained by setting the head loss through the sand (Equation <a class="reference internal" href="#equation-eq-carman-kozeny">(660)</a>) equal to the head required to suspend the sand bed (Equation <a class="reference internal" href="#equation-eq-min-fluidization-velocity">(665)</a>).</p>
 <p>Using these two equations the minimum velocity for sand fluidization can be found.</p>
 <div class="math notranslate nohighlight" id="equation-minimum-fluidization-velocity-sand">
-<span class="eqno">(665)<a class="headerlink" href="#equation-minimum-fluidization-velocity-sand" title="Permalink to this equation">¶</a></span>\[\bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
+<span class="eqno">(666)<a class="headerlink" href="#equation-minimum-fluidization-velocity-sand" title="Permalink to this equation">¶</a></span>\[\bar v_{MinFluidization} = \frac{\phi_{FiSand}^3 g D_{60}^2}{36 k \nu \left( 1 - \phi_{FiSand} \right)} \left( \frac{\rho_{Sand}}{\rho_{Water}} - 1 \right)\]</div>
 <p>From this equation it can easily be seen that if the diameter of the sand at the top is half the diameter of the sand at the bottom, it will fluidize at one quarter the velocity. This result indicates that fluidization occurring at the top of the filter does <strong>not</strong> imply that the sand at the bottom of the filter is fluidized.</p>
 </div>
 <div class="section" id="filter-box-depth">
@@ -543,20 +544,20 @@
 </div>
 <p>A simplified estimate of the filter box depth can be obtained that neglects the smaller details to illustrate the major contributors to the filter depth. The depth of sand in the filter, <span class="math notranslate nohighlight">\(H_{FiSand}\)</span> is approximately</p>
 <div class="math notranslate nohighlight" id="equation-sand-depth">
-<span class="eqno">(666)<a class="headerlink" href="#equation-sand-depth" title="Permalink to this equation">¶</a></span>\[H_{FiSand} = N_{layer} H_{layer}\]</div>
+<span class="eqno">(667)<a class="headerlink" href="#equation-sand-depth" title="Permalink to this equation">¶</a></span>\[H_{FiSand} = N_{layer} H_{layer}\]</div>
 <p>where <span class="math notranslate nohighlight">\(N_{layer}\)</span> is the number of filters in the stacked filter and <span class="math notranslate nohighlight">\(H_{layer}\)</span> is the height of one filter layer and the center to center distance of the filter trunks. The height of the sand when it is fluidized during backwash is given by</p>
 <div class="math notranslate nohighlight" id="equation-bw-sand-depth">
-<span class="eqno">(667)<a class="headerlink" href="#equation-bw-sand-depth" title="Permalink to this equation">¶</a></span>\[H_{sand_{bw}} = \Pi_{Fi}^{Bw} H_{FiSand}\]</div>
+<span class="eqno">(668)<a class="headerlink" href="#equation-bw-sand-depth" title="Permalink to this equation">¶</a></span>\[H_{sand_{bw}} = \Pi_{Fi}^{Bw} H_{FiSand}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Pi_{Fi}^{Bw}\)</span> is the depth of the fluidized bed during backwash normalized by the sand bed depth.</p>
-<p>The head loss through silica sand (with density of <span class="math notranslate nohighlight">\(2650 \frac{kg}{m^3}\)</span>) during backwash is approximated as (see Equation <a class="reference internal" href="#equation-headloss-bw-sand">(663)</a>)</p>
+<p>The head loss through silica sand (with density of <span class="math notranslate nohighlight">\(2650 \frac{kg}{m^3}\)</span>) during backwash is approximated as (see Equation <a class="reference internal" href="#equation-headloss-bw-sand">(664)</a>)</p>
 <div class="math notranslate nohighlight" id="equation-approximate-bw-hl">
-<span class="eqno">(668)<a class="headerlink" href="#equation-approximate-bw-hl" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = H_{FiSand}\]</div>
+<span class="eqno">(669)<a class="headerlink" href="#equation-approximate-bw-hl" title="Permalink to this equation">¶</a></span>\[h_{l_{FiBw}} = H_{FiSand}\]</div>
 <p>The approximate height of the water in the filter box at the end of a filter run is thus</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-intro-3">
-<span class="eqno">(669)<a class="headerlink" href="#equation-filtration-filtration-intro-3" title="Permalink to this equation">¶</a></span>\[HW_{Fi_{max}} = h_{l_{FiBw}} + H_{sand_{bw}} + h_{l_{FiSand_{max}}}\]</div>
-<p>Substituting Equations <a class="reference internal" href="#equation-approximate-bw-hl">(668)</a>, <a class="reference internal" href="#equation-bw-sand-depth">(667)</a>, and <a class="reference internal" href="#equation-sand-depth">(666)</a> we obtain an estimate of the depth of an open stacked rapid sand filter.</p>
+<span class="eqno">(670)<a class="headerlink" href="#equation-filtration-filtration-intro-3" title="Permalink to this equation">¶</a></span>\[HW_{Fi_{max}} = h_{l_{FiBw}} + H_{sand_{bw}} + h_{l_{FiSand_{max}}}\]</div>
+<p>Substituting Equations <a class="reference internal" href="#equation-approximate-bw-hl">(669)</a>, <a class="reference internal" href="#equation-bw-sand-depth">(668)</a>, and <a class="reference internal" href="#equation-sand-depth">(667)</a> we obtain an estimate of the depth of an open stacked rapid sand filter.</p>
 <div class="math notranslate nohighlight" id="equation-approximate-filter-depth">
-<span class="eqno">(670)<a class="headerlink" href="#equation-approximate-filter-depth" title="Permalink to this equation">¶</a></span>\[HW_{Fi_{max}} = N_{layer} H_{layer}(1+\Pi_{Fi}^{Bw}) + h_{l_{FiSand_{max}}}\]</div>
+<span class="eqno">(671)<a class="headerlink" href="#equation-approximate-filter-depth" title="Permalink to this equation">¶</a></span>\[HW_{Fi_{max}} = N_{layer} H_{layer}(1+\Pi_{Fi}^{Bw}) + h_{l_{FiSand_{max}}}\]</div>
 <p>This estimate of the depth of water in the filter box does not include all of the factors and is an underestimate of the actual value used in design.</p>
 </div>
 </div>

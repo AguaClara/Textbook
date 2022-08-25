@@ -50,6 +50,7 @@ The Physics of Water Treatment Design
 
   Fluids_and_Hydraulics/Fluid_Mechanics.rst
   Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.rst
+  Fluids_and_Hydraulics/Plant_Hydraulics.rst
   Fluids_and_Hydraulics/Manifold_Hydraulics.rst
 
 
