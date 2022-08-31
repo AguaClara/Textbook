@@ -159,3 +159,57 @@ The coagulant dose can then be calculated as
   :label: coagdoseofCpKu*UVandturbidity
 
   C_{coag_{goal_t}}  = C_{turbidity_t}K_{u_{t-\theta}}^* C_{P_{goal}}^\frac{-2}{3} + C_{coag_{DOM_{t-\theta}}}
+
+Improved Linearized Model
+=========================
+
+We previously assumed that we could neglect the effect of the settled water turbidity in Equation :ref:`intdCPlam`. Here we don't make this assumption and linearize the model again. We begin with Equation :ref:`intdCPlam`, combine unknowns into a single constant, assume that the probability of attachment is proportional to the coagulant dose normalized by the concentration of primary particles, and replace primary particle concentration with turbidity.
+
+.. math::
+  :label:
+
+	 \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=k\bar{\alpha}G_{CS}\theta.
+
+Replace alpha with the ratio of coagulant not tied up by dissolved organic matter to raw water turbidity.
+
+.. math::
+  :label:
+
+	 \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} - C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}kG_{CS}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}
+
+Create one grouping of constants.
+
+.. math::
+  :label:
+
+	 \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} -C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}kG_{CS}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}
+
+Replace constants with :math:`K_{u_{t-\theta}}^*`.
+
+.. math::
+  :label:
+
+	 \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}}-C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}K_{u_{t-\theta}}^*
+
+Now solve for the coagulant dose with an equation of the form y = mx + b. The parameter  :math:`K_{u}^*` incorporates properties of the primary particles (density and diameter), the flocculator collision potential (:math:`G_{CS}`), the coagulant nanoparticle properties (density and diameter), and the first order rate constant, k, that describes the conversion of primary particles into settleable flocs. One possible assumption is that :math:`K_{u}^*` can be treated as a constant.
+
+.. math::
+  :label: fullcoagdoseofCpKu*UVandturbidity
+
+	 C_{coag_{t-\theta}} = \frac{1}{K_{u^*}}C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)+C_{coag_{DOM_{t-\theta}}}
+
+The slope of Equation :eq:`fullcoagdoseofCpKu*UVandturbidity` can be used to make a correction to the coagulant dose.
+
+First rewrite Equation :eq:`fullcoagdoseofCpKu*UVandturbidity` for time t.
+
+.. math::
+  :label: targetfullcoagdoseofCpKu*UVandturbidity
+
+	 C_{coag_{t}} = \frac{1}{K_u^*}C_{raw_{NTU_t}}\left(C_{clarified_{NTU_{t+\theta}}}^{-2/3}-C_{raw_{NTU_t}}^{-2/3}\right)+C_{coag_{DOM_t}}
+
+Subtract Equation :eq:`fullcoagdoseofCpKu*UVandturbidity` from :eq:`targetfullcoagdoseofCpKu*UVandturbidity` and assume that the coagulant DOM demand doesn't change much in one residence time.
+
+.. math::
+  :label: fullcoagdoseofCpKu*UVandturbidity
+
+	 C_{coag_{t}} = \frac{1}{K_u^*}\left[C_{raw_{NTU_t}}\left(C_{clarified_{NTU_{t+\theta}}}^{-2/3}-C_{raw_{NTU_t}}^{-2/3}\right) -C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)\right] + C_{coag_{t-\theta}}
