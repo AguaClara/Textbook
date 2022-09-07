@@ -198,18 +198,25 @@ Now solve for the coagulant dose with an equation of the form y = mx + b. The pa
 
 	 C_{coag_{t-\theta}} = \frac{1}{K_{u^*}}C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)+C_{coag_{DOM_{t-\theta}}}
 
-The slope of Equation :eq:`fullcoagdoseofCpKu*UVandturbidity` can be used to make a correction to the coagulant dose.
+The coagulant demand of the DOM is obtained by rearranging Equation :eq:`fullcoagdoseofCpKu*UVandturbidity`.
 
-First rewrite Equation :eq:`fullcoagdoseofCpKu*UVandturbidity` for time t.
+.. math::
+  :label: DOMcoagDemand
+
+	 C_{coag_{DOM_{t-\theta}}} = C_{coag_{t-\theta}} - \frac{1}{K_{u^*}}C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)
+
+Given the estimate of the DOM coagulant demand at a previous time we can obtain an estimate of the required coagulant dose at time t. First rewrite Equation :eq:`fullcoagdoseofCpKu*UVandturbidity` for time t.
 
 .. math::
   :label: targetfullcoagdoseofCpKu*UVandturbidity
 
 	 C_{coag_{t}} = \frac{1}{K_u^*}C_{raw_{NTU_t}}\left(C_{clarified_{NTU_{t+\theta}}}^{-2/3}-C_{raw_{NTU_t}}^{-2/3}\right)+C_{coag_{DOM_t}}
 
-Subtract Equation :eq:`fullcoagdoseofCpKu*UVandturbidity` from :eq:`targetfullcoagdoseofCpKu*UVandturbidity` and assume that the coagulant DOM demand doesn't change much in one residence time.
+If the coagulant DOM demand doesn't change significantly in the time used to update the coagulant dose, then Equation :eq:`DOMcoagDemand` can be used to eliminate :math:`C_{coag_{DOM_t}}` from Equation :eq:`targetfullcoagdoseofCpKu*UVandturbidity`.
 
-.. math::
-  :label: fullcoagdoseofCpKu*UVandturbidity
+The coagulant dosing system must include guardrails to ensure that the coagulant dose is within a reasonable range. There exists the possibility of a turbidimeter giving incorrect data that would result in a coagulant dose far outside a range that would ensure reasonable plant performance. The potential failures include:
 
-	 C_{coag_{t}} = \frac{1}{K_u^*}\left[C_{raw_{NTU_t}}\left(C_{clarified_{NTU_{t+\theta}}}^{-2/3}-C_{raw_{NTU_t}}^{-2/3}\right) -C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)\right] + C_{coag_{t-\theta}}
+ * settled water turbidity that is very low because the plant is starting up after an extended shutdown
+ * faulty turbidimeter readings due to a dirty sample cell
+
+To reduce the likelihood of a treatment failure the estimated DOM coagulant demand can be compared with a reasonable range and if it is out of that range the estimated DOM coagulant demand can be forced back into the reasonable range. To prevent an excessively low coagulant dose the DOM coagulant demand can be limited to positive values. If it is known that the DOM coagulant demand is always exceeds a larger value, that larger value can be used as a lower limit. The upper limit can be set based on observation of the raw water quality.   
