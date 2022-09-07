@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Coagulant Automation &mdash; AguaClara Textbook v1.4.12 documentation</title>
+  <title>Coagulant Automation &mdash; AguaClara Textbook v1.4.13 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.4.12
+                v1.4.13
               </div>
             
           
@@ -361,14 +361,22 @@
 <span class="eqno">(829)<a class="headerlink" href="#equation-operation-coagulant-automation-3" title="Permalink to this equation">¶</a></span>\[       \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}}-C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}K_{u_{t-\theta}}^*\]</div>
 <p>Now solve for the coagulant dose with an equation of the form y = mx + b. The parameter  <span class="math notranslate nohighlight">\(K_{u}^*\)</span> incorporates properties of the primary particles (density and diameter), the flocculator collision potential (<span class="math notranslate nohighlight">\(G_{CS}\)</span>), the coagulant nanoparticle properties (density and diameter), and the first order rate constant, k, that describes the conversion of primary particles into settleable flocs. One possible assumption is that <span class="math notranslate nohighlight">\(K_{u}^*\)</span> can be treated as a constant.</p>
 <div class="math notranslate nohighlight" id="equation-fullcoagdoseofcpku-uvandturbidity">
-<span class="eqno">(832)<a class="headerlink" href="#equation-fullcoagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[       C_{coag_{t-\theta}} = \frac{1}{K_{u^*}}C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)+C_{coag_{DOM_{t-\theta}}}\]</div>
-<p>The slope of Equation <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(832)</a> can be used to make a correction to the coagulant dose.</p>
-<p>First rewrite Equation <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(832)</a> for time t.</p>
+<span class="eqno">(830)<a class="headerlink" href="#equation-fullcoagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[       C_{coag_{t-\theta}} = \frac{1}{K_{u^*}}C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)+C_{coag_{DOM_{t-\theta}}}\]</div>
+<p>The coagulant demand of the DOM is obtained by rearranging Equation <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(830)</a>.</p>
+<div class="math notranslate nohighlight" id="equation-domcoagdemand">
+<span class="eqno">(831)<a class="headerlink" href="#equation-domcoagdemand" title="Permalink to this equation">¶</a></span>\[       C_{coag_{DOM_{t-\theta}}} = C_{coag_{t-\theta}} - \frac{1}{K_{u^*}}C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)\]</div>
+<p>Given the estimate of the DOM coagulant demand at a previous time we can obtain an estimate of the required coagulant dose at time t. First rewrite Equation <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(830)</a> for time t.</p>
 <div class="math notranslate nohighlight" id="equation-targetfullcoagdoseofcpku-uvandturbidity">
-<span class="eqno">(831)<a class="headerlink" href="#equation-targetfullcoagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[       C_{coag_{t}} = \frac{1}{K_u^*}C_{raw_{NTU_t}}\left(C_{clarified_{NTU_{t+\theta}}}^{-2/3}-C_{raw_{NTU_t}}^{-2/3}\right)+C_{coag_{DOM_t}}\]</div>
-<p>Subtract Equation <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(832)</a> from <a class="reference internal" href="#equation-targetfullcoagdoseofcpku-uvandturbidity">(831)</a> and assume that the coagulant DOM demand doesn’t change much in one residence time.</p>
-<div class="math notranslate nohighlight" id="equation-fullcoagdoseofcpku-uvandturbidity">
-<span class="eqno">(832)<a class="headerlink" href="#equation-fullcoagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[       C_{coag_{t}} = \frac{1}{K_u^*}\left[C_{raw_{NTU_t}}\left(C_{clarified_{NTU_{t+\theta}}}^{-2/3}-C_{raw_{NTU_t}}^{-2/3}\right) -C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)\right] + C_{coag_{t-\theta}}\]</div>
+<span class="eqno">(832)<a class="headerlink" href="#equation-targetfullcoagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[       C_{coag_{t}} = \frac{1}{K_u^*}C_{raw_{NTU_t}}\left(C_{clarified_{NTU_{t+\theta}}}^{-2/3}-C_{raw_{NTU_t}}^{-2/3}\right)+C_{coag_{DOM_t}}\]</div>
+<p>If the coagulant DOM demand doesn’t change significantly in the time used to update the coagulant dose, then Equation <a class="reference internal" href="#equation-domcoagdemand">(831)</a> can be used to eliminate <span class="math notranslate nohighlight">\(C_{coag_{DOM_t}}\)</span> from Equation <a class="reference internal" href="#equation-targetfullcoagdoseofcpku-uvandturbidity">(832)</a>.</p>
+<p>The coagulant dosing system must include guardrails to ensure that the coagulant dose is within a reasonable range. There exists the possibility of a turbidimeter giving incorrect data that would result in a coagulant dose far outside a range that would ensure reasonable plant performance. The potential failures include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>settled water turbidity that is very low because the plant is starting up after an extended shutdown</p></li>
+<li><p>faulty turbidimeter readings due to a dirty sample cell</p></li>
+</ul>
+</div></blockquote>
+<p>To reduce the likelihood of a treatment failure the estimated DOM coagulant demand can be compared with a reasonable range and if it is out of that range the estimated DOM coagulant demand can be forced back into the reasonable range. To prevent an excessively low coagulant dose the DOM coagulant demand can be limited to positive values. If it is known that the DOM coagulant demand is always exceeds a larger value, that larger value can be used as a lower limit. The upper limit can be set based on observation of the raw water quality.</p>
 </div>
 </div>
 
