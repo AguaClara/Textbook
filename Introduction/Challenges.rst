@@ -157,7 +157,7 @@ An alternative is to send the water through a tube settler and then to a commerc
 Automated Coagulant Dosing Algorithm
 -------------------------------------
 
-Automated coagulant dosing and the ability to provide guidance to operators to optimize plant performance are potentially within our reach now that we have a flocculation model. The model predicts the concentration of small particles after flocculation. We can measure the concentration of small particles after flocculation by passing a continuous sample of flocculated water through a tube settler to remove the large flocs. The supernatant particle concentration from the tube settler can be measured either with a turbidimeter or a particle counter. Research will identify what is required to obtain the model parameters that will be used to set the next coagulant dose.
+Automated coagulant dosing (see :ref:`title_Coagulant_Automation`) and the ability to provide guidance to operators to optimize plant performance are potentially within our reach now that we have a flocculation model. The model predicts the concentration of small particles after flocculation. We can measure the concentration of small particles after flocculation by passing a continuous sample of flocculated water through a tube settler to remove the large flocs. The supernatant particle concentration from the tube settler can be measured either with a turbidimeter or a particle counter. Research will identify what is required to obtain the model parameters that will be used to set the next coagulant dose.
 
 The AguaClara Pilot Plant at the Cornell University Water Filtration Plant provides an opportunity to operate a 0.5 L/s AguaClara plant, compare it with a conventional water treatment plant, and test new technologies. The first technology to test is the ability to control the coagulant dose automatically. As advances are made in floc recycle for enhance floc filter performance it may be possible to test that technology using the 3’ diameter bent pipe clarifier.
 
@@ -168,6 +168,9 @@ Tasks and Goals
  * Analyze the data to see if it can reasonably be linearized and used to set the coagulant dose.
  * Evaluate and develop methods to estimate the required parameters in real time continuously based on recent plant performance.
  * If necessary, improve the design of the tube settler used to sample the flocculated water.
+ * Obtain overall performance data over a broad range of raw water condition
+ * Develop a consistent method for analysis of performance data
+ * Assess the stability of the automated coagulant dosing system (see :ref:`title_Coagulant_Automation`) and propose improvements to the algorithm.
 
 Resources
 ^^^^^^^^^
@@ -211,6 +214,13 @@ Tasks and Goals
 ^^^^^^^^^^^^^^^
 
 * Learn how the floc filter is formed and how flocs transition from flocculator to plate settlers to floc filter and then finally to the floc hopper :ref:`title_Clarification_Intro`.
+* Finish setting up the experimental apparatus and ProCoDA for the floc breakup experiment
+* Validate that we can break flocs into primary particles in high shear environments such as flow constrictions
+* Begin testing recycling of flocs from the floc hopper
+* Determine the best location for removal of flocs from the floc filter (top, middle or bottom of the clarifier)
+* Find the rate of recycle that works for the given experimental conditions
+* Compare existing performance data without floc recycle to new data with floc recycle
+* Compare performance as a function of the injection location into the flocculator.
 
 
 Plate Settlers
