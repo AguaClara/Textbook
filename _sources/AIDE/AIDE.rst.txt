@@ -99,6 +99,7 @@ If you do not yet have an |Onshape| account, then you will be able to make chang
    :header: "Link to video", "Description"
    :align: left
    :widths: 50 50
+   :width: 100
 
    |AIDEIntroduction|, "AIDE | Introduction"
    |AIDEConfigurations| , "AIDE | Configurations"
