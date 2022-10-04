@@ -72,6 +72,19 @@ All of the parts used to assemble the design originate in a parts database.  The
 
 The AIDE configurable components are not engineering designs. AguaClara Reach uses AIDE configurable components, expertise in drinking water treatment, and site specific conditions detailed by AguaClara Implementation Partners to develop customized designs for community-scale water treatment plants.
 
+Most of the configurable component models have two or more check boxes that provide increasing level of model detail. A few models have more options to turn on computationally intensive parts of the design.
+
+  #. *Add plastic components* - Enables the modeling of pipes, baffles, and other plastic components and creates a complete bill of materials. For some of the components it will only show an example rather than fully replicating all of the parts.
+
+  #. *Replicate all parts* - Fully replicates all parts and may significantly extend the time required to generate a new model. Note that the Bill of Materials includes the correct quantity of each of the parts even if the parts are not all replicated.
+
+  #. *Print parameter map* - Prints a full map in the FeatureScript notices of all of the model inputs. Only a small fraction of the available inputs are exposed in the model configuration parameters. Click on show FeatureScript Notices |showFSNotices| to open a new pane at the bottom of the browser window where the full parameter map will be displayed.
+
+The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of *time to generate model component* in :numref:`table_AIDE_configurable_components` for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.
+
+If you would like to explore possible configurations, change the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.
+
+
 
 .. _heading_Using_AIDE:
 
@@ -92,18 +105,6 @@ If you do not yet have an |Onshape| account, then you will be able to make chang
    |AIDEBOM|, "AIDE | Bill of Materials"
    |AIDEconfigurableComponent|, "AIDE | Configurable component example"
 
-
-Most of the configurable component models have two or more check boxes that provide increasing level of model detail. A few models have more options to turn on computationally intensive parts of the design.
-
-  #. *Add plastic components* - Enables the modeling of pipes, baffles, and other plastic components and creates a complete bill of materials. For some of the components it will only show an example rather than fully replicating all of the parts.
-
-  #. *Replicate all parts* - Fully replicates all parts and may significantly extend the time required to generate a new model. Note that the Bill of Materials includes the correct quantity of each of the parts even if the parts are not all replicated.
-
-  #. *Print parameter map* - Prints a full map in the FeatureScript notices of all of the model inputs. Only a small fraction of the available inputs are exposed in the model configuration parameters. Click on show FeatureScript Notices |showFSNotices| to open a new pane at the bottom of the browser window where the full parameter map will be displayed.
-
-The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of *time to generate model component* in :numref:`table_AIDE_configurable_components` for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.
-
-If you would like to explore possible configurations, change the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.
 
 How AguaClara Reach Uses AIDE
 =============================
