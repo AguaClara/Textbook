@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Rapid Mix Introduction &mdash; AguaClara Textbook 338/merge documentation</title>
+  <title>Rapid Mix Introduction &mdash; AguaClara Textbook 339/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                338/merge
+                339/merge
               </div>
             
           
@@ -348,23 +348,23 @@
 <p>Conventional rapid mix units use mechanical or potential energy to generate intense turbulence to begin the mixing process. Conventional design is based on the use of <span class="math notranslate nohighlight">\(\bar G\)</span> (an average velocity gradient) as a design parameter. We don’t yet know what the design objective is for rapid mix and thus it isn’t clear which parameters matter. We hypothesize that both velocity gradients that cause deformation of the fluid and time for molecular diffusion are required to ultimately transport coagulant nanoparticles to the surfaces of clay particles.</p>
 <p>The velocity gradient can be obtained from the rate at which mechanical energy is being dissipated and converted to heat by viscosity.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-0">
-<span class="eqno">(388)<a class="headerlink" href="#equation-rapid-mix-rm-intro-0" title="Permalink to this equation">¶</a></span>\[\varepsilon = G^2 \nu\]</div>
+<span class="eqno">(396)<a class="headerlink" href="#equation-rapid-mix-rm-intro-0" title="Permalink to this equation">¶</a></span>\[\varepsilon = G^2 \nu\]</div>
 <p>Where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the energy dissipation rate, <span class="math notranslate nohighlight">\(G\)</span> is the velocity gradient, and <span class="math notranslate nohighlight">\(\nu\)</span> is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-1">
-<span class="eqno">(389)<a class="headerlink" href="#equation-rapid-mix-rm-intro-1" title="Permalink to this equation">¶</a></span>\[P = \bar\varepsilon \rlap{-} V \rho\]</div>
+<span class="eqno">(397)<a class="headerlink" href="#equation-rapid-mix-rm-intro-1" title="Permalink to this equation">¶</a></span>\[P = \bar\varepsilon \rlap{-} V \rho\]</div>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-2">
-<span class="eqno">(390)<a class="headerlink" href="#equation-rapid-mix-rm-intro-2" title="Permalink to this equation">¶</a></span>\[P = \bar G^2 \nu \rlap{-} V \rho\]</div>
+<span class="eqno">(398)<a class="headerlink" href="#equation-rapid-mix-rm-intro-2" title="Permalink to this equation">¶</a></span>\[P = \bar G^2 \nu \rlap{-} V \rho\]</div>
 <p>We can relate reactor volume to a hydraulic residence time, <span class="math notranslate nohighlight">\(\theta\)</span>, and volumetric flow rate, Q.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-3">
-<span class="eqno">(391)<a class="headerlink" href="#equation-rapid-mix-rm-intro-3" title="Permalink to this equation">¶</a></span>\[P = \rho \bar G^2 \nu Q \theta\]</div>
+<span class="eqno">(399)<a class="headerlink" href="#equation-rapid-mix-rm-intro-3" title="Permalink to this equation">¶</a></span>\[P = \rho \bar G^2 \nu Q \theta\]</div>
 <p>This equation is perfectly useful for estimating electrical motor sizing requirements for mechanical rapid mix units. For gravity powered hydraulic rapid mix units it would be more intuitive to use the change in water surface elevation, <span class="math notranslate nohighlight">\(\Delta h\)</span> instead of power input.</p>
 <div class="math notranslate nohighlight" id="equation-power-of-q-h">
-<span class="eqno">(392)<a class="headerlink" href="#equation-power-of-q-h" title="Permalink to this equation">¶</a></span>\[P = \rho g Q \Delta h\]</div>
+<span class="eqno">(400)<a class="headerlink" href="#equation-power-of-q-h" title="Permalink to this equation">¶</a></span>\[P = \rho g Q \Delta h\]</div>
 <p>Combining the two equations we obtain.</p>
 <div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-4">
-<span class="eqno">(393)<a class="headerlink" href="#equation-rapid-mix-rm-intro-4" title="Permalink to this equation">¶</a></span>\[\Delta h =  \frac{G^2 \nu \theta}{g}\]</div>
+<span class="eqno">(401)<a class="headerlink" href="#equation-rapid-mix-rm-intro-4" title="Permalink to this equation">¶</a></span>\[\Delta h =  \frac{G^2 \nu \theta}{g}\]</div>
 <span id="table-conventional-rapid-mix-design-values"></span><table class="docutils align-default" id="id9">
-<caption><span class="caption-number">Table 9 </span><span class="caption-text">Typical values for conventional rapid mix residence time and average velocity gradients</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 10 </span><span class="caption-text">Typical values for conventional rapid mix residence time and average velocity gradients</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -412,7 +412,7 @@ Sincero. 1996. page 267.</p>
 </div>
 <div class="section" id="mixing-time">
 <span id="heading-mixing-time"></span><h3>Mixing Time<a class="headerlink" href="#mixing-time" title="Permalink to this headline">¶</a></h3>
-<p>The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-t-eddy">(120)</a>) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (<a class="reference internal" href="#figure-eddy-turnover-times"><span class="std std-numref">Fig. 86</span></a>).</p>
+<p>The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-t-eddy">(128)</a>) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (<a class="reference internal" href="#figure-eddy-turnover-times"><span class="std std-numref">Fig. 86</span></a>).</p>
 <div class="figure align-center" id="id10">
 <span id="figure-eddy-turnover-times"></span><a class="reference internal image-reference" href="../_images/Eddy_turnover_time1.png"><img alt="Eddy turnover time" src="../_images/Eddy_turnover_time1.png" style="width: 400px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 86 </span><span class="caption-text">Eddy turnover times as a function of length scale for a range of energy dissipation rates.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
