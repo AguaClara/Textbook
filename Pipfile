@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 alabaster = "==0.7.12"
-certifi = "==2018.4.16"
+certifi = "==2022.12.7"
 chardet = "==3.0.4"
 docutils = "==0.16"
 idna = "==2.10"
