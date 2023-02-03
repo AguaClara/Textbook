@@ -32,7 +32,7 @@ Finally, we take retention time :math:`\theta` over plant flow rate :math:`Q` to
 
 .. math::
 
-  \rlap{-} V_{floc} = \frac{\theta}{Q}
+  \rlap{-} V_{floc} = \theta Q
 
 Now that we have the basic parameters defined, we can start to design the details of the flocculator, starting from the physical dimensions.
 
