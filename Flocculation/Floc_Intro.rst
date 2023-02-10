@@ -221,10 +221,10 @@ The flocculation model (see Equation :eq:`CPlamint`) reveals that the velocity g
 
 There are diminishing returns on investment in larger flocculators to produce cleaner water because the time between collisions increases as the primary particles are spaced further apart. Eventually other processes  including fluidized floc filters (floc filters), plate settlers, and sand-floc filter (stacked rapid sand filter) are able to reduce the primary particle concentration at a lower cost.
 
-Collision Potential, :math:`G_{CS} \theta`, and Energy Dissipation Rate, :math:`\varepsilon`
+Collision Potential, :math:`\tilde{G} \theta`, and Energy Dissipation Rate, :math:`\varepsilon`
 ----------------------------------------------------------------------------------------------------
 
-Collision potential :math:`(G_{CS} \theta)` represents the number of potential particle collisions in a volume of fluid. It is a *dimensionless* parameter which is a logical design parameter for flocculators; large :math:`G_{CS} \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). AguaClara flocculators usually aim for a collision potential of :math:`(G_{CS} \theta) = 37,000`, which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`G_{CS}`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta` , the residence time of water in the flocculator, with units of ::math:`[T]` . :math:`\theta` is intuitive to measure, calculate, and understand. :math:`G_{CS}` is a bit more difficult.
+Collision potential :math:`(\tilde{G} \theta)` represents the number of potential particle collisions in a volume of fluid. It is a *dimensionless* parameter which is a logical design parameter for flocculators; large :math:`\tilde{G} \theta` values indicate lots of collisions (good) while small values indicate fewer collisions (not so good). AguaClara flocculators usually aim for a collision potential of :math:`(\tilde{G} \theta) = 37,000`, which has worked well in AguaClara plants historically. However, this value may change as research continues. The value for collision potential is obtained by multiplying :math:`\tilde{G}`, a parameter for average fluid shear with units of :math:`\frac{1}{[T]}`, and :math:`\theta` , the residence time of water in the flocculator, with units of ::math:`[T]` . :math:`\theta` is intuitive to measure, calculate, and understand. :math:`\tilde{G}` is a bit more difficult.
 
 
 
@@ -235,20 +235,20 @@ In any control volume or reactor, the total energy dissipated is equal to the me
 
   \bar \varepsilon = \frac{g h_L}{\theta}
 
-Note that the equation above is for :math:`\bar \varepsilon`, not :math:`\varepsilon`. Since the head loss term we are using, :math:`h_L`, occurs over the entire reactor, it can only be used to find an average energy dissipation rate for the entire reactor. Combining the equations above, :math:`G = \sqrt{\frac{\varepsilon}{\nu}}` and :math:`\bar \varepsilon = \frac{g h_L}{\theta}`, we can get an equation for :math:`G_{CS}` in terms of easily measureable parameters:
+Note that the equation above is for :math:`\bar \varepsilon`, not :math:`\varepsilon`. Since the head loss term we are using, :math:`h_L`, occurs over the entire reactor, it can only be used to find an average energy dissipation rate for the entire reactor. Combining the equations above, :math:`G = \sqrt{\frac{\varepsilon}{\nu}}` and :math:`\bar \varepsilon = \frac{g h_L}{\theta}`, we can get an equation for :math:`\tilde{G}` in terms of easily measureable parameters:
 
 .. math::
 
-  G_{CS} = \sqrt{\frac{g h_L}{\nu \theta}}
+  \tilde{G} = \sqrt{\frac{g h_L}{\nu \theta}}
 
 We can use this to obtain a final equation for collision potential of a reactor:
 
 .. math::
   :label: Gtheta_of_hL
 
-  G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}
+  \tilde{G} \theta = \sqrt{\frac{g h_L \theta}{\nu}}
 
-**Note:** When we say :math:`G \theta` we are almost always referring to :math:`G_{CS} \theta`.
+**Note:** When we say :math:`G \theta` we are almost always referring to :math:`\tilde{G} \theta`.
 
 
 Generating Head Loss with Baffles
@@ -338,18 +338,18 @@ Fortunately for us, both problems can be quantified with a single ratio:
 
 .. math::
 
-  \Pi_{G_{CS}}^{G_{max}} = \frac{G_{max}}{G_{CS}}
+  \Pi_{\tilde{G}}^{G_{max}} = \frac{G_{max}}{\tilde{G}}
 
 
-High values of :math:`\Pi_{G_{CS}}^{G_{max}}` occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local :math:`G` values, then :math:`G_{max}` becomes large. If the flocculator has a lot of dead space, then :math:`G_{CS}` becomes small. Either way, :math:`\Pi_{G_{CS}}^{G_{max}}` becomes larger.
+High values of :math:`\Pi_{\tilde{G}}^{G_{max}}` occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local :math:`G` values, then :math:`G_{max}` becomes large. If the flocculator has a lot of dead space, then :math:`\tilde{G}` becomes small. Either way, :math:`\Pi_{\tilde{G}}^{G_{max}}` becomes larger.
 
-**Note:** Recall the relationship between :math:`G` and :math:`\varepsilon` : :math:`G = \sqrt{ \frac{\varepsilon}{\nu} }`. From this relationship, we can see that :math:`G \propto \sqrt{\varepsilon}`. Thus, by defining  :math:`\Pi_{G_{CS}}^{G_{max}}`, we can also define a ratio for Max to average energy dissipation rate:
+**Note:** Recall the relationship between :math:`G` and :math:`\varepsilon` : :math:`G = \sqrt{ \frac{\varepsilon}{\nu} }`. From this relationship, we can see that :math:`G \propto \sqrt{\varepsilon}`. Thus, by defining  :math:`\Pi_{\tilde{G}}^{G_{max}}`, we can also define a ratio for Max to average energy dissipation rate:
 
 .. math::
 
-  \Pi_{\bar \varepsilon}^{\varepsilon_{max}} = \left( \Pi_{G_{CS}}^{G_{max}} \right)^2
+  \Pi_{\bar \varepsilon}^{\varepsilon_{max}} = \left( \Pi_{\tilde{G}}^{G_{max}} \right)^2
 
-Therefore, by making our :math:`\Pi_{G_{CS}}^{G_{max}}` as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. `A paper by Haarhoff and van der Walt in 2001 <https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the>`_ (DOI: 10.2166/aqua.2001.0014) uses CFD to show that the minimum :math:`\Pi_{G_{CS}}^{G_{max}}` attainable in a hydraulic flocculator is :math:`\Pi_{G_{CS}}^{G_{max}} = \sqrt{2} \approx 1.4`, which means that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{max}} = \left( \Pi_{G_{CS}}^{G_{max}} \right)^2 \approx 2`. So how do we optimize an AguaClara flocculator to make sure :math:`\Pi_{G_{CS}}^{G_{max}} = \sqrt{2}`?
+Therefore, by making our :math:`\Pi_{\tilde{G}}^{G_{max}}` as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. `A paper by Haarhoff and van der Walt in 2001 <https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the>`_ (DOI: 10.2166/aqua.2001.0014) uses CFD to show that the minimum :math:`\Pi_{\tilde{G}}^{G_{max}}` attainable in a hydraulic flocculator is :math:`\Pi_{\tilde{G}}^{G_{max}} = \sqrt{2} \approx 1.4`, which means that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{max}} = \left( \Pi_{\tilde{G}}^{G_{max}} \right)^2 \approx 2`. So how do we optimize an AguaClara flocculator to make sure :math:`\Pi_{\tilde{G}}^{G_{max}} = \sqrt{2}`?
 
 We define and optimize a performance metric:
 

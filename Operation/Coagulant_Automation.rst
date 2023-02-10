@@ -168,21 +168,21 @@ We previously assumed that we could neglect the effect of the settled water turb
 .. math::
   :label:
 
-	 \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=k\bar{\alpha}G_{CS}\theta.
+	 \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=k\bar{\alpha}\tilde{G}\theta.
 
 Replace alpha with the ratio of coagulant not tied up by dissolved organic matter to raw water turbidity.
 
 .. math::
   :label:
 
-	 \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} - C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}kG_{CS}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}
+	 \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} - C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}k\tilde{G}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}
 
 Create one grouping of constants.
 
 .. math::
   :label:
 
-	 \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} -C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}kG_{CS}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}
+	 \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} -C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}k\tilde{G}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}
 
 Replace constants with :math:`K_{u_{t-\theta}}^*`.
 
@@ -191,7 +191,7 @@ Replace constants with :math:`K_{u_{t-\theta}}^*`.
 
 	 \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}}-C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}K_{u_{t-\theta}}^*
 
-Now solve for the coagulant dose with an equation of the form y = mx + b. The parameter  :math:`K_{u}^*` incorporates properties of the primary particles (density and diameter), the flocculator collision potential (:math:`G_{CS}`), the coagulant nanoparticle properties (density and diameter), and the first order rate constant, k, that describes the conversion of primary particles into settleable flocs. One possible assumption is that :math:`K_{u}^*` can be treated as a constant.
+Now solve for the coagulant dose with an equation of the form y = mx + b. The parameter  :math:`K_{u}^*` incorporates properties of the primary particles (density and diameter), the flocculator collision potential (:math:`\tilde{G}`), the coagulant nanoparticle properties (density and diameter), and the first order rate constant, k, that describes the conversion of primary particles into settleable flocs. One possible assumption is that :math:`K_{u}^*` can be treated as a constant.
 
 .. math::
   :label: fullcoagdoseofCpKu*UVandturbidity

@@ -40,19 +40,19 @@ Substituting into our equation for :math:`G`,
 
 .. math::
 
-  G_{CS} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \frac{h_L}{H_{ff}}}
+  \tilde{G} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \frac{h_L}{H_{ff}}}
 
 Using our equation for :math:`h_L`,
 
 .. math::
 
-  G_{CS} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }
+  \tilde{G} =  \sqrt{\frac{g \bar v_{z_{ff}}}{\nu \phi_{ff}} \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{clay}} \right) C_{clay} }
 
 :math:`\phi_{ff} \approx 1` and is a function of :math:`C_{clay}`
 
-We can plot our results for :math:`G_{CS}` over a range of typical floc filter concentrations, which is around 1 - 5 g/L. We find that :math:`G_{CS}` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`G_{CS}` provided by the floc filter is much smaller than :math:`G_{CS}` provided by the flocculator. This is an important point because in the low :math:`G_{CS}` environment of the floc filter where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
+We can plot our results for :math:`\tilde{G}` over a range of typical floc filter concentrations, which is around 1 - 5 g/L. We find that :math:`\tilde{G}` ranges from 2 to 6 Hz. Recall that for flocculator design, we get anywhere from 70 to several hundred Hz. The :math:`\tilde{G}` provided by the floc filter is much smaller than :math:`\tilde{G}` provided by the flocculator. This is an important point because in the low :math:`\tilde{G}` environment of the floc filter where there are low levels of energy dissipation, we can grow larger flocs. The flocs are experiencing less shear so they can grow close to millimeter size.
 
-We can plot our results for :math:`G_{CS}\theta` by multiplying :math:`G_{CS}` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`Gv\theta` ranges from 2,000 to 6,000. Compare this to the :math:`G_{CS}\theta = 20,000` for the flocculator used in experiments (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_).
+We can plot our results for :math:`\tilde{G}\theta` by multiplying :math:`\tilde{G}` by the residence time we found earlier, :math:`\theta = 1000 s`. The result is that :math:`Gv\theta` ranges from 2,000 to 6,000. Compare this to the :math:`\tilde{G}\theta = 20,000` for the flocculator used in experiments (`Garland et al., 2017 <https://www.liebertpub.com/doi/10.1089/ees.2016.0174>`_).
 
 .. _figure_lab_setup:
 
@@ -72,11 +72,11 @@ We can plot our results for :math:`G_{CS}\theta` by multiplying :math:`G_{CS}` b
 
    Velocity gradient and collision potential as a function of floc filter concentration.
 
-How does such a small :math:`G_{CS}\theta` cause such a large reduction in turbidity? The question we are really asking is, is there anything special about the :math:`G_{CS}\theta` provided by the floc filter compared to the :math:`G_{CS}\theta` provided by the flocculator? If so, what is the difference and why is it so beneficial?
+How does such a small :math:`\tilde{G}\theta` cause such a large reduction in turbidity? The question we are really asking is, is there anything special about the :math:`\tilde{G}\theta` provided by the floc filter compared to the :math:`\tilde{G}\theta` provided by the flocculator? If so, what is the difference and why is it so beneficial?
 
-Experimental data helps explain this. Two systems were set up: one had a flocculator where :math:`G_{CS}\theta = 20,000` with a floc filter where :math:`G_{CS}\theta = 4,000`; the other just had a flocculator where :math:`G_{CS}\theta = 24,000`. Using the same influent water quality and coagulant dosing, we find that the first system with the flocculator and floc filter performed better than the second system, even though the overall :math:`G_{CS}\theta` values were the same.
+Experimental data helps explain this. Two systems were set up: one had a flocculator where :math:`\tilde{G}\theta = 20,000` with a floc filter where :math:`\tilde{G}\theta = 4,000`; the other just had a flocculator where :math:`\tilde{G}\theta = 24,000`. Using the same influent water quality and coagulant dosing, we find that the first system with the flocculator and floc filter performed better than the second system, even though the overall :math:`\tilde{G}\theta` values were the same.
 
-To understand this, we have to review assumptions in the derivation for :math:`G_{CS}`. Recall our assumption that fluid shear promotes the collision of two primary particles instead of the collision of primary particles with existing, large flocs. If our assumption was true, we would expect to see no difference between our two experimental setups. However, because we know that the two experimental setups did have different results, our assumption must be false because the assumption does not explain or account for these differences. There must be another mechanism occurring to explain why the floc filter greatly improves treatment quality. This leads us to believe that the flocs in the floc filter must be more involved than simply providing shear and velocity gradients; they must be capturing the small particles coming through the floc filter.
+To understand this, we have to review assumptions in the derivation for :math:`\tilde{G}`. Recall our assumption that fluid shear promotes the collision of two primary particles instead of the collision of primary particles with existing, large flocs. If our assumption was true, we would expect to see no difference between our two experimental setups. However, because we know that the two experimental setups did have different results, our assumption must be false because the assumption does not explain or account for these differences. There must be another mechanism occurring to explain why the floc filter greatly improves treatment quality. This leads us to believe that the flocs in the floc filter must be more involved than simply providing shear and velocity gradients; they must be capturing the small particles coming through the floc filter.
 
 This highlights an important distinction:
 
@@ -190,7 +190,7 @@ In both environments the flow around the flocs is dominated by viscous forces. T
    :align: center
 
    Velocity gradient, ~100 Hz, x Hz
-   :math:`G_{CS}\theta`, "20,000 - 40,000", "x,000 to y,000"
+   :math:`\tilde{G}\theta`, "20,000 - 40,000", "x,000 to y,000"
    energy source for fluid deformation, turbulence, floc drag
    flow regime at floc length scale, shear flow, velocity field is perturbed by falling flocs
    flocs are..., rotating from fluid shear, falling due to gravity

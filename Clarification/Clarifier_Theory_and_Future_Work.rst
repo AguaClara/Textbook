@@ -30,7 +30,7 @@ From the floc model we have
 .. math::
   :label: dCPdt_floc
 
-	 \frac{dC_{P}}{dt}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} G_{CS}
+	 \frac{dC_{P}}{dt}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} \tilde{G}
 
 
 From the floc filter we know that particle removal is first order with respect to depth of the floc filter or time in the floc filter. We can use floc filter data to estimate the first order rate constant.
@@ -61,14 +61,14 @@ We can obtain a minimum volume design by setting the rate of primary particle lo
 .. math::
   :label:
 
-	 -k_{ff}C_{P}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} G_{CS}
+	 -k_{ff}C_{P}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} \tilde{G}
 
 Now we solve the previous equation for the target concentration of primary particles that we should design for at the end of the flocculator.
 
 .. math::
   :label:
 
-	C_{P_{floc out}} = \frac{\pi \rho_P}{6} \left( \frac{k_{ff}}{\pi\bar{\alpha}k G_{CS}}\right)^{3/2}
+	C_{P_{floc out}} = \frac{\pi \rho_P}{6} \left( \frac{k_{ff}}{\pi\bar{\alpha}k \tilde{G}}\right)^{3/2}
 
 
 The concentration of primary particles at the flocculator effluent will be a function of the flocculator velocity gradient.
@@ -78,7 +78,7 @@ The next step is to determine the Gt for the flocculator given this effluent flo
 .. math::
   :label:
 
-   G_{CS}\theta \approx \frac{3}{2} \frac{\Lambda^2}{k \pi D_P^2 \alpha}
+   \tilde{G}\theta \approx \frac{3}{2} \frac{\Lambda^2}{k \pi D_P^2 \alpha}
 
 
 where the particle separation distance is given by
@@ -93,14 +93,14 @@ Putting the previous two equations together we have:
 .. math::
   :label:
 
-   G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi D_P^2 \alpha} \left( \frac{\pi D_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}
+   \tilde{G}\theta \approx \frac{3}{2} \frac{1}{k \pi D_P^2 \alpha} \left( \frac{\pi D_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}
 
 We can simplify this equation because the particle size cancels out.
 
 .. math::
   :label:
 
-   G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}
+   \tilde{G}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}
 
 
 Now we can substitute the equation for the optimal flocculated water primary particle concentrations into the flocculator performance equation.
@@ -108,7 +108,7 @@ Now we can substitute the equation for the optimal flocculated water primary par
 .. math::
   :label:
 
-   G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi\bar{\alpha}k G_{CS}}{k_{ff}}\right)
+   \tilde{G}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi\bar{\alpha}k \tilde{G}}{k_{ff}}\right)
 
 This simplifies to a very simple relationship that gives the optimal flocculator residence time. This analysis assumes that the cost per volume of flocculator is the same as the cost per volume of floc filter.
 
@@ -127,7 +127,7 @@ The flocculator head loss is given by
 .. math::
   :label:
 
-   h_{Floc} = G_{CS} \theta \frac{\nu G_{CS}}{g}
+   h_{Floc} = \tilde{G} \theta \frac{\nu \tilde{G}}{g}
 
 
 
