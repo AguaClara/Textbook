@@ -235,7 +235,7 @@ In any control volume or reactor, the total energy dissipated is equal to the me
 
   \bar \varepsilon = \frac{g h_L}{\theta}
 
-Note that the equation above is for :math:`\bar \varepsilon`, not :math:`\varepsilon`. Since the head loss term we are using, :math:`h_L`, occurs over the entire reactor, it can only be used to find an average energy dissipation rate for the entire reactor. Combining the equations above, :math:`G = \sqrt{\frac{\varepsilon}{\nu}}` and :math:`\bar \varepsilon = \frac{g h_L}{\theta}`, we can get an equation for :math:`\tilde{G}` in terms of easily measureable parameters:
+Note that the equation above is for :math:`\bar \varepsilon`, not :math:`\varepsilon`. Since the head loss term we are using, :math:`h_L`, occurs over the entire reactor, it can only be used to find an average energy dissipation rate for the entire reactor. Combining the equations above, :math:`G = \sqrt{\frac{\varepsilon}{\nu}}` and :math:`\bar \varepsilon = \frac{g h_L}{\theta}`, we can get an equation for :math:`\tilde{G}` in terms of easily measurable parameters:
 
 .. math::
 
@@ -331,7 +331,7 @@ Flocculator Efficiency
 
 When designing an effective and efficient flocculator, there are two main problems that we seek to avoid:
 
-1. Having certain sections in the flocculator with such high local :math:`G` values that our big, fluffy flocs are sheared apart into smaller flocs.
+1. Having certain sections in the flocculator with such high local :math:`\tilde{G}` values that our big, fluffy flocs are sheared apart into smaller flocs.
 2. Having dead space. Dead space means volume within the flocculator that is not being used to facilitate collisions. Dead space occurs after the flow has fully expanded from flowing around a baffle and before it reaches the next baffle.
 
 Fortunately for us, both problems can be quantified with a single ratio:

@@ -79,10 +79,10 @@ Horizontal-Vertical flow flocculators
 
 
 
-We start by making sure that our flocculator will be able to flocculate effectively by defining :math:`h_{L_{floc}}` and :math:`\tilde{G} \theta`. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards in AguaClara flocculators:
+We start by making sure that our flocculator will be able to flocculate effectively by defining :math:`h_{L_{floc}}` and :math:`\tilde{G} \theta`. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards (effective 2023) in AguaClara flocculators:
 
- - :math:`\tilde{G} = 100 Hz`
- - :math:`\tilde{G} \theta = 37,000`
+ - :math:`\tilde{G} = 50 Hz`
+ - :math:`\tilde{G} \theta = 35,000`
 
 The plant flow rate :math:`Q` is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water *at the end* of the flocculator, :math:`H`, the *maximum* length of the flocculator based on the length of the clarifier length, :math:`L_{Max, \, sed}`, and the *minimum* width of a flocculator channel required for a human to fit inside, :math:`W_{Min, \, human}`, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the clarifiers, which is why the length constraint exists. See :numref:`figure_physical_design_criteria_floc` for a representation of how the flocculator and clarifiers are placed in a plant.
 
