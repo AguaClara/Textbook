@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Filtration Theory and Future Work &mdash; AguaClara Textbook 343/merge documentation</title>
+  <title>Filtration Theory and Future Work &mdash; AguaClara Textbook 344/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                343/merge
+                344/merge
               </div>
             
           
@@ -464,10 +464,10 @@ As particles gradually deposit in an ever shrinking flow constriction, the veloc
 <span class="eqno">(782)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-12" title="Permalink to this equation">¶</a></span>\[\theta_{pore} = \frac{\rlap{-} V_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}\]</div>
 <p>The Camp Stein velocity gradient in a pore is obtained by assuming that all of the input kinetic energy is dissipated through viscosity during the time that the water spends in the pore.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-13">
-<span class="eqno">(783)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-13" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}}\]</div>
+<span class="eqno">(783)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-13" title="Permalink to this equation">¶</a></span>\[\tilde{G} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}}\]</div>
 <p>The head loss in the pore is from the jet kinetic energy. Substitute the equations for pore volume, residence time, and head loss to obtain the fundamental equation for the velocity gradient in a pore.</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-14">
-<span class="eqno">(784)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-14" title="Permalink to this equation">¶</a></span>\[G_{CS} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}\]</div>
+<span class="eqno">(784)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-14" title="Permalink to this equation">¶</a></span>\[\tilde{G} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}\]</div>
 <p>The estimated value of this velocity gradient is <em>300 Hz</em>.</p>
 <p>We need to compare the constricted jet velocity gradient with the clean bed injection velocity gradient that occurs due to the fact that the approach velocity at the point of flow injection in StaRS filters is much higher than the average approach velocity. The flow injection area is approximately 2.5 cm wide and serves an effective filter area (up and down!) of 20 cm (spacing between injection points is 10 cm.). Thus the approach velocity in current StaRS filters is 14.6 mm/s and the corresponding Camp Stein velocity gradient is <em>1440 Hz</em>.</p>
 <p>EstaRS filters have water falls from the filter inlet channel to inlet box. In recent designs the water flows through a narrow slot and then falls into the inlet box. The slot is about 3.4 cm wide and the water falls about 40 cm. The vertical velocity after dropping 40 cm is 2.8 m/s. The geometry of this water fall is complicated and we will assume the resulting jet is circular at impact with the water surface. The diameter of the jet is thus obtained from continuity and is equal to 9.5 cm.  Now we use the energy dissipation rate of a round jet to obtain <em>4300 Hz</em>. Thus the floc size could be set by the water fall in the inlet box since this is the highest velocity gradient on the path into and through the filter. However, our rough estimate based on wild extrapolation suggests that this would yield a 36 <span class="math notranslate nohighlight">\(\mu m\)</span> diameter floc. This is larger than the flocs produced by the clarifier plate settlers and thus it is possible that even with this waterfall, that the floc size distribution is set by the clarifier plate settlers.</p>
@@ -505,7 +505,7 @@ As particles gradually deposit in an ever shrinking flow constriction, the veloc
 <p>We will use the Camp Stein velocity gradient to estimate injection velocity required to create very small flocs. The important parameter for floc break up is a force that can be obtained from the velocity gradient multiplied by the dynamic viscosity.</p>
 <p>Solving <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-g-cs-porous-media">(187)</a> for the approach velocity, <span class="math notranslate nohighlight">\(v_a\)</span>, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-filtration-filtration-theory-and-future-work-16">
-<span class="eqno">(790)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-16" title="Permalink to this equation">¶</a></span>\[v_a = \left( G_{CS}^2 \frac{2\nu D_{sand}}{f_{\phi}} \frac{\phi^4}{(1-\phi)} \right)^{\frac{1}{3}}\]</div>
+<span class="eqno">(790)<a class="headerlink" href="#equation-filtration-filtration-theory-and-future-work-16" title="Permalink to this equation">¶</a></span>\[v_a = \left( \tilde{G}^2 \frac{2\nu D_{sand}}{f_{\phi}} \frac{\phi^4}{(1-\phi)} \right)^{\frac{1}{3}}\]</div>
 <p>to estimate the injection area that should be used to break up flocs entering the sand bed.</p>
 </div>
 <div class="section" id="floc-size-calculations">

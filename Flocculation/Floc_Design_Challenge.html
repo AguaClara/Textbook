@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Flocculation Design Challenge &mdash; AguaClara Textbook 343/merge documentation</title>
+  <title>Flocculation Design Challenge &mdash; AguaClara Textbook 344/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                343/merge
+                344/merge
               </div>
             
           
@@ -287,7 +287,7 @@ Make a copy of the <a class="reference external" href="https://cad.onshape.com/d
 <ol class="arabic simple">
 <li><dl class="simple">
 <dt>FS: We have provided a the skeleton of a function (flowDimensions) where you can add code. Use it to calculate the flocculator flow dimensions. Note that the function takes the design map as an input and returns the design map (with more parameters defined). Thus every parameter that you define as design.x will be returned by this function. We have provided recommended names for the parameters that you will be calculating in () below. After each step you can check the value that is being calculated by opening the variable table in the PS. Check the value of each calculation to make sure that the units are correct. In the flowDimensions function calculate the following:</dt><dd><ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(K_{baffle}\)</span> from the <em>vena contracta</em> for the case when <span class="math notranslate nohighlight">\(\Pi_{H_eS}&gt;6\)</span> (design.baffleK_min). Our best estimate for the <em>vena contracta</em> is from sluice gates where the geometry is very similar to flow around a baffle and thus use a value of 0.6 for a 90 degree bend. Remember that the fluid change in direction is twice as large for a baffle than for a sluice gate and thus it contracts by this much twice!</p></li>
+<li><p><span class="math notranslate nohighlight">\(K_{baffle}\)</span> from the <em>vena contracta</em> for the case when <span class="math notranslate nohighlight">\(\Pi_{H_eS}&gt;6\)</span> (design.baffleK_min). Our best estimate for the <em>vena contracta</em> is from sluice gates where the geometry is very similar to flow around a baffle and thus use a value of 0.6 for a 90 degree bend. Remember that the fluid change in direction is twice as large for a baffle than for a sluice gate and thus it contracts by this much twice! Note that this simplified design approach assumes that the flow has fully expanded before entering the next contraction.</p></li>
 <li><p>kinematic viscosity (design.NU) based on the minimum water temperature. If you start typing viscosity the functions will pop up.</p></li>
 <li><p>the baffle spacing (design.S), <span class="math notranslate nohighlight">\(S\)</span>, assuming the flow passage is square (see Equation <a class="reference internal" href="Floc_Derivations.html#equation-floc-baffle-spacing-squaregeometry">(512)</a>).</p></li>
 <li><p>the baffle spacing for the case (if statement here!) where the target outlet water height is greater than the calculated design.S. Use Equation <a class="reference internal" href="Floc_Derivations.html#equation-floc-baffle-spacing-const-pihs">(511)</a></p></li>

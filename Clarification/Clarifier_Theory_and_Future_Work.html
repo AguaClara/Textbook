@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Future Work &mdash; AguaClara Textbook 343/merge documentation</title>
+  <title>Future Work &mdash; AguaClara Textbook 344/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                343/merge
+                344/merge
               </div>
             
           
@@ -279,7 +279,7 @@
 <p>We now have a published flocculator model and we have strong evidence that primary particles are removed first order with respect to depth (or time) in the floc filter. Given these two models it is possible for the first time to optimize the design of a flocculator based on minimizing the volume of the flocculator and floc filter reactors.</p>
 <p>From the floc model we have</p>
 <div class="math notranslate nohighlight" id="equation-dcpdt-floc">
-<span class="eqno">(618)<a class="headerlink" href="#equation-dcpdt-floc" title="Permalink to this equation">¶</a></span>\[       \frac{dC_{P}}{dt}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} G_{CS}\]</div>
+<span class="eqno">(618)<a class="headerlink" href="#equation-dcpdt-floc" title="Permalink to this equation">¶</a></span>\[       \frac{dC_{P}}{dt}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} \tilde{G}\]</div>
 <p>From the floc filter we know that particle removal is first order with respect to depth of the floc filter or time in the floc filter. We can use floc filter data to estimate the first order rate constant.</p>
 <div class="math notranslate nohighlight" id="equation-dcpdt-fb">
 <span class="eqno">(619)<a class="headerlink" href="#equation-dcpdt-fb" title="Permalink to this equation">¶</a></span>\[       \frac{dC_{P}}{dt}=-k_{ff}C_{P}\]</div>
@@ -292,26 +292,26 @@
 <p>We will use the previous equation to estimate the rate constant for the floc filter.</p>
 <p>We can obtain a minimum volume design by setting the rate of primary particle loss at the end of the flocculator to be equal to the rate of primary particle loss at the beginning of the floc filter.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-theory-and-future-work-2">
-<span class="eqno">(622)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[       -k_{ff}C_{P}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} G_{CS}\]</div>
+<span class="eqno">(622)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-2" title="Permalink to this equation">¶</a></span>\[       -k_{ff}C_{P}=-\pi\bar{\alpha}kC_{P}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3} \tilde{G}\]</div>
 <p>Now we solve the previous equation for the target concentration of primary particles that we should design for at the end of the flocculator.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-theory-and-future-work-3">
-<span class="eqno">(623)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[      C_{P_{floc out}} = \frac{\pi \rho_P}{6} \left( \frac{k_{ff}}{\pi\bar{\alpha}k G_{CS}}\right)^{3/2}\]</div>
+<span class="eqno">(623)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-3" title="Permalink to this equation">¶</a></span>\[      C_{P_{floc out}} = \frac{\pi \rho_P}{6} \left( \frac{k_{ff}}{\pi\bar{\alpha}k \tilde{G}}\right)^{3/2}\]</div>
 <p>The concentration of primary particles at the flocculator effluent will be a function of the flocculator velocity gradient.</p>
 <p>The next step is to determine the Gt for the flocculator given this effluent flocculator particle concentration. The approximate equation for</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-theory-and-future-work-4">
-<span class="eqno">(624)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[ G_{CS}\theta \approx \frac{3}{2} \frac{\Lambda^2}{k \pi D_P^2 \alpha}\]</div>
+<span class="eqno">(624)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-4" title="Permalink to this equation">¶</a></span>\[ \tilde{G}\theta \approx \frac{3}{2} \frac{\Lambda^2}{k \pi D_P^2 \alpha}\]</div>
 <p>where the particle separation distance is given by</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-theory-and-future-work-5">
 <span class="eqno">(625)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-5" title="Permalink to this equation">¶</a></span>\[\Lambda = \left( \frac{\pi D_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{1}{3}\]</div>
 <p>Putting the previous two equations together we have:</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-theory-and-future-work-6">
-<span class="eqno">(626)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-6" title="Permalink to this equation">¶</a></span>\[ G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi D_P^2 \alpha} \left( \frac{\pi D_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}\]</div>
+<span class="eqno">(626)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-6" title="Permalink to this equation">¶</a></span>\[ \tilde{G}\theta \approx \frac{3}{2} \frac{1}{k \pi D_P^2 \alpha} \left( \frac{\pi D_P^3}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}\]</div>
 <p>We can simplify this equation because the particle size cancels out.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-theory-and-future-work-7">
-<span class="eqno">(627)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[ G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}\]</div>
+<span class="eqno">(627)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-7" title="Permalink to this equation">¶</a></span>\[ \tilde{G}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi}{6} \frac{\rho_P}{C_P} \right)^\frac{2}{3}\]</div>
 <p>Now we can substitute the equation for the optimal flocculated water primary particle concentrations into the flocculator performance equation.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-theory-and-future-work-8">
-<span class="eqno">(628)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[ G_{CS}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi\bar{\alpha}k G_{CS}}{k_{ff}}\right)\]</div>
+<span class="eqno">(628)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-8" title="Permalink to this equation">¶</a></span>\[ \tilde{G}\theta \approx \frac{3}{2} \frac{1}{k \pi \alpha} \left( \frac{\pi\bar{\alpha}k \tilde{G}}{k_{ff}}\right)\]</div>
 <p>This simplifies to a very simple relationship that gives the optimal flocculator residence time. This analysis assumes that the cost per volume of flocculator is the same as the cost per volume of floc filter.</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-theory-and-future-work-9">
 <span class="eqno">(629)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-9" title="Permalink to this equation">¶</a></span>\[\theta \approx \frac{3}{2} \left( \frac{1}{k_{ff}}\right)\]</div>
@@ -320,7 +320,7 @@
 High velocity gradients for flocculators with this long of a residence time will require a lot of head loss. We need to make sure that we are using a reasonable amount of energy.</p>
 <p>The flocculator head loss is given by</p>
 <div class="math notranslate nohighlight" id="equation-clarification-clarifier-theory-and-future-work-10">
-<span class="eqno">(630)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[ h_{Floc} = G_{CS} \theta \frac{\nu G_{CS}}{g}\]</div>
+<span class="eqno">(630)<a class="headerlink" href="#equation-clarification-clarifier-theory-and-future-work-10" title="Permalink to this equation">¶</a></span>\[ h_{Floc} = \tilde{G} \theta \frac{\nu \tilde{G}}{g}\]</div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=fMlmtxm_YWJY&amp;line=2&amp;uniqifier=1">See here for calculations of headloss throuh the floc filter</a></p>
 <p>The target flocculator Gt of 39,000 is crazy close to the current design. This value will undoubtedly change somewhat as we get better measurements for the floc filter rate constant.</p>
 <p>This analysis suggests that the primary particle concentration after flocculation can be quite high when operating with a floc filter. Further work will be required to ensure that startup is not a problem.</p>

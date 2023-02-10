@@ -42,7 +42,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`D_{cp}`,Diameter of core particle,:math:`[L]`
     :math:`F`,Force,:math:`\frac{[M][L]}{[T]^2}`
     :math:`G`,Velocity Gradient/Fluid Deformation,:math:`\frac{1}{[T]}`
-    :math:`G_{CS}`, Camp Stein velocity gradient,:math:`\frac{1}{[T]}`
+    :math:`\tilde{G}`, Camp Stein velocity gradient,:math:`\frac{1}{[T]}`
     :math:`G\theta`,Collision potential,Dimensionless
     :math:`H`,Height,:math:`[L]`
     :math:`H_c`,Critical height,:math:`[L]`

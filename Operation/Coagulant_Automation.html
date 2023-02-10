@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Coagulant Automation &mdash; AguaClara Textbook 343/merge documentation</title>
+  <title>Coagulant Automation &mdash; AguaClara Textbook 344/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                343/merge
+                344/merge
               </div>
             
           
@@ -349,17 +349,17 @@
 <h2>Improved Linearized Model<a class="headerlink" href="#improved-linearized-model" title="Permalink to this headline">¶</a></h2>
 <p>We previously assumed that we could neglect the effect of the settled water turbidity in Equation <span class="xref std std-ref">intdCPlam</span>. Here we don’t make this assumption and linearize the model again. We begin with Equation <span class="xref std std-ref">intdCPlam</span>, combine unknowns into a single constant, assume that the probability of attachment is proportional to the coagulant dose normalized by the concentration of primary particles, and replace primary particle concentration with turbidity.</p>
 <div class="math notranslate nohighlight" id="equation-operation-coagulant-automation-0">
-<span class="eqno">(834)<a class="headerlink" href="#equation-operation-coagulant-automation-0" title="Permalink to this equation">¶</a></span>\[       \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=k\bar{\alpha}G_{CS}\theta.\]</div>
+<span class="eqno">(834)<a class="headerlink" href="#equation-operation-coagulant-automation-0" title="Permalink to this equation">¶</a></span>\[       \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=k\bar{\alpha}\tilde{G}\theta.\]</div>
 <p>Replace alpha with the ratio of coagulant not tied up by dissolved organic matter to raw water turbidity.</p>
 <div class="math notranslate nohighlight" id="equation-operation-coagulant-automation-1">
-<span class="eqno">(835)<a class="headerlink" href="#equation-operation-coagulant-automation-1" title="Permalink to this equation">¶</a></span>\[       \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} - C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}kG_{CS}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}\]</div>
+<span class="eqno">(835)<a class="headerlink" href="#equation-operation-coagulant-automation-1" title="Permalink to this equation">¶</a></span>\[       \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} - C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}k\tilde{G}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}\]</div>
 <p>Create one grouping of constants.</p>
 <div class="math notranslate nohighlight" id="equation-operation-coagulant-automation-2">
-<span class="eqno">(836)<a class="headerlink" href="#equation-operation-coagulant-automation-2" title="Permalink to this equation">¶</a></span>\[       \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} -C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}kG_{CS}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}\]</div>
+<span class="eqno">(836)<a class="headerlink" href="#equation-operation-coagulant-automation-2" title="Permalink to this equation">¶</a></span>\[       \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} -C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}k\tilde{G}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}\]</div>
 <p>Replace constants with <span class="math notranslate nohighlight">\(K_{u_{t-\theta}}^*\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-operation-coagulant-automation-3">
 <span class="eqno">(837)<a class="headerlink" href="#equation-operation-coagulant-automation-3" title="Permalink to this equation">¶</a></span>\[       \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}}-C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}K_{u_{t-\theta}}^*\]</div>
-<p>Now solve for the coagulant dose with an equation of the form y = mx + b. The parameter  <span class="math notranslate nohighlight">\(K_{u}^*\)</span> incorporates properties of the primary particles (density and diameter), the flocculator collision potential (<span class="math notranslate nohighlight">\(G_{CS}\)</span>), the coagulant nanoparticle properties (density and diameter), and the first order rate constant, k, that describes the conversion of primary particles into settleable flocs. One possible assumption is that <span class="math notranslate nohighlight">\(K_{u}^*\)</span> can be treated as a constant.</p>
+<p>Now solve for the coagulant dose with an equation of the form y = mx + b. The parameter  <span class="math notranslate nohighlight">\(K_{u}^*\)</span> incorporates properties of the primary particles (density and diameter), the flocculator collision potential (<span class="math notranslate nohighlight">\(\tilde{G}\)</span>), the coagulant nanoparticle properties (density and diameter), and the first order rate constant, k, that describes the conversion of primary particles into settleable flocs. One possible assumption is that <span class="math notranslate nohighlight">\(K_{u}^*\)</span> can be treated as a constant.</p>
 <div class="math notranslate nohighlight" id="equation-fullcoagdoseofcpku-uvandturbidity">
 <span class="eqno">(838)<a class="headerlink" href="#equation-fullcoagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[       C_{coag_{t-\theta}} = \frac{1}{K_{u^*}}C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)+C_{coag_{DOM_{t-\theta}}}\]</div>
 <p>The coagulant demand of the DOM is obtained by rearranging Equation <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(838)</a>.</p>
