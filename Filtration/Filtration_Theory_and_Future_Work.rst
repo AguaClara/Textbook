@@ -267,13 +267,13 @@ The Camp Stein velocity gradient in a pore is obtained by assuming that all of t
 
 .. math::
 
-    G_{CS} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}}
+    \tilde{G} = \sqrt{\frac{gh_{\rm{L}}}{\nu \theta}}
 
 The head loss in the pore is from the jet kinetic energy. Substitute the equations for pore volume, residence time, and head loss to obtain the fundamental equation for the velocity gradient in a pore.
 
 .. math::
 
-    G_{CS} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}
+    \tilde{G} =\bar v_{constriction} \sqrt{\frac{ v_a}{2\nu \phi\Lambda_{pore}}}
 
 The estimated value of this velocity gradient is *300 Hz*.
 
@@ -353,7 +353,7 @@ Solving :eq:`eq_G_CS_porous_media` for the approach velocity, :math:`v_a`, we ob
 
 .. math::
 
-    v_a = \left( G_{CS}^2 \frac{2\nu D_{sand}}{f_{\phi}} \frac{\phi^4}{(1-\phi)} \right)^{\frac{1}{3}}
+    v_a = \left( \tilde{G}^2 \frac{2\nu D_{sand}}{f_{\phi}} \frac{\phi^4}{(1-\phi)} \right)^{\frac{1}{3}}
 
 to estimate the injection area that should be used to break up flocs entering the sand bed.
 

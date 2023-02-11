@@ -23,16 +23,16 @@ Equation Quick Reference
     :eq:`V_floc_of_n_cp`, Fractal floc volume, :math:`\rlap{-} V_{floc} = \rlap{-} V_{cp} n_{cp}^\frac{3}{\Pi_{fractal}}`, 3
     :eq:`vt_of_floc`, Floc terminal velocity, :math:`v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}`, 3
     :eq:`Gmax_of_d_floc`, Max floc velocity gradient, :math:`G_{max} = \frac{4F_{bond}}{3 \pi \mu D_{floc_{max}}^2}`, 3
-    :eq:`G_Camp_Stein`, Camp-Stein velocity, :math:`G_{CS} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}`, `[+] <https://aguaclara.github.io/aguaclara/core/physchem.html#aguaclara.core.physchem.g_cs_ergun>`_
+    :eq:`G_Camp_Stein`, Camp-Stein velocity, :math:`\tilde{G} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}`, `[+] <https://aguaclara.github.io/aguaclara/core/physchem.html#aguaclara.core.physchem.g_cs_ergun>`_
     :eq:`einstein_diffusion`, Einstein’s diffusion, :math:`D_{Diffusion} = \frac{k_B T}{3 \pi \mu D_P}`, 4
     :eq:`cdc_tube_Q_max`, Linear CDC, :math:`Q_{Max Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}`, 6
     :eq:`Q_tank_with_valve`, Tank with a valve, :math:`\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}`, 6
     :eq:`power_of_Q_h`, Mechanical power, :math:`P = \rho g Q \Delta h`, 7
     :eq:`Q_max_served_per_injection_port`, Flow per chemical injection port, :math:`Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}`, 7
-    :eq:`Gtheta_of_hL`, Collision potential, :math:`G_{CS} \theta = \sqrt{\frac{g h_L \theta}{\nu}}`, 8
-    :eq:`W_min_HVFloc`, Channel width, :math:`W_{Min \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}`, 8
-    :eq:`floc_He_max_const_K`, Distance between expansions, :math:`H_{e_{max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}`, 8
-    :eq:`Floc_baffle_spacing_of_K`, Baffle spacing, :math:`S = \left( \frac{K}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}`, 8
+    :eq:`Gtheta_of_hL`, Collision potential, :math:`\tilde{G} \theta = \sqrt{\frac{g h_L \theta}{\nu}}`, 8
+    :eq:`W_min_HVFloc`, Channel width, :math:`W_{Min \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}`, 8
+    :eq:`floc_He_max_const_K`, Distance between expansions, :math:`H_{e_{max}} = \left[ \frac{K}{2 \nu \tilde{G}^2} \left( \frac{Q \Pi_{{HS}_{max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}`, 8
+    :eq:`Floc_baffle_spacing_of_K`, Baffle spacing, :math:`S = \left( \frac{K}{2 H_e \tilde{G}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}`, 8
     :eq:`max_clarifier_jet_velocity_of_G`, Maximum jet velocity , :math:`\frac{\bar v_{M_1}}{\bar v_{P}} = \sqrt{\frac{2(1 - \Pi_{Q}^2)}{\Pi_{Q}^2 + 1}}`, 9
     :eq:`Q_tube_settler`, Tube settler flow, :math:`Q_{Tube}=\frac{\bar v_{c}\pi D^2}{4} \left(\frac{L}{D} \cos \alpha +\sin \alpha \right)`, 9
     :eq:`Plate_S_min_of_fractal`, Minimum plate settler spacing, :math:`S_{min} \approx \frac{3 \bar v_{z_{Plate}}}{\sin^2 \alpha} \left( \frac{18 \nu}{g D_{cp}} \frac{\rho_{H_2O}}{\rho_{cp} - \rho_{H_2O}} \right)`, 9

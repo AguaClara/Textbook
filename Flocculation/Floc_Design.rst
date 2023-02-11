@@ -21,12 +21,12 @@ The flocculator is more complex to design than the CDC, as it has more details a
 
 In all cases we will need equations relating head loss, velocity gradient, viscosity, and collision potential. Flocculators must operate effectively over a range of temperatures and the critical design temperature is the coldest operating temperature. The viscosity shown in subsequent equations is the viscosity at the coldest operating temperature.
 
-The following equations describe the design process assuming that a velocity gradient is specified for the coldest operating temperature. Given :math:`G_{CS}`, we can very easily find :math:`\theta`:
+The following equations describe the design process assuming that a velocity gradient is specified for the coldest operating temperature. Given :math:`\tilde{G}`, we can very easily find :math:`\theta`:
 
 .. math::
   :label: theta_of_Gtheta_and_G
 
-  \theta = \frac{G_{CS} \theta}{G_{CS}}
+  \theta = \frac{\tilde{G} \theta}{\tilde{G}}
 
 Finally, we take retention time :math:`\theta` over plant flow rate :math:`Q` to get the required volume of the flocculator:
 
@@ -47,8 +47,8 @@ Horizontal-Vertical flow flocculators
 
 1. Input parameters
     - Specify:
-      - :math:`G_{CS}`, velocity gradient at the coldest operating temperature
-      - :math:`G_{CS} \theta`, collision potential at the coldest operating temperature
+      - :math:`\tilde{G}`, velocity gradient at the coldest operating temperature
+      - :math:`\tilde{G} \theta`, collision potential at the coldest operating temperature
       - :math:`Q`, plant flow rate
       - :math:`H`, height of water *at the end of the flocculator*
       - :math:`L_{Max, \, sed}`, max length of a flocculator channel based on clarifier length
@@ -79,10 +79,10 @@ Horizontal-Vertical flow flocculators
 
 
 
-We start by making sure that our flocculator will be able to flocculate effectively by defining :math:`h_{L_{floc}}` and :math:`G_{CS} \theta`. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards in AguaClara flocculators:
+We start by making sure that our flocculator will be able to flocculate effectively by defining :math:`h_{L_{floc}}` and :math:`\tilde{G} \theta`. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards (effective 2023) in AguaClara flocculators:
 
- - :math:`G_{CS} = 100 Hz`
- - :math:`G_{CS} \theta = 37,000`
+ - :math:`\tilde{G} = 50 Hz`
+ - :math:`\tilde{G} \theta = 35,000`
 
 The plant flow rate :math:`Q` is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water *at the end* of the flocculator, :math:`H`, the *maximum* length of the flocculator based on the length of the clarifier length, :math:`L_{Max, \, sed}`, and the *minimum* width of a flocculator channel required for a human to fit inside, :math:`W_{Min, \, human}`, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the clarifiers, which is why the length constraint exists. See :numref:`figure_physical_design_criteria_floc` for a representation of how the flocculator and clarifiers are placed in a plant.
 
@@ -137,7 +137,7 @@ Width and Number of Channels
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The width of a single flocculator channel must meet the following conditions:
-- Maintain :math:`G_{CS}` at the value found in the inputs section
+- Maintain :math:`\tilde{G}` at the value found in the inputs section
 - Allow for :math:`3 < \frac{H_e}{S} < 6`. Recall that :math:`\frac{H_e}{S} =  \Pi_{H_eS}`
 - Allow for a human to be able to fit into a flocculator channel
 
@@ -146,21 +146,21 @@ The first two conditions are wrapped up into the following equation, :ref:`which
 .. math::
   :label: floc_channel_W_min_const_K
 
-  W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{K}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+  W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{K}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}
 
 Given that the baffle minor loss coefficient is now known to be a function of :math:`\Pi_{H_eS}` we substitute :eq:`K_baffle_expanding`.
 
 .. math::
   :label: floc_channel_W_min_var_K_draft
 
-  W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS_{min}}}\right) ^ 2}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+  W_{Min_{H_eS}} = \frac{\Pi_{H_eS_{min}}Q}{H_e}\left( \frac{ \left(\frac{\left(1 - \Pi_{vc}^{baffle}\right) ^ 2}{ \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \Pi_{H_eS_{min}}}\right) ^ 2}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}
 
 Group the parameters so that the dimensions inside the exponents are a simple as possible.
 
 .. math::
   :label: floc_channel_W_min_var_K
 
-  W_{Min_{H_eS}} = \frac{Q}{\left(\nu G_{CS}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS_{min}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
+  W_{Min_{H_eS}} = \frac{Q}{\left(\nu \tilde{G}^2 H_e^4\right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{H_eS_{min}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
 
 
 This equation represents the absolute smallest width of a flocculator channel if we consider the lowest value of :math:`\Pi_{H_eS}` and the highest possible value of :math:`H_e`:
@@ -211,21 +211,21 @@ We calculate :math:`H_{e_{max}}` based on the physical flocculator dimensions. T
 .. math::
   :label: floc_He_max_var_K
 
-  H_{e_{max}}^\frac{4}{3}= \frac{Q}{W_{Min_{H_eS}} \left(\nu G_{CS}^2 \right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{{H_eS}_{max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
+  H_{e_{max}}^\frac{4}{3}= \frac{Q}{W_{Min_{H_eS}} \left(\nu \tilde{G}^2 \right)^\frac{1}{3}}\left( \frac{ \left(1 - \Pi_{vc}^{baffle}\right) ^ 4 \Pi_{{H_eS}_{max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right)^\frac{1}{3}
 
 raise to 3/4
 
 .. math::
   :label: floc_He_max_var_K2
 
-  H_{e_{max}}= \left[ \left(\frac{Q^3}{W_{Min_{H_eS}}^3 \nu G_{CS}^2}\right)\frac{  \Pi_{{H_eS}_{max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right]^\frac{1}{4} \left(1 - \Pi_{vc}^{baffle}\right)
+  H_{e_{max}}= \left[ \left(\frac{Q^3}{W_{Min_{H_eS}}^3 \nu \tilde{G}^2}\right)\frac{  \Pi_{{H_eS}_{max}}}{2   \left( \Pi_{vc}^{baffle} \Pi_{PlaneJet_{exp}} \right)^2} \right]^\frac{1}{4} \left(1 - \Pi_{vc}^{baffle}\right)
 
 For :math:`\Pi_{H_eS}` large enough such that the flow has fully expanded the following equation applies.
 
 .. math::
   :label: floc_He_max_const_K
 
-  H_{e_{max}} = \left[ \frac{K}{2 \nu G_{CS}^2} \left( \frac{Q \Pi_{{HS}_{max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}
+  H_{e_{max}} = \left[ \frac{K}{2 \nu \tilde{G}^2} \left( \frac{Q \Pi_{{HS}_{max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}
 
 Note that this is the *maximum* distance between flow expansions, and does not account for the limitation that there must be an integer number of obstacles per baffle space. Thus, we need to find the *actual* distance between flow expansions. To do this, we determine and round up the number of expansions per baffle space using the ceiling function:
 
