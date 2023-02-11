@@ -155,7 +155,7 @@ The energy dissipation rate in Equation :eq:`G_Camp_Stein` can be set equal to t
 .. math::
   :label: eq_gen_G_and_hL
 
-  \nu G_{CS}^2 \theta = g h_{L}
+  \nu \tilde{G}^2 \theta = g h_{L}
 
 Equation :eq:`eq_gen_G_and_hL` can be applied to a control volume that contains an entire flocculator or to a control volume containing a single flow expansion. Here we develop the analysis of a single flow expansion. This means that the residence time is the time between expansions, :math:`\theta_e`, and the head loss is for one expansion, :math:`h_{L_{e}}`.
 
@@ -166,33 +166,33 @@ From here we make three subsequent substitutions: first
 
 where :math:`S` is the distance between baffles, :math:`W` is the dimension of the flow that is normal to :math:`S` and :math:`H_e` the distance between expansions. For complex geometry the best way to estimate :math:`H_e` is the volume of water divided by :math:`WS`.
 
-.. math:: \nu G_{CS}^2 = K_{baffle} \frac{\bar v^2}{2 \theta_e}
+.. math:: \nu \tilde{G}^2 = K_{baffle} \frac{\bar v^2}{2 \theta_e}
 
-.. math:: \nu G_{CS}^2 = K_{baffle} \frac{\bar v^3}{2 H_e}
+.. math:: \nu \tilde{G}^2 = K_{baffle} \frac{\bar v^3}{2 H_e}
 
 .. math::
   :label: flocGeoG
 
-  \nu G_{CS}^2 = \frac{K_{baffle}}{2 H_e} \left( \frac{Q}{WS} \right)^3
+  \nu \tilde{G}^2 = \frac{K_{baffle}}{2 H_e} \left( \frac{Q}{WS} \right)^3
 
 Equation :eq:`flocGeoG` describes the relationship between the geometry of the flocculator, the flow rate, and the resulting velocity gradient.
 
 Channel or Flow Width
 =====================
 
-The minimum allowable width of a Horizontal-Vertical flocculator channel is based on the requirements that :math:`3 < \Pi_{H_eS} < 6` and that we maintain the :math:`G_{CS}` that
+The minimum allowable width of a Horizontal-Vertical flocculator channel is based on the requirements that :math:`3 < \Pi_{H_eS} < 6` and that we maintain the :math:`\tilde{G}` that
 serves as a basis for design. The final parameter derived is
 :math:`W_{Min, \, \Pi_{H_eS}}`.
 
 Our two restrictions are:
 
-#. Ensuring that we maintain the :math:`G_{CS}` we get based on our input parameters.
+#. Ensuring that we maintain the :math:`\tilde{G}` we get based on our input parameters.
 #. Ensuring that :math:`3 < \frac{H_e}{S} < 6`
 
 
 Now we can solve this equation for channel width, :math:`W`.
 
-.. math:: W = \frac{Q}{S}\left( \frac{K_{baffle}}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+.. math:: W = \frac{Q}{S}\left( \frac{K_{baffle}}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}
 
 From here, we can define :math:`\Pi_{H_eS} = \frac{H_e}{S}` and
 substitute :math:`S = \frac{H_e}{\Pi_{H_eS}}` into the previous equation
@@ -202,7 +202,7 @@ for :math:`W` to get :math:`W_{Min, \, \Pi_{H_eS}}`:
   :label: W_min_HVFloc
 
 
-   W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K_{baffle}}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}
+   W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K_{baffle}}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}
 
 
 | This equation represents the absolute smallest width of a flocculator
@@ -219,7 +219,7 @@ The core equation relating flow geometry and velocity gradient is Equation :eq:`
 .. math::
   :label: Floc_baffle_spacing_of_K
 
-   S = \left( \frac{K_{baffle}}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W}
+   S = \left( \frac{K_{baffle}}{2 H_e \tilde{G}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W}
 
 If the jet has not fully expanded before entering the next contraction or if it is unknown if the jet has fully expanded then iteratively use Equation :eq:`Floc_baffle_spacing_of_K` and after each iteration get a better estimate of :math:`K_{baffle}` by using Equation :eq:`K_baffle_expanding`.
 
@@ -235,11 +235,11 @@ If :math:`\Pi_{H_eS}` and the flow width, :math:`W`, are specified we can substi
 .. math::
   :label: floc_baffle_spacing_const_PiHS
 
-  S = \left[\frac{K_{baffle}}{2 \nu G_{CS}^2 \Pi_{H_eS}} \left( \frac{Q}{W} \right)^3\right]^{\frac{1}{4}}
+  S = \left[\frac{K_{baffle}}{2 \nu \tilde{G}^2 \Pi_{H_eS}} \left( \frac{Q}{W} \right)^3\right]^{\frac{1}{4}}
 
 where :math:`K_{baffle}` is obtained using Equation :eq:`K_baffle_expanding`. An alternative assumption is that the flow width and the baffle spacing are equal. Given those assumptions we can make those substitutions and solve Equation :eq:`flocGeoG` for the baffle space, S.
 
 .. math::
   :label: floc_baffle_spacing_squareGeometry
 
-   S = \left(\frac{K_{baffle}Q^3}{2  \nu G_{CS}^2 \Pi_{H_eS}} \right)^{\frac{1}{7}}
+   S = \left(\frac{K_{baffle}Q^3}{2  \nu \tilde{G}^2 \Pi_{H_eS}} \right)^{\frac{1}{7}}

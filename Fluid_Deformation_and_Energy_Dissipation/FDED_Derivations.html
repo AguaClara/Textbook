@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Fluid Deformation and Energy Dissipation Derivations &mdash; AguaClara Textbook v1.4.16 documentation</title>
+  <title>Fluid Deformation and Energy Dissipation Derivations &mdash; AguaClara Textbook v1.4.17 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.4.16
+                v1.4.17
               </div>
             
           
@@ -296,10 +296,10 @@
 <ol class="arabic simple">
 <li><p>Use the Navier Stokes equations and solve for the spatially averaged velocity gradient.</p></li>
 <li><p>Use Computational Fluid Dynamics (CFD) to solve for the spatially averaged velocity gradient.</p></li>
-<li><p>Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, <span class="math notranslate nohighlight">\(G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}\)</span>, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).</p></li>
+<li><p>Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, <span class="math notranslate nohighlight">\(\tilde{G} = \sqrt{\frac{\bar\varepsilon}{\nu}}\)</span>, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).</p></li>
 </ol>
 <p>The first approach would be ideal but is difficult in practice because Navier Stokes solutions are only available for limited geometries and laminar flow. CFD could be used but is difficult to use as a general engineering design approach given the large number of geometries that are used in drinking water treatment plants. For these reasons we will use the control volume approach to estimate the average velocity gradient. This method incorrectly assumes that the energy dissipation rate is completely uniform in the control volume and hence the velocity gradient is also uniform. This method results in an over estimation of the velocity gradient.
-The Camp-Stein estimate of <span class="math notranslate nohighlight">\(G_{CS}\)</span> is based on a control volume where the velocity gradient is uniform. Consider a layer of fluid of depth <span class="math notranslate nohighlight">\(H\)</span> and apply a velocity, <span class="math notranslate nohighlight">\(v\)</span> at the top of the fluid. The velocity gradient, <span class="math notranslate nohighlight">\(G\)</span>, is thus <span class="math notranslate nohighlight">\(\frac{v}{H}\)</span> everywhere in the fluid. The force required to move the top of the fluid at velocity v can be obtained from the required shear, <span class="math notranslate nohighlight">\(\tau\)</span>. From Newtons Law of Friction we have</p>
+The Camp-Stein estimate of <span class="math notranslate nohighlight">\(\tilde{G}\)</span> is based on a control volume where the velocity gradient is uniform. Consider a layer of fluid of depth <span class="math notranslate nohighlight">\(H\)</span> and apply a velocity, <span class="math notranslate nohighlight">\(v\)</span> at the top of the fluid. The velocity gradient, <span class="math notranslate nohighlight">\(G\)</span>, is thus <span class="math notranslate nohighlight">\(\frac{v}{H}\)</span> everywhere in the fluid. The force required to move the top of the fluid at velocity v can be obtained from the required shear, <span class="math notranslate nohighlight">\(\tau\)</span>. From Newtons Law of Friction we have</p>
 <div class="math notranslate nohighlight" id="equation-tau-of-mu-g">
 <span class="eqno">(102)<a class="headerlink" href="#equation-tau-of-mu-g" title="Permalink to this equation">¶</a></span>\[\tau = \mu \frac{v}{H} = \mu G = \nu\rho G\]</div>
 <p>Where <span class="math notranslate nohighlight">\(\tau\)</span> is the force required per unit plan view area.</p>
@@ -348,14 +348,14 @@ The Camp-Stein estimate of <span class="math notranslate nohighlight">\(G_{CS}\)
 <p>where <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span> is 1 for a uniform velocity gradient and is less than one for non uniform velocity gradients. We can think <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span> as a measure of the efficiency of using energy to deform the fluid. We can calculate <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span> for cases where we have either a Navier Stokes or a computation fluid dynamics estimate of <span class="math notranslate nohighlight">\(\bar G\)</span>.</p>
 <p>The conventional approach to design of flocculators uses the Camp Stein definition of</p>
 <div class="math notranslate nohighlight" id="equation-g-camp-stein">
-<span class="eqno">(114)<a class="headerlink" href="#equation-g-camp-stein" title="Permalink to this equation">¶</a></span>\[G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}\]</div>
-<p>where <span class="math notranslate nohighlight">\(G_{CS}\)</span> is <strong>not</strong> the average velocity gradient, but is larger than the average velocity gradient by a factor of <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span>. Thus we have</p>
+<span class="eqno">(114)<a class="headerlink" href="#equation-g-camp-stein" title="Permalink to this equation">¶</a></span>\[\tilde{G} = \sqrt{\frac{\bar\varepsilon}{\nu}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tilde{G}\)</span> is <strong>not</strong> the average velocity gradient, but is larger than the average velocity gradient by a factor of <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span>. Thus we have</p>
 <div class="math notranslate nohighlight" id="equation-pi-gcs">
-<span class="eqno">(115)<a class="headerlink" href="#equation-pi-gcs" title="Permalink to this equation">¶</a></span>\[G_{CS} = \Pi_{CS}\bar G\]</div>
+<span class="eqno">(115)<a class="headerlink" href="#equation-pi-gcs" title="Permalink to this equation">¶</a></span>\[\tilde{G} = \Pi_{CS}\bar G\]</div>
 <p>Use of the Camp Stein velocity gradient in design of mixing units and flocculators results in an error when applying results from one reactor to another. If the energy dissipation rate distribution within the reactors is different, then <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span> will be different for the two reactors and the actual average velocity gradient, <span class="math notranslate nohighlight">\(\bar G\)</span> will be different for the two reactors.</p>
-<p>Given that energy is used more efficiently to produce velocity gradients if the velocity gradients are uniform, our goal is to design mixing and flocculation units that have relatively uniform velocity gradients. If all of our reactors at both research scale and municipal scale have similar values of <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span>, then we can use the Camp Stein definition of <span class="math notranslate nohighlight">\(G_{CS}\)</span> and not introduce any significant errors. It will not be reasonable, however, to expect similar performance based on similar values of <span class="math notranslate nohighlight">\(G_{CS}\)</span> if one reactor has relatively uniform energy dissipation rates and the other reactor has zones with very high energy dissipation rates and zones with very low energy dissipation rates.</p>
+<p>Given that energy is used more efficiently to produce velocity gradients if the velocity gradients are uniform, our goal is to design mixing and flocculation units that have relatively uniform velocity gradients. If all of our reactors at both research scale and municipal scale have similar values of <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span>, then we can use the Camp Stein definition of <span class="math notranslate nohighlight">\(\tilde{G}\)</span> and not introduce any significant errors. It will not be reasonable, however, to expect similar performance based on similar values of <span class="math notranslate nohighlight">\(\tilde{G}\)</span> if one reactor has relatively uniform energy dissipation rates and the other reactor has zones with very high energy dissipation rates and zones with very low energy dissipation rates.</p>
 <p>We will demonstrate later that mechanically mixed reactors typically have a much wider range of energy dissipation rates than do well designed hydraulically mixed reactors. Thus comparisons between mechanically mixed and hydraulically mixed reactors must account for differences in <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span>.</p>
-<p>We will use the Camp Stein definition <span class="math notranslate nohighlight">\(G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}\)</span> as the design parameter of convenience in this textbook.</p>
+<p>We will use the Camp Stein definition <span class="math notranslate nohighlight">\(\tilde{G} = \sqrt{\frac{\bar\varepsilon}{\nu}}\)</span> as the design parameter of convenience in this textbook.</p>
 </div>
 <div class="section" id="estimates-of-time-required-for-mixing-processes">
 <span id="heading-estimates-of-time-required-for-mixing-processes"></span><h2>Estimates of Time Required for Mixing Processes<a class="headerlink" href="#estimates-of-time-required-for-mixing-processes" title="Permalink to this headline">¶</a></h2>
@@ -484,10 +484,10 @@ Thus we have</p>
 <span class="eqno">(136)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-25" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{{\rm f}}{2} \frac{\bar v^3}{D}\]</div>
 <p>We use the average velocity gradient defined by Camp and Stein, Equation <a class="reference internal" href="#equation-g-camp-stein">(114)</a>, to obtain the velocity gradient in the pipe.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-26">
-<span class="eqno">(137)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-26" title="Permalink to this equation">¶</a></span>\[G_{CS} = \left(\frac{{\rm f}}{2\nu} \frac{\bar v^3}{D} \right)^\frac{1}{2}\]</div>
+<span class="eqno">(137)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-26" title="Permalink to this equation">¶</a></span>\[\tilde{G} = \left(\frac{{\rm f}}{2\nu} \frac{\bar v^3}{D} \right)^\frac{1}{2}\]</div>
 <p>or in terms of flow rate, we have:</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-27">
-<span class="eqno">(138)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-27" title="Permalink to this equation">¶</a></span>\[G_{CS} = \left(\frac{\rm{32f}}{ \pi^3\nu} \frac{Q^3}{D^7} \right)^\frac{1}{2}\]</div>
+<span class="eqno">(138)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-27" title="Permalink to this equation">¶</a></span>\[\tilde{G} = \left(\frac{\rm{32f}}{ \pi^3\nu} \frac{Q^3}{D^7} \right)^\frac{1}{2}\]</div>
 </div>
 <div class="section" id="straight-pipe-laminar">
 <span id="heading-straight-pipe-laminar"></span><h3>Straight Pipe Laminar<a class="headerlink" href="#straight-pipe-laminar" title="Permalink to this headline">¶</a></h3>
@@ -505,18 +505,18 @@ Thus we have</p>
 <span class="eqno">(142)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-31" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon =32\nu \left( \frac{\bar v}{D} \right)^2\]</div>
 <p>The Camp-Stein velocity gradient in a long straight laminar flow tube is thus</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-32">
-<span class="eqno">(143)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-32" title="Permalink to this equation">¶</a></span>\[G_{CS}^2 =32 \left( \frac{\bar v}{D} \right)^2\]</div>
+<span class="eqno">(143)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-32" title="Permalink to this equation">¶</a></span>\[\tilde{G}^2 =32 \left( \frac{\bar v}{D} \right)^2\]</div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-33">
-<span class="eqno">(144)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-33" title="Permalink to this equation">¶</a></span>\[G_{CS} =4\sqrt2 \frac{\bar v}{D}\]</div>
-<p>Our estimate of <span class="math notranslate nohighlight">\(G_{CS}\)</span> based on <span class="math notranslate nohighlight">\(\bar \varepsilon\)</span> is an overestimate because it assumes that the energy dissipation is completely uniform through the control volume. The true spatial average velocity gradient, <span class="math notranslate nohighlight">\(\bar G\)</span>, for laminar flow in a pipe is (<a class="reference external" href="https://doi.org/10.1016/0009-2509(81)80126-1">Gregory, 1981</a>),</p>
+<span class="eqno">(144)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-33" title="Permalink to this equation">¶</a></span>\[\tilde{G} =4\sqrt2 \frac{\bar v}{D}\]</div>
+<p>Our estimate of <span class="math notranslate nohighlight">\(\tilde{G}\)</span> based on <span class="math notranslate nohighlight">\(\bar \varepsilon\)</span> is an overestimate because it assumes that the energy dissipation is completely uniform through the control volume. The true spatial average velocity gradient, <span class="math notranslate nohighlight">\(\bar G\)</span>, for laminar flow in a pipe is (<a class="reference external" href="https://doi.org/10.1016/0009-2509(81)80126-1">Gregory, 1981</a>),</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-34">
 <span class="eqno">(145)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-34" title="Permalink to this equation">¶</a></span>\[\bar G = \frac{8}{3}\frac{\bar v}{D}\]</div>
-<p>Our estimate of <span class="math notranslate nohighlight">\(G_{CS}\)</span> for the case of laminar flow in a pipe is too high by a factor of <span class="math notranslate nohighlight">\(\frac{3}{\sqrt2}\)</span>.</p>
+<p>Our estimate of <span class="math notranslate nohighlight">\(\tilde{G}\)</span> for the case of laminar flow in a pipe is too high by a factor of <span class="math notranslate nohighlight">\(\frac{3}{\sqrt2}\)</span>.</p>
 <p>As a function of flow rate we have</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-35">
 <span class="eqno">(146)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-35" title="Permalink to this equation">¶</a></span>\[\bar v=\frac{Q}{A} = \frac{4Q}{\pi D^2}\]</div>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-36">
-<span class="eqno">(147)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-36" title="Permalink to this equation">¶</a></span>\[G_{CS} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}\]</div>
+<span class="eqno">(147)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-36" title="Permalink to this equation">¶</a></span>\[\tilde{G} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}\]</div>
 </div>
 <div class="section" id="parallel-plates-laminar">
 <span id="heading-parallel-plates-laminar"></span><h3>Parallel Plates Laminar<a class="headerlink" href="#parallel-plates-laminar" title="Permalink to this headline">¶</a></h3>
@@ -604,7 +604,7 @@ Thus we have</p>
 <span class="eqno">(171)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-58" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = 12 \nu \left(\frac{  \bar v}{S} \right)^2\]</div>
 <p>The Camp-Stein velocity gradient for laminar flow between parallel plates is</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-59">
-<span class="eqno">(172)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-59" title="Permalink to this equation">¶</a></span>\[G_{CS} = 2\sqrt{3}\frac{  \bar v}{S}\]</div>
+<span class="eqno">(172)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-59" title="Permalink to this equation">¶</a></span>\[\tilde{G} = 2\sqrt{3}\frac{  \bar v}{S}\]</div>
 </div>
 <div class="section" id="coiled-tubes-laminar-flow">
 <span id="heading-coiled-tubes-laminar-flow"></span><h3>Coiled Tubes (Laminar Flow)<a class="headerlink" href="#coiled-tubes-laminar-flow" title="Permalink to this headline">¶</a></h3>
@@ -632,8 +632,8 @@ wall.</p>
 <span class="eqno">(177)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-64" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = 32\nu \left( \frac{\bar v}{D} \right)^2 \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]\]</div>
 <p>The average velocity gradient is proportional to the square root of the head loss and thus we obtain</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-65">
-<span class="eqno">(178)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-65" title="Permalink to this equation">¶</a></span>\[G_{CS_{coil}} = G_{CS}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}\]</div>
-<p>where <span class="math notranslate nohighlight">\(G_{CS} =4\sqrt2 \frac{\bar v}{D}\)</span> for laminar flow in a straight pipe.</p>
+<span class="eqno">(178)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-65" title="Permalink to this equation">¶</a></span>\[G_{CS_{coil}} = \tilde{G}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tilde{G} =4\sqrt2 \frac{\bar v}{D}\)</span> for laminar flow in a straight pipe.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-66">
 <span class="eqno">(179)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-66" title="Permalink to this equation">¶</a></span>\[G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}\]</div>
 </div>
@@ -662,7 +662,7 @@ wall.</p>
 <span class="eqno">(186)<a class="headerlink" href="#equation-eq-edr-cs-porous-media" title="Permalink to this equation">¶</a></span>\[ \bar\varepsilon = \frac{f_{\phi}}{2} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\]</div>
 <p>The Camp Stein velocity gradient for flow in porous media is</p>
 <div class="math notranslate nohighlight" id="equation-eq-g-cs-porous-media">
-<span class="eqno">(187)<a class="headerlink" href="#equation-eq-g-cs-porous-media" title="Permalink to this equation">¶</a></span>\[  G_{CS} = \left(\frac{f_{\phi}}{2\nu} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}\]</div>
+<span class="eqno">(187)<a class="headerlink" href="#equation-eq-g-cs-porous-media" title="Permalink to this equation">¶</a></span>\[  \tilde{G} = \left(\frac{f_{\phi}}{2\nu} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}\]</div>
 </div>
 <div class="section" id="expansions">
 <span id="heading-expansions"></span><h3>Expansions<a class="headerlink" href="#expansions" title="Permalink to this headline">¶</a></h3>
@@ -680,7 +680,7 @@ wall.</p>
 <span class="eqno">(191)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-72" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = K\frac{\bar v_{out}^3}{2H}\]</div>
 <p>The Camp Stein velocity gradient, Equation <a class="reference internal" href="#equation-g-camp-stein">(114)</a>, converts the energy dissipation rate into a velocity gradient.</p>
 <div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-derivations-73">
-<span class="eqno">(192)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-73" title="Permalink to this equation">¶</a></span>\[G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}\]</div>
+<span class="eqno">(192)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-derivations-73" title="Permalink to this equation">¶</a></span>\[\tilde{G} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}\]</div>
 </div>
 </div>
 <div class="section" id="maximum-velocity-gradients">

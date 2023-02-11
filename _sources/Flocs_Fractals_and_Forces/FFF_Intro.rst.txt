@@ -528,7 +528,7 @@ The effect of water temperature and plate settler capture velocity on the maximu
     :align: center
     :alt: internal figure
 
-    The maximum average velocity gradient, :math:`G_{CS}`, that can be used in the jet reverser for treating kaolin suspensions. The velocity gradient decreases rapidly as the water temperature decreases because the higher viscosity results in more shear force being applied to the floc and reduces their terminal velocity in the plate settlers.
+    The maximum average velocity gradient, :math:`\tilde{G}`, that can be used in the jet reverser for treating kaolin suspensions. The velocity gradient decreases rapidly as the water temperature decreases because the higher viscosity results in more shear force being applied to the floc and reduces their terminal velocity in the plate settlers.
 
 The model results (Equation :eq:`G_of_vc_and_fractal_of_2`) shown in :numref:`figure_Gmax_of_T_and_vc` provides insight into the dramatic reduction in velocity gradient required for effectively cold weather operation. Design for cold temperatures will require lower velocity gradients in the flow path from the flocculator into the floc filter. This includes flow expansions in channels, pipes, diffusers, and in the jet reverser.
 

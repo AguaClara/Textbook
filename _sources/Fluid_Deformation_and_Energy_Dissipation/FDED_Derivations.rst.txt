@@ -20,10 +20,10 @@ Estimation of velocity gradients for various flow geometries is the basis for th
 
 #. Use the Navier Stokes equations and solve for the spatially averaged velocity gradient.
 #. Use Computational Fluid Dynamics (CFD) to solve for the spatially averaged velocity gradient.
-#. Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, :math:`G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}`, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).
+#. Use the total mechanical energy loss in the control volume to calculate the energy dissipation rate. Estimate the velocity gradient directly from the energy dissipation rate, :math:`\tilde{G} = \sqrt{\frac{\bar\varepsilon}{\nu}}`, as defined by Camp and Stein in 1943 (Camp, T. R., and Stein, P. C. (1943) ‘‘Velocity Gradients and Hydraulic Work in Fluid Motion,’’ J. Boston Soc. Civil Eng., 30, 203–221.).
 
 The first approach would be ideal but is difficult in practice because Navier Stokes solutions are only available for limited geometries and laminar flow. CFD could be used but is difficult to use as a general engineering design approach given the large number of geometries that are used in drinking water treatment plants. For these reasons we will use the control volume approach to estimate the average velocity gradient. This method incorrectly assumes that the energy dissipation rate is completely uniform in the control volume and hence the velocity gradient is also uniform. This method results in an over estimation of the velocity gradient.
-The Camp-Stein estimate of :math:`G_{CS}` is based on a control volume where the velocity gradient is uniform. Consider a layer of fluid of depth :math:`H` and apply a velocity, :math:`v` at the top of the fluid. The velocity gradient, :math:`G`, is thus :math:`\frac{v}{H}` everywhere in the fluid. The force required to move the top of the fluid at velocity v can be obtained from the required shear, :math:`\tau`. From Newtons Law of Friction we have
+The Camp-Stein estimate of :math:`\tilde{G}` is based on a control volume where the velocity gradient is uniform. Consider a layer of fluid of depth :math:`H` and apply a velocity, :math:`v` at the top of the fluid. The velocity gradient, :math:`G`, is thus :math:`\frac{v}{H}` everywhere in the fluid. The force required to move the top of the fluid at velocity v can be obtained from the required shear, :math:`\tau`. From Newtons Law of Friction we have
 
 .. math::
   :label: tau_of_mu_G
@@ -111,22 +111,22 @@ The conventional approach to design of flocculators uses the Camp Stein definiti
 .. math::
   :label: G_Camp_Stein
 
-  G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}
+  \tilde{G} = \sqrt{\frac{\bar\varepsilon}{\nu}}
 
-where :math:`G_{CS}` is **not** the average velocity gradient, but is larger than the average velocity gradient by a factor of :math:`\Pi_{CS}`. Thus we have
+where :math:`\tilde{G}` is **not** the average velocity gradient, but is larger than the average velocity gradient by a factor of :math:`\Pi_{CS}`. Thus we have
 
 .. math::
   :label: Pi_Gcs
 
-  G_{CS} = \Pi_{CS}\bar G
+  \tilde{G} = \Pi_{CS}\bar G
 
 Use of the Camp Stein velocity gradient in design of mixing units and flocculators results in an error when applying results from one reactor to another. If the energy dissipation rate distribution within the reactors is different, then :math:`\Pi_{CS}` will be different for the two reactors and the actual average velocity gradient, :math:`\bar G` will be different for the two reactors.
 
-Given that energy is used more efficiently to produce velocity gradients if the velocity gradients are uniform, our goal is to design mixing and flocculation units that have relatively uniform velocity gradients. If all of our reactors at both research scale and municipal scale have similar values of :math:`\Pi_{CS}`, then we can use the Camp Stein definition of :math:`G_{CS}` and not introduce any significant errors. It will not be reasonable, however, to expect similar performance based on similar values of :math:`G_{CS}` if one reactor has relatively uniform energy dissipation rates and the other reactor has zones with very high energy dissipation rates and zones with very low energy dissipation rates.
+Given that energy is used more efficiently to produce velocity gradients if the velocity gradients are uniform, our goal is to design mixing and flocculation units that have relatively uniform velocity gradients. If all of our reactors at both research scale and municipal scale have similar values of :math:`\Pi_{CS}`, then we can use the Camp Stein definition of :math:`\tilde{G}` and not introduce any significant errors. It will not be reasonable, however, to expect similar performance based on similar values of :math:`\tilde{G}` if one reactor has relatively uniform energy dissipation rates and the other reactor has zones with very high energy dissipation rates and zones with very low energy dissipation rates.
 
 We will demonstrate later that mechanically mixed reactors typically have a much wider range of energy dissipation rates than do well designed hydraulically mixed reactors. Thus comparisons between mechanically mixed and hydraulically mixed reactors must account for differences in :math:`\Pi_{CS}`.
 
-We will use the Camp Stein definition :math:`G_{CS} = \sqrt{\frac{\bar\varepsilon}{\nu}}` as the design parameter of convenience in this textbook.
+We will use the Camp Stein definition :math:`\tilde{G} = \sqrt{\frac{\bar\varepsilon}{\nu}}` as the design parameter of convenience in this textbook.
 
 
 .. _heading_Estimates_of_time_required_for_mixing_processes:
@@ -353,13 +353,13 @@ We use the average velocity gradient defined by Camp and Stein, Equation :eq:`G_
 
 .. math::
 
-   G_{CS} = \left(\frac{{\rm f}}{2\nu} \frac{\bar v^3}{D} \right)^\frac{1}{2}
+   \tilde{G} = \left(\frac{{\rm f}}{2\nu} \frac{\bar v^3}{D} \right)^\frac{1}{2}
 
 or in terms of flow rate, we have:
 
 .. math::
 
-   G_{CS} = \left(\frac{\rm{32f}}{ \pi^3\nu} \frac{Q^3}{D^7} \right)^\frac{1}{2}
+   \tilde{G} = \left(\frac{\rm{32f}}{ \pi^3\nu} \frac{Q^3}{D^7} \right)^\frac{1}{2}
 
 .. _heading_Straight_Pipe_Laminar:
 
@@ -394,20 +394,20 @@ The Camp-Stein velocity gradient in a long straight laminar flow tube is thus
 
 .. math::
 
-   G_{CS}^2 =32 \left( \frac{\bar v}{D} \right)^2
+   \tilde{G}^2 =32 \left( \frac{\bar v}{D} \right)^2
 
 .. math::
 
-   G_{CS} =4\sqrt2 \frac{\bar v}{D}
+   \tilde{G} =4\sqrt2 \frac{\bar v}{D}
 
 
-Our estimate of :math:`G_{CS}` based on :math:`\bar \varepsilon` is an overestimate because it assumes that the energy dissipation is completely uniform through the control volume. The true spatial average velocity gradient, :math:`\bar G`, for laminar flow in a pipe is (`Gregory, 1981 <https://doi.org/10.1016/0009-2509(81)80126-1>`__),
+Our estimate of :math:`\tilde{G}` based on :math:`\bar \varepsilon` is an overestimate because it assumes that the energy dissipation is completely uniform through the control volume. The true spatial average velocity gradient, :math:`\bar G`, for laminar flow in a pipe is (`Gregory, 1981 <https://doi.org/10.1016/0009-2509(81)80126-1>`__),
 
 .. math::
 
   \bar G = \frac{8}{3}\frac{\bar v}{D}
 
-Our estimate of :math:`G_{CS}` for the case of laminar flow in a pipe is too high by a factor of :math:`\frac{3}{\sqrt2}`.
+Our estimate of :math:`\tilde{G}` for the case of laminar flow in a pipe is too high by a factor of :math:`\frac{3}{\sqrt2}`.
 
 As a function of flow rate we have
 
@@ -417,7 +417,7 @@ As a function of flow rate we have
 
 .. math::
 
-   G_{CS} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}
+   \tilde{G} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}
 
 .. _heading_Parallel_Plates_Laminar:
 
@@ -587,7 +587,7 @@ The Camp-Stein velocity gradient for laminar flow between parallel plates is
 
 .. math::
 
-   G_{CS} = 2\sqrt{3}\frac{  \bar v}{S}
+   \tilde{G} = 2\sqrt{3}\frac{  \bar v}{S}
 
 .. _heading_Coiled_tubes_(laminar_flow):
 
@@ -644,9 +644,9 @@ The average velocity gradient is proportional to the square root of the head los
 
 .. math::
 
-   G_{CS_{coil}} = G_{CS}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}
+   G_{CS_{coil}} = \tilde{G}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}
 
-where :math:`G_{CS} =4\sqrt2 \frac{\bar v}{D}` for laminar flow in a straight pipe.
+where :math:`\tilde{G} =4\sqrt2 \frac{\bar v}{D}` for laminar flow in a straight pipe.
 
 .. math::
 
@@ -710,7 +710,7 @@ The Camp Stein velocity gradient for flow in porous media is
 .. math::
   :label: eq_G_CS_porous_media
 
-    G_{CS} = \left(\frac{f_{\phi}}{2\nu} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}
+    \tilde{G} = \left(\frac{f_{\phi}}{2\nu} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}
 
 
 .. _heading_Expansions:
@@ -746,7 +746,7 @@ The Camp Stein velocity gradient, Equation :eq:`G_Camp_Stein`, converts the ener
 
 .. math::
 
-   G_{CS} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}
+   \tilde{G} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}
 
 
 .. _heading_Maximum_velocity_gradients:

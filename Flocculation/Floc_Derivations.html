@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Flocculation Derivations &mdash; AguaClara Textbook v1.4.16 documentation</title>
+  <title>Flocculation Derivations &mdash; AguaClara Textbook v1.4.17 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.4.16
+                v1.4.17
               </div>
             
           
@@ -334,7 +334,7 @@
 <h2>Linking head loss, velocity gradient, and geometry<a class="headerlink" href="#linking-head-loss-velocity-gradient-and-geometry" title="Permalink to this headline">¶</a></h2>
 <p>The energy dissipation rate in Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-g-camp-stein">(114)</a> can be set equal to the energy dissipated in a control volume given by Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-edr-hl">(133)</a> to obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-gen-g-and-hl">
-<span class="eqno">(503)<a class="headerlink" href="#equation-eq-gen-g-and-hl" title="Permalink to this equation">¶</a></span>\[\nu G_{CS}^2 \theta = g h_{L}\]</div>
+<span class="eqno">(503)<a class="headerlink" href="#equation-eq-gen-g-and-hl" title="Permalink to this equation">¶</a></span>\[\nu \tilde{G}^2 \theta = g h_{L}\]</div>
 <p>Equation <a class="reference internal" href="#equation-eq-gen-g-and-hl">(503)</a> can be applied to a control volume that contains an entire flocculator or to a control volume containing a single flow expansion. Here we develop the analysis of a single flow expansion. This means that the residence time is the time between expansions, <span class="math notranslate nohighlight">\(\theta_e\)</span>, and the head loss is for one expansion, <span class="math notranslate nohighlight">\(h_{L_{e}}\)</span>.</p>
 <p>From here we make three subsequent substitutions: first
 <span class="math notranslate nohighlight">\(h_{L_{e}} = K_{baffle} \frac{\bar v^2}{2g}\)</span>, then
@@ -342,31 +342,31 @@
 <span class="math notranslate nohighlight">\(\bar v = \frac{Q}{WS}\)</span>.</p>
 <p>where <span class="math notranslate nohighlight">\(S\)</span> is the distance between baffles, <span class="math notranslate nohighlight">\(W\)</span> is the dimension of the flow that is normal to <span class="math notranslate nohighlight">\(S\)</span> and <span class="math notranslate nohighlight">\(H_e\)</span> the distance between expansions. For complex geometry the best way to estimate <span class="math notranslate nohighlight">\(H_e\)</span> is the volume of water divided by <span class="math notranslate nohighlight">\(WS\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-0">
-<span class="eqno">(504)<a class="headerlink" href="#equation-flocculation-floc-derivations-0" title="Permalink to this equation">¶</a></span>\[\nu G_{CS}^2 = K_{baffle} \frac{\bar v^2}{2 \theta_e}\]</div>
+<span class="eqno">(504)<a class="headerlink" href="#equation-flocculation-floc-derivations-0" title="Permalink to this equation">¶</a></span>\[\nu \tilde{G}^2 = K_{baffle} \frac{\bar v^2}{2 \theta_e}\]</div>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-1">
-<span class="eqno">(505)<a class="headerlink" href="#equation-flocculation-floc-derivations-1" title="Permalink to this equation">¶</a></span>\[\nu G_{CS}^2 = K_{baffle} \frac{\bar v^3}{2 H_e}\]</div>
+<span class="eqno">(505)<a class="headerlink" href="#equation-flocculation-floc-derivations-1" title="Permalink to this equation">¶</a></span>\[\nu \tilde{G}^2 = K_{baffle} \frac{\bar v^3}{2 H_e}\]</div>
 <div class="math notranslate nohighlight" id="equation-flocgeog">
-<span class="eqno">(506)<a class="headerlink" href="#equation-flocgeog" title="Permalink to this equation">¶</a></span>\[\nu G_{CS}^2 = \frac{K_{baffle}}{2 H_e} \left( \frac{Q}{WS} \right)^3\]</div>
+<span class="eqno">(506)<a class="headerlink" href="#equation-flocgeog" title="Permalink to this equation">¶</a></span>\[\nu \tilde{G}^2 = \frac{K_{baffle}}{2 H_e} \left( \frac{Q}{WS} \right)^3\]</div>
 <p>Equation <a class="reference internal" href="#equation-flocgeog">(506)</a> describes the relationship between the geometry of the flocculator, the flow rate, and the resulting velocity gradient.</p>
 </div>
 <div class="section" id="channel-or-flow-width">
 <h2>Channel or Flow Width<a class="headerlink" href="#channel-or-flow-width" title="Permalink to this headline">¶</a></h2>
-<p>The minimum allowable width of a Horizontal-Vertical flocculator channel is based on the requirements that <span class="math notranslate nohighlight">\(3 &lt; \Pi_{H_eS} &lt; 6\)</span> and that we maintain the <span class="math notranslate nohighlight">\(G_{CS}\)</span> that
+<p>The minimum allowable width of a Horizontal-Vertical flocculator channel is based on the requirements that <span class="math notranslate nohighlight">\(3 &lt; \Pi_{H_eS} &lt; 6\)</span> and that we maintain the <span class="math notranslate nohighlight">\(\tilde{G}\)</span> that
 serves as a basis for design. The final parameter derived is
 <span class="math notranslate nohighlight">\(W_{Min, \, \Pi_{H_eS}}\)</span>.</p>
 <p>Our two restrictions are:</p>
 <ol class="arabic simple">
-<li><p>Ensuring that we maintain the <span class="math notranslate nohighlight">\(G_{CS}\)</span> we get based on our input parameters.</p></li>
+<li><p>Ensuring that we maintain the <span class="math notranslate nohighlight">\(\tilde{G}\)</span> we get based on our input parameters.</p></li>
 <li><p>Ensuring that <span class="math notranslate nohighlight">\(3 &lt; \frac{H_e}{S} &lt; 6\)</span></p></li>
 </ol>
 <p>Now we can solve this equation for channel width, <span class="math notranslate nohighlight">\(W\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-derivations-2">
-<span class="eqno">(507)<a class="headerlink" href="#equation-flocculation-floc-derivations-2" title="Permalink to this equation">¶</a></span>\[W = \frac{Q}{S}\left( \frac{K_{baffle}}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(507)<a class="headerlink" href="#equation-flocculation-floc-derivations-2" title="Permalink to this equation">¶</a></span>\[W = \frac{Q}{S}\left( \frac{K_{baffle}}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}\]</div>
 <p>From here, we can define <span class="math notranslate nohighlight">\(\Pi_{H_eS} = \frac{H_e}{S}\)</span> and
 substitute <span class="math notranslate nohighlight">\(S = \frac{H_e}{\Pi_{H_eS}}\)</span> into the previous equation
 for <span class="math notranslate nohighlight">\(W\)</span> to get <span class="math notranslate nohighlight">\(W_{Min, \, \Pi_{H_eS}}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-w-min-hvfloc">
-<span class="eqno">(508)<a class="headerlink" href="#equation-w-min-hvfloc" title="Permalink to this equation">¶</a></span>\[ W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K_{baffle}}{2 H_e \nu G_{CS}^2} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(508)<a class="headerlink" href="#equation-w-min-hvfloc" title="Permalink to this equation">¶</a></span>\[ W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K_{baffle}}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}\]</div>
 <div class="line-block">
 <div class="line">This equation represents the absolute smallest width of a flocculator
 channel if we consider the lowest value of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> and the
@@ -380,17 +380,17 @@ baffles</div>
 <h2>Baffle Spacing<a class="headerlink" href="#baffle-spacing" title="Permalink to this headline">¶</a></h2>
 <p>The core equation relating flow geometry and velocity gradient is Equation <a class="reference internal" href="#equation-flocgeog">(506)</a>. If the jet has fully expanded before entering the next contraction then the minor loss coefficient is a constant. Rearranging for <span class="math notranslate nohighlight">\(S\)</span>, we obtain:</p>
 <div class="math notranslate nohighlight" id="equation-floc-baffle-spacing-of-k">
-<span class="eqno">(509)<a class="headerlink" href="#equation-floc-baffle-spacing-of-k" title="Permalink to this equation">¶</a></span>\[ S = \left( \frac{K_{baffle}}{2 H_e G_{CS}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W}\]</div>
+<span class="eqno">(509)<a class="headerlink" href="#equation-floc-baffle-spacing-of-k" title="Permalink to this equation">¶</a></span>\[ S = \left( \frac{K_{baffle}}{2 H_e \tilde{G}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W}\]</div>
 <p>If the jet has not fully expanded before entering the next contraction or if it is unknown if the jet has fully expanded then iteratively use Equation <a class="reference internal" href="#equation-floc-baffle-spacing-of-k">(509)</a> and after each iteration get a better estimate of <span class="math notranslate nohighlight">\(K_{baffle}\)</span> by using Equation <a class="reference internal" href="#equation-k-baffle-expanding">(502)</a>.</p>
 <p>One possible set of assumptions for Horizontal-Horizontal and Vertical-Horizontal flow flocculators is that <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> is specified (perhaps = 6).</p>
 <div class="math notranslate nohighlight" id="equation-heofpi-hs">
 <span class="eqno">(510)<a class="headerlink" href="#equation-heofpi-hs" title="Permalink to this equation">¶</a></span>\[H_e = \Pi_{H_eS} S\]</div>
 <p>If <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> and the flow width, <span class="math notranslate nohighlight">\(W\)</span>, are specified we can substitution Equation <a class="reference internal" href="#equation-heofpi-hs">(510)</a> into Equation <a class="reference internal" href="#equation-flocgeog">(506)</a> and solve for the baffle space, <span class="math notranslate nohighlight">\(S\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-floc-baffle-spacing-const-pihs">
-<span class="eqno">(511)<a class="headerlink" href="#equation-floc-baffle-spacing-const-pihs" title="Permalink to this equation">¶</a></span>\[S = \left[\frac{K_{baffle}}{2 \nu G_{CS}^2 \Pi_{H_eS}} \left( \frac{Q}{W} \right)^3\right]^{\frac{1}{4}}\]</div>
+<span class="eqno">(511)<a class="headerlink" href="#equation-floc-baffle-spacing-const-pihs" title="Permalink to this equation">¶</a></span>\[S = \left[\frac{K_{baffle}}{2 \nu \tilde{G}^2 \Pi_{H_eS}} \left( \frac{Q}{W} \right)^3\right]^{\frac{1}{4}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(K_{baffle}\)</span> is obtained using Equation <a class="reference internal" href="#equation-k-baffle-expanding">(502)</a>. An alternative assumption is that the flow width and the baffle spacing are equal. Given those assumptions we can make those substitutions and solve Equation <a class="reference internal" href="#equation-flocgeog">(506)</a> for the baffle space, S.</p>
 <div class="math notranslate nohighlight" id="equation-floc-baffle-spacing-squaregeometry">
-<span class="eqno">(512)<a class="headerlink" href="#equation-floc-baffle-spacing-squaregeometry" title="Permalink to this equation">¶</a></span>\[ S = \left(\frac{K_{baffle}Q^3}{2  \nu G_{CS}^2 \Pi_{H_eS}} \right)^{\frac{1}{7}}\]</div>
+<span class="eqno">(512)<a class="headerlink" href="#equation-floc-baffle-spacing-squaregeometry" title="Permalink to this equation">¶</a></span>\[ S = \left(\frac{K_{baffle}Q^3}{2  \nu \tilde{G}^2 \Pi_{H_eS}} \right)^{\frac{1}{7}}\]</div>
 </div>
 </div>
 
