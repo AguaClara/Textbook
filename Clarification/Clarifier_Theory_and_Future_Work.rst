@@ -201,7 +201,7 @@ We estimate the hindered terminal velocity to be 1 mm/s since that is what occur
 
     Collision potential comparison in a 1 m deep floc filter.
 
-This analysis suggest that a recycle flow rate that is between 0.5 and 1.5 at a net upflow velocity of 3 mm/s could produce collision potential that is 2/3 of the collision potential with a 1 mm/s upflow velocity. Thus a 3 mm/s sed tank with 1.5 m of floc filter and recycle might be able to perform at the same level as a 1 mm/s sed tank with a 1 m floc filter.
+This analysis suggest that a recycle flow rate that is between 0.5 and 1.5 at a net upflow velocity of 3 mm/s could produce collision potential that is 2/3 of the collision potential with a 1 mm/s upflow velocity. Thus a 3 mm/s clarifier with 1.5 m of floc filter and recycle might be able to perform at the same level as a 1 mm/s clarifier with a 1 m floc filter.
 
 The next step is to design the recycle tube. The recycle tube could be inclined to promote additional consolidation to reduce the amount of water that is recycled. The slope would need to be about 60 degrees. We could experiment with the design of the recycle line if it were made of flexible tubing.
 

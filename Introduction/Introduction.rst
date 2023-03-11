@@ -420,7 +420,7 @@ An example of design for the operator is the elevation of the walkways in AguaCl
 .. figure:: ../Images/Improvised_ladder_access_to_clarifier.jpg
     :width: 300px
     :align: center
-    :alt: Improvised ladder access to sed tank
+    :alt: Improvised ladder access to clarifier
 
     A plant operator built a makeshift ladder to enable easier access to the flocculation and clarifiers in a package plant. This ladder considerably shortened the distance between the coagulant dose controls and the flocculator. The ladder also makes it possible to look closely at the water to see the size of the flocs.
 

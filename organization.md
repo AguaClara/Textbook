@@ -21,7 +21,7 @@
 - for now the exits are slotted pipes
 - inlets have wings
 - branches go through trunks (thus trunk area matters so the branches don't act like valves)
-- entrance tank contains: settled water inlet, four filter inlet pipes, overflow pipe, drain pipe (can overflow go back to sed tank?)
+- entrance tank contains: settled water inlet, four filter inlet pipes, overflow pipe, drain pipe (can overflow go back to clarifier?)
 - exit tank contains: plant exits, three filter outlets, drain
 - even flow across all branches
 - even flow in all trunks
