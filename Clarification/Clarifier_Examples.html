@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Clarification Examples &mdash; AguaClara Textbook v1.4.19 documentation</title>
+  <title>Clarification Examples &mdash; AguaClara Textbook v1.4.20 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.4.19
+                v1.4.20
               </div>
             
           
@@ -309,10 +309,10 @@
 </div>
 <div class="section" id="identify-failure-modes-from-old-design">
 <h2>Identify Failure Modes from Old Design<a class="headerlink" href="#identify-failure-modes-from-old-design" title="Permalink to this headline">¶</a></h2>
-<p>Look at a proposed design for the bottom of the clarifier, shown in <a class="reference internal" href="#figure-failure-mode-example"><span class="std std-numref">Fig. 198</span></a>. This design has an influent manifold at the bottom of the tank. Water flows upwards from the influent manifold. At one end of the influent manifold, there is a drain port. Above the influent manifold, there is a single slot that extends the length of the clarifier. There are no diffusers in this design.</p>
+<p>Look at a proposed design for the bottom of the clarifier, shown in <a class="reference internal" href="#figure-failure-mode-example"><span class="std std-numref">Fig. 200</span></a>. This design has an influent manifold at the bottom of the tank. Water flows upwards from the influent manifold. At one end of the influent manifold, there is a drain port. Above the influent manifold, there is a single slot that extends the length of the clarifier. There are no diffusers in this design.</p>
 <div class="figure align-center" id="id1">
 <span id="figure-failure-mode-example"></span><a class="reference internal image-reference" href="../_images/failure_mode_example.png"><img alt="Proposed clarifier design." src="../_images/failure_mode_example.png" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 198 </span><span class="caption-text">Proposed clarifier design.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 200 </span><span class="caption-text">Proposed clarifier design.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>What are the failure modes for this design?</p>
 <p>Some issues are:</p>
@@ -362,8 +362,8 @@ The <cite>ceil_nearest</cite> function defined in utility.py can take in a param
 <span class="math notranslate nohighlight">\(Q_{max,diff} = \bar v_{z_{ff}} A\)</span></p>
 <p><span class="math notranslate nohighlight">\(A = W_{sed}  B_{diff}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\bar v_{diff} = \frac{Q_{max,diff}}{W_{diff} * S_{diff}}\)</span></p>
-<p><strong>Answer:</strong> The flow of water leaving a sed tank diffuser is 61.19 milliliter / second
-The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
+<p><strong>Answer:</strong> The flow of water leaving a clarifier diffuser is 61.19 milliliter / second
+The velocity of water leaving the clarifier diffuser is 0.349 meter / second</p>
 <ol class="arabic simple" start="5">
 <li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=lwy3sEdObZar&amp;line=2&amp;uniqifier=1">What is the Reynolds number of the jet exiting the diffusers at the design temperature of 15 degrees Celsius?</a></p></li>
 </ol>
@@ -388,12 +388,12 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <ol class="arabic simple" start="9">
 <li><p>Calculate the diffuser exit head loss in two ways.</p></li>
 </ol>
-<p>First, calculate the head loss making sure to account for the upflow velocity in the sed tank.</p>
+<p>First, calculate the head loss making sure to account for the upflow velocity in the clarifier.</p>
 <p><span class="math notranslate nohighlight">\(h_e = \frac{\left( {{\bar v_{diff}} - {\bar v_{z_{ff}}}} \right)^2}{2g}\)</span></p>
 <p>Second, calculate the head loss but assume that the upflow velocity is negligible.</p>
 <p><span class="math notranslate nohighlight">\(h_e = \frac{\ {\bar v_{diff}}^2}{2g}\)</span></p>
 <ol class="arabic simple" start="10">
-<li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=mT6cY0pGbzKt&amp;line=1&amp;uniqifier=1">Is it reasonable to neglect the upflow velocity in the sed tank when calculating this head loss?</a></p></li>
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=mT6cY0pGbzKt&amp;line=1&amp;uniqifier=1">Is it reasonable to neglect the upflow velocity in the clarifier when calculating this head loss?</a></p></li>
 </ol>
 <p><strong>Answer:</strong> The best estimate of the exit head loss for the diffuser is 0.6176 centimeter. The 2nd estimate of the exit head loss for the diffuser ignoring the upflow velocity is 0.6211 centimeter. It is reasonable to neglect the effect of the upflow velocity. The error is 0.005755 dimensionless</p>
 </div>
@@ -442,12 +442,12 @@ The velocity of water leaving the sed tank diffuser is 0.349 meter / second</p>
 <li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=voeAlHjbPPEV&amp;line=1&amp;uniqifier=1">What is the significance of the flow area ratio that you found?</a> What does it tell you about the relative areas?</p></li>
 </ol>
 <p><strong>Answer:</strong> The flow area ratio of manifold pipe to diffusers is 1.509 dimensionless. This means that the manifold flow area is larger than the total diffuser area. The flow distribution is more uniform because the diffuser velocity is higher than the manifold velocity.</p>
-<p>The maximum sed tank flow rate is currently set by the constraint of using a single length of pipe for the manifold and launder. The maximum length of the upflow region of the clarifier is 5.8 m, as given below.</p>
+<p>The maximum clarifier flow rate is currently set by the constraint of using a single length of pipe for the manifold and launder. The maximum length of the upflow region of the clarifier is 5.8 m, as given below.</p>
 <ol class="arabic simple" start="6">
 <li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=4IIQwvYMPh7P&amp;line=2&amp;uniqifier=1">What is the corresponding clarifier flow rate?</a> This can be solved using <span class="math notranslate nohighlight">\(Q = \bar v A\)</span>.</p></li>
 </ol>
 <p><strong>Answer:</strong> The maximum flow rate in one clarifier is 6.187 liter / second.</p>
-<p>The maximum sed tank flow rate dictates the required pipe diameter for the manifold and launder.</p>
+<p>The maximum clarifier flow rate dictates the required pipe diameter for the manifold and launder.</p>
 <p>7. What is the minimum inner diameter of the clarifier manifold?
 <span class="math notranslate nohighlight">\(Q = \frac{\bar v*\pi*D^2}{4}\)</span></p>
 <p>8. <a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=lExuIc6SPq58&amp;line=1&amp;uniqifier=1">What is the required nominal pipe diameter given this flow rate?</a>
@@ -466,7 +466,7 @@ The function from the pipe database can return the nominal diameter from the dia
 </ol>
 <p><strong>Answer:</strong> The total length of the floc filter zone for all tanks is 56.24 meters.</p>
 <ol class="arabic simple" start="3">
-<li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=u0J7OWpoQVjy&amp;line=1&amp;uniqifier=1">How many clarifiers are required to treat the total plant flow?</a> The plant flow rate is the basis of design and the maximum sed tank flow rate is based on the manifold diameter.</p></li>
+<li><p><a class="reference external" href="https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=u0J7OWpoQVjy&amp;line=1&amp;uniqifier=1">How many clarifiers are required to treat the total plant flow?</a> The plant flow rate is the basis of design and the maximum clarifier flow rate is based on the manifold diameter.</p></li>
 </ol>
 <p><strong>Answer:</strong> The required number of clarifiers is 10.</p>
 <ol class="arabic simple" start="4">

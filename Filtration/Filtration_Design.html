@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Open Stacked Rapid Sand Filter Design &mdash; AguaClara Textbook v1.4.19 documentation</title>
+  <title>Open Stacked Rapid Sand Filter Design &mdash; AguaClara Textbook v1.4.20 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.4.19
+                v1.4.20
               </div>
             
           
@@ -297,7 +297,7 @@
 <span id="title-filtration-design"></span><h1>Open Stacked Rapid Sand Filter Design<a class="headerlink" href="#open-stacked-rapid-sand-filter-design" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-center" id="id2">
 <span id="figure-ostarsoverview"></span><a class="reference internal image-reference" href="../_images/OStaRSoverview1.png"><img alt="Floc Hopper" src="../_images/OStaRSoverview1.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 207 </span><span class="caption-text">The open stacked rapid sand filters include advanced hydraulic controls to ensure stable operation during both filtration and backwash modes.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 209 </span><span class="caption-text">The open stacked rapid sand filters include advanced hydraulic controls to ensure stable operation during both filtration and backwash modes.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="nomenclature">
 <h2>Nomenclature<a class="headerlink" href="#nomenclature" title="Permalink to this headline">¶</a></h2>
@@ -311,10 +311,10 @@
 </div>
 <div class="section" id="filter-inlet-channel-with-rectangular-weir-flow-distribution">
 <h2>Filter Inlet Channel with Rectangular Weir Flow Distribution<a class="headerlink" href="#filter-inlet-channel-with-rectangular-weir-flow-distribution" title="Permalink to this headline">¶</a></h2>
-<p>In plants with flow rates large enough to use open stacked rapid sand filters the settled water is delivered to those filters through an open channel. The water exits the channel by flowing across a rectangular weir (see <a class="reference internal" href="#figure-filter-channel"><span class="std std-numref">Fig. 208</span></a>). As is the case in a manifold pipe the water in the channel is decelerating and thus the piezometric head is increasing in the direction of flow. This increase in piezometric head is equivalent to the increase in the depth of water in the channel. This increase in water depth results in more water flowing across the final weir exiting the channel.</p>
+<p>In plants with flow rates large enough to use open stacked rapid sand filters the settled water is delivered to those filters through an open channel. The water exits the channel by flowing across a rectangular weir (see <a class="reference internal" href="#figure-filter-channel"><span class="std std-numref">Fig. 210</span></a>). As is the case in a manifold pipe the water in the channel is decelerating and thus the piezometric head is increasing in the direction of flow. This increase in piezometric head is equivalent to the increase in the depth of water in the channel. This increase in water depth results in more water flowing across the final weir exiting the channel.</p>
 <div class="figure align-center" id="id3">
 <span id="figure-filter-channel"></span><a class="reference internal image-reference" href="../_images/Filter_channel.png"><img alt="Filter channel" src="../_images/Filter_channel.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 208 </span><span class="caption-text">The filter inlet channel distributes flow to all of the filters. The water in the channel flows across sharp crested weirs into the filter inlet boxes. The velocity in the channel decreases in the direction of flow and thus the kinetic energy of the flow is converted into height. That added height results in greater flow into downstream filter inlet boxes.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 210 </span><span class="caption-text">The filter inlet channel distributes flow to all of the filters. The water in the channel flows across sharp crested weirs into the filter inlet boxes. The velocity in the channel decreases in the direction of flow and thus the kinetic energy of the flow is converted into height. That added height results in greater flow into downstream filter inlet boxes.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>The flow across the weirs into the filter inlet boxes is complicated by several factors. First, there must be a <em>vena contracta</em> as the flow changes direction to flow across the weir and thus the <span class="math notranslate nohighlight">\(90^{\circ}\)</span> <em>vena contracta</em> coefficient should enter the equations. Second, the weirs as they are fabricated are neither sharp nor broad and thus it isn’t clear which equations are best suited. Sharp crested weirs are known to have a reduced depth of flow above the weir due to the acceleration of water approaching the weir and this effect is normally ignored and then thrown into the weir coefficient. Given that our weirs do not have a rounded upstream edge required by broad crested weirs we will use the sharp crested weir equation.</p>
 <div class="section" id="side-exit-sharp-crested-weir">
@@ -339,11 +339,11 @@
 <p>Now we can solve for maximum manifold channel velocity.</p>
 <div class="math notranslate nohighlight" id="equation-inlet-channel-v-max">
 <span class="eqno">(684)<a class="headerlink" href="#equation-inlet-channel-v-max" title="Permalink to this equation">¶</a></span>\[\bar v_{M_1} =  2\sqrt{g\bar H_{channel}\frac{\left(1-\Pi_{Q_{weir}}^\frac{2}{3}\right)}{\left(\Pi_{Q_{weir}}^\frac{2}{3} + 1\right)}}\]</div>
-<p>The channel depth of water above the weir, <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span>, and the flow uniformity target set the maximum velocity in the manifold channel (see <a class="reference internal" href="#figure-filter-channel-v-max"><span class="std std-numref">Fig. 209</span></a>).</p>
+<p>The channel depth of water above the weir, <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span>, and the flow uniformity target set the maximum velocity in the manifold channel (see <a class="reference internal" href="#figure-filter-channel-v-max"><span class="std std-numref">Fig. 211</span></a>).</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=MyYpzYxOU5px&amp;line=5&amp;uniqifier=1">Generate the following plot</a></p>
 <div class="figure align-center" id="id4">
 <span id="figure-filter-channel-v-max"></span><a class="reference internal image-reference" href="../_images/Filter_channel_v_max.png"><img alt="Filter channel velocities" src="../_images/Filter_channel_v_max.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 209 </span><span class="caption-text">The maximum velocity in the filter inlet channel decreases as the target flow ratio, <span class="math notranslate nohighlight">\(\Pi_{Q_{weir}}\)</span>, approaches 1. This graph was created assuming <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span> of 5 cm.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 211 </span><span class="caption-text">The maximum velocity in the filter inlet channel decreases as the target flow ratio, <span class="math notranslate nohighlight">\(\Pi_{Q_{weir}}\)</span>, approaches 1. This graph was created assuming <span class="math notranslate nohighlight">\(\bar H_{channel}\)</span> of 5 cm.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="backwash-weir-slot-design">
