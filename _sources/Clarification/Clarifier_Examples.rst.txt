@@ -137,8 +137,8 @@ Each diffuser serves a certain width and length of the clarifier. Assume that th
 :math:`\bar v_{diff} = \frac{Q_{max,diff}}{W_{diff} * S_{diff}}`
 
 
-**Answer:** The flow of water leaving a sed tank diffuser is 61.19 milliliter / second
-The velocity of water leaving the sed tank diffuser is 0.349 meter / second
+**Answer:** The flow of water leaving a clarifier diffuser is 61.19 milliliter / second
+The velocity of water leaving the clarifier diffuser is 0.349 meter / second
 
 5. `What is the Reynolds number of the jet exiting the diffusers at the design temperature of 15 degrees Celsius? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=lwy3sEdObZar&line=2&uniqifier=1>`_
 
@@ -170,7 +170,7 @@ In designing AguaClara plants, it is critical to account for all forms of signif
 
 9. Calculate the diffuser exit head loss in two ways.
 
-First, calculate the head loss making sure to account for the upflow velocity in the sed tank.
+First, calculate the head loss making sure to account for the upflow velocity in the clarifier.
 
 :math:`h_e = \frac{\left( {{\bar v_{diff}} - {\bar v_{z_{ff}}}} \right)^2}{2g}`
 
@@ -178,7 +178,7 @@ Second, calculate the head loss but assume that the upflow velocity is negligibl
 
 :math:`h_e = \frac{\ {\bar v_{diff}}^2}{2g}`
 
-10. `Is it reasonable to neglect the upflow velocity in the sed tank when calculating this head loss? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=mT6cY0pGbzKt&line=1&uniqifier=1>`_
+10. `Is it reasonable to neglect the upflow velocity in the clarifier when calculating this head loss? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=mT6cY0pGbzKt&line=1&uniqifier=1>`_
 
 **Answer:** The best estimate of the exit head loss for the diffuser is 0.6176 centimeter. The 2nd estimate of the exit head loss for the diffuser ignoring the upflow velocity is 0.6211 centimeter. It is reasonable to neglect the effect of the upflow velocity. The error is 0.005755 dimensionless
 
@@ -239,13 +239,13 @@ Since the clarifier has a constant volume, the flow rate into the tank is equal 
 
 **Answer:** The flow area ratio of manifold pipe to diffusers is 1.509 dimensionless. This means that the manifold flow area is larger than the total diffuser area. The flow distribution is more uniform because the diffuser velocity is higher than the manifold velocity.
 
-The maximum sed tank flow rate is currently set by the constraint of using a single length of pipe for the manifold and launder. The maximum length of the upflow region of the clarifier is 5.8 m, as given below.
+The maximum clarifier flow rate is currently set by the constraint of using a single length of pipe for the manifold and launder. The maximum length of the upflow region of the clarifier is 5.8 m, as given below.
 
 6. `What is the corresponding clarifier flow rate? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=4IIQwvYMPh7P&line=2&uniqifier=1>`_ This can be solved using :math:`Q = \bar v A`.
 
 **Answer:** The maximum flow rate in one clarifier is 6.187 liter / second.
 
-The maximum sed tank flow rate dictates the required pipe diameter for the manifold and launder.
+The maximum clarifier flow rate dictates the required pipe diameter for the manifold and launder.
 
 7. What is the minimum inner diameter of the clarifier manifold?
 :math:`Q = \frac{\bar v*\pi*D^2}{4}`
@@ -267,7 +267,7 @@ The design will be for a 60 liter per second plant.
 
 **Answer:** The total length of the floc filter zone for all tanks is 56.24 meters.
 
-3. `How many clarifiers are required to treat the total plant flow? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=u0J7OWpoQVjy&line=1&uniqifier=1>`_ The plant flow rate is the basis of design and the maximum sed tank flow rate is based on the manifold diameter.
+3. `How many clarifiers are required to treat the total plant flow? <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=u0J7OWpoQVjy&line=1&uniqifier=1>`_ The plant flow rate is the basis of design and the maximum clarifier flow rate is based on the manifold diameter.
 
 **Answer:** The required number of clarifiers is 10.
 

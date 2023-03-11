@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Flocculation Design Challenge &mdash; AguaClara Textbook 344/merge documentation</title>
+  <title>Flocculation Design Challenge &mdash; AguaClara Textbook 345/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                344/merge
+                345/merge
               </div>
             
           
@@ -311,7 +311,7 @@ Make a copy of the <a class="reference external" href="https://cad.onshape.com/d
 </dd>
 </dl>
 </li>
-<li><p>PS: Copy the overrides (everything inside the {}) from the FeatureScript notices into the overrides configuration (very top left of the PS window). This should result in no warning messages in the FeatureScript notices.</p></li>
+<li><p>PS: Verify that your Featurescript code is running without errors before moving to the Parts Studio</p></li>
 <li><p>PS: Use the Civil Tank feature to draw the flocculator tank. The Civil Tank feature is in the part studio, but the inputs have to be linked to variables that you calculate. Note that the Civil Tank has an option for ports that can be used to turn the internal tank walls into baffles. Initially set the port height to be the same as the tank wall height so that the ports effectively remove a section of the wall. You will have to think about geometry and the correspondence between the flow geometry in Equation <a class="reference internal" href="Floc_Derivations.html#equation-floc-baffle-spacing-const-pihs">(511)</a> and the tank geometry required as inputs for the Civil Tank feature.</p></li>
 <li><p>PS: Draw the water surface for the entire flocculator. To simplify this challenge make the assumption that the water slopes uniformly from one end of the flocculator to the other as it crosses the many baffles. There are many ways to approach this. We need a line that can then be “extruded” into a surface that will be normal to the sketch plane that the line was drawn on. To avoid needing a slanted plane you can create a sketch on the Front plane (assuming that you didn’t move the tank after inserting). All you need is to define a line on the sketch that has the right starting and ending elevations. Then extrude it to create a surface. Note that the extrude tool can either create a solid or a surface so you’ll need to select the surface option.</p></li>
 <li><p>The water elevation in a flocculator is controlled by the water elevation in the downstream clarifier because we can’t have a sudden decrease in water elevation (a waterfall!) because that would break up the flocs. The water depth increases as we move upstream in the flocculator because potential energy is being lost to heat as the water is being deformed. This increase in water elevation results in the flow area increasing and the velocity decreasing as we move upstream. This would result in less energy loss in the upstream baffles. To remedy this situation and increase the strength of the tank, set the port height to be equal to the target width of the flow so that a beam extends over the top of the port. We don’t know if this contraction will be exactly what is needed, but it should be close. This is an example where some computational fluid dynamics would be great to check if this solution behaves as we expect.</p></li>
@@ -354,7 +354,7 @@ Make a copy of the <a class="reference external" href="https://cad.onshape.com/d
 <li><p>What other economic factors might make the flocculator with taller walls be the preferred option in a water treatment plant?</p></li>
 <li><p>Revert to the base case and then increase the flow rate to 900 L/s. What happens to the number of baffles and to the cost per L/s?</p></li>
 <li><p>Revert to the base case and then increase PI_HS to 8. Does the cost increase or decrease? What do you conclude about the optimal value of PI_HS?</p></li>
-<li><p>Open the <a class="reference external" href="https://cad.onshape.com/documents/edb0d8000bff37cc559ebe89/w/1070adceaa2f931d13443deb/e/16171bc5d51fe4caa0b06c4e">HV Flocculator</a> and make sure the flow is set to 100 L/s. Which is more cost effective, the HV Flocculator or the HH Flocculator for the flow of 100 L/s? This could be an interesting challenge to figure out where these two competing designs have the same cost and hence where the transition between these designs should occur.</p></li>
+<li><p>Open the <a class="reference external" href="https://cad.onshape.com/documents/9742e8c019b742df4ae4db85/w/cbe4d0f58d318c45281687ae/e/05162587e7127122572d3a10?configuration=GT_min%3D37000.0%3BG_bod%3D70.0%3BQm_max%3D100.0%3BShow_Internal_Components%3Dtrue%3BTEMP_min%3D15.0%3BclarifierL%3D10.0%2Bmeter%3BoutletHW%3D2.5%2Bmeter%3Brep%3Dtrue&amp;renderMode=0&amp;uiState=6409154ff6606948eb764944">HV Flocculator</a> and make sure the flow is set to 100 L/s. Which is more cost effective, the HV Flocculator or the HH Flocculator for the flow of 100 L/s? This could be an interesting challenge to figure out where these two competing designs have the same cost and hence where the transition between these designs should occur.</p></li>
 <li><p>Decrease the temperature to 0 Celsius. What happens to the design? Can you explain why? This is a key insight about flocculation!</p></li>
 <li><p>Change Q_pi to 0.5. (Verify that the wall height isn’t affected by the change in flow rate. If the walls of your plant change when you change the fraction of the plant flow, you will need to look at how you are calculating wall height, and may need to come up with a new variable that is not dependent on fraction of the flow passing through the plant to correctly define the wall height.)  What happens to the water level in the plant? Was the change more dramatic than you expected? Explain why the water level drops so much when the flow rate is 50% of the design flow.</p></li>
 <li><p>Reduce the basis of design velocity gradient to 50 Hz. What happens to the cost of the flocculator? Explain why this happens. Remember that Gt was held constant and that Gt is the product of G and t (residence time)!</p></li>
