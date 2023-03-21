@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Clarification Design Challenge &mdash; AguaClara Textbook v1.4.21 documentation</title>
+  <title>Clarification Design Challenge &mdash; AguaClara Textbook v1.4.22 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.4.21
+                v1.4.22
               </div>
             
           
@@ -156,7 +156,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Clarification Design Challenge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#learning-objectives">Learning Objectives</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#playful-reflections">Playful Reflections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#design-exploration-2">Design Exploration 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#design-exploration">Design Exploration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
@@ -284,7 +284,7 @@
 <dt>Use the full clarifier to answer the following questions. Use the defaults as provided in the link and return to the link if you forget the defaults. Write the answers to these questions in the function reflections of the Clarifier Template.</dt><dd><ol class="arabic simple">
 <li><p>What do you initially think will happen to the total cost of the 0.8 mm polycarbonate sheets used for plate settlers if you were to increase the spacing of the plate settlers? (no wrong answers here!)</p></li>
 <li><p>Vary the Plate settler spacing from 1 cm to 5 cm and observe the cost of the 0.8 mm polycarbonate sheets. What do you observe and is it what you expected?</p></li>
-<li><p>Write a sentence or two to explain what you observed based on the underlying physics of the plate settlers. Remember that it is on the projected area (horizontal area) that particles can settle out. Refer to Equation <code class="xref eq docutils literal notranslate"><span class="pre">eq_vc_of_vz_plate</span></code> and also consider how the number of plate settlers changes as you vary the spacing.</p></li>
+<li><p>Write a sentence or two to explain what you observed based on the underlying physics of the plate settlers. Remember that it is on the projected area (horizontal area) that particles can settle out. Refer to Equation <a class="reference internal" href="Clarifier_Derivations.html#equation-vc-of-vz-plate">(573)</a> and also consider how the number of plate settlers changes as you vary the spacing.</p></li>
 <li><p>Why does the depth of the clarifier change when the plate settler spacing is changed? Watch the change in design carefully to see exactly which dimensions change.</p></li>
 <li><p>Reset the plate settler spacing to 2.5 cm. Now play with the plate settler angle. We haven’t done any research on this parameter and different manufactures of plate settlers use slightly different angles. How much would the clarifier cost decrease if we decreased the plate settler angle from 60° to 55°?</p></li>
 <li><p>Identify at least 3 changes in the design as you decrease the flow from 12 L/s to 1 L/s.</p></li>
@@ -294,8 +294,8 @@
 </li>
 </ol>
 </div>
-<div class="section" id="design-exploration-2">
-<h2>Design Exploration 2<a class="headerlink" href="#design-exploration-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="design-exploration">
+<h2>Design Exploration<a class="headerlink" href="#design-exploration" title="Permalink to this headline">¶</a></h2>
 <p>This part of the design exploration focuses on the plastic components that fit inside each of the bays in a clarifier.
 The rendering time for the design is significantly faster if replicate parts is set to false. When replicate parts is false the part studio only shows single parts in most cases. Although all of the replicated parts aren’t shown, the cost calculations are still correct. You can verify this by setting replicate parts to true and then check to see if the Bill of Materials is the same.</p>
 <p>Use the following values as the defaults for this design.</p>
@@ -310,7 +310,7 @@ The rendering time for the design is significantly faster if replicate parts is 
 </ul>
 <p>Note that the default flow rate for the clarifier was 12 L/s while the default flow rate for the plastic component is for 6 L/s. That is because the clarifier defaults to two bays for 6 L/s and thus to get a bay that is for 6 L/s requires a total clarifier flow of 12 L/s.</p>
 <p>You can use the Variable Table in the custom tables to browse the map of design variables.
-With MapToDisplay empty, you can see all of the top level entries in the design map. To browse deeper in the map enter</p>
+With MapToDisplay empty, you can see all of the top level entries in the design map. To browse deeper in the map enter # followed by the name of the variable that you want to explore.</p>
 <div class="figure align-center" id="id1">
 <span id="figure-variabletable"></span><a class="reference internal image-reference" href="../_images/VariableTable1.png"><img alt="Custom variable table." src="../_images/VariableTable1.png" style="height: 300px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 197 </span><span class="caption-text">Browsing the top level variable of the design map.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
