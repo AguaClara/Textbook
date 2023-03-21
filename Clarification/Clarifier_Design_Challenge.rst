@@ -31,13 +31,13 @@ Playful Reflections
 #. Use the full clarifier to answer the following questions. Use the defaults as provided in the link and return to the link if you forget the defaults. Write the answers to these questions in the function reflections of the Clarifier Template.
     #. What do you initially think will happen to the total cost of the 0.8 mm polycarbonate sheets used for plate settlers if you were to increase the spacing of the plate settlers? (no wrong answers here!)
     #. Vary the Plate settler spacing from 1 cm to 5 cm and observe the cost of the 0.8 mm polycarbonate sheets. What do you observe and is it what you expected?
-    #. Write a sentence or two to explain what you observed based on the underlying physics of the plate settlers. Remember that it is on the projected area (horizontal area) that particles can settle out. Refer to Equation :eq:`eq_vc_of_vz_plate` and also consider how the number of plate settlers changes as you vary the spacing.
+    #. Write a sentence or two to explain what you observed based on the underlying physics of the plate settlers. Remember that it is on the projected area (horizontal area) that particles can settle out. Refer to Equation :eq:`vc_of_vz_plate` and also consider how the number of plate settlers changes as you vary the spacing.
     #. Why does the depth of the clarifier change when the plate settler spacing is changed? Watch the change in design carefully to see exactly which dimensions change.
     #. Reset the plate settler spacing to 2.5 cm. Now play with the plate settler angle. We haven't done any research on this parameter and different manufactures of plate settlers use slightly different angles. How much would the clarifier cost decrease if we decreased the plate settler angle from 60° to 55°?
     #. Identify at least 3 changes in the design as you decrease the flow from 12 L/s to 1 L/s.
 
-Design Exploration 2
-====================
+Design Exploration
+==================
 
 This part of the design exploration focuses on the plastic components that fit inside each of the bays in a clarifier.
 The rendering time for the design is significantly faster if replicate parts is set to false. When replicate parts is false the part studio only shows single parts in most cases. Although all of the replicated parts aren't shown, the cost calculations are still correct. You can verify this by setting replicate parts to true and then check to see if the Bill of Materials is the same.
@@ -55,7 +55,7 @@ Use the following values as the defaults for this design.
 Note that the default flow rate for the clarifier was 12 L/s while the default flow rate for the plastic component is for 6 L/s. That is because the clarifier defaults to two bays for 6 L/s and thus to get a bay that is for 6 L/s requires a total clarifier flow of 12 L/s.
 
 You can use the Variable Table in the custom tables to browse the map of design variables.
-With MapToDisplay empty, you can see all of the top level entries in the design map. To browse deeper in the map enter
+With MapToDisplay empty, you can see all of the top level entries in the design map. To browse deeper in the map enter # followed by the name of the variable that you want to explore.
 
 .. _figure_VariableTable:
 
