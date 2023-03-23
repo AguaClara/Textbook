@@ -54,6 +54,12 @@ Use the following values as the defaults for this design.
 
 Note that the default flow rate for the clarifier was 12 L/s while the default flow rate for the plastic component is for 6 L/s. That is because the clarifier defaults to two bays for 6 L/s and thus to get a bay that is for 6 L/s requires a total clarifier flow of 12 L/s.
 
+In this design challenge, the parameter list is not included explicity in the FeatureScript document, so to check the value or name of a variable you can use the Variable Table. If you are asked to make a new variable (to prevent the default value from being used) please note that you will need to add units to your variable. To add units, simply multiply or divide by the unit which is treated as a constant. For example, for values with units of L/s and meters you would do the following: 
+
+design.tankQ = 50 * liter / second;
+
+design.tankL = 200 * meter;
+
 You can use the Variable Table in the custom tables to browse the map of design variables.
 With MapToDisplay empty, you can see all of the top level entries in the design map. To browse deeper in the map enter # followed by the name of the variable that you want to explore.
 
@@ -84,7 +90,7 @@ Answer the following questions.
 #. What is the total cost of the plastic for the default design? Use the Bill of Material and simply copy the total cost and paste it into your answer. It would be cool to make a cost function that could be called in FeatureScript for a part studio that would make it easy to change inputs and compare costs, but we don't have that figured out yet!
 #. What is the cost of the inlet manifold pipe as listed in the Bill of Materials? Note that this does not include the elbow and coupling that are designed as part of the channel system in the clarifier.
 #. Use Equation :eq:`G_of_vc_and_floc_props`, the design defaults for capture velocity and inlet manifold maximum velocity gradient, and a water temperature of 5°C to calculate the value of :math:`\xi_{breakup}` that is implicitly used in the design of the clarifier. Create new variables for capture velocity and velocity gradient so those values don't change as we make changes to the design inputs (design.G_bod and design.captureVm_bod). Note that this value is smaller than the value of :math:`\xi_{breakup} = 50 \cdot \frac{mm^8}{s^6}` that was experimentally determined for a kaolin suspension. We are still learning how :math:`\xi_{breakup}` controls the design of diffusers and plate settlers. We know that surface waters that contain dissolved organics will have core particle densities that are lower than kaolin clay and thus based on Equation :eq:`G_of_vc_and_floc_props` the value of :math:`\xi_{breakup}` will be reduced significantly.
-#. Increase the maximum velocity gradient (in the configuration inputs of the part studio) until the inlet pipe switches from 8" ND to 6" ND. What is the minimum velocity gradient that results in an 6" ND inlet manifold? Given that you are finding this value by iteration provide an answer that is within 10 Hz of the actual value.
+#. Increase the maximum velocity gradient (in the configuration inputs of the part studio) until the inlet pipe switches from 8" ND to 6" ND. You may need to use the Varible Table to find the Inlet Manifold ND, to see how it changes. What is the minimum velocity gradient that results in an 6" ND inlet manifold? Given that you are finding this value by iteration provide an answer that is within 10 Hz of the actual value.
 #. Use Equation :eq:`G_of_vc_and_floc_props` to calculate the maximum capture velocity given this new velocity gradient and assuming that the maximum allowable value of :math:`\xi_{breakup}` is the implicit default value you calculated in step 3.
 #. Explain why the plate settler design has to change to counteract the change in the velocity gradient.
 #. Change the capture velocity (in the configuration inputs of the part studio) and find the new cost of the 6 L/s clarifier with an 6" inlet manifold.
