@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Clarification Design Challenge &mdash; AguaClara Textbook 348/merge documentation</title>
+  <title>Clarification Design Challenge &mdash; AguaClara Textbook 349/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                348/merge
+                349/merge
               </div>
             
           
@@ -328,12 +328,12 @@ With MapToDisplay empty, you can see all of the top level entries in the design 
 <ol class="arabic simple">
 <li><p>What is the total cost of the plastic for the default design? Use the Bill of Material and simply copy the total cost and paste it into your answer. It would be cool to make a cost function that could be called in FeatureScript for a part studio that would make it easy to change inputs and compare costs, but we don’t have that figured out yet!</p></li>
 <li><p>What is the cost of the inlet manifold pipe as listed in the Bill of Materials? Note that this does not include the elbow and coupling that are designed as part of the channel system in the clarifier.</p></li>
-<li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(278)</a>, the design defaults for capture velocity and inlet manifold maximum velocity gradient, and a water temperature of 5°C to calculate the value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> that is implicitly used in the design of the clarifier. Create new variables for capture velocity and velocity gradient so those values don’t change as we make changes to the design inputs (design.G_bod and design.captureVm_bod). Note that this value is smaller than the value of <span class="math notranslate nohighlight">\(\xi_{breakup} = 50 \cdot \frac{mm^8}{s^6}\)</span> that was experimentally determined for a kaolin suspension. We are still learning how <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> controls the design of diffusers and plate settlers. We know that surface waters that contain dissolved organics will have core particle densities that are lower than kaolin clay and thus based on Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(278)</a> the value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> will be reduced significantly.</p></li>
+<li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(278)</a>, the design defaults for capture velocity and inlet manifold maximum velocity gradient, and a water temperature of 5°C to calculate the value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> that is implicitly used in the design of the clarifier. Create new variables for capture velocity and velocity gradient so those values don’t change as we make changes to the design inputs (design.G_bod and design.captureVm_bod), use the default values initially in this variable creation. Note that this value is smaller than the value of <span class="math notranslate nohighlight">\(\xi_{breakup} = 50 \cdot \frac{mm^8}{s^6}\)</span> that was experimentally determined for a kaolin suspension. We are still learning how <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> controls the design of diffusers and plate settlers. We know that surface waters that contain dissolved organics will have core particle densities that are lower than kaolin clay and thus based on Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(278)</a> the value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> will be reduced significantly.</p></li>
 <li><p>Increase the maximum velocity gradient (in the configuration inputs of the part studio) until the inlet pipe switches from 8” ND to 6” ND. You may need to use the Varible Table to find the Inlet Manifold ND, to see how it changes. What is the minimum velocity gradient that results in an 6” ND inlet manifold? Given that you are finding this value by iteration provide an answer that is within 10 Hz of the actual value.</p></li>
 <li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(278)</a> to calculate the maximum capture velocity given this new velocity gradient and assuming that the maximum allowable value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> is the implicit default value you calculated in step 3.</p></li>
 <li><p>Explain why the plate settler design has to change to counteract the change in the velocity gradient.</p></li>
 <li><p>Change the capture velocity (in the configuration inputs of the part studio) and find the new cost of the 6 L/s clarifier with an 6” inlet manifold.</p></li>
-<li><p>Explain why the cost decreased from the initial value even though this new design has the same value for  <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span>.</p></li>
+<li><p>Explain why the cost increased or decreased from the initial value even though this new design has the same value for  <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span>.</p></li>
 <li><p>How many plate settlers are in this clarifier? You can browse the design map using the custom Variable Table (in the same location as the Bill of Materials).</p></li>
 <li><p>What is the flow rate between two plates? Note that the number of spaces between plates is one less than the number of plates!</p></li>
 <li><p>What is the plan view area of the entrance into the space between two plate settlers? We will use this to calculate the vertical component of the velocity entering the plate settlers.</p></li>
