@@ -212,11 +212,39 @@ Given the estimate of the DOM coagulant demand at a previous time we can obtain 
 
 	 C_{coag_{t}} = \frac{1}{K_u^*}C_{raw_{NTU_t}}\left(C_{clarified_{NTU_{t+\theta}}}^{-2/3}-C_{raw_{NTU_t}}^{-2/3}\right)+C_{coag_{DOM_t}}
 
-If the coagulant DOM demand doesn't change significantly in the time used to update the coagulant dose, then Equation :eq:`DOMcoagDemand` can be used to eliminate :math:`C_{coag_{DOM_t}}` from Equation :eq:`targetfullcoagdoseofCpKu*UVandturbidity`.
+If the coagulant DOM demand doesn't change significantly in the time used to update the coagulant dose, then Equation :eq:`DOMcoagDemand` can be used to eliminate :math:`C_{coag_{DOM_t}}` from Equation :eq:`targetfullcoagdoseofCpKu*UVandturbidity`. The :math:`C_{clarified_{NTU_{t+\theta}}}` is the target clarified turbidity.
 
 The coagulant dosing system must include guardrails to ensure that the coagulant dose is within a reasonable range. There exists the possibility of a turbidimeter giving incorrect data that would result in a coagulant dose far outside a range that would ensure reasonable plant performance. The potential failures include:
 
  * settled water turbidity that is very low because the plant is starting up after an extended shutdown
  * faulty turbidimeter readings due to a dirty sample cell
 
-To reduce the likelihood of a treatment failure the estimated DOM coagulant demand can be compared with a reasonable range and if it is out of that range the estimated DOM coagulant demand can be forced back into the reasonable range. To prevent an excessively low coagulant dose the DOM coagulant demand can be limited to positive values. If it is known that the DOM coagulant demand is always exceeds a larger value, that larger value can be used as a lower limit. The upper limit can be set based on observation of the raw water quality.   
+To reduce the likelihood of a treatment failure the estimated DOM coagulant demand can be compared with a reasonable range and if it is out of that range the estimated DOM coagulant demand can be forced back into the reasonable range. To prevent an excessively low coagulant dose the DOM coagulant demand can be limited to positive values. If it is known that the DOM coagulant demand is always exceeds a larger value, that larger value can be used as a lower limit. The upper limit can be set based on observation of the raw water quality.
+
+Improved Linearized Model for Turbidity
+=======================================
+
+The exponent of 2/3 in the flocculation model is essential a conversion from volume to surface area. Thus the term :math:`C_{raw_{NTU_{t-\theta}}}^{2/3}` represents the surface area of the raw water particles per volume of the suspension. However, this tacitly assumes that turbidity measurements are effectively measuring the volume of the particles in the suspension. In fact, turbidity measures the surface area of the particles and thus we shouldn't be raising the turbidity measurements to the 2/3 power.
+
+The second change we can make in the model is to use an inverse definition of the unknown constant. Equations :eq:`fullcoagdoseofCpKu*UVandturbidity` to :eq:`targetfullcoagdoseofCpKu*UVandturbidity` then simplify to the following.
+
+.. math::
+  :label: fullcoagdoseofCpKu**UVandturbidity
+
+	 C_{coag_{t-\theta}} = K_{u^{**}} \left(\frac{C_{raw_{NTU_{t-\theta}}}}{C_{clarified_{NTU_t}}}-1\right)+C_{coag_{DOM_{t-\theta}}}
+
+The coagulant demand of the DOM is obtained by rearranging Equation :eq:`fullcoagdoseofCpKu**UVandturbidity`.
+
+.. math::
+  :label: DOMcoagDemand**
+
+	 C_{coag_{DOM_{t-\theta}}} = C_{coag_{t-\theta}} - K_{u^{**}} \left(\frac{C_{raw_{NTU_{t-\theta}}}}{C_{clarified_{NTU_t}}}-1\right)
+
+Given the estimate of the DOM coagulant demand at a previous time we can obtain an estimate of the required coagulant dose at time t. We assume that the DOM coagulant demand is not changing significantly in one hydraulic residence time.  Rewrite Equation :eq:`fullcoagdoseofCpKu**UVandturbidity` for time t.
+
+.. math::
+  :label: targetfullcoagdoseofCpKu**UVandturbidity
+
+	  C_{coag_t} = K_{u^{**}} \left(\frac{C_{raw_{NTU_t}}}{C_{clarified_{NTU_{t+\theta}}}}-1\right)+C_{coag_{DOM_t}}
+
+Equation :eq:`targetfullcoagdoseofCpKu**UVandturbidity` gives us a good estimate for the coagulant dose we should use now to achieve the target clarified turbidity in one hydraulic residence time.
