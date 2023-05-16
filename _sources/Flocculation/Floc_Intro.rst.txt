@@ -250,6 +250,15 @@ We can use this to obtain a final equation for collision potential of a reactor:
 
 **Note:** When we say :math:`G \theta` we are almost always referring to :math:`\tilde{G} \theta`.
 
+The head loss for a flocculator can be estimated quickly based on the basis of design values of :math:`\tilde{G} \theta` and :math:`\tilde{G}`. Rearrange Equation :eq:`Gtheta_of_hL` to obtain
+
+.. math::
+  :label: hL_of_Gtheta
+
+  h_L = \frac{\tilde{G} \theta \nu \tilde{G}}{g}.
+
+
+The head loss increases with the required collision potential :math:`\tilde{G} \theta` and it also increases with the velocity gradient. Cold water also requires more head loss due to the increased viscosity and hence more energy is required to deform the fluid and achieve the target collision potential.
 
 Generating Head Loss with Baffles
 ----------------------------------
