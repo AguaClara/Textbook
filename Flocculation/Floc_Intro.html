@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Introduction &mdash; AguaClara Textbook 349/merge documentation</title>
+  <title>Introduction &mdash; AguaClara Textbook 350/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                349/merge
+                350/merge
               </div>
             
           
@@ -410,7 +410,7 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 <p class="caption"><span class="caption-number">Fig. 106 </span><span class="caption-text">The inner viscous length scale is approximately 3 to 10 mm for velocity gradients that are typically used in flocculators. Clay separation distances are smaller than the inner viscous length scale and thus viscous shear dominates particle collisions in flocculation.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 <p>By comparing <a class="reference internal" href="#figure-lambdaclay-vs-cclay"><span class="std std-numref">Fig. 105</span></a> and <a class="reference internal" href="#figure-innerviscous-vs-g"><span class="std std-numref">Fig. 106</span></a> it is apparent that the particle separation distances commonly found in surface water treatment plants are much smaller than the inner viscous length scale for all practical flocculation velocity gradients. Thus viscosity will dominate the flocculation process. This key insight reveals why turbulent flow flocculators have been designed using the dimensionless grouping <span class="math notranslate nohighlight">\(G \theta\)</span> which is fundamentally <span class="math notranslate nohighlight">\(\sqrt\frac{\epsilon}{\nu} \theta\)</span>. Given that flocculation is viscous dominated implies that the flocculation process will slow down as the temperature increases and the viscosity increases.</p>
-<p>The flocculation model (see Equation <a class="reference internal" href="Floc_Model.html#equation-cplamint">(476)</a>) reveals that the velocity gradient multiplied by the residence time in the flocculator will determine the final spacing between the primary particles. Our goal is to maximize the spacing between particles and thus to minimize the number of particles and potential pathogens in our drinking water.</p>
+<p>The flocculation model (see Equation <a class="reference internal" href="Floc_Model.html#equation-cplamint">(477)</a>) reveals that the velocity gradient multiplied by the residence time in the flocculator will determine the final spacing between the primary particles. Our goal is to maximize the spacing between particles and thus to minimize the number of particles and potential pathogens in our drinking water.</p>
 <p>There are diminishing returns on investment in larger flocculators to produce cleaner water because the time between collisions increases as the primary particles are spaced further apart. Eventually other processes  including fluidized floc filters (floc filters), plate settlers, and sand-floc filter (stacked rapid sand filter) are able to reduce the primary particle concentration at a lower cost.</p>
 </div>
 <div class="section" id="collision-potential-tilde-g-theta-and-energy-dissipation-rate-varepsilon">
@@ -426,6 +426,10 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 <div class="math notranslate nohighlight" id="equation-gtheta-of-hl">
 <span class="eqno">(450)<a class="headerlink" href="#equation-gtheta-of-hl" title="Permalink to this equation">¶</a></span>\[\tilde{G} \theta = \sqrt{\frac{g h_L \theta}{\nu}}\]</div>
 <p><strong>Note:</strong> When we say <span class="math notranslate nohighlight">\(G \theta\)</span> we are almost always referring to <span class="math notranslate nohighlight">\(\tilde{G} \theta\)</span>.</p>
+<p>The head loss for a flocculator can be estimated quickly based on the basis of design values of <span class="math notranslate nohighlight">\(\tilde{G} \theta\)</span> and <span class="math notranslate nohighlight">\(\tilde{G}\)</span>. Rearrange Equation <a class="reference internal" href="#equation-gtheta-of-hl">(450)</a> to obtain</p>
+<div class="math notranslate nohighlight" id="equation-hl-of-gtheta">
+<span class="eqno">(451)<a class="headerlink" href="#equation-hl-of-gtheta" title="Permalink to this equation">¶</a></span>\[h_L = \frac{\tilde{G} \theta \nu \tilde{G}}{g}.\]</div>
+<p>The head loss increases with the required collision potential <span class="math notranslate nohighlight">\(\tilde{G} \theta\)</span> and it also increases with the velocity gradient. Cold water also requires more head loss due to the increased viscosity and hence more energy is required to deform the fluid and achieve the target collision potential.</p>
 </div>
 <div class="section" id="generating-head-loss-with-baffles">
 <h3>Generating Head Loss with Baffles<a class="headerlink" href="#generating-head-loss-with-baffles" title="Permalink to this headline">¶</a></h3>
@@ -457,10 +461,10 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 </div>
 <p>We can therefore state with reasonable accuracy that, when most contracted, the flow around a baffle goes through 37.3% of the area it does when expanded, or <span class="math notranslate nohighlight">\(A_{contracted} = \Pi_{vc}^{baffle} A_{expanded}\)</span>. Through the <cite>:ref:`third form of the minor loss equation &lt;heading_minor_losses&gt;</cite>, <span class="math notranslate nohighlight">\(h_e = K \frac{\bar v_{out}^2}{2g}\)</span> and its definition of the minor loss coefficient, <span class="math notranslate nohighlight">\(K = \left( \frac{A_{out}}{A_{in}} -1 \right)^2\)</span>, we can determine the minimum minor loss coefficient for flow around a single baffle:</p>
 <div class="math notranslate nohighlight" id="equation-k-baffle-min">
-<span class="eqno">(451)<a class="headerlink" href="#equation-k-baffle-min" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}K_{baffle_{min}} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2\\= \left( \frac{1}{\Pi_{vc}^{baffle}} -1 \right)^2\\
+<span class="eqno">(452)<a class="headerlink" href="#equation-k-baffle-min" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}K_{baffle_{min}} = \left( \frac{A_{expanded}}{A_{contracted}} -1 \right)^2\\= \left( \frac{1}{\Pi_{vc}^{baffle}} -1 \right)^2\\
 = \left( \frac{1}{0.373} -1 \right)^2\\\color{red} {= 2.82}\end{aligned}\end{align} \]</div>
 <p>This <span class="math notranslate nohighlight">\(K_{baffle_{min}}\)</span> has been used to design flocculators in AguaClara plants until 2021. The plant at Gracias revealed that the observed head loss was greater than predicted.  <a class="reference external" href="https://iwaponline.com/aqua/article/47/3/142/31711/Design-of-around-the-end-hydraulic-flocculators">This paper by Haarhoff in 1998</a>  (DOI: 10.2166/aqua.1998.20), the <span class="math notranslate nohighlight">\(K_{baffle}\)</span> values found are context dependent and empirically based. Further analysis of how <span class="math notranslate nohighlight">\(K_{baffle}\)</span> varies with the geometry of the flocculator is given in the section on <a class="reference internal" href="Floc_Derivations.html#heading-baffle-loss-coefficient"><span class="std std-ref">Baffle Minor Loss Coefficient</span></a>.</p>
-<p>Equation <a class="reference internal" href="#equation-k-baffle-min">(451)</a> doesn’t account for the fact that for a series of baffles (or flow contractions) the flow might not be able to fully expand before entering the next baffle (or contraction). The distance required for the contracted flow to expand can be estimated from jet equations (see section on <a class="reference internal" href="Floc_Derivations.html#heading-baffle-loss-coefficient"><span class="std std-ref">Baffle Minor Loss Coefficient</span></a> for an estimate of how the minor loss coefficient increases when the flow doesn’t fully expand).</p>
+<p>Equation <a class="reference internal" href="#equation-k-baffle-min">(452)</a> doesn’t account for the fact that for a series of baffles (or flow contractions) the flow might not be able to fully expand before entering the next baffle (or contraction). The distance required for the contracted flow to expand can be estimated from jet equations (see section on <a class="reference internal" href="Floc_Derivations.html#heading-baffle-loss-coefficient"><span class="std std-ref">Baffle Minor Loss Coefficient</span></a> for an estimate of how the minor loss coefficient increases when the flow doesn’t fully expand).</p>
 </div>
 </div>
 <div class="section" id="flocculator-efficiency">
@@ -472,30 +476,30 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 </ol>
 <p>Fortunately for us, both problems can be quantified with a single ratio:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-2">
-<span class="eqno">(452)<a class="headerlink" href="#equation-flocculation-floc-intro-2" title="Permalink to this equation">¶</a></span>\[\Pi_{\tilde{G}}^{G_{max}} = \frac{G_{max}}{\tilde{G}}\]</div>
+<span class="eqno">(453)<a class="headerlink" href="#equation-flocculation-floc-intro-2" title="Permalink to this equation">¶</a></span>\[\Pi_{\tilde{G}}^{G_{max}} = \frac{G_{max}}{\tilde{G}}\]</div>
 <p>High values of <span class="math notranslate nohighlight">\(\Pi_{\tilde{G}}^{G_{max}}\)</span> occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local <span class="math notranslate nohighlight">\(G\)</span> values, then <span class="math notranslate nohighlight">\(G_{max}\)</span> becomes large. If the flocculator has a lot of dead space, then <span class="math notranslate nohighlight">\(\tilde{G}\)</span> becomes small. Either way, <span class="math notranslate nohighlight">\(\Pi_{\tilde{G}}^{G_{max}}\)</span> becomes larger.</p>
 <p><strong>Note:</strong> Recall the relationship between <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span> : <span class="math notranslate nohighlight">\(G = \sqrt{ \frac{\varepsilon}{\nu} }\)</span>. From this relationship, we can see that <span class="math notranslate nohighlight">\(G \propto \sqrt{\varepsilon}\)</span>. Thus, by defining  <span class="math notranslate nohighlight">\(\Pi_{\tilde{G}}^{G_{max}}\)</span>, we can also define a ratio for Max to average energy dissipation rate:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-3">
-<span class="eqno">(453)<a class="headerlink" href="#equation-flocculation-floc-intro-3" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{max}} = \left( \Pi_{\tilde{G}}^{G_{max}} \right)^2\]</div>
+<span class="eqno">(454)<a class="headerlink" href="#equation-flocculation-floc-intro-3" title="Permalink to this equation">¶</a></span>\[\Pi_{\bar \varepsilon}^{\varepsilon_{max}} = \left( \Pi_{\tilde{G}}^{G_{max}} \right)^2\]</div>
 <p>Therefore, by making our <span class="math notranslate nohighlight">\(\Pi_{\tilde{G}}^{G_{max}}\)</span> as small as possible, we can be sure that our flocculator is efficient, and we no longer have to account for the previously mentioned problems. <a class="reference external" href="https://iwaponline.com/aqua/article/50/3/149/30498/Towards-optimal-design-parameters-for-around-the">A paper by Haarhoff and van der Walt in 2001</a> (DOI: 10.2166/aqua.2001.0014) uses CFD to show that the minimum <span class="math notranslate nohighlight">\(\Pi_{\tilde{G}}^{G_{max}}\)</span> attainable in a hydraulic flocculator is <span class="math notranslate nohighlight">\(\Pi_{\tilde{G}}^{G_{max}} = \sqrt{2} \approx 1.4\)</span>, which means that <span class="math notranslate nohighlight">\(\Pi_{\bar \varepsilon}^{\varepsilon_{max}} = \left( \Pi_{\tilde{G}}^{G_{max}} \right)^2 \approx 2\)</span>. So how do we optimize an AguaClara flocculator to make sure <span class="math notranslate nohighlight">\(\Pi_{\tilde{G}}^{G_{max}} = \sqrt{2}\)</span>?</p>
 <p>We define and optimize a performance metric:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-4">
-<span class="eqno">(454)<a class="headerlink" href="#equation-flocculation-floc-intro-4" title="Permalink to this equation">¶</a></span>\[\frac{H_e}{S} = \Pi_{H_eS}\]</div>
+<span class="eqno">(455)<a class="headerlink" href="#equation-flocculation-floc-intro-4" title="Permalink to this equation">¶</a></span>\[\frac{H_e}{S} = \Pi_{H_eS}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(H_e\)</span> is the distance between flow expansions in the flocculator and <span class="math notranslate nohighlight">\(S\)</span> is the spacing between baffles. For now, <span class="math notranslate nohighlight">\(H_e\)</span> is approximated as the height of water in the flocculator.</p>
 <p>Since <span class="math notranslate nohighlight">\(G_{max}\)</span> is determined by the fluid mechanics of flow around a baffle, our main concern is eliminating dead space in the flocculator. We do this by placing an upper limit on <span class="math notranslate nohighlight">\(\frac{H_e}{S}\)</span>. To determine this upper limit, we need to find the distance it takes for the flow to fully expand after it has contracted around a baffle.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-5">
-<span class="eqno">(455)<a class="headerlink" href="#equation-flocculation-floc-intro-5" title="Permalink to this equation">¶</a></span>\[\Pi_{BaffleJet_{exp}}x = D - D_{cp}\]</div>
+<span class="eqno">(456)<a class="headerlink" href="#equation-flocculation-floc-intro-5" title="Permalink to this equation">¶</a></span>\[\Pi_{BaffleJet_{exp}}x = D - D_{cp}\]</div>
 <div class="figure align-center" id="id18">
 <span id="figure-jet-expansion-flocculator"></span><a class="reference internal image-reference" href="../_images/Jet_expansion_flocculator.jpg"><img alt="jet expansion in the flocculator" src="../_images/Jet_expansion_flocculator.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 111 </span><span class="caption-text">A turbulent jet expands in width by approximately one unit for every 10 units downstream (see Equation <a class="reference internal" href="Floc_Derivations.html#equation-planejet-expansion">(492)</a>).</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 111 </span><span class="caption-text">A turbulent jet expands in width by approximately one unit for every 10 units downstream (see Equation <a class="reference internal" href="Floc_Derivations.html#equation-planejet-expansion">(493)</a>).</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
 </div>
 <p>Using the equation and image above, we can find the distance required for the flow to fully expand around a baffle as a function of baffle spacing <span class="math notranslate nohighlight">\(S\)</span>. We do this by substituting  <span class="math notranslate nohighlight">\(D_{cp} = (0.373 S)\)</span> along with <span class="math notranslate nohighlight">\(D = S\)</span> to approximate how much distance, <span class="math notranslate nohighlight">\(x = L_{jet}\)</span>, the contracted flow has to cover.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-6">
-<span class="eqno">(456)<a class="headerlink" href="#equation-flocculation-floc-intro-6" title="Permalink to this equation">¶</a></span>\[\Pi_{BaffleJet_{exp}} L_{jet} = S - (0.373 S)\]</div>
+<span class="eqno">(457)<a class="headerlink" href="#equation-flocculation-floc-intro-6" title="Permalink to this equation">¶</a></span>\[\Pi_{BaffleJet_{exp}} L_{jet} = S - (0.373 S)\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Pi_{BaffleJet_{exp}}\)</span> is the dimensionless rate of expansion for the jet that has a baffle on one side.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-7">
-<span class="eqno">(457)<a class="headerlink" href="#equation-flocculation-floc-intro-7" title="Permalink to this equation">¶</a></span>\[L_{jet_{max}} = \frac{0.627 S}{\Pi_{BaffleJet_{exp}}} = 10.8S\]</div>
-<p>This gives a rough estimate of the maximum distance between flow expansions while ensuring that there are no zones of low turbulence in the flocculator. The relationship between <span class="math notranslate nohighlight">\(L_{jet_{max}}\)</span> and the flocculator geometry is given in Equation <a class="reference internal" href="Floc_Derivations.html#equation-l-jet">(494)</a>.</p>
+<span class="eqno">(458)<a class="headerlink" href="#equation-flocculation-floc-intro-7" title="Permalink to this equation">¶</a></span>\[L_{jet_{max}} = \frac{0.627 S}{\Pi_{BaffleJet_{exp}}} = 10.8S\]</div>
+<p>This gives a rough estimate of the maximum distance between flow expansions while ensuring that there are no zones of low turbulence in the flocculator. The relationship between <span class="math notranslate nohighlight">\(L_{jet_{max}}\)</span> and the flocculator geometry is given in Equation <a class="reference internal" href="Floc_Derivations.html#equation-l-jet">(495)</a>.</p>
 <div class="figure align-center" id="id19">
 <span id="figure-cfd-baffle-image"></span><a class="reference internal image-reference" href="../_images/CFD_baffle_image.jpg"><img alt="CFD baffle image" src="../_images/CFD_baffle_image.jpg" style="width: 50%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 112 </span><span class="caption-text">High <span class="math notranslate nohighlight">\(\frac{H_e}{S}\)</span> ratios result in flocculator zones with low velocity gradients that don’t contribute effectively.</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
@@ -518,7 +522,7 @@ Our goal in designing a flocculator is to facilitate particle collisions in a co
 </div>
 <p>Thus, <span class="math notranslate nohighlight">\(\Pi_{H_eS_{min}}\)</span> should be at least twice the slot width ratio, <span class="math notranslate nohighlight">\(\Pi_{H_eS_{min}} = 2\)</span>. Historically, AguaClara plants have been designed using <span class="math notranslate nohighlight">\(\Pi_{H_eS_{min}} = 3\)</span>. This adds a safety factor of sorts, ensuring that the flow does not short-circuit through the flocculator and also allowing more space for the flow to expand after each contraction.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-intro-8">
-<span class="eqno">(458)<a class="headerlink" href="#equation-flocculation-floc-intro-8" title="Permalink to this equation">¶</a></span>\[\Pi_{H_eS_{min}} = \frac{H_e}{S} = 3\]</div>
+<span class="eqno">(459)<a class="headerlink" href="#equation-flocculation-floc-intro-8" title="Permalink to this equation">¶</a></span>\[\Pi_{H_eS_{min}} = \frac{H_e}{S} = 3\]</div>
 <p>Although this value of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> meets the geometric constraints it is not necessarily the best design since the flow doesn’t come close to fully expanding between contractions. This results in a much higher baffle loss coefficient and a higher level of uncertainty of the exact value of that loss coefficient. Thus we recommend using higher values of <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> when possible.</p>
 </div>
 <div class="section" id="flocculator-geometry">
