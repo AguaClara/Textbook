@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Coagulant Automation &mdash; AguaClara Textbook 351/merge documentation</title>
+  <title>Coagulant Automation &mdash; AguaClara Textbook 352/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                351/merge
+                352/merge
               </div>
             
           
@@ -177,14 +177,12 @@
 <p class="caption"><span class="caption-text">Chapter 12: Operation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Coagulant Automation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#linearized-two-parameter-dosing-model">Linearized Two Parameter Dosing Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#parameter-estimation">Parameter estimation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#coagulant-dose-algorithm">Coagulant Dose Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coagulant-dose-for-suspended-particles">Coagulant Dose for Suspended Particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coagulant-dose-for-dissolved-organic-matter">Coagulant Dose for Dissolved Organic Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simple-corrector-method">Simple Corrector Method</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#data-processing">Data processing</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#improved-linearized-model">Improved Linearized Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#improved-linearized-model-for-turbidity">Improved Linearized Model for Turbidity</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Troubleshooting.html">Plant Operation Troubleshooting</a></li>
@@ -274,124 +272,69 @@
 <span id="title-coagulant-automation"></span><h1>Coagulant Automation<a class="headerlink" href="#coagulant-automation" title="Permalink to this headline">¶</a></h1>
 <p>Automating the coagulant dose is difficult because it hasn’t been clear what measurement to use that could be driven to a target value by varying the coagulant dose and that would then provide the desired plant performance. Based on the previous understanding of coagulant neutralizing the negative charge of raw water particles, many water treatment plants have attempted to use streaming current meters to set the coagulant dose. That method doesn’t work well because it is the fractional coverage of the primary particles with sticky coagulant nanoparticles that sets the attachment efficiency and that does not require a neutral surface charge.</p>
 <p>The concentration of primary particles exiting the flocculator could be used to guide the coagulant dose. The flocculated suspension can not be sampled directly with a particle counter because the particle concentration is too high. Given that we are only interested in the concentration of primary particles, we can use a tube settler to quickly reduce the particle concentration of the sample line going to the particle counter while still enabling an accurate count of the primary particle concentration.</p>
-<div class="figure align-center" id="id1">
+<div class="figure align-center" id="id5">
 <span id="figure-tubesettlerflocmonitor"></span><a class="reference internal image-reference" href="../_images/TubeSettlerFlocMonitor.png"><img alt="TubeSettlerFlocMonitor" src="../_images/TubeSettlerFlocMonitor.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 245 </span><span class="caption-text">Proposed particle counter monitoring of flocculation performance.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 245 </span><span class="caption-text">Proposed particle counter monitoring of flocculation performance.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
-<p>The relationship between attachment efficiency and primary particle concentration after flocculation is given by Equation <a class="reference internal" href="../Flocculation/Floc_Model.html#equation-cpofgtlamsim">(480)</a>. For the simple case of no coagulant demand by dissolved organic matter it is reasonable to assume that the attachment efficiency is proportional to the ratio of the coagulant dose to the raw water turbidity.</p>
-<div class="math notranslate nohighlight" id="equation-coverageofdoseandntu">
-<span class="eqno">(821)<a class="headerlink" href="#equation-coverageofdoseandntu" title="Permalink to this equation">¶</a></span>\[\alpha \propto \frac{C_{coag}}{C_{turbidity}}.\]</div>
-<p>All of the primary particle properties and plant design terms can be treated as a single unknown, <span class="math notranslate nohighlight">\(K_u\)</span>. Thus Equation <a class="reference internal" href="../Flocculation/Floc_Model.html#equation-cpofgtlamsim">(480)</a> simplifies to</p>
-<div class="math notranslate nohighlight" id="equation-cpofcoagdoseandturbidity">
-<span class="eqno">(822)<a class="headerlink" href="#equation-cpofcoagdoseandturbidity" title="Permalink to this equation">¶</a></span>\[C_{P} = \frac{ K_u}{\left( \frac{C_{coag}}{C_{turbidity}} \right)^\frac{3}{2}}.\]</div>
-<p>We can use Equation <a class="reference internal" href="#equation-cpofcoagdoseandturbidity">(822)</a> to estimate the value of <span class="math notranslate nohighlight">\(K_u\)</span>. There is a time lag, <span class="math notranslate nohighlight">\(\theta\)</span> between a change in coagulant dose and particle count change related to the residence time in the rapid mix, flocculator, and tube settler. The turbidity and coagulant dose for this equation are the values at time <span class="math notranslate nohighlight">\(t-\theta\)</span>.</p>
-<div class="math notranslate nohighlight" id="equation-k-u">
-<span class="eqno">(823)<a class="headerlink" href="#equation-k-u" title="Permalink to this equation">¶</a></span>\[K_{u_t} = C_{P_t}\left( \frac{C_{coag_{t-\theta}}}{C_{turbidity_{t-\theta}}} \right)^\frac{3}{2}\]</div>
-<p>where <span class="math notranslate nohighlight">\(C_{P_t}\)</span> is the concentration of primary particles measured at time t.</p>
-<p>Now that we have an estimate of the constant, <span class="math notranslate nohighlight">\(K_u\)</span>, we can estimate the new coagulant dose that will be required to drive the concentration of primary particles to the target level. The target level will be set such that the plant performance meets both regulatory and operational efficiency goals.</p>
-<p>Equation <a class="reference internal" href="#equation-cpofcoagdoseandturbidity">(822)</a> can be solved for the coagulant dose</p>
-<div class="math notranslate nohighlight" id="equation-coagdoseofcpkuandturbidity">
-<span class="eqno">(824)<a class="headerlink" href="#equation-coagdoseofcpkuandturbidity" title="Permalink to this equation">¶</a></span>\[C_{coag_{goal_t}}  =C_{turbidity_t}\left( \frac{K_{u_t}}{C_{P_{goal}}} \right)^\frac{2}{3}\]</div>
-<p>Combining Equations <a class="reference internal" href="#equation-k-u">(823)</a> and <a class="reference internal" href="#equation-coagdoseofcpandturbidity">(825)</a> we obtain a simple method to set the correct coagulant dose given current performance.</p>
-<div class="math notranslate nohighlight" id="equation-coagdoseofcpandturbidity">
-<span class="eqno">(825)<a class="headerlink" href="#equation-coagdoseofcpandturbidity" title="Permalink to this equation">¶</a></span>\[C_{coag_{goal_t}}  =C_{coag_{t-\theta}}\left( \frac{C_{P_t}}{C_{P_{goal}}} \right)^\frac{2}{3}\left( \frac{C_{turbidity_t}}{C_{turbidity_{t-\theta}}} \right)\]</div>
-<p>If the particle count is too high the coagulant dose will be increased. The coagulant dose will also be increased if the raw water turbidity increases. In this system the flocculator and tube settler system is providing continuous guidance on how to optimize the coagulant dose. Small errors in the model or in measurements will be self correcting because the value of <span class="math notranslate nohighlight">\(K_u\)</span> will be continuously updated.</p>
+<div class="section" id="coagulant-dose-for-suspended-particles">
+<h2>Coagulant Dose for Suspended Particles<a class="headerlink" href="#coagulant-dose-for-suspended-particles" title="Permalink to this headline">¶</a></h2>
+<p>The relationship between attachment efficiency and primary particle concentration after flocculation is given by Equation <a class="reference internal" href="../Flocculation/Floc_Model.html#equation-cpofgtlamsim">(480)</a>. For the simple case of no coagulant demand by dissolved organic matter it is reasonable to assume that the attachment efficiency is proportional to the ratio of the coagulant dose to the surface area of the particles in the raw water and the particle surface area is proportional to the particle concentration.</p>
+<div class="math notranslate nohighlight" id="equation-coverageofdoseandcp">
+<span class="eqno">(821)<a class="headerlink" href="#equation-coverageofdoseandcp" title="Permalink to this equation">¶</a></span>\[\bar{\alpha} = k' \frac{C_{coag_{particle}}}{C_{P_0}}.\]</div>
+<p>This coagulant dose only refers to the coagulant that will end up coating the suspended particles. The coagulant nanoparticles that are coated by dissolved organic matter will be considered
+The result of the AguaClara flocculation model (Equation <a class="reference internal" href="#equation-cplamint">(822)</a>) is repeated here for convenience.</p>
+<div class="math notranslate nohighlight" id="equation-cplamint">
+<span class="eqno">(822)<a class="headerlink" href="#equation-cplamint" title="Permalink to this equation">¶</a></span>\[\frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)=k\bar{\alpha}\tilde{G}\theta.\]</div>
+<p>Substituting Equation <a class="reference internal" href="#equation-coverageofdoseandcp">(821)</a> and solving for the coagulant dose we obtain</p>
+<div class="math notranslate nohighlight" id="equation-ccoagflocmodel">
+<span class="eqno">(823)<a class="headerlink" href="#equation-ccoagflocmodel" title="Permalink to this equation">¶</a></span>\[C_{coag_{particle}} =  \frac{3}{2\pi  k k' \tilde{G}\theta}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right).\]</div>
+<p>The primary <a href="#id1"><span class="problematic" id="id2">**</span></a>p**article properties and <a href="#id3"><span class="problematic" id="id4">**</span></a>f**locculator design terms can be treated as a single unknown, <span class="math notranslate nohighlight">\(k_{pf}\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-kpf">
+<span class="eqno">(824)<a class="headerlink" href="#equation-kpf" title="Permalink to this equation">¶</a></span>\[k_{pf} =  \frac{3}{2\pi  k k' \tilde{G}\theta}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\]</div>
+<p>Thus Equation <a class="reference internal" href="#equation-ccoagflocmodel">(823)</a> simplifies to</p>
+<div class="math notranslate nohighlight" id="equation-ccoagkpf">
+<span class="eqno">(825)<a class="headerlink" href="#equation-ccoagkpf" title="Permalink to this equation">¶</a></span>\[C_{coag_{particle}} =  k_{pf} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)\]</div>
+</div>
+<div class="section" id="coagulant-dose-for-dissolved-organic-matter">
+<h2>Coagulant Dose for Dissolved Organic Matter<a class="headerlink" href="#coagulant-dose-for-dissolved-organic-matter" title="Permalink to this headline">¶</a></h2>
 <p>The next improvement in this simple model is to add a correction factor for dissolved organic matter. The dissolved organic matter effectively inactivates some of the coagulant. The dissolved organic matter is measured as absorbance at 254 nm. The amount of coagulant that is tied up with dissolved organic matter is</p>
 <div class="math notranslate nohighlight" id="equation-uv-coag-consumed">
 <span class="eqno">(826)<a class="headerlink" href="#equation-uv-coag-consumed" title="Permalink to this equation">¶</a></span>\[C_{coag_{DOM}}  = A_{254nm} K_{DOM}\]</div>
-<p>Equation <a class="reference internal" href="#equation-k-u">(823)</a> becomes</p>
-<div class="math notranslate nohighlight" id="equation-k-u-uv">
-<span class="eqno">(827)<a class="headerlink" href="#equation-k-u-uv" title="Permalink to this equation">¶</a></span>\[K_{u_t} = C_{P_t}\left( \frac{C_{coag_{t-\theta}} - A_{254nm_{t-\theta}} K_{DOM}}{C_{turbidity_{t-\theta}}} \right)^\frac{3}{2}\]</div>
-<p>The dissolved organic matter simply reduces the amount of coagulant that is available to make the inorganic particles sticky. The required coagulant dose can be obtained from Equation <a class="reference internal" href="#equation-coagdoseofcpkuandturbidity">(824)</a>.</p>
-<div class="math notranslate nohighlight" id="equation-coagdoseofcpkuuvandturbidity">
-<span class="eqno">(828)<a class="headerlink" href="#equation-coagdoseofcpkuuvandturbidity" title="Permalink to this equation">¶</a></span>\[C_{coag_{goal_t}}  =C_{turbidity_t}\left( \frac{K_{u_t}}{C_{P_{goal}}} \right)^\frac{2}{3} + A_{254nm_t} K_{DOM}\]</div>
-<p>Combining Equations <a class="reference internal" href="#equation-k-u-uv">(827)</a> and <a class="reference internal" href="#equation-coagdoseofcpkuuvandturbidity">(828)</a> we obtain a simple method to set the correct coagulant dose given current performance.</p>
-<div class="math notranslate nohighlight" id="equation-coagdoseofcpuvandturbidity">
-<span class="eqno">(829)<a class="headerlink" href="#equation-coagdoseofcpuvandturbidity" title="Permalink to this equation">¶</a></span>\[C_{coag_{goal_t}}  = \left(C_{coag_{t-\theta}} - A_{254nm_{t-\theta}} K_{DOM}\right) \left( \frac{C_{P_t}}{C_{P_{goal}}} \right)^\frac{2}{3}\left( \frac{C_{turbidity_t}}{C_{turbidity_{t-\theta}}} \right) + A_{254nm_t} K_{DOM}\]</div>
-<p>We need a method to estimate <span class="math notranslate nohighlight">\(K_{DOM}\)</span>. The simplest assumption is that <span class="math notranslate nohighlight">\(K_{DOM}\)</span> is constant over time. The experimental results obtained by Yingda Du (see <a class="reference internal" href="../Flocculation/Floc_Model.html#figure-floc-model-ha"><span class="std std-numref">Fig. 129</span></a> <a class="reference external" href="https://www.liebertpub.com/doi/abs/10.1089/ees.2018.0405">by Yingda Du, et al., 2019</a>) suggest that approximately 1 mg/L of aluminum is required to tie up 12 mg/L of humic acid.  The humic acid concentration was based on the dry weight and humic acid is approximately 48% carbon. Thus 6 mg of humic acid as carbon require 1 mg/L of aluminum. The absorbance at 254 nm was measured by <a class="reference external" href="https://core.ac.uk/reader/55618110?utm_source=linkout">Rodrigues. et al., 2008</a>  to be 0.055(humic acid as carbon in mg/L). Thus <span class="math notranslate nohighlight">\(0.33A_{254nm}\)</span> is expected to consume 1 mg/L of aluminum where <span class="math notranslate nohighlight">\(A_{254nm}\)</span> is the UV 254 absorbance in a 1 cm sample cell. The remaining required conversion is from the concentration of aluminum to the coagulant dose as measured at the water treatment plant.</p>
-<p>It would also be possible to use recent operating data to find the best estimates of both <span class="math notranslate nohighlight">\(K_{DOM}\)</span> and <span class="math notranslate nohighlight">\(K_u\)</span>. In any case the effect of adding the dissolved organic matter components to the model will be to reduce the magnitude of the coagulant fluctuations because a significant part of the coagulant dose is not affected by the primary particle concentration.</p>
-<div class="section" id="linearized-two-parameter-dosing-model">
-<h2>Linearized Two Parameter Dosing Model<a class="headerlink" href="#linearized-two-parameter-dosing-model" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="parameter-estimation">
-<h3>Parameter estimation<a class="headerlink" href="#parameter-estimation" title="Permalink to this headline">¶</a></h3>
-<p>The first step is to develop a method to estimate the unknown parameters using recently acquired performance data at the water treatment plant. The two fitting parameters, <span class="math notranslate nohighlight">\(K_{DOM}\)</span> and <span class="math notranslate nohighlight">\(K_u\)</span>, can be estimated using recent data and linear regression. Equation <a class="reference internal" href="../Flocculation/Floc_Model.html#equation-cpofgtlamsim">(480)</a> can be modified to account for the coagulant dose required to tie up the dissolved organic matter.</p>
-<div class="math notranslate nohighlight" id="equation-cpofcoagdoseandturbiditywithdom">
-<span class="eqno">(830)<a class="headerlink" href="#equation-cpofcoagdoseandturbiditywithdom" title="Permalink to this equation">¶</a></span>\[C_{P} = \frac{ K_u}{\left( \frac{C_{coag} - C_{coag_{DOM}}}{C_{raw_{NTU}}} \right)^\frac{3}{2}}.\]</div>
-<p>The concentration of primary particles after sedimentation, <span class="math notranslate nohighlight">\(C_{P}\)</span> can be approximated by a measurement of the clarified water turbidity, <span class="math notranslate nohighlight">\(C_{clarified_{NTU}}\)</span>. The time lag between raw and clarified measurements is the residence time, <span class="math notranslate nohighlight">\(\theta\)</span> for rapid mix, flocculation, and clarification processes.</p>
-<div class="math notranslate nohighlight" id="equation-2paramcoagmodeldraft0">
-<span class="eqno">(831)<a class="headerlink" href="#equation-2paramcoagmodeldraft0" title="Permalink to this equation">¶</a></span>\[C_{clarified_{NTU_t}} = \frac{ K_{u_{t-\theta}}}{\left( \frac{C_{coag_{t-\theta}} - C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}} \right)^\frac{3}{2}}.\]</div>
-<p>Linearize the equation to obtain coagulant dose as a function of a measured value and unknown slope and intercept.</p>
-<div class="math notranslate nohighlight" id="equation-2paramcoagmodeldraft1">
-<span class="eqno">(832)<a class="headerlink" href="#equation-2paramcoagmodeldraft1" title="Permalink to this equation">¶</a></span>\[C_{clarified_{NTU_t}}^{-\frac{2}{3}} = \frac{C_{coag_{t-\theta}} - C_{coag_{DOM_{t-\theta}}}}{ C_{raw_{NTU_{t-\theta}}} K_{u_{t-\theta}}^{\frac{2}{3}}}\]</div>
-<p>Separate terms and then solve for <span class="math notranslate nohighlight">\(C_{coag}\)</span>. Replace <span class="math notranslate nohighlight">\(K_{u_{t-\theta}}^{\frac{2}{3}}\)</span> with <span class="math notranslate nohighlight">\(K_{u_{t-\theta}}^*\)</span></p>
-<div class="math notranslate nohighlight" id="equation-linearizedcoagmodel">
-<span class="eqno">(833)<a class="headerlink" href="#equation-linearizedcoagmodel" title="Permalink to this equation">¶</a></span>\[C_{coag_{t-\theta}} = K_{u_{t-\theta}}^* \frac{C_{raw_{NTU_{t-\theta}}}}{C_{clarified_{NTU_t}}^{\frac{2}{3}}} + C_{coag_{DOM_{t-\theta}}}\]</div>
-<p>We now have an equation in the form y = mx + b where x is measured values, m and b are the fitting parameters, and y is the coagulant dose.</p>
+<p>The dissolved organic matter simply reduces the amount of coagulant that is available to make the inorganic particles sticky. The required coagulant dose can be obtained by adding <span class="math notranslate nohighlight">\(C_{coag_{DOM}}\)</span> to Equation <a class="reference internal" href="#equation-ccoagkpf">(825)</a>.</p>
+<div class="math notranslate nohighlight" id="equation-ccoagtotal">
+<span class="eqno">(827)<a class="headerlink" href="#equation-ccoagtotal" title="Permalink to this equation">¶</a></span>\[C_{coag} =  k_{pf} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right) + C_{coag_{DOM}}\]</div>
+<p>One method to estimate <span class="math notranslate nohighlight">\(K_{DOM}\)</span> is based on the experimental results obtained by Yingda Du (see <a class="reference internal" href="../Flocculation/Floc_Model.html#figure-floc-model-ha"><span class="std std-numref">Fig. 129</span></a> <a class="reference external" href="https://www.liebertpub.com/doi/abs/10.1089/ees.2018.0405">by Yingda Du, et al., 2019</a>). Those results suggest that approximately 1 mg/L of aluminum is required to tie up 12 mg/L of humic acid.  The humic acid concentration was based on the dry weight and humic acid is approximately 48% carbon. Thus 6 mg of humic acid as carbon require 1 mg/L of aluminum. The absorbance at 254 nm was measured by <a class="reference external" href="https://core.ac.uk/reader/55618110?utm_source=linkout">Rodrigues. et al., 2008</a>  to be 0.055(humic acid as carbon in mg/L). Thus <span class="math notranslate nohighlight">\(0.33A_{254nm}\)</span> is expected to consume 1 mg/L of aluminum where <span class="math notranslate nohighlight">\(A_{254nm}\)</span> is the UV 254 absorbance in a 1 cm sample cell. The remaining required conversion is from the concentration of aluminum to the coagulant dose as measured at the water treatment plant.</p>
+<p>Equation <a class="reference internal" href="#equation-ccoagtotal">(827)</a> can be rewritten with subscripts that indicate when and where the samples are taken for the application of automatic coagulant dosing.</p>
+<div class="math notranslate nohighlight" id="equation-ccoagplant">
+<span class="eqno">(828)<a class="headerlink" href="#equation-ccoagplant" title="Permalink to this equation">¶</a></span>\[C_{coag_{t}} =  k_{pf} C_{raw_{t}} \left(C_{clarified_{t + \theta}}^{-2/3}-C_{raw_{t}}^{-2/3}\right) + C_{coag_{DOM_{t}}}\]</div>
+<p>Equation <a class="reference internal" href="#equation-ccoagplant">(828)</a> reveals that there is an important time lag due to the hydraulic retention time between the coagulant injection and the clarified water sample. This time lag will require that the dosing algorithm include data from the recent history to account for this time offset.</p>
 </div>
-<div class="section" id="coagulant-dose-algorithm">
-<h3>Coagulant Dose Algorithm<a class="headerlink" href="#coagulant-dose-algorithm" title="Permalink to this headline">¶</a></h3>
-<p>The parameter <span class="math notranslate nohighlight">\(K_{u_{t-\theta}}^*\)</span> is a property of the primary particles and the flocculation and clarification processes. The parameter <span class="math notranslate nohighlight">\(C_{coag_{DOM}}\)</span> is controlled by the concentration of dissolved organic matter that adsorbs to the coagulant nanoparticles. Initial expectations are that <span class="math notranslate nohighlight">\(K_{u_{t-\theta}}^*\)</span> changes less over time than the parameter <span class="math notranslate nohighlight">\(C_{coag_{DOM}}\)</span>.</p>
-<p>In any case “recent” data will be plotted in the linearized form as given by Equation <a class="reference internal" href="#equation-linearizedcoagmodel">(833)</a>. Linear regression will be used to obtain the two fitting parameters and</p>
-<p>If <span class="math notranslate nohighlight">\(K_{u_{t-\theta}}^*\)</span> is known from linear regression over a period of weeks, then the current <span class="math notranslate nohighlight">\(C_{coag_{DOM}}\)</span> could be estimated from the previous hour of operation so that the recent dissolved organic matter concentration is used when setting the coagulant dose.</p>
-</div>
-<div class="section" id="data-processing">
-<h3>Data processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li><p>Acquire data at some high rate (perhaps 1 s intervals)</p></li>
-<li><p>Set the number of updates per hydraulic residence time (HRT) (perhaps 10) and average the incoming data to that update interval</p></li>
-<li><p>Hold the averaged data in a buffer with each data set including a time stamp.</p></li>
-</ol>
-<p>The coagulant dose can then be calculated as</p>
-<div class="math notranslate nohighlight" id="equation-coagdoseofcpku-uvandturbidity">
-<span class="eqno">(834)<a class="headerlink" href="#equation-coagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[C_{coag_{goal_t}}  = C_{turbidity_t}K_{u_{t-\theta}}^* C_{P_{goal}}^\frac{-2}{3} + C_{coag_{DOM_{t-\theta}}}\]</div>
-</div>
-</div>
-<div class="section" id="improved-linearized-model">
-<h2>Improved Linearized Model<a class="headerlink" href="#improved-linearized-model" title="Permalink to this headline">¶</a></h2>
-<p>We previously assumed that we could neglect the effect of the settled water turbidity in Equation <span class="xref std std-ref">intdCPlam</span>. Here we don’t make this assumption and linearize the model again. We begin with Equation <span class="xref std std-ref">intdCPlam</span>, combine unknowns into a single constant, assume that the probability of attachment is proportional to the coagulant dose normalized by the concentration of primary particles, and replace primary particle concentration with turbidity.</p>
-<div class="math notranslate nohighlight" id="equation-operation-coagulant-automation-0">
-<span class="eqno">(835)<a class="headerlink" href="#equation-operation-coagulant-automation-0" title="Permalink to this equation">¶</a></span>\[       \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=k\bar{\alpha}\tilde{G}\theta.\]</div>
-<p>Replace alpha with the ratio of coagulant not tied up by dissolved organic matter to raw water turbidity.</p>
-<div class="math notranslate nohighlight" id="equation-operation-coagulant-automation-1">
-<span class="eqno">(836)<a class="headerlink" href="#equation-operation-coagulant-automation-1" title="Permalink to this equation">¶</a></span>\[       \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} - C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}k\tilde{G}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}\]</div>
-<p>Create one grouping of constants.</p>
-<div class="math notranslate nohighlight" id="equation-operation-coagulant-automation-2">
-<span class="eqno">(837)<a class="headerlink" href="#equation-operation-coagulant-automation-2" title="Permalink to this equation">¶</a></span>\[       \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}} -C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}k\tilde{G}\theta \frac{2\pi}{3}\left(\frac{6}{\rho_{P}\pi}\right)^{2/3}\]</div>
-<p>Replace constants with <span class="math notranslate nohighlight">\(K_{u_{t-\theta}}^*\)</span>.</p>
-<div class="math notranslate nohighlight" id="equation-operation-coagulant-automation-3">
-<span class="eqno">(838)<a class="headerlink" href="#equation-operation-coagulant-automation-3" title="Permalink to this equation">¶</a></span>\[       \left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)=\frac{C_{coag_{t-\theta}}-C_{coag_{DOM_{t-\theta}}}}{C_{raw_{NTU_{t-\theta}}}}K_{u_{t-\theta}}^*\]</div>
-<p>Now solve for the coagulant dose with an equation of the form y = mx + b. The parameter  <span class="math notranslate nohighlight">\(K_{u}^*\)</span> incorporates properties of the primary particles (density and diameter), the flocculator collision potential (<span class="math notranslate nohighlight">\(\tilde{G}\)</span>), the coagulant nanoparticle properties (density and diameter), and the first order rate constant, k, that describes the conversion of primary particles into settleable flocs. One possible assumption is that <span class="math notranslate nohighlight">\(K_{u}^*\)</span> can be treated as a constant.</p>
-<div class="math notranslate nohighlight" id="equation-fullcoagdoseofcpku-uvandturbidity">
-<span class="eqno">(842)<a class="headerlink" href="#equation-fullcoagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[       C_{coag_{t-\theta}} = \frac{1}{K_{u^*}}C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)+C_{coag_{DOM_{t-\theta}}}\]</div>
-<p>The coagulant demand of the DOM is obtained by rearranging Equation <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(842)</a>.</p>
+<div class="section" id="simple-corrector-method">
+<h2>Simple Corrector Method<a class="headerlink" href="#simple-corrector-method" title="Permalink to this headline">¶</a></h2>
+<p>An estimate for the coagulant demand of the DOM is obtained by solving Equation <a class="reference internal" href="#equation-ccoagplant">(828)</a> for <span class="math notranslate nohighlight">\(C_{coag_{DOM_{t}}}\)</span> and shifting the time to one hydraulic residence time earlier.</p>
 <div class="math notranslate nohighlight" id="equation-domcoagdemand">
-<span class="eqno">(843)<a class="headerlink" href="#equation-domcoagdemand" title="Permalink to this equation">¶</a></span>\[       C_{coag_{DOM_{t-\theta}}} = C_{coag_{t-\theta}} - \frac{1}{K_{u^*}}C_{raw_{NTU_{t-\theta}}}\left(C_{clarified_{NTU_t}}^{-2/3}-C_{raw_{NTU_{t-\theta}}}^{-2/3}\right)\]</div>
-<p>Given the estimate of the DOM coagulant demand at a previous time we can obtain an estimate of the required coagulant dose at time t. First rewrite Equation <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(842)</a> for time t.</p>
-<div class="math notranslate nohighlight" id="equation-targetfullcoagdoseofcpku-uvandturbidity">
-<span class="eqno">(844)<a class="headerlink" href="#equation-targetfullcoagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[       C_{coag_{t}} = \frac{1}{K_u^*}C_{raw_{NTU_t}}\left(C_{clarified_{NTU_{t+\theta}}}^{-2/3}-C_{raw_{NTU_t}}^{-2/3}\right)+C_{coag_{DOM_t}}\]</div>
-<p>If the coagulant DOM demand doesn’t change significantly in the time used to update the coagulant dose, then Equation <a class="reference internal" href="#equation-domcoagdemand">(843)</a> can be used to eliminate <span class="math notranslate nohighlight">\(C_{coag_{DOM_t}}\)</span> from Equation <a class="reference internal" href="#equation-targetfullcoagdoseofcpku-uvandturbidity">(844)</a>. The <span class="math notranslate nohighlight">\(C_{clarified_{NTU_{t+\theta}}}\)</span> is the target clarified turbidity.</p>
+<span class="eqno">(829)<a class="headerlink" href="#equation-domcoagdemand" title="Permalink to this equation">¶</a></span>\[        C_{coag_{DOM_{t-\theta}}} = C_{coag_{t-\theta}} - k_{pf} C_{raw_{t-\theta}} \left(C_{clarified_{t}}^{-2/3}-C_{raw_{t-\theta}}^{-2/3}\right)\]</div>
+<p>Given the estimate of the DOM coagulant demand a hydraulic residence time earlier we can obtain an estimate of the current required coagulant dose. We will use Equation <a class="reference internal" href="#equation-ccoagplant">(828)</a> and the assumption that the coagulant DOM demand doesn’t change significantly in one hydraulic residence time. The <span class="math notranslate nohighlight">\(C_{clarified_{t + \theta}}\)</span> is the target clarified turbidity.</p>
+<div class="math notranslate nohighlight" id="equation-ccoagplantofdom">
+<span class="eqno">(830)<a class="headerlink" href="#equation-ccoagplantofdom" title="Permalink to this equation">¶</a></span>\[C_{coag_{t}} =  k_{pf} C_{raw_{t}} \left(C_{clarified_{t + \theta}}^{-2/3}-C_{raw_{t}}^{-2/3}\right) + C_{coag_{DOM_{t-\theta}}}\]</div>
 <p>The coagulant dosing system must include guardrails to ensure that the coagulant dose is within a reasonable range. There exists the possibility of a turbidimeter giving incorrect data that would result in a coagulant dose far outside a range that would ensure reasonable plant performance. The potential failures include:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>settled water turbidity that is very low because the plant is starting up after an extended shutdown</p></li>
 <li><p>faulty turbidimeter readings due to a dirty sample cell</p></li>
+<li><p>raw water turbidity that is lower than the target clarified turbidity would result in a coagulant dose that could be too low to achieve effective filtration</p></li>
 </ul>
 </div></blockquote>
 <p>To reduce the likelihood of a treatment failure the estimated DOM coagulant demand can be compared with a reasonable range and if it is out of that range the estimated DOM coagulant demand can be forced back into the reasonable range. To prevent an excessively low coagulant dose the DOM coagulant demand can be limited to positive values. If it is known that the DOM coagulant demand is always exceeds a larger value, that larger value can be used as a lower limit. The upper limit can be set based on observation of the raw water quality.</p>
+<div class="section" id="data-processing">
+<h3>Data processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Acquire data at some high rate (perhaps 1 s intervals)</p></li>
+<li><p>Set the number of coagulant dose updates per hydraulic residence time (HRT) (perhaps 10) and average the incoming data to that update interval</p></li>
+<li><p>Hold the averaged data in a buffer with each data set including a time stamp.</p></li>
+<li><p>For each coagulant dose update use Equation <a class="reference internal" href="#equation-domcoagdemand">(829)</a> to estimate the coagulant demand of the DOM and then use Equation <a class="reference internal" href="#equation-ccoagplantofdom">(830)</a> to estimate the new coagulant dose.</p></li>
+</ol>
 </div>
-<div class="section" id="improved-linearized-model-for-turbidity">
-<h2>Improved Linearized Model for Turbidity<a class="headerlink" href="#improved-linearized-model-for-turbidity" title="Permalink to this headline">¶</a></h2>
-<p>The exponent of 2/3 in the flocculation model is essential a conversion from volume to surface area. Thus the term <span class="math notranslate nohighlight">\(C_{raw_{NTU_{t-\theta}}}^{2/3}\)</span> represents the surface area of the raw water particles per volume of the suspension. However, this tacitly assumes that turbidity measurements are effectively measuring the volume of the particles in the suspension. In fact, turbidity measures the surface area of the particles and thus we shouldn’t be raising the turbidity measurements to the 2/3 power.</p>
-<p>The second change we can make in the model is to use an inverse definition of the unknown constant. Equations <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(842)</a> to <a class="reference internal" href="#equation-targetfullcoagdoseofcpku-uvandturbidity">(844)</a> then simplify to the following.</p>
-<div class="math notranslate nohighlight" id="equation-fullcoagdoseofcpku-uvandturbidity">
-<span class="eqno">(842)<a class="headerlink" href="#equation-fullcoagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[       C_{coag_{t-\theta}} = K_{u^{**}} \left(\frac{C_{raw_{NTU_{t-\theta}}}}{C_{clarified_{NTU_t}}}-1\right)+C_{coag_{DOM_{t-\theta}}}\]</div>
-<p>The coagulant demand of the DOM is obtained by rearranging Equation <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(842)</a>.</p>
-<div class="math notranslate nohighlight" id="equation-domcoagdemand">
-<span class="eqno">(843)<a class="headerlink" href="#equation-domcoagdemand" title="Permalink to this equation">¶</a></span>\[       C_{coag_{DOM_{t-\theta}}} = C_{coag_{t-\theta}} - K_{u^{**}} \left(\frac{C_{raw_{NTU_{t-\theta}}}}{C_{clarified_{NTU_t}}}-1\right)\]</div>
-<p>Given the estimate of the DOM coagulant demand at a previous time we can obtain an estimate of the required coagulant dose at time t. We assume that the DOM coagulant demand is not changing significantly in one hydraulic residence time.  Rewrite Equation <a class="reference internal" href="#equation-fullcoagdoseofcpku-uvandturbidity">(842)</a> for time t.</p>
-<div class="math notranslate nohighlight" id="equation-targetfullcoagdoseofcpku-uvandturbidity">
-<span class="eqno">(844)<a class="headerlink" href="#equation-targetfullcoagdoseofcpku-uvandturbidity" title="Permalink to this equation">¶</a></span>\[        C_{coag_t} = K_{u^{**}} \left(\frac{C_{raw_{NTU_t}}}{C_{clarified_{NTU_{t+\theta}}}}-1\right)+C_{coag_{DOM_t}}\]</div>
-<p>Equation <a class="reference internal" href="#equation-targetfullcoagdoseofcpku-uvandturbidity">(844)</a> gives us a good estimate for the coagulant dose we should use now to achieve the target clarified turbidity in one hydraulic residence time.</p>
 </div>
 </div>
 
@@ -407,7 +350,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, AguaClara Reach.</p>
+    <p>&#169; Copyright 2023, AguaClara Reach.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
