@@ -1,3 +1,8 @@
+import os
+import sys
+
+sys.path.append(os.path.abspath("./_ext"))
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -16,11 +21,21 @@ release = '0.0.0'
 
 extensions = ['sphinx.ext.doctest',
               'sphinx.ext.mathjax',
-              'sphinx.ext.todo',
+            #   'sphinx.ext.todo',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.disqus',
-              'rst2pdf.pdfbuilder'
+              'rinoh.frontend.sphinx',
+              'keyword_replacer',
+              'todo'
               ]
+
+todo_include_todos = False
+
+keyword_map = {
+    "KEYWORD1": "Replacement1",
+    "KEYWORD2": "Replacement2",
+    # ... add as many as you want
+}
 
 # https://sphinxcontrib-bibtex.readthedocs.io/en/2.0.0/usage.html#configuration
 bibtex_bibfiles = ['references.bib']
@@ -32,6 +47,7 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 root_doc = 'index'
+# root_doc = 'Technical_Report/lfom'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -39,6 +55,10 @@ root_doc = 'index'
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+rinoh_documents = [
+    dict(doc='index', target='aguaclara')
+]
 
 # -- Options for PDF output --------------------------------------------------
 
@@ -57,7 +77,7 @@ html_static_path = ['_static']
 # regardless of the global 'pdf_compressed' setting.
 
 pdf_documents = [
-    ('index', 'MyProject', 'My Project', 'Author Name'),
+    ('Technical_Report/lfom', 'AguaClara', 'AguaClara Textbook', 'AguaClara Reach'),
 ]
 
 # A comma-separated list of custom stylesheets. Example:

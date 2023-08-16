@@ -12,7 +12,7 @@ BUILDDIR      = _build
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 pdf:
-	$(SPHINXBUILD) -b pdf $(SPHINXOPTS) "$(SOURCEDIR)" "$(BUILDDIR)"/pdf
+	$(SPHINXBUILD) -b rinoh $(SPHINXOPTS) "$(SOURCEDIR)" "$(BUILDDIR)"/pdf
 	@echo
 	@echo "Build finished. The PDF files are in _build/pdf."
 
