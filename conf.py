@@ -16,8 +16,10 @@ release = '0.0.0'
 
 extensions = ['sphinx.ext.doctest',
               'sphinx.ext.mathjax',
-              'sphinxcontrib.bibtex',
               'sphinx.ext.todo',
+              'sphinxcontrib.bibtex',
+              'sphinxcontrib.disqus',
+              'rst2pdf.pdfbuilder'
               ]
 
 # https://sphinxcontrib-bibtex.readthedocs.io/en/2.0.0/usage.html#configuration
@@ -27,28 +29,16 @@ bibtex_default_style = 'alpha'
 disqus_shortname = 'AguaClara'
 
 templates_path = ['_templates']
-exclude_patterns = ['_build',
-                    'Thumbs.db',
-                    '.DS_Store',
-                    'AIDE/About']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 root_doc = 'index'
 
-# If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
-
-
-# -- Options for figure, equation and table referencing -------------------
-
-numfig = True
-math_number_all = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-
 
 # -- Options for PDF output --------------------------------------------------
 
