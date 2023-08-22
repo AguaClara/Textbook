@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Plant Hydraulics &mdash; AguaClara Textbook 354/merge documentation</title>
+  <title>Plant Hydraulics &mdash; AguaClara Textbook 355/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                354/merge
+                355/merge
               </div>
             
           
@@ -285,14 +285,14 @@
 <div class="math notranslate nohighlight" id="equation-v-max-minor-losses">
 <span class="eqno">(75)<a class="headerlink" href="#equation-v-max-minor-losses" title="Permalink to this equation">¶</a></span>\[\bar v_{max}^2 = \sqrt{\frac{2gh_{e_{max}}}{K_e}}\]</div>
 <p>This calculations for the maximum velocities for different sections of the plant piping are in the <a class="reference external" href="https://cad.onshape.com/documents/feb8f8b15585d57ecb0091f2/w/11145594f45115d4e255d7ae/e/b3519c65bc0794966e96cb8e">PipeMap Onshape document</a>.</p>
-<p>Kawamura <span id="id1">[<a class="reference internal" href="#id3"><span>Kaw00</span></a>]</span> recommends maximum velocities of about 2 m/s except where floc breakup is a concern. He also recommends that the plant hydraulics be designed to handle 1.2 to 1.5 of the plant design flow rate. If we use the less conservative factor we obtain a maximum plant pipe velocity of 1.7 m/s.</p>
+<p>Kawamura <a href="#id1"><span class="problematic" id="id2">:cite:`plantHydraulics-kawamura2000integrated`</span></a> recommends maximum velocities of about 2 m/s except where floc breakup is a concern. He also recommends that the plant hydraulics be designed to handle 1.2 to 1.5 of the plant design flow rate. If we use the less conservative factor we obtain a maximum plant pipe velocity of 1.7 m/s.</p>
 <p>The bypass line requires a careful design because the elevation difference is slightly greater than 1 m and contains an entrance (K = 0.5), 6 elbows (K = 0.9), and an exit (K = 1). The minor loss equation gives a maximum velocity of 1.7 m/s without any additional safety factor.</p>
 <p>The linear flow orifice (LFOM) is sized based on a maximum velocity of Equation <a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#equation-lfom-v-max">(336)</a>. For the AguaClara standard LFOM head loss of 20 cm the maximum velocity is 0.84 m/s. With a safety factor of 1.2 this results in a maximum velocity of 0.7 m/s. Thus the LFOM requires a larger diameter pipe than the plant bypass line. Given the high cost of switching to larger pipes and fittings it is worth designing for the precise bypass line requirements rather than simple using the LFOM diameter for other pipes.</p>
 <p>The plant bypass line, backwash recycle line and source water pipes will all be designed using the bypass line nominal diameter. The bypass line will be designed based on the minor losses of the entrance, elbows, and exit as well as the total elevation difference between the entrance tank and the filter outlet tank.</p>
 <p>Pipes used to connect the clarifier to the filter need to be designed in context because the head loss directly influences the overall plant head loss and hence the height of the building. In that case the head loss should be limited to about 0.1 m. The velocity will be limited based on the number of elbows required. As plant flow rates increase the clarified pipe will quickly reach the maximum pipe diameter that the implementation partner is willing to install. In that case the options are to use multiple pipes or switch to open channel flow.</p>
 <p>The chemical pipes have three sections with different constraints.</p>
-<span id="table-chemical-pipes"></span><table class="docutils align-left" id="id40">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Design constraints for the chemical feed piping.</span><a class="headerlink" href="#id40" title="Permalink to this table">¶</a></caption>
+<span id="table-chemical-pipes"></span><table class="docutils align-left" id="id3">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Design constraints for the chemical feed piping.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -373,12 +373,6 @@
 </div>
 <div class="section" id="doser-to-drip-point-chlorine">
 <h2>Doser to drip point (chlorine)<a class="headerlink" href="#doser-to-drip-point-chlorine" title="Permalink to this headline">¶</a></h2>
-<p id="id2"><dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">Kaw00</a></span></dt>
-<dd><p>S. Kawamura. <em>Integrated Design and Operation of Water Treatment Facilities</em>. Wiley, 2000. ISBN 9780471350934. URL: <a class="reference external" href="https://books.google.com/books?id=cOQKKRUNGrwC">https://books.google.com/books?id=cOQKKRUNGrwC</a>.</p>
-</dd>
-</dl>
-</p>
 </div>
 </div>
 

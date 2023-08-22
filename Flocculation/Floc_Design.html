@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Flocculation Design &mdash; AguaClara Textbook 354/merge documentation</title>
+  <title>Flocculation Design &mdash; AguaClara Textbook 355/merge documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                354/merge
+                355/merge
               </div>
             
           
@@ -341,9 +341,9 @@
 </dl>
 </li>
 </ol>
-<div class="figure align-center" id="id39">
+<div class="figure align-center" id="id1">
 <span id="figure-floculator-physical-parameters"></span><a class="reference internal image-reference" href="../_images/Flocculator_physical_parameters.jpg"><img alt="physical floccuation parameter" src="../_images/Flocculator_physical_parameters.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">Flocculator geometry definition including the effect of baffle thickness. Accounting for baffle thickness would be particularly important if <a class="reference external" href="https://en.wikipedia.org/wiki/Ferrocement">ferrocement</a> or wood were used for baffles.</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 134 </span><span class="caption-text">Flocculator geometry definition including the effect of baffle thickness. Accounting for baffle thickness would be particularly important if <a class="reference external" href="https://en.wikipedia.org/wiki/Ferrocement">ferrocement</a> or wood were used for baffles.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>We start by making sure that our flocculator will be able to flocculate effectively by defining <span class="math notranslate nohighlight">\(h_{L_{floc}}\)</span> and <span class="math notranslate nohighlight">\(\tilde{G} \theta\)</span>. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards (effective 2023) in AguaClara flocculators:</p>
 <blockquote>
@@ -358,9 +358,9 @@
 <li><p><span class="math notranslate nohighlight">\(L_{Max, \, sed} = 6 \, {\rm m}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(W_{Min, \, human} = 45 \, {\rm cm}\)</span></p></li>
 </ul>
-<div class="figure align-center" id="id40">
+<div class="figure align-center" id="id2">
 <span id="figure-physical-design-criteria-floc"></span><a class="reference internal image-reference" href="../_images/Physical_design_criteria.jpg"><img alt="physical design criteria" src="../_images/Physical_design_criteria.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 135 </span><span class="caption-text">Layout of flocculator and clarifiers that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 135 </span><span class="caption-text">Layout of flocculator and clarifiers that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="physical-dimensions">
 <h3>Physical Dimensions<a class="headerlink" href="#physical-dimensions" title="Permalink to this headline">¶</a></h3>
@@ -379,9 +379,9 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <p>The equation for <em>actual</em> flocculator length is therefore:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-2">
 <span class="eqno">(517)<a class="headerlink" href="#equation-flocculation-floc-design-2" title="Permalink to this equation">¶</a></span>\[L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \rlap{-} V})\]</div>
-<div class="figure align-center" id="id41">
+<div class="figure align-center" id="id3">
 <span id="figure-floc-channels"></span><a class="reference internal image-reference" href="../_images/Floc_channels.jpg"><img alt="floc channels" src="../_images/Floc_channels.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 136 </span><span class="caption-text">There are an even amount of flocculator channels to keep the AguaClara plant layout consistent for flows greater than 12 L/s. This ensures that the entrance tank, filter box, and filters can be kept in the same places across plants.</span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 136 </span><span class="caption-text">There are an even amount of flocculator channels to keep the AguaClara plant layout consistent for flows greater than 12 L/s. This ensures that the entrance tank, filter box, and filters can be kept in the same places across plants.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="width-and-number-of-channels">
@@ -466,26 +466,14 @@ L_{Max, \, \rlap{-}V} = \frac{\rlap{-} V}{n_{Min, \, channels} W_{Min, \, human}
 <div class="section" id="residence-time">
 <h4>Residence Time<a class="headerlink" href="#residence-time" title="Permalink to this headline">¶</a></h4>
 <p>It is now time to make our final check. We need to make sure that our actual residence time is <em>at least</em> as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than <span class="math notranslate nohighlight">\(\rlap{-} V_{floc}\)</span>. See <a class="reference internal" href="#figure-flocculator-head-loss"><span class="std std-numref">Fig. 137</span></a> for clarification.</p>
-<div class="figure align-center" id="id42">
+<div class="figure align-center" id="id4">
 <span id="figure-flocculator-head-loss"></span><a class="reference internal image-reference" href="../_images/Flocculator_head_loss.jpg"><img alt="Flocculator_head_loss" src="../_images/Flocculator_head_loss.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 137 </span><span class="caption-text">The water level in the flocculator decreases due to head loss. Flocculators may occupy multiple channels, but this extra triangle of water exists in any case.</span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 137 </span><span class="caption-text">The water level in the flocculator decreases due to head loss. Flocculators may occupy multiple channels, but this extra triangle of water exists in any case.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <p>Thus, the actual average water level in the flocculator is <span class="math notranslate nohighlight">\(H + \frac{h_{L_{floc}}}{2}\)</span>. Thus, the actual residence time is:</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-design-11">
 <span class="eqno">(532)<a class="headerlink" href="#equation-flocculation-floc-design-11" title="Permalink to this equation">¶</a></span>\[\theta_{actual} = \frac{n_{channels} L_{channel} W_{channel} \left( H + \frac{h_{L_{floc}}}{2} \right)} {Q}\]</div>
 <p>Check to see if <span class="math notranslate nohighlight">\(\theta_{actual}\)</span> is greater than <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
-<p id="id1"><dl class="citation">
-<dt class="label" id="id8"><span class="brackets">Haa98</span></dt>
-<dd><p>Johannes Haarhoff. Design of Around-the-End Hydraulic Flocculators. <em>Journal of Water Supply: Research and Technology - Aqua</em>, 47(3):142–152, June 1998. URL: <a class="reference external" href="https://doi.org/10.2166/aqua.1998.20">https://doi.org/10.2166/aqua.1998.20</a> (visited on 2015-07-03).</p>
-</dd>
-<dt class="label" id="id9"><span class="brackets">HvdW01</span></dt>
-<dd><p>Johannes Haarhoff and Jeremia J. van der Walt. Towards Optimal Design Parameters for Around-the-End Hydraulic Flocculators. <em>Journal of Water Supply: Research and Technology - Aqua</em>, 50(3):149–159, 2001.</p>
-</dd>
-<dt class="label" id="id10"><span class="brackets">SO84</span></dt>
-<dd><p>Christopher R. Schulz and Daniel A. Okun. <em>Surface water treatment for communities in developing countries</em>. Wiley, New York, 1984. ISBN 978-0-471-80261-7.</p>
-</dd>
-</dl>
-</p>
 </div>
 </div>
 </div>

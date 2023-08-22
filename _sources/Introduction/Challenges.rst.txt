@@ -71,6 +71,10 @@ Tasks and Goals
 * Develop a plan to address the current limits on the size and flow of the various components.
 * Develop a plan to add the number of treatment trains as an input to the entrance tank FeatureScript code
 * Modify the part studio to accommodate a variable number of treatment trains with an LFOM serving each treatment train.
+* Evaluate methods to add the coagulant
+
+   * one injection point for each treatment train (perhaps into each LFOM)
+   * one injection point upstream from the LFOMs. This method requires careful design to ensure adequate mixing before the flow splits so that each treatment train receives the same coagulant dose. The advantage of this approach is that there is only one injection point to maintain.
 * Carefully review the design to identify other changes that could be made for ease of fabrication, operation, and maintenance.
 
 
