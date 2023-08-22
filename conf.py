@@ -35,8 +35,6 @@
 extensions = ['sphinx.ext.doctest',
               'sphinx.ext.mathjax',
               'sphinx.ext.todo',
-              'sphinxcontrib.bibtex',
-              'sphinxcontrib.disqus',
               ]
 
 # https://sphinxcontrib-bibtex.readthedocs.io/en/2.0.0/usage.html#configuration
