@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Coagulant Automation &mdash; AguaClara Textbook v1.4.27 documentation</title>
+  <title>Coagulant Automation &mdash; AguaClara Textbook v1.4.28 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                v1.4.27
+                v1.4.28
               </div>
             
           
@@ -272,23 +272,23 @@
 <span id="title-coagulant-automation"></span><h1>Coagulant Automation<a class="headerlink" href="#coagulant-automation" title="Permalink to this headline">¶</a></h1>
 <p>Automating the coagulant dose is difficult because it hasn’t been clear what measurement to use that could be driven to a target value by varying the coagulant dose and that would then provide the desired plant performance. Based on the previous understanding of coagulant neutralizing the negative charge of raw water particles, many water treatment plants have attempted to use streaming current meters to set the coagulant dose. That method doesn’t work well because it is the fractional coverage of the primary particles with sticky coagulant nanoparticles that sets the attachment efficiency and that does not require a neutral surface charge.</p>
 <p>The concentration of primary particles exiting the flocculator could be used to guide the coagulant dose. The flocculated suspension can not be sampled directly with a particle counter because the particle concentration is too high. Given that we are only interested in the concentration of primary particles, we can use a tube settler to quickly reduce the particle concentration of the sample line going to the particle counter while still enabling an accurate count of the primary particle concentration.</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id1">
 <span id="figure-tubesettlerflocmonitor"></span><a class="reference internal image-reference" href="../_images/TubeSettlerFlocMonitor.png"><img alt="TubeSettlerFlocMonitor" src="../_images/TubeSettlerFlocMonitor.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 245 </span><span class="caption-text">Proposed particle counter monitoring of flocculation performance.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 245 </span><span class="caption-text">Proposed particle counter monitoring of flocculation performance.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="coagulant-dose-for-suspended-particles">
 <h2>Coagulant Dose for Suspended Particles<a class="headerlink" href="#coagulant-dose-for-suspended-particles" title="Permalink to this headline">¶</a></h2>
 <p>The relationship between attachment efficiency and primary particle concentration after flocculation is given by Equation <a class="reference internal" href="../Flocculation/Floc_Model.html#equation-cpofgtlamsim">(480)</a>. For the simple case of no coagulant demand by dissolved organic matter it is reasonable to assume that the attachment efficiency is proportional to the ratio of the coagulant dose to the surface area of the particles in the raw water and the particle surface area is proportional to the particle concentration.</p>
 <div class="math notranslate nohighlight" id="equation-coverageofdoseandcp">
 <span class="eqno">(821)<a class="headerlink" href="#equation-coverageofdoseandcp" title="Permalink to this equation">¶</a></span>\[\bar{\alpha} = k' \frac{C_{coag_{particle}}}{C_{P_0}}.\]</div>
-<p>This coagulant dose only refers to the coagulant that will end up coating the suspended particles. The coagulant nanoparticles that are coated by dissolved organic matter will be considered
-The result of the AguaClara flocculation model (Equation <a class="reference internal" href="#equation-cplamint">(822)</a>) is repeated here for convenience.</p>
+<p>This coagulant dose only refers to the coagulant that will end up coating the suspended particles. The coagulant nanoparticles that are coated by dissolved organic matter will be considered in the next section.</p>
+<p>The result of the AguaClara flocculation model (Equation <a class="reference internal" href="#equation-cplamint">(822)</a>) is repeated here for convenience.</p>
 <div class="math notranslate nohighlight" id="equation-cplamint">
 <span class="eqno">(822)<a class="headerlink" href="#equation-cplamint" title="Permalink to this equation">¶</a></span>\[\frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)=k\bar{\alpha}\tilde{G}\theta.\]</div>
 <p>Substituting Equation <a class="reference internal" href="#equation-coverageofdoseandcp">(821)</a> and solving for the coagulant dose we obtain</p>
 <div class="math notranslate nohighlight" id="equation-ccoagflocmodel">
 <span class="eqno">(823)<a class="headerlink" href="#equation-ccoagflocmodel" title="Permalink to this equation">¶</a></span>\[C_{coag_{particle}} =  \frac{3}{2\pi  k k' \tilde{G}\theta}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right).\]</div>
-<p>The primary <a href="#id1"><span class="problematic" id="id2">**</span></a>p**article properties and <a href="#id3"><span class="problematic" id="id4">**</span></a>f**locculator design terms can be treated as a single unknown, <span class="math notranslate nohighlight">\(k_{pf}\)</span>.</p>
+<p>The primary particle properties and flocculator design terms can be treated as a single unknown, <span class="math notranslate nohighlight">\(k_{pf}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-kpf">
 <span class="eqno">(824)<a class="headerlink" href="#equation-kpf" title="Permalink to this equation">¶</a></span>\[k_{pf} =  \frac{3}{2\pi  k k' \tilde{G}\theta}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\]</div>
 <p>Thus Equation <a class="reference internal" href="#equation-ccoagflocmodel">(823)</a> simplifies to</p>
@@ -317,14 +317,14 @@ The result of the AguaClara flocculation model (Equation <a class="reference int
 <p>Given the estimate of the DOM coagulant demand a hydraulic residence time earlier we can obtain an estimate of the current required coagulant dose. We will use Equation <a class="reference internal" href="#equation-ccoagplant">(828)</a> and the assumption that the coagulant DOM demand doesn’t change significantly in one hydraulic residence time. The <span class="math notranslate nohighlight">\(C_{clarified_{t + \theta}}\)</span> is the target clarified turbidity.</p>
 <div class="math notranslate nohighlight" id="equation-ccoagplantofdom">
 <span class="eqno">(830)<a class="headerlink" href="#equation-ccoagplantofdom" title="Permalink to this equation">¶</a></span>\[C_{coag_{t}} =  k_{pf} C_{raw_{t}} \left(C_{clarified_{t + \theta}}^{-2/3}-C_{raw_{t}}^{-2/3}\right) + C_{coag_{DOM_{t-\theta}}}\]</div>
-<p>The coagulant dosing system must include guardrails to ensure that the coagulant dose is within a reasonable range. There exists the possibility of a turbidimeter giving incorrect data that would result in a coagulant dose far outside a range that would ensure reasonable plant performance. The potential failures include:</p>
+<p>The coagulant dosing system must include guardrails to ensure that the coagulant dose is within a reasonable range. The potential failures include:</p>
 <blockquote>
 <div><ul class="simple">
+<li><p>incorrect reading from a turbidimeter due to an air bubble, a dirty sample cell, or during routine maintenance</p></li>
 <li><p>settled water turbidity that is very low because the plant is starting up after an extended shutdown</p></li>
-<li><p>faulty turbidimeter readings due to a dirty sample cell</p></li>
-<li><p>raw water turbidity that is lower than the target clarified turbidity would result in a coagulant dose that could be too low to achieve effective filtration</p></li>
 </ul>
 </div></blockquote>
+<p>Another potential failure mode would occur if the raw water turbidity is lower than the target clarified turbidity. This would result in a coagulant dose that could be too low to achieve effective filtration.</p>
 <p>To reduce the likelihood of a treatment failure the estimated DOM coagulant demand can be compared with a reasonable range and if it is out of that range the estimated DOM coagulant demand can be forced back into the reasonable range. To prevent an excessively low coagulant dose the DOM coagulant demand can be limited to positive values. If it is known that the DOM coagulant demand is always exceeds a larger value, that larger value can be used as a lower limit. The upper limit can be set based on observation of the raw water quality.</p>
 <div class="section" id="data-processing">
 <h3>Data processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h3>
