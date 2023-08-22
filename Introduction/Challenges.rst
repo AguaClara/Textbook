@@ -51,6 +51,30 @@ The potential to make a dramatic improvement in the quality of life of communiti
 * How can we take measurements of raw water quality and use that to optimize the design of a water treatment plant? This will require creating the models that describe the physics of each unit process and that is a recurring theme of the research introduced below. We are making significant progress in making the connection between the properties of primary particles and the density of the resulting floc.
 * How can we invent new and improved technologies that enable communities to reliably produce high quality drinking water without needing to rely on expensive, energy consuming, expendable proprietary components?
 
+Entrance Tank for Multi-Train Plant
+-----------------------------------
+
+Introduction
+^^^^^^^^^^^^
+
+As AguaClara technologies are used for higher flow rates it becomes attractive to split the flocculator/clarifier processes into parallel treatment trains so that one treatment train can potentially be taken offline for maintenance or during low flows. In this case it is desirable to have a single entrance tank where flow is measured and divided equally between the treatment trains and where the coagulant can be added. To reduce the complexity of managing multiple treatment trains it is best if the coagulant dose for all treatment trains is set at a single location.
+
+The AguaClara plant at Gracias, Lempira, Honduras is an example of a two train treatment plant with each train treating 60 L/s. It has two independent entrance tanks and chemical dosing systems. Although that plant is only a few years old there is already an effort underway to add a third treatment train for an additional 60 L/s. To simplify operation the goal is to design a new entrance tank that delivers water dosed with coagulant to each of the treatment trains.
+
+Tasks and Goals
+^^^^^^^^^^^^^^^
+
+* Create a copy of the AIDE entrance tank workspace (`ET 6-60 lps <https://cad.onshape.com/documents/90e106377fd0bc25af081c88/w/1089ae6d00e64e7711db0ab0/e/6c7f58d6bbc9425f3cda1414>`_)
+* Review both the FeatureScript code and the part studio feature list to learn how the entrance tank is designed and created in Onshape.
+* For this design the bypass option that allows water to flow via pipe directly to the filter inlet channel can be eliminated at least initially.
+* Increase the flow rate in the overrides to 180 L/s to see which components fail. Review the FeatureScript Notices to see which components reported errors.
+* Develop a plan to address the current limits on the size and flow of the various components.
+* Develop a plan to add the number of treatment trains as an input to the entrance tank FeatureScript code
+* Modify the part studio to accommodate a variable number of treatment trains with an LFOM serving each treatment train.
+* Carefully review the design to identify other changes that could be made for ease of fabrication, operation, and maintenance.
+
+
+
 Prefabricated AguaClara Plant
 -----------------------------
 
