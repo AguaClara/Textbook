@@ -35,7 +35,8 @@ The relationship between attachment efficiency and primary particle concentratio
 
   \bar{\alpha} = k' \frac{C_{coag_{particle}}}{C_{P_0}}.
 
-This coagulant dose only refers to the coagulant that will end up coating the suspended particles. The coagulant nanoparticles that are coated by dissolved organic matter will be considered
+This coagulant dose only refers to the coagulant that will end up coating the suspended particles. The coagulant nanoparticles that are coated by dissolved organic matter will be considered in the next section.
+
 The result of the AguaClara flocculation model (Equation :eq:`CPlamint`) is repeated here for convenience.
 
 .. math::
@@ -50,7 +51,7 @@ Substituting Equation :eq:`coverageofdoseandCp` and solving for the coagulant do
 
   C_{coag_{particle}} =  \frac{3}{2\pi  k k' \tilde{G}\theta}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right).
 
-The primary **p**article properties and **f**locculator design terms can be treated as a single unknown, :math:`k_{pf}`.
+The primary particle properties and flocculator design terms can be treated as a single unknown, :math:`k_{pf}`.
 
 .. math::
   :label: kpf
@@ -109,11 +110,12 @@ Given the estimate of the DOM coagulant demand a hydraulic residence time earlie
 
   C_{coag_{t}} =  k_{pf} C_{raw_{t}} \left(C_{clarified_{t + \theta}}^{-2/3}-C_{raw_{t}}^{-2/3}\right) + C_{coag_{DOM_{t-\theta}}}
 
-The coagulant dosing system must include guardrails to ensure that the coagulant dose is within a reasonable range. There exists the possibility of a turbidimeter giving incorrect data that would result in a coagulant dose far outside a range that would ensure reasonable plant performance. The potential failures include:
+The coagulant dosing system must include guardrails to ensure that the coagulant dose is within a reasonable range. The potential failures include:
 
+ * incorrect reading from a turbidimeter due to an air bubble, a dirty sample cell, or during routine maintenance
  * settled water turbidity that is very low because the plant is starting up after an extended shutdown
- * faulty turbidimeter readings due to a dirty sample cell
- * raw water turbidity that is lower than the target clarified turbidity would result in a coagulant dose that could be too low to achieve effective filtration
+
+Another potential failure mode would occur if the raw water turbidity is lower than the target clarified turbidity. This would result in a coagulant dose that could be too low to achieve effective filtration.
 
 To reduce the likelihood of a treatment failure the estimated DOM coagulant demand can be compared with a reasonable range and if it is out of that range the estimated DOM coagulant demand can be forced back into the reasonable range. To prevent an excessively low coagulant dose the DOM coagulant demand can be limited to positive values. If it is known that the DOM coagulant demand is always exceeds a larger value, that larger value can be used as a lower limit. The upper limit can be set based on observation of the raw water quality.
 
