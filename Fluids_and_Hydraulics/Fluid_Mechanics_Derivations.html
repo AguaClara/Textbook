@@ -1,102 +1,60 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Fluid Mechanics Derivations &mdash; AguaClara 0.0.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=525cde36"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Plant Hydraulics" href="Plant_Hydraulics.html" />
     <link rel="prev" title="Fluid Mechanics" href="Fluid_Mechanics.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            AguaClara
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Design_Evolution.html">Design Evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Fluid_Mechanics.html">Fluid Mechanics</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Fluid Mechanics Derivations</a><ul>
@@ -109,19 +67,19 @@
 <li class="toctree-l1"><a class="reference internal" href="Plant_Hydraulics.html">Plant Hydraulics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Manifold_Hydraulics.html">Manifold Hydraulics</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Energy Dissipation Rate, Velocity Gradient, and Mixing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 4: Chemistry of Water Treatment</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 4: Chemistry of Water Treatment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Coagulant Nanoparticles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Carbonate Reactions, Buffering, and pH</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 5: Flow Control and Measurement</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 5: Flow Control and Measurement</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Constant Head Tanks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">AguaClara Flow Control and Measurement Technologies</a></li>
@@ -129,7 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
@@ -138,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 7: Flocculation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 7: Flocculation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">AguaClara Hydraulic Flocculation Model</a></li>
@@ -149,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarifier Derivations</a></li>
@@ -158,7 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Open Stacked Rapid Sand Filter Design</a></li>
@@ -166,111 +124,72 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../AIDE/AIDE.html">AguaClara Infrastructure Design Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AIDE/Specifications.html">AguaClara Specifications</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 12: Operation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 12: Operation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Operation/Coagulant_Automation.html">Coagulant Automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Operation/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contributor's guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">AguaClara</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Fluid Mechanics Derivations</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Fluid Mechanics Derivations</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <embed>
    <link rel="canonical" href="https://aguaclara.github.io/Textbook/Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html" />
    <script src="https://hypothes.is/embed.js" async></script>
-</embed><div class="section" id="fluid-mechanics-derivations">
-<span id="title-review-fluid-mechanics-derivations"></span><h1>Fluid Mechanics Derivations<a class="headerlink" href="#fluid-mechanics-derivations" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="minor-loss-equation">
-<span id="heading-minor-loss-equation-derivation"></span><h2>Minor Loss Equation<a class="headerlink" href="#minor-loss-equation" title="Permalink to this headline">¶</a></h2>
+</embed><section id="fluid-mechanics-derivations">
+<span id="title-review-fluid-mechanics-derivations"></span><h1>Fluid Mechanics Derivations<a class="headerlink" href="#fluid-mechanics-derivations" title="Permalink to this heading"></a></h1>
+<section id="minor-loss-equation">
+<span id="heading-minor-loss-equation-derivation"></span><h2>Minor Loss Equation<a class="headerlink" href="#minor-loss-equation" title="Permalink to this heading"></a></h2>
 <p>This section contains the derivation of the minor loss equation using the following figure as a reference. The derivation begins with a slightly simplified energy equation across the control volume shown. Our energy equation begins with <span class="math notranslate nohighlight">\(h_P\)</span> and <span class="math notranslate nohighlight">\(h_T\)</span> having been
 eliminated.</p>
-<div class="figure align-center" id="id1">
+<figure class="align-center" id="id1">
 <span id="figure-minor-loss-pipe"></span><a class="reference internal image-reference" href="../_images/minor_loss_pipe.png"><img alt="Example of flow expansion resulting in a minor loss" src="../_images/minor_loss_pipe.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-text">This is the system we will use to derive the minor loss equation.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">This is the system we will use to derive the minor loss equation.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <div class="math notranslate nohighlight">
 \[\frac{p_{in}}{\rho g} + {z_{in}} + \frac{\bar v_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{\bar v_{out}^2}{2g} + h_L\]</div>
 <p>Since the elevations at the center of the <span class="math notranslate nohighlight">\(in\)</span> and <span class="math notranslate nohighlight">\(out\)</span> control surfaces are the same, we can eliminate <span class="math notranslate nohighlight">\(z_{in}\)</span> and <span class="math notranslate nohighlight">\(z_{out}\)</span>. As we are considering such a small length of pipe, we will neglect the major loss component of head loss. Thus, <span class="math notranslate nohighlight">\(h_L = h_e + \cancel{h_f}\)</span>. The following three equations are all the same, simply rearranged to solve for <span class="math notranslate nohighlight">\(h_e\)</span>.</p>
@@ -279,7 +198,7 @@ eliminated.</p>
 <div class="math notranslate nohighlight">
 \[\frac{p_{in} - p_{out}}{\rho g} = \frac{\bar v_{out}^2 - \bar v_{in}^2}{2g} + h_e\]</div>
 <div class="math notranslate nohighlight" id="equation-minor-loss-energy-eq">
-<span class="eqno">(1)<a class="headerlink" href="#equation-minor-loss-energy-eq" title="Permalink to this equation">¶</a></span>\[  h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-minor-loss-energy-eq" title="Permalink to this equation"></a></span>\[  h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{\bar v_{in}^2 - \bar v_{out}^2}{2g}\]</div>
 <p>This last equation has <span class="math notranslate nohighlight">\(h_e\)</span> as a function of four variables <span class="math notranslate nohighlight">\((p_{in}, \, p_{out}, \, v_{in}\)</span>, and <span class="math notranslate nohighlight">\(v_{out})\)</span>; we would like it to be a function of only one. Thus, we will invoke conservation of momentum in the horizontal direction across our control volume to remove variables. The difference in momentum from the <span class="math notranslate nohighlight">\(in\)</span> point to the <span class="math notranslate nohighlight">\(out\)</span> point is driven by the pressure difference between each end of the control volume. We will be considering the pressure at the centroid of our control surfaces, and we will neglect shear along the pipe walls. After these assumptions, our momentum equation becomes the following:</p>
 <div class="math notranslate nohighlight">
 \[M_{in, \, x} + M_{out, \, x} = F_{p_{in, \, x}} + F_{p_{out, \, x}}\]</div>
@@ -311,8 +230,8 @@ eliminated.</p>
 <p>Now we will combine the two terms. The numerator and denominator of the first term, <span class="math notranslate nohighlight">\(\frac{\bar v_{out}^2 - \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{g}\)</span> will be multiplied by <span class="math notranslate nohighlight">\(2\)</span> to become <span class="math notranslate nohighlight">\(\frac{2 \bar v_{out}^2 - 2 \bar v_{in}^2\frac{\bar v_{out}}{\bar v_{in}}}{2 g}\)</span>. The equation then looks like:</p>
 <div class="math notranslate nohighlight">
 \[h_e = \frac{\bar v_{out}^2 - 2 \bar v_{in} \bar v_{out} + \bar v_{in}^2}{2g}\]</div>
-<div class="section" id="final-forms-of-the-minor-loss-equation">
-<span id="heading-final-minor-loss-equations"></span><h3>Final Forms of the Minor Loss Equation<a class="headerlink" href="#final-forms-of-the-minor-loss-equation" title="Permalink to this headline">¶</a></h3>
+<section id="final-forms-of-the-minor-loss-equation">
+<span id="heading-final-minor-loss-equations"></span><h3>Final Forms of the Minor Loss Equation<a class="headerlink" href="#final-forms-of-the-minor-loss-equation" title="Permalink to this heading"></a></h3>
 <p>Factoring the numerator yields to the first ‘final’ form of the minor loss equation:</p>
 <div class="math notranslate nohighlight">
 \[{\rm{ \mathbf{First \, form:} }} \quad h_e = \frac{\left( \bar v_{in}  - \bar v_{out} \right)^2}{2g}\]</div>
@@ -320,29 +239,28 @@ eliminated.</p>
 <div class="math notranslate nohighlight">
 \[{\rm{ \mathbf{Second \, form:} }} \quad h_e = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2 \, \frac{\bar v_{in}^2}{2g} \, \, = \, \, K_e^{'} \frac{\bar v_{in}^2}{2g}, \quad {\rm where} \quad K_e^{'} = \left( 1 - \frac{A_{in}}{A_{out}} \right)^2\]</div>
 <div class="math notranslate nohighlight" id="equation-minor-loss-equation">
-<span class="eqno">(2)<a class="headerlink" href="#equation-minor-loss-equation" title="Permalink to this equation">¶</a></span>\[   {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-minor-loss-equation" title="Permalink to this equation"></a></span>\[   {\rm{ \mathbf{Third \, form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \, \frac{\bar  v_{out}^2}{2g} \, \, = \, \, K_e \frac{\bar v_{out}^2}{2g}, \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2\]</div>
 <p>You will often see <span class="math notranslate nohighlight">\(K_e^{'}\)</span> and <span class="math notranslate nohighlight">\(K_e\)</span> used without the <span class="math notranslate nohighlight">\(e\)</span> subscript, they will appear as <span class="math notranslate nohighlight">\(K^{'}\)</span> and <span class="math notranslate nohighlight">\(K\)</span>.</p>
 <p>Being familiar with these three forms and how they are used will be of great help throughout the class. The third form is the one that is most commonly used.</p>
 <p>We can convert the minor loss coefficient, <span class="math notranslate nohighlight">\(K_e\)</span>, into a flow contraction using the minor loss equation (see Equation <a class="reference internal" href="#equation-minor-loss-equation">(2)</a>)</p>
 <div class="math notranslate nohighlight" id="equation-minor-k-of-pi-vc">
-<span class="eqno">(3)<a class="headerlink" href="#equation-minor-k-of-pi-vc" title="Permalink to this equation">¶</a></span>\[ K_e = \left(\frac{1}{\Pi_{vc}}  - 1 \right)^2\]</div>
+<span class="eqno">(3)<a class="headerlink" href="#equation-minor-k-of-pi-vc" title="Permalink to this equation"></a></span>\[ K_e = \left(\frac{1}{\Pi_{vc}}  - 1 \right)^2\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> is the ratio of the contracted area to the full expanded flow area.</p>
 <div class="math notranslate nohighlight" id="equation-fluids-and-hydraulics-fluid-mechanics-derivations-0">
-<span class="eqno">(4)<a class="headerlink" href="#equation-fluids-and-hydraulics-fluid-mechanics-derivations-0" title="Permalink to this equation">¶</a></span>\[\Pi_{vc} = \frac{A_{in}}{A_{out}}\]</div>
+<span class="eqno">(4)<a class="headerlink" href="#equation-fluids-and-hydraulics-fluid-mechanics-derivations-0" title="Permalink to this equation"></a></span>\[\Pi_{vc} = \frac{A_{in}}{A_{out}}\]</div>
 <p>Given that <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> is the ratio of the contracted area to the full expanded flow area we obtain the relationship between the contracted diameter, <span class="math notranslate nohighlight">\(D_{vc}\)</span>, and the expanded diameter, <span class="math notranslate nohighlight">\(D_{pipe}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-d-pipe-of-d-vc">
-<span class="eqno">(5)<a class="headerlink" href="#equation-d-pipe-of-d-vc" title="Permalink to this equation">¶</a></span>\[D_{pipe} = \frac{D_{vc}}{\sqrt{\Pi_{vc}}}\]</div>
+<span class="eqno">(5)<a class="headerlink" href="#equation-d-pipe-of-d-vc" title="Permalink to this equation"></a></span>\[D_{pipe} = \frac{D_{vc}}{\sqrt{\Pi_{vc}}}\]</div>
 <p>Solving Equation <a class="reference internal" href="#equation-minor-k-of-pi-vc">(3)</a> for <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> we obtain</p>
 <div class="math notranslate nohighlight" id="equation-pi-vc-of-minor-k">
-<span class="eqno">(6)<a class="headerlink" href="#equation-pi-vc-of-minor-k" title="Permalink to this equation">¶</a></span>\[\Pi_{vc} = \frac{1}{\sqrt{K_e} + 1}\]</div>
+<span class="eqno">(6)<a class="headerlink" href="#equation-pi-vc-of-minor-k" title="Permalink to this equation"></a></span>\[\Pi_{vc} = \frac{1}{\sqrt{K_e} + 1}\]</div>
 <p>The extent of a flow contraction, <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> can be estimated from the measured minor loss coefficient.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Fluid_Mechanics.html" class="btn btn-neutral float-left" title="Fluid Mechanics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
@@ -375,22 +293,13 @@ eliminated.</p>
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

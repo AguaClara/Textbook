@@ -1,109 +1,67 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Fluid Deformation and Energy Dissipation Derivations &mdash; AguaClara 0.0.0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=525cde36"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Flocs, Fractals, Forces" href="../Flocs_Fractals_and_Forces/FFF_Intro.html" />
     <link rel="prev" title="Energy Dissipation Rate, Velocity Gradient, and Mixing" href="FDED_Intro.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            AguaClara
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Design_Evolution.html">Design Evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html">Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html">Fluid Mechanics Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Plant_Hydraulics.html">Plant Hydraulics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html">Manifold Hydraulics</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="FDED_Intro.html">Energy Dissipation Rate, Velocity Gradient, and Mixing</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Fluid Deformation and Energy Dissipation Derivations</a><ul>
@@ -138,12 +96,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 4: Chemistry of Water Treatment</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 4: Chemistry of Water Treatment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Coagulant Nanoparticles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Carbonate Reactions, Buffering, and pH</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 5: Flow Control and Measurement</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 5: Flow Control and Measurement</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Constant Head Tanks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">AguaClara Flow Control and Measurement Technologies</a></li>
@@ -151,7 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
@@ -160,7 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 7: Flocculation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 7: Flocculation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">AguaClara Hydraulic Flocculation Model</a></li>
@@ -171,7 +129,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarifier Derivations</a></li>
@@ -180,7 +138,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Open Stacked Rapid Sand Filter Design</a></li>
@@ -188,105 +146,64 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../AIDE/AIDE.html">AguaClara Infrastructure Design Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AIDE/Specifications.html">AguaClara Specifications</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 12: Operation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 12: Operation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Operation/Coagulant_Automation.html">Coagulant Automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Operation/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contributor's guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">AguaClara</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Fluid Deformation and Energy Dissipation Derivations</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Fluid Deformation and Energy Dissipation Derivations</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <embed>
    <link rel="canonical" href="https://aguaclara.github.io/Textbook/Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html" />
    <script src="https://hypothes.is/embed.js" async></script>
-</embed><div class="section" id="fluid-deformation-and-energy-dissipation-derivations">
-<span id="title-fluid-deformation-and-energy-dissipation-derivations"></span><h1>Fluid Deformation and Energy Dissipation Derivations<a class="headerlink" href="#fluid-deformation-and-energy-dissipation-derivations" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="equations-for-varepsilon-and-g-in-varying-flow-geometries">
-<span id="heading-equations-varying-flow-geometries"></span><h2>Equations for <span class="math notranslate nohighlight">\(\varepsilon\)</span> and <span class="math notranslate nohighlight">\(G\)</span> in Varying Flow Geometries<a class="headerlink" href="#equations-for-varepsilon-and-g-in-varying-flow-geometries" title="Permalink to this headline">¶</a></h2>
+</embed><section id="fluid-deformation-and-energy-dissipation-derivations">
+<span id="title-fluid-deformation-and-energy-dissipation-derivations"></span><h1>Fluid Deformation and Energy Dissipation Derivations<a class="headerlink" href="#fluid-deformation-and-energy-dissipation-derivations" title="Permalink to this heading"></a></h1>
+<section id="equations-for-varepsilon-and-g-in-varying-flow-geometries">
+<span id="heading-equations-varying-flow-geometries"></span><h2>Equations for <span class="math notranslate nohighlight">\(\varepsilon\)</span> and <span class="math notranslate nohighlight">\(G\)</span> in Varying Flow Geometries<a class="headerlink" href="#equations-for-varepsilon-and-g-in-varying-flow-geometries" title="Permalink to this heading"></a></h2>
 <p>Estimation of velocity gradients for various flow geometries is the basis for the design of rapid mix, flocculators, and plate settlers. Thus, our goal is to define the velocity gradients consistently across a range of possible flow regimes. There are three approaches to calculating the average velocity gradient within a control volume.</p>
 <ol class="arabic simple">
 <li><p>Use the Navier Stokes equations and solve for the spatially averaged velocity gradient.</p></li>
@@ -296,13 +213,15 @@
 <p>The first approach would be ideal but is difficult in practice because Navier Stokes solutions are only available for limited geometries and laminar flow. CFD could be used but is difficult to use as a general engineering design approach given the large number of geometries that are used in drinking water treatment plants. For these reasons we will use the control volume approach to estimate the average velocity gradient. This method incorrectly assumes that the energy dissipation rate is completely uniform in the control volume and hence the velocity gradient is also uniform. This method results in an over estimation of the velocity gradient.
 The Camp-Stein estimate of <span class="math notranslate nohighlight">\(\tilde{G}\)</span> is based on a control volume where the velocity gradient is uniform. Consider a layer of fluid of depth <span class="math notranslate nohighlight">\(H\)</span> and apply a velocity, <span class="math notranslate nohighlight">\(v\)</span> at the top of the fluid. The velocity gradient, <span class="math notranslate nohighlight">\(G\)</span>, is thus <span class="math notranslate nohighlight">\(\frac{v}{H}\)</span> everywhere in the fluid. The force required to move the top of the fluid at velocity v can be obtained from the required shear, <span class="math notranslate nohighlight">\(\tau\)</span>. From Newtons Law of Friction we have</p>
 <div class="math notranslate nohighlight" id="equation-tau-of-mu-g">
-<span class="eqno">(1)<a class="headerlink" href="#equation-tau-of-mu-g" title="Permalink to this equation">¶</a></span>\[\tau = \mu \frac{v}{H} = \mu G = \nu\rho G\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-tau-of-mu-g" title="Permalink to this equation"></a></span>\[\tau = \mu \frac{v}{H} = \mu G = \nu\rho G\]</div>
 <p>Where <span class="math notranslate nohighlight">\(\tau\)</span> is the force required per unit plan view area.</p>
 <p>Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_G_velocity_profile</span></code> shows the velocity profile of a fluid deforming under the influence of uniform shear.</p>
-<div class="figure align-center" id="id7">
+<figure class="align-center" id="id7">
 <span id="figure-g-velocity-profile"></span><a class="reference internal image-reference" href="../_images/G_velocity_profile.jpg"><img alt="fluid deformation" src="../_images/G_velocity_profile.jpg" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">The velocity profile of a fluid being deformed by uniform shear.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">The velocity profile of a fluid being deformed by uniform shear.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p><span class="math notranslate nohighlight">\(G\)</span> measures the magnitude of shear by using the velocity gradient of a fluid in space, <span class="math notranslate nohighlight">\(\frac{\Delta \bar v}{\Delta h}\)</span>. This is essentially the same as the <span class="math notranslate nohighlight">\(\frac{\delta u}{\delta y}\)</span> term in fluid mechanics.</p>
 <p>The power per unit area required to move the fluid at velocity <span class="math notranslate nohighlight">\(v\)</span> is <span class="math notranslate nohighlight">\(\tau v\)</span>. The mass per unit area is <span class="math notranslate nohighlight">\(\rho H\)</span>. Thus the energy dissipation rate or the power per mass is</p>
 <div class="math notranslate nohighlight">
@@ -314,7 +233,7 @@ The Camp-Stein estimate of <span class="math notranslate nohighlight">\(\tilde{G
 <p>This equation has no approximations, but has one very important assumption. We derived this equation for a control volume where the velocity gradient was <strong>uniform</strong>. The reactors and control volumes that we will be using as we design water treatment plants will <strong>not</strong> have uniform velocity gradients. Indeed, several of the water treatment processes will be turbulent and thus the velocity gradients in the fluid will vary in both space and time. Even in laminar flow in a pipe the velocity gradient is far from uniform with high velocity gradients at the wall and zero velocity gradient at the center of the pipe.</p>
 <p>We’d like to know if we can apply the previous equation</p>
 <div class="math notranslate nohighlight" id="equation-edrofg-nu">
-<span class="eqno">(2)<a class="headerlink" href="#equation-edrofg-nu" title="Permalink to this equation">¶</a></span>\[ \varepsilon = \nu G^2\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-edrofg-nu" title="Permalink to this equation"></a></span>\[ \varepsilon = \nu G^2\]</div>
 <p>to the case where the energy dissipation rate and velocity gradients are nonuniform by simply introducing average values of both quantities.</p>
 <div class="math notranslate nohighlight">
 \[\bar\varepsilon \overset{?}{=} \nu \bar G^2\]</div>
@@ -343,19 +262,19 @@ The Camp-Stein estimate of <span class="math notranslate nohighlight">\(\tilde{G
 <p>where <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span> is 1 for a uniform velocity gradient and is less than one for non uniform velocity gradients. We can think <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span> as a measure of the efficiency of using energy to deform the fluid. We can calculate <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span> for cases where we have either a Navier Stokes or a computation fluid dynamics estimate of <span class="math notranslate nohighlight">\(\bar G\)</span>.</p>
 <p>The conventional approach to design of flocculators uses the Camp Stein definition of</p>
 <div class="math notranslate nohighlight" id="equation-g-camp-stein">
-<span class="eqno">(3)<a class="headerlink" href="#equation-g-camp-stein" title="Permalink to this equation">¶</a></span>\[\tilde{G} = \sqrt{\frac{\bar\varepsilon}{\nu}}\]</div>
+<span class="eqno">(3)<a class="headerlink" href="#equation-g-camp-stein" title="Permalink to this equation"></a></span>\[\tilde{G} = \sqrt{\frac{\bar\varepsilon}{\nu}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\tilde{G}\)</span> is <strong>not</strong> the average velocity gradient, but is larger than the average velocity gradient by a factor of <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span>. Thus we have</p>
 <div class="math notranslate nohighlight" id="equation-pi-gcs">
-<span class="eqno">(4)<a class="headerlink" href="#equation-pi-gcs" title="Permalink to this equation">¶</a></span>\[\tilde{G} = \Pi_{CS}\bar G\]</div>
+<span class="eqno">(4)<a class="headerlink" href="#equation-pi-gcs" title="Permalink to this equation"></a></span>\[\tilde{G} = \Pi_{CS}\bar G\]</div>
 <p>Use of the Camp Stein velocity gradient in design of mixing units and flocculators results in an error when applying results from one reactor to another. If the energy dissipation rate distribution within the reactors is different, then <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span> will be different for the two reactors and the actual average velocity gradient, <span class="math notranslate nohighlight">\(\bar G\)</span> will be different for the two reactors.</p>
 <p>Given that energy is used more efficiently to produce velocity gradients if the velocity gradients are uniform, our goal is to design mixing and flocculation units that have relatively uniform velocity gradients. If all of our reactors at both research scale and municipal scale have similar values of <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span>, then we can use the Camp Stein definition of <span class="math notranslate nohighlight">\(\tilde{G}\)</span> and not introduce any significant errors. It will not be reasonable, however, to expect similar performance based on similar values of <span class="math notranslate nohighlight">\(\tilde{G}\)</span> if one reactor has relatively uniform energy dissipation rates and the other reactor has zones with very high energy dissipation rates and zones with very low energy dissipation rates.</p>
 <p>We will demonstrate later that mechanically mixed reactors typically have a much wider range of energy dissipation rates than do well designed hydraulically mixed reactors. Thus comparisons between mechanically mixed and hydraulically mixed reactors must account for differences in <span class="math notranslate nohighlight">\(\Pi_{CS}\)</span>.</p>
 <p>We will use the Camp Stein definition <span class="math notranslate nohighlight">\(\tilde{G} = \sqrt{\frac{\bar\varepsilon}{\nu}}\)</span> as the design parameter of convenience in this textbook.</p>
-</div>
-<div class="section" id="estimates-of-time-required-for-mixing-processes">
-<span id="heading-estimates-of-time-required-for-mixing-processes"></span><h2>Estimates of Time Required for Mixing Processes<a class="headerlink" href="#estimates-of-time-required-for-mixing-processes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="turbulent-large-scale-eddies">
-<span id="heading-turbulent-large-scale-eddies"></span><h3>Turbulent Large Scale Eddies<a class="headerlink" href="#turbulent-large-scale-eddies" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="estimates-of-time-required-for-mixing-processes">
+<span id="heading-estimates-of-time-required-for-mixing-processes"></span><h2>Estimates of Time Required for Mixing Processes<a class="headerlink" href="#estimates-of-time-required-for-mixing-processes" title="Permalink to this heading"></a></h2>
+<section id="turbulent-large-scale-eddies">
+<span id="heading-turbulent-large-scale-eddies"></span><h3>Turbulent Large Scale Eddies<a class="headerlink" href="#turbulent-large-scale-eddies" title="Permalink to this heading"></a></h3>
 <p>The first step in mixing is at the scale of the largest eddies. The largest eddies are limited in size by the smallest dimension normal to the direction of flow. Thus in a pipe the dimension of the largest eddies is set by the pipe diameter. In a open channel the dimension of the largest eddies is usually the water depth although it could be the width of the channel for the case of a narrow, deep channel.</p>
 <p>Eddy turnover time, <span class="math notranslate nohighlight">\(t_{eddy}\)</span>, is the time it takes for the eddy to travel a distance equal to its length-scale. Thus the eddy turnover time provides a good estimate of the time required for mixing to occur at the length scale of the eddy. We assume that the energy of the large eddy is dissipated into smaller length scales in the time <span class="math notranslate nohighlight">\(t_{eddy}\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -386,11 +305,11 @@ The “<span class="math notranslate nohighlight">\(\approx\)</span>” indicate
 \[\frac{v_{eddy}}{\bar v} \approx \left( \frac{{\rm f}}{2}  \right)^\frac{1}{3}\]</div>
 <p>Given a friction factor of 0.02, the eddy velocity is approximately 20% of the mean velocity. We can use this ratio to estimate how many pipe diameters downstream from an injection point will the coagulant be mixed across the diameter of the pipe.</p>
 <div class="math notranslate nohighlight" id="equation-mixing-pipe-diameters">
-<span class="eqno">(5)<a class="headerlink" href="#equation-mixing-pipe-diameters" title="Permalink to this equation">¶</a></span>\[N_{D_{pipe}} \approx \frac{\bar v}{v_{eddy}} \approx \left(\frac{2}{{\rm f}} \right)^\frac{1}{3}\]</div>
+<span class="eqno">(5)<a class="headerlink" href="#equation-mixing-pipe-diameters" title="Permalink to this equation"></a></span>\[N_{D_{pipe}} \approx \frac{\bar v}{v_{eddy}} \approx \left(\frac{2}{{\rm f}} \right)^\frac{1}{3}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(N_{D_{pipe}}\)</span> is the distance in number of pipe diameters downstream of the injection point where complete mixing will have occurred. This estimate is a minimum distance and a factor of safety of 2 or more would reasonably be applied. In addition it is best practice to inject the coagulant in the center of the pipe. Injecting the coagulant at the side of the pipe will require considerably greater distance downstream for mixing across the pipe.</p>
-</div>
-<div class="section" id="inner-viscous-length-scale">
-<span id="heading-inner-viscous-length-scale"></span><h3>Inner Viscous Length Scale<a class="headerlink" href="#inner-viscous-length-scale" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="inner-viscous-length-scale">
+<span id="heading-inner-viscous-length-scale"></span><h3>Inner Viscous Length Scale<a class="headerlink" href="#inner-viscous-length-scale" title="Permalink to this heading"></a></h3>
 <p>The smallest scale at which inertia containing eddies causes mixing is set by the final damping of inertia by viscosity. Turbulence occurs when fluid inertia is too large to be damped by viscosity. The ratio of inertia to viscosity is given by the Reynolds number, <span class="math notranslate nohighlight">\(\rm Re\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[{\rm{Re}} = \frac{\bar vD}{\nu}\]</div>
@@ -401,43 +320,47 @@ The “<span class="math notranslate nohighlight">\(\approx\)</span>” indicate
 <p>The length scale at which most of the kinetic energy contained in the small eddies is dissipated by viscosity is the inner viscous length scale, <span class="math notranslate nohighlight">\(\lambda_v\)</span>, which according to Dimotakis (2000) is about <a class="reference external" href="https://doi.org/10.1017/S0022112099007946">50 times larger than</a>
 Thus we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-inner-viscous-length">
-<span class="eqno">(6)<a class="headerlink" href="#equation-eq-inner-viscous-length" title="Permalink to this equation">¶</a></span>\[\lambda_\nu = \Pi_{K\nu}\left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}\]</div>
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-inner-viscous-length" title="Permalink to this equation"></a></span>\[\lambda_\nu = \Pi_{K\nu}\left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Pi_{K\nu} = 50\)</span></p>
 <p>At length scales larger than the inner viscous length scale, <span class="math notranslate nohighlight">\(\lambda_v\)</span>, the dominant transport mechanism is by turbulent eddies. At length scales smaller than <span class="math notranslate nohighlight">\(\lambda_v\)</span> the dominant transport mechanism is fluid deformation due to shear. If the flow regime is completely laminar such as in a small diameter tube flocculator, then the dominant transport mechanism is fluid deformation due to shear at length scales all the way up to the diameter of the tubing.</p>
 <p>The dividing line between eddy transport and fluid deformation controlled by viscosity can be calculated as a function of the energy dissipation rate using <a class="reference internal" href="#equation-eq-inner-viscous-length">(6)</a>.</p>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=oizJutoQXBnU&amp;line=5&amp;uniqifier=1">here</a></p>
-<div class="figure align-center" id="id8">
+<figure class="align-center" id="id8">
 <span id="figure-inner-viscous-vs-edr"></span><a class="reference internal image-reference" href="../_images/Inner_viscous_vs_EDR.png"><img alt="Inner viscous vs EDR" src="../_images/Inner_viscous_vs_EDR.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Eddies can cause fluid mixing down to the scale of a few millimeters for energy dissipation rates used in rapid mix units and flocculators.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="turbulent-mixing-time-as-a-function-of-scale">
-<span id="heading-mixing-time-as-a-function-of-scale"></span><h3>Turbulent Mixing Time as a Function of Scale<a class="headerlink" href="#turbulent-mixing-time-as-a-function-of-scale" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">Eddies can cause fluid mixing down to the scale of a few millimeters for energy dissipation rates used in rapid mix units and flocculators.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="turbulent-mixing-time-as-a-function-of-scale">
+<span id="heading-mixing-time-as-a-function-of-scale"></span><h3>Turbulent Mixing Time as a Function of Scale<a class="headerlink" href="#turbulent-mixing-time-as-a-function-of-scale" title="Permalink to this heading"></a></h3>
 <p>We are searching for the rate limiting step in the mixing process as we transition from the scale of the flow down to the scale of the coagulant nanoparticles. We can estimate the time required for eddies to mix at their length scales by assuming that the eddies pass all of their energy to smaller scales in the time it takes for an eddy to travel the distance equal to the length scale of the eddy. This time is known as the <a class="reference external" href="http://ceeserver.cee.cornell.edu/eac20/cee637/handouts/TURBFLOW_1.pdf">eddy turnover time</a>,
 <span class="math notranslate nohighlight">\(t_{eddy}\)</span>. <a class="reference internal" href="#heading-estimates-of-time-required-for-mixing-processes"><span class="std std-ref">The derivation for the equation below is found here</span></a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-t-eddy">
-<span class="eqno">(7)<a class="headerlink" href="#equation-eq-t-eddy" title="Permalink to this equation">¶</a></span>\[ t_{eddy} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}\]</div>
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-t-eddy" title="Permalink to this equation"></a></span>\[ t_{eddy} \approx \left( \frac{L_{eddy}^2}{ \bar\varepsilon }\right)^\frac{1}{3}\]</div>
 <p>We can plot the eddy turnover time as a function of scale from the inner viscous length scale up to the scale of the flow. We will discover whether large scale mixing by eddies is faster or slower than small scale mixing by eddies.</p>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=4zUMlZy8bR1Z">here</a></p>
-<div class="figure align-center" id="id9">
+<figure class="align-center" id="id9">
 <span id="figure-eddy-turnover-time"></span><a class="reference internal image-reference" href="../_images/Eddy_turnover_time.png"><img alt="Eddy turnover time" src="../_images/Eddy_turnover_time.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Small eddies turn in less time than large eddies. This is why the mixing at the largest scale dominates the mixing time.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="shear-diffusion-transport">
-<span id="heading-shear-diffusion-transport"></span><h3>Shear-Diffusion Transport<a class="headerlink" href="#shear-diffusion-transport" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">Small eddies turn in less time than large eddies. This is why the mixing at the largest scale dominates the mixing time.</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="shear-diffusion-transport">
+<span id="heading-shear-diffusion-transport"></span><h3>Shear-Diffusion Transport<a class="headerlink" href="#shear-diffusion-transport" title="Permalink to this heading"></a></h3>
 <p>After the first few seconds in which mixing occurs from the length scale of the flow down to the inner viscous length scale the next step in the transport process is blending of the coagulant uniformly with the raw water. At the end of the turbulent transport the coagulant stock has been stretched out into thin bands throughout the raw water, but the two fluids are not actually blended together by turbulence. The blending is accomplished by a combination of fluid deformation controlled by viscous shear and then by molecular diffusion.</p>
-</div>
-<div class="section" id="fluid-deformation-by-shear">
-<span id="heading-fluid-deformation-by-shear"></span><h3>Fluid Deformation by Shear<a class="headerlink" href="#fluid-deformation-by-shear" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="fluid-deformation-by-shear">
+<span id="heading-fluid-deformation-by-shear"></span><h3>Fluid Deformation by Shear<a class="headerlink" href="#fluid-deformation-by-shear" title="Permalink to this heading"></a></h3>
 <p>The time scale for fluid deformation is <span class="math notranslate nohighlight">\(1/G\)</span> where <span class="math notranslate nohighlight">\(G\)</span> is the velocity gradient. This simple relationship is because the velocity of fluid deformation is proportional to the length scale and thus the time to travel any given distance in a linear velocity gradient is always the same. Velocity gradients in conventional mechanized rapid mix units are order 1000 Hz and thus the time for fluid deformation to blur concentration gradients is approximately 1 ms. This confirms the idea that blending the coagulant with the raw water is actually a very fast process with the slowest phase being the transport by turbulent eddies at the scale of reactor.</p>
 <p>The full time required for fluid deformation to achieve blending down to the scale where molecular diffusion takes over is likely a multiple of 1/G where the multiple is determined by the number of different directions that the fluid must be sheared in to reach close to uniform blending. However, even multiplying 1/G by a factor of 10 still results in very rapid mixing.</p>
-</div>
-<div class="section" id="einsteins-diffusion-equation">
-<span id="heading-einstein-diffusion-equation"></span><h3>Einstein’s Diffusion Equation<a class="headerlink" href="#einsteins-diffusion-equation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="einsteins-diffusion-equation">
+<span id="heading-einstein-diffusion-equation"></span><h3>Einstein’s Diffusion Equation<a class="headerlink" href="#einsteins-diffusion-equation" title="Permalink to this heading"></a></h3>
 <p>The final step of mixing is mediated by molecular diffusion. We can estimate the length scale at which fluid shear and diffusion provide transport at the same rate. Einstein’s diffusion equation is</p>
 <div class="math notranslate nohighlight" id="equation-einstein-diffusion">
-<span class="eqno">(8)<a class="headerlink" href="#equation-einstein-diffusion" title="Permalink to this equation">¶</a></span>\[D_{Diffusion} = \frac{k_B T}{3 \pi \mu D_P}\]</div>
+<span class="eqno">(8)<a class="headerlink" href="#equation-einstein-diffusion" title="Permalink to this equation"></a></span>\[D_{Diffusion} = \frac{k_B T}{3 \pi \mu D_P}\]</div>
 <p>where <span class="math notranslate nohighlight">\(k_B\)</span> is the Boltzmann constant and <span class="math notranslate nohighlight">\(d_P\)</span> is the diameter of the particle that is diffusion in a fluid with viscosity <span class="math notranslate nohighlight">\(\nu\)</span> and density <span class="math notranslate nohighlight">\(\rho\)</span>. The diffusion coefficient <span class="math notranslate nohighlight">\(D_{Diffusion}\)</span> has dimensions of <span class="math notranslate nohighlight">\(\frac{[L^2]}{[T]}\)</span> and can be understood as the velocity of the particle multiplied by the length of the mean free path. From dimensional analysis the time for diffusion to blur a concentration gradient over a length scale, <span class="math notranslate nohighlight">\(L_{Diffusion}\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[t_{Diffusion} \approx \frac{L_{Diffusion}^2}{D_{Diffusion}}\]</div>
@@ -448,10 +371,12 @@ Thus we have</p>
 <div class="math notranslate nohighlight">
 \[L_{Diffusion}^{Shear} \approx \sqrt{\frac{k_B T}{3 G \pi \mu  D_P}}\]</div>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=Wdvqa0VCchaD">here</a></p>
-<div class="figure align-center" id="id10">
+<figure class="align-center" id="id10">
 <span id="figure-shear-diffusion-length-scale"></span><a class="reference internal image-reference" href="../_images/Shear_diffusion_length_scale.png"><img alt="Shear diffusion length scale" src="../_images/Shear_diffusion_length_scale.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">The length scale at which diffusion becomes the dominant transport mechanism for coagulant nanoparticles as a function of the velocity gradient. The time scale for the final diffusion to achieve blending of the nanoparticles with the water is simply 1/G.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">The length scale at which diffusion becomes the dominant transport mechanism for coagulant nanoparticles as a function of the velocity gradient. The time scale for the final diffusion to achieve blending of the nanoparticles with the water is simply 1/G.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>Molecular diffusion finishes the blending process by transporting the coagulant nanoparticles the last few hundred nanometers. The entire mixing process from the coagulant injection point to uniform blending with the raw water takes only a few seconds.</p>
 <p>We have demonstrated that all of the steps for mixing of the coagulant nanoparticles with the raw water are very fast. Compared with the time required for flocculation, 10s to 1000s of seconds, the time required for this mixing (blending the nanoparticles uniformly with the water) is insignificant. The remaining steps are:</p>
 <blockquote>
@@ -462,12 +387,12 @@ Thus we have</p>
 </div></blockquote>
 <p>The time scale for the fluid shear and molecular diffusion to cause coagulant nanoparticles to collide with particles is estimated in <a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html#heading-diffusion-and-shear-transport-coagulant-nanoparticles-to-clay"><span class="std std-ref">Diffusion and Shear Transport Coagulant Nanoparticles to Clay</span></a>.</p>
 <p>Below are the derivations for the equations that appear in <code class="xref std std-numref docutils literal notranslate"><span class="pre">table_Control_volume_equations</span></code> containing equations for <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(\varepsilon\)</span>, and <span class="math notranslate nohighlight">\(h_L\)</span>.</p>
-</div>
-<div class="section" id="straight-pipe-wall-shear">
-<span id="heading-straight-pipe-wall-shear"></span><h3>Straight Pipe (Wall Shear)<a class="headerlink" href="#straight-pipe-wall-shear" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="straight-pipe-wall-shear">
+<span id="heading-straight-pipe-wall-shear"></span><h3>Straight Pipe (Wall Shear)<a class="headerlink" href="#straight-pipe-wall-shear" title="Permalink to this heading"></a></h3>
 <p>The average energy dissipation rate, <span class="math notranslate nohighlight">\(\bar\varepsilon\)</span>, in a control volume with residence time <span class="math notranslate nohighlight">\(\theta\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-eq-edr-hl">
-<span class="eqno">(9)<a class="headerlink" href="#equation-eq-edr-hl" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta}\]</div>
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-edr-hl" title="Permalink to this equation"></a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta}\]</div>
 <p>The residence time can be expressed as a function of length and average velocity.</p>
 <div class="math notranslate nohighlight">
 \[\theta = \frac{L}{\bar v}\]</div>
@@ -483,9 +408,9 @@ Thus we have</p>
 <p>or in terms of flow rate, we have:</p>
 <div class="math notranslate nohighlight">
 \[\tilde{G} = \left(\frac{\rm{32f}}{ \pi^3\nu} \frac{Q^3}{D^7} \right)^\frac{1}{2}\]</div>
-</div>
-<div class="section" id="straight-pipe-laminar">
-<span id="heading-straight-pipe-laminar"></span><h3>Straight Pipe Laminar<a class="headerlink" href="#straight-pipe-laminar" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="straight-pipe-laminar">
+<span id="heading-straight-pipe-laminar"></span><h3>Straight Pipe Laminar<a class="headerlink" href="#straight-pipe-laminar" title="Permalink to this heading"></a></h3>
 <p>Laboratory scale apparatus is often limited to laminar flow where viscosity effects dominate. The equations describing laminar flow conditions always include viscosity. For the case of laminar flow in a straight pipe, we have:</p>
 <div class="math notranslate nohighlight">
 \[{\rm f} = \frac{64}{Re}\]</div>
@@ -512,14 +437,16 @@ Thus we have</p>
 \[\bar v=\frac{Q}{A} = \frac{4Q}{\pi D^2}\]</div>
 <div class="math notranslate nohighlight">
 \[\tilde{G} =\frac{16\sqrt2}{\pi} \frac{Q}{D^3}\]</div>
-</div>
-<div class="section" id="parallel-plates-laminar">
-<span id="heading-parallel-plates-laminar"></span><h3>Parallel Plates Laminar<a class="headerlink" href="#parallel-plates-laminar" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="parallel-plates-laminar">
+<span id="heading-parallel-plates-laminar"></span><h3>Parallel Plates Laminar<a class="headerlink" href="#parallel-plates-laminar" title="Permalink to this heading"></a></h3>
 <p>Flow between parallel plates occurs in plate settlers in the clarifier. We will derive the velocity gradient at the wall using the Navier Stokes equation.</p>
-<div class="figure align-center" id="id11">
+<figure class="align-center" id="id11">
 <span id="figure-parallel-plate-schematic"></span><a class="reference internal image-reference" href="../_images/Parallel_Plate_schematic.png"><img alt="Parallel plate schematic" src="../_images/Parallel_Plate_schematic.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-text">A fluid flowing from left to right due to a pressure gradient results in wall shear on the parallel plates. This flow profile is for the case when the pressure gradient is negative.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">A fluid flowing from left to right due to a pressure gradient results in wall shear on the parallel plates. This flow profile is for the case when the pressure gradient is negative.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>We start with the Navier-Stokes equation written for flow in the x direction.</p>
 <div class="math notranslate nohighlight">
 \[\frac{y^2}{2} \frac{dp}{dx} + Ay + B = \mu u\]</div>
@@ -581,7 +508,7 @@ Thus we have</p>
 \[\tau = \nu \rho \frac{du}{dy} = \nu \rho G\]</div>
 <p>The velocity gradient at the wall is</p>
 <div class="math notranslate nohighlight" id="equation-plate-settler-g-wall">
-<span class="eqno">(10)<a class="headerlink" href="#equation-plate-settler-g-wall" title="Permalink to this equation">¶</a></span>\[ G_{wall} = \frac{6 \bar v}{S}\]</div>
+<span class="eqno">(10)<a class="headerlink" href="#equation-plate-settler-g-wall" title="Permalink to this equation"></a></span>\[ G_{wall} = \frac{6 \bar v}{S}\]</div>
 <div class="math notranslate nohighlight">
 \[\tau  = \nu \rho \frac{6 \bar v}{S}\]</div>
 <p>Substituting into the force balance equation</p>
@@ -589,7 +516,7 @@ Thus we have</p>
 \[\Delta P = -\frac{2 \nu \rho 6 \bar v L}{S^2}\]</div>
 <p>The head loss for between parallel plates at uniform velocity simplifies to</p>
 <div class="math notranslate nohighlight" id="equation-parallel-plate-laminar-headloss">
-<span class="eqno">(11)<a class="headerlink" href="#equation-parallel-plate-laminar-headloss" title="Permalink to this equation">¶</a></span>\[ h_{{\rm f}} = \frac{-\Delta P}{\rho g}\]</div>
+<span class="eqno">(11)<a class="headerlink" href="#equation-parallel-plate-laminar-headloss" title="Permalink to this equation"></a></span>\[ h_{{\rm f}} = \frac{-\Delta P}{\rho g}\]</div>
 <div class="math notranslate nohighlight">
 \[h_{{\rm f}} = 12\frac{ \nu \bar v L}{gS^2}\]</div>
 <p>The average energy dissipation rate is</p>
@@ -600,15 +527,17 @@ Thus we have</p>
 <p>The Camp-Stein velocity gradient for laminar flow between parallel plates is</p>
 <div class="math notranslate nohighlight">
 \[\tilde{G} = 2\sqrt{3}\frac{  \bar v}{S}\]</div>
-</div>
-<div class="section" id="coiled-tubes-laminar-flow">
-<span id="heading-coiled-tubes-laminar-flow"></span><h3>Coiled Tubes (Laminar Flow)<a class="headerlink" href="#coiled-tubes-laminar-flow" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="coiled-tubes-laminar-flow">
+<span id="heading-coiled-tubes-laminar-flow"></span><h3>Coiled Tubes (Laminar Flow)<a class="headerlink" href="#coiled-tubes-laminar-flow" title="Permalink to this heading"></a></h3>
 <p>Coiled tubes are used as flocculators at laboratory scale. The one shown below is a doubled coil. A single coil would only go around one cylinder</p>
 <p>` &lt;<a class="reference external" href="https://confluence.cornell.edu/display/AGUACLARA/Laminar+Tube+Floc?preview=/10422268/258146480/ReportLaminarTubeFlocSpring2014.pdf">https://confluence.cornell.edu/display/AGUACLARA/Laminar+Tube+Floc?preview=/10422268/258146480/ReportLaminarTubeFlocSpring2014.pdf</a>&gt;`__</p>
-<div class="figure align-center" id="id12">
+<figure class="align-center" id="id12">
 <span id="figure-coiled-tube-flocculator"></span><a class="reference internal image-reference" href="../_images/Coiled_tube_flocculator.jpg"><img alt="double coiled tube flocculator" src="../_images/Coiled_tube_flocculator.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">The double coiled laminar flow flocculator creates secondary currents that oscillate in direction. This may be helpful in creating much more mixing than would occur in a straight laminar flow pipe.</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">The double coiled laminar flow flocculator creates secondary currents that oscillate in direction. This may be helpful in creating much more mixing than would occur in a straight laminar flow pipe.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>The ratio of the coiled to straight friction factors is given by <a class="reference external" href="https://doi.org/10.1021/i260069a017">Mishra and Gupta</a></p>
 <p>The Dean number is defined as:</p>
 <div class="math notranslate nohighlight">
@@ -631,21 +560,21 @@ wall.</p>
 <p>where <span class="math notranslate nohighlight">\(\tilde{G} =4\sqrt2 \frac{\bar v}{D}\)</span> for laminar flow in a straight pipe.</p>
 <div class="math notranslate nohighlight">
 \[G_{CS_{coil}} = 4\sqrt2 \frac{\bar v}{D}\left[ 1 + 0.033\left(log_{10}De\right)^4  \right]^\frac{1}{2}\]</div>
-</div>
-<div class="section" id="flow-in-porous-media">
-<span id="heading-flow-in-porous-media"></span><h3>Flow in Porous Media<a class="headerlink" href="#flow-in-porous-media" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="flow-in-porous-media">
+<span id="heading-flow-in-porous-media"></span><h3>Flow in Porous Media<a class="headerlink" href="#flow-in-porous-media" title="Permalink to this heading"></a></h3>
 <p>The <a class="reference external" href="https://neutrium.net/fluid_flow/pressure-drop-through-a-packed-bed/">Ergun equation</a> applies to both laminar and turbulent flow through packed beds.</p>
 <div class="math notranslate nohighlight" id="equation-eq-ergun">
-<span class="eqno">(12)<a class="headerlink" href="#equation-eq-ergun" title="Permalink to this equation">¶</a></span>\[  h_f = \frac{L}{2g D_{sand}} \left( 300 \frac{\nu v_a (1-\phi)^2}{D_{sand} \phi^3} + 3.5 \frac{v_a^2 (1-\phi) }{\phi^3} \right)\]</div>
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-ergun" title="Permalink to this equation"></a></span>\[  h_f = \frac{L}{2g D_{sand}} \left( 300 \frac{\nu v_a (1-\phi)^2}{D_{sand} \phi^3} + 3.5 \frac{v_a^2 (1-\phi) }{\phi^3} \right)\]</div>
 <p>The Ergun equation can be rewritten to be consistent with the format of the Darcy-Weisbach equation. To do this we add a factor of 2 to the definition of the Ergun friction factor and will divide by the factor of 2 in a subsequent equation. The modified Ergun friction factor is</p>
 <div class="math notranslate nohighlight" id="equation-eq-f-porous-media">
-<span class="eqno">(13)<a class="headerlink" href="#equation-eq-f-porous-media" title="Permalink to this equation">¶</a></span>\[  f_{\phi} = \frac{300}{Re_{\phi}} + 3.5\]</div>
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-f-porous-media" title="Permalink to this equation"></a></span>\[  f_{\phi} = \frac{300}{Re_{\phi}} + 3.5\]</div>
 <p>where the <span class="math notranslate nohighlight">\(Re_{\phi}\)</span> includes the porosity effect on the velocity and is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-re-porous-media">
-<span class="eqno">(14)<a class="headerlink" href="#equation-eq-re-porous-media" title="Permalink to this equation">¶</a></span>\[  Re_{\phi} = \frac{v_a D_{sand}}{\nu(1-\phi)}\]</div>
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq-re-porous-media" title="Permalink to this equation"></a></span>\[  Re_{\phi} = \frac{v_a D_{sand}}{\nu(1-\phi)}\]</div>
 <p>I added a factor of two into the denominator to be consistent with the Darcy-Weisbach equation to obtain the modified Ergun equation.</p>
 <div class="math notranslate nohighlight" id="equation-eq-ergun-of-f">
-<span class="eqno">(15)<a class="headerlink" href="#equation-eq-ergun-of-f" title="Permalink to this equation">¶</a></span>\[  h_f = f_{\phi} \frac{L}{D_{sand}} \frac{v_a^2}{2g} \frac{(1-\phi)}{\phi^3}\]</div>
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-ergun-of-f" title="Permalink to this equation"></a></span>\[  h_f = f_{\phi} \frac{L}{D_{sand}} \frac{v_a^2}{2g} \frac{(1-\phi)}{\phi^3}\]</div>
 <p>The residence time in a porous media bed is given by</p>
 <div class="math notranslate nohighlight">
 \[\theta = \frac{L\phi} {v_a}\]</div>
@@ -654,13 +583,13 @@ wall.</p>
 \[\bar\varepsilon = \frac{g h_f}{\theta}\]</div>
 <p>Substituting the equations for head loss and residence times we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-edr-cs-porous-media">
-<span class="eqno">(16)<a class="headerlink" href="#equation-eq-edr-cs-porous-media" title="Permalink to this equation">¶</a></span>\[ \bar\varepsilon = \frac{f_{\phi}}{2} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\]</div>
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-edr-cs-porous-media" title="Permalink to this equation"></a></span>\[ \bar\varepsilon = \frac{f_{\phi}}{2} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\]</div>
 <p>The Camp Stein velocity gradient for flow in porous media is</p>
 <div class="math notranslate nohighlight" id="equation-eq-g-cs-porous-media">
-<span class="eqno">(17)<a class="headerlink" href="#equation-eq-g-cs-porous-media" title="Permalink to this equation">¶</a></span>\[  \tilde{G} = \left(\frac{f_{\phi}}{2\nu} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}\]</div>
-</div>
-<div class="section" id="expansions">
-<span id="heading-expansions"></span><h3>Expansions<a class="headerlink" href="#expansions" title="Permalink to this headline">¶</a></h3>
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq-g-cs-porous-media" title="Permalink to this equation"></a></span>\[  \tilde{G} = \left(\frac{f_{\phi}}{2\nu} \frac{v_a^3}{D_{sand}} \frac{(1-\phi)}{\phi^4}\right)^{\frac{1}{2}}\]</div>
+</section>
+<section id="expansions">
+<span id="heading-expansions"></span><h3>Expansions<a class="headerlink" href="#expansions" title="Permalink to this heading"></a></h3>
 <p>The average energy dissipation rate for a flow expansion really only has meaning if there is a defined control volume where the mechanical energy is lost. Hydraulic flocculators provide such a case because the same flow expansion is repeated and thus the mechanical energy loss can be assumed to happen in the volume associated with one flow expansion. In this case we have</p>
 <div class="math notranslate nohighlight">
 \[h_e =  K\frac{\bar v_{out}^2}{2g}\]</div>
@@ -676,17 +605,19 @@ wall.</p>
 <p>The Camp Stein velocity gradient, Equation <a class="reference internal" href="#equation-g-camp-stein">(3)</a>, converts the energy dissipation rate into a velocity gradient.</p>
 <div class="math notranslate nohighlight">
 \[\tilde{G} = \bar v_{out}\sqrt{\frac{K\bar v_{out}}{2H\nu}}\]</div>
-</div>
-</div>
-<div class="section" id="maximum-velocity-gradients">
-<span id="heading-maximum-velocity-gradients"></span><h2>Maximum Velocity Gradients<a class="headerlink" href="#maximum-velocity-gradients" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="straight-pipe-major-losses">
-<span id="heading-straight-pipe-major-losses"></span><h3>Straight Pipe (Major Losses)<a class="headerlink" href="#straight-pipe-major-losses" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="maximum-velocity-gradients">
+<span id="heading-maximum-velocity-gradients"></span><h2>Maximum Velocity Gradients<a class="headerlink" href="#maximum-velocity-gradients" title="Permalink to this heading"></a></h2>
+<section id="straight-pipe-major-losses">
+<span id="heading-straight-pipe-major-losses"></span><h3>Straight Pipe (Major Losses)<a class="headerlink" href="#straight-pipe-major-losses" title="Permalink to this heading"></a></h3>
 <p>The maximum velocity gradient in pipe flow occurs at the wall. This is true for both laminar and turbulent flow. In either case a force balance on a control volume of pipe gives us the wall shear and the wall shear can then be used to estimate the velocity gradient at the wall.</p>
-<div class="figure align-center" id="id13">
+<figure class="align-center" id="id13">
 <span id="figure-pipe-pressure-shear-force-balance"></span><a class="reference internal image-reference" href="../_images/pipe_pressure_shear_force_balance.png"><img alt="Pipe pressure and shear force balance" src="../_images/pipe_pressure_shear_force_balance.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">A fluid flowing from left to right due to a pressure gradient results in wall shear.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">A fluid flowing from left to right due to a pressure gradient results in wall shear.</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>A force balance for the case of steady flow in a round pipe requires that sum of the forces in the x direction must equal zero. Given a pipe with diameter, D, and length, L, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\left(P_{in}- P_{out}\right)\frac{\pi D^2}{4} = \tau_{wall} \pi D L\]</div>
@@ -713,29 +644,29 @@ wall.</p>
 \[\varepsilon_{wall} = \frac{1}{\nu}\left({\rm f}  \frac{\bar v^2}{8} \right)^2\]</div>
 <p>For laminar flow we can substitute <span class="math notranslate nohighlight">\({\rm f} = \frac{64}{{\rm Re}}\)</span> and the definition of the Reynolds number to obtain</p>
 <div class="math notranslate nohighlight" id="equation-g-wall-laminar-tube">
-<span class="eqno">(18)<a class="headerlink" href="#equation-g-wall-laminar-tube" title="Permalink to this equation">¶</a></span>\[ G_{wall} =  \frac{8\bar v}{D}\]</div>
+<span class="eqno">(18)<a class="headerlink" href="#equation-g-wall-laminar-tube" title="Permalink to this equation"></a></span>\[ G_{wall} =  \frac{8\bar v}{D}\]</div>
 <p>This equation is useful for finding the velocity gradient at the wall of a tube settler.</p>
 <p>The energy dissipation rate at the wall is</p>
 <div class="math notranslate nohighlight">
 \[\varepsilon_{wall} = G_{wall}^2 \nu\]</div>
 <div class="math notranslate nohighlight">
 \[\varepsilon_{wall} = \left(\frac{8\bar v}{D} \right)^2 \nu\]</div>
-</div>
-<div class="section" id="heading-coiled-tubes-laminar-flow-1">
-<span id="id3"></span><h3>Coiled Tubes (Laminar Flow)<a class="headerlink" href="#heading-coiled-tubes-laminar-flow-1" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="heading-coiled-tubes-laminar-flow-1">
+<span id="id3"></span><h3>Coiled Tubes (Laminar Flow)<a class="headerlink" href="#heading-coiled-tubes-laminar-flow-1" title="Permalink to this heading"></a></h3>
 <p>The shear on the wall of a coiled tube is not uniform. The outside of the curve has a higher velocity gradient than the inside of the curve and there are secondary currents that results in wall shear that is not purely in the locally defined upstream direction. We do not have a precise equation for the wall shear. The best we can do currently is define an average wall shear in the locally defined direction of flow by combining
 <span class="math notranslate nohighlight">\(G_{{CS}_{wall_{coil}}} =\rm{f_{coil}} \frac{\bar v^2}{8\nu}\)</span> and
 <span class="math notranslate nohighlight">\({\rm f}_{coil} = {\rm f} \left[ 1 + 0.033\left(log_{10}De\right)^4 \right]\)</span>
 to obtain</p>
 <div class="math notranslate nohighlight">
 \[G_{{CS}_{wall_{coil}}} ={\rm f} \left[ 1 + 0.033 \left(log_{10}De \right)^4 \right]  \frac{\bar v^2}{8\nu}\]</div>
-</div>
-<div class="section" id="heading-expansions-1">
-<span id="id4"></span><h3>Expansions<a class="headerlink" href="#heading-expansions-1" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="heading-expansions-1">
+<span id="id4"></span><h3>Expansions<a class="headerlink" href="#heading-expansions-1" title="Permalink to this heading"></a></h3>
 <p>Flow expansions are used intentionally or unavoidable in multiple locations in hydraulically optimized water treatment plants. Rapid mix and hydraulic flocculation use flow expansions to generate fluid mixing and collisions between particles. Flow expansions are responsible for minor losses and the rate at which expansions dissipate energy increases as the dimension of the jet decreases.</p>
-</div>
-<div class="section" id="round-jet">
-<span id="heading-round-jet"></span><h3>Round Jet<a class="headerlink" href="#round-jet" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="round-jet">
+<span id="heading-round-jet"></span><h3>Round Jet<a class="headerlink" href="#round-jet" title="Permalink to this heading"></a></h3>
 <p>The energy dissipation rate at the centerline of a round jet is a well studied phenomenon (<a class="reference external" href="https://doi.org/10.1016/0009-2509(95)00049-B">Baldyga, et al. 1995</a>).</p>
 <div class="math notranslate nohighlight">
 \[\varepsilon_{Centerline} = \frac{50 D_{Jet}^3 \bar v_{Jet}^3}{ \left( x - 2 D_{Jet} \right)^4}\]</div>
@@ -744,87 +675,91 @@ to obtain</p>
 \[\varepsilon_{max} = \frac{\left( \frac{50}{\left( 5 \right)^4} \right) \bar v_{Jet}^3}{D_{Jet}}\]</div>
 <p>The measured dimensionless coefficient, <span class="math notranslate nohighlight">\(\Pi_{JetRound}\)</span>, is proportional to the fraction of the kinetic energy that is dissipated in the time required for the jet to travel a distance equal to its original diameter. The higher this coefficient the faster the jet dissipates its energy. The coefficient is only a function of the geometry of the jet and thus round jets and plane jets have different coefficients.</p>
 <div class="math notranslate nohighlight" id="equation-roundjet-edr">
-<span class="eqno">(19)<a class="headerlink" href="#equation-roundjet-edr" title="Permalink to this equation">¶</a></span>\[\varepsilon_{max} = \Pi_{JetRound} \frac{\bar v_{Jet} ^3}{D_{Jet}}\]</div>
+<span class="eqno">(19)<a class="headerlink" href="#equation-roundjet-edr" title="Permalink to this equation"></a></span>\[\varepsilon_{max} = \Pi_{JetRound} \frac{\bar v_{Jet} ^3}{D_{Jet}}\]</div>
 <div class="math notranslate nohighlight" id="equation-roundjet-pi">
-<span class="eqno">(20)<a class="headerlink" href="#equation-roundjet-pi" title="Permalink to this equation">¶</a></span>\[\Pi_{JetRound} = 0.08\]</div>
+<span class="eqno">(20)<a class="headerlink" href="#equation-roundjet-pi" title="Permalink to this equation"></a></span>\[\Pi_{JetRound} = 0.08\]</div>
 <p>The maximum velocity gradient in a round jet is thus</p>
 <div class="math notranslate nohighlight" id="equation-roundjet-g-max">
-<span class="eqno">(21)<a class="headerlink" href="#equation-roundjet-g-max" title="Permalink to this equation">¶</a></span>\[ G_{max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}\]</div>
+<span class="eqno">(21)<a class="headerlink" href="#equation-roundjet-g-max" title="Permalink to this equation"></a></span>\[ G_{max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetRound} \bar v_{Jet} }{\nu D_{Jet}}}\]</div>
 <p>The maximum permissible velocity gradient in a round jet given a maximum allowable velocity gradient is</p>
 <div class="math notranslate nohighlight" id="equation-roundjet-v-max">
-<span class="eqno">(22)<a class="headerlink" href="#equation-roundjet-v-max" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet_{max}} = G_{max}^{\frac{2}{3}} \left(\frac{\nu D_{Jet}}{\Pi_{JetRound} }\right)^{\frac{1}{3}}\]</div>
+<span class="eqno">(22)<a class="headerlink" href="#equation-roundjet-v-max" title="Permalink to this equation"></a></span>\[\bar v_{Jet_{max}} = G_{max}^{\frac{2}{3}} \left(\frac{\nu D_{Jet}}{\Pi_{JetRound} }\right)^{\frac{1}{3}}\]</div>
 <p>The minimum jet diameter given a maximum allowable velocity gradient and required jet velocity is</p>
 <div class="math notranslate nohighlight" id="equation-roundjet-d-min">
-<span class="eqno">(23)<a class="headerlink" href="#equation-roundjet-d-min" title="Permalink to this equation">¶</a></span>\[D_{Jet_{min}}= \frac{\Pi_{JetRound} \bar v_{Jet}^3}{\nu G_{max}^2}\]</div>
+<span class="eqno">(23)<a class="headerlink" href="#equation-roundjet-d-min" title="Permalink to this equation"></a></span>\[D_{Jet_{min}}= \frac{\Pi_{JetRound} \bar v_{Jet}^3}{\nu G_{max}^2}\]</div>
 <p>Below we plot the Baldyga et al. equation for the energy dissipation rate as a function of distance from the discharge location for the case of a round jet that is discharging into a large tank.</p>
-<div class="figure align-center" id="id14">
+<figure class="align-center" id="id14">
 <span id="figure-jet-centerline-edr"></span><a class="reference internal image-reference" href="../_images/Jet_centerline_EDR.png"><img alt="Pipe pressure and shear force balance" src="../_images/Jet_centerline_EDR.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">The centerline energy dissipation rate downstream from a round jet. The distance downstream is measured in units of jet diameters. The energy dissipation rate between the jet and 7 jet diameters is developing as the shear between the stationary fluid and the jet propagates toward the center of the jet and turbulence is generated.</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>By substituting the continuity equation into Equation <a class="reference internal" href="#equation-roundjet-g-max">(21)</a> we can find the minimum jet diameter given a maximum allowed velocity gradient.</p>
 <div class="math notranslate nohighlight" id="equation-jet-g-max-of-d-jet-min">
-<span class="eqno">(24)<a class="headerlink" href="#equation-jet-g-max-of-d-jet-min" title="Permalink to this equation">¶</a></span>\[ G_{max} = \left(\frac{4 Q}{\pi D_{Jet}^2}\right)^\frac{3}{2} \sqrt{\frac{\Pi_{JetRound}  }{\nu D_{Jet}}}\]</div>
+<span class="eqno">(24)<a class="headerlink" href="#equation-jet-g-max-of-d-jet-min" title="Permalink to this equation"></a></span>\[ G_{max} = \left(\frac{4 Q}{\pi D_{Jet}^2}\right)^\frac{3}{2} \sqrt{\frac{\Pi_{JetRound}  }{\nu D_{Jet}}}\]</div>
 <p>Solve for <span class="math notranslate nohighlight">\(D_{Jet}\)</span> to obtain the minimum jet diameter to deliver a target flow without exceeding the maximum velocity gradient.</p>
 <div class="math notranslate nohighlight" id="equation-d-jet-min-of-jet-g-max">
-<span class="eqno">(25)<a class="headerlink" href="#equation-d-jet-min-of-jet-g-max" title="Permalink to this equation">¶</a></span>\[ D_{Jet} = \left[\frac{\Pi_{JetRound}  }{\nu G_{max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
+<span class="eqno">(25)<a class="headerlink" href="#equation-d-jet-min-of-jet-g-max" title="Permalink to this equation"></a></span>\[ D_{Jet} = \left[\frac{\Pi_{JetRound}  }{\nu G_{max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
 <p>Equation <a class="reference internal" href="#equation-d-jet-min-of-jet-g-max">(25)</a> allows us to make the connection between a flow contraction and the resulting maximum velocity gradient. As we design flow passages where there are constraints on the maximum velocity gradient we need to calculate the minimum pipe diameter. The pipe diameter can be obtained by substituting Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html#equation-d-pipe-of-d-vc">(5)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-d-pipe-min-of-jet-g-max">
-<span class="eqno">(26)<a class="headerlink" href="#equation-d-pipe-min-of-jet-g-max" title="Permalink to this equation">¶</a></span>\[ D_{pipe_{min}} = \frac{1}{\sqrt{\Pi_{vc}}} \left[\frac{\Pi_{JetRound}  }{\nu G_{max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
+<span class="eqno">(26)<a class="headerlink" href="#equation-d-pipe-min-of-jet-g-max" title="Permalink to this equation"></a></span>\[ D_{pipe_{min}} = \frac{1}{\sqrt{\Pi_{vc}}} \left[\frac{\Pi_{JetRound}  }{\nu G_{max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
 <p>For many geometry changes we know the minor loss coefficient. An equivalent equation that is a function of the minor loss coefficient can be obtained by substituting Equation <a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html#equation-pi-vc-of-minor-k">(6)</a> into Equation <a class="reference internal" href="#equation-d-pipe-min-of-jet-g-max">(26)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-d-pipe-min-of-k-and-jet-g-max">
-<span class="eqno">(27)<a class="headerlink" href="#equation-d-pipe-min-of-k-and-jet-g-max" title="Permalink to this equation">¶</a></span>\[ D_{pipe_{min}} = \sqrt{\sqrt{K_e} + 1} \left[\frac{\Pi_{JetRound}  }{\nu G_{max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
+<span class="eqno">(27)<a class="headerlink" href="#equation-d-pipe-min-of-k-and-jet-g-max" title="Permalink to this equation"></a></span>\[ D_{pipe_{min}} = \sqrt{\sqrt{K_e} + 1} \left[\frac{\Pi_{JetRound}  }{\nu G_{max}^2}  \left(\frac{4 Q}{\pi }\right)^3 \right]^\frac{1}{7}\]</div>
 <p>Equation <a class="reference internal" href="#equation-d-pipe-min-of-k-and-jet-g-max">(27)</a> is limited to geometries where any flow contractions in series are sufficiently separated so that the flow completely expands before entering the next contraction. The pipe diameter is then set by the largest minor loss coefficient in the pipe system.</p>
 <p>The maximum flow that can be handled by a pipe with minor losses can be obtained by solving Equation <a class="reference internal" href="#equation-d-pipe-min-of-k-and-jet-g-max">(27)</a> for the flow rate.</p>
 <div class="math notranslate nohighlight" id="equation-q-max-of-d-and-k-and-jet-g-max">
-<span class="eqno">(28)<a class="headerlink" href="#equation-q-max-of-d-and-k-and-jet-g-max" title="Permalink to this equation">¶</a></span>\[Q_{max} = \frac{\pi}{4}\left[\frac{\nu G_{max}^2}{\Pi_{JetRound}} \left(\frac{D_{pipe}}{\sqrt{\sqrt{K_e} + 1}}\right)^7\right]^\frac{1}{3}\]</div>
-</div>
-<div class="section" id="plane-jet">
-<span id="heading-plane-jet"></span><h3>Plane Jet<a class="headerlink" href="#plane-jet" title="Permalink to this headline">¶</a></h3>
+<span class="eqno">(28)<a class="headerlink" href="#equation-q-max-of-d-and-k-and-jet-g-max" title="Permalink to this equation"></a></span>\[Q_{max} = \frac{\pi}{4}\left[\frac{\nu G_{max}^2}{\Pi_{JetRound}} \left(\frac{D_{pipe}}{\sqrt{\sqrt{K_e} + 1}}\right)^7\right]^\frac{1}{3}\]</div>
+</section>
+<section id="plane-jet">
+<span id="heading-plane-jet"></span><h3>Plane Jet<a class="headerlink" href="#plane-jet" title="Permalink to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This section needs images for jets. Add drawings that define dimensions. Add description of hydraulic residence time. Define Sjet. Add more text describing what the equations mean.</p>
 </div>
 <p>Plane jets occur in the clarifier inlet jet system. We haven’t been able to find a literature estimate of the maximum energy dissipation rate in a plane jet. Original measurements of a plane turbulent jet have been made by <a class="reference external" href="http://dx.doi.org/10.1115/1.3627309">Heskestad in 1965</a> and it may be possible to use that data to get a better estimate of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> from that source. An alternate estimate of <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> can be obtained by postulating that the rate of energy dissipation is proportional to the ratio of the circumference of the jet normalized by the jet area. The postulate is based on the insight that the jet is experiencing shear with the surrounding fluid around its perimeter. For a plane jet the ratio of the circumference of the jet to the jet area is</p>
 <div class="math notranslate nohighlight" id="equation-p-a-ratio-for-plane-jet">
-<span class="eqno">(29)<a class="headerlink" href="#equation-p-a-ratio-for-plane-jet" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} \propto  \frac{2L}{SL} = \frac{2}{S}\]</div>
+<span class="eqno">(29)<a class="headerlink" href="#equation-p-a-ratio-for-plane-jet" title="Permalink to this equation"></a></span>\[\Pi_{JetPlane} \propto  \frac{2L}{SL} = \frac{2}{S}\]</div>
 <p>where L is the length of the plane jet, and S is the jet thickness at the jet origin. For a round jet we have</p>
 <div class="math notranslate nohighlight" id="equation-p-a-ratio-for-round-jet">
-<span class="eqno">(30)<a class="headerlink" href="#equation-p-a-ratio-for-round-jet" title="Permalink to this equation">¶</a></span>\[\Pi_{JetRound} \propto  \frac{4 \pi D}{\pi D^2} =  \frac{4}{D}\]</div>
+<span class="eqno">(30)<a class="headerlink" href="#equation-p-a-ratio-for-round-jet" title="Permalink to this equation"></a></span>\[\Pi_{JetRound} \propto  \frac{4 \pi D}{\pi D^2} =  \frac{4}{D}\]</div>
 <p>where D is the jet diameter at the origin. A round jet has twice the circumference of a plane jet given the same jet dimension. Thus a plane jet will dissipate energy half as fast as a round jet and <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span> is expected to have a value of exactly half of <span class="math notranslate nohighlight">\(\Pi_{JetRound}\)</span></p>
 <div class="math notranslate nohighlight" id="equation-jetplane-pi">
-<span class="eqno">(31)<a class="headerlink" href="#equation-jetplane-pi" title="Permalink to this equation">¶</a></span>\[\Pi_{JetPlane} = 0.04\]</div>
+<span class="eqno">(31)<a class="headerlink" href="#equation-jetplane-pi" title="Permalink to this equation"></a></span>\[\Pi_{JetPlane} = 0.04\]</div>
 <p>The energy dissipation rate is defined in the same way as for round jets in Equation <a class="reference internal" href="#equation-roundjet-edr">(19)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-planejet-edr">
-<span class="eqno">(32)<a class="headerlink" href="#equation-planejet-edr" title="Permalink to this equation">¶</a></span>\[\varepsilon_{max} = \Pi_{JetPlane} \frac{\bar v_{Jet} ^3}{S_{Jet}}\]</div>
+<span class="eqno">(32)<a class="headerlink" href="#equation-planejet-edr" title="Permalink to this equation"></a></span>\[\varepsilon_{max} = \Pi_{JetPlane} \frac{\bar v_{Jet} ^3}{S_{Jet}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(S_{Jet}\)</span> is the jet thickness. The maximum velocity gradient in a plane jet is thus</p>
 <div class="math notranslate nohighlight" id="equation-planejet-g-max">
-<span class="eqno">(33)<a class="headerlink" href="#equation-planejet-g-max" title="Permalink to this equation">¶</a></span>\[ G_{max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet} }{\nu S_{Jet}}}\]</div>
+<span class="eqno">(33)<a class="headerlink" href="#equation-planejet-g-max" title="Permalink to this equation"></a></span>\[ G_{max} = \bar v_{Jet} \sqrt{\frac{\Pi_{JetPlane} \bar v_{Jet} }{\nu S_{Jet}}}\]</div>
 <p>The maximum permissible velocity gradient in a plane jet given a maximum allowable velocity gradient is</p>
 <div class="math notranslate nohighlight" id="equation-planejet-v-max">
-<span class="eqno">(34)<a class="headerlink" href="#equation-planejet-v-max" title="Permalink to this equation">¶</a></span>\[\bar v_{Jet_{max}} = G_{max}^{\frac{2}{3}} \left(\frac{\nu S_{Jet}}{\Pi_{JetPlane} }\right)^{\frac{1}{3}}\]</div>
+<span class="eqno">(34)<a class="headerlink" href="#equation-planejet-v-max" title="Permalink to this equation"></a></span>\[\bar v_{Jet_{max}} = G_{max}^{\frac{2}{3}} \left(\frac{\nu S_{Jet}}{\Pi_{JetPlane} }\right)^{\frac{1}{3}}\]</div>
 <p>The minimum jet thickness given a maximum allowable velocity gradient and required jet velocity is</p>
 <div class="math notranslate nohighlight" id="equation-planejet-d-min">
-<span class="eqno">(35)<a class="headerlink" href="#equation-planejet-d-min" title="Permalink to this equation">¶</a></span>\[S_{Jet_{min}}= \frac{\Pi_{JetPlane} \bar v_{Jet}^3}{\nu G_{max}^2}\]</div>
+<span class="eqno">(35)<a class="headerlink" href="#equation-planejet-d-min" title="Permalink to this equation"></a></span>\[S_{Jet_{min}}= \frac{\Pi_{JetPlane} \bar v_{Jet}^3}{\nu G_{max}^2}\]</div>
 <p>If the discharge per length of the jet, <span class="math notranslate nohighlight">\(q\)</span>, is specified where</p>
 <div class="math notranslate nohighlight" id="equation-planejet-q">
-<span class="eqno">(36)<a class="headerlink" href="#equation-planejet-q" title="Permalink to this equation">¶</a></span>\[q = \frac{Q}{L} = \bar v_{Jet} S_{Jet}\]</div>
+<span class="eqno">(36)<a class="headerlink" href="#equation-planejet-q" title="Permalink to this equation"></a></span>\[q = \frac{Q}{L} = \bar v_{Jet} S_{Jet}\]</div>
 <p>then the jet thickness can be obtained.</p>
 <div class="math notranslate nohighlight" id="equation-planejet-s-of-q">
-<span class="eqno">(37)<a class="headerlink" href="#equation-planejet-s-of-q" title="Permalink to this equation">¶</a></span>\[ S_{Jet_{min}}= \left(\frac{\Pi_{JetPlane} q^3}{\nu G_{max}^2}\right)^\frac{1}{4}\]</div>
+<span class="eqno">(37)<a class="headerlink" href="#equation-planejet-s-of-q" title="Permalink to this equation"></a></span>\[ S_{Jet_{min}}= \left(\frac{\Pi_{JetPlane} q^3}{\nu G_{max}^2}\right)^\frac{1}{4}\]</div>
 <p>In that case the maximum jet velocity is give by</p>
 <div class="math notranslate nohighlight" id="equation-planejet-v-max-of-q">
-<span class="eqno">(38)<a class="headerlink" href="#equation-planejet-v-max-of-q" title="Permalink to this equation">¶</a></span>\[ \bar v_{Jet_{max}} = \left(\frac{q\nu G_{max}^2}{\Pi_{JetPlane} }\right)^\frac{1}{4}\]</div>
+<span class="eqno">(38)<a class="headerlink" href="#equation-planejet-v-max-of-q" title="Permalink to this equation"></a></span>\[ \bar v_{Jet_{max}} = \left(\frac{q\nu G_{max}^2}{\Pi_{JetPlane} }\right)^\frac{1}{4}\]</div>
 <p>Equation <a class="reference internal" href="#equation-planejet-v-max-of-q">(38)</a> defines the maximum velocity exiting the diffusers for the inlet manifold in the clarifier.</p>
-</div>
-<div class="section" id="behind-a-flat-plate">
-<span id="heading-behind-a-flat-plate"></span><h3>Behind a Flat Plate<a class="headerlink" href="#behind-a-flat-plate" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="behind-a-flat-plate">
+<span id="heading-behind-a-flat-plate"></span><h3>Behind a Flat Plate<a class="headerlink" href="#behind-a-flat-plate" title="Permalink to this heading"></a></h3>
 <p>A flat plate normal to the direction of flow could be used in a hydraulic flocculator. In vertical flow flocculators it would create a space where flocs can settle and thus it is not a recommended design.</p>
 <p>The impellers used in mechanical flocculators could be modeled as a rotating flat plate. The energy dissipation rate in the wake behind the flat plate is often quite high in mechanical flocculators and this may be responsible for breaking previously formed flocs.</p>
 <p>Ariane Walker-Horn modeled the flat plate using Fluent in 2015.</p>
-<div class="figure align-center" id="id15">
+<figure class="align-center" id="id15">
 <span id="figure-cfd-flat-plate"></span><a class="reference internal image-reference" href="../_images/CFD_Flat_Plate.png"><img alt="CFD Flat Plate" src="../_images/CFD_Flat_Plate.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of <span class="math notranslate nohighlight">\(1 m/s\)</span>. The maximum energy dissipation rate was approximately <span class="math notranslate nohighlight">\(0.04 W/kg\)</span>.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">The energy dissipation rate and streamlines for a 1 m wide plate in two dimensional flow with an approach velocity of <span class="math notranslate nohighlight">\(1 m/s\)</span>. The maximum energy dissipation rate was approximately <span class="math notranslate nohighlight">\(0.04 W/kg\)</span>.</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <div class="math notranslate nohighlight">
 \[\varepsilon _{max} = \Pi_{Plate}\frac{\bar v^3}{W_{Plate}}\]</div>
 <p>The maximum velocity gradient is thus</p>
@@ -834,9 +769,9 @@ to obtain</p>
 \[\Pi_{Plate} = \frac{ \left( \varepsilon_{max} W_{Plate} \right)}{\bar v^3}\]</div>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=juEleCKZLNuk">here</a></p>
 <p>The flat plate <span class="math notranslate nohighlight">\(\Pi_{Plate}\)</span> has a value of 0.04 which is identical to our estimate for <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span>.</p>
-</div>
-<div class="section" id="flow-expansion-in-a-baffled-flocculators">
-<h3>Flow expansion in a baffled flocculators<a class="headerlink" href="#flow-expansion-in-a-baffled-flocculators" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="flow-expansion-in-a-baffled-flocculators">
+<h3>Flow expansion in a baffled flocculators<a class="headerlink" href="#flow-expansion-in-a-baffled-flocculators" title="Permalink to this heading"></a></h3>
 <p>The flow expansion in a baffled flocculator occurs after the flow bends around the end of a baffle. The flow contracts against the baffle that defines the outside of the bend and thus one side of the flow is unable to expand because it is already against the baffle. This results in lower energy dissipation rate than would be obtained for a free jet. The first approximation would be that the baffle can be treated as the center of a virtual jet that is twice as large as the real jet. Alternately the energy dissipation can be neflected on the side of the jet that is against the baffle. Either assumption results half of the energy dissipation rate that would be expected for a similar dimensioned free jet.</p>
 <div class="math notranslate nohighlight">
 \[\Pi_{FlocBaffle} =  \frac{1}{2} \Pi_{JetPlane} = 0.02\]</div>
@@ -845,10 +780,10 @@ to obtain</p>
 \[\Pi_{\bar \varepsilon}^{\varepsilon_{max}} = \frac{\varepsilon_{max}}{\bar \varepsilon}\]</div>
 <p>The maximum energy dissipation rate is defined using the same form of the equation as in the previous sections.</p>
 <div class="math notranslate nohighlight" id="equation-edr-flocbaffle">
-<span class="eqno">(39)<a class="headerlink" href="#equation-edr-flocbaffle" title="Permalink to this equation">¶</a></span>\[\varepsilon_{max} = \Pi_{FlocBaffle}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
+<span class="eqno">(39)<a class="headerlink" href="#equation-edr-flocbaffle" title="Permalink to this equation"></a></span>\[\varepsilon_{max} = \Pi_{FlocBaffle}  \frac{  \bar v_{Jet} ^3}{S_{Jet}}\]</div>
 <p>An equivalent relationship can be defined for the velocity gradient by using Equation <a class="reference internal" href="#equation-g-camp-stein">(3)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-g-flocbaffle">
-<span class="eqno">(40)<a class="headerlink" href="#equation-eq-g-flocbaffle" title="Permalink to this equation">¶</a></span>\[ G_{max} = \bar v_{Jet}\sqrt{\frac{\Pi_{FlocBaffle} \bar v_{Jet}}{\nu S_{Jet}}}\]</div>
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq-g-flocbaffle" title="Permalink to this equation"></a></span>\[ G_{max} = \bar v_{Jet}\sqrt{\frac{\Pi_{FlocBaffle} \bar v_{Jet}}{\nu S_{Jet}}}\]</div>
 <p>The relationship between velocity and the flow dimensions in a baffle are given by</p>
 <div class="math notranslate nohighlight">
 \[\bar v = \frac{Q}{SW}\]</div>
@@ -888,13 +823,12 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
 \[\Pi_{FlocBaffle} \approx 0.0124\]</div>
 <p>This value for <span class="math notranslate nohighlight">\(\Pi_{FlocBaffle}\)</span> is lower than we estimated based on 50% of the <span class="math notranslate nohighlight">\(\Pi_{JetPlane}\)</span>. Additional research is needed to measure <span class="math notranslate nohighlight">\(\Pi_{FlocBaffle}\)</span>.</p>
 <p>The code for this example can be found <a class="reference external" href="https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=WQtdrsP9egHB">here</a></p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="FDED_Intro.html" class="btn btn-neutral float-left" title="Energy Dissipation Rate, Velocity Gradient, and Mixing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
@@ -927,22 +861,13 @@ The transition value for <span class="math notranslate nohighlight">\(H_e/S\)</s
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
