@@ -11,10 +11,6 @@ BUILDDIR      = _build
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-pdf:
-	$(SPHINXBUILD) -b pdf $(SPHINXOPTS) "$(SOURCEDIR)" "$(BUILDDIR)"/pdf
-	@echo
-	@echo "Build finished. The PDF files are in _build/pdf."
 
 .PHONY: help Makefile
 
