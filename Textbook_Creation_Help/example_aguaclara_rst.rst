@@ -355,45 +355,6 @@ Or this syntax::
 
       This is my code block.
 
-
-.. _heading_python_and_including_doctests:
-
-Writing Python and Including Doctests
------------------------------------------
-
-Doctests
-^^^^^^^^^^^^
-
-When writing code for the textbook, some sections will be written in executable code to demonstrate functions or run calculations. They will not, however, run automatically in the webpage, so to ensure that they are correct before they are published they are tested with doctests. Doctests compare the written code with the expected result typed manually below it. In the Anaconda Prompt, simply run the :code:`make doctest` in the correct directory and branch. When run, you see where your executable code doesn't match up with the "answer" provided by you, the contributor. One reason this is important is because if functions in aguaclara change, their outputs might alter from old versions. Doctests will show where this happens. Additionally, typos and other mistakes can be seen. Further documentation on running doctest can be found `here <https://web.archive.org/web/20190306065814/http://docs.sphinxdocs.com/en/latest/step-3.html>`_.
-
-The way to ensure a doctest will run is to precede each line of code with '>>>', the default Python prompt. When a doctest is run, every line of code with '>>>' in front of it will be run within a directory. The testing becomes relevant for lines which do not have '>>>' in front of them. Any line that is directly below a line beginning with '>>>' is assumed to be an output of the line of code just above it. In the example below, :code:`19` is the expected output of the line :code:`>>> print(5+14)`. If the output of that line did not match the line below, doctests would alert you! Below are some examples of doctestable code.
-
-    >>> python="code"
-    >>> print(5+14)
-    19
-
-* You can even print and test tables in doctests:
-
-    >>> import pandas as pd
-    >>> names_male = pd.Series(['Barack', 'Monroe', 'Jack'])
-    >>> names_female = pd.Series(['Michelle', 'Juanita', 'Jill'])
-    >>> var_names = dict( female_names = names_female, male_names = names_male)
-    >>> df = pd.DataFrame(var_names)
-    >>> print(df)
-      female_names male_names
-    0     Michelle     Barack
-    1      Juanita     Monroe
-    2         Jill       Jack
-
-* Python will also "remember" variables from one block to the next:
-
-    >>> print(python)
-    code
-
-* To get doctests to pass through Travis, you'll have to add any packages you use to the install step in ".travis.yml". Under install, add a line that says :code:`pip install my_package==0.0.0`. When doing this, make sure to specify the version as functionality can change!
-
-Though there are other ways to include code in an RST document, this method makes doctesting possible, and will make it easy to change the documents should aguaclara functions change, therefore this is the best way to include code! Additionally it makes it easy to see the difference between the code and the output, whereas other methods are less clear in this distinction.
-
 Inserting Video
 ---------------
 
