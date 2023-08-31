@@ -7,13 +7,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Flow Control and Measurement Solution &mdash; AguaClara Textbook 355/merge documentation</title>
+  <title>Flow Control and Measurement Solution &mdash; AguaClara 0.0.0 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
   
@@ -33,7 +32,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="../_static/mathjax_config.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -55,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+            <a href="../index.html" class="icon icon-home"> AguaClara
           
 
           
@@ -63,10 +62,6 @@
 
           
             
-            
-              <div class="version">
-                355/merge
-              </div>
             
           
 
@@ -215,7 +210,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">AguaClara Textbook</a>
+          <a href="../index.html">AguaClara</a>
         
       </nav>
 
@@ -324,7 +319,7 @@
 <p><a class="reference external" href="https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=F7l7sG0aR24k&amp;line=4&amp;uniqifier=1">Solution Here</a></p>
 <div class="figure align-center" id="id14">
 <span id="figure-horizontal-vs-vertical-orifice-orientation"></span><a class="reference internal image-reference" href="../_images/Horizontal_vs_Vertical_Orifice_Orientation.png"><img alt="Horizontal vs. Vertical Orifice Orientation" src="../_images/Horizontal_vs_Vertical_Orifice_Orientation.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 76 </span><span class="caption-text">Horizontal vs. Vertical Orifice Orientation</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Horizontal vs. Vertical Orifice Orientation</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>3)</strong> Write a paragraph about what the graph means by explaining the following two items: - Explain why the vertical orifice equation predicts more flow when the water level is below the center of the orifice and predicts less flow when the water level is above the center of the orifice. It might help to draw a picture of what the equations are describing to understand what is happening here! - Explain how the horizontal orifice equation function from <code class="docutils literal notranslate"><span class="pre">physchem.py</span></code> predicts the flow rate for submergence depths that are negative. You will need to find the function and look at the code.</p>
 <div class="section" id="explanation">
@@ -367,7 +362,7 @@
 </div></blockquote>
 <div class="figure align-center" id="id15">
 <span id="figure-normalized-flow-rate-vs-water-depth"></span><a class="reference internal image-reference" href="../_images/Normalized_Flow_Rate_vs_Water_Depth.png"><img alt="Normalized Flow Rate vs. Water Depth" src="../_images/Normalized_Flow_Rate_vs_Water_Depth.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 77 </span><span class="caption-text">Normalized Flow Rate vs. Water Depth</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Normalized Flow Rate vs. Water Depth</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>7)</strong> Play with the value for the plant flow rate, <code class="docutils literal notranslate"><span class="pre">LFOM_flow</span></code>, and try a bunch of different flows over the range 1 to 100 L/s. The LFOM isn’t accurate for the first couple of rows.</p>
 <p><strong>8)</strong> Do you observe any failure modes where the design produces very inaccurate flow measurements? If so, then create an issue!</p>
@@ -402,8 +397,8 @@
 <p><strong>15)</strong> What is the head loss due to minor losses in the tube when the tube is flowing at maximum capacity? Solve for this value algebraically by substituting your equation for the velocity in the tube into the minor loss equation and then calculate the value.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=kQ0RVEOBSVag&amp;line=1&amp;uniqifier=1">Solution Here</a></p>
 <p><strong>16)</strong> Create an array of the maximum flow rates corresponding to the array of tubing diameters. The flow rates must meet the error constraint.</p>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-solution-0">
-<span class="eqno">(384)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-solution-0" title="Permalink to this equation">¶</a></span>\[ \begin{align}\begin{aligned}Q_{max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}\\- First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``ac.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}Q_{max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}\\- First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``ac.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
 - Create the array of maximum flow rates using the array of tubing diameters and the maximum head loss through the dosing tubes.\end{aligned}\end{align} \]</div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=6fqFroCkSYch&amp;line=1&amp;uniqifier=1">Solution Here</a></p>
 <p><strong>17)</strong> Find the minimum number of tubes for each of the available tube diameters that would be required to deliver the maximum flow of bleach.</p>
@@ -411,8 +406,8 @@
 <p><strong>18)</strong> Create an array of the maximum flow rate per tube for each of the available tubing diameters, given the number of tubes that would be used. This will be the flow through each dosing tube at the maximum flow of bleach.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=Ogt6D8WaSjqz&amp;line=2&amp;uniqifier=1">Solution Here</a></p>
 <p><strong>19)</strong> We now know the target flow in the dosing tubes, the diameter of the tubes, and the target head loss through the tubes. Thus, we can solve for the length of the tube that will deliver that target flow. Write a function to find the length of each tube that could handle the entire flow. Your function should use the following equation:</p>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-solution-1">
-<span class="eqno">(385)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-solution-1" title="Permalink to this equation">¶</a></span>\[L = \frac{g h_{L}\pi D^4}{128 \nu Q_{max}}-\frac{Q_{max}}{16 \pi \nu}\sum K_{e}\]</div>
+<div class="math notranslate nohighlight">
+\[L = \frac{g h_{L}\pi D^4}{128 \nu Q_{max}}-\frac{Q_{max}}{16 \pi \nu}\sum K_{e}\]</div>
 <p>Call your function to return the length of tubing required for each tube
 size.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=znrdVDf5SmCs&amp;line=3&amp;uniqifier=1">Solution Here</a></p>

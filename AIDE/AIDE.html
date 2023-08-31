@@ -7,13 +7,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara Textbook 355/merge documentation</title>
+  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara 0.0.0 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
   
@@ -33,7 +32,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="../_static/mathjax_config.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -55,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+            <a href="../index.html" class="icon icon-home"> AguaClara
           
 
           
@@ -63,10 +62,6 @@
 
           
             
-            
-              <div class="version">
-                355/merge
-              </div>
             
           
 
@@ -212,7 +207,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">AguaClara Textbook</a>
+          <a href="../index.html">AguaClara</a>
         
       </nav>
 
@@ -286,7 +281,7 @@
 <embed>
    <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/272ed6d0570a4b489ca630a10aa5a65d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 </embed><span id="table-aide-configurable-components"></span><table class="colwidths-given docutils align-left" id="id1">
-<caption><span class="caption-number">Table 22 </span><span class="caption-text">AIDE configurable components.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">AIDE configurable components.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 29%" />
 <col style="width: 57%" />
@@ -357,14 +352,14 @@
 <li><p><em>Print parameter map</em> - Prints a full map in the FeatureScript notices of all of the model inputs. Only a small fraction of the available inputs are exposed in the model configuration parameters. Click on show FeatureScript Notices <a class="reference internal" href="../_images/showFeatureScriptNotices.png"><img alt="showFSNotices" src="../_images/showFeatureScriptNotices.png" style="height: 30px;" /></a> to open a new pane at the bottom of the browser window where the full parameter map will be displayed.</p></li>
 </ol>
 </div></blockquote>
-<p>The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of <em>time to generate model component</em> in <a class="reference internal" href="#table-aide-configurable-components"><span class="std std-numref">Table 22</span></a> for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.</p>
+<p>The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of <em>time to generate model component</em> in <code class="xref std std-numref docutils literal notranslate"><span class="pre">table_AIDE_configurable_components</span></code> for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.</p>
 <p>If you would like to explore possible configurations, change the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.</p>
 </div>
 <div class="section" id="using-aide-to-explore-aguaclara-technologies">
 <span id="heading-using-aide"></span><h2>Using AIDE to Explore AguaClara Technologies<a class="headerlink" href="#using-aide-to-explore-aguaclara-technologies" title="Permalink to this headline">¶</a></h2>
-<p>If you do not yet have an <a class="reference external" href="https://cad.onshape.com/"><img alt="Onshape" src="../_images/Onshape.png" style="height: 18px;" /></a> account, then you will be able to make changes to the component configuration by using the <a class="reference external" href="https://cad.onshape.com/help/Content/viewonlytoolbar.htm">view only toolbar</a>. You can sign up for a <a class="reference external" href="https://www.onshape.com/en/products/free">free public Onshape account</a> that will enable you to access the parts lists and <em>estimated</em> materials cost for each of the AIDE configurable components. The AIDE videos (see <a class="reference internal" href="#table-aide-videos"><span class="std std-numref">Table 23</span></a>) introduce the core AIDE features.</p>
+<p>If you do not yet have an <a class="reference external" href="https://cad.onshape.com/"><img alt="Onshape" src="../_images/Onshape.png" style="height: 18px;" /></a> account, then you will be able to make changes to the component configuration by using the <a class="reference external" href="https://cad.onshape.com/help/Content/viewonlytoolbar.htm">view only toolbar</a>. You can sign up for a <a class="reference external" href="https://www.onshape.com/en/products/free">free public Onshape account</a> that will enable you to access the parts lists and <em>estimated</em> materials cost for each of the AIDE configurable components. The AIDE videos (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">table_AIDE_videos</span></code>) introduce the core AIDE features.</p>
 <span id="table-aide-videos"></span><table class="colwidths-given docutils align-left" id="id2" style="width: 100">
-<caption><span class="caption-number">Table 23 </span><span class="caption-text">AIDE play list of videos.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">AIDE play list of videos.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

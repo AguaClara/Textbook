@@ -7,13 +7,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Python Tutorial &mdash; AguaClara Textbook 355/merge documentation</title>
+  <title>Python Tutorial &mdash; AguaClara 0.0.0 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
   
@@ -33,7 +32,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="../_static/mathjax_config.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -55,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+            <a href="../index.html" class="icon icon-home"> AguaClara
           
 
           
@@ -63,10 +62,6 @@
 
           
             
-            
-              <div class="version">
-                355/merge
-              </div>
             
           
 
@@ -216,7 +211,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">AguaClara Textbook</a>
+          <a href="../index.html">AguaClara</a>
         
       </nav>
 
@@ -274,7 +269,7 @@
 </embed><div class="section" id="python-tutorial">
 <span id="title-python-tutorial"></span><h1>Python Tutorial<a class="headerlink" href="#python-tutorial" title="Permalink to this headline">¶</a></h1>
 <span id="table-code-resources"></span><table class="docutils align-left" id="id1">
-<caption><span class="caption-number">Table 27 </span><span class="caption-text">Code resources.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">Code resources.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -365,8 +360,8 @@ can do the following import inspect inspect.getsource(foo)</p>
 <div class="section" id="markdown">
 <h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
 <p>Markdown allow you to mix code, beautiful Latex equations, nicely formatted text, figures, and tables.</p>
-<div class="math notranslate nohighlight" id="equation-introduction-python-tutorial-0">
-<span class="eqno">(831)<a class="headerlink" href="#equation-introduction-python-tutorial-0" title="Permalink to this equation">¶</a></span>\[c = \sqrt{a^2 + b^2}\]</div>
+<div class="math notranslate nohighlight">
+\[c = \sqrt{a^2 + b^2}\]</div>
 <p>Markdown does not handle automatic numbering of equations, figures, and tables.</p>
 <p>The Python Kernel remembers all definitions (functions and variables) as they are defined based on execution. Thus if you fail to execute a line of code, the parameters defined in that line won’t be available. Similarly, if you define a parameter and then delete that line of code, that parameter remains defined until you reset all runtimes or restart.</p>
 <p>Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn’t accidently delete a definition that is required. You can do this by resetting all runtimes (Runtime menu) and then running all.</p>
@@ -552,7 +547,7 @@ The surface loading rate is 0.68 millimeter / second</p>
 </div>
 <div class="figure align-center" id="id2">
 <span id="figure-lfom-flow-vs-height"></span><a class="reference internal image-reference" href="../_images/LFOM_flow_vs_height.png"><img alt="LFOM flow vs height" src="../_images/LFOM_flow_vs_height.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 250 </span><span class="caption-text">The flow through an LFOM is directly proportional to the height of the water above the bottom of the first row of orifices.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The flow through an LFOM is directly proportional to the height of the water above the bottom of the first row of orifices.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Indexing is done by row and then by column. To call all of the elements in a row or column, use a colon. As you can see in the following example, indexing in python begins at zero. So <code class="docutils literal notranslate"><span class="pre">a[:,1]</span></code> is calling all rows in the second column</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#create an empty array</span>

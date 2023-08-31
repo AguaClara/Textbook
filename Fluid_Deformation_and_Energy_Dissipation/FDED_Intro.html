@@ -7,13 +7,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Energy Dissipation Rate, Velocity Gradient, and Mixing &mdash; AguaClara Textbook 355/merge documentation</title>
+  <title>Energy Dissipation Rate, Velocity Gradient, and Mixing &mdash; AguaClara 0.0.0 documentation</title>
   
 
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
 
   
   
@@ -33,7 +32,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="../_static/mathjax_config.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -55,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
+            <a href="../index.html" class="icon icon-home"> AguaClara
           
 
           
@@ -63,10 +62,6 @@
 
           
             
-            
-              <div class="version">
-                355/merge
-              </div>
             
           
 
@@ -209,7 +204,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">AguaClara Textbook</a>
+          <a href="../index.html">AguaClara</a>
         
       </nav>
 
@@ -281,24 +276,24 @@
 <div class="section" id="understanding-g-and-varepsilon">
 <h2>Understanding <span class="math notranslate nohighlight">\(G\)</span> and <span class="math notranslate nohighlight">\(\varepsilon\)</span><a class="headerlink" href="#understanding-g-and-varepsilon" title="Permalink to this headline">¶</a></h2>
 <p><span class="math notranslate nohighlight">\(G\)</span>, or velocity gradient, is a measure of fluid deformation. It is defined by how quickly one point of water along one streamline moves in comparison to another point on another streamline (<span class="math notranslate nohighlight">\(v_A\)</span> compared to <span class="math notranslate nohighlight">\(v_B\)</span>, for example), taking into account the distance between the streamlines, <span class="math notranslate nohighlight">\(\Delta h\)</span>. A visual example of a velocity gradient is shown in the image below:</p>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id1">
 <span id="figure-velocity-gradient-image"></span><a class="reference internal image-reference" href="../_images/Velocity_gradient_image.jpg"><img alt="Velocity gradient image" src="../_images/Velocity_gradient_image.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Velocity gradients cause relative velocities of fluid elements. Those relative velocities form the basis of particle collisions that are essential for the flocculation process.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Velocity gradients cause relative velocities of fluid elements. Those relative velocities form the basis of particle collisions that are essential for the flocculation process.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Note on terminology:</strong> “Fluid deformation” is equivalent to “velocity gradient,” and the two terms can be used interchangeably. They are different ways of thinking about the same concept. Thus, <span class="math notranslate nohighlight">\(G\)</span> is the measure of both terms.</p>
 <p><span class="math notranslate nohighlight">\(\varepsilon\)</span>, or energy dissipation rate, is the rate that the kinetic energy of the fluid is being converted to heat. EDR is a very useful concept because the last step of converting kinetic energy into heat is accomplished by viscosity (<span class="math notranslate nohighlight">\(\nu\)</span>). This kinetic energy being dissipated by viscosity is the energy associated with velocity gradients (<span class="math notranslate nohighlight">\(G\)</span>). Thus, through EDR there is a direct connection between <span class="math notranslate nohighlight">\(\nu\)</span> and <span class="math notranslate nohighlight">\(G\)</span>. This connection will be further covered later on in this introduction.</p>
 <p>As mentioned above, EDR and velocity gradients play an important role in mixing and in causing suspended particles to collide with each other, both of which are important topics in flocculation. Their use is not limited to flocculation, they are also helpful in understanding failure modes of plate settlers and terminal head loss of sand filters</p>
 <p>We will begin by defining the concept of energy dissipation rate for a control volume. In a control volume that does not include pumps, turbines or other external energy sources or sinks, the mechanical energy lost is indicated by a change in elevation and quantified as <span class="math notranslate nohighlight">\(g h_L\)</span>. That mechanical energy is lost in the time, <span class="math notranslate nohighlight">\(\theta\)</span>, that the fluid is in the control volume.</p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-0">
-<span class="eqno">(97)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-0" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon \theta = g h_L\]</div>
+<div class="math notranslate nohighlight">
+\[\bar\varepsilon \theta = g h_L\]</div>
 <p>This equation simply states that the average rate of energy dissipation times the time over which that dissipation occurs is equal to the total lost mechanical energy. The dimensions of <span class="math notranslate nohighlight">\(\varepsilon\)</span> are:</p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-1">
-<span class="eqno">(98)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-1" title="Permalink to this equation">¶</a></span>\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
+<div class="math notranslate nohighlight">
+\[\varepsilon = \frac{[m^3]}{[s^3]} = {\rm \frac{W}{kg}}\]</div>
 <p>These dimensions can be understood as a velocity squared per time, otherwise known as a rate of kinetic energy loss (recall that kinetic energy is <span class="math notranslate nohighlight">\({\rm Ke} = \frac{\bar v^2}{2g}\)</span>, or <span class="math notranslate nohighlight">\({\rm Ke} \propto \bar v^2\)</span>), or as power per unit mass, which would be <span class="math notranslate nohighlight">\({\rm  \frac{W}{kg}}\)</span>.</p>
-<p>Velocity gradients are central to flocculation because they cause the deformation of the fluid, and this results in particle collisions. Consider a real-world example via the image below: if everyone on a sidewalk is walking in the same direction at exactly the same velocity, then there will never be any collisions between people (top). If, however, people at one side of the sidewalk stand still and people walk progressively faster as a function of how far they are away from the zero velocity side of the sidewalk, then there will be many collisions between the pedestrians (see <a class="reference internal" href="#figure-pedestrians-on-sidewalk"><span class="std std-numref">Fig. 37</span></a>). Indeed, the rate of collisions is proportional to the velocity gradient.</p>
-<div class="figure align-center" id="id3">
+<p>Velocity gradients are central to flocculation because they cause the deformation of the fluid, and this results in particle collisions. Consider a real-world example via the image below: if everyone on a sidewalk is walking in the same direction at exactly the same velocity, then there will never be any collisions between people (top). If, however, people at one side of the sidewalk stand still and people walk progressively faster as a function of how far they are away from the zero velocity side of the sidewalk, then there will be many collisions between the pedestrians (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_Pedestrians_on_sidewalk</span></code>). Indeed, the rate of collisions is proportional to the velocity gradient.</p>
+<div class="figure align-center" id="id2">
 <span id="figure-pedestrians-on-sidewalk"></span><a class="reference internal image-reference" href="../_images/Pedestrians_on_sidewalk.jpg"><img alt="Pedestrians on sidewalk" src="../_images/Pedestrians_on_sidewalk.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Pedestrians walking on a sidewalk serve as a model for velocity gradients.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Pedestrians walking on a sidewalk serve as a model for velocity gradients.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="common-flow-geometries-that-dissipate-energy">
@@ -317,8 +312,8 @@
 </ul>
 </div></blockquote>
 <p>The following tables can serve as a convenient reference to the equations describing head loss, energy dissipation rates, and velocity gradients in various flow geometries that are commonly encountered in water treatment plants. The <a class="reference internal" href="FDED_Derivations.html#heading-equations-varying-flow-geometries"><span class="std std-ref">Equations for \varepsilon and G in Varying Flow Geometries</span></a> are available as a reference.</p>
-<span id="table-control-volume-equations"></span><table class="docutils align-left" id="id4">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<span id="table-control-volume-equations"></span><table class="docutils align-left" id="id3">
+<caption><span class="caption-text">Equations for control volume averaged values of head loss, energy dissipation rate, and the Camp-Stein velocity gradient.</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 20%" />
@@ -386,14 +381,14 @@
 </tbody>
 </table>
 <p>The equations used to convert between columns in the table above are:</p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-2">
-<span class="eqno">(99)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-2" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
+<div class="math notranslate nohighlight">
+\[\bar\varepsilon = \frac{gh_{\rm{L}}}{\theta} \qquad\qquad
  \tilde{G} = \sqrt{\frac{\bar \varepsilon}{\nu}} \qquad\qquad
 \bar v=\frac{4Q}{\pi D}\]</div>
 <p>Note that the velocity gradient is independent of viscosity (and hence temperature) for laminar flow. This is because the total amount of fluid deformation is simply based on geometry. The no slip condition, the diameter, and the length of the flow passage set the total fluid deformation. Of course, if temperature decreases and viscosity increases the amount of energy required to push the fluid through the flow passage will increase (head loss is proportional to viscosity for laminar flow).</p>
 <p>For turbulent flow and for flow expansions the amount of fluid deformation decreases as the viscosity increases and the total energy required to send the flow through the reactor is almost independent of the viscosity. The “almost” is because for wall shear under turbulent conditions there is a small effect of viscosity that is buried inside the friction factor.</p>
-<span id="table-edr-g-max-equations"></span><table class="docutils align-left" id="id5">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">Equations for maximum (wall) energy dissipation rates and wall velocity gradients.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<span id="table-edr-g-max-equations"></span><table class="docutils align-left" id="id4">
+<caption><span class="caption-text">Equations for maximum (wall) energy dissipation rates and wall velocity gradients.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -427,8 +422,8 @@
 </tr>
 </tbody>
 </table>
-<span id="table-edr-g-equations"></span><table class="docutils align-left" id="id6">
-<caption><span class="caption-number">Table 7 </span><span class="caption-text">Equations for maximum energy dissipation rates and velocity gradients for flow expansions.</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<span id="table-edr-g-equations"></span><table class="docutils align-left" id="id5">
+<caption><span class="caption-text">Equations for maximum energy dissipation rates and velocity gradients for flow expansions.</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 25%" />
@@ -466,8 +461,8 @@
 </tbody>
 </table>
 <p>For mechanical mixing where an impeller or other stirring device is adding shaft work to a control volume we have</p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-3">
-<span class="eqno">(100)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-3" title="Permalink to this equation">¶</a></span>\[\bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}\]</div>
+<div class="math notranslate nohighlight">
+\[\bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}\]</div>
 <div class="line-block">
 <div class="line">where</div>
 <div class="line"><span class="math notranslate nohighlight">\(P\)</span> = power input into the control volume</div>
@@ -476,8 +471,8 @@
 <div class="line"><span class="math notranslate nohighlight">\(\rho\)</span> = density of the fluid</div>
 </div>
 <p>The Camp-Stein velocity gradient for a mechanically mixed reactor is</p>
-<div class="math notranslate nohighlight" id="equation-fluid-deformation-and-energy-dissipation-fded-intro-4">
-<span class="eqno">(101)<a class="headerlink" href="#equation-fluid-deformation-and-energy-dissipation-fded-intro-4" title="Permalink to this equation">¶</a></span>\[\tilde{G} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}\]</div>
+<div class="math notranslate nohighlight">
+\[\tilde{G} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}\]</div>
 </div>
 </div>
 
