@@ -14,7 +14,7 @@ Create a function to return maximum energy dissipation rate along the centerline
 
 Use your function to create a graph of the centerline (maximum) energy dissipation rate as a function of distance from jet origin. \* Use an initial diameter of DiamJet = 10 cm and a velocity of VelJet = 1 m/s. \* Use a range of 7 to 20 jet diameters when creating the graph. \* Use units of meters for the x-axis and W/kg for the y-axis. Make sure to label your axes correctly.
 
-`See the code to generate the plot here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=S_eMUbTWFRfR&line=5&uniqifier=1>`_
+`Colab worksheet plotting centerline energy dissipation rate <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=S_eMUbTWFRfR&line=5&uniqifier=1>`_
 
 .. _figure_Energy_dissipation_rate_vs_Distance_from_jet_origin:
 

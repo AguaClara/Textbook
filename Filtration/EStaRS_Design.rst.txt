@@ -46,7 +46,7 @@ The trunk entry into the filter body is thus at a local high point and air that 
 There must be a vent on the top of the trunks where they enter the filter body.
 
 Vent options
------------
+------------
 
 1) tube straight up to top of inlet tank (will suck air during backwash)
 1) tube that connects into the top of the filter body (during filtration air will travel up the tubes and vent into the top of the filter body. During backwash water will take this shortcut to bypass the sand. It could work if the tubes are small enough that the bypass during backwash is small)

@@ -376,16 +376,13 @@ And here is a working example:
 
 .. _heading_assorted_convention:
 
-Assorted Other Convention
--------------------------
-* Colored :red:`text`. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.
+Assorted Other Conventions
+--------------------------
 
 .. _AguaClara: http://aguaclarareach.org/
 .. _BibTeX: http://www.bibtex.org/
 .. _sphinxcontrib-bibtex: https://sphinxcontrib-bibtex.readthedocs.io/en/latest/
 .. _Sphinx: http://www.sphinx-doc.org/en/master/
-
-.. disqus::
 
 .. bibliography:: /references.bib
   :cited:

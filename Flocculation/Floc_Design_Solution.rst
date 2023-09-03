@@ -24,7 +24,7 @@ Hydraulic Vertical flow flocculator Design
 
 This challenge is design a hydraulic flocculator using the core concepts of the AguaClara design methodology.
 
-`Here are the inputs for the design. <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=HsR9iOQUmTbu&line=5&uniqifier=1>`_ BOD stands for Basis Of Design.
+`Colab worksheet with the inputs for the design. <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=HsR9iOQUmTbu&line=5&uniqifier=1>`_ BOD stands for Basis Of Design.
 
 
 Design Algorithm Steps
@@ -47,13 +47,13 @@ That way you will be able to easily vary any of the three main input parameters 
 
 **1) Estimate the average velocity gradient** of a flocculator given head loss and collision potential. I’m going to solve this problem for you so you see how to use function calls.
 
-`See flocculator design solution here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=btxgm0xvmw7M&line=2&uniqifier=1>`_
+`See Colab worksheet with the flocculator design solution <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=btxgm0xvmw7M&line=2&uniqifier=1>`_
 
 The average velocity gradient of flocculator is 93.24 / second
 
 **2) Estimate the residence time** of flocculator given the target head loss and collision potential. (Note that this ignores the decrease in water depth caused by head loss. We hope to improve this design process further in the near future.)
 
-`See solution here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=K4M3_Qaxm4OZ&line=2&uniqifier=1>`_
+`Colab worksheet residence time calculation <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=K4M3_Qaxm4OZ&line=2&uniqifier=1>`_
 
     print ('The residence time of flocculator is', t_floc_est(headloss_floc_BOD, Gt_BOD, T_BOD))
 
@@ -75,7 +75,7 @@ The residence time of flocculator is 396.8 second
    The :math:`\bar G\theta` delivered by a flocculator increases with temperature. Note that the apparent linearity of this graph is because the inverse of the square root of kinematic viscosity varies linearly with temperature over this range!
 
 
-**4) The Equation :eq:`pClam` creates the link** between :math:`\bar G \theta` and flocculator performance. What does the floc model and :numref:`figure_Gtheta_vs_temperature` tell you about flocculator performance and flocculator design? Explain why performance varies with temperature. Explain how temperature influences collisions between particles. What temperature should be used to design flocculators?
+**4) The Equation :eq:`CPlamint` creates the link** between :math:`\bar G \theta` and flocculator performance. What does the floc model and :numref:`figure_Gtheta_vs_temperature` tell you about flocculator performance and flocculator design? Explain why performance varies with temperature. Explain how temperature influences collisions between particles. What temperature should be used to design flocculators?
 
 Flocculator performance improves with warmer temperatures because the fluid deforms more given the same input energy. The fluid deforms more because it is less viscous at higher temperatures. Flocculators should be designed to perform well based on the coldest operating temperature that they will encounter.
 
@@ -187,7 +187,7 @@ The residence time in the hydraulic flocculator is 7.275 minutes.
 
 **22) Create plots** showing number of channels, number of expansions per water depth, total number of baffles, and channel width for a flow range from 10-100 L/s. Note that the functions that we created in this design challenge are not able to handle arrays as inputs. Use ``for`` loops to create the numpy arrays of y data needed for these graphs. Use 100 points to define each plot. Remember to initialize the numpy arrays before
 
-`See how the plots are created here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=CCtncYrXsHPN&line=11&uniqifier=1>`_
+`Colab worksheet creating plots <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=CCtncYrXsHPN&line=11&uniqifier=1>`_
 
 .. _figure_Expansions_per_baffle_space_vs_plant_flow:
 

@@ -32,7 +32,7 @@ Part 1: Temperature effects, energy use, and operating costs
   #. Pass the entire array of temperatures to the kinematic viscosity function in aguaclara.core.pc to obtain an array of corresponding viscosities.
   #. Plot viscosity (mm^2/s) as a function of temperature (Celsius).
 
-`Code for solution here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=KrQbKPFS9Trz&line=1&uniqifier=1>`_
+`Colab worksheet plotting viscosity as a function temperature <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=KrQbKPFS9Trz&line=1&uniqifier=1>`_
 
 
 .. _figure_Kinematic_vs_T:
@@ -68,7 +68,7 @@ We will design a mechanized rapid mix unit and then analyze the energy costs of 
 Using your function, plot the shaft power (kW) required for a conventional rapid mix unit that has a residence time of t = 15s, a velocity gradient of G = 1500/s, and a flow rate of 50 L/s as a function of temperature (Celsius).
 
 
-<Generate a figure here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=o25pKAfQ9dPu&line=2&uniqifier=1>`_
+<Colab worksheet to plot the shaft power <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=o25pKAfQ9dPu&line=2&uniqifier=1>`_
 
 .. _figure_Shaft_Power:
 
@@ -77,18 +77,18 @@ Using your function, plot the shaft power (kW) required for a conventional rapid
    :align: center
    :alt: Rapid Mix shaft power
 
-   Rapid mix shaft power required as a function of temperature. Signfiicantly more power is required at low temperatures to overcome the effects of viscosity. This does assume that the goal for rapid mix is to achieve a target
+   Rapid mix shaft power required as a function of temperature. Significantly more power is required at low temperatures to overcome the effects of viscosity. This does assume that the goal for rapid mix is to achieve a target
 
 **3) Calculate the shaft power.** How would the shaft power for a conventional design be selected? You must consider the fact that temperature changes throughout the year, and temperature impacts the shaft power requirements as defined in your function above. Presumably, you should use the lowest water temperature that you expect to have to treat to make your design because low temperatures require the highest shaft power input (as shown in your graph above) and we want to design for the most conservative option.
 
 Imagine you are designing a rapid mix unit for a water treatment plant in upstate NY. Water freezes in the winter, so the power requirements to run a rapid mix must be based on TempDesign = 0 °C.
 
-What is the required shaft power **in horsepower** for your water treatment plant in upsstate NY? Calculate the shaft power using the design temperature, and take other necessary parameters from Problem 2.
+What is the required shaft power **in horsepower** for your water treatment plant in upstate NY? Calculate the shaft power using the design temperature, and take other necessary parameters from Problem 2.
 
 You can `find pint’s unit registry
 here. <https://github.com/hgrecco/pint/blob/c5925bfdab09c75a26bb70cd29fb3d34eed56a5f/pint/default_en_0.6.txt>`__. We recommend bookmarking this page!
 
-`See how the required pwer is determiend here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=IAoPyhsK9tRB&line=3&uniqifier=1>`_
+`Colab worksheet calculating the required power <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=IAoPyhsK9tRB&line=3&uniqifier=1>`_
 
 The required shaft power is 4.0 hp.
 
@@ -96,7 +96,7 @@ The required shaft power is 4.0 hp.
 
 You may assume 100% efficiency in conversion of shaft power to increased potential energy. For comparison, the difference in water level between the entrance tank and flocculator for an AguaClara plant is less than 40 cm, and 20 cm of that elevation drop is used for flow measurement in the LFOM.
 
-`Code to determine the equivalent height here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=iccuk41t91Fz&line=1&uniqifier=1>`_
+`Colab worksheet calculating the equivalent height <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=iccuk41t91Fz&line=1&uniqifier=1>`_
 
 The equivalent height is 6.034 m
 
@@ -109,7 +109,7 @@ The equivalent height is 6.034 m
 
 **NOTE:** The variable to which you assign the extracted excel document is a special type of data structure called a `dataframe <https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe>`__. You can call a column of data from a dataframe by ‘indexing’ by the columns title in the original file, like ``dataframe['Horsepower']``. Make sure the column header is input as a string!
 
-`See how to make the correct array here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=nhp0DVic-B3K&line=8&uniqifier=1>`_
+`Colab worksheet creating the correct array <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=nhp0DVic-B3K&line=8&uniqifier=1>`_
 
 
 **5b) Find a motor that is large enough to drive the rapid mix impeller.**
@@ -202,13 +202,13 @@ The power required by the motor is 3.30 kW.
 
 3.967125458280934 horsepower.
 
-9e) Calculate the annual cost of electricity in dollars required to operate the rapid mix unit. `See here for code <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=H62VQXODEjyn&line=2&uniqifier=1>`_
+9e) Calculate the annual cost of electricity in dollars required to operate the rapid mix unit. `Colab worksheet calculating annual electricity cost <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=H62VQXODEjyn&line=2&uniqifier=1>`_
 
 The cost of electricity to operate the rapid mix unit is 4232 USD/year per 3.302 kilowatts, or 0.1462 USD/kilowatt_hour.
 
 9f) What is the total cumulative energy costs for the rapid mix unit over a period of 25 years? Note that we are not including the projected increase in electricity costs over the next 25 years. That would be a nice addition to this analysis that would make the need for energy efficiency all the more apparent, but we are ignoring that complexity for this problem.
 
-`Code here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=TFup2VQLEp1K&line=2&uniqifier=1>`_
+`Colab worksheet calculating the cumulative energy cost <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=TFup2VQLEp1K&line=2&uniqifier=1>`_
 
 The cumulative energy costs for a period of 25 years is 105794.0 USD.
 

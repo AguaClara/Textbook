@@ -98,7 +98,7 @@ To find the minimum width based on the maximum velocity through the diffuser, we
 
 .. math:: \bar v_{jet}W_{diff} L_{sed} = \bar v_{z_{ff}}W_{sed}L_{sed}
 
-`Code for calculations found here <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=VE_1JE-pasAm&line=2&uniqifier=1>`_
+`Colab worksheet with diffuser design <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=VE_1JE-pasAm&line=2&uniqifier=1>`_
 
 **Answer:** The maximum velocity of the clarifier diffusers is 0.4429 meters / second.
 The minimum width of the clarifier diffusers is 2.409 millimeter.
