@@ -305,7 +305,7 @@ The clarifier must be designed based on the coldest water temperature and based 
 
   Elevation view of a clarifier bay showing location of the floc filter, plate settlers, and floc hopper.
 
-The clarifier may have multiple bays (see :numref:`figure_clarifier_with_4_bay`) that work in parallel to treat the required plant flow.
+The clarifier may have multiple bays (see :numref:`figure_clarifier_with_4_bays`) that work in parallel to treat the required plant flow.
 
 
 .. _figure_clarifier_with_4_bays:
@@ -552,7 +552,7 @@ Filter Modules
 
 The sand layers are contiguous and the only distinction between layers is the direction of flow during filtration. Each layer of sand sits in between an inlet and outlet filter module. Each module consists of a large diameter trunk inlet/outlet pipe, which connects to a row of smaller branch pipes. The branch pipes are supported along the filter walls by receptor pipes.
 
-The filter modules are anchored to the concrete slab to prevent uplift at the transition to backwash. The uplift forces are considerable and are detailed in :ref:`Backwash Initiation Forces <heading_StaRS_Backwash_Force>`.
+The filter modules are anchored to the concrete slab to prevent uplift at the transition to backwash. The uplift forces are considerable and are detailed in :ref:`Backwash Initiation Forces <heading_StaRS_Backwash_Forces>`.
 
 A. Inlet Filter Module
 

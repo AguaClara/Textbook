@@ -174,7 +174,7 @@ Equations :eq:`eq_spacing_of_number_concentration` and :eq:`eq_number_concentrat
 
 Particle separation distance matters because it determines which transport mechanisms are at play when two particles approach for a collision. The particle separation distance is a function of the particle concentration. Surface water treatment plants commonly treat water with turbidity between 1 and 1000 NTU. We will first find the number of clay particles per liter in typical raw water suspensions.
 
-`The code to generate this graph can be found here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=u9kpvCxjrTZS&line=1&uniqifier=1>`_
+`Colab worksheet plotting of the number of clay particles per liter <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=u9kpvCxjrTZS&line=1&uniqifier=1>`_
 
 .. _figure_NClay_vs_CClay:
 
@@ -187,7 +187,7 @@ Particle separation distance matters because it determines which transport mecha
 
 The next step is to calculate the separation distance between the clay particles over this range of clay concentrations using Equation :eq:`eq_spacing_of_diameter`.
 
-`The code to generate this graph can be found here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=53IFiKIAsZdK&line=9&uniqifier=1>`_
+`Colab worksheet plot the separation distances <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=53IFiKIAsZdK&line=9&uniqifier=1>`_
 
 
 .. _figure_LambdaClay_vs_CClay:
@@ -203,7 +203,7 @@ Given this range of particle separation distances the next question is whether t
 
 The Camp-Stein velocity gradient  (see Equation :eq:`G_Camp_Stein`) used for flocculators varies from about 20 to 300 Hz. We will use the inner viscous length scale, Equation :eq:`eq_inner_viscous_length` to determine whether viscous or inertial transport dominates particle collisions in surface water treatment given the range of particle separation distances (see :numref:`figure_LambdaClay_vs_CClay`).
 
-`The code to generate this graph can be found here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=naHLmCCWsIRt&line=8&uniqifier=1>`_
+`Colab worksheet to plot the inner viscous length scale <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=naHLmCCWsIRt&line=8&uniqifier=1>`_
 
 
 .. _figure_innerviscous_vs_G:

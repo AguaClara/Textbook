@@ -101,7 +101,7 @@ Stacked Rapid Sand, StaRS, filters were invented in 2010 by the AguaClara Cornel
 
 StaRS filters come in two configuration parameters. Open StaRS (OStaRS) are used for flow rates greater than about 8 L/s. An 8 L/s filter has a plan view area of 85 cm x 85 cm. This is considered the minimum size that can be constructed with a human working inside the filter. For lower flow rates, Enclosed StaRS (EStaRS) filters can be assembled using PVC pipe as the body of the filter. The inner plumbing can be accessed through openings in the top and bottom of the main filter body.
 
-`See here for determining the filter width for a specific flow rate <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=xAc_E3A85-ai&line=1&uniqifier=1>`_
+`See this Colab worksheet for determining the filter width for a specific flow rate <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=xAc_E3A85-ai&line=1&uniqifier=1>`_
 
 .. _table_Net_Velocities:
 

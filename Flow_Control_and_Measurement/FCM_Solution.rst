@@ -38,7 +38,7 @@ Vertical Orifice Equation
 
 **1)** Find the *vena contracta* (VC) coefficient ratio for an orifice in the expert_inputs and print the result in a sentence. Please display 2 significant figures.
 
-`Solution Here  adding <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=CZ5G4LzBRz6y&line=1&uniqifier=1>`_
+`vena contracta calculation <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=CZ5G4LzBRz6y&line=1&uniqifier=1>`_
 
 The *vena contracta* coefficient for an orifice is 0.63.
 
@@ -59,7 +59,7 @@ The steps for making the graph are as follows:
   - Label the graph with flow rate in L/s as the y-axis and with normalized water elevation above the center of the orifice as the x-axis.
   - Include a legend for the two curves.
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=F7l7sG0aR24k&line=4&uniqifier=1>`_
+`Colab worksheet comparing vertical and horizontal orifice flow <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=F7l7sG0aR24k&line=4&uniqifier=1>`_
 
 .. _figure_Horizontal_vs_Vertical_Orifice_Orientation:
 
@@ -148,7 +148,7 @@ For the following steps do NOT use the aguaclara cdc code. Instead, create the f
 
 You may assume that the chlorine stock solution kinematic viscosity is approximately the same as water. The dose controller is to have a maximum head loss of 20 cm through the dosing tubes. We will start with commercially available liquid bleach (equivalent to 51.4 gm/L of chlorine gas), which we will use in our chemical stock tanks without dilution. Our goal is to provide a constant chlorine dose of 2 mg/L to the water entering the storage tank. We will be following the guidelines given below.
 
- #. Calculate the maximum fow rate through each available dosing tube diameter that keeps error due to minor losses below 10%.
+ #. Calculate the maximum flow rate through each available dosing tube diameter that keeps error due to minor losses below 10%.
 
  #. Calculate the total chemical flow rate that would be required by the treatment system for the maximum chemical dose and the maximum allowable stock concentration.
 
@@ -160,32 +160,32 @@ You may assume that the chlorine stock solution kinematic viscosity is approxima
 
  #. Select the dosing tube diameter, flow rate, and stock concentration corresponding to the selected tube length.
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=hLjYn9CzR-Jv&line=3&uniqifier=1>`_
+`Solution for dosing tube diameter, flow rate, and stock concentration <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=hLjYn9CzR-Jv&line=3&uniqifier=1>`_
 
 
-**11) A**t the given water treatment plant design flow rate, what is the required flow of bleach (the chlorine stock solution)?
+**11)** At the given water treatment plant design flow rate, what is the required flow of bleach (the chlorine stock solution)?
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=mVINIWLbSL51&line=2&uniqifier=1>`_
+`Solution for flow of bleach <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=mVINIWLbSL51&line=2&uniqifier=1>`_
 
 
 **12)** How many liters of liquid bleach are required in one day? (you can simply change the units on the flow rate!)
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=fPuBw6MZSNPg&line=1&uniqifier=1>`_
+`Solution for liters of liquid bleach <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=fPuBw6MZSNPg&line=1&uniqifier=1>`_
 
 
 **13)** Our next big goal is to choose a tubing size for the dosing tube (or tubes). This requires multiple steps. Begin by first creating a numpy array of tubing sizes between 1/16" and 5/16" with a 1/16" interval. Your list should contain 5 elements. Does ``np.linspace`` work here? What about ``np.arange``? Remember to always attach the units to the entire array and not to array elements!
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=Dy4MxbuHSQpL&line=1&uniqifier=1>`_
+`Solution for tubing size arrays <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=Dy4MxbuHSQpL&line=1&uniqifier=1>`_
 
 **14)** What is the maximum average velocity in a dosing tube based on the constraint that minor losses must be small? This means that the minor losses account for ``RatioError`` fraction of the total losses (10% when ``RatioError`` is 0.1). Note that this velocity is independent of the tube diameter.
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=sR2IN1hYSUaR&line=1&uniqifier=1>`_
+`Solution for maximum average velocity <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=sR2IN1hYSUaR&line=1&uniqifier=1>`_
 
 The maximum average velocity in a dosing tube is 0.443 m/s
 
 **15)** What is the head loss due to minor losses in the tube when the tube is flowing at maximum capacity? Solve for this value algebraically by substituting your equation for the velocity in the tube into the minor loss equation and then calculate the value.
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=kQ0RVEOBSVag&line=1&uniqifier=1>`_
+`Solution for minor head losses <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=kQ0RVEOBSVag&line=1&uniqifier=1>`_
 
 
 **16)** Create an array of the maximum flow rates corresponding to the array of tubing diameters. The flow rates must meet the error constraint.
@@ -195,17 +195,17 @@ The maximum average velocity in a dosing tube is 0.443 m/s
  - First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``ac.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
  - Create the array of maximum flow rates using the array of tubing diameters and the maximum head loss through the dosing tubes.
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=6fqFroCkSYch&line=1&uniqifier=1>`_
+`Solution for dosing tube flow rate <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=6fqFroCkSYch&line=1&uniqifier=1>`_
 
 
 **17)** Find the minimum number of tubes for each of the available tube diameters that would be required to deliver the maximum flow of bleach.
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=bKpCtXdGSbdp&line=1&uniqifier=1>`_
+`Solution for maximum bleach flow rate <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=bKpCtXdGSbdp&line=1&uniqifier=1>`_
 
 
 **18)** Create an array of the maximum flow rate per tube for each of the available tubing diameters, given the number of tubes that would be used. This will be the flow through each dosing tube at the maximum flow of bleach.
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=Ogt6D8WaSjqz&line=2&uniqifier=1>`_
+`Solution for maximum flow rate per tube <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=Ogt6D8WaSjqz&line=2&uniqifier=1>`_
 
 **19)** We now know the target flow in the dosing tubes, the diameter of the tubes, and the target head loss through the tubes. Thus, we can solve for the length of the tube that will deliver that target flow. Write a function to find the length of each tube that could handle the entire flow. Your function should use the following equation:
 
@@ -214,11 +214,11 @@ The maximum average velocity in a dosing tube is 0.443 m/s
 Call your function to return the length of tubing required for each tube
 size.
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=znrdVDf5SmCs&line=3&uniqifier=1>`_
+`Solution for length of the tubing <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=znrdVDf5SmCs&line=3&uniqifier=1>`_
 
 **20)** Which option do you think is best? You can simply set the array index to your choice and then display your solution by using that index value on your arrays for number of tubes, flow rates, tube diameters, and length of tubes.
 
-`Solution Here <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=sc07AVmCS6fw&line=2&uniqifier=1>`_
+`Selected solution for doser design <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=sc07AVmCS6fw&line=2&uniqifier=1>`_
 
 **21)** What physical constraints might you use to select the best solution? How did you make your selection in Problem 19?
 

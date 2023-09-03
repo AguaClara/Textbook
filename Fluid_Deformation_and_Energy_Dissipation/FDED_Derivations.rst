@@ -217,7 +217,7 @@ At length scales larger than the inner viscous length scale, :math:`\lambda_v`, 
 
 The dividing line between eddy transport and fluid deformation controlled by viscosity can be calculated as a function of the energy dissipation rate using :eq:`eq_inner_viscous_length`.
 
-The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=oizJutoQXBnU&line=5&uniqifier=1>`_
+`Colab worksheet for inner viscous length vs energy dissipation rate <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=oizJutoQXBnU&line=5&uniqifier=1>`_
 
 .. _figure_Inner_viscous_vs_EDR:
 
@@ -243,7 +243,7 @@ We are searching for the rate limiting step in the mixing process as we transiti
 
 We can plot the eddy turnover time as a function of scale from the inner viscous length scale up to the scale of the flow. We will discover whether large scale mixing by eddies is faster or slower than small scale mixing by eddies.
 
-The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=4zUMlZy8bR1Z>`_
+`Colab worksheet calculating the eddy turnover time <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=4zUMlZy8bR1Z>`_
 
 .. _figure_Eddy_turnover_time:
 
@@ -295,7 +295,7 @@ Substitute Einstein’s diffusion equation and solve for the length scale that t
 
 .. math:: L_{Diffusion}^{Shear} \approx \sqrt{\frac{k_B T}{3 G \pi \mu  D_P}}
 
-The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=Wdvqa0VCchaD>`_
+`Colab worksheet calculating the transition between shear and diffusion transport <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=Wdvqa0VCchaD>`_
 
 .. _figure_Shear_diffusion_length_scale:
 
@@ -1079,7 +1079,7 @@ The maximum velocity gradient is thus
 
   \Pi_{Plate} = \frac{ \left( \varepsilon_{max} W_{Plate} \right)}{\bar v^3}
 
-The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=juEleCKZLNuk>`_
+`Colab worksheet calculating the maximum velocity gradient behind a plate <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=juEleCKZLNuk>`_
 
 The flat plate :math:`\Pi_{Plate}` has a value of 0.04 which is identical to our estimate for :math:`\Pi_{JetPlane}`.
 
@@ -1179,4 +1179,4 @@ We also have that :math:`\Pi_{\bar \varepsilon}^{\varepsilon_{max}}` has a value
 
 This value for :math:`\Pi_{FlocBaffle}` is lower than we estimated based on 50% of the :math:`\Pi_{JetPlane}`. Additional research is needed to measure :math:`\Pi_{FlocBaffle}`.
 
-The code for this example can be found `here <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=WQtdrsP9egHB>`_
+`Colab worksheet calculating ratio of maximum to average energy dissipation rate for a plane jet  <https://colab.research.google.com/drive/1N7ysHjzSBd9H4ssIT9UHRYy3pJkwu5s3#scrollTo=WQtdrsP9egHB>`_

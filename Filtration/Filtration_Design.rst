@@ -466,7 +466,7 @@ Use mass conservation to determine the velocity in the branch given the branch l
 The orifice diameter will be constrained by the wing fabrication. Apply conservation of mass to obtain the port velocity to velocity ratio. Each port serves an area equal to the branch spacing times the port spacing.
 
 .. math::
-  :label: v_P_to_v_Fi
+  :label: v_P_to_v_Fi1
 
   \frac{\bar v_{P}}{N_{sided} v_{Fi}} = \frac{B_{B} B_{P}}{\Pi_{vc}\frac{\pi}{4} D_{P}^2}
 
@@ -673,7 +673,7 @@ The head loss through the backwash inlet system must be increased during filtrat
 Solve for the area of the orifice, :math:`A_{orifice}`.
 
 .. math::
-  :label: bw_orifice_draft
+  :label: bw_orifice_diameter
 
 
      D_{orifice} =  \frac{D_{T}}{\left[\Pi_{vc}\left( \frac{\sqrt{2gh_{e_{orifice}}}}{\bar v_{T_{bw}}} + 1\right)\right]^\frac{1}{2}}
@@ -764,14 +764,14 @@ The equivalent equation for a beam with simply supported ends is
 We'd like the deflection to be the same in the cantilever ends of the receptor pipe as in the middle sections of the pipe where it is simply supported. Set the deflections to be the same.
 
 .. math::
-  :label: draft
+  :label: cantilever_simply_supported
 
   \frac{5\omega L_{both}^4}{384EI} = \frac{\omega L_{cantilever}^4}{8EI}
 
 Solve for the ratio of the length of the respective beams
 
 .. math::
-  :label: draft
+  :label: length_ratio_for_beam_support_types
 
   \frac{ L_{cantilever}}{L_{both}} = \left(\frac{5 }{48}\right)^\frac{1}{4} = 0.57
 

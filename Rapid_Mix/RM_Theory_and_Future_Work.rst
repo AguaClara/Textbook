@@ -70,9 +70,9 @@ We can eliminate the diffusion time in Equation :eq:`Diffusion_Length_scale` usi
 
 .. math:: L_{Diff} \approx \left( \frac{2k_B T d_{Clay}}{3 \pi \,\mu  \, d_{CN} G}\right)^\frac{1}{3}
 
-This diffusion layer thickness is the length scale over which diffusion becomes the dominant transport mechanism for coagulant nanoparticles. Let’s estimate the thickness of this diffusion layer.
+This diffusion layer thickness is the length scale over which diffusion becomes the dominant transport mechanism for coagulant nanoparticles. Let’s estimate the diffusion layer thickness.
 
-The cpde to complete this estimation can be found `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=xLb8eJza5gs0&line=1&uniqifier=1>`_.
+ `Colab worksheet to estimate the diffusion layer thickness <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=xLb8eJza5gs0&line=1&uniqifier=1>`_.
 
 .. _figure_Diffusion_band_thickness:
 
@@ -185,7 +185,7 @@ Using the equation for :math:`L_{Diff}` above, we can solve for  the time requir
 
 The time required for the coagulant to be transported to clay surfaces is strongly dependent on the turbidity as indicated by the average spacing of clay particles, :math:`\Lambda_{Clay}`. As turbidity increases the spacing between clay particles decreases and the time required for shear to transport coagulant nanoparticles to the clay decreases. Increasing the shear also results in faster transport of the coagulant nanoparticles to clay surfaces. The times required are strongly influenced by the size of the coagulant nanoparticles because larger nanoparticles diffuse more slowly.
 
-`Here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=FiqAt0PF6L1t&line=13&uniqifier=1>`_ we estimate the time required to achieve 80% attachment of nanoparticles in a 10 NTU clay suspension in a reactor with a G of 100 Hz.
+`Colab worksheet estimating the time required to achieve 80% attachment of nanoparticles in a 10 NTU clay suspension in a reactor with a G of 100 Hz <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=FiqAt0PF6L1t&line=13&uniqifier=1>`_.
 
 .. _figure_Coag_attach_time:
 
@@ -227,7 +227,7 @@ for G given a head loss.
 
 
 
-According to the analysis `found here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=6cWi2zks8tiD&line=10&uniqifier=1>`_, the maximum velocity gradient that can be used to achieve 80% coagulant nanoparticle attachment using 50 cm of head loss is 283 Hz. This requires a residence time of 61 seconds. These model results must be experimentally verified and it is very likely that the model will need to be modified.
+`The maximum velocity gradient <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=6cWi2zks8tiD&line=10&uniqifier=1>`_  that can be used to achieve 80% coagulant nanoparticle attachment using 50 cm of head loss is 283 Hz. This requires a residence time of 61 seconds. These model results must be experimentally verified and it is very likely that the model will need to be modified.
 
 The analysis of the time required for shear and diffusion to transport the coagulant nanoparticles the last few millimeters suggests that it is the last step of diffusion to the clay particles that requires the most time. Indeed, the time required for coagulant nanoparticle attachment to raw water particles is comparable to the time that will be required for the next step in the process, flocculation.
 

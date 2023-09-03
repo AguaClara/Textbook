@@ -363,7 +363,7 @@ to estimate the injection area that should be used to break up flocs entering th
 Floc Size Calculations
 =======================
 
-`The code to make a figure showing the relationship between approach velocity and headloss can be found here. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=Mlv81ZYLi1Gc&line=25&uniqifier=1>`_
+`Colab worksheet to make a figure showing the relationship between approach velocity and head loss. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=Mlv81ZYLi1Gc&line=25&uniqifier=1>`_
 
 
 
@@ -376,7 +376,7 @@ Floc Size Calculations
 
    The Ergun and Kozeny equations are very similar even at approach velocities that are much larger than are used in rapid sand filtration. At very high velocities the turbulent term in the Ergun equation begins to be significant.
 
-`The code for the following graph is found here. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=g4nn81gGi9aS&line=3&uniqifier=1>`_
+`Colab worksheet to plot velocity gradient vs approach velocity. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=g4nn81gGi9aS&line=3&uniqifier=1>`_
 
 
 .. _figure_G_vs_approach_velocity:
@@ -389,7 +389,7 @@ Floc Size Calculations
    The Camp Stein velocity gradient increases rapidly with approach velocity.
 
 
-`See here for how the injection port width and injection velocity are determined. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=KqQCyZaZjBJm&line=3&uniqifier=1>`_
+`Colab worksheet designing the injection port width and injection velocity. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=KqQCyZaZjBJm&line=3&uniqifier=1>`_
 
 The analysis above suggests that the approach velocity required to break flocs down to a dimension of :math:`20 \mu m` is approximately 80 mm/s. This is based on a VERY bad guesstimate of the relationship between floc size and shear.
 
@@ -438,7 +438,7 @@ We will create terms to make the integration easier
 
 Now we set up the numerical integration and integrate from the injection site to the radius where the velocity is equal to the filtration velocity.
 
-`For an inlet that service two layers, see here to determine the head loss through the sand <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=PF8v34hSjJtx&line=11&uniqifier=1>`_
+`For an inlet that service two layers, see this Colab worksheet to determine the head loss through the sand <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=PF8v34hSjJtx&line=11&uniqifier=1>`_
 
 The analysis above suggests that a high velocity and high velocity gradient injection into the sand bed with the goal of breaking flocs into pieces that are 20 :math:`\mu m` in diameter would require about 12 cm of head loss. This is based on the assumption that the water would be able to flow radially from the injection point and thus rapidly slow down. Thus the head loss rapidly decreases with distance from the injection point.
 
