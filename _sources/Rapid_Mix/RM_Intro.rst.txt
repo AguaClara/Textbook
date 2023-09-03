@@ -111,7 +111,7 @@ Conventional Mechanical Rapid Mix
 Maximum Velocity Gradients
 --------------------------
 
-The code to generate this example plot can be found `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=cu3z2Pi7XCUY&line=5&uniqifier=1>`_
+`Colab worksheet calculating the maximum velocity gradients <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=cu3z2Pi7XCUY&line=5&uniqifier=1>`_
 
 .. _figure_Mechanical_RM_Gt:
 

@@ -83,7 +83,7 @@ For :math:`Na_2CO_3` \* :math:`\Pi_{ANC}` = 2 we are adding
 = 1 because there is one mole of :math:`CO_3` per mole of
 :math:`Na_2CO_3`
 
-`Here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=EYj26XBJa9DD&line=6&uniqifier=1>`_ is the code used to calculate the required base addition.
+`Colab worksheet calculating the required base addition <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=EYj26XBJa9DD&line=6&uniqifier=1>`_.
 
 .. todo:: This code needs to move to aguaclara.research. Then the short code snippits can be doc tested.
 
@@ -143,9 +143,7 @@ A water treatment plant that is treating 120 L/s of water injects the coagulant 
 
 We will use a :ref:`linear flow orifice meter <heading_lfom>` with 20 cm of head loss. The first step is to determine the diameter of the LFOM.
 
-.. todo:: This example needs to be updated once the LFOM OO code is fixed.
-
-The code for this example can be found `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=900qlLctzxLj&line=9&uniqifier=1>`_ and `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=6yMnvxrMcT4G&line=1&uniqifier=1>`_
+`Colab worksheet designing LFOM <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=900qlLctzxLj&line=9&uniqifier=1>`_.
 
 This analysis shows that the LFOM requires a 24 inch diameter pipe.
 
@@ -158,12 +156,12 @@ Example Problem: Energy Dissipation Rate in a Straight Pipe
 #. Use Equation :eq:`mixing_pipe_diameters` to estimate the mixing length in pipe diameters.
 #. Convert to pipe length in meters.
 
-Code for analysis for this example is `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=tsf9Xo4a1Tjp&line=10&uniqifier=1>`_
+`Colab worksheet calculating the mixing length in pipe diameters <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=tsf9Xo4a1Tjp&line=10&uniqifier=1>`_
 
 The previous analysis provides a minimum distance for sufficient mixing so that equal mass flux of coagulant will end up in both treatment trains. This assumes that the coagulant was injected in the pipe centerline. Injection at the wall of the pipe is a poor practice and would require many more pipe diameters because it takes significant time for the coagulant to be mixed out of the slower fluid at the wall. The time required for mixing at the scale of the flow in the plant is thus accomplished in a few seconds. This ends up being the fastest part of the transport of the coagulant nanoparticles on their way to attachment to the clay particles.  Next we will determine a typical flow rate of coagulant. **Aluminum** concentrations for polyaluminum chloride (PACl) typically range from 1 to 10 mg/L. The maximum PACl stock solution concentration is about 70 g/L as **Al**.
 
-To determine the coagualant flow, see code `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=Fly3_gop3GDZ&line=1&uniqifier=1>`_
+`Colab worksheet calculating the coagulant flow <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=Fly3_gop3GDZ&line=1&uniqifier=1>`_.
 
 We can estimate the diameter of the injection port by setting the kinetic energy loss where the coagulant is injected into the main flow to be large enough to exceed the pressure fluctuations downstream of the LFOM. The amount of energy we invest in injecting the coagulant into the raw water is a compromise between having to raise the entire chemical feed system including the stock tanks to increase the potential energy and a goal of not having pressure fluctuations inside the LFOM pipe cause flow oscillations in the chemical dosing tube. Thus our goal is to have the kinetic energy at the injection point be large compared with the expected pressure fluctuations in the LFOM. Given that the head loss through the LFOM is often 20 cm, we expect the pressure fluctuations from turbulence to be a small fraction of that head loss. Thus we set the kinetic energy to be equivalent to 2 cm.
 
-Thus, the diameter of the dosing tube can be determined, as found `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=gO_quuJh4HpS&line=1&uniqifier=1>`_
+`Colab worksheet calculating the diameter of the dosing tube <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=gO_quuJh4HpS&line=1&uniqifier=1>`_

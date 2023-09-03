@@ -51,7 +51,6 @@
 <p class="caption" role="heading"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Design_Evolution.html">Design Evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
@@ -163,7 +162,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#writing-code-blocks-not-actual-executable-code">Writing Code Blocks (not actual, executable code)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#inserting-video">Inserting Video</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#assorted-other-convention">Assorted Other Convention</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assorted-other-conventions">Assorted Other Conventions</a></li>
 </ul>
 </li>
 </ul>
@@ -313,26 +312,26 @@ item uses two lines. (note the indentation)</p></li>
     In this case, that is Textbook/Textbook_Creation_Help.
 </pre></div>
 </div>
-<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_fluffy_cat</span></code> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_mountain</span></code> are the two figures generated using the code above.</p>
-<figure class="align-center" id="id43">
+<p><a class="reference internal" href="#figure-fluffy-cat"><span class="std std-numref">Fig. 246</span></a> and <a class="reference internal" href="#figure-mountain"><span class="std std-numref">Fig. 247</span></a> are the two figures generated using the code above.</p>
+<figure class="align-center" id="id41">
 <span id="figure-fluffy-cat"></span><a class="reference internal image-reference" href="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"><img alt="external figure" src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-text">This is a caption.</span><a class="headerlink" href="#id43" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 246 </span><span class="caption-text">This is a caption.</span><a class="headerlink" href="#id41" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>See <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_mountain</span></code> for a typical mountain view.</p>
-<figure class="align-center" id="id44">
+<p>See <a class="reference internal" href="#figure-mountain"><span class="std std-numref">Fig. 247</span></a> for a typical mountain view.</p>
+<figure class="align-center" id="id42">
 <span id="figure-mountain"></span><a class="reference internal image-reference" href="../_images/mountain.jpg"><img alt="internal figure" src="../_images/mountain.jpg" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-text">Here is a figure tagged <code class="docutils literal notranslate"><span class="pre">figure_mountain</span></code>. Specify the figure location with folder/image.jpg.
+<p><span class="caption-number">Fig. 247 </span><span class="caption-text">Here is a figure tagged <code class="docutils literal notranslate"><span class="pre">figure_mountain</span></code>. Specify the figure location with folder/image.jpg.
 The base directory for figure location is the directory of the file you are writing.
-In this case, that is Textbook/Textbook_Creation_Help.</span><a class="headerlink" href="#id44" title="Permalink to this image"></a></p>
+In this case, that is Textbook/Textbook_Creation_Help.</span><a class="headerlink" href="#id42" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<figure class="align-center" id="id45">
+<figure class="align-center" id="id43">
 <span id="figure-youtube"></span><a class="reference external image-reference" href="http://www.youtube.com/watch?v=vZ2f6mduEls"><img alt="Removing Plate Settlers from an AguaClara Clarification tank" src="http://img.youtube.com/vi/vZ2f6mduEls/0.jpg" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-text">Plant operator removing plate settlers from an AguaClara clarifier.</span><a class="headerlink" href="#id45" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 248 </span><span class="caption-text">Plant operator removing plate settlers from an AguaClara clarifier.</span><a class="headerlink" href="#id43" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -347,11 +346,11 @@ In this case, that is Textbook/Textbook_Creation_Help.</span><a class="headerlin
 </div>
 <p>Which displays as:</p>
 <div class="math notranslate nohighlight" id="equation-quadratic-equation">
-<span class="eqno">(1)<a class="headerlink" href="#equation-quadratic-equation" title="Permalink to this equation"></a></span>\[ y = ax^2 + bx + c\]</div>
+<span class="eqno">(832)<a class="headerlink" href="#equation-quadratic-equation" title="Permalink to this equation"></a></span>\[ y = ax^2 + bx + c\]</div>
 <p>Equations do not have tags, they can be referenced via their labels, as you can see above. Equation labels don’t need to begin with any particular word, unlike tags. Not every equation needs a label. Only label equations that you need to reference. If you need to reference an equation that does not have a label, give it an intuitive one. All equations are numbered, regardless of whether or not they are labelled. Complex equations can be generated as well, since RST uses LaTeX math.</p>
 <blockquote>
-<div><div class="math notranslate nohighlight">
-\[n_{\rm{offset}} = \sum_{k=0}^{N-1} \frac{s_k}{n_k} \ln \left( \frac{k}{k!} \right)\]</div>
+<div><div class="math notranslate nohighlight" id="equation-textbook-creation-help-example-aguaclara-rst-0">
+<span class="eqno">(833)<a class="headerlink" href="#equation-textbook-creation-help-example-aguaclara-rst-0" title="Permalink to this equation"></a></span>\[n_{\rm{offset}} = \sum_{k=0}^{N-1} \frac{s_k}{n_k} \ln \left( \frac{k}{k!} \right)\]</div>
 </div></blockquote>
 <p>When introducing a new equation, Make sure to specify what the parameters in the equation mean. Once the equation has been introduced, its parameters do not need to be explained when displayed in the future. Use the following syntax for introducing equations:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. math::
@@ -368,7 +367,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span><a class="headerlin
 </pre></div>
 </div>
 <div class="math notranslate nohighlight" id="equation-continuity-equation-example">
-<span class="eqno">(2)<a class="headerlink" href="#equation-continuity-equation-example" title="Permalink to this equation"></a></span>\[ \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}\]</div>
+<span class="eqno">(834)<a class="headerlink" href="#equation-continuity-equation-example" title="Permalink to this equation"></a></span>\[ \bar v_1 \frac{\pi D_1^2}{4} = \bar v_2 \frac{\pi D_2^2}{4}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(Q =\)</span> fluid flow rate</div>
@@ -393,8 +392,8 @@ In this case, that is Textbook/Textbook_Creation_Help.</span><a class="headerlin
 </pre></div>
 </div>
 <p>The code block above generates the following table:</p>
-<span id="table-an-example-table"></span><table class="docutils align-center" id="id46">
-<caption><span class="caption-text">Table caption goes here</span><a class="headerlink" href="#id46" title="Permalink to this table"></a></caption>
+<span id="table-an-example-table"></span><table class="docutils align-center" id="id44">
+<caption><span class="caption-number">Table 29 </span><span class="caption-text">Table caption goes here</span><a class="headerlink" href="#id44" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 40%" />
@@ -444,8 +443,8 @@ In this case, that is Textbook/Textbook_Creation_Help.</span><a class="headerlin
 <h5>Figures and Tables<a class="headerlink" href="#figures-and-tables" title="Permalink to this heading"></a></h5>
 <p>These can be referenced in the exact same way as titles and headings. However, they can <em>also</em> be referenced using the <code class="docutils literal notranslate"><span class="pre">:numref:`tag`</span></code> syntax. When this is done, there cannot be text written that will link to the figure. Instead, what shows up is ‘Fig. 3’ or ‘Table 3’.</p>
 <ul class="simple">
-<li><p>Figures: <code class="docutils literal notranslate"><span class="pre">:numref:`figure_fluffy_cat`</span></code> gives <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_fluffy_cat</span></code></p></li>
-<li><p>Tables: <code class="docutils literal notranslate"><span class="pre">:numref:`table_an_example_table`</span></code> gives <code class="xref std std-numref docutils literal notranslate"><span class="pre">table_an_example_table</span></code></p></li>
+<li><p>Figures: <code class="docutils literal notranslate"><span class="pre">:numref:`figure_fluffy_cat`</span></code> gives <a class="reference internal" href="#figure-fluffy-cat"><span class="std std-numref">Fig. 246</span></a></p></li>
+<li><p>Tables: <code class="docutils literal notranslate"><span class="pre">:numref:`table_an_example_table`</span></code> gives <a class="reference internal" href="#table-an-example-table"><span class="std std-numref">Table 29</span></a></p></li>
 </ul>
 </section>
 </section>
@@ -455,7 +454,7 @@ In this case, that is Textbook/Textbook_Creation_Help.</span><a class="headerlin
 <span id="citations"></span><h2>Equations<a class="headerlink" href="#equations" title="Permalink to this heading"></a></h2>
 <p>Equations are a little different, <code class="docutils literal notranslate"><span class="pre">:ref:`label`</span></code> does not work. They are instead called with the <code class="docutils literal notranslate"><span class="pre">:eq:`label`</span></code> syntax. You cannot choose what text displays in the reference like you can with titles, headings, figures, and tables. Whenever you reference an equation, parentheses surrounding the equation’s number will be the linked-text.</p>
 <ul class="simple">
-<li><p>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`quadratic_equation`</span></code> only generates a number in parentheses. Thus, this reference is usually preceeded by the word: ‘equation.’ Like this: Equation <a class="reference internal" href="#equation-quadratic-equation">(1)</a>.</p></li>
+<li><p>Equations: <code class="docutils literal notranslate"><span class="pre">:eq:`quadratic_equation`</span></code> only generates a number in parentheses. Thus, this reference is usually preceeded by the word: ‘equation.’ Like this: Equation <a class="reference internal" href="#equation-quadratic-equation">(832)</a>.</p></li>
 </ul>
 </section>
 <section id="id1">
@@ -495,7 +494,7 @@ including an entry for:</p>
 <span class="nb">}</span>
 </pre></div>
 </div>
-<p>A working example: <span id="id2">[<a class="reference internal" href="#id7" title="William Strunk, Jr. and E. B. White. The Elements of Style. Macmillan, third edition, 1979.">SW79</a>]</span>.</p>
+<p>A working example: <span id="id2">[<a class="reference internal" href="#id5" title="William Strunk, Jr. and E. B. White. The Elements of Style. Macmillan, third edition, 1979.">SW79</a>]</span>.</p>
 </section>
 <section id="writing-code-blocks-not-actual-executable-code">
 <span id="heading-writing-code-blocks"></span><h3>Writing Code Blocks (not actual, executable code)<a class="headerlink" href="#writing-code-blocks-not-actual-executable-code" title="Permalink to this heading"></a></h3>
@@ -522,20 +521,17 @@ including an entry for:</p>
 </pre></div>
 </div>
 <p>And here is a working example:</p>
-<figure class="align-default" id="id47">
+<figure class="align-default" id="id45">
 <a class="reference external image-reference" href="https://www.youtube.com/watch?v=Xp8ygnIOgi0"><img alt="../_images/Floc_Filter_Floc_Hopper.png" src="../_images/Floc_Filter_Floc_Hopper.png" /></a>
 <figcaption>
-<p><span class="caption-text">This is a floc filter forming</span><a class="headerlink" href="#id47" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 249 </span><span class="caption-text">This is a floc filter forming</span><a class="headerlink" href="#id45" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
-<section id="assorted-other-convention">
-<span id="heading-assorted-convention"></span><h3>Assorted Other Convention<a class="headerlink" href="#assorted-other-convention" title="Permalink to this heading"></a></h3>
-<ul class="simple">
-<li><p>Colored <a href="#id3"><span class="problematic" id="id4">:red:`text`</span></a>. Add colors/styles by using roles defined in /conf.py and /_static/css/custom.css.</p></li>
-</ul>
-<div class="docutils container" id="id5">
-<div class="citation" id="id7" role="doc-biblioentry">
+<section id="assorted-other-conventions">
+<span id="heading-assorted-convention"></span><h3>Assorted Other Conventions<a class="headerlink" href="#assorted-other-conventions" title="Permalink to this heading"></a></h3>
+<div class="docutils container" id="id3">
+<div class="citation" id="id5" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">SW79</a><span class="fn-bracket">]</span></span>
 <p>William Strunk, Jr. and E. B. White. <em>The Elements of Style</em>. Macmillan, third edition, 1979.</p>
 </div>

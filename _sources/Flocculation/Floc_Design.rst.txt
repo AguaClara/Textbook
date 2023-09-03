@@ -141,7 +141,7 @@ The width of a single flocculator channel must meet the following conditions:
 - Allow for :math:`3 < \frac{H_e}{S} < 6`. Recall that :math:`\frac{H_e}{S} =  \Pi_{H_eS}`
 - Allow for a human to be able to fit into a flocculator channel
 
-The first two conditions are wrapped up into the following equation, :ref:`which is derived here <title_Flocculation_Derivations>`.
+The first two conditions are wrapped up into the following equation, :ref:`which is derived in <title_Flocculation_Derivations>`.
 
 .. math::
   :label: floc_channel_W_min_const_K

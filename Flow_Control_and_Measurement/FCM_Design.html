@@ -51,7 +51,6 @@
 <p class="caption" role="heading"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Design_Evolution.html">Design Evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
@@ -211,7 +210,7 @@
 <figure class="align-center" id="id1">
 <span id="figure-sutro-v-lfom"></span><a class="reference internal image-reference" href="../_images/sutro_v_lfom.png"><img alt="A sutro weir and an LFOM" src="../_images/sutro_v_lfom.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the sutro weir’s geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The LFOM does one thing and serves two purposes.</p>
@@ -229,15 +228,15 @@
 <p>Before the water level reaches the second row of holes, the LFOM is simulating a rectangular weir, and thus <span class="math notranslate nohighlight">\(h \not\propto Q\)</span>. The Sutro weir also experiences this problem. Similarly, if the water level exceeds the topmost row of the LFOM’s orifices, the linearity also breaks down. The entire LFOM begins to act like an orifice, the exponent of <span class="math notranslate nohighlight">\(Q\)</span> in <span class="math notranslate nohighlight">\(h \propto Q\)</span> becomes greater than 1. This is because the LFOM approaches orifice behavior, and for orifices, <span class="math notranslate nohighlight">\(h \propto Q^2\)</span>.</p>
 <p>The diameter of the LFOM pipe is set by the velocity of the falling water inside the LFOM at the bottom of the bottom row of orifices. This velocity is obtained by summing up all of the momentum of the falling water and dividing by the total flow for the case where the LFOM is operating at maximum capacity. The Sutro weir equations (not yet provided here) can be integrated to obtain an equation for the falling velocity of the water inside the LFOM. This maximum vertical velocity of the falling water sets the minimum flow area of the LFOM and hence continuity can be used to obtain the minimum pipe diameter.</p>
 <div class="math notranslate nohighlight" id="equation-lfom-v-max">
-<span class="eqno">(1)<a class="headerlink" href="#equation-lfom-v-max" title="Permalink to this equation"></a></span>\[  V_{max} = \frac{4}{3 \pi} \sqrt{2gh_L}\]</div>
+<span class="eqno">(336)<a class="headerlink" href="#equation-lfom-v-max" title="Permalink to this equation"></a></span>\[  V_{max} = \frac{4}{3 \pi} \sqrt{2gh_L}\]</div>
 </section>
 <section id="linear-chemical-dose-controller-cdc">
 <span id="heading-linear-cdc"></span><h2>Linear Chemical Dose Controller (CDC)<a class="headerlink" href="#linear-chemical-dose-controller-cdc" title="Permalink to this heading"></a></h2>
-<p>Since the Linear Chemical Dose Controller has become the AguaClara standard chemical dosing system, it is often simply called the Chemical Dose Controller, <strong>or CDC for short</strong> (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">figure_cdc_and_lfom_in_et</span></code>).</p>
+<p>Since the Linear Chemical Dose Controller has become the AguaClara standard chemical dosing system, it is often simply called the Chemical Dose Controller, <strong>or CDC for short</strong> (see <a class="reference internal" href="#figure-cdc-and-lfom-in-et"><span class="std std-numref">Fig. 60</span></a>).</p>
 <figure class="align-center" id="id2">
 <span id="figure-cdc-and-lfom-in-et"></span><a class="reference internal image-reference" href="../_images/cdc_and_lfom_in_et.png"><img alt="A chemical dose controller and an LFOM" src="../_images/cdc_and_lfom_in_et.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">The LFOM and chemical dose controller work together to control the flow of the chemicals.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">The LFOM and chemical dose controller work together to control the flow of the chemicals.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The CDC brings together the LFOM and many improvements to the “Almost Linear” Flow Controller. Let’s break it down, with the image below as a guide.</p>
@@ -267,7 +266,7 @@
 <figure class="align-center" id="id3">
 <span id="figure-cdc-labelled"></span><a class="reference internal image-reference" href="../_images/cdc_labelled.png"><img alt="CDC Displayed" src="../_images/cdc_labelled.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">This is the setup of the chemical dose controller.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">This is the setup of the chemical dose controller.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The CDC makes it easy and accurate to dose chemicals. The flow of chemicals automatically adjusts to changes in the plant flow rate to keep a constant dose, set by the operator. When a turbidity event occurs, the operator can change the dose of coagulant by moving the coagulant slider <em>lower</em> on the lever to increase the dose. The slider has labelled marks so the operator can record the dose accurately.</p>
@@ -277,22 +276,22 @@
 <li><p>Calculate the maximum flow rate, <span class="math notranslate nohighlight">\(Q_{Max, \, Tube}\)</span>, through each available dosing tube diameter <span class="math notranslate nohighlight">\(D\)</span> that keeps error due to minor losses below 10% of total head loss. Recall that tubing diameter is an array, as there are many diameters available at hardware stores and suppliers. This means that for each step, there will be as many solutions as there are reasonable diameters available.</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-cdc-tube-q-max">
-<span class="eqno">(2)<a class="headerlink" href="#equation-cdc-tube-q-max" title="Permalink to this equation"></a></span>\[  Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
+<span class="eqno">(337)<a class="headerlink" href="#equation-cdc-tube-q-max" title="Permalink to this equation"></a></span>\[  Q_{Max, \, Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}\]</div>
 <ol class="arabic simple" start="2">
 <li><p>Calculate how much flow of chemical needs to pass through the CDC at maximum plant flow and maximum chemical dose. This depends on the concentration of chemicals in the stock tank.</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-0">
+<span class="eqno">(338)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-0" title="Permalink to this equation"></a></span>\[Q_{Max, \, CDC} = \frac{Q_{Plant} \cdot C_{Dose, \, Max}}{C_{StockTank}}\]</div>
 <ol class="arabic simple" start="3">
 <li><p>Calculate the number of dosing tubes required if the tubes flow at  maximum capacity (round up)</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-1">
+<span class="eqno">(339)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-1" title="Permalink to this equation"></a></span>\[n_{Tubes} = {\rm ceil} \left( \frac{Q_{Max, \, CDC}}{Q_{Max, \, Tube}} \right)\]</div>
 <ol class="arabic simple" start="4">
 <li><p>Calculate the length of dosing tube(s) that correspond to each available tube diameter.</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[L_{min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{max}} - \frac{Q_{max}}{16 \pi \nu} \sum{K} \right)\]</div>
+<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-design-2">
+<span class="eqno">(340)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-design-2" title="Permalink to this equation"></a></span>\[L_{min} = \left( \frac{g h_L \pi D^4}{128 \nu Q_{max}} - \frac{Q_{max}}{16 \pi \nu} \sum{K} \right)\]</div>
 <ol class="arabic simple" start="5">
 <li><p>Select a tube length from your array of solutions. Pick the longest dosing tube that you can, keeping in mind that the tube(s) must be able to fit in the plant and can’t be longer than the length of the plant wall it will be placed along.</p></li>
 <li><p>Finally, select the dosing tube diameter and flow rate corresponding to the selected tube length.</p></li>

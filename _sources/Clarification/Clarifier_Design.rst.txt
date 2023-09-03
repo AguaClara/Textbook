@@ -100,7 +100,7 @@ where :math:`\Pi_{Q}` represents the uniformity of flow distribution taken as th
 
 The Ten State Standards states, "The velocity of flocculated water through conduits to settling basins shall not be less than 0.15 m/s nor greater than 0.45 m/s." The lower velocity matches the constraint of ensuring that the velocity is high enough to scour flocs along the bottom of the channel and thus prevent sedimentation. The maximum velocity was presumably set to achieve reasonable flow distribution, but that value is dependent on the head loss through the clarifiers.
 
-`Here we calculate the maximum clarifier inlet channel velocity as a function of the flow distribution uniformity. <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=8DRdoLVGUmWS&line=3&uniqifier=1>`_
+`Colab worksheet calculating the maximum clarifier inlet channel velocity as a function of the flow distribution uniformity. <https://colab.research.google.com/drive/1znzBGYHV1RXGqRz3Xm8Oyp7NQmAmkat6#scrollTo=8DRdoLVGUmWS&line=3&uniqifier=1>`_
 
 .. _figure_Clarifier_channel_max_v:
 
@@ -448,7 +448,7 @@ The outlet head loss is dominated by the orifice loss and by the exit loss where
 The maximum manifold velocity can be obtained by solving Equation :eq:`Outlet_manifold_hl` for the manifold velocity.
 
 .. math::
-  :label: Outlet_manifold_hl
+  :label: Outlet_manifold_Vmax
 
   \bar v_{M_{max}} = \sqrt{\frac{2 g h_{e_{T}}\sqrt{{\Pi_{\Psi}}}}{\sqrt{{\Pi_{\Psi}}} + 1}}
 

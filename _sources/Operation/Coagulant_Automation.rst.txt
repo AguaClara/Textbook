@@ -40,7 +40,7 @@ This coagulant dose only refers to the coagulant that will end up coating the su
 The result of the AguaClara flocculation model (Equation :eq:`CPlamint`) is repeated here for convenience.
 
 .. math::
-  :label: CPlamint
+  :label: CPlamintCopied
 
   \frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)=k\bar{\alpha}\tilde{G}\theta.
 

@@ -51,7 +51,6 @@
 <p class="caption" role="heading"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Design_Evolution.html">Design Evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
@@ -244,13 +243,13 @@ removal</p></td>
 <p>According to the Ten State Standards, “Agitators (Flocculators) shall be driven by variable speed drives with the peripheral speed of paddles ranging from 0.5 to 3.0 feet per second.” Note that they do not specify the size of the propeller and yet that is a critical dimension that determines the energy dissipation rate in the wake of the spinning propeller.</p>
 <p>The wake behind the propeller or paddle is similar in size to the small dimension of the propeller or paddle normal to the velocity. Thus we can use the propeller height to estimate the energy dissipation rate of the plate wake. The relative velocity between the wake and the surrounding fluid is approximately equal to the propeller velocity.</p>
 <p>Calculate the maximum energy dissipation rate that occurs in the wake behind the tip of a propeller which has a height of 3 cm and is moving at 3 ft/s. In this case, assume that the plate ratio for the maximum energy dissipation rate in the wake, <span class="math notranslate nohighlight">\(\Pi_{Plate}\)</span>, is 0.04.</p>
-<div class="math notranslate nohighlight">
-\[\epsilon=\Pi_{Plate}\frac{\left ( V  \right )^{3}}{W_{Plate}}\]</div>
+<div class="math notranslate nohighlight" id="equation-flocculation-floc-mechanical-solution-0">
+<span class="eqno">(534)<a class="headerlink" href="#equation-flocculation-floc-mechanical-solution-0" title="Permalink to this equation"></a></span>\[\epsilon=\Pi_{Plate}\frac{\left ( V  \right )^{3}}{W_{Plate}}\]</div>
 <p>You may assume that the relative velocity between propeller and water is equal to 75% of the propeller velocity.</p>
-<p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-DSq8HEHw-su&amp;line=5&amp;uniqifier=1">Calculation here</a></p>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-DSq8HEHw-su&amp;line=5&amp;uniqifier=1">Colab worksheet calculating the propeller energy dissipation rate</a></p>
 <p>The maximum energy dissipation rate behind the propeller tip is 430 mW/kg</p>
 <p><strong>5) Calculate the ratio</strong> of maximum to average energy dissipation rate (henceforth referred to as Max/Ave EDR) and the ratio of maximum to average velocity gradient (Max/Ave G) for the mechanical flocculator described above. What is the relationship between the two ratios?</p>
-<p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=9Z7jG1xcxCG2&amp;line=6&amp;uniqifier=1">Find ratios here</a></p>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=9Z7jG1xcxCG2&amp;line=6&amp;uniqifier=1">Colab worksheet calculating the velocity gradient ratios</a></p>
 <p>The ratio of maximum to average energy dissipation rate is 67.5
 The ratio of maximum to average velocity gradient is 8.2</p>
 <p>SOLUTION NOTE: this information is found on extra slide 48 in the Flocculator Design slides, heading is “Results of the the CFD analysis and our model equations.”</p>
@@ -266,7 +265,7 @@ The ratio of maximum to average velocity gradient is 8.2</p>
 <p>The maximum G for hydraulic flocculators is 1037 Hz</p>
 <p>These extremely high average G values are more like traditional rapid mix. It is possible that energy use constraints (too much elevation difference required to power the flocculation) will prevent use of such high G values. It is also possible that these G values would cause excessive floc break up even though they appear to meet conventional standards. It is also likely that the flocculation time required to achieve a target G <span class="math notranslate nohighlight">\(\theta\)</span> would not be sufficient for the coagulant nanoparticles to be transported to the surfaces of suspended particles.</p>
 <p><strong>7) How much energy</strong> in Joules per liter would be required to treat the water using this mechanical flocculator?</p>
-<p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=JD2pFOBNxUc4&amp;line=3&amp;uniqifier=1">Calculation here</a></p>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=JD2pFOBNxUc4&amp;line=3&amp;uniqifier=1">Energy requirement calculation</a></p>
 <p>The energy required using the mechanical flocculator is 11.5 J/l</p>
 <p><strong>8) How much does the electricity cost</strong> to flocculate a million liters? It isn’t necessary to actually size an electric motor for this assignment. Simply use the shaft power and assume a motor efficiency of 80%. You may assume the price of electricity is 0.15 USD/(kW-hr).</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=KZJcQjuqxrY5&amp;line=3&amp;uniqifier=1">Determine electricity cost</a></p>

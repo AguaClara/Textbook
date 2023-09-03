@@ -40,7 +40,6 @@ The Physics of Water Treatment Design
   :maxdepth: 1
 
   Introduction/Introduction.rst
-  Introduction/Design_Evolution.rst
   Introduction/Challenges.rst
 
 
@@ -167,17 +166,7 @@ The Physics of Water Treatment Design
   Textbook_Creation_Help/parameter_convention_list.rst
 
 
-This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in the `aguaclara <https://github.com/AguaClara/aguaclara>`_ python library. Listed below are the versions of the programs we use:
-
-.. _software_versions:
-.. csv-table:: These are the software versions used to compile this textbook
-   :header: "Software", "version"
-   :widths: 10, 10
-   :align: center
-
-   "Sphinx", "1.8.1"
-   "aguaclara", "0.3.0"
-   "Python", "3.8"
+This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_. It uses and refers to AguaClara code and functions in the `aguaclara <https://github.com/AguaClara/aguaclara>`_ python library.
 
 Please use the annotation sidebar to leave comments with requests for improvements, additions, and corrections.
 

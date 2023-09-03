@@ -17,7 +17,7 @@ DC Stacked Rapid Sand Filtration
 
 The stacked rapid sand filter at Tamara, Honduras is treating 12 L/s of water with six 20 cm deep layers of sand. The sand has an effective size of 0.5 mm and a uniformity coefficient of 1.6. The backwash velocity of the filter is 11 mm/s. Defined below are many of the necessary inputs for the filtration analysis.
 
-`See what is predefined here <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=F6PVT-H8jj6W&line=6&uniqifier=1>`_
+`Colab worksheet with filtration inputs predefined <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=F6PVT-H8jj6W&line=6&uniqifier=1>`_
 
 
 Remember: Don’t break continuity!
@@ -231,9 +231,9 @@ The distance between flow constriction is 0.7645 millimeter
 
 `On average, how many sand grain flow constriction does a water molecule flow through on its way through the filter? <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=vh2-U1SXmKP2&line=2&uniqifier=1>`_
 
-A water molecule flows through 261.6 dimensionless constriction through the StaRS filter
+A water molecule flows through 262 dimensionless constrictions in a StaRS filter
 
-`Head loss per flow constriction < https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=08iP2d2zmL9z&line=1&uniqifier=1>`_
+`Head loss per flow constriction <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=08iP2d2zmL9z&line=1&uniqifier=1>`_
 
 The head loss per constriction is 1.33 millimeter
 

@@ -71,7 +71,7 @@ The inner viscous length scale is 2.39 mm
 
 
 **6) Below is a graph** showing the inner viscous length scale that divides flows that are dominated by inertia (eddies) from flows where viscosity is significant. **Add the data point** representing the maximum energy dissipation rate vs the maximum clay separation distance at the end of flocculation for the mechanical flocculator you have been designing.
-`Use the graphing code here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=lyE0jgmi3l65&line=1&uniqifier=1>`_
+`Colab worksheet plotting the maximum energy dissipation rate for the mechanical flocculator <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=lyE0jgmi3l65&line=1&uniqifier=1>`_
 
 0.6541789493547243 millimeter
     422.57902694348155 milliwatt / kilogram
@@ -96,20 +96,16 @@ Coagulant Distribution in a Reactor
 
 The flocculation model accounts for loss of coagulant nanoparticles to the reactor walls. The loss of coagulant nanoparticles is assumed to scale with the area of the flocculator walls divided by the total area of clay and flocculator walls. This loss is significant for low turbidity and small scale flocculators, such as the 1 liter per second flocculator AguaClara recently designed.
 
-Here we will consider a flocculator built out of pipe, not one contained within a rectangular reactor. The ``diam_tube`` parameter is the flocculator diameter and is needed to estimate how much of the coagulant is lost to the walls of the flocculator. We will assume the flocculator tube is for the 1 L/s plant and has a diameter of 7.5 cm
+We will consider a flocculator built out of pipe, not one contained within a rectangular reactor. The ``diam_tube`` parameter is the flocculator diameter and is needed to estimate how much of the coagulant is lost to the walls of the flocculator. We will assume the flocculator tube is for the 1 L/s plant and has a diameter of 7.5 cm
 
-We will evaluate the situation where the turbidity is 10 NTU and the coagulant dose is 1 mg/L of aluminum. `The code here does the following: <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=5l-cWloClfxa&line=10&uniqifier=1>`_
-
--  Estimates the fraction of coagulant nanoparticles lost to the flocculator walls.
--  Estimates the fraction of the clay surface area that is coated with nanoparticles.
-
+We will evaluate the situation where the turbidity is 10 NTU and the coagulant dose is 1 mg/L of aluminum. `The Colab worksheet calculates the loss of nanoparticles to the flocculator walls and the fractional clay particle coverage by nanoparticles : <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=5l-cWloClfxa&line=10&uniqifier=1>`_
 
 Time Scale of Flocculation
 --------------------------
 
 Now we want to estimate the average time required for an initial successful collision between two primary clay particles that are partially coated with coagulant nanoclusters. Note that for the first collision, the current floc size is the same as the clay size. We will use the average energy dissipation rate for the mechanical flocculator as found above.
 
-The time required for te first collision can be `determined as shown here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=7eHXqjjDljUQ&line=3&uniqifier=1>`_
+The `time required for the first collision is calculated in this Colab worksheet <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=7eHXqjjDljUQ&line=3&uniqifier=1>`_
 
 This collision time is quite fast and is the origin of the question, “why does flocculation require 30 minutes?” as mandated in the Ten State Standards.
 
@@ -118,7 +114,7 @@ AguaClara Flocculation Model
 
 We will now briefly consider an AguaClara flocculator design with an average energy dissipation rate of approximately 11 mW/kg and a residence time of 8.1 minutes. The design temperature is 15 degC.
 
-`Here is a calculation for the Gt value of this flocculator. <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=LOhI18urlnbE&line=4&uniqifier=1>`_
+`Colab worksheet calculation for the Gt value of this flocculator. <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=LOhI18urlnbE&line=4&uniqifier=1>`_
 
 Coagulant Coverage Fraction of a Particle
 -----------------------------------------
@@ -131,7 +127,7 @@ We then estimate the required coagulant coverage of clay, :math:`\Gamma`, for th
 
 Note that the specified flocculation model applies to both hydraulic and mechanical flocculators.
 
-`Find the Gamma value here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=jHjw4X5Flr1C&line=9&uniqifier=1>`_
+`Find the Gamma value <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=jHjw4X5Flr1C&line=9&uniqifier=1>`_
 
 Residence Time and Coagulant Coverage
 -------------------------------------
