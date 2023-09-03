@@ -119,7 +119,7 @@ ACR developed AIDE to reduce the time required to customize the designs and to m
 Next Steps for Potential Implementation Partners
 ================================================
 
-AguaClara Reach is ready to develop partnerships with both non-profit organizations and engineering firms. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. The types of services that ACR offers can be seen in the :ref:`title_First_Project_Proposal`. The :ref:`title_AguaClara_Specifications` are also available for IP reference.
+AguaClara Reach is ready to develop partnerships with both non-profit organizations and engineering firms. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. The :ref:`title_AguaClara_Specifications` are available for IP reference.
 
 
 .. |LFOM| image:: https://cad.onshape.com/api/thumbnails/d/49035a16b895fd8095d17a02/w/b76e9410efc3d9f5861e9516/s/300x170

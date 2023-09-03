@@ -116,7 +116,7 @@ One of the mysteries of flocculation has been why it is such a slow process, req
 
 .. math:: \bar G = \sqrt{ \frac{g h_e}{\theta \nu}}
 
-`See the code to determine that value here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-1InCjkGqiuF&line=3&uniqifier=1>`_
+`Colab worksheet to create visible flocs during high turbidity <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-1InCjkGqiuF&line=3&uniqifier=1>`_
 
 Here initial flocculation is visible at a :math:`G\theta` of less than 3000. Given that flocculation is visible at this low collision potential, it is unclear why recommended :math:`G\theta` are as high as 100,000. This is one of the great mysteries that motivated the search for a flocculation model that is based on physics and consistent with laboratory and field observations.
 
@@ -190,12 +190,20 @@ Solving for the collision time we obtain
 
 In summary, a relationship for the mean time between collisions :math:`\bar{t_{c}}` was found by proposing an average condition for a collision, successful or unsuccessful, to occur. To define this condition, it was assumed that each primary particle on average occupies a fraction of the reactor volume, :math:`\bar{V}_{Surround}`, inversely proportional to the number concentration of particles. Furthermore, prior to a collision, a particle on average sweeps a volume, :math:`\bar{V}_{Cleared}`, proportional to :math:`\bar{t_c}` and to the mean relative velocity between approaching particles, :math:`\bar{v}_r`. As an average condition, it was posited that for each collision, :math:`\bar{V}_{Cleared}` must equal :math:`\bar{V}_{Surround}`. From this, a relationship for a characteristic collision time, :math:`\bar{t_c}`, was obtained:
 
+The change in the number of particles with respect to time is proportional to attachment efficiency and the time required per collision.
+
+.. math::
+  :label: dNc
+
+	  \frac{dN_c}{dt}== \frac{\alpha}{t_c}
+
+
 The collision rate :cite:`Floc_Model-pennock_theoretical_2016` can be obtained by substituting Equation :eq:`tc` into Equation :eq:`dNc`.
 
 .. math::
   :label: Nclam
 
-	  \frac{dN_{c}}{dt}=\pi\bar{\alpha}\frac{\bar{D}_{P}^2}{\bar \Lambda^2} \tilde{G}
+	  \frac{dN_c}{dt}=\pi\bar{\alpha}\frac{\bar{D}_{P}^2}{\bar \Lambda^2} \tilde{G}
 
 
 where :math:`\tilde{G}` is the Camp Stein velocity gradient.
@@ -241,7 +249,7 @@ Having Equation :eq:`dCP`, the next step is to substitute it into Equation :eq:`
 	 \frac{dC_{P}}{-kC_{P}}=\pi\bar{\alpha}\left(\frac{6}{\pi}\frac{C_{P}}{\rho_P}\right)^{2/3}\tilde{G}dt,
 
 
-It is interesting to note that rearranging Equation :eq:`dCPlam` in terms of :math:`\frac{dC_P}{dt}` gives a :math:`C_P` exponent of :math:`\frac{5}{3}`. Previous flocculation rate equations were second-order, but the observed flocculation rate was less than second-order :cite:`Floc_Model-benjamin_water_2013`. The slight deviation from an exponent of two comes from the assumption of :cite:`Floc_Model-pennock_theoretical_2016` that relative velocity between colliding particles scales with :math:`\Lambda` rather than :math:`d_P`. This is to say that, in dilute suspensions characteristic of raw water, where particles are separated by :math:`\bar \Lambda\gg \bar{D}_P`, the majority of :math:`\bar{t_c}` is spent with the distance between particles characterized by :math:`\bar \Lambda` instead of :math:`\bar{D}_P`. The time required for the final approach for a collision is hypothesized to be insignificant compared the time for :math:`\bar{V}_Cleared` to equal :math:`\bar{V}_Surround`.
+It is interesting to note that rearranging Equation :eq:`dCPlam` in terms of :math:`\frac{dC_P}{dt}` gives a :math:`C_P` exponent of :math:`\frac{5}{3}`. Previous flocculation rate equations were second-order, but the observed flocculation rate was less than second-order :cite:`Floc_Model-benjamin_water_2013`. The slight deviation from an exponent of two comes from the assumption of :cite:`Floc_Model-pennock_theoretical_2016` that relative velocity between colliding particles scales with :math:`\Lambda` rather than :math:`d_P`. This is to say that, in dilute suspensions characteristic of raw water, where particles are separated by :math:`\bar \Lambda\gg \bar{D}_P`, the majority of :math:`\bar{t_c}` is spent with the distance between particles characterized by :math:`\bar \Lambda` instead of :math:`\bar{D}_P`. The time required for the final approach for a collision is hypothesized to be insignificant compared the time for :math:`\bar{V}_{Cleared}` to equal :math:`\bar{V}_{Surround}`.
 
 From Equation :eq:`dCPlam` it is possible to integrate and obtain equations for flocculation performance. After separation of variables, one side of the equation is integrated with respect to time from the initial time (:math:`t=0`) to the time of interest, generally taken to be the mean hydraulic residence time (:math:`t=\theta`). The other side of the equation is integrated with respect to the concentration of primary particles from the value at the initial time (:math:`C_{P_0}`), equivalent to the initial concentration of primary particles, to the concentration of primary particles at the time of interest (:math:`C_{P}`). The integral becomes:
 
@@ -292,7 +300,7 @@ Solving Equation :eq:`GtlamSim` for :math:`C_P` we obtain
 Experimental Protocols
 ----------------------
 
-Equation :eq:`pClam` was tested under turbulent conditions. The design scheme chosen to meet these requirements was a tube flocculator, illustrated in :numref:`figure_apparatus` and described in :cite:`Floc_Model-pennock_theoretical_2016`. This tube flocculator operated in the turbulent flow regime, which for pipe flow means that :math:`Re>4,000` :cite:`Floc_Model-granger_fluid_1995`. The change in mean energy dissipation rate due to any modification to the system was approximated by
+Equation :eq:`CPlamint` was tested under turbulent conditions. The design scheme chosen to meet these requirements was a tube flocculator, illustrated in :numref:`figure_apparatus` and described in :cite:`Floc_Model-pennock_theoretical_2016`. This tube flocculator operated in the turbulent flow regime, which for pipe flow means that :math:`Re>4,000` :cite:`Floc_Model-granger_fluid_1995`. The change in mean energy dissipation rate due to any modification to the system was approximated by
 
 .. math::
   :label: EDR
@@ -325,7 +333,7 @@ Along with the clay, strong base (NaOH) manufactured by Sigma-Aldrich (St. Louis
 
 Just prior to entering the flocculator,  PACl coagulant (PCH-180) manufactured by the Holland Company, Inc. (Adams, Massachusetts) was added to the flow by a computer-controlled peristaltic pump which varied the coagulant dose between experiments. After entering the system, the coagulant then entered a small orifice used to accomplish rapid mix by forming a jet downstream. From there, the suspension traveled up through the flocculator made of 3.18 cm (1.25 in) inner diameter tubing. Within the flocculator, the fluid passed through constrictions in the tubing that caused the flow to contract, resulting in flow expansions afterward and achieving increased mixing and energy dissipation.
 
-After leaving the flocculator, the flow passed a vertical tube with a free surface that served as an air release. This removed bubbles in the system so that they would not interfere with settling or analysis of the flocs. A portion of the flow was then diverted for sedimentation by means of a peristaltic pump up a clear one-inch PVC pipe angled at :math:`60^{\circ}`. The flow rate through the pump was selected based on the dimensions of the tube and its angle to achieve a desired capture velocity, :math:`\bar v_c`. The supernatant from this tube settler was passed through an HF Scientific MicroTOL nephelometric turbidimeter to record the effluent turbidity for the duration of the experiment. Recording the settled effluent turbidity made it possible to calculate the :math:`pC^*` term in Equations :eq:`pClam` (in terms of primary particles) and also made possible comparison with data from :cite:`Floc_Model-swetland_flocculation-sedimentation_2014`.
+After leaving the flocculator, the flow passed a vertical tube with a free surface that served as an air release. This removed bubbles in the system so that they would not interfere with settling or analysis of the flocs. A portion of the flow was then diverted for sedimentation by means of a peristaltic pump up a clear one-inch PVC pipe angled at :math:`60^{\circ}`. The flow rate through the pump was selected based on the dimensions of the tube and its angle to achieve a desired capture velocity, :math:`\bar v_c`. The supernatant from this tube settler was passed through an HF Scientific MicroTOL nephelometric turbidimeter to record the effluent turbidity for the duration of the experiment. Recording the settled effluent turbidity made it possible to calculate the :math:`pC^*` term in Equations :eq:`CPlamint` (in terms of primary particles) and also made possible comparison with data from :cite:`Floc_Model-swetland_flocculation-sedimentation_2014`.
 
 After data from the settled flocs had been collected, the flow from the effluent turbidimeter was sent to the drain along with the bulk flow. The bulk flow traveled past a second air release before exiting the drain. The air release gave the flow exiting the drain a free surface as it flowed over the exit weir so that the exiting water developed into a supercritical flow. Thus, the flow over the weir was not influenced by the flow downstream of the free surface, and the flow rate could be controlled by adjusting the elevation of the free surface before the drain. The outlet weir was a 1-1/4" PVC pipe within an upright 3" clear pipe, which were joined by a flexible coupling adapter. The effluent water accumulated in the clear outer pipe until it reached the elevation of the top of the inner pipe and flowed down through it. The flow rate could be adjusted by loosening the flexible coupling so that the elevation of the top of the inner pipe could be adjusted. As the bulk flow exited down out of the inner pipe to the drain, it passed over a glass electrode sensor to
 measure pH.
@@ -333,7 +341,7 @@ measure pH.
 Results
 -------
 
-The above process was used to conduct the experiments to test the applicability of Equation :eq:`pClam` in turbulent flocculation. The influent turbidity was set at a constant of 900 NTU. The mean energy dissipation rate was about 21.5 mW/kg, which resulted from choosing a flow rate of about 110 mL/s so that the Reynolds number was just above 4,000. These values were chosen to ensure viscous-dominated turbulent initial conditions. For these experiments, coagulant doses ranged from 0.05 to 98 mg/L as Al. A :math:`\bar v_c` of 0.12 mm/s was used for all experiments. Data from these nominally viscous experiments are shown in :numref:`figure_PennockFig2` as a function of coagulant dose.
+The above process was used to conduct the experiments to test the applicability of Equation :eq:`CPlamint` in turbulent flocculation. The influent turbidity was set at a constant of 900 NTU. The mean energy dissipation rate was about 21.5 mW/kg, which resulted from choosing a flow rate of about 110 mL/s so that the Reynolds number was just above 4,000. These values were chosen to ensure viscous-dominated turbulent initial conditions. For these experiments, coagulant doses ranged from 0.05 to 98 mg/L as Al. A :math:`\bar v_c` of 0.12 mm/s was used for all experiments. Data from these nominally viscous experiments are shown in :numref:`figure_PennockFig2` as a function of coagulant dose.
 
 
 .. _figure_PennockFig2:
@@ -347,7 +355,7 @@ The above process was used to conduct the experiments to test the applicability 
 
 
 The data shown in :numref:`figure_PennockFig2` were compared with the viscous model, as shown in :numref:`figure_PennockFig3`.
-In this graph, the data are plotted in terms of Equation :eq:`pClam` and its corresponding composite parameter taken from Equation :eq:`Nclam`,
+In this graph, the data are plotted in terms of Equation :eq:`CPlamint` and its corresponding composite parameter taken from Equation :eq:`Nclam`,
 
 .. math::
   :label: Paramlam
@@ -361,13 +369,13 @@ In this graph, the data are plotted in terms of Equation :eq:`pClam` and its cor
    :align: center
    :alt: internal figure
 
-   Fit of Equation :eq:`pClam` to data from :math:`Re\approx 4,000` experiments. Hollow points indicate data not used in fitting the model.
+   Fit of Equation :eq:`CPlamint` to data from :math:`Re\approx 4,000` experiments. Hollow points indicate data not used in fitting the model.
 
 At the highest values, however, a marked decrease begins. For these graphs, the model fits were done for all points where increasing performance was seen, because the model does not currently include a mechanism for the decreasing performance. The values for :math:`k` were determined by the Levenberg-Marquardt algorithm, and the value for the model was 0.030. The :math:`R^2` value for the fit is 0.958 and the sum of squared errors is 0.228 (mean pC* error of 0.128).
 
 From the values given previously, the ratio :math:`\frac{\bar \Lambda_0}{\bar{\eta}}` can be calculated for the experimental conditions. Equation :eq:`Ld` can be used to compute (:math:`\bar \Lambda_0`). For these experiments, :math:`\bar{D}_P` is taken to be the average diameter of kaolinite clay particles, found by :cite:`Floc_Model-wei_coagulation_2015` and :cite:`Floc_Model-sun_characterization_2015` to be 7 :math:`\mu m`. The concentration can be converted from NTU to the necessary mass/volume (mg/L) unit by using as a proportion the measurement reported by :cite:`Floc_Model-wei_coagulation_2015` of 68 NTU for 100 mg/L of kaolinite clay. Last, the density was assumed to be 2.65 g/:math:`cm^3` for kaolinite.
 
-For flocculation in laminar flows, data were used from the work of :cite:`Floc_Model-swetland_flocculation-sedimentation_2014`. :numref:`figure_PennockFig5` shows Equation :eq:`pClam` fit to results for a capture velocity of 0.12 mm/s at two hydraulic residence times, five influent turbidity values and a range of coagulant doses. :cite:`Floc_Model-swetland_flocculation-sedimentation_2014` showed that the projected x-axis intercept of the linear region of the data (with a log-log slope of 1 according to her plotting of the data) was proportional to the capture velocity used for sedimentation. Correspondingly, :math:`k` is expected to be a function of capture velocity.
+For flocculation in laminar flows, data were used from the work of :cite:`Floc_Model-swetland_flocculation-sedimentation_2014`. :numref:`figure_PennockFig5` shows Equation :eq:`CPlamint` fit to results for a capture velocity of 0.12 mm/s at two hydraulic residence times, five influent turbidity values and a range of coagulant doses. :cite:`Floc_Model-swetland_flocculation-sedimentation_2014` showed that the projected x-axis intercept of the linear region of the data (with a log-log slope of 1 according to her plotting of the data) was proportional to the capture velocity used for sedimentation. Correspondingly, :math:`k` is expected to be a function of capture velocity.
 
 .. _figure_PennockFig5:
 
@@ -376,10 +384,10 @@ For flocculation in laminar flows, data were used from the work of :cite:`Floc_M
    :align: center
    :alt: internal figure
 
-   Fit of Equation :eq:`pClam` to laminar flocculation data from :cite:`Floc_Model-swetland_flocculation-sedimentation_2014`.
+   Fit of Equation :eq:`CPlamint` to laminar flocculation data from :cite:`Floc_Model-swetland_flocculation-sedimentation_2014`.
 
 
-Referring to :numref:`figure_PennockFig5`, Equation :eq:`pClam` fits the data from :cite:`Floc_Model-swetland_flocculation-sedimentation_2014` well with a :math:`k` value of 0.027. The resulting :math:`R^2` for this fit is 0.844. The sum-squared error is 5.03, giving an average pC* error of 0.034 for the fit.
+Referring to :numref:`figure_PennockFig5`, Equation :eq:`CPlamint` fits the data from :cite:`Floc_Model-swetland_flocculation-sedimentation_2014` well with a :math:`k` value of 0.027. The resulting :math:`R^2` for this fit is 0.844. The sum-squared error is 5.03, giving an average pC* error of 0.034 for the fit.
 
 Discussion
 ----------

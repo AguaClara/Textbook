@@ -86,13 +86,13 @@ Calculate the maximum energy dissipation rate that occurs in the wake behind the
 
 You may assume that the relative velocity between propeller and water is equal to 75% of the propeller velocity.
 
-`Calculation here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-DSq8HEHw-su&line=5&uniqifier=1>`_
+`Colab worksheet calculating the propeller energy dissipation rate <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-DSq8HEHw-su&line=5&uniqifier=1>`_
 
 The maximum energy dissipation rate behind the propeller tip is 430 mW/kg
 
 **5) Calculate the ratio** of maximum to average energy dissipation rate (henceforth referred to as Max/Ave EDR) and the ratio of maximum to average velocity gradient (Max/Ave G) for the mechanical flocculator described above. What is the relationship between the two ratios?
 
-`Find ratios here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=9Z7jG1xcxCG2&line=6&uniqifier=1>`_
+`Colab worksheet calculating the velocity gradient ratios <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=9Z7jG1xcxCG2&line=6&uniqifier=1>`_
 
 The ratio of maximum to average energy dissipation rate is 67.5
 The ratio of maximum to average velocity gradient is 8.2
@@ -124,7 +124,7 @@ These extremely high average G values are more like traditional rapid mix. It is
 
 **7) How much energy** in Joules per liter would be required to treat the water using this mechanical flocculator?
 
-`Calculation here <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=JD2pFOBNxUc4&line=3&uniqifier=1>`_
+`Energy requirement calculation <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=JD2pFOBNxUc4&line=3&uniqifier=1>`_
 
 The energy required using the mechanical flocculator is 11.5 J/l
 

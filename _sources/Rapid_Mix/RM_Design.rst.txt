@@ -57,7 +57,7 @@ Substituting the previous equation for the eddy length scale, :math:`L_{eddy}`, 
     Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}
 
 The flow rate that can be served with a single injection port is a function of how much energy we use for the mixing process.
-The code to generate the following plot can be found `here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=Wb5pRBA4Yw3e&line=2&uniqifier=1>`_
+`Colab worksheet calculating the flow rate that can be served with a single injection port <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=Wb5pRBA4Yw3e&line=2&uniqifier=1>`_
 
 The flow rate per mixing zone increases rapidly as the mixing time allowed is increased and as the energy input is increased.
 
@@ -108,7 +108,7 @@ The diameter of the cylinders is equal to
 
     D_{cylinder}=W_{exp} - W_{con}
 
-`Here <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=MpwXnJvCaN05&line=7&uniqifier=1>`_ is an example design for a rapid mix unit that uses 20 cm of head loss and achieves mixing in 0.3 seconds.
+`Colab worksheet designing rapid mix unit <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=MpwXnJvCaN05&line=7&uniqifier=1>`_ is an example design for a rapid mix unit that uses 20 cm of head loss and achieves mixing in 0.3 seconds.
 
 * The spacing between injection ports is 0.4201 meter
 * The flow rate of raw water per chemical injection point is 79.43 liter / second

@@ -1,126 +1,77 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara Textbook v1.4.29 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara 0.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script async="async" src="../_static/mathjax_config.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=525cde36"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="AguaClara Specifications" href="Specifications.html" />
     <link rel="prev" title="Filtration Design Solution" href="../Filtration/Filtration_Design_Solution.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> AguaClara Textbook
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            AguaClara
           </a>
-
-          
-            
-            
-              <div class="version">
-                v1.4.29
-              </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Acknowledgements</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 1: Introduction</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 1: Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Design_Evolution.html">Design Evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html">Fluid Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html">Fluid Mechanics Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Plant_Hydraulics.html">Plant Hydraulics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html">Manifold Hydraulics</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Energy Dissipation Rate, Velocity Gradient, and Mixing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 4: Chemistry of Water Treatment</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 4: Chemistry of Water Treatment</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Coagulant Nanoparticles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Carbonate Reactions, Buffering, and pH</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 5: Flow Control and Measurement</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 5: Flow Control and Measurement</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Constant Head Tanks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">AguaClara Flow Control and Measurement Technologies</a></li>
@@ -128,7 +79,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
@@ -137,7 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 7: Flocculation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 7: Flocculation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">AguaClara Hydraulic Flocculation Model</a></li>
@@ -148,7 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 8: Clarification</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 8: Clarification</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarifier Derivations</a></li>
@@ -157,7 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 9: Filtration</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 9: Filtration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Open Stacked Rapid Sand Filter Design</a></li>
@@ -165,7 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">AguaClara Infrastructure Design Engine</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
@@ -177,97 +128,56 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Specifications.html">AguaClara Specifications</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Chapter 12: Operation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Chapter 12: Operation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Operation/Coagulant_Automation.html">Coagulant Automation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Operation/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Appendix 1 + Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">Appendix 1 + Resources</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Contributor's guide</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contributor's guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">AguaClara Textbook</a>
-        
+          <a href="../index.html">AguaClara</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>AguaClara Infrastructure Design Engine</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">AguaClara Infrastructure Design Engine</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/AIDE/AIDE.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <embed>
    <link rel="canonical" href="https://aguaclara.github.io/Textbook/AIDE/AIDE.html" />
    <script src="https://hypothes.is/embed.js" async></script>
-</embed><table class="colwidths-given docutils align-default" id="title-aguaclara-infrastructure-design-engine">
+</embed><table class="docutils align-default" id="title-aguaclara-infrastructure-design-engine">
 <colgroup>
 <col style="width: 83%" />
 <col style="width: 17%" />
@@ -278,15 +188,15 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="aguaclara-infrastructure-design-engine">
-<h1>AguaClara Infrastructure Design Engine<a class="headerlink" href="#aguaclara-infrastructure-design-engine" title="Permalink to this headline">¶</a></h1>
+<section id="aguaclara-infrastructure-design-engine">
+<h1>AguaClara Infrastructure Design Engine<a class="headerlink" href="#aguaclara-infrastructure-design-engine" title="Permalink to this heading"></a></h1>
 <p>The AguaClara Infrastructure Design Engine (AIDE) is created and continuously improved by AguaClara Reach using the <a class="reference external" href="https://cad.onshape.com/"><img alt="Onshape" src="../_images/Onshape.png" style="height: 18px;" /></a> platform.  AIDE is a long term effort that began in 2005 and represents the contributions of thousands of individuals. AguaClara Reach is providing open access to this beta release of AIDE configurable components for educational purposes and so AguaClara implementation partners can explore our technologies (see our <a class="reference internal" href="#heading-disclaimer"><span class="std std-ref">Disclaimer</span></a>).</p>
 <p>We rely on donor support to develop AIDE and to create this textbook. Please <a class="reference external" href="https://www.aguaclarareach.org/donate-now"><img alt="donate" src="../_images/donate.png" style="height: 30px;" /></a> to support our mission of developing and providing the next generation of drinking water treatment plants so that many more communities can have safe water on tap.</p>
 <p>In the <a class="reference internal" href="#table-aide-configurable-components"><span class="std std-ref">table below</span></a> are links to configurable component models. Information on how to <a class="reference internal" href="#heading-using-aide"><span class="std std-ref">access and modify the models is given below the table</span></a>. We welcome <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSdYHVinzW-xZskW74rpZ_7prHAqjLQDwadCNiRP39nyu7NHMw/viewform?">your feedback on the AIDE models</a>. If you are interested in AguaClara technologies to produce safe water on tap please fill out our <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSdU7ZrWlnugDqEutdELWLoj5jq8JW6yzOeUg3Al4R7LUSYzRA/viewform?">survey for potential implementation partners</a>.</p>
 <embed>
    <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/272ed6d0570a4b489ca630a10aa5a65d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-</embed><span id="table-aide-configurable-components"></span><table class="colwidths-given docutils align-left" id="id1">
-<caption><span class="caption-number">Table 22 </span><span class="caption-text">AIDE configurable components.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+</embed><span id="table-aide-configurable-components"></span><table class="docutils align-left" id="id1">
+<caption><span class="caption-number">Table 22 </span><span class="caption-text">AIDE configurable components.</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 29%" />
 <col style="width: 57%" />
@@ -338,13 +248,13 @@
 </tbody>
 </table>
 <p>The AIDE components will be updated as we continue to improve the designs and we will be adding new components as we extend our designs to a wide range of flow rates.</p>
-<div class="section" id="disclaimer">
-<span id="heading-disclaimer"></span><h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">¶</a></h2>
+<section id="disclaimer">
+<span id="heading-disclaimer"></span><h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this heading"></a></h2>
 <p>The configurable components created by AIDE are not engineering designs. The configurable components are provided for educational purposes. The configurable components create models that have not been reviewed and are likely NOT suitable for any particular application.</p>
 <p><strong>In no event shall AguaClara Reach, or their employees be liable to any party for direct, indirect, special, incidental, or consequential damages, including lost profits, arising out of the use of AIDE, even if AguaClara Reach may have been advised of the possibility of such damage.</strong></p>
-</div>
-<div class="section" id="introduction-to-aide">
-<h2>Introduction to AIDE<a class="headerlink" href="#introduction-to-aide" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="introduction-to-aide">
+<h2>Introduction to AIDE<a class="headerlink" href="#introduction-to-aide" title="Permalink to this heading"></a></h2>
 <p>AIDE is based on parametric design. The vast majority of the dimensions are calculated from hydraulic constraints. Pipe diameters are sometimes based on a head loss constraint, sometimes are designed to not break up flocs, and in the chemical doser are designed to ensure laminar flow. Wall thicknesses are based on the construction methods used by the implementation partner and vary based on the depth of water in the tank. Thus the filter has thicker walls than the clarifier.</p>
 <p>AIDE is built from many modular components that are all connected so they can share design information. The entire water treatment plant is an example of a top level component, a trunk, that has an entrance tank, flocculator, clarifier, and filter as branches. Each of the branches also has its own twigs. We call the connections between trunk, branch, and twigs a part studio tree. The part studio tree is assembled level by level in a way that allows the trunk to know everything about all of the branches and their twigs. This sharing of design parameters between components enables an integrated design and an optimized plant layout.</p>
 <p>All of the parts used to assemble the design originate in a parts database.  The database can be customized for different implementation partners so that the part dimensions and costs match their requirements.  The database approach to design ensures that when an alternative part is selected that all plant dimensions update to accommodate the new part dimensions.</p>
@@ -359,12 +269,12 @@
 </div></blockquote>
 <p>The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of <em>time to generate model component</em> in <a class="reference internal" href="#table-aide-configurable-components"><span class="std std-numref">Table 22</span></a> for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.</p>
 <p>If you would like to explore possible configurations, change the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.</p>
-</div>
-<div class="section" id="using-aide-to-explore-aguaclara-technologies">
-<span id="heading-using-aide"></span><h2>Using AIDE to Explore AguaClara Technologies<a class="headerlink" href="#using-aide-to-explore-aguaclara-technologies" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="using-aide-to-explore-aguaclara-technologies">
+<span id="heading-using-aide"></span><h2>Using AIDE to Explore AguaClara Technologies<a class="headerlink" href="#using-aide-to-explore-aguaclara-technologies" title="Permalink to this heading"></a></h2>
 <p>If you do not yet have an <a class="reference external" href="https://cad.onshape.com/"><img alt="Onshape" src="../_images/Onshape.png" style="height: 18px;" /></a> account, then you will be able to make changes to the component configuration by using the <a class="reference external" href="https://cad.onshape.com/help/Content/viewonlytoolbar.htm">view only toolbar</a>. You can sign up for a <a class="reference external" href="https://www.onshape.com/en/products/free">free public Onshape account</a> that will enable you to access the parts lists and <em>estimated</em> materials cost for each of the AIDE configurable components. The AIDE videos (see <a class="reference internal" href="#table-aide-videos"><span class="std std-numref">Table 23</span></a>) introduce the core AIDE features.</p>
-<span id="table-aide-videos"></span><table class="colwidths-given docutils align-left" id="id2" style="width: 100">
-<caption><span class="caption-number">Table 23 </span><span class="caption-text">AIDE play list of videos.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<span id="table-aide-videos"></span><table class="docutils align-left" id="id2" style="width: 100">
+<caption><span class="caption-number">Table 23 </span><span class="caption-text">AIDE play list of videos.</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -389,22 +299,21 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="how-aguaclara-reach-uses-aide">
-<h2>How AguaClara Reach Uses AIDE<a class="headerlink" href="#how-aguaclara-reach-uses-aide" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="how-aguaclara-reach-uses-aide">
+<h2>How AguaClara Reach Uses AIDE<a class="headerlink" href="#how-aguaclara-reach-uses-aide" title="Permalink to this heading"></a></h2>
 <p>AguaClara Reach (ACR) uses AIDE to provide Implementation Partners (IPs) with customized hydraulic designs. AguaClara Reach works with IPs to customize the AIDE parts database so that the design reflects construction practices and part availability in the IP’s region. This includes pipes and fittings from preferred vendors and custom dimensions used for the civil work based on the construction methods used by each Implementation Partner. The designs are customized based on water quality. ACR also provides training and technical support to IPs.</p>
 <p>There are approximately 300 input parameters required to design a full AguaClara water treatment plant. In addition there are many hundreds of parts in the parts database that each require dimensions. AIDE makes it possible to modify both the parts database and the input parameters for each IP.</p>
 <p>ACR developed AIDE to reduce the time required to customize the designs and to make it possible to provide detailed designs quickly. With AIDE ACR can provide an IP with a quick bill of materials so they can see if the parts are available in country and a quick <strong>estimate</strong> of material cost. AIDE has the additional benefit of enabling ACR to upgrade the design algorithms as new insights come in from both IPs and the AguaClara academic partners. New design algorithms can be deployed across the entire suite of AIDE components and updated designs can be provided to IPs when they are ready to adopt the new features.</p>
-</div>
-<div class="section" id="next-steps-for-potential-implementation-partners">
-<h2>Next Steps for Potential Implementation Partners<a class="headerlink" href="#next-steps-for-potential-implementation-partners" title="Permalink to this headline">¶</a></h2>
-<p>AguaClara Reach is ready to develop partnerships with both non-profit organizations and engineering firms. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. The types of services that ACR offers can be seen in the <a class="reference internal" href="ProjectProposal.html#title-first-project-proposal"><span class="std std-ref">Example First Project Proposal</span></a>. The <a class="reference internal" href="Specifications.html#title-aguaclara-specifications"><span class="std std-ref">AguaClara Specifications</span></a> are also available for IP reference.</p>
-</div>
-</div>
+</section>
+<section id="next-steps-for-potential-implementation-partners">
+<h2>Next Steps for Potential Implementation Partners<a class="headerlink" href="#next-steps-for-potential-implementation-partners" title="Permalink to this heading"></a></h2>
+<p>AguaClara Reach is ready to develop partnerships with both non-profit organizations and engineering firms. Our partners use the AguaClara technologies to provide sustainable safe water on tap to cities, towns, and villages. The <a class="reference internal" href="Specifications.html#title-aguaclara-specifications"><span class="std std-ref">AguaClara Specifications</span></a> are available for IP reference.</p>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../Filtration/Filtration_Design_Solution.html" class="btn btn-neutral float-left" title="Filtration Design Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
@@ -437,22 +346,13 @@
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

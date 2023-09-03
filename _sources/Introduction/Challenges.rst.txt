@@ -117,6 +117,7 @@ Tasks and Goals
 
 Devise a simpler system using existing platforms to enable sharing of plant data. Likely platform is Google Sheets.
 Develop/explore methods to
+
  * Validate incoming data
  * Automatically update graphs
  * Provide feedback to operators

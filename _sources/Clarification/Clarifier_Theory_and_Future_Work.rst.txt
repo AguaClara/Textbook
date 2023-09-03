@@ -131,7 +131,7 @@ The flocculator head loss is given by
 
 
 
-`See here for calculations of headloss throuh the floc filter <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=fMlmtxm_YWJY&line=2&uniqifier=1>`_
+`Colab worksheet calculating  head loss through the floc filter <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=fMlmtxm_YWJY&line=2&uniqifier=1>`_
 
 The target flocculator Gt of 39,000 is crazy close to the current design. This value will undoubtedly change somewhat as we get better measurements for the floc filter rate constant.
 
@@ -190,7 +190,7 @@ Now we can substitute to get the collision potential as a function of the flow r
 
 We estimate the hindered terminal velocity to be 1 mm/s since that is what occurs in a 1 mm/s upflow velocity floc filter. Ideally we would have a hindered terminal velocity as a function of the concentration of flocs in the floc filter. The concentration of recycled flocs is assumed to be approximately 20 g/L based on Casey Garland's measurements of the solids concentration in the floc hopper sludge.
 
-`The following plot can be generated here <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=Z53_rxgCYne3&line=4&uniqifier=1>`_
+`Colab worksheet plotting filter collision potential <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=Z53_rxgCYne3&line=4&uniqifier=1>`_
 
  .. _Collision potential with sludge recycle:
 
