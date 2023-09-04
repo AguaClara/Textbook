@@ -285,11 +285,11 @@ To understand how clarification works, a few key concepts must first be develope
 Terminal Velocity and Capture Velocity
 ======================================
 
-Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is :eq:`eq_laminar_terminal_velocity`. The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take care of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (Equation :eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity`.
+Sedimentation is the process of particles ‘falling’ because they have a higher density then the water, and its governing equation is :eq:`eq_laminar_terminal_velocity`. The terminal velocities of particles in surface waters range over many orders of magnitude especially if you consider that mountain streams can carry large rocks. But removing rocks from water is easily accomplished, gravity will take care of it for us. Gravity is such a great force for separation of particles from water that we would like to use it to remove small particles too. Unfortunately, gravity becomes rather ineffective at separating pathogens and small inorganic particles such as clay. The terminal velocities (Equation :eq:`eq_laminar_terminal_velocity`) of these particles is given in :numref:`figure_Terminal_velocity_copy`.
 
 `Colab worksheet plotting the terminal velocity <https://colab.research.google.com/drive/1lE7cHu3TS1vMs0_yA3FmNdPnk3iktBJw#scrollTo=7r75Qu4yPC80&line=18&uniqifier=1>`_
 
-.. _figure_Terminal_velocity:
+.. _figure_Terminal_velocity_copy:
 
 .. figure:: ../Images/Terminal_velocity.png
     :width: 500px
