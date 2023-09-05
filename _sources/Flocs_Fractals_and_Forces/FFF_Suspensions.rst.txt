@@ -20,16 +20,16 @@ Suspension densities will be of interest both in understanding the physics of fl
   :label: density_suspension_1
 
   \rho_{suspension}
-  = \frac{M_{H_2O} + M_{particles}}{\rlap{-} V_{suspension}}
+  = \frac{M_{H_2O} + M_{particles}}{\forall_{suspension}}
 
-  =\frac{M_{H_2O} }{\rlap{-} V_{suspension}} + C_{particles}
+  =\frac{M_{H_2O} }{\forall_{suspension}} + C_{particles}
 
 The mass of water in a suspension, :math:`M_{H_2O}`, must take into account the fraction of the suspension volume occupied by the particles.
 
 .. math::
   :label: water_mass_in_suspension
 
-  \frac{M_{H_2O}}{\rlap{-} V_{suspension} } =
+  \frac{M_{H_2O}}{\forall_{suspension} } =
   \rho_{H_2O} \left( 1 - \frac{C_{particles}}{\rho_{particles}} \right)
 
 where :math:`\frac{C_{particles}}{\rho_{particles}}` is the fraction of the suspension volume occupied by the particles. Substituting Equation :eq:`water_mass_in_suspension` into Equation :eq:`density_suspension_1` we obtain the density of the suspension.

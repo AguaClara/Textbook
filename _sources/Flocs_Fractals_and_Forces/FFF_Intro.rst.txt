@@ -30,17 +30,17 @@ Fractal Flocs
 
 Flocs are fractals. Fractals describe structures in which similar patterns occur over a range of scales. During flocculation flocs grow larger and larger by combining similar sized flocs. Flocs do not combine like raindrops! As raindrops combine they conserve both volume and mass.  With each subsequent collision the floc incorporates more water and thus its density gradually approaches the density of water. The inclusion of more and more water as the floc grows means that the floc mass is NOT conserved as it grows. Likewise, the volume of the floc is not conserved as it grows.
 
-When :math:`n_{raindrops}` of equal volume :math:`\rlap{-} V_0` combine the resulting volume is :math:`\rlap{-} V = \rlap{-} V_0 n_{raindrops}`. When flocs combine the equation is slightly more complicated.
+When :math:`n_{raindrops}` of equal volume :math:`\forall_0` combine the resulting volume is :math:`\forall = \forall_0 n_{raindrops}`. When flocs combine the equation is slightly more complicated.
 
 .. math::
   :label: V_floc_of_n_cp
 
-  \rlap{-} V_{floc} = \rlap{-} V_{cp} n_{cp}^\frac{3}{\Pi_{fractal}}
+  \forall_{floc} = \forall_{cp} n_{cp}^\frac{3}{\Pi_{fractal}}
 
 | Where
-| :math:`\rlap{-} V_{floc}` is the floc volume
+| :math:`\forall_{floc}` is the floc volume
 | :math:`n_{cp}` is the number of core particles in the floc
-| :math:`\rlap{-} V_{cp}` is the core particle volume
+| :math:`\forall_{cp}` is the core particle volume
 | :math:`\Pi_{fractal}` is the floc volume-based fractal dimension
 
 Raindrops conserve volume when they collide and have a :math:`\Pi_{fractal}` of 3. If a particle would conserve its projected area when it combines, then it would have a :math:`\Pi_{fractal}` of 2. If a particle would conserve its diameter when it combines, then it would have a :math:`\Pi_{fractal}` of 1. A fractal dimension of 1 could occur if the particles all attached into a single long chain.
@@ -84,24 +84,24 @@ Mass conservation can be written in terms of density as:
 .. math::
   :label:
 
-  \rho_{mix} \rlap{-} V_{mix} =
-  \rho_1 \rlap{-} V_1 + \rho_2 \rlap{-} V_2
+  \rho_{mix} \forall_{mix} =
+  \rho_1 \forall_1 + \rho_2 \forall_2
 
 Written in terms of water and core particles the floc mass conservation and taking into account that the water volume is equal to the floc volume minus the core particle volume we obtain
 
 .. math::
   :label: floc_mass_conservation
 
-  \rho_{floc} \rlap{-} V_{floc} =
-  \rho_{H_2O} \rlap{-} V_{floc} - \rho_{H_2O}\rlap{-} V_{n_{cp}} + \rho_{cp} \rlap{-} V_{n_{cp}}
+  \rho_{floc} \forall_{floc} =
+  \rho_{H_2O} \forall_{floc} - \rho_{H_2O}\forall_{n_{cp}} + \rho_{cp} \forall_{n_{cp}}
 
-where :math:`\rlap{-} V_{n_{cp}}` is the total volume of the core particles in the floc. The buoyant density is the parameter of interest when calculating terminal velocity and thus Equation :eq:`floc_mass_conservation` can be rewritten as
+where :math:`\forall_{n_{cp}}` is the total volume of the core particles in the floc. The buoyant density is the parameter of interest when calculating terminal velocity and thus Equation :eq:`floc_mass_conservation` can be rewritten as
 
 .. math::
   :label: floc_buoyant_density_1
 
   \left( \rho_{floc} - \rho_{H_2O} \right)  =
-  \left( \rho_{cp}  - \rho_{H_2O} \right) \frac{\rlap{-} V_{n_{cp}}}{ \rlap{-} V_{floc}}
+  \left( \rho_{cp}  - \rho_{H_2O} \right) \frac{\forall_{n_{cp}}}{ \forall_{floc}}
 
 The floc volume can be rewritten as a function of the floc diameter.
 
@@ -676,7 +676,7 @@ We can create a dimensionless number that is the ratio of the bond strength to t
 .. math::
   :label: bong_1
 
-  \Pi_{bond}^g = \frac {\rlap{-} V_{floc} \left(\rho_{floc} - \rho_{H_2O} \right) g} {F_{bond}}
+  \Pi_{bond}^g = \frac {\forall_{floc} \left(\rho_{floc} - \rho_{H_2O} \right) g} {F_{bond}}
 
 To obtain an equation that is a function of the floc diameter we substitute the floc volume (Equation :eq:`volume_floc_of_D`) and the floc buoyant density (Equation :eq:`floc_buoyant_density_2`) into Equation :eq:`bong_1`.
 
