@@ -25,7 +25,7 @@ RST stands for ReStructured Text. It is the standard markup language used for do
 
 Why RST?
 --------
-In the beginning, we used markdown. As we tried to add different features to markdown (:red:`colored words`, image sizes, citations), we were forced to use raw html and various pre-processors. With these various band-aid solutions came added complexity. Adding sections became cumbersome and awkward as it required ill-defined html. Additionally, providing site-wide style updates was prohibitively time-consuming and complex. Essentially, we were trying to pack too much functionality into markdown. In the search for an alternative, restructured text provided several advantages. Out of the box, RST supports globally-defined styles, figure numbering and referencing, Latex function rendering, image display customization and more. Furthermore, restructured text was already the language of choice for the AguaClara ecosystem's documentation.
+Out of the box, RST supports globally-defined styles, figure numbering and referencing, Latex function rendering, image display customization and more. Furthermore, restructured text was already the language of choice for the AguaClara ecosystem's documentation.
 
 
 
