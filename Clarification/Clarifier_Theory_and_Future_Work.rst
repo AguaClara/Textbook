@@ -30,7 +30,7 @@ Unsolved Clarifier Failure Modes
 Floc Filtration in Conventional Clarifiers
 ==========================================
 
-Flocs that are created by the flocculator settle through the water column in conventional sedimentation tanks. As the flocs settle a fraction of the water passes through the floc where it experiences floc filtration. This particle removal mechanism increases in importance as the raw water turbidity increases and the resulting concentration of flocs increases. To describe the physics of this system we define three volumes.
+Flocs that are created by the flocculator settle through the water column in conventional sedimentation tanks. As the flocs settle a fraction of the water passes through the floc where the suspension experiences floc filtration. This particle removal mechanism increases in importance as the raw water turbidity increases and the resulting concentration of flocs increases. To describe the physics of this system we define three volumes.
 
 #. The volume cleared, :math:`\forall_{\rm{Cleared}}` by a floc is equal to the cleared area as the floc moves relative to the suspension multiplied by the total distance traveled relative to the suspension. In a horizontal flow sedimentation tank the average distance traveled could be 1/2 the depth of water in the sedimentation basin. It is possible that the volume cleared is proportional to the fraction coverage of the particles by coagulant nanoparticles. The volume cleared may also be a function of the floc size.
 
