@@ -873,14 +873,14 @@ The maximum density of the slurry in the sand dump pipe would be the case where 
 .. math::
   :label:
 
-  \rho_{sandbed} = \frac{M_{water} + M_{sand}}{{\rlap{-} V_{sandbed}}}
+  \rho_{sandbed} = \frac{M_{water} + M_{sand}}{{\forall_{sandbed}}}
 
 The mass of sand is given by its density and volume.
 
 .. math::
   :label:
 
-  \rho_{sandbed} = \frac{\rlap{-} V_{water} \rho_{water} + \rlap{-} V_{sand}\rho_{sand}}{{\rlap{-} V_{sandbed}}}
+  \rho_{sandbed} = \frac{\forall_{water} \rho_{water} + \forall_{sand}\rho_{sand}}{{\forall_{sandbed}}}
 
 The water volume fraction is the porosity.
 

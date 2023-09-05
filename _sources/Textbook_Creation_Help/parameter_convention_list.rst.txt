@@ -60,7 +60,7 @@ If you would like to be able to ``ctrl+f`` some variables, click on 'View page s
     :math:`{\rm Re}`,Reynolds Number,Dimensionless
     :math:`S`,Spacing Between Two Objects,:math:`[L]`
     :math:`T`,Object Thickness,:math:`[L]`
-    :math:`\rlap{-} V`,Volume,:math:`[L]^3`
+    :math:`\forall`,Volume,:math:`[L]^3`
     :math:`W`,Width,:math:`[L]`
     :math:`W_{diff_{min}}`,Minimum internal width of diffuser,:math:`[L]`
     :math:`W_{floc}`,Gravitational weight of floc,:math:`\frac{[M][L]}{[T]^2}`

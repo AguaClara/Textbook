@@ -135,23 +135,23 @@ Relative velocities between particles are dominated by viscous shear because the
 .. math::
   :label: eq_spacing_of_number_concentration
 
-   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\rlap{-} V_{\rm{Surround}}}^\frac{1}{3}
+   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} = {\forall_{\rm{Surround}}}^\frac{1}{3}
 
 | Where:
 | :math:`\bar \Lambda` is the average separation distance
 | :math:`n_P` is the number of particles per volume of suspension
-| :math:`{\rlap{-} V_{\rm{Surround}}}` is the suspension volume occupied by one particle
+| :math:`{\forall_{\rm{Surround}}}` is the suspension volume occupied by one particle
 
 The number concentration of particles is given by
 
 .. math::
   :label: eq_number_concentration_of_diameter
 
-   n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi \bar{D_P}^3} \frac{C_P}{\rho_P}
+   n_P = \frac{C_P}{\forall_P \rho_P} = \frac{6}{\pi \bar{D_P}^3} \frac{C_P}{\rho_P}
 
 | Where:
 | :math:`C_P` is the particle concentration
-| :math:`\rlap{-} V_P` is the volume of a single particle
+| :math:`\forall_P` is the volume of a single particle
 | :math:`\rho_P` is the particle density
 | :math:`\bar{D_P}` is the average particle diameter
 
@@ -160,7 +160,7 @@ Equations :eq:`eq_spacing_of_number_concentration` and :eq:`eq_number_concentrat
 .. math::
   :label: eq_spacing_of_diameter
 
-   \bar \Lambda  = \frac{1}{n_P^{\frac{1}{3}}} =  \bar{D_P} \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{\frac{1}{3}}
+   \bar \Lambda  = {\forall_{\rm{Surround}}}^\frac{1}{3} = \frac{1}{n_P^{\frac{1}{3}}} =  \bar{D_P} \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)^{\frac{1}{3}}
 
 
 .. _figure_Particle_separation:
