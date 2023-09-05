@@ -149,15 +149,15 @@ Now that we know that the collisions are controlled by viscosity we can begin fo
 
 The volume cleared by the wandering particle is proportional to the area defined by a circle with diameter = sum of the particle diameters. This is because the wandering particle with strike the stationary particle if the wandering particle's center is anywhere within a diameter of the center of the stationary particle.
 
-.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto \pi \bar D_P^2
+.. math:: {\forall_{\rm{Cleared}}} \propto \pi \bar D_P^2
 
 The volume cleared is proportional to time
 
-.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto t
+.. math:: {\forall_{\rm{Cleared}}} \propto t
 
 The volume cleared is proportional to the relative velocity between the two particles.
 
-.. math:: {\rlap{-} V_{\rm{Cleared}}} \propto \bar v_r
+.. math:: {\forall_{\rm{Cleared}}} \propto \bar v_r
 
 We use dimensional analysis to get a relative velocity for the long range transport controlled by shear. The relative velocity between the two particles that will eventually collide is assumed to be proportional to the average distance between the two particles.
 
@@ -173,10 +173,10 @@ The only way for :math:`\bar \varepsilon` and :math:`\nu` to produce dimensions 
 
 .. math:: \bar v_r \approx \bar \Lambda \tilde{G}
 
-The volume cleared, :math:`{\rlap{-} V_{\rm{Cleared}}}` must equal the volume occupied by one particle, :math:`{\rlap{-} V_{\rm{Surround}}}` for a collision to occur. Combining the three equations for :math:`{\rlap{-} V_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
+The volume cleared, :math:`{\forall_{\rm{Cleared}}}` must equal the volume occupied by one particle, :math:`{\forall_{\rm{Surround}}}` for a collision to occur. Combining the three equations for :math:`{\forall_{\rm{Cleared}}}` and the equation for :math:`v_r` we obtain the volume cleared as a function of time.
 
 .. math::
-  \bar \Lambda^3 = {\rlap{-} V_{\rm{Surround}}} = {\rlap{-} V_{\rm{Cleared}}} \approx \pi \bar D_P^2 \bar \Lambda \tilde{G} \bar t_c
+  \bar \Lambda^3 = {\forall_{\rm{Surround}}} = {\forall_{\rm{Cleared}}} \approx \pi \bar D_P^2 \bar \Lambda \tilde{G} \bar t_c
 
 | Where:
 | :math:`\bar t_c` is the average time required for a collision between two particles

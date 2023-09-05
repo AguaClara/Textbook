@@ -255,13 +255,13 @@ Almost all of the kinetic energy of the jet issuing from the constriction is dis
 
 .. math::
 
-   \rlap{-} V_{pore} = \phi\Lambda_{pore}^3
+   \forall_{pore} = \phi\Lambda_{pore}^3
 
 The hydraulic residence time in a pore is obtained from the volume and flow rate through a pore.
 
 .. math::
 
-   \theta_{pore} = \frac{\rlap{-} V_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}
+   \theta_{pore} = \frac{\forall_{pore}}{Q_{pore}} = \frac{\phi\Lambda_{pore}^3}{v_a \Lambda_{pore}^2} = \frac{\phi\Lambda_{pore}}{v_a}
 
 The Camp Stein velocity gradient in a pore is obtained by assuming that all of the input kinetic energy is dissipated through viscosity during the time that the water spends in the pore.
 
@@ -465,7 +465,7 @@ The volume of the deposit is thus
 
 .. math::
 
-   \rlap{-} V_{deposit} = \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)
+   \forall_{deposit} = \Pi_{pore}^{deposit}\Lambda_{pore}^3\left(\phi-\frac{v_a}{ v_{constriction}} \right)
 
 where :math:`\Pi_{pore}^{deposit}` a number much less than 1 that represents the fixed ratio between the thickness of the deposit and the pore separation distance.
 
@@ -493,7 +493,7 @@ Now we can create a relationship for the concentration of clay in a floc dividin
 
 .. math::
 
-    C_{clay_{floc}} = \frac{n_{clay}\rlap{-} V_{clay}\rho_{clay}}{\rlap{-} V_{floc}} = \frac{n_{clay}D_{clay}^3\rho_{clay}}{D_{floc}^3}= \frac{D_{clay}^3\rho_{clay}}{D_{floc}^3}\left(\frac{D_{floc}}{D_{clay}}\right)^{\Pi_{fractal}}
+    C_{clay_{floc}} = \frac{n_{clay}\forall_{clay}\rho_{clay}}{\forall_{floc}} = \frac{n_{clay}D_{clay}^3\rho_{clay}}{D_{floc}^3}= \frac{D_{clay}^3\rho_{clay}}{D_{floc}^3}\left(\frac{D_{floc}}{D_{clay}}\right)^{\Pi_{fractal}}
 
 With one more simplification we obtain the desired equation for the clay concentration in a floc of given diameter.
 

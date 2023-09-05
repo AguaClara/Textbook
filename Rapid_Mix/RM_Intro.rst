@@ -130,9 +130,9 @@ The velocity gradient can be obtained from the rate at which mechanical energy i
 
 Where :math:`\varepsilon` is the energy dissipation rate, :math:`G` is the velocity gradient, and :math:`\nu` is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.
 
-.. math:: P = \bar\varepsilon \rlap{-} V \rho
+.. math:: P = \bar\varepsilon \forall \rho
 
-.. math::  P = \bar G^2 \nu \rlap{-} V \rho
+.. math::  P = \bar G^2 \nu \forall \rho
 
 We can relate reactor volume to a hydraulic residence time, :math:`\theta`, and volumetric flow rate, Q.
 
