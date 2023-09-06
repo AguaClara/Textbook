@@ -75,7 +75,7 @@ The residence time of flocculator is 396.8 second
    The :math:`\bar G\theta` delivered by a flocculator increases with temperature. Note that the apparent linearity of this graph is because the inverse of the square root of kinematic viscosity varies linearly with temperature over this range!
 
 
-**4) The Equation :eq:`CPlamint` creates the link** between :math:`\bar G \theta` and flocculator performance. What does the floc model and :numref:`figure_Gtheta_vs_temperature` tell you about flocculator performance and flocculator design? Explain why performance varies with temperature. Explain how temperature influences collisions between particles. What temperature should be used to design flocculators?
+**4) The Equation** :eq:`CPlamint` creates the link between :math:`\bar G \theta` and flocculator performance. What does the floc model and :numref:`figure_Gtheta_vs_temperature` tell you about flocculator performance and flocculator design? Explain why performance varies with temperature. Explain how temperature influences collisions between particles. What temperature should be used to design flocculators?
 
 Flocculator performance improves with warmer temperatures because the fluid deforms more given the same input energy. The fluid deforms more because it is less viscous at higher temperatures. Flocculators should be designed to perform well based on the coldest operating temperature that they will encounter.
 
