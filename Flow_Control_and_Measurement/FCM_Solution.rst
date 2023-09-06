@@ -190,10 +190,12 @@ The maximum average velocity in a dosing tube is 0.443 m/s
 
 **16)** Create an array of the maximum flow rates corresponding to the array of tubing diameters. The flow rates must meet the error constraint.
 
-.. math:: Q_{max} = \frac{\pi D^2}{4}\sqrt{\frac{2h_{L}g \Pi_{error}}{\sum K_{e}}}
+.. math::
 
- - First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``ac.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
- - Create the array of maximum flow rates using the array of tubing diameters and the maximum head loss through the dosing tubes.
+  Q_{max} = \frac{\pi D^2}{4}\sqrt{\frac{2gh_L \Pi_{error}}{\sum K_e}}
+
+First, create a function that uses diameter and velocity as inputs to return flow rate. Note that ``ac.area_circle(diam)`` returns a circle’s area given its diameter, and you have already calculated the maximum average velocity in Problem 14.
+Create the array of maximum flow rates using the array of tubing diameters and the maximum head loss through the dosing tubes.
 
 `Solution for dosing tube flow rate <https://colab.research.google.com/drive/1fWZQ-BsXeINM31NgzbJO2Piv7NZug0cI#scrollTo=6fqFroCkSYch&line=1&uniqifier=1>`_
 
