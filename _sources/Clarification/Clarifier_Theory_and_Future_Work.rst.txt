@@ -71,9 +71,9 @@ For large n the term :math:`\left( 1-\frac{1}{n}\right)^n` approaches :math:`\fr
 .. math::
   :label: sed_floc_filter_Cp_removal
 
-  \frac{ C_{TS_{flocFiltered}}}{C_{TS_{flocculated}}} = \frac{C_{P}}{C_{P_0}} =  \left( \frac{1}{e} \right)^{{\frac{{\forall_{\rm{Cleared}}}}{\forall_{\rm{Surround}}}}
+  \frac{C_{TS_{flocFiltered}}}{C_{TS_{flocculated}}} = \frac{C_{P}}{C_{P_0}} =  \left( \frac{1}{e} \right)^\frac{\forall_{\rm{Cleared}}}{\forall_{\rm{Surround}}}
 
-where :math:`C_{TS_{flocFiltered}}` is the concentration of particles not removed by a tube settler (or equivalent) after passing through the clarifier and :math:`C_{TS_{flocculated}}` is the concentration of particles not removed by a tube settler after flocculation.  The exponent :math:`\frac{{\forall_{\rm{Cleared}}}}{\forall_{\rm{Surround}` increases as the volume surrounding each floc decreases. Thus the particle removal efficiency will increase as the floc concentration increases.
+where :math:`C_{TS_{flocFiltered}}` is the concentration of particles not removed by a tube settler (or equivalent) after passing through the clarifier and :math:`C_{TS_{flocculated}}` is the concentration of particles not removed by a tube settler after flocculation.  The exponent :math:`\frac{\forall_{\rm{Cleared}}}{\forall_{\rm{Surround}}}` increases as the volume surrounding each floc decreases. Thus the particle removal efficiency will increase as the floc concentration increases.
 
 .. _heading_Floc_Floc_Filter:
 

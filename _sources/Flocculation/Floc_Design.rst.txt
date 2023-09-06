@@ -55,7 +55,7 @@ Horizontal-Vertical flow flocculators
       - :math:`W_{Min, \, human}` minimum width of a single channel based on the width of the average human hip (someone's got to go down there...)
     - Find:
       - :math:`\theta`, hydraulic retention time
-      - :math:`\rlap{-}V_{floc}`, flocculator volume
+      - :math:`\forall_{floc}`, flocculator volume
       - :math:`h_{L_{floc}}`, head loss (independent of operating temperature)
 2. Physical dimensions
     - Calculate:
@@ -111,7 +111,7 @@ Flocculator length, :math:`L_{channel}`` must meet two constraints: it must be l
 .. math::
 
   L_{Max, \, sed} = 6 \, {\rm m}
-  L_{Max, \, \rlap{-}V} = \frac{\forall}{n_{Min, \, channels} W_{Min, \, human} H}
+  L_{Max, \, \forall} = \frac{\forall}{n_{Min, \, channels} W_{Min, \, human} H}
 
 | Such that:
 | :math:`n_{Min, \, channels} = 2`

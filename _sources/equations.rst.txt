@@ -23,7 +23,7 @@ Equation Quick Reference
     :eq:`V_floc_of_n_cp`, Fractal floc volume, :math:`\forall_{floc} = \forall_{cp} n_{cp}^\frac{3}{\Pi_{fractal}}`
     :eq:`vt_of_floc`, Floc terminal velocity, :math:`v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}`
     :eq:`Gmax_of_d_floc`, Max floc velocity gradient, :math:`G_{max} = \frac{4F_{bond}}{3 \pi \mu D_{floc_{max}}^2}`
-    :eq:`G_Camp_Stein`, Camp-Stein velocity, :math:`\tilde{G} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}`
+    :eq:`G_Camp_Stein`, Camp-Stein velocity, :math:`\tilde{G} = \sqrt{\frac{P}{\rho \nu \forall}}`
     :eq:`einstein_diffusion`, Einstein’s diffusion, :math:`D_{Diffusion} = \frac{k_B T}{3 \pi \mu D_P}`
     :eq:`cdc_tube_Q_max`, Linear CDC, :math:`Q_{Max Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}`
     :eq:`Q_tank_with_valve`, Tank with a valve, :math:`\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}`

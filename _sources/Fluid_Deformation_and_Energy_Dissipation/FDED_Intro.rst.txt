@@ -133,14 +133,14 @@ For turbulent flow and for flow expansions the amount of fluid deformation decre
 
 For mechanical mixing where an impeller or other stirring device is adding shaft work to a control volume we have
 
-.. math::  \bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \rlap{-}V}
+.. math::  \bar\varepsilon = \frac{P}{m} = \frac{P}{\rho \forall}
 
 | where
 | :math:`P` = power input into the control volume
 | :math:`m` = mass of fluid in the control volume
-| :math:`\rlap{-}V` = volume of the control volume
+| :math:`\forall` = volume of the control volume
 | :math:`\rho` = density of the fluid
 
 The Camp-Stein velocity gradient for a mechanically mixed reactor is
 
-.. math::  \tilde{G} = \sqrt{\frac{P}{\rho \nu \rlap{-}V}}
+.. math::  \tilde{G} = \sqrt{\frac{P}{\rho \nu \forall}}
