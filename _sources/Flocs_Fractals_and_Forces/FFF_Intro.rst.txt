@@ -108,7 +108,7 @@ The floc volume can be rewritten as a function of the floc diameter.
 .. math::
   :label: volume_floc_of_D
 
-  \rlap{-}V_{floc} =
+  \forall_{floc} =
   \frac{\pi}{6} D_{floc}^3
 
 The volume of core particles in the floc is a function of the number of core particles.
@@ -116,7 +116,7 @@ The volume of core particles in the floc is a function of the number of core par
 .. math::
   :label: volume_core_particles_of_D_1
 
-  \rlap{-}V_{n_{cp}} =
+  \forall_{n_{cp}} =
   n_{cp} \frac{\pi}{6} D_{cp}^3
 
 The number of core particles can be eliminated from Equation :eq:`volume_core_particles_of_D_1` by substituting Equation :eq:`n_cp_of_D_floc`.
@@ -124,7 +124,7 @@ The number of core particles can be eliminated from Equation :eq:`volume_core_pa
 .. math::
   :label: volume_core_particles_of_D
 
-  \rlap{-}V_{n_{cp}} =
+  \forall_{n_{cp}} =
   \frac{\pi}{6} D_{cp}^3 \left(\frac{D_{floc}}{D_{cp}}\right)^{\Pi_{fractal}}
 
 
@@ -193,17 +193,17 @@ The buoyant force is given by:
 .. math::
   :label: buoyant_force_on_sphere
 
-  F_{buoyant} = \rlap{-}V_{floc} \rho_{H_2O} g
+  F_{buoyant} = \forall_{floc} \rho_{H_2O} g
 
 The weight of the sphere is given by:
 
 .. math::
   :label: gravity_force_on_sphere
 
-  W_{floc} = \rlap{-}V_{floc} \rho_{floc} g
+  W_{floc} = \forall_{floc} \rho_{floc} g
 
 | Where:
-| :math:`\rlap{-}V_{floc} =` floc particle volume
+| :math:`\forall_{floc} =` floc particle volume
 | :math:`A_{floc} =` particle projected cross-sectional area
 | :math:`\rho_{floc} =` particle density
 | :math:`\rho_{H_2O} =` water density
@@ -216,7 +216,7 @@ Plugging into the original force balance,
 
 .. math::
 
-  \left [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} \right]+\left [\rlap{-}V_{floc} \rho_{H_2O} g\right ]-\left [\rlap{-}V_{floc} \rho_{floc} g \right] =0
+  \left [C_D A_{floc} \rho_{H_2O} \frac{v_t^2}{2} \right]+\left [\forall_{floc} \rho_{H_2O} g\right ]-\left [\forall_{floc} \rho_{floc} g \right] =0
 
 Solving for terminal velocity, :math:`v_t`, we obtain
 

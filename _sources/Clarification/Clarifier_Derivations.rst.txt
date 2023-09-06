@@ -107,29 +107,29 @@ To calculate the density of the floc filter at steady-state, we will use princip
 
 .. math::
 
-  C_{clay} = \frac{m_{clay}}{\rlap{-}V_{ff}}
+  C_{clay} = \frac{m_{clay}}{\forall_{ff}}
 
 .. math::
 
-  \rho = \frac{m_{TOT}}{\rlap{-}V}
+  \rho = \frac{m_{TOT}}{\forall}
 
 We will start by finding the mass of clay and the mass of water in the floc filter, where:
 
 | :math:`C_{clay} =` concentration of clay in the floc filter
-| :math:`\rlap{-}V_{ff} =` volume of floc filter
+| :math:`\forall_{ff} =` volume of floc filter
 | :math:`\rho_{clay} =` density of clay
 | :math:`\rho_{H_2O} =` density of water
 | :math:`\rho_{ff} =` density of floc filter
 
-The mass of clay in the floc filter is concentration multiplied by volume, shown by :math:`m_{clay} = C_{clay}\rlap{-}V_{ff}`
+The mass of clay in the floc filter is concentration multiplied by volume, shown by :math:`m_{clay} = C_{clay}\forall_{ff}`
 
-The mass of water in the floc filter is related to the volume fraction of the floc filter that is occupied by clay, :math:`\frac{C_{clay}}{\rho_{clay}}`, whic is a very small number. :math:`\left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)` is the fraction of the floc filter that is occupied by water, also called the water volume fraction. So, :math:`m_{H_2O} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right) \rho_{H_2O} \rlap{-}V_{ff}`.
+The mass of water in the floc filter is related to the volume fraction of the floc filter that is occupied by clay, :math:`\frac{C_{clay}}{\rho_{clay}}`, whic is a very small number. :math:`\left( 1 - \frac{C_{clay}}{\rho_{clay}} \right)` is the fraction of the floc filter that is occupied by water, also called the water volume fraction. So, :math:`m_{H_2O} = \left( 1 - \frac{C_{clay}}{\rho_{clay}} \right) \rho_{H_2O} \forall_{ff}`.
 
 Now, we know how much clay and water is in our system. The density of the system, neglecting the addition of coagulant, is,
 
 .. math::
 
-  \rho_{ff} = \frac{m_{clay} + m_{H_2O}}{\rlap{-}V_{ff}}
+  \rho_{ff} = \frac{m_{clay} + m_{H_2O}}{\forall_{ff}}
 
 Substituting for :math:`m_{clay}` and :math:`m_{H_2O}`,
 
