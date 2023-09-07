@@ -2,6 +2,7 @@ import os
 import sys
 
 sys.path.append(os.path.abspath("./_ext"))
+sys.path.append(os.path.abspath("../_ext"))
 
 # Configuration file for the Sphinx documentation builder.
 #
@@ -44,11 +45,12 @@ bibtex_default_style = 'alpha'
 disqus_shortname = 'AguaClara'
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build',
+                    'Thumbs.db',
+                    '.DS_Store',
+                    'AIDE/About']
 
-# If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
-technical_report = 'Technical_Report/lfom'
+technical_report = 'lfom'
 
 # root_doc = 'index'
 root_doc = technical_report
@@ -81,7 +83,7 @@ rinoh_documents = [
 # regardless of the global 'pdf_compressed' setting.
 
 pdf_documents = [
-    ('Technical_Report/lfom', 'AguaClara', 'AguaClara Textbook', 'AguaClara Reach'),
+    ('lfom', 'AguaClara', 'AguaClara Textbook', 'AguaClara Reach'),
 ]
 
 # A comma-separated list of custom stylesheets. Example:

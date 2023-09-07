@@ -7,14 +7,17 @@ SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = .
 BUILDDIR      = _build
+TECHNICALREPORT = Technical_Report
 
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+# pdf:
+# 	$(SPHINXBUILD) -b rinoh $(SPHINXOPTS) $(TECHNICALREPORT) "$(TECHNICALREPORT)"/pdf
+
 pdf:
-	$(SPHINXBUILD) -b rinoh $(SPHINXOPTS) "$(SOURCEDIR)" "$(BUILDDIR)"/pdf
-	@echo
-	@echo "Build finished. The PDF files are in _build/pdf."
+	$(SPHINXBUILD) -M latexpdf $(SPHINXOPTS) $(TECHNICALREPORT) "$(TECHNICALREPORT)"/_build/pdf
 
 .PHONY: help Makefile
 
