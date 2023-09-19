@@ -1,6 +1,7 @@
 from docutils import nodes
 from docutils.parsers.rst import Directive, roles
 from sphinx.util.docutils import SphinxDirective
+from jsonpath_ng import jsonpath, parse
 
 keyword_map = {
     "KEYWORD1": "Replacement1",
