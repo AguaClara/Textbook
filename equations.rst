@@ -22,15 +22,15 @@ Equation Quick Reference
     :eq:`minor_loss_equation`, Minor loss, :math:`{ {\rm{ \mathbf{Third form:} }} \quad h_e = \left( \frac{A_{out}}{A_{in}} -1 \right)^2 \frac{\bar v_{out}^2}{2g} = K_e \frac{\bar v_{out}^2}{2g} \quad {\rm where} \quad K_e = \left( \frac{A_{out}}{A_{in}} - 1 \right)^2 }`
     :eq:`V_floc_of_n_cp`, Fractal floc volume, :math:`\forall_{floc} = \forall_{cp} n_{cp}^\frac{3}{\Pi_{fractal}}`
     :eq:`vt_of_floc`, Floc terminal velocity, :math:`v_t = \frac{D_{cp}^2g}{18\nu}\frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}} \left( \frac{D_{floc}}{D_{cp}} \right) ^{\Pi_{fractal}-1}`
-    :eq:`Gmax_of_d_floc`, Max floc velocity gradient, :math:`G_{max} = \frac{4F_{bond}}{3 \pi \mu D_{floc_{max}}^2}`
+    :eq:`Gmax_of_d_floc`, max floc velocity gradient, :math:`G_{max} = \frac{4F_{bond}}{3 \pi \mu D_{floc_{max}}^2}`
     :eq:`G_Camp_Stein`, Camp-Stein velocity, :math:`\tilde{G} = \sqrt{\frac{P}{\rho \nu \forall}}`
     :eq:`einstein_diffusion`, Einstein’s diffusion, :math:`D_{Diffusion} = \frac{k_B T}{3 \pi \mu D_P}`
-    :eq:`cdc_tube_Q_max`, Linear CDC, :math:`Q_{Max Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}`
+    :eq:`cdc_tube_Q_max`, Linear CDC, :math:`Q_{max Tube} = \frac{\pi D^2}{4} \sqrt{\frac{2 h_L g \Pi_{Error}}{\sum{K} }}`
     :eq:`Q_tank_with_valve`, Tank with a valve, :math:`\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}`
     :eq:`power_of_Q_h`, Mechanical power, :math:`P = \rho g Q \Delta h`
     :eq:`Q_max_served_per_injection_port`, Flow per chemical injection port, :math:`Q_{mixer} = g h_e t_{eddy}^2 \bar v_{exp}`
     :eq:`Gtheta_of_hL`, Collision potential, :math:`\tilde{G} \theta = \sqrt{\frac{g h_L \theta}{\nu}}`
-    :eq:`W_min_HVFloc`, Channel width, :math:`W_{Min \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}`
+    :eq:`W_min_HVFloc`, Channel width, :math:`W_{min \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}`
     :eq:`floc_He_max_const_K`, Distance between expansions, :math:`H_{e_{max}} = \left[ \frac{K}{2 \nu \tilde{G}^2} \left( \frac{Q \Pi_{{HS}_{max}}}{W_{channel}} \right)^3 \right]^\frac{1}{4}`
     :eq:`Floc_baffle_spacing_of_K`, Baffle spacing, :math:`S = \left( \frac{K}{2 H_e \tilde{G}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W_{channel}}`
     :eq:`planejet_v_max_of_q`, Maximum jet velocity , :math:`\bar v_{Jet_{max}} = \left(\frac{q\nu G_{max}^2}{\Pi_{JetPlane} }\right)^\frac{1}{4}`
