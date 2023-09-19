@@ -106,7 +106,7 @@ StaRS filters come in two configuration parameters. Open StaRS (OStaRS) are used
 .. _table_Net_Velocities:
 
 .. csv-table:: Relative velocities and areas for different unit processes.
-   :header: Filter Type, Velocity (mm/s), Cleaning (mm/s), Max (NTU), pC*, Area :math:`(m^2)` for 1 L/s
+   :header: Filter Type, Velocity (mm/s), Cleaning (mm/s), max (NTU), pC*, Area :math:`(m^2)` for 1 L/s
    :widths: 20, 20, 20, 20, 20, 20
    :align: left
 
