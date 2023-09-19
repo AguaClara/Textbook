@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coagulant Automation &mdash; AguaClara 362/merge documentation</title>
+  <title>Coagulant Automation &mdash; AguaClara 363/merge documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=2c937b43"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=3cd6438d"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -36,7 +36,7 @@
             AguaClara
           </a>
               <div class="version">
-                362/merge
+                363/merge
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -197,43 +197,43 @@
 <h2>Coagulant Dose for Suspended Particles<a class="headerlink" href="#coagulant-dose-for-suspended-particles" title="Permalink to this heading"></a></h2>
 <p>The relationship between attachment efficiency and primary particle concentration after flocculation is given by Equation <a class="reference internal" href="../Flocculation/Floc_Model.html#equation-cpofgtlamsim">(481)</a>. For the simple case of no coagulant demand by dissolved organic matter it is reasonable to assume that the attachment efficiency is proportional to the ratio of the coagulant dose to the surface area of the particles in the raw water and the particle surface area is proportional to the particle concentration.</p>
 <div class="math notranslate nohighlight" id="equation-coverageofdoseandcp">
-<span class="eqno">(810)<a class="headerlink" href="#equation-coverageofdoseandcp" title="Permalink to this equation"></a></span>\[\bar{\alpha} = k' \frac{C_{coag_{particle}}}{C_{P_0}}.\]</div>
+<span class="eqno">(811)<a class="headerlink" href="#equation-coverageofdoseandcp" title="Permalink to this equation"></a></span>\[\bar{\alpha} = k' \frac{C_{coag_{particle}}}{C_{P_0}}.\]</div>
 <p>This coagulant dose only refers to the coagulant that will end up coating the suspended particles. The coagulant nanoparticles that are coated by dissolved organic matter will be considered in the next section.</p>
 <p>The result of the AguaClara flocculation model (Equation <a class="reference internal" href="../Flocculation/Floc_Model.html#equation-cplamint">(478)</a>) is repeated here for convenience.</p>
 <div class="math notranslate nohighlight" id="equation-cplamintcopied">
-<span class="eqno">(811)<a class="headerlink" href="#equation-cplamintcopied" title="Permalink to this equation"></a></span>\[\frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)=k\bar{\alpha}\tilde{G}\theta.\]</div>
-<p>Substituting Equation <a class="reference internal" href="#equation-coverageofdoseandcp">(810)</a> and solving for the coagulant dose we obtain</p>
+<span class="eqno">(812)<a class="headerlink" href="#equation-cplamintcopied" title="Permalink to this equation"></a></span>\[\frac{3}{2\pi}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)=k\bar{\alpha}\tilde{G}\theta.\]</div>
+<p>Substituting Equation <a class="reference internal" href="#equation-coverageofdoseandcp">(811)</a> and solving for the coagulant dose we obtain</p>
 <div class="math notranslate nohighlight" id="equation-ccoagflocmodel">
-<span class="eqno">(812)<a class="headerlink" href="#equation-ccoagflocmodel" title="Permalink to this equation"></a></span>\[C_{coag_{particle}} =  \frac{3}{2\pi  k k' \tilde{G}\theta}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right).\]</div>
+<span class="eqno">(813)<a class="headerlink" href="#equation-ccoagflocmodel" title="Permalink to this equation"></a></span>\[C_{coag_{particle}} =  \frac{3}{2\pi  k k' \tilde{G}\theta}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right).\]</div>
 <p>The primary particle properties and flocculator design terms can be treated as a single unknown, <span class="math notranslate nohighlight">\(k_{pf}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-kpf">
-<span class="eqno">(813)<a class="headerlink" href="#equation-kpf" title="Permalink to this equation"></a></span>\[k_{pf} =  \frac{3}{2\pi  k k' \tilde{G}\theta}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\]</div>
-<p>Thus Equation <a class="reference internal" href="#equation-ccoagflocmodel">(812)</a> simplifies to</p>
+<span class="eqno">(814)<a class="headerlink" href="#equation-kpf" title="Permalink to this equation"></a></span>\[k_{pf} =  \frac{3}{2\pi  k k' \tilde{G}\theta}\left(\rho_{P}\frac{\pi}{6}\right)^{2/3}\]</div>
+<p>Thus Equation <a class="reference internal" href="#equation-ccoagflocmodel">(813)</a> simplifies to</p>
 <div class="math notranslate nohighlight" id="equation-ccoagkpf">
-<span class="eqno">(814)<a class="headerlink" href="#equation-ccoagkpf" title="Permalink to this equation"></a></span>\[C_{coag_{particle}} =  k_{pf} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)\]</div>
+<span class="eqno">(815)<a class="headerlink" href="#equation-ccoagkpf" title="Permalink to this equation"></a></span>\[C_{coag_{particle}} =  k_{pf} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right)\]</div>
 </section>
 <section id="coagulant-dose-for-dissolved-organic-matter">
 <h2>Coagulant Dose for Dissolved Organic Matter<a class="headerlink" href="#coagulant-dose-for-dissolved-organic-matter" title="Permalink to this heading"></a></h2>
 <p>The next improvement in this simple model is to add a correction factor for dissolved organic matter. The dissolved organic matter effectively inactivates some of the coagulant. The dissolved organic matter is measured as absorbance at 254 nm. The amount of coagulant that is tied up with dissolved organic matter is</p>
 <div class="math notranslate nohighlight" id="equation-uv-coag-consumed">
-<span class="eqno">(815)<a class="headerlink" href="#equation-uv-coag-consumed" title="Permalink to this equation"></a></span>\[C_{coag_{DOM}}  = A_{254nm} K_{DOM}\]</div>
-<p>The dissolved organic matter simply reduces the amount of coagulant that is available to make the inorganic particles sticky. The required coagulant dose can be obtained by adding <span class="math notranslate nohighlight">\(C_{coag_{DOM}}\)</span> to Equation <a class="reference internal" href="#equation-ccoagkpf">(814)</a>.</p>
+<span class="eqno">(816)<a class="headerlink" href="#equation-uv-coag-consumed" title="Permalink to this equation"></a></span>\[C_{coag_{DOM}}  = A_{254nm} K_{DOM}\]</div>
+<p>The dissolved organic matter simply reduces the amount of coagulant that is available to make the inorganic particles sticky. The required coagulant dose can be obtained by adding <span class="math notranslate nohighlight">\(C_{coag_{DOM}}\)</span> to Equation <a class="reference internal" href="#equation-ccoagkpf">(815)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-ccoagtotal">
-<span class="eqno">(816)<a class="headerlink" href="#equation-ccoagtotal" title="Permalink to this equation"></a></span>\[C_{coag} =  k_{pf} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right) + C_{coag_{DOM}}\]</div>
+<span class="eqno">(817)<a class="headerlink" href="#equation-ccoagtotal" title="Permalink to this equation"></a></span>\[C_{coag} =  k_{pf} C_{P_0} \left(C_{P}^{-2/3}-C_{P_0}^{-2/3}\right) + C_{coag_{DOM}}\]</div>
 <p>One method to estimate <span class="math notranslate nohighlight">\(K_{DOM}\)</span> is based on the experimental results obtained by Yingda Du (see <a class="reference internal" href="../Flocculation/Floc_Model.html#figure-floc-model-ha"><span class="std std-numref">Fig. 124</span></a> <a class="reference external" href="https://www.liebertpub.com/doi/abs/10.1089/ees.2018.0405">by Yingda Du, et al., 2019</a>). Those results suggest that approximately 1 mg/L of aluminum is required to tie up 12 mg/L of humic acid.  The humic acid concentration was based on the dry weight and humic acid is approximately 48% carbon. Thus 6 mg of humic acid as carbon require 1 mg/L of aluminum. The absorbance at 254 nm was measured by <a class="reference external" href="https://core.ac.uk/reader/55618110?utm_source=linkout">Rodrigues. et al., 2008</a>  to be 0.055(humic acid as carbon in mg/L). Thus <span class="math notranslate nohighlight">\(0.33A_{254nm}\)</span> is expected to consume 1 mg/L of aluminum where <span class="math notranslate nohighlight">\(A_{254nm}\)</span> is the UV 254 absorbance in a 1 cm sample cell. The remaining required conversion is from the concentration of aluminum to the coagulant dose as measured at the water treatment plant.</p>
-<p>Equation <a class="reference internal" href="#equation-ccoagtotal">(816)</a> can be rewritten with subscripts that indicate when and where the samples are taken for the application of automatic coagulant dosing. The tube settler turbidity in the future, <span class="math notranslate nohighlight">\(C_{TS_{flocculated_{t + \theta}}}\)</span> is the target turbidity of flocculated water after passing through a tube settler that we are trying to obtain.</p>
+<p>Equation <a class="reference internal" href="#equation-ccoagtotal">(817)</a> can be rewritten with subscripts that indicate when and where the samples are taken for the application of automatic coagulant dosing. The tube settler turbidity in the future, <span class="math notranslate nohighlight">\(C_{TS_{flocculated_{t + \theta}}}\)</span> is the target turbidity of flocculated water after passing through a tube settler that we are trying to obtain.</p>
 <div class="math notranslate nohighlight" id="equation-ccoagplantflocculatedts">
-<span class="eqno">(817)<a class="headerlink" href="#equation-ccoagplantflocculatedts" title="Permalink to this equation"></a></span>\[C_{coag_{t}} = k_{pf} C_{raw_{t}} \left(C_{TS_{flocculated_{t + \theta}}}^{-2/3}-C_{raw_{t}}^{-2/3}\right) + C_{coag_{DOM_{t}}}\]</div>
-<p>Equation <a class="reference internal" href="#equation-ccoagplantflocculatedts">(817)</a> reveals that there is an important time lag due to the hydraulic retention time between the coagulant injection and the clarified water sample. This time lag will require that the dosing algorithm include data from the recent history to account for this time offset.</p>
+<span class="eqno">(818)<a class="headerlink" href="#equation-ccoagplantflocculatedts" title="Permalink to this equation"></a></span>\[C_{coag_{t}} = k_{pf} C_{raw_{t}} \left(C_{TS_{flocculated_{t + \theta}}}^{-2/3}-C_{raw_{t}}^{-2/3}\right) + C_{coag_{DOM_{t}}}\]</div>
+<p>Equation <a class="reference internal" href="#equation-ccoagplantflocculatedts">(818)</a> reveals that there is an important time lag due to the hydraulic retention time between the coagulant injection and the clarified water sample. This time lag will require that the dosing algorithm include data from the recent history to account for this time offset.</p>
 </section>
 <section id="simple-corrector-method">
 <h2>Simple Corrector Method<a class="headerlink" href="#simple-corrector-method" title="Permalink to this heading"></a></h2>
-<p>An estimate for the coagulant demand of the DOM is obtained by solving Equation <a class="reference internal" href="#equation-ccoagplantflocculatedts">(817)</a> for <span class="math notranslate nohighlight">\(C_{coag_{DOM_{t}}}\)</span> and shifting the time to one hydraulic residence time earlier.</p>
+<p>An estimate for the coagulant demand of the DOM is obtained by solving Equation <a class="reference internal" href="#equation-ccoagplantflocculatedts">(818)</a> for <span class="math notranslate nohighlight">\(C_{coag_{DOM_{t}}}\)</span> and shifting the time to one hydraulic residence time earlier.</p>
 <div class="math notranslate nohighlight" id="equation-domcoagdemand">
-<span class="eqno">(818)<a class="headerlink" href="#equation-domcoagdemand" title="Permalink to this equation"></a></span>\[C_{coag_{DOM_{t-\theta}}} = C_{coag_{t-\theta}} - k_{pf} C_{raw_{t-\theta}} \left(C_{TS_{flocculated_{t}}}^{-2/3}-C_{raw_{t-\theta}}^{-2/3}\right)\]</div>
-<p>Given the estimate of the DOM coagulant demand a hydraulic residence time earlier we can obtain an estimate of the current required coagulant dose. We will use Equation <a class="reference internal" href="#equation-ccoagplantflocculatedts">(817)</a> and the assumption that the coagulant DOM demand doesn’t change significantly in one hydraulic residence time. The <span class="math notranslate nohighlight">\(C_{TS_{flocculated_{t + \theta}}\)</span> is the target tube settler turbidity.</p>
+<span class="eqno">(819)<a class="headerlink" href="#equation-domcoagdemand" title="Permalink to this equation"></a></span>\[C_{coag_{DOM_{t-\theta}}} = C_{coag_{t-\theta}} - k_{pf} C_{raw_{t-\theta}} \left(C_{TS_{flocculated_{t}}}^{-2/3}-C_{raw_{t-\theta}}^{-2/3}\right)\]</div>
+<p>Given the estimate of the DOM coagulant demand a hydraulic residence time earlier we can obtain an estimate of the current required coagulant dose. We will use Equation <a class="reference internal" href="#equation-ccoagplantflocculatedts">(818)</a> and the assumption that the coagulant DOM demand doesn’t change significantly in one hydraulic residence time. The <span class="math notranslate nohighlight">\(C_{TS_{flocculated_{t + \theta}}\)</span> is the target tube settler turbidity.</p>
 <div class="math notranslate nohighlight" id="equation-ccoagplantofdom">
-<span class="eqno">(819)<a class="headerlink" href="#equation-ccoagplantofdom" title="Permalink to this equation"></a></span>\[C_{coag_{t}} =  k_{pf} C_{raw_{t}} \left(C_{TS_{flocculated_{t + \theta}}}^{-2/3}-C_{raw_{t}}^{-2/3}\right) + C_{coag_{DOM_{t-\theta}}}\]</div>
+<span class="eqno">(820)<a class="headerlink" href="#equation-ccoagplantofdom" title="Permalink to this equation"></a></span>\[C_{coag_{t}} =  k_{pf} C_{raw_{t}} \left(C_{TS_{flocculated_{t + \theta}}}^{-2/3}-C_{raw_{t}}^{-2/3}\right) + C_{coag_{DOM_{t-\theta}}}\]</div>
 <p>The coagulant dosing system must include guardrails to ensure that the coagulant dose is within a reasonable range. The potential failures include:</p>
 <blockquote>
 <div><ul class="simple">
@@ -249,42 +249,42 @@
 <li><p>Acquire data at some high rate (perhaps 1 s intervals)</p></li>
 <li><p>Set the number of coagulant dose updates per hydraulic residence time (HRT) (perhaps 10) and average the incoming data to that update interval</p></li>
 <li><p>Hold the averaged data in a buffer with each data set including a time stamp.</p></li>
-<li><p>For each coagulant dose update use Equation <a class="reference internal" href="#equation-domcoagdemand">(818)</a> to estimate the coagulant demand of the DOM and then use Equation <a class="reference internal" href="#equation-ccoagplantofdom">(819)</a> to estimate the new coagulant dose.</p></li>
+<li><p>For each coagulant dose update use Equation <a class="reference internal" href="#equation-domcoagdemand">(819)</a> to estimate the coagulant demand of the DOM and then use Equation <a class="reference internal" href="#equation-ccoagplantofdom">(820)</a> to estimate the new coagulant dose.</p></li>
 </ol>
 </section>
 </section>
 <section id="floc-filtration-modification">
 <h2>Floc Filtration Modification<a class="headerlink" href="#floc-filtration-modification" title="Permalink to this heading"></a></h2>
-<p>We hypothesize that there is significant particle removal by floc filtration both in conventional sedimentation tanks and in the floc filter of the AguaClara clarifier. This means that the <span class="math notranslate nohighlight">\(C_{TS_{flocculated_{t + \theta}}}\)</span> is not a constant value, since it needs to account for the removal efficiency of the floc filter. Equation <a class="reference internal" href="#equation-removal-in-sequential-floc-sed">(820)</a> calculates the total removal based on performance</p>
+<p>We hypothesize that there is significant particle removal by floc filtration both in conventional sedimentation tanks and in the floc filter of the AguaClara clarifier. This means that the <span class="math notranslate nohighlight">\(C_{TS_{flocculated_{t + \theta}}}\)</span> is not a constant value, since it needs to account for the removal efficiency of the floc filter. Equation <a class="reference internal" href="#equation-removal-in-sequential-floc-sed">(821)</a> calculates the total removal based on performance</p>
 <div class="math notranslate nohighlight" id="equation-removal-in-sequential-floc-sed">
-<span class="eqno">(820)<a class="headerlink" href="#equation-removal-in-sequential-floc-sed" title="Permalink to this equation"></a></span>\[C_{TS_{flocFiltered}} =  C_{raw} \frac{C_{TS_{flocculated}}}{ C_{raw}} \frac{ C_{TS_{flocFiltered}}}{C_{TS_{flocculated}}}\]</div>
+<span class="eqno">(821)<a class="headerlink" href="#equation-removal-in-sequential-floc-sed" title="Permalink to this equation"></a></span>\[C_{TS_{flocFiltered}} =  C_{raw} \frac{C_{TS_{flocculated}}}{ C_{raw}} \frac{ C_{TS_{flocFiltered}}}{C_{TS_{flocculated}}}\]</div>
 <p>where it is understood that these water samples are all passed through a tube settler, TS, before measuring the particle concentration.</p>
-<p>Instead of setting a target for <span class="math notranslate nohighlight">\(C_{TS_{flocculated}}\)</span> we will set a target for <span class="math notranslate nohighlight">\(C_{TS_{flocFiltered}}\)</span>. Equation <a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html#equation-sed-floc-filter-cp-removal">(623)</a> describes particle removal by settling flocs. The Equation <a class="reference internal" href="../Flocculation/Floc_Intro.html#equation-eq-spacing-of-diameter">(447)</a> gives the relationship between floc concentration and its surrounding volume.</p>
+<p>Instead of setting a target for <span class="math notranslate nohighlight">\(C_{TS_{flocculated}}\)</span> we will set a target for <span class="math notranslate nohighlight">\(C_{TS_{flocFiltered}}\)</span>. Equation <a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html#equation-sed-floc-filter-cp-removal">(624)</a> describes particle removal by settling flocs. The Equation <a class="reference internal" href="../Flocculation/Floc_Intro.html#equation-eq-spacing-of-diameter">(447)</a> gives the relationship between floc concentration and its surrounding volume.</p>
 <div class="math notranslate nohighlight" id="equation-surround-volume-of-cp">
-<span class="eqno">(821)<a class="headerlink" href="#equation-surround-volume-of-cp" title="Permalink to this equation"></a></span>\[\forall_{\rm{Surround}} =   \bar{D_P}^3 \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)\]</div>
-<p>The <span class="math notranslate nohighlight">\(\forall_{\rm{Surround}}\)</span> is for the flocs that will be falling through the suspension. Thus it does not include the particles that are too small to settle significantly. The surrounding volume for the flocs in the sedimentation tank  <span class="math notranslate nohighlight">\(\forall_{\rm{Surround}}\)</span> is a function of the floc concentration, <span class="math notranslate nohighlight">\(\left( C_{raw} - C_{TS_{flocculated}} \right)\)</span>. From Equation <a class="reference internal" href="#equation-surround-volume-of-cp">(821)</a> we have</p>
+<span class="eqno">(822)<a class="headerlink" href="#equation-surround-volume-of-cp" title="Permalink to this equation"></a></span>\[\forall_{\rm{Surround}} =   \bar{D_P}^3 \left(\frac{\pi}{6}\frac{\rho_P}{C_P}\right)\]</div>
+<p>The <span class="math notranslate nohighlight">\(\forall_{\rm{Surround}}\)</span> is for the flocs that will be falling through the suspension. Thus it does not include the particles that are too small to settle significantly. The surrounding volume for the flocs in the sedimentation tank  <span class="math notranslate nohighlight">\(\forall_{\rm{Surround}}\)</span> is a function of the floc concentration, <span class="math notranslate nohighlight">\(\left( C_{raw} - C_{TS_{flocculated}} \right)\)</span>. From Equation <a class="reference internal" href="#equation-surround-volume-of-cp">(822)</a> we have</p>
 <div class="math notranslate nohighlight" id="equation-surround-volume-of-raw-flocculated">
-<span class="eqno">(822)<a class="headerlink" href="#equation-surround-volume-of-raw-flocculated" title="Permalink to this equation"></a></span>\[{\forall_{\rm{Surround}}} =  \bar{D_P}^3 \left(\frac{\pi}{6}\frac{\rho_P}{C_{raw} - C_{TS_{flocculated}}}\right)\]</div>
+<span class="eqno">(823)<a class="headerlink" href="#equation-surround-volume-of-raw-flocculated" title="Permalink to this equation"></a></span>\[{\forall_{\rm{Surround}}} =  \bar{D_P}^3 \left(\frac{\pi}{6}\frac{\rho_P}{C_{raw} - C_{TS_{flocculated}}}\right)\]</div>
 <p>The volume cleared can also be thought of as inversely proportional to a high turbidity where the <span class="math notranslate nohighlight">\(\forall_{\rm{Surround}}\)</span> is equal to the <span class="math notranslate nohighlight">\(\forall_{\rm{Cleared}}\)</span>. We designate this concentration or turbidity as <span class="math notranslate nohighlight">\(C_{Cleared}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-cleared-volume-as-c-equivalent">
-<span class="eqno">(823)<a class="headerlink" href="#equation-cleared-volume-as-c-equivalent" title="Permalink to this equation"></a></span>\[\forall_{\rm{Cleared}} =  \bar{D_P}^3 \left(\frac{\pi}{6}\frac{\rho_P}{C_{Cleared}}\right)\]</div>
-<p>Combining Equations <a class="reference internal" href="#equation-surround-volume-of-raw-flocculated">(822)</a> and <a class="reference internal" href="#equation-cleared-volume-as-c-equivalent">(823)</a> we obtain</p>
+<span class="eqno">(824)<a class="headerlink" href="#equation-cleared-volume-as-c-equivalent" title="Permalink to this equation"></a></span>\[\forall_{\rm{Cleared}} =  \bar{D_P}^3 \left(\frac{\pi}{6}\frac{\rho_P}{C_{Cleared}}\right)\]</div>
+<p>Combining Equations <a class="reference internal" href="#equation-surround-volume-of-raw-flocculated">(823)</a> and <a class="reference internal" href="#equation-cleared-volume-as-c-equivalent">(824)</a> we obtain</p>
 <div class="math notranslate nohighlight" id="equation-volume-ratio-as-concentration-ratio">
-<span class="eqno">(824)<a class="headerlink" href="#equation-volume-ratio-as-concentration-ratio" title="Permalink to this equation"></a></span>\[\frac{\forall_{\rm{Cleared}}}{\forall_{\rm{Surround}}} = \frac{C_{raw} - C_{TS_{flocculated}}}{C_{Cleared}}\]</div>
-<p>Now we can simplify Equation <a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html#equation-sed-floc-filter-cp-removal">(623)</a> by substituting in Equation <a class="reference internal" href="#equation-volume-ratio-as-concentration-ratio">(824)</a>.</p>
+<span class="eqno">(825)<a class="headerlink" href="#equation-volume-ratio-as-concentration-ratio" title="Permalink to this equation"></a></span>\[\frac{\forall_{\rm{Cleared}}}{\forall_{\rm{Surround}}} = \frac{C_{raw} - C_{TS_{flocculated}}}{C_{Cleared}}\]</div>
+<p>Now we can simplify Equation <a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html#equation-sed-floc-filter-cp-removal">(624)</a> by substituting in Equation <a class="reference internal" href="#equation-volume-ratio-as-concentration-ratio">(825)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-what-is-this">
-<span class="eqno">(825)<a class="headerlink" href="#equation-what-is-this" title="Permalink to this equation"></a></span>\[\frac{ C_{TS_{flocFiltered}}}{C_{TS_{flocculated}}} =  \left( \frac{1}{e} \right)^\frac{\forall_{\rm{Cleared}}}{\forall_{\rm{Surround}}}\]</div>
+<span class="eqno">(826)<a class="headerlink" href="#equation-what-is-this" title="Permalink to this equation"></a></span>\[\frac{ C_{TS_{flocFiltered}}}{C_{TS_{flocculated}}} =  \left( \frac{1}{e} \right)^\frac{\forall_{\rm{Cleared}}}{\forall_{\rm{Surround}}}\]</div>
 <p>A possible solution method is to use a running approximation for the exponential term based on the previous measurement of  <span class="math notranslate nohighlight">\(C_{TS_{flocculated}}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-c-ts-flocculated-of-flocfiltered">
-<span class="eqno">(826)<a class="headerlink" href="#equation-c-ts-flocculated-of-flocfiltered" title="Permalink to this equation"></a></span>\[C_{TS_{flocculated_{t + \theta}}} = C_{TS_{flocFiltered_{t + \theta}}}  e^\frac{C_{raw_{t - \theta}} - C_{TS_{flocculated_{t}}}}{C_{Cleared}}\]</div>
-<p>The value of <span class="math notranslate nohighlight">\(C_{TS_{flocFiltered_{t + \theta}}}\)</span> is the target performance for the water leaving the conventional sedimentation tank. At each time step first use Equation <a class="reference internal" href="#equation-c-ts-flocculated-of-flocfiltered">(826)</a> to obtain an estimate of the target for the turbidity after flocculation and a tube settler, <span class="math notranslate nohighlight">\(C_{TS_{flocculated_{t + \theta}}}\)</span>. The result from Equation <a class="reference internal" href="#equation-c-ts-flocculated-of-flocfiltered">(826)</a> can then be substituted into Equation <a class="reference internal" href="#equation-ccoagplantofdom">(819)</a> to calculate the new coagulant dose.</p>
+<span class="eqno">(827)<a class="headerlink" href="#equation-c-ts-flocculated-of-flocfiltered" title="Permalink to this equation"></a></span>\[C_{TS_{flocculated_{t + \theta}}} = C_{TS_{flocFiltered_{t + \theta}}}  e^\frac{C_{raw_{t - \theta}} - C_{TS_{flocculated_{t}}}}{C_{Cleared}}\]</div>
+<p>The value of <span class="math notranslate nohighlight">\(C_{TS_{flocFiltered_{t + \theta}}}\)</span> is the target performance for the water leaving the conventional sedimentation tank. At each time step first use Equation <a class="reference internal" href="#equation-c-ts-flocculated-of-flocfiltered">(827)</a> to obtain an estimate of the target for the turbidity after flocculation and a tube settler, <span class="math notranslate nohighlight">\(C_{TS_{flocculated_{t + \theta}}}\)</span>. The result from Equation <a class="reference internal" href="#equation-c-ts-flocculated-of-flocfiltered">(827)</a> can then be substituted into Equation <a class="reference internal" href="#equation-ccoagplantofdom">(820)</a> to calculate the new coagulant dose.</p>
 <p>Still need to figure out the correction method for
 Need to think carefully about the time for measurement of each of these parameters and the various <span class="math notranslate nohighlight">\(\theta\)</span> involved.</p>
 <div class="math notranslate nohighlight" id="equation-stepping-c-ts-flocculated-of-flocfiltered">
-<span class="eqno">(827)<a class="headerlink" href="#equation-stepping-c-ts-flocculated-of-flocfiltered" title="Permalink to this equation"></a></span>\[C_{TS_{flocculated}} = C_{TS_{flocFiltered}}  e^\frac{C_{raw} - C_{TS_{flocculated}}}{C_{Cleared}}\]</div>
+<span class="eqno">(828)<a class="headerlink" href="#equation-stepping-c-ts-flocculated-of-flocfiltered" title="Permalink to this equation"></a></span>\[C_{TS_{flocculated}} = C_{TS_{flocFiltered}}  e^\frac{C_{raw} - C_{TS_{flocculated}}}{C_{Cleared}}\]</div>
 <p>Unfortunately this can’t be solved for <span class="math notranslate nohighlight">\(C_{TS_{flocculated}}\)</span>, but we can solve for the settled water turbidity, <span class="math notranslate nohighlight">\(C_{TS_{flocFiltered}}\)</span>. We invert the fraction and put a negative sign in the exponent.</p>
 <div class="math notranslate nohighlight" id="equation-operation-coagulant-automation-0">
-<span class="eqno">(828)<a class="headerlink" href="#equation-operation-coagulant-automation-0" title="Permalink to this equation"></a></span>\[C_{TS_{flocFiltered}} =  C_{TS_{flocculated}} e^\frac{C_{TS_{flocculated}} - C_{raw}}{C_{Cleared}}\]</div>
+<span class="eqno">(829)<a class="headerlink" href="#equation-operation-coagulant-automation-0" title="Permalink to this equation"></a></span>\[C_{TS_{flocFiltered}} =  C_{TS_{flocculated}} e^\frac{C_{TS_{flocculated}} - C_{raw}}{C_{Cleared}}\]</div>
 </section>
 </section>
 

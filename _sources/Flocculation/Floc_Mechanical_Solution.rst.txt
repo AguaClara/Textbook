@@ -90,7 +90,7 @@ You may assume that the relative velocity between propeller and water is equal t
 
 The maximum energy dissipation rate behind the propeller tip is 430 mW/kg
 
-**5) Calculate the ratio** of maximum to average energy dissipation rate (henceforth referred to as Max/Ave EDR) and the ratio of maximum to average velocity gradient (Max/Ave G) for the mechanical flocculator described above. What is the relationship between the two ratios?
+**5) Calculate the ratio** of maximum to average energy dissipation rate (henceforth referred to as max/Ave EDR) and the ratio of maximum to average velocity gradient (max/Ave G) for the mechanical flocculator described above. What is the relationship between the two ratios?
 
 `Colab worksheet calculating the velocity gradient ratios <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=9Z7jG1xcxCG2&line=6&uniqifier=1>`_
 
@@ -99,7 +99,7 @@ The ratio of maximum to average velocity gradient is 8.2
 
 SOLUTION NOTE: this information is found on extra slide 48 in the Flocculator Design slides, heading is “Results of the the CFD analysis and our model equations.”
 
-High ratios of Max/Ave for velocity gradients (and therefore also energy dissipation rates) are common in both mechanical and hydraulic flocculators. A high velocity gradient ratio is a poor design for two reasons. - This high Max/Ave G results in significant inefficiency in the use of energy for flocculation. This inefficiency requires longer residence times and/or more energy input to achieve the same extent of flocculation.
+High ratios of max/Ave for velocity gradients (and therefore also energy dissipation rates) are common in both mechanical and hydraulic flocculators. A high velocity gradient ratio is a poor design for two reasons. - This high max/Ave G results in significant inefficiency in the use of energy for flocculation. This inefficiency requires longer residence times and/or more energy input to achieve the same extent of flocculation.
 
 The high energy dissipation rate in the propeller wake limits the amount of energy that can be dissipated without causing excessive floc breakup. Excessive floc breakup produces flocs that are too small to be captured by the clarifier.
 
@@ -111,7 +111,7 @@ These results also suggest that the traditional emphasis on maintaining the same
 
 **6) A mechanical flocculator** is treating high turbidity water, and therefore is using an average G value of 180 Hz.
 
-If the design guidelines for maximum G for mechanical flocculators are correct and are based on floc breakup, then what is the largest average G that could be used for a well designed hydraulic flocculator with a Max/Ave G of :math:`\sqrt{2}`?
+If the design guidelines for maximum G for mechanical flocculators are correct and are based on floc breakup, then what is the largest average G that could be used for a well designed hydraulic flocculator with a max/Ave G of :math:`\sqrt{2}`?
 
 Note: important distinctions to make are: - maximum G vs average G - mechanical vs hydraulic flocculators. Conceptual thought coupled with pencil and paper are recommended.
 

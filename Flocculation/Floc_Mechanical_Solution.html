@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mechanical Flocculator Solution &mdash; AguaClara 362/merge documentation</title>
+  <title>Mechanical Flocculator Solution &mdash; AguaClara 363/merge documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=2c937b43"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=3cd6438d"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -36,7 +36,7 @@
             AguaClara
           </a>
               <div class="version">
-                362/merge
+                363/merge
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -247,22 +247,22 @@ removal</p></td>
 <p>The wake behind the propeller or paddle is similar in size to the small dimension of the propeller or paddle normal to the velocity. Thus we can use the propeller height to estimate the energy dissipation rate of the plate wake. The relative velocity between the wake and the surrounding fluid is approximately equal to the propeller velocity.</p>
 <p>Calculate the maximum energy dissipation rate that occurs in the wake behind the tip of a propeller which has a height of 3 cm and is moving at 3 ft/s. In this case, assume that the plate ratio for the maximum energy dissipation rate in the wake, <span class="math notranslate nohighlight">\(\Pi_{Plate}\)</span>, is 0.04.</p>
 <div class="math notranslate nohighlight" id="equation-flocculation-floc-mechanical-solution-0">
-<span class="eqno">(534)<a class="headerlink" href="#equation-flocculation-floc-mechanical-solution-0" title="Permalink to this equation"></a></span>\[\epsilon=\Pi_{Plate}\frac{\left ( V  \right )^{3}}{W_{Plate}}\]</div>
+<span class="eqno">(535)<a class="headerlink" href="#equation-flocculation-floc-mechanical-solution-0" title="Permalink to this equation"></a></span>\[\epsilon=\Pi_{Plate}\frac{\left ( V  \right )^{3}}{W_{Plate}}\]</div>
 <p>You may assume that the relative velocity between propeller and water is equal to 75% of the propeller velocity.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-DSq8HEHw-su&amp;line=5&amp;uniqifier=1">Colab worksheet calculating the propeller energy dissipation rate</a></p>
 <p>The maximum energy dissipation rate behind the propeller tip is 430 mW/kg</p>
-<p><strong>5) Calculate the ratio</strong> of maximum to average energy dissipation rate (henceforth referred to as Max/Ave EDR) and the ratio of maximum to average velocity gradient (Max/Ave G) for the mechanical flocculator described above. What is the relationship between the two ratios?</p>
+<p><strong>5) Calculate the ratio</strong> of maximum to average energy dissipation rate (henceforth referred to as max/Ave EDR) and the ratio of maximum to average velocity gradient (max/Ave G) for the mechanical flocculator described above. What is the relationship between the two ratios?</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=9Z7jG1xcxCG2&amp;line=6&amp;uniqifier=1">Colab worksheet calculating the velocity gradient ratios</a></p>
 <p>The ratio of maximum to average energy dissipation rate is 67.5
 The ratio of maximum to average velocity gradient is 8.2</p>
 <p>SOLUTION NOTE: this information is found on extra slide 48 in the Flocculator Design slides, heading is “Results of the the CFD analysis and our model equations.”</p>
-<p>High ratios of Max/Ave for velocity gradients (and therefore also energy dissipation rates) are common in both mechanical and hydraulic flocculators. A high velocity gradient ratio is a poor design for two reasons. - This high Max/Ave G results in significant inefficiency in the use of energy for flocculation. This inefficiency requires longer residence times and/or more energy input to achieve the same extent of flocculation.</p>
+<p>High ratios of max/Ave for velocity gradients (and therefore also energy dissipation rates) are common in both mechanical and hydraulic flocculators. A high velocity gradient ratio is a poor design for two reasons. - This high max/Ave G results in significant inefficiency in the use of energy for flocculation. This inefficiency requires longer residence times and/or more energy input to achieve the same extent of flocculation.</p>
 <p>The high energy dissipation rate in the propeller wake limits the amount of energy that can be dissipated without causing excessive floc breakup. Excessive floc breakup produces flocs that are too small to be captured by the clarifier.</p>
 <p>We hypothesize that the maximum G values specified for mechanical flocculators were likely set by the constraint of not breaking flocs into small sizes. Clarification velocity needs to be less than capture velocity for a floc to settle - the smallest floc that will settle is referred to as the threshold floc because that is the smallest size we want to make. Because well-designed hydraulic flocculators have more uniform shear rates (as compared to mechanical flocculators), hydraulic flocculators are less likely to break up flocs. Therefore, the average G values specified for mechanical flocculators are not expected to apply to well designed hydraulic flocculators.</p>
 <p>The high energy dissipation rates at the tip of a propeller in a flocculator may be high enough to create flocs that are too small to be captured by the clarifiers. We will determine if the clarifier could capture these flocs in the analysis below.</p>
 <p>These results also suggest that the traditional emphasis on maintaining the same or lesser G value for the transport of flocculated water to the clarifier may have missed the more important point of not exceeding a value of G that produces flocs that are too small to be captured by the clarifier.</p>
 <p><strong>6) A mechanical flocculator</strong> is treating high turbidity water, and therefore is using an average G value of 180 Hz.</p>
-<p>If the design guidelines for maximum G for mechanical flocculators are correct and are based on floc breakup, then what is the largest average G that could be used for a well designed hydraulic flocculator with a Max/Ave G of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>?</p>
+<p>If the design guidelines for maximum G for mechanical flocculators are correct and are based on floc breakup, then what is the largest average G that could be used for a well designed hydraulic flocculator with a max/Ave G of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>?</p>
 <p>Note: important distinctions to make are: - maximum G vs average G - mechanical vs hydraulic flocculators. Conceptual thought coupled with pencil and paper are recommended.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=xtcGnUx0xRUZ&amp;line=2&amp;uniqifier=1">Find maximum G</a></p>
 <p>The maximum G for hydraulic flocculators is 1037 Hz</p>
