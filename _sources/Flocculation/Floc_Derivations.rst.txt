@@ -180,37 +180,50 @@ Equation :eq:`flocGeoG` describes the relationship between the geometry of the f
 Channel or Flow Width
 =====================
 
-The minimum allowable width of a Horizontal-Vertical flocculator channel is based on the requirements that :math:`3 < \Pi_{H_eS} < 6` and that we maintain the :math:`\tilde{G}` that
+The minimum allowable width of a Horizontal-Vertical flocculator channel is based on the requirements that :math:`\Pi_{H_eS_{min}} < \Pi_{H_eS} < \Pi_{H_eS_{max}}` and that we maintain the :math:`\tilde{G}` that
 serves as a basis for design. The final parameter derived is
-:math:`W_{Min, \, \Pi_{H_eS}}`.
+:math:`W_{min, \, \Pi_{H_eS}}`.
 
 Our two restrictions are:
 
 #. Ensuring that we maintain the :math:`\tilde{G}` we get based on our input parameters.
-#. Ensuring that :math:`3 < \frac{H_e}{S} < 6`
+#. Ensuring that :math:`\Pi_{H_eS_{min}} < \Pi_{H_eS} < \Pi_{H_eS_{max}}`
 
 
-Now we can solve this equation for channel width, :math:`W`.
+Now we can solve Equation :eq:`flocGeoG` for channel width, :math:`W`.
 
 .. math:: W = \frac{Q}{S}\left( \frac{K_{baffle}}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}
 
-From here, we can define :math:`\Pi_{H_eS} = \frac{H_e}{S}` and
-substitute :math:`S = \frac{H_e}{\Pi_{H_eS}}` into the previous equation
-for :math:`W` to get :math:`W_{Min, \, \Pi_{H_eS}}`:
+
+Substitute :math:`S = \frac{H_e}{\Pi_{H_eS}}` into the previous equation and use the minimum value of :math:`\Pi_{H_eS}` to obtain the minimum channel width such that the flow will expand sufficiently before the next contraction.
+
+The minimum channel width will occur for :math:`\Pi_{H_eS_{min}}`:
 
 .. math::
   :label: W_min_HVFloc
 
 
-   W_{Min, \, \Pi_{H_eS}} = \frac{\Pi_{H_eS}Q}{H_e}\left( \frac{K_{baffle}}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}
+   W_{Min_{exp}} = \frac{\Pi_{H_eS_{min}} Q}{H_e}\left( \frac{K_{baffle}}{2 H_e \nu \tilde{G}^2} \right)^\frac{1}{3}
 
 
-| This equation represents the absolute smallest width of a flocculator
-  channel if we consider the lowest value of :math:`\Pi_{H_eS}` and the
-  highest possible value of :math:`H_e`:
-| :math:`H_e = H`, this implies that there are no obstacles between
-  baffles
-| :math:`\Pi_{H_eS} = 3`
+This equation represents the minimum width of a flocculator channel given the lowest value of :math:`\Pi_{H_eS}` and the highest possible value of :math:`H_e`. The highest value of :math:`H_e` implies that there are no obstacles between baffles.
+
+Minimum Channel Depth
+=====================
+
+Another constraint on flocculator design may be a maximum width of the channels given the available baffle material, :math:`W_{max_{baffle}}`. In this case as the flow rate increases the channel depth must increase as flow increases to maintain the required value of :math:`\Pi_{H_eS_{min}}`.
+
+Solve Equation :eq:`W_min_HVFloc` for :math:`H_e`. The minimum depth, :math:`H_{e_{min}}`, occurs for the maximum channel width, :math:`W_{max}`, and minimum :math:`\Pi_{H_eS_{min}}`.
+
+.. math::
+  :label: H_min_HVFloc
+
+
+    H_{e_{min}}=\left[\left( \frac{\Pi_{H_eS_{min}} Q}{W_{max}}\right)^3\left( \frac{K_{baffle}}{2 \nu \tilde{G}^2} \right)\right]^\frac{1}{4}
+
+
+This equation represents the minimum depth of a flocculator channel given the maximum channel width. This constraint will be important as the flow rate increases.
+
 
 Baffle Spacing
 ==============
