@@ -6,11 +6,29 @@ LFOM
 
 .. replace_keywords::
 
-    This is a test with KEYWORD1 and KEYWORD2 in a block.
+    This is a test with !KEYWORD1! and !KEYWORD2! in a block.
 
-This is an inline test :sub:`$(lfom.rowN)`.
+This is an inline test :replace_keywords_inline:`with !KEYWORD1! and !KEYWORD2!`.
 
-Test
+Test a table
+------------
+
+.. _table_LFOM_Specifications:
+
+.. csv-table:: LFOM Specifications. (et.lfom)
+   :header: "Parameter", "value", "AIDE variable name"
+   :align: left
+   :widths: 40 30 30
+
+   Nominal pipe diameter, #ND#, ND
+   Number of rows, !rowN!, rowN
+   Max flow rate, !Qm_max!, Qm_max
+   Head loss at max flow, !HL_max!, HL_max
+   Orifices in each row starting from bottom row, !orificeNPerRow!, orificeNPerRow
+   Elevation of each row from zero flow datum, !orificeHPerRow!, orificeHPerRow
+
+
+
 
 Linear Flow Orifice Meter (LFOM)
 --------------------------------

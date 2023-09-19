@@ -3,9 +3,11 @@ from docutils.parsers.rst import Directive, roles
 from sphinx.util.docutils import SphinxDirective
 from jsonpath_ng import jsonpath, parse
 
+# we need some way of clearly designating that this string is to be replaced
+# and isn't part of the standard text.
 keyword_map = {
-    "KEYWORD1": "Replacement1",
-    "KEYWORD2": "Replacement2",
+    "!KEYWORD1!": "Replacement1",
+    "!KEYWORD2!": "Replacement2",
     # ... add as many as you want
 }
 
