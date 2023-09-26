@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "62145665cf62e1fb511fe88f0e7032165c9ef466adee44235d6774ab7e5b97bd"
+            "sha256": "d9dc527929ea7a89d23e66f291a7de86bd310fd364858449fdf3c41151003166"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -444,7 +444,7 @@
         },
         "sphinx-ext-substitution": {
             "git": "https://github.com/eak24/sphinx_ext_substitution.git",
-            "ref": "6b9a88eba530a025b9c3cd49aee88657cb3f8e0a"
+            "ref": "77064db01c0767dc956df2412468fa1ae482adb4"
         },
         "sphinx-rtd-theme": {
             "hashes": [

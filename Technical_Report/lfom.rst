@@ -23,7 +23,7 @@ Test a table
    :widths: 40 30 30
 
    Nominal pipe diameter, #ND#, ND
-   Number of rows, !rowN!, rowN
+   Number of rows, :sub:`(lfom.rowN) no-sub`, rowN
    Max flow rate, !Qm_max!, Qm_max
    Head loss at max flow, !HL_max!, HL_max
    Orifices in each row starting from bottom row, !orificeNPerRow!, orificeNPerRow

@@ -1,9 +1,3 @@
-import os
-import sys
-
-sys.path.append(os.path.abspath("./_ext"))
-sys.path.append(os.path.abspath("../_ext"))
-
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -22,12 +16,10 @@ release = '0.0.0'
 
 extensions = ['sphinx.ext.doctest',
               'sphinx.ext.mathjax',
-            #   'sphinx.ext.todo',
+              'sphinx.ext.todo',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.disqus',
               'rinoh.frontend.sphinx',
-              'keyword_replacer',
-              'todo',
               'sphinx_ext_substitution'
               ]
 
@@ -36,12 +28,6 @@ substitute_path = '/Users/ethan/repos/Textbook/Technical_Report/simple.yaml'
 substitute_mode = 'replace'
 
 todo_include_todos = False
-
-keyword_map = {
-    "KEYWORD1": "Replacement1",
-    "KEYWORD2": "Replacement2",
-    # ... add as many as you want
-}
 
 # https://sphinxcontrib-bibtex.readthedocs.io/en/2.0.0/usage.html#configuration
 bibtex_bibfiles = ['references.bib']
