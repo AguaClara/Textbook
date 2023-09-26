@@ -1,0 +1,206 @@
+{
+"lfom":
+  {
+  "FB":  "100 mm",
+
+  "HL_max":  "200 mm",
+
+  "HL_min":  "200 mm",
+
+  "ID_max":  "311 mm",
+
+  "ID_min":  "135 mm",
+
+  "N": 1,
+
+  "ND": 8,
+
+  "ND_max": 12,
+
+  "ND_min": 1,
+
+  "QPerRow": [
+      "1 L/s",
+
+      "2 L/s",
+
+      "3 L/s",
+
+      "4 L/s",
+
+      "5 L/s",
+
+      "6 L/s",
+
+      "7 L/s",
+
+      "8 L/s",
+
+      "9 L/s",
+
+      "10 L/s"
+  ],
+
+  "QSF_pi": 1.2,
+
+  "Qm_max":  "10 L/s",
+
+  "SDR": 17,
+
+  "Tm_min":  "10 mm",
+
+  "V_max":  "700 mm/s",
+
+  "botRowH":  "200 mm",
+
+  "clampingHanger": {
+    "H":  "239 mm",
+
+    "L":  "69.9 mm",
+
+    "W":  "356 mm",
+
+    "pipeL_max":  "15.7 m",
+
+    "pipeToWallS":  "237 mm"
+  },
+
+  "coupling": {
+    "OD":  "237 mm",
+
+    "axisL":  "115 mm",
+
+    "socketID":  "219 mm",
+
+    "socketL":  "114 mm"
+  },
+
+  "done":    true,
+
+  "drillD_max":  "60 mm",
+
+  "elbow_90": {
+    "OD":  "237 mm",
+
+    "axisL":  "229 mm",
+
+    "socketID":  "219 mm",
+
+    "socketL":  "114 mm"
+  },
+
+  "ip":    "APP",
+
+  "metric":    true,
+
+  "orificeA":  "0.000314 m^2",
+
+  "orificeD":  "20 mm",
+
+  "orificeD_max":  "25.8 mm",
+
+  "orificeHPerRow": [
+      "10 mm",
+
+      "30 mm",
+
+      "50 mm",
+
+      "70 mm",
+
+      "90 mm",
+
+      "110 mm",
+
+      "130 mm",
+
+      "150 mm",
+
+      "170 mm",
+
+      "190 mm"
+  ],
+
+  "orificeNPerRow": [
+     12,
+
+     2,
+
+     4,
+
+     3,
+
+     2,
+
+     2,
+
+     2,
+
+     2,
+
+     2,
+
+     2
+  ],
+
+  "orificePerRowN_max": 24,
+
+  "orificeS":  "5 mm",
+
+  "pipe": {
+    "ID":  "193 mm",
+
+    "OD":  "219 mm",
+
+    "T":  "12.9 mm"
+  },
+
+  "qPerOrifice": [
+      "84 mL/s",
+
+      "151 mL/s",
+
+      "195 mL/s",
+
+      "231 mL/s",
+
+      "262 mL/s",
+
+      "290 mL/s",
+
+      "315 mL/s",
+
+      "339 mL/s",
+
+      "361 mL/s",
+
+      "381 mL/s"
+  ],
+
+  "rep":    false,
+
+  "rowB":  "20 mm",
+
+  "rowN": 10,
+
+  "rowN_max": 10,
+
+  "rowN_min": 5,
+
+  "staggerRows":    true,
+
+  "staggerRowsbotRowH":  "250 mm",
+
+  "tee": {
+    "OD":  "237 mm",
+
+    "axisL":  "229 mm",
+
+    "socketID":  "219 mm",
+
+    "socketL":  "114 mm"
+  },
+
+  "topRowOrificeA":  "0.000523 m^2"
+},
+}

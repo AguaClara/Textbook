@@ -22,12 +22,13 @@ Test a table
    :align: left
    :widths: 40 30 30
 
-   Nominal pipe diameter, #ND#, ND
+   test of inside a table, :sub:`(hi) no-sub`, did it work
+   Nominal pipe diameter, :sub:`(lfom.ND) no-sub`, ND
    Number of rows, :sub:`(lfom.rowN) no-sub`, rowN
-   Max flow rate, !Qm_max!, Qm_max
-   Head loss at max flow, !HL_max!, HL_max
-   Orifices in each row starting from bottom row, !orificeNPerRow!, orificeNPerRow
-   Elevation of each row from zero flow datum, !orificeHPerRow!, orificeHPerRow
+   Max flow rate, :sub:`(lfom.Qm_max) no-sub`, Qm_max
+   Head loss at max flow, :sub:`(lfom.HL_max) no-sub`, HL_max
+   Orifices in each row starting from bottom row, :sub:`(lfom.orificeNPerRow) no-sub`, orificeNPerRow
+   Elevation of each row from zero flow datum, :sub:`(lfom.orificeHPerRow) no-sub`, orificeHPerRow
 
 
 
