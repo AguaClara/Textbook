@@ -10,6 +10,7 @@ LFOM
 
 This is an inline test :replace_keywords_inline:`with !KEYWORD1! and !KEYWORD2!`.
 Another inline test: :sub:`(hi) no-sub`
+Another inline test: :sub:`(lfom.rowN) no-sub`
 
 Test a table
 ------------

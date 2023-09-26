@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "09ac22d4533418213ab350ba3188f5c78e791e5cb4e02ca0345c2c6f2986b81e"
+            "sha256": "62145665cf62e1fb511fe88f0e7032165c9ef466adee44235d6774ab7e5b97bd"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -443,8 +443,8 @@
             "version": "==1.2.0"
         },
         "sphinx-ext-substitution": {
-            "git": "https://github.com/NordicHPC/sphinx_ext_substitution.git",
-            "ref": "044032ef19e9c9b8d184ecc4c19651e8df5cf01e"
+            "git": "https://github.com/eak24/sphinx_ext_substitution.git",
+            "ref": "6b9a88eba530a025b9c3cd49aee88657cb3f8e0a"
         },
         "sphinx-rtd-theme": {
             "hashes": [
@@ -527,11 +527,11 @@
         },
         "urllib3": {
             "hashes": [
-                "sha256:8d22f86aae8ef5e410d4f539fde9ce6b2113a001bb4d189e0aed70642d602b11",
-                "sha256:de7df1803967d2c2a98e4b11bb7d6bd9210474c46e8a0401514e3a42a75ebde4"
+                "sha256:13abf37382ea2ce6fb744d4dad67838eec857c9f4f57009891805e0b5e123594",
+                "sha256:ef16afa8ba34a1f989db38e1dbbe0c302e4289a47856990d0682e374563ce35e"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==2.0.4"
+            "version": "==2.0.5"
         },
         "zipp": {
             "hashes": [
