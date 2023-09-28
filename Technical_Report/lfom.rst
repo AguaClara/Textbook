@@ -1,40 +1,9 @@
 .. _title_LFOM:
 
-****
-LFOM
-****
+*************************
+Linear Flow Orifice Meter
+*************************
 
-.. replace_keywords::
-
-    This is a test with !KEYWORD1! and !KEYWORD2! in a block.
-
-This is an inline test :replace_keywords_inline:`with !KEYWORD1! and !KEYWORD2!`.
-Another inline test: :sub:`(hi) no-sub`
-Another inline test: :sub:`(lfom.rowN) no-sub`
-
-Test a table
-------------
-
-.. _table_LFOM_Specifications:
-
-.. csv-table:: LFOM Specifications. (et.lfom)
-   :header: "Parameter", "value", "AIDE variable name"
-   :align: left
-   :widths: 40 30 30
-
-   test of inside a table, :sub:`(hi) no-sub`, did it work
-   Nominal pipe diameter, :sub:`(lfom.ND) no-sub`, ND
-   Number of rows, :sub:`(lfom.rowN) no-sub`, rowN
-   Max flow rate, :sub:`(lfom.Qm_max) no-sub`, Qm_max
-   Head loss at max flow, :sub:`(lfom.HL_max) no-sub`, HL_max
-   Orifices in each row starting from bottom row, :sub:`(lfom.orificeNPerRow) no-sub`, orificeNPerRow
-   Elevation of each row from zero flow datum, :sub:`(lfom.orificeHPerRow) no-sub`, orificeHPerRow
-
-
-
-
-Linear Flow Orifice Meter (LFOM)
---------------------------------
 
 The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Weir <https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research>`_ while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.
 
@@ -45,7 +14,7 @@ The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Wei
     :align: center
     :alt: A sutro weir and an LFOM
 
-    On the left is a sutro weir. On the right is AguaClara's approximation of the sutro weir's geometery. This elegant innovation is called a linear flow orifice meter, or LFOM for short.
+    On the left is a sutro weir. On the right is AguaClara's approximation of the Sutro weir's geometry. This elegant innovation is called a linear flow orifice meter, or LFOM for short.
 
 The LFOM does one thing and serves two purposes.
 
@@ -72,3 +41,18 @@ The diameter of the LFOM pipe is set by the velocity of the falling water inside
   :label: LFOM_V_max
 
     V_{max} = \frac{4}{3 \pi} \sqrt{2gh_L}
+
+
+
+.. _table_LFOM_Specifications:
+
+.. csv-table:: LFOM Specifications.
+   :header: "Parameter", "value", "AIDE variable name"
+   :align: left
+   :widths: 40 30 30
+
+   rowN, :sub:`(lfom.rowN) no-sub`, rowN
+   Max flow rate, :sub:`(lfom.Qm_max) no-sub`, Qm_max
+   Head loss at max flow, :sub:`(lfom.HL_max) no-sub`, HL_max
+   Orifices in each row starting from bottom row, :sub:`(lfom.orificeNPerRow) no-sub`, orificeNPerRow
+   Elevation of each row from zero flow datum, :sub:`(lfom.orificeHPerRow) no-sub`, orificeHPerRow

@@ -24,7 +24,7 @@ extensions = ['sphinx.ext.doctest',
               ]
 
 # substitute_path = '/Users/ethan/repos/Textbook/Technical_Report/plant.yaml'
-substitute_path = 'simple.yaml'
+substitute_path = 'lfom.yaml'
 substitute_mode = 'replace'
 
 todo_include_todos = False
@@ -33,25 +33,24 @@ todo_include_todos = False
 bibtex_bibfiles = ['references.bib']
 bibtex_default_style = 'alpha'
 
-disqus_shortname = 'AguaClara'
+# disqus_shortname = 'AguaClara'
 
 templates_path = ['_templates']
 exclude_patterns = ['_build',
                     'Thumbs.db',
-                    '.DS_Store',
-                    'AIDE/About']
+                    '.DS_Store']
 
-technical_report = 'lfom'
+technical_report = 'index'
 
 # root_doc = 'index'
-root_doc = technical_report
+root_doc = 'index'
 
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 rinoh_documents = [
     dict(doc=technical_report, target='aguaclara')
