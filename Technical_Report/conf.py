@@ -24,7 +24,7 @@ extensions = ['sphinx.ext.doctest',
               ]
 
 # substitute_path = '/Users/ethan/repos/Textbook/Technical_Report/plant.yaml'
-substitute_path = 'lfom.yaml'
+substitute_path = 'plant.yaml'
 substitute_mode = 'replace'
 
 todo_include_todos = False
@@ -44,7 +44,7 @@ technical_report = 'index'
 
 # root_doc = 'index'
 root_doc = 'index'
-
+numfig = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

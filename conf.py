@@ -31,11 +31,7 @@ extensions = ['sphinx.ext.doctest',
 
 todo_include_todos = False
 
-keyword_map = {
-    "KEYWORD1": "Replacement1",
-    "KEYWORD2": "Replacement2",
-    # ... add as many as you want
-}
+numfig = True
 
 # https://sphinxcontrib-bibtex.readthedocs.io/en/2.0.0/usage.html#configuration
 bibtex_bibfiles = ['references.bib']

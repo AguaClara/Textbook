@@ -1,14 +1,11 @@
-.. raw:: html
-
 .. _toc:
 
 
 |ACRlogowithname|
 
-.. |ACRlogowithname| image:: /AIDE/About/Images/ACRlogowithname.png
+.. |ACRlogowithname| image:: ../AIDE/About/Images/ACRlogowithname.png
   :target: https://www.aguaclarareach.org/
   :height: 40
-
 
 =====================================
 AguaClara Technical Report
