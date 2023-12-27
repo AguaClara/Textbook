@@ -53,8 +53,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 todo_include_todos = False
 technical_report = 'Technical_Report/lfom'
 
-# root_doc = 'index'
-root_doc = technical_report
+root_doc = 'index'
+#root_doc = technical_report
 
 
 # -- Options for HTML output -------------------------------------------------
