@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Constant Head Tanks &mdash; AguaClara 364/merge documentation</title>
+  <title>Constant Head Tanks &mdash; AguaClara 365/merge documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,13 +13,15 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=4d0de9e7"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=5d48d129"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AguaClara Flow Control and Measurement Technologies" href="FCM_Design.html" />
+    <link rel="prev" title="Carbonate Reactions, Buffering, and pH" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,11 +32,11 @@
 
           
           
-          <a href="../Technical_Report/lfom.html" class="icon icon-home">
+          <a href="../index.html" class="icon icon-home">
             AguaClara
           </a>
               <div class="version">
-                364/merge
+                365/merge
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -44,29 +46,127 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Constant Head Tanks</a><ul>
-<li><a class="reference internal" href="#flow-q-and-water-level-h-as-a-function-of-time">Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time</a></li>
-<li><a class="reference internal" href="#drain-system-for-a-tank">Drain System for a Tank</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html">Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html">Fluid Mechanics Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Plant_Hydraulics.html">Plant Hydraulics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html">Manifold Hydraulics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Energy Dissipation Rate, Velocity Gradient, and Mixing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 4: Chemistry of Water Treatment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Coagulant Nanoparticles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Carbonate Reactions, Buffering, and pH</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 5: Flow Control and Measurement</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Constant Head Tanks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#flow-q-and-water-level-h-as-a-function-of-time">Flow <span class="math notranslate nohighlight">\(Q\)</span> and Water Level <span class="math notranslate nohighlight">\(h\)</span> as a Function of Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#drain-system-for-a-tank">Drain System for a Tank</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="FCM_Design.html">AguaClara Flow Control and Measurement Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
-</div>
+<p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 7: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">AguaClara Hydraulic Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Challenge.html">Flocculation Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 8: Clarification</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarifier Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 9: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Open Stacked Rapid Sand Filter Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Challenge.html">Filtration Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AIDE/AIDE.html">AguaClara Infrastructure Design Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AIDE/Specifications.html">AguaClara Specifications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 12: Operation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Operation/Coagulant_Automation.html">Coagulant Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix 1 + Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
         </div>
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../Technical_Report/lfom.html">AguaClara</a>
+          <a href="../index.html">AguaClara</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../Technical_Report/lfom.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Constant Head Tanks</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/Flow_Control_and_Measurement/FCM_Intro.rst.txt" rel="nofollow"> View page source</a>
@@ -89,7 +189,7 @@
 <figure class="align-center" id="id1">
 <span id="figure-hypochlorinator-variable-explanation-design"></span><a class="reference internal image-reference" href="../_images/hypochlorinator_variable_explanation.png"><img alt="Drip hypochlorinator variables" src="../_images/hypochlorinator_variable_explanation.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">This figure shows the variables that are defined in the equation above.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">This figure shows the variables that are defined in the equation above.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>This equation has historically given students some trouble, and while its nuances are explained in the derivation, they will be quickly summarized here:</p>
@@ -97,12 +197,12 @@
 <li><p><span class="math notranslate nohighlight">\(t_{Design}\)</span> is <strong>NOT</strong> the time it takes to drain the tank. It is the time that it <em>would</em> take to drain the tank <em>if</em> the flow rate at time <span class="math notranslate nohighlight">\(t = 0\)</span>, <span class="math notranslate nohighlight">\(Q_0\)</span>, were the flow rate forever, which it is not. <span class="math notranslate nohighlight">\(t_{Design}\)</span> was used in the derivation to simplify the equation, which is why this potentially-confusing parameter exists. The actual time it takes to drain the tank lies somewhere between <span class="math notranslate nohighlight">\(t_{Design}\)</span> and <span class="math notranslate nohighlight">\(2 \, t_{Design}\)</span> and depends on the ratio <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(h_{Tank}\)</span> is not the same as <span class="math notranslate nohighlight">\(h_{0}\)</span>. <span class="math notranslate nohighlight">\(h_{Tank}\)</span> is the height of water level in the tank with reference to the tank bottom. <span class="math notranslate nohighlight">\(h_{0}\)</span> is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level at one instance in time, <span class="math notranslate nohighlight">\(t = 0\)</span>. Therefore, <span class="math notranslate nohighlight">\(h_{0} \geq h_{Tank}\)</span> is always true. If the tank is elevated far above the valve, then the <span class="math notranslate nohighlight">\(h_{0} &gt; &gt; h_{Tank}\)</span>. If the valve is at the same elevation as the bottom of the tank, then <span class="math notranslate nohighlight">\(h_{0} = h_{Tank}\)</span>. Please refer to the figure above to clarify <span class="math notranslate nohighlight">\(h_{0}\)</span> and <span class="math notranslate nohighlight">\(h_{Tank}\)</span>.</p></li>
 </ul>
-<p>We can use the proportionality <span class="math notranslate nohighlight">\(Q \propto \sqrt{h}\)</span>, which applies to both minor losses and orifices to form a relationship between water level in the tank <span class="math notranslate nohighlight">\(h\)</span> and time <span class="math notranslate nohighlight">\(t\)</span>. This proportionality comes from rearranging the minor loss Equation <span class="math notranslate nohighlight">\(h = K \frac{Q^2}{2 g A^2}\)</span> for <span class="math notranslate nohighlight">\(Q\)</span> instead of <span class="math notranslate nohighlight">\(h\)</span>. A table of proportionality between <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(h\)</span> can be found in <code class="xref std std-numref docutils literal notranslate"><span class="pre">table_h_Q_proportionality</span></code></p>
-<p>Using Equation <a class="reference internal" href="FCM_Derivations.html#equation-q-tank-with-valve">()</a> and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or <span class="math notranslate nohighlight">\(h_{Tank} = h_0\)</span>. Our attempt to get a continuous flow rate out of this system is to make <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span> very small by elevating the tank far above the valve. On the right, <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0} = \frac{1}{50}\)</span>. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.</p>
+<p>We can use the proportionality <span class="math notranslate nohighlight">\(Q \propto \sqrt{h}\)</span>, which applies to both minor losses and orifices to form a relationship between water level in the tank <span class="math notranslate nohighlight">\(h\)</span> and time <span class="math notranslate nohighlight">\(t\)</span>. This proportionality comes from rearranging the minor loss Equation <span class="math notranslate nohighlight">\(h = K \frac{Q^2}{2 g A^2}\)</span> for <span class="math notranslate nohighlight">\(Q\)</span> instead of <span class="math notranslate nohighlight">\(h\)</span>. A table of proportionality between <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(h\)</span> can be found in <a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html#table-h-q-proportionality"><span class="std std-numref">Table 3</span></a></p>
+<p>Using Equation <a class="reference internal" href="FCM_Derivations.html#equation-q-tank-with-valve">(145)</a> and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or <span class="math notranslate nohighlight">\(h_{Tank} = h_0\)</span>. Our attempt to get a continuous flow rate out of this system is to make <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span> very small by elevating the tank far above the valve. On the right, <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0} = \frac{1}{50}\)</span>. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.</p>
 <figure class="align-center" id="id2">
 <span id="figure-tank-valve-play"></span><a class="reference internal image-reference" href="../_images/tank_valve_play.png"><img alt="Manipulating hypochlorinator heights" src="../_images/tank_valve_play.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">These graphs show how manipulation of the variables in the <span class="math notranslate nohighlight">\(Q(t)\)</span> expression can result in effectively constant head.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">These graphs show how manipulation of the variables in the <span class="math notranslate nohighlight">\(Q(t)\)</span> expression can result in effectively constant head.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -124,7 +224,7 @@
 <figure class="align-center" id="id3">
 <span id="figure-pipe-stub-drainage-variables-in-derivation"></span><a class="reference internal image-reference" href="../_images/pipe_stub_drainage_variables.png"><img alt="Variables for draining a tank" src="../_images/pipe_stub_drainage_variables.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">Variables for draining a tank</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Variables for draining a tank</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -133,7 +233,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html" class="btn btn-neutral float-left" title="Carbonate Reactions, Buffering, and pH" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="FCM_Design.html" class="btn btn-neutral float-right" title="AguaClara Flow Control and Measurement Technologies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
