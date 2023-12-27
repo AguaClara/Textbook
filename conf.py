@@ -25,7 +25,7 @@ extensions = ['sphinx.ext.doctest',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.disqus',
               'rinoh.frontend.sphinx',
-              'keyword_replacer',
+             # 'keyword_replacer',
               'todo'
               ]
 
