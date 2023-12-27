@@ -1,8 +1,3 @@
-import os
-import sys
-
-sys.path.append(os.path.abspath("./_ext"))
-
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -14,14 +9,7 @@ sys.path.append(os.path.abspath("./_ext"))
 project = 'AguaClara'
 copyright = '2023, AguaClara Reach'
 author = 'AguaClara Reach'
-
-# The short X.Y version.
-# We use semantic versioning - see here: semver.org as applied to textbooks.
-# Note that version names are set on GitHub - NOT here.
-import os
-version = os.getenv("GITHUB_REF_NAME", "EXPERIMENTAL")
-# The full version, including alpha/beta/rc tags.
-release = version
+release = '0.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -32,36 +20,37 @@ extensions = ['sphinx.ext.doctest',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.disqus',
               'rinoh.frontend.sphinx',
-             # 'keyword_replacer',
-               # 'todo'
+              'sphinx_ext_substitution'
               ]
 
-todo_include_todos = False
+# substitute_path = '/Users/ethan/repos/Textbook/Technical_Report/plant.yaml'
+substitute_path = 'plant.yaml'
+substitute_mode = 'replace'
 
-numfig = True
+todo_include_todos = False
 
 # https://sphinxcontrib-bibtex.readthedocs.io/en/2.0.0/usage.html#configuration
 bibtex_bibfiles = ['references.bib']
 bibtex_default_style = 'alpha'
 
-disqus_shortname = 'AguaClara'
+# disqus_shortname = 'AguaClara'
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build',
+                    'Thumbs.db',
+                    '.DS_Store']
 
-# If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
-technical_report = 'Technical_Report/lfom'
+technical_report = 'index'
 
 # root_doc = 'index'
-root_doc = technical_report
-
+root_doc = 'index'
+numfig = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 rinoh_documents = [
     dict(doc=technical_report, target='aguaclara')
@@ -84,7 +73,7 @@ rinoh_documents = [
 # regardless of the global 'pdf_compressed' setting.
 
 pdf_documents = [
-    ('Technical_Report/lfom', 'AguaClara', 'AguaClara Textbook', 'AguaClara Reach'),
+    ('lfom', 'AguaClara', 'AguaClara Textbook', 'AguaClara Reach'),
 ]
 
 # A comma-separated list of custom stylesheets. Example:
