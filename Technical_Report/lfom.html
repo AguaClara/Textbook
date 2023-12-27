@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linear Flow Orifice Meter &mdash; AguaClara 364/merge documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=4d0de9e7"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            AguaClara
+          </a>
+              <div class="version">
+                364/merge
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Linear Flow Orifice Meter</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">AguaClara</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Linear Flow Orifice Meter</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Technical_Report/lfom.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="linear-flow-orifice-meter">
+<span id="title-lfom"></span><h1>Linear Flow Orifice Meter<a class="headerlink" href="#linear-flow-orifice-meter" title="Permalink to this heading"></a></h1>
+<p>The LFOM is a weir shape cut into a pipe. It was meant to imitate <a class="reference external" href="https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research">the Sutro Weir</a> while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.</p>
+<figure class="align-center" id="id1">
+<span id="figure-sutro-v-lfom"></span><a class="reference internal image-reference" href="../_images/sutro_v_lfom.png"><img alt="A sutro weir and an LFOM" src="../_images/sutro_v_lfom.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the Sutro weir’s geometry. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The LFOM does one thing and serves two purposes.</p>
+<p>What it does:</p>
+<p><strong>The LFOM creates a linear relationship between water level in the entrance tank and the flow out of the entrance tank.</strong> <em>It does not control the flow through the plant</em>. If the LFOM were replaced with a hole in the bottom of the entrance tank, the same flow rate would go through the plant, the only difference being that the water level in the entrance tank would scale with flow squared <span class="math notranslate nohighlight">\(h \propto Q^2\)</span> instead of <span class="math notranslate nohighlight">\(h \propto Q\)</span>. For example, if an LFOM has 10 rows of holes and has been designed for a plant whose maximum flow rate is 10 L/s, then the operator knows that the number of rows submerged in water is equal to the flow rate of the plant in L/s. So if the water were up to the third row of holes, there would be 3 L/s of water flowing through the plant.</p>
+<p>Why it is useful:</p>
+<ol class="arabic simple">
+<li><p>Allows the operator to measure the flow through the plant quickly and easily, explained above.</p></li>
+<li><p>Allows for the Linear Chemical Dose Controller, which will be explained next, to automatically adjust the flow of coagulant/chlorine into the plant as the plant flow rate changes. This means the operator would only need to adjust the flow of coagulant when there is a change in turbidity or organic matter.</p></li>
+</ol>
+<p>This is best understood with examples. By shaping a weir differently, different relationships between <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(h\)</span> are formed:
+* In the case of a <a class="reference external" href="https://swmm5.files.wordpress.com/2016/09/image00124.jpg">rectangular weir</a>, <span class="math notranslate nohighlight">\(Q \propto h^{\frac{3}{2}}\)</span>
+* In the case of a <a class="reference external" href="https://swmm5.files.wordpress.com/2016/09/image0096.jpg">v-notch weir</a>, <span class="math notranslate nohighlight">\(Q \propto h^{\frac{5}{2}}\)</span>
+* In the case of a <a class="reference external" href="http://www.engineeringexcelspreadsheets.com/wp-content/uploads/2012/11/Sutro-Weir-Diagram1.jpg">Sutro weir</a> and thus LFOM, <span class="math notranslate nohighlight">\(Q \propto h\)</span>.</p>
+<p>Before the water level reaches the second row of holes, the LFOM is simulating a rectangular weir, and thus <span class="math notranslate nohighlight">\(h \not\propto Q\)</span>. The Sutro weir also experiences this problem. Similarly, if the water level exceeds the topmost row of the LFOM’s orifices, the linearity also breaks down. The entire LFOM begins to act like an orifice, the exponent of <span class="math notranslate nohighlight">\(Q\)</span> in <span class="math notranslate nohighlight">\(h \propto Q\)</span> becomes greater than 1. This is because the LFOM approaches orifice behavior, and for orifices, <span class="math notranslate nohighlight">\(h \propto Q^2\)</span>.</p>
+<p>The diameter of the LFOM pipe is set by the velocity of the falling water inside the LFOM at the bottom of the bottom row of orifices. This velocity is obtained by summing up all of the momentum of the falling water and dividing by the total flow for the case where the LFOM is operating at maximum capacity. The Sutro weir equations (not yet provided here) can be integrated to obtain an equation for the falling velocity of the water inside the LFOM. This maximum vertical velocity of the falling water sets the minimum flow area of the LFOM and hence continuity can be used to obtain the minimum pipe diameter.</p>
+<div class="math notranslate nohighlight" id="equation-lfom-v-max">
+<span class="eqno">(1)<a class="headerlink" href="#equation-lfom-v-max" title="Permalink to this equation"></a></span>\[  V_{max} = \frac{4}{3 \pi} \sqrt{2gh_L}\]</div>
+<span id="table-lfom-specifications"></span><table class="docutils align-left" id="id2">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">LFOM Specifications.</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Number of rows of orifices</p></td>
+<td><p><sub>($..et.lfom.rowN) rowN</sub></p></td>
+</tr>
+<tr class="row-odd"><td><p>Max flow rate</p></td>
+<td><p><sub>($..et.lfom.Qm_max) Qm_max</sub></p></td>
+</tr>
+<tr class="row-even"><td><p>Head loss at max flow</p></td>
+<td><p><sub>($..et.lfom.HL_max) no-sub</sub></p></td>
+</tr>
+<tr class="row-odd"><td><p>Orifices in each row starting from bottom row</p></td>
+<td><p><sub>($..et.lfom.orificeNPerRow) no-sub</sub></p></td>
+</tr>
+<tr class="row-even"><td><p>Elevation of each row from zero flow datum</p></td>
+<td><p><sub>($..et.lfom.orificeHPerRow) no-sub</sub></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, AguaClara Reach.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+    <!-- Hotjar Tracking Code for https://aguaclara.github.io/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2936859,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

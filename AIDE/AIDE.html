@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara 363/merge documentation</title>
+  <title>AguaClara Infrastructure Design Engine &mdash; AguaClara 364/merge documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,14 +13,12 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=3cd6438d"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=4d0de9e7"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="AguaClara Specifications" href="Specifications.html" />
-    <link rel="prev" title="Filtration Design Solution" href="../Filtration/Filtration_Design_Solution.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -31,11 +29,11 @@
 
           
           
-          <a href="../index.html" class="icon icon-home">
+          <a href="../Technical_Report/lfom.html" class="icon icon-home">
             AguaClara
           </a>
               <div class="version">
-                363/merge
+                364/merge
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -45,128 +43,32 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 1: Introduction</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html">Fluid Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html">Fluid Mechanics Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Plant_Hydraulics.html">Plant Hydraulics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html">Manifold Hydraulics</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Energy Dissipation Rate, Velocity Gradient, and Mixing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 4: Chemistry of Water Treatment</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Coagulant Nanoparticles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Carbonate Reactions, Buffering, and pH</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 5: Flow Control and Measurement</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Constant Head Tanks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">AguaClara Flow Control and Measurement Technologies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix: Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 7: Flocculation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">AguaClara Hydraulic Flocculation Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Challenge.html">Flocculation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 8: Clarification</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarifier Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 9: Filtration</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Open Stacked Rapid Sand Filter Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Challenge.html">Filtration Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">AguaClara Infrastructure Design Engine</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-to-aide">Introduction to AIDE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#using-aide-to-explore-aguaclara-technologies">Using AIDE to Explore AguaClara Technologies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-aguaclara-reach-uses-aide">How AguaClara Reach Uses AIDE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#next-steps-for-potential-implementation-partners">Next Steps for Potential Implementation Partners</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">AguaClara Infrastructure Design Engine</a><ul>
+<li><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
+<li><a class="reference internal" href="#introduction-to-aide">Introduction to AIDE</a></li>
+<li><a class="reference internal" href="#using-aide-to-explore-aguaclara-technologies">Using AIDE to Explore AguaClara Technologies</a></li>
+<li><a class="reference internal" href="#how-aguaclara-reach-uses-aide">How AguaClara Reach Uses AIDE</a></li>
+<li><a class="reference internal" href="#next-steps-for-potential-implementation-partners">Next Steps for Potential Implementation Partners</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Specifications.html">AguaClara Specifications</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 12: Operation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Operation/Coagulant_Automation.html">Coagulant Automation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Operation/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Appendix 1 + Resources</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Contributor's guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
-</ul>
-
+</div>
         </div>
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">AguaClara</a>
+          <a href="../Technical_Report/lfom.html">AguaClara</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li><a href="../Technical_Report/lfom.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">AguaClara Infrastructure Design Engine</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/AIDE/AIDE.rst.txt" rel="nofollow"> View page source</a>
@@ -199,7 +101,7 @@
 <embed>
    <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/272ed6d0570a4b489ca630a10aa5a65d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 </embed><span id="table-aide-configurable-components"></span><table class="docutils align-left" id="id1">
-<caption><span class="caption-number">Table 22 </span><span class="caption-text">AIDE configurable components.</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<caption><span class="caption-text">AIDE configurable components.</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 29%" />
 <col style="width: 57%" />
@@ -270,14 +172,14 @@
 <li><p><em>Print parameter map</em> - Prints a full map in the FeatureScript notices of all of the model inputs. Only a small fraction of the available inputs are exposed in the model configuration parameters. Click on show FeatureScript Notices <a class="reference internal" href="../_images/showFeatureScriptNotices.png"><img alt="showFSNotices" src="../_images/showFeatureScriptNotices.png" style="height: 30px;" /></a> to open a new pane at the bottom of the browser window where the full parameter map will be displayed.</p></li>
 </ol>
 </div></blockquote>
-<p>The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of <em>time to generate model component</em> in <a class="reference internal" href="#table-aide-configurable-components"><span class="std std-numref">Table 22</span></a> for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.</p>
+<p>The full plant can take up to several minutes to generate a new model that shows internal components fully replicated (see the column of <em>time to generate model component</em> in <code class="xref std std-numref docutils literal notranslate"><span class="pre">table_AIDE_configurable_components</span></code> for estimates of the time required for regenerating a fully detailed model). If you are interested in exploring the overall size or layout of the components the time to generate a new model can be substantially reduced by not replicating all parts and not showing internal components.</p>
 <p>If you would like to explore possible configurations, change the values to generate new models. The configurations have minimum and maximum values. This does not imply that the models created in that range are viable designs. The intent of providing the configuration options is to allow exploration to see how the models change when the input configurations are changed. If a configuration input is red, it is out of range.</p>
 </section>
 <section id="using-aide-to-explore-aguaclara-technologies">
 <span id="heading-using-aide"></span><h2>Using AIDE to Explore AguaClara Technologies<a class="headerlink" href="#using-aide-to-explore-aguaclara-technologies" title="Permalink to this heading"></a></h2>
-<p>If you do not yet have an <a class="reference external" href="https://cad.onshape.com/"><img alt="Onshape" src="../_images/Onshape.png" style="height: 18px;" /></a> account, then you will be able to make changes to the component configuration by using the <a class="reference external" href="https://cad.onshape.com/help/Content/viewonlytoolbar.htm">view only toolbar</a>. You can sign up for a <a class="reference external" href="https://www.onshape.com/en/products/free">free public Onshape account</a> that will enable you to access the parts lists and <em>estimated</em> materials cost for each of the AIDE configurable components. The AIDE videos (see <a class="reference internal" href="#table-aide-videos"><span class="std std-numref">Table 23</span></a>) introduce the core AIDE features.</p>
+<p>If you do not yet have an <a class="reference external" href="https://cad.onshape.com/"><img alt="Onshape" src="../_images/Onshape.png" style="height: 18px;" /></a> account, then you will be able to make changes to the component configuration by using the <a class="reference external" href="https://cad.onshape.com/help/Content/viewonlytoolbar.htm">view only toolbar</a>. You can sign up for a <a class="reference external" href="https://www.onshape.com/en/products/free">free public Onshape account</a> that will enable you to access the parts lists and <em>estimated</em> materials cost for each of the AIDE configurable components. The AIDE videos (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">table_AIDE_videos</span></code>) introduce the core AIDE features.</p>
 <span id="table-aide-videos"></span><table class="docutils align-left" id="id2" style="width: 100">
-<caption><span class="caption-number">Table 23 </span><span class="caption-text">AIDE play list of videos.</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<caption><span class="caption-text">AIDE play list of videos.</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -318,10 +220,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Filtration/Filtration_Design_Solution.html" class="btn btn-neutral float-left" title="Filtration Design Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Specifications.html" class="btn btn-neutral float-right" title="AguaClara Specifications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plant Hydraulics &mdash; AguaClara 363/merge documentation</title>
+  <title>Plant Hydraulics &mdash; AguaClara 364/merge documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,15 +13,13 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=3cd6438d"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=4d0de9e7"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Manifold Hydraulics" href="Manifold_Hydraulics.html" />
-    <link rel="prev" title="Fluid Mechanics Derivations" href="Fluid_Mechanics_Derivations.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -32,11 +30,11 @@
 
           
           
-          <a href="../index.html" class="icon icon-home">
+          <a href="../Technical_Report/lfom.html" class="icon icon-home">
             AguaClara
           </a>
               <div class="version">
-                363/merge
+                364/merge
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -46,129 +44,33 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 1: Introduction</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="Fluid_Mechanics.html">Fluid Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Fluid_Mechanics_Derivations.html">Fluid Mechanics Derivations</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Plant Hydraulics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#stock-tanks-to-float-valves">Stock tanks to float valves</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#constant-level-tank-through-dosing-tubes-and-to-the-doser">Constant level tank through dosing tubes and to the doser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#drop-tube-to-flexible-tubing">Drop tube to flexible tubing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#flexible-tubing">Flexible tubing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#doser-to-injection-point-coagulant">Doser to injection point (coagulant)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#doser-to-drip-point-chlorine">Doser to drip point (chlorine)</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Plant Hydraulics</a><ul>
+<li><a class="reference internal" href="#stock-tanks-to-float-valves">Stock tanks to float valves</a></li>
+<li><a class="reference internal" href="#constant-level-tank-through-dosing-tubes-and-to-the-doser">Constant level tank through dosing tubes and to the doser</a></li>
+<li><a class="reference internal" href="#drop-tube-to-flexible-tubing">Drop tube to flexible tubing</a></li>
+<li><a class="reference internal" href="#flexible-tubing">Flexible tubing</a></li>
+<li><a class="reference internal" href="#doser-to-injection-point-coagulant">Doser to injection point (coagulant)</a></li>
+<li><a class="reference internal" href="#doser-to-drip-point-chlorine">Doser to drip point (chlorine)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Manifold_Hydraulics.html">Manifold Hydraulics</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Energy Dissipation Rate, Velocity Gradient, and Mixing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 4: Chemistry of Water Treatment</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Coagulant Nanoparticles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Carbonate Reactions, Buffering, and pH</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 5: Flow Control and Measurement</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Intro.html">Constant Head Tanks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html">AguaClara Flow Control and Measurement Technologies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix: Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 7: Flocculation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">AguaClara Hydraulic Flocculation Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Challenge.html">Flocculation Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 8: Clarification</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarifier Derivations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 9: Filtration</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Open Stacked Rapid Sand Filter Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Challenge.html">Filtration Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../AIDE/AIDE.html">AguaClara Infrastructure Design Engine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../AIDE/Specifications.html">AguaClara Specifications</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Chapter 12: Operation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Operation/Coagulant_Automation.html">Coagulant Automation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Operation/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Appendix 1 + Resources</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Contributor's guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
-</ul>
-
+</div>
         </div>
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">AguaClara</a>
+          <a href="../Technical_Report/lfom.html">AguaClara</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li><a href="../Technical_Report/lfom.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Plant Hydraulics</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/Fluids_and_Hydraulics/Plant_Hydraulics.rst.txt" rel="nofollow"> View page source</a>
@@ -195,18 +97,18 @@
 <li><p>filtered water to distribution tank</p></li>
 </ul>
 </div></blockquote>
-<p>Minor losses dominate the head loss in most pipes in a water treatment plant. An exception is the dosing tubes that are specifically designed to have major losses dominate. We can solve the minor loss Equation, <a class="reference internal" href="Fluid_Mechanics.html#equation-minor-loss">(20)</a> for the maximum velocity in a pipe given a constraint of head loss and the sum of the minor loss coefficients.</p>
+<p>Minor losses dominate the head loss in most pipes in a water treatment plant. An exception is the dosing tubes that are specifically designed to have major losses dominate. We can solve the minor loss Equation, <a class="reference internal" href="Fluid_Mechanics.html#equation-minor-loss">()</a> for the maximum velocity in a pipe given a constraint of head loss and the sum of the minor loss coefficients.</p>
 <div class="math notranslate nohighlight" id="equation-v-max-minor-losses">
-<span class="eqno">(75)<a class="headerlink" href="#equation-v-max-minor-losses" title="Permalink to this equation"></a></span>\[\bar v_{max}^2 = \sqrt{\frac{2gh_{e_{max}}}{K_e}}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-v-max-minor-losses" title="Permalink to this equation"></a></span>\[\bar v_{max}^2 = \sqrt{\frac{2gh_{e_{max}}}{K_e}}\]</div>
 <p>This calculations for the maximum velocities for different sections of the plant piping are in the <a class="reference external" href="https://cad.onshape.com/documents/feb8f8b15585d57ecb0091f2/w/11145594f45115d4e255d7ae/e/b3519c65bc0794966e96cb8e">PipeMap Onshape document</a>.</p>
 <p>Kawamura <span id="id1">[<a class="reference internal" href="#id3" title="S. Kawamura. Integrated Design and Operation of Water Treatment Facilities. Wiley, 2000. ISBN 9780471350934. URL: https://books.google.com/books?id=cOQKKRUNGrwC.">Kaw00</a>]</span> recommends maximum velocities of about 2 m/s except where floc breakup is a concern. He also recommends that the plant hydraulics be designed to handle 1.2 to 1.5 of the plant design flow rate. If we use the less conservative factor we obtain a maximum plant pipe velocity of 1.7 m/s.</p>
 <p>The bypass line requires a careful design because the elevation difference is slightly greater than 1 m and contains an entrance (K = 0.5), 6 elbows (K = 0.9), and an exit (K = 1). The minor loss equation gives a maximum velocity of 1.7 m/s without any additional safety factor.</p>
-<p>The linear flow orifice (LFOM) is sized based on a maximum velocity of Equation <a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#equation-lfom-v-max">(336)</a>. For the AguaClara standard LFOM head loss of 20 cm the maximum velocity is 0.84 m/s. With a safety factor of 1.2 this results in a maximum velocity of 0.7 m/s. Thus the LFOM requires a larger diameter pipe than the plant bypass line. Given the high cost of switching to larger pipes and fittings it is worth designing for the precise bypass line requirements rather than simple using the LFOM diameter for other pipes.</p>
+<p>The linear flow orifice (LFOM) is sized based on a maximum velocity of Equation <a class="reference internal" href="../Technical_Report/lfom.html#equation-lfom-v-max">(1)</a>. For the AguaClara standard LFOM head loss of 20 cm the maximum velocity is 0.84 m/s. With a safety factor of 1.2 this results in a maximum velocity of 0.7 m/s. Thus the LFOM requires a larger diameter pipe than the plant bypass line. Given the high cost of switching to larger pipes and fittings it is worth designing for the precise bypass line requirements rather than simple using the LFOM diameter for other pipes.</p>
 <p>The plant bypass line, backwash recycle line and source water pipes will all be designed using the bypass line nominal diameter. The bypass line will be designed based on the minor losses of the entrance, elbows, and exit as well as the total elevation difference between the entrance tank and the filter outlet tank.</p>
 <p>Pipes used to connect the clarifier to the filter need to be designed in context because the head loss directly influences the overall plant head loss and hence the height of the building. In that case the head loss should be limited to about 0.1 m. The velocity will be limited based on the number of elbows required. As plant flow rates increase the clarified pipe will quickly reach the maximum pipe diameter that the implementation partner is willing to install. In that case the options are to use multiple pipes or switch to open channel flow.</p>
 <p>The chemical pipes have three sections with different constraints.</p>
 <span id="table-chemical-pipes"></span><table class="docutils align-left" id="id40">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Design constraints for the chemical feed piping.</span><a class="headerlink" href="#id40" title="Permalink to this table"></a></caption>
+<caption><span class="caption-text">Design constraints for the chemical feed piping.</span><a class="headerlink" href="#id40" title="Permalink to this table"></a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Location</p></th>
 <th class="head"><p>Constraint</p></th>
@@ -252,25 +154,25 @@
 <p>The flow transitions from full pipe flow to open channel flow in the horizontal pipe leading to the drop tube. The vertical (or almost vertical) drop tube has supercritical open channel flow. In supercritical flow downstream conditions have no influence on the flow. An example of supercritical flow is flow down a spillway from a dam. The supercritical flow prevents the water level at the injection point for the coagulant from having any influence on the coagulant flow rate that is controlled by the head loss through the dosing tubes. The chemical will have the lowest vertical velocity at the point where it transitions from horizontal to vertical flow. The open channel flow condition must begin at the end of the horizontal section.</p>
 <p>We can specify that the chemical depth at the end of the horizontal section should not exceed 50% of the pipe diameter. The flow at the transition from the horizontal to vertical pipe is critical flow. The equation for critical flow for an arbitrary channel cross section is given by:</p>
 <div class="math notranslate nohighlight" id="equation-froudenumber">
-<span class="eqno">(76)<a class="headerlink" href="#equation-froudenumber" title="Permalink to this equation"></a></span>\[Fr^2 = \frac{Q^2 T}{gA^3}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-froudenumber" title="Permalink to this equation"></a></span>\[Fr^2 = \frac{Q^2 T}{gA^3}\]</div>
 <p>where Fr is the Froude number, Q is the flow rate, T is the top width of the fluid surface, g is the acceleration due to gravity, and A is the cross sectional area of the flow. The Froude number has a value of 1 for critical flow. We can apply the constraint that the horizontal pipe be half full at the transition to the vertical pipe and replace the flow rate with velocity times area to obtain:</p>
 <div class="math notranslate nohighlight" id="equation-criticalflow1">
-<span class="eqno">(77)<a class="headerlink" href="#equation-criticalflow1" title="Permalink to this equation"></a></span>\[1 = \frac{V^2 A^2 D}{g A^3}\]</div>
-<p>The area, A, in Equation <a class="reference internal" href="#equation-criticalflow1">(77)</a> is half of the pipe cross sectional area, <span class="math notranslate nohighlight">\(\frac{\pi D^2}{8}\)</span>.</p>
+<span class="eqno">()<a class="headerlink" href="#equation-criticalflow1" title="Permalink to this equation"></a></span>\[1 = \frac{V^2 A^2 D}{g A^3}\]</div>
+<p>The area, A, in Equation <a class="reference internal" href="#equation-criticalflow1">()</a> is half of the pipe cross sectional area, <span class="math notranslate nohighlight">\(\frac{\pi D^2}{8}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-criticalflow2">
-<span class="eqno">(78)<a class="headerlink" href="#equation-criticalflow2" title="Permalink to this equation"></a></span>\[1 = \frac{8 V^2 D}{g \pi D^2}\]</div>
-<p>Equation <a class="reference internal" href="#equation-criticalflow2">(78)</a> can be solved for the maximum fluid velocity in half full pipe.</p>
+<span class="eqno">()<a class="headerlink" href="#equation-criticalflow2" title="Permalink to this equation"></a></span>\[1 = \frac{8 V^2 D}{g \pi D^2}\]</div>
+<p>Equation <a class="reference internal" href="#equation-criticalflow2">()</a> can be solved for the maximum fluid velocity in half full pipe.</p>
 <div class="math notranslate nohighlight" id="equation-v-max-halfpipe">
-<span class="eqno">(79)<a class="headerlink" href="#equation-v-max-halfpipe" title="Permalink to this equation"></a></span>\[V_{max_{halfPipe}} = \frac{\sqrt{2\pi g D}}{4}\]</div>
-<p>For design purposes we want a constraint on the maximum velocity over the entire pipe. The entire pipe has twice the area and thus the maximum velocity over the entire pipe is half of the value in Equation <a class="reference internal" href="#equation-v-max-halfpipe">(79)</a>.</p>
+<span class="eqno">()<a class="headerlink" href="#equation-v-max-halfpipe" title="Permalink to this equation"></a></span>\[V_{max_{halfPipe}} = \frac{\sqrt{2\pi g D}}{4}\]</div>
+<p>For design purposes we want a constraint on the maximum velocity over the entire pipe. The entire pipe has twice the area and thus the maximum velocity over the entire pipe is half of the value in Equation <a class="reference internal" href="#equation-v-max-halfpipe">()</a>.</p>
 <div class="math notranslate nohighlight" id="equation-v-max-droptube">
-<span class="eqno">(80)<a class="headerlink" href="#equation-v-max-droptube" title="Permalink to this equation"></a></span>\[V_{max_{dropTube}} =  \frac{\sqrt{2\pi g D}}{8}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-v-max-droptube" title="Permalink to this equation"></a></span>\[V_{max_{dropTube}} =  \frac{\sqrt{2\pi g D}}{8}\]</div>
 <p>Try again using flow as the parameter. The flow area, A, is 1/2 of the pipe cross sectional area when T is the diameter.</p>
 <div class="math notranslate nohighlight" id="equation-criticalflow3">
-<span class="eqno">(81)<a class="headerlink" href="#equation-criticalflow3" title="Permalink to this equation"></a></span>\[1 = \frac{Q^2 D}{g\left(\frac{\pi D^2}{8}\right)^3}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-criticalflow3" title="Permalink to this equation"></a></span>\[1 = \frac{Q^2 D}{g\left(\frac{\pi D^2}{8}\right)^3}\]</div>
 <p>Now solve for D.</p>
 <div class="math notranslate nohighlight" id="equation-dforcriticalflow">
-<span class="eqno">(82)<a class="headerlink" href="#equation-dforcriticalflow" title="Permalink to this equation"></a></span>\[D = \left[\frac{Q^2}{g }\left(\frac{8}{\pi}\right)^3\right]^\frac{1}{5}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-dforcriticalflow" title="Permalink to this equation"></a></span>\[D = \left[\frac{Q^2}{g }\left(\frac{8}{\pi}\right)^3\right]^\frac{1}{5}\]</div>
 <p>The critical flow constraint is less severe than the constant level tank to the doser. To minimize the number of different sizes of piping that are used the drop tube will have the same diameter as the pipes leaving the constant level tank.</p>
 </section>
 <section id="flexible-tubing">
@@ -295,10 +197,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Fluid_Mechanics_Derivations.html" class="btn btn-neutral float-left" title="Fluid Mechanics Derivations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Manifold_Hydraulics.html" class="btn btn-neutral float-right" title="Manifold Hydraulics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
