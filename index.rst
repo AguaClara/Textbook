@@ -85,6 +85,8 @@ The Physics of Water Treatment Design
   Flow_Control_and_Measurement/FCM_Derivations.rst
   Flow_Control_and_Measurement/FCM_Solution.rst
   Flow_Control_and_Measurement/ET_Design.rst
+  Flow_Control_and_Measurement/ET_Design_Challenge.rst
+  Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.rst
 
 .. toctree::
   :caption: Chapter 6: Rapid Mix
