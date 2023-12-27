@@ -1,11 +1,11 @@
 .. raw:: html
 
     <embed>
-       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Flocculation/Floc_Design_Challenge.html" />
+       <link rel="canonical" href="https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/ET_Design_Challenge.html" />
        <script src="https://hypothes.is/embed.js" async></script>
     </embed>
 
-.. _title_Flocculation_Design_Challenge:
+.. _title_Entrance_Tank_Design_Challenge:
 
 ******************************
 Entrance Tank Design Challenge
@@ -35,7 +35,7 @@ You will learn how to:
 SetUp
 =====
 
-Set up your Onshape workspace so that you have access to the following custom features created by AguaClara. Copy the document path below and paste it into the search box for adding custom features to quickly find each feature.
+Set up your Onshape workspace so that you have access to the following custom features created by AguaClara.
 
 .. _figure_addCustomFeature:
 
@@ -45,6 +45,8 @@ Set up your Onshape workspace so that you have access to the following custom fe
     :alt: Custom variable table.
 
     Add custom features to the feature menu.
+
+Copy the document path below and paste it into the search box for adding custom features to quickly find each feature.
 
   1. Civil Tank: inside Core Parts open up tanks and select Civil Tank (cad.onshape.com/documents/c0af0d6b5703e7a8fb53f53f)
   1. Overflow Pipe: select overflow.fs and then select Overflow Pipe (cad.onshape.com/documents/50136809eb4dab5feb113036)
@@ -192,6 +194,7 @@ You can edit the overrides to get new designs quickly. Change the flow rate to 1
  1. Why did the overflow pipe diameter change?
  1. We could have done this assignment using pencil and paper or and Excel spreadsheet for the design and a cad program for the drawing. List as many advantages and disadvantages as you can for the Onshape AIDE design process vs Excel and a cad program.
  1. Make **one** change or addition to the design. It can be anything. Here are some ideas...
+
     * Add a new param for the minimum distance between the cap of the overflow pipe and the end wall of the tank and then move the overflow pipe into that new position.
     * Add a channel below the entrance tank that will collect the overflow water.
     * Replace the tank slab with hoppers so that the sediment that is captured can drain out.
