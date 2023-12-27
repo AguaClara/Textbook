@@ -38,7 +38,7 @@ Part 2 - Part Studio Steps
       1. Use the extrude tool with the "Surface" option to create a new surface starting from the line in the sketch and extending for the length of the tank (#L).
       1. Rename "Surface 1" that is below the parts list at the left of the window to "water".
       1. Edit the appearance of the surface to make it blue and 0.2 on the transparency scale so you can see through it.
-      
+
   1. Change Q_pi to 1. What is the distance between the inlet of the overflow pipe and the water surface? The top of the overflow pipe is the inlet.
   1. Modify the design so the overflow inlet is 1 cm higher than the water surface at the design flow rate. Do this by creating a new input parameter (call it overflowHSF) in FeatureScript and then adding that as an input to the Overflow Pipe feature.
   1. Time to play with the design.

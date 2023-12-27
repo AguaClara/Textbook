@@ -23,7 +23,7 @@ Learning Objectives
 Design Exploration
 ==================
 
-Create a copy of the `StaRS Template <https://cad.onshape.com/documents/7c0d04fa1181c03c2d5966c9/w/e4c32164239a9b866e97d9df/e/d6e1f42043793dd9ae5759c4>`_. We will use a default filter flow rate of 20 L/s for the design calculations. If not stated, use the defaults given in the list of parameters in the Onshape document.
+**If your instructor has not provided you with a link to the starting document**, you can create a copy of the  `StaRS Template <https://cad.onshape.com/documents/7c0d04fa1181c03c2d5966c9/w/e4c32164239a9b866e97d9df/e/d6e1f42043793dd9ae5759c4>`_. We will use a default filter flow rate of 20 L/s for the design calculations. If not stated, use the defaults given in the list of parameters in the Onshape document.
 
 In addition to the questions numbered below please include a brief description in your own words of following variables and parameters insdie the "variableDescriptions" function. Be sure to mention what the units are: layerH, bwVm, fiVm, fibwH_pi,  bwC, poreVOL, bwTI, fiTI, sandPO, cleanSandHL. If there are other variables that you are having a hard time remembering please include those as well!
 
