@@ -14,7 +14,14 @@ sys.path.append(os.path.abspath("./_ext"))
 project = 'AguaClara'
 copyright = '2023, AguaClara Reach'
 author = 'AguaClara Reach'
-release = '0.0.0'
+
+# The short X.Y version.
+# We use semantic versioning - see here: semver.org as applied to textbooks.
+# Note that version names are set on GitHub - NOT here.
+import os
+version = os.getenv("GITHUB_REF_NAME", "EXPERIMENTAL")
+# The full version, including alpha/beta/rc tags.
+release = version
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

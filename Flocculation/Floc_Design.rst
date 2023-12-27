@@ -51,8 +51,8 @@ Horizontal-Vertical flow flocculators
       - :math:`\tilde{G} \theta`, collision potential at the coldest operating temperature
       - :math:`Q`, plant flow rate
       - :math:`H`, height of water *at the end of the flocculator*
-      - :math:`L_{Max, \, sed}`, max length of a flocculator channel based on clarifier length
-      - :math:`W_{Min, \, human}` minimum width of a single channel based on the width of the average human hip (someone's got to go down there...)
+      - :math:`L_{max, \, sed}`, max length of a flocculator channel based on clarifier length
+      - :math:`W_{min, \, human}` minimum width of a single channel based on the width of the average human hip (someone's got to go down there...)
     - Find:
       - :math:`\theta`, hydraulic retention time
       - :math:`\forall_{floc}`, flocculator volume
@@ -84,11 +84,11 @@ We start by making sure that our flocculator will be able to flocculate effectiv
  - :math:`\tilde{G} = 50 Hz`
  - :math:`\tilde{G} \theta = 35,000`
 
-The plant flow rate :math:`Q` is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water *at the end* of the flocculator, :math:`H`, the *maximum* length of the flocculator based on the length of the clarifier length, :math:`L_{Max, \, sed}`, and the *minimum* width of a flocculator channel required for a human to fit inside, :math:`W_{Min, \, human}`, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the clarifiers, which is why the length constraint exists. See :numref:`figure_physical_design_criteria_floc` for a representation of how the flocculator and clarifiers are placed in a plant.
+The plant flow rate :math:`Q` is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water *at the end* of the flocculator, :math:`H`, the *maximum* length of the flocculator based on the length of the clarifier length, :math:`L_{max, \, sed}`, and the *minimum* width of a flocculator channel required for a human to fit inside, :math:`W_{min, \, human}`, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the clarifiers, which is why the length constraint exists. See :numref:`figure_physical_design_criteria_floc` for a representation of how the flocculator and clarifiers are placed in a plant.
 
 - :math:`H = 2 \, {\rm m}`
-- :math:`L_{Max, \, sed} = 6 \, {\rm m}`
-- :math:`W_{Min, \, human} = 45 \, {\rm cm}`
+- :math:`L_{max, \, sed} = 6 \, {\rm m}`
+- :math:`W_{min, \, human} = 45 \, {\rm cm}`
 
 .. _figure_physical_design_criteria_floc:
 
@@ -106,23 +106,23 @@ Deriving the equations required to find the physical dimensions now and the hydr
 Length
 ^^^^^^^^^^^^^^^^^^^^^
 
-Flocculator length, :math:`L_{channel}`` must meet two constraints: it must be less than or equal to the length of the clarifiers, as the flocculator is adjacent to the clarifier. This constraint is :math:`L_{Max, \, sed}`. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside :math:`L_{Max, \, \forall}`. **The constraint that wins out is the one that results in the *smaller* length value**.
+Flocculator length, :math:`L_{channel}`` must meet two constraints: it must be less than or equal to the length of the clarifiers, as the flocculator is adjacent to the clarifier. This constraint is :math:`L_{max, \, sed}`. Next, the flocculator must be short enough to make sure the target volume of the flocculator is met, while still allowing for a human to fit inside :math:`L_{max, \, \forall}`. **The constraint that wins out is the one that results in the *smaller* length value**.
 
 .. math::
 
-  L_{Max, \, sed} = 6 \, {\rm m}
-  L_{Max, \, \forall} = \frac{\forall}{n_{Min, \, channels} W_{Min, \, human} H}
+  L_{max, \, sed} = 6 \, {\rm m}
+  L_{max, \, \forall} = \frac{\forall}{n_{min, \, channels} W_{min, \, human} H}
 
 | Such that:
-| :math:`n_{Min, \, channels} = 2`
+| :math:`n_{min, \, channels} = 2`
 
-The reason why :math:`W_{Min, \, human}` is used is because it represents the absolute minimum of flocculator channel width. If the width ends up being larger, the length will decrease. :math:`n_{Min, \, channels} = 2`  to make sure that the flow ends up on the correct side of the clarifier, as the image below shows. Note that there can only be an even number of flocculator channels, as explained in the image's caption.
+The reason why :math:`W_{min, \, human}` is used is because it represents the absolute minimum of flocculator channel width. If the width ends up being larger, the length will decrease. :math:`n_{min, \, channels} = 2`  to make sure that the flow ends up on the correct side of the clarifier, as the image below shows. Note that there can only be an even number of flocculator channels, as explained in the image's caption.
 
 The equation for *actual* flocculator length is therefore:
 
 .. math::
 
-  L_{channel} = {\rm min}(L_{Max, \, sed}, \, L_{Max, \, \forall})
+  L_{channel} = {\rm min}(L_{max, \, sed}, \, L_{max, \, \forall})
 
 .. _figure_floc_channels:
 
@@ -168,11 +168,11 @@ This equation represents the absolute smallest width of a flocculator channel if
 :math:`H_e = H_{e_{max}} = H = 2 \, {\rm m}`, this implies that there are no obstacles between baffles
 :math:`\Pi_{H_eS} = \Pi_{ {HS}_{min} } = 3`
 
-Recall our other width constraint, :math:`W_{Min, \, human} = 45 \, {\rm cm}`, which is based on our desire to have a human be able to fit into the channels. The governing constraint is the *larger* value of :math:`W_{min}`:
+Recall our other width constraint, :math:`W_{min, \, human} = 45 \, {\rm cm}`, which is based on our desire to have a human be able to fit into the channels. The governing constraint is the *larger* value of :math:`W_{min}`:
 
 .. math::
 
-  W_{min} = {\rm max}(W_{Min, \, \Pi_{H_eS}}, \, W_{Min, \, human})
+  W_{min} = {\rm max}(W_{min, \, \Pi_{H_eS}}, \, W_{min, \, human})
 
 We can find the number of channels, :math:`n_{channels}` and their actual width in one last step, by finding the *total flocculator width* if there were no channels and dividing that by the minimum flocculator width, :math:`W_{min}`, found above. The equation for total flocculator width is based on our target volume:
 

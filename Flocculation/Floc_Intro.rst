@@ -352,7 +352,7 @@ Fortunately for us, both problems can be quantified with a single ratio:
 
 High values of :math:`\Pi_{\tilde{G}}^{G_{max}}` occur when one or both of the previous problems is present. If certain sections in the flocculator have very high local :math:`G` values, then :math:`G_{max}` becomes large. If the flocculator has a lot of dead space, then :math:`\tilde{G}` becomes small. Either way, :math:`\Pi_{\tilde{G}}^{G_{max}}` becomes larger.
 
-**Note:** Recall the relationship between :math:`G` and :math:`\varepsilon` : :math:`G = \sqrt{ \frac{\varepsilon}{\nu} }`. From this relationship, we can see that :math:`G \propto \sqrt{\varepsilon}`. Thus, by defining  :math:`\Pi_{\tilde{G}}^{G_{max}}`, we can also define a ratio for Max to average energy dissipation rate:
+**Note:** Recall the relationship between :math:`G` and :math:`\varepsilon` : :math:`G = \sqrt{ \frac{\varepsilon}{\nu} }`. From this relationship, we can see that :math:`G \propto \sqrt{\varepsilon}`. Thus, by defining  :math:`\Pi_{\tilde{G}}^{G_{max}}`, we can also define a ratio for max to average energy dissipation rate:
 
 .. math::
 
