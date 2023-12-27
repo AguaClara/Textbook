@@ -26,7 +26,7 @@ extensions = ['sphinx.ext.doctest',
               'sphinxcontrib.disqus',
               'rinoh.frontend.sphinx',
              # 'keyword_replacer',
-              'todo'
+              # 'todo'
               ]
 
 todo_include_todos = False
