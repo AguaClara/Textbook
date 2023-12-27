@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Constant Head Tanks &mdash; AguaClara v1.4.35 documentation</title>
+  <title>Constant Head Tanks &mdash; AguaClara v1.4.36 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=11caa1ce"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=26322ba4"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -36,7 +36,7 @@
             AguaClara
           </a>
               <div class="version">
-                v1.4.35
+                v1.4.36
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -86,6 +86,8 @@
 <li class="toctree-l1"><a class="reference internal" href="FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -196,7 +198,7 @@
 <li><p><span class="math notranslate nohighlight">\(h_{Tank}\)</span> is not the same as <span class="math notranslate nohighlight">\(h_{0}\)</span>. <span class="math notranslate nohighlight">\(h_{Tank}\)</span> is the height of water level in the tank with reference to the tank bottom. <span class="math notranslate nohighlight">\(h_{0}\)</span> is the water level in the tank with reference to the valve. Neither change with time, they both refer to the water level at one instance in time, <span class="math notranslate nohighlight">\(t = 0\)</span>. Therefore, <span class="math notranslate nohighlight">\(h_{0} \geq h_{Tank}\)</span> is always true. If the tank is elevated far above the valve, then the <span class="math notranslate nohighlight">\(h_{0} &gt; &gt; h_{Tank}\)</span>. If the valve is at the same elevation as the bottom of the tank, then <span class="math notranslate nohighlight">\(h_{0} = h_{Tank}\)</span>. Please refer to the figure above to clarify <span class="math notranslate nohighlight">\(h_{0}\)</span> and <span class="math notranslate nohighlight">\(h_{Tank}\)</span>.</p></li>
 </ul>
 <p>We can use the proportionality <span class="math notranslate nohighlight">\(Q \propto \sqrt{h}\)</span>, which applies to both minor losses and orifices to form a relationship between water level in the tank <span class="math notranslate nohighlight">\(h\)</span> and time <span class="math notranslate nohighlight">\(t\)</span>. This proportionality comes from rearranging the minor loss Equation <span class="math notranslate nohighlight">\(h = K \frac{Q^2}{2 g A^2}\)</span> for <span class="math notranslate nohighlight">\(Q\)</span> instead of <span class="math notranslate nohighlight">\(h\)</span>. A table of proportionality between <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(h\)</span> can be found in <a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html#table-h-q-proportionality"><span class="std std-numref">Table 3</span></a></p>
-<p>Using Equation <a class="reference internal" href="FCM_Derivations.html#equation-q-tank-with-valve">(354)</a> and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or <span class="math notranslate nohighlight">\(h_{Tank} = h_0\)</span>. Our attempt to get a continuous flow rate out of this system is to make <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span> very small by elevating the tank far above the valve. On the right, <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0} = \frac{1}{50}\)</span>. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.</p>
+<p>Using Equation <a class="reference internal" href="FCM_Derivations.html#equation-q-tank-with-valve">(145)</a> and this proportionality relationship, we make the following plots. On the left, the valve is at the same elevation as the bottom of the tank, or <span class="math notranslate nohighlight">\(h_{Tank} = h_0\)</span>. Our attempt to get a continuous flow rate out of this system is to make <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0}\)</span> very small by elevating the tank far above the valve. On the right, <span class="math notranslate nohighlight">\(\frac{h_{Tank}}{h_0} = \frac{1}{50}\)</span>. While the plot looks great and provides essentially constant head, elevating the tank by 50 times its height is not realistic. The ‘tank with a valve’ is not a solution to the constant head problem.</p>
 <figure class="align-center" id="id2">
 <span id="figure-tank-valve-play"></span><a class="reference internal image-reference" href="../_images/tank_valve_play.png"><img alt="Manipulating hypochlorinator heights" src="../_images/tank_valve_play.png" style="width: 600px;" /></a>
 <figcaption>
@@ -207,11 +209,11 @@
 <section id="drain-system-for-a-tank">
 <span id="heading-drain-system-for-a-tank"></span><h2>Drain System for a Tank<a class="headerlink" href="#drain-system-for-a-tank" title="Permalink to this heading"></a></h2>
 <p>While the ‘tank with a valve’ scenario is not a good constant head solution, we can use our understanding of the system to properly design drain systems for AguaClara reactors like flocculators and clarifiers, since they are just tanks with valves. The derivation for the following equation is here, along with more details on AguaClara’s pipe stub method for draining tanks: <a class="reference internal" href="FCM_Derivations.html#heading-diameter-and-time-tank-drain-equation"><span class="std std-ref">D(t) and t(D) for Tank Drain Equation</span></a>. The derived ‘Tank Drain’ equation is as follows:</p>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-intro-0">
-<span class="eqno">(334)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-intro-0" title="Permalink to this equation"></a></span>\[D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{4}}}\]</div>
+<div class="math notranslate nohighlight">
+\[D_{Pipe} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{4}}}\]</div>
 <p>The equation can also be rearranged to solve for the time it would take to drain a tank given its dimensions and a certain drain pipe size:</p>
-<div class="math notranslate nohighlight" id="equation-flow-control-and-measurement-fcm-intro-1">
-<span class="eqno">(335)<a class="headerlink" href="#equation-flow-control-and-measurement-fcm-intro-1" title="Permalink to this equation"></a></span>\[t_{Drain} =  \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{2}}}\]</div>
+<div class="math notranslate nohighlight">
+\[t_{Drain} =  \frac{8 L_{Tank} W_{Tank}}{\pi D_{Pipe}^2} {\left( \frac{H_{Tank} \sum K }{2g} \right)^{\frac{1}{2}}}\]</div>
 <div class="line-block">
 <div class="line">Such that:</div>
 <div class="line"><span class="math notranslate nohighlight">\(D_{Pipe}\)</span> = Diameter of the drain piping</div>

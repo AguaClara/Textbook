@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Filtration Design Challenge &mdash; AguaClara v1.4.35 documentation</title>
+  <title>Filtration Design Challenge &mdash; AguaClara v1.4.36 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=11caa1ce"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=26322ba4"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -36,7 +36,7 @@
             AguaClara
           </a>
               <div class="version">
-                v1.4.35
+                v1.4.36
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -82,6 +82,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -206,9 +208,9 @@
 <li><p>If a cubic tank is built to hold all of the backwash water from one filter, what is the inside length of one side of the cube? (ignore the effect of freeboard).</p></li>
 <li><p>If the filter runtime is 11 hours and 40 minutes with a clarified water turbidity of 1 NTU and a filtered water turbidity of 0.1 NTU, then what is the average suspended solids concentration of the backwash water? You can assume that 1 NTU = 1.47 mg/L for kaolin clay <a class="reference external" href="https://doi.org/10.1016/j.cjche.2015.02.003">Coagulation behavior of polyaluminum chloride (Wei et al., 2015)</a>. I have defined NTU in the Onshape document. I suggest simply entering the turbidity inputs in the equation that you write in FeatureScript. You can display the result in NTU by dividing the value by NTU and then include ” NTU” in the postString. see <code class="docutils literal notranslate"><span class="pre">`printAnswer(i,</span> <span class="pre">&quot;The</span> <span class="pre">average</span> <span class="pre">concentration</span> <span class="pre">of</span> <span class="pre">suspended</span> <span class="pre">solids</span> <span class="pre">during</span> <span class="pre">backwash</span> <span class="pre">is&quot;,</span> <span class="pre">&quot;</span> <span class="pre">NTU&quot;,</span> <span class="pre">design.bwC/NTU,</span> <span class="pre">3);`</span></code></p></li>
 <li><p>What fraction of the sand pores were filled with clay particles prior to backwash?  Note that we are ignoring the fact that the clay particles formed flocs and the flocs include water. For this problem simply take the volume of clay particles divided by the sand pore volume.</p></li>
-<li><p>What is the head loss at the coldest water temperature, 0°C, through the clean sand during filtration? Use the Ergun Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-ergun">(180)</a>. Create a function in FeatureScript to calculate the head loss using the Ergun Equation.</p></li>
+<li><p>What is the head loss at the coldest water temperature, 0°C, through the clean sand during filtration? Use the Ergun Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-ergun">(55)</a>. Create a function in FeatureScript to calculate the head loss using the Ergun Equation.</p></li>
 <li><p>What is the head loss at the warmest water temperature, 25°C, through the clean sand during filtration?</p></li>
-<li><p>Estimate the depth of the filter box using Equation <a class="reference internal" href="Filtration_Intro.html#equation-approximate-filter-depth">(670)</a>. Note that this estimate misses about 1 meter of safety factors, freeboard, and plumbing head loss.</p></li>
+<li><p>Estimate the depth of the filter box using Equation <a class="reference internal" href="Filtration_Intro.html#equation-approximate-filter-depth">(273)</a>. Note that this estimate misses about 1 meter of safety factors, freeboard, and plumbing head loss.</p></li>
 <li><p>How much would the depth of the filter increase if the number of layers were increased to 10? Note that the 6 layer design was an engineering decision based on the minimum number of layers that seemed likely to be viable. The number of layers, layer height, and sand diameter are all parameters that deserve further investigation.</p></li>
 <li><p>If the water coming into the filter was as turbid as the backwash water turbidity calculated above, then approximately how long would you expect the filter could run before it reached breakthrough? You can simplify the analysis by assuming that the filter captures all of the particles.</p></li>
 </ol>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clarification Design Challenge &mdash; AguaClara v1.4.35 documentation</title>
+  <title>Clarification Design Challenge &mdash; AguaClara v1.4.36 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=11caa1ce"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=26322ba4"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -36,7 +36,7 @@
             AguaClara
           </a>
               <div class="version">
-                v1.4.35
+                v1.4.36
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -82,6 +82,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -198,7 +200,7 @@
 <dt>Use the full clarifier to answer the following questions. Use the defaults as provided in the link and return to the link if you forget the defaults. Write the answers to these questions in the function reflections of the Clarifier Template.</dt><dd><ol class="arabic simple">
 <li><p>What do you initially think will happen to the total cost of the 0.8 mm polycarbonate sheets used for plate settlers if you were to increase the spacing of the plate settlers? (no wrong answers here!)</p></li>
 <li><p>Vary the Plate settler spacing from 1 cm to 5 cm and observe the cost of the 0.8 mm polycarbonate sheets. What do you observe and is it what you expected?</p></li>
-<li><p>Write a sentence or two to explain what you observed based on the underlying physics of the plate settlers. Remember that it is on the projected area (horizontal area) that particles can settle out. Refer to Equation <a class="reference internal" href="Clarifier_Derivations.html#equation-vc-of-vz-plate">(575)</a> and also consider how the number of plate settlers changes as you vary the spacing.</p></li>
+<li><p>Write a sentence or two to explain what you observed based on the underlying physics of the plate settlers. Remember that it is on the projected area (horizontal area) that particles can settle out. Refer to Equation <a class="reference internal" href="Clarifier_Derivations.html#equation-vc-of-vz-plate">(213)</a> and also consider how the number of plate settlers changes as you vary the spacing.</p></li>
 <li><p>Why does the depth of the clarifier change when the plate settler spacing is changed? Watch the change in design carefully to see exactly which dimensions change.</p></li>
 <li><p>Reset the plate settler spacing to 2.5 cm. Now play with the plate settler angle. We haven’t done any research on this parameter and different manufactures of plate settlers use slightly different angles. How much would the clarifier cost decrease if we decreased the plate settler angle from 60° to 55°?</p></li>
 <li><p>Identify at least 3 changes in the design as you decrease the flow from 12 L/s to 1 L/s.</p></li>
@@ -231,14 +233,14 @@ With MapToDisplay empty, you can see all of the top level entries in the design 
 <figure class="align-center" id="id1">
 <span id="figure-variabletable"></span><a class="reference internal image-reference" href="../_images/VariableTable1.png"><img alt="Custom variable table." src="../_images/VariableTable1.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 192 </span><span class="caption-text">Browsing the top level variable of the design map.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 193 </span><span class="caption-text">Browsing the top level variable of the design map.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>To browse the map of settler, simply type #settler in the MapToDisplay.</p>
 <figure class="align-center" id="id2">
 <span id="figure-variabletable2"></span><a class="reference internal image-reference" href="../_images/VariableTable2.png"><img alt="Custom variable table." src="../_images/VariableTable2.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 193 </span><span class="caption-text">Browsing the next level deeper of the design map.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 194 </span><span class="caption-text">Browsing the next level deeper of the design map.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>To browse further simply append the name of the next variable using dot notation (for example #settler.module.pipe).</p>
@@ -246,9 +248,9 @@ With MapToDisplay empty, you can see all of the top level entries in the design 
 <ol class="arabic simple">
 <li><p>What is the total cost of the plastic for the default design? Use the Bill of Material and simply copy the total cost and paste it into your answer. It would be cool to make a cost function that could be called in FeatureScript for a part studio that would make it easy to change inputs and compare costs, but we don’t have that figured out yet!</p></li>
 <li><p>What is the cost of the inlet manifold pipe as listed in the Bill of Materials? Note that this does not include the elbow and coupling that are designed as part of the channel system in the clarifier.</p></li>
-<li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(278)</a>, the design defaults for capture velocity and inlet manifold maximum velocity gradient, and a water temperature of 5°C to calculate the value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> that is implicitly used in the design of the clarifier. Create new variables for capture velocity and velocity gradient so those values don’t change as we make changes to the design inputs (design.G_bod and design.captureVm_bod), use the default values initially in this variable creation. Note that this value is smaller than the value of <span class="math notranslate nohighlight">\(\xi_{breakup} = 50 \cdot \frac{mm^8}{s^6}\)</span> that was experimentally determined for a kaolin suspension. We are still learning how <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> controls the design of diffusers and plate settlers. We know that surface waters that contain dissolved organics will have core particle densities that are lower than kaolin clay and thus based on Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(278)</a> the value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> will be reduced significantly.</p></li>
+<li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(115)</a>, the design defaults for capture velocity and inlet manifold maximum velocity gradient, and a water temperature of 5°C to calculate the value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> that is implicitly used in the design of the clarifier. Create new variables for capture velocity and velocity gradient so those values don’t change as we make changes to the design inputs (design.G_bod and design.captureVm_bod), use the default values initially in this variable creation. Note that this value is smaller than the value of <span class="math notranslate nohighlight">\(\xi_{breakup} = 50 \cdot \frac{mm^8}{s^6}\)</span> that was experimentally determined for a kaolin suspension. We are still learning how <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> controls the design of diffusers and plate settlers. We know that surface waters that contain dissolved organics will have core particle densities that are lower than kaolin clay and thus based on Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(115)</a> the value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> will be reduced significantly.</p></li>
 <li><p>Increase the maximum velocity gradient (in the configuration inputs of the part studio) until the inlet pipe switches from 8” ND to 6” ND. You may need to use the Varible Table to find the Inlet Manifold ND, to see how it changes. What is the minimum velocity gradient that results in an 6” ND inlet manifold? Given that you are finding this value by iteration provide an answer that is within 10 Hz of the actual value.</p></li>
-<li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(278)</a> to calculate the maximum capture velocity given this new velocity gradient and assuming that the maximum allowable value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> is the implicit default value you calculated in step 3.</p></li>
+<li><p>Use Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(115)</a> to calculate the maximum capture velocity given this new velocity gradient and assuming that the maximum allowable value of <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> is the implicit default value you calculated in step 3.</p></li>
 <li><p>Explain why the plate settler design has to change to counteract the change in the velocity gradient.</p></li>
 <li><p>Change the capture velocity (in the configuration inputs of the part studio) and find the new cost of the 6 L/s clarifier with an 6” inlet manifold.</p></li>
 <li><p>Explain why the cost increased or decreased from the initial value even though this new design has the same value for  <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span>.</p></li>
@@ -257,7 +259,7 @@ With MapToDisplay empty, you can see all of the top level entries in the design 
 <li><p>What is the plan view area of the entrance into the space between two plate settlers? We will use this to calculate the vertical component of the velocity entering the plate settlers.</p></li>
 <li><p>What is the vertical velocity entering the plate settlers? You’ll need to use continuity to figure this out.</p></li>
 <li><p>Why is this velocity greater than the upflow velocity in the clarifier in the section where the walls are vertical? You can look at the side view of the clarifier to understand why the water has to speed up when it transitions from the top of the floc filter to the plate settlers.</p></li>
-<li><p>We will check how close the design is to the specifications that were given initially. What is the capture velocity of these plate settlers (see Equation <a class="reference internal" href="Clarifier_Derivations.html#equation-vc-of-vz-plate">(575)</a>)?</p></li>
+<li><p>We will check how close the design is to the specifications that were given initially. What is the capture velocity of these plate settlers (see Equation <a class="reference internal" href="Clarifier_Derivations.html#equation-vc-of-vz-plate">(213)</a>)?</p></li>
 <li><p>Is the calculated capture velocity better than or worse than the design capture velocity?</p></li>
 </ol>
 </section>

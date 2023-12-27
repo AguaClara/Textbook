@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rapid Mix Introduction &mdash; AguaClara v1.4.35 documentation</title>
+  <title>Rapid Mix Introduction &mdash; AguaClara v1.4.36 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=11caa1ce"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=26322ba4"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Rapid Mix Design" href="RM_Design.html" />
-    <link rel="prev" title="Entrance Tank Design" href="../Flow_Control_and_Measurement/ET_Design.html" /> 
+    <link rel="prev" title="Flow Measure Design Challenge" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -36,7 +36,7 @@
             AguaClara
           </a>
               <div class="version">
-                v1.4.35
+                v1.4.36
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -82,6 +82,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul class="current">
@@ -224,11 +226,11 @@
 <li><p>Fluid shear and molecular diffusion cause Al nanoparticles with attached formerly dissolved species to collide with inorganic particles (such as clay) and organic particles (such as viruses, bacteria, and protozoans).</p></li>
 </ol>
 </div></blockquote>
-<p>These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. <a class="reference internal" href="#figure-transport-length-scales"><span class="std std-numref">Fig. 75</span></a> shows the range of length scales.</p>
+<p>These multiple steps cover a wide range of length scales and it is not clear at the onset which processes might be the rate limiting steps. We will develop time scale estimates for several of these steps to help identify which processes will likely require the most attention to design. Many of these transport processes are presumed to occur in parallel. <a class="reference internal" href="#figure-transport-length-scales"><span class="std std-numref">Fig. 76</span></a> shows the range of length scales.</p>
 <figure class="align-center" id="id3">
 <span id="figure-transport-length-scales"></span><a class="reference internal image-reference" href="../_images/rapid_mix_macro_to_nano_scale.png"><img alt="rapid mix macro to nano scale" src="../_images/rapid_mix_macro_to_nano_scale.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Transport of coagulant nanoparticles occurs over length scales ranging from meter to a fraction of a nanometer.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Transport of coagulant nanoparticles occurs over length scales ranging from meter to a fraction of a nanometer.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <section id="fluid-mixing">
@@ -237,26 +239,26 @@
 <figure class="align-center" id="id4">
 <span id="figure-backmix"></span><a class="reference internal image-reference" href="../_images/Backmix.jpg"><img alt="Backmix" src="../_images/Backmix.jpg" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Backmix: a mechanical rapid mixer that has a relatively long residence time in a completely mixed flow reactor.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Backmix: a mechanical rapid mixer that has a relatively long residence time in a completely mixed flow reactor.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id5">
 <span id="figure-inline"></span><a class="reference internal image-reference" href="../_images/Inline.jpg"><img alt="Inline" src="../_images/Inline.jpg" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Inline: a mechanical rapid mixer that has a short residence time in a completely mixed flow reactor that is often built into a pipe.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 78 </span><span class="caption-text">Inline: a mechanical rapid mixer that has a short residence time in a completely mixed flow reactor that is often built into a pipe.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id6">
 <span id="figure-hydraulic-jump"></span><a class="reference internal image-reference" href="../_images/hydraulic_jump.jpg"><img alt="hydraulic jump" src="../_images/hydraulic_jump.jpg" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 78 </span><span class="caption-text">Hydraulic jump: a hydraulic rapid mixer uses the flow expansion downstream from supercritical open channel flow.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Hydraulic jump: a hydraulic rapid mixer uses the flow expansion downstream from supercritical open channel flow.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>The hydraulic jump in <a class="reference internal" href="#figure-hydraulic-jump"><span class="std std-numref">Fig. 78</span></a> uses a flow expansion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consist of an orifice in the bottom of the <a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#heading-lfom"><span class="std std-ref">Linear Flow Orifice Meter (LFOM)</span></a> where the water enters the flocculator (see <a class="reference internal" href="#figure-rapid-mix-orifice"><span class="std std-numref">Fig. 79</span></a>). However, given that fluid mixing is so easy to attain it is unclear if the energy used in the rapid mix orifice is necessary.</p>
+<p>The hydraulic jump in <a class="reference internal" href="#figure-hydraulic-jump"><span class="std std-numref">Fig. 79</span></a> uses a flow expansion to generate mixing in an open channel and that suggests that a flow expansion could also be used to generate mixing in a closed conduit. AguaClara rapid mix units consist of an orifice in the bottom of the <a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Design.html#heading-lfom"><span class="std std-ref">Linear Flow Orifice Meter (LFOM)</span></a> where the water enters the flocculator (see <a class="reference internal" href="#figure-rapid-mix-orifice"><span class="std std-numref">Fig. 80</span></a>). However, given that fluid mixing is so easy to attain it is unclear if the energy used in the rapid mix orifice is necessary.</p>
 <figure class="align-center" id="id7">
 <span id="figure-rapid-mix-orifice"></span><a class="reference internal image-reference" href="../_images/Rapid_mix_orifice.png"><img alt="Rapid mix orifice" src="../_images/Rapid_mix_orifice.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 79 </span><span class="caption-text">The orifice creates a high velocity jet that generates mixing as it expands in the contact chamber prior to flocculation.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 80 </span><span class="caption-text">The orifice creates a high velocity jet that generates mixing as it expands in the contact chamber prior to flocculation.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <section id="conventional-mechanical-rapid-mix">
@@ -268,27 +270,27 @@
 <figure class="align-center" id="id8">
 <span id="figure-mechanical-rm-gt"></span><a class="reference internal image-reference" href="../_images/Mechanical_RM_Gt.png"><img alt="Mechanical RM Gt" src="../_images/Mechanical_RM_Gt.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 80 </span><span class="caption-text">Mechanical rapid mix units use a wide range of velocity gradients and residence times.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 81 </span><span class="caption-text">Mechanical rapid mix units use a wide range of velocity gradients and residence times.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Conventional rapid mix units use mechanical or potential energy to generate intense turbulence to begin the mixing process. Conventional design is based on the use of <span class="math notranslate nohighlight">\(\bar G\)</span> (an average velocity gradient) as a design parameter. We don’t yet know what the design objective is for rapid mix and thus it isn’t clear which parameters matter. We hypothesize that both velocity gradients that cause deformation of the fluid and time for molecular diffusion are required to ultimately transport coagulant nanoparticles to the surfaces of clay particles.</p>
 <p>The velocity gradient can be obtained from the rate at which mechanical energy is being dissipated and converted to heat by viscosity.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-0">
-<span class="eqno">(396)<a class="headerlink" href="#equation-rapid-mix-rm-intro-0" title="Permalink to this equation"></a></span>\[\varepsilon = G^2 \nu\]</div>
+<div class="math notranslate nohighlight">
+\[\varepsilon = G^2 \nu\]</div>
 <p>Where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the energy dissipation rate, <span class="math notranslate nohighlight">\(G\)</span> is the velocity gradient, and <span class="math notranslate nohighlight">\(\nu\)</span> is the kinematic viscosity of water. We can estimate the power input required to create a target energy dissipation rate for a conventional design by noting that power is simple the energy dissipation rate times the mass of water in the rapid mix unit.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-1">
-<span class="eqno">(397)<a class="headerlink" href="#equation-rapid-mix-rm-intro-1" title="Permalink to this equation"></a></span>\[P = \bar\varepsilon \forall \rho\]</div>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-2">
-<span class="eqno">(398)<a class="headerlink" href="#equation-rapid-mix-rm-intro-2" title="Permalink to this equation"></a></span>\[P = \bar G^2 \nu \forall \rho\]</div>
+<div class="math notranslate nohighlight">
+\[P = \bar\varepsilon \forall \rho\]</div>
+<div class="math notranslate nohighlight">
+\[P = \bar G^2 \nu \forall \rho\]</div>
 <p>We can relate reactor volume to a hydraulic residence time, <span class="math notranslate nohighlight">\(\theta\)</span>, and volumetric flow rate, Q.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-3">
-<span class="eqno">(399)<a class="headerlink" href="#equation-rapid-mix-rm-intro-3" title="Permalink to this equation"></a></span>\[P = \rho \bar G^2 \nu Q \theta\]</div>
+<div class="math notranslate nohighlight">
+\[P = \rho \bar G^2 \nu Q \theta\]</div>
 <p>This equation is perfectly useful for estimating electrical motor sizing requirements for mechanical rapid mix units. For gravity powered hydraulic rapid mix units it would be more intuitive to use the change in water surface elevation, <span class="math notranslate nohighlight">\(\Delta h\)</span> instead of power input.</p>
 <div class="math notranslate nohighlight" id="equation-power-of-q-h">
-<span class="eqno">(400)<a class="headerlink" href="#equation-power-of-q-h" title="Permalink to this equation"></a></span>\[P = \rho g Q \Delta h\]</div>
+<span class="eqno">(156)<a class="headerlink" href="#equation-power-of-q-h" title="Permalink to this equation"></a></span>\[P = \rho g Q \Delta h\]</div>
 <p>Combining the two equations we obtain.</p>
-<div class="math notranslate nohighlight" id="equation-rapid-mix-rm-intro-4">
-<span class="eqno">(401)<a class="headerlink" href="#equation-rapid-mix-rm-intro-4" title="Permalink to this equation"></a></span>\[\Delta h =  \frac{G^2 \nu \theta}{g}\]</div>
+<div class="math notranslate nohighlight">
+\[\Delta h =  \frac{G^2 \nu \theta}{g}\]</div>
 <span id="table-conventional-rapid-mix-design-values"></span><table class="docutils align-default" id="id9">
 <caption><span class="caption-number">Table 10 </span><span class="caption-text">Typical values for conventional rapid mix residence time and average velocity gradients</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
 <thead>
@@ -332,11 +334,11 @@ Sincero. 1996. page 267.</p>
 </section>
 <section id="mixing-time">
 <span id="heading-mixing-time"></span><h3>Mixing Time<a class="headerlink" href="#mixing-time" title="Permalink to this heading"></a></h3>
-<p>The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-t-eddy">(128)</a>) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (<a class="reference internal" href="#figure-eddy-turnover-times"><span class="std std-numref">Fig. 81</span></a>).</p>
+<p>The time required for mixing in a turbulent environment is a function of the rate that kinetic energy is being dissipated as heat (the energy dissipation rate) and the length scale of the eddies. Given that turbulent energy is passed from large eddies to smaller and smaller eddies, the amount of energy that is being transferred at any given length scale is independent of scale. The result (see Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-eq-t-eddy">(50)</a>) is that the time required for mixing is dominated by the time required for the largest eddies to turn over (<a class="reference internal" href="#figure-eddy-turnover-times"><span class="std std-numref">Fig. 82</span></a>).</p>
 <figure class="align-center" id="id10">
 <span id="figure-eddy-turnover-times"></span><a class="reference internal image-reference" href="../_images/Eddy_turnover_time.png"><img alt="Eddy turnover time" src="../_images/Eddy_turnover_time.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 81 </span><span class="caption-text">Eddy turnover times as a function of length scale for a range of energy dissipation rates.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 82 </span><span class="caption-text">Eddy turnover times as a function of length scale for a range of energy dissipation rates.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The eddy turnover times are longest for the largest eddies and this analysis suggests that it only takes a few seconds for turbulent eddies to mix from the scale of the flow down to the inner viscous length scale.</p>
@@ -348,11 +350,11 @@ Sincero. 1996. page 267.</p>
 <section id="coagulant-nanoparticle-interactions">
 <span id="heading-coagulant-nanoparticle-interactions"></span><h2>Coagulant Nanoparticle Interactions<a class="headerlink" href="#coagulant-nanoparticle-interactions" title="Permalink to this heading"></a></h2>
 <p>Coagulant nanoparticles are sticky and can attach to suspended particles as well as to each other. Some dissolved substances also adsorb to coagulant nanoparticles. The development of models to describe these interactions has been impeded by the widespread acceptance of the <a class="reference external" href="https://projects.ncsu.edu/project/hubbepaperchem/Defnitns/Neutrlzn.htm">charge neutralization hypothesis</a> as the mechanism that governs these interactions. However, this hypothesis fails to account for the size of  coagulant nanoparticles and the various contaminants in the raw water influent. Instead, a simplified model describing removal of these differently sized contaminants is proposed below; this simplified model posits that it is possible to separate fast and slow processes, which allows for a sequential model.</p>
-<p>Interactions between the various suspended and dissolved substances (see <a class="reference internal" href="#figure-particle-sizes"><span class="std std-numref">Fig. 82</span></a>) can occur simultaneously as soon as the coagulant is blended with the raw water. The rates of these interactions are controlled by the transport processes of fluid deformation and molecular diffusion. Molecular diffusion is fastest for small particles and fluid deformation is most effective for larger particles. Thus the fastest process is hypothesized to be the diffusion of low mass molecules to the coagulant nanoparticles. Transport of the coagulant nanoparticles to attach to suspended solids is expected to be a slower process. Transport of suspended particles to collide with other suspended particles (flocculation) is even slower.</p>
+<p>Interactions between the various suspended and dissolved substances (see <a class="reference internal" href="#figure-particle-sizes"><span class="std std-numref">Fig. 83</span></a>) can occur simultaneously as soon as the coagulant is blended with the raw water. The rates of these interactions are controlled by the transport processes of fluid deformation and molecular diffusion. Molecular diffusion is fastest for small particles and fluid deformation is most effective for larger particles. Thus the fastest process is hypothesized to be the diffusion of low mass molecules to the coagulant nanoparticles. Transport of the coagulant nanoparticles to attach to suspended solids is expected to be a slower process. Transport of suspended particles to collide with other suspended particles (flocculation) is even slower.</p>
 <figure class="align-center" id="id11">
 <span id="figure-particle-sizes"></span><a class="reference internal image-reference" href="../_images/Particle_sizes.png"><img alt="Particle sizes" src="../_images/Particle_sizes.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 82 </span><span class="caption-text">The size range of particles and nanoparticles that are important in drinking water treatment ranges from approximately a nanometer (for example arsenic <span class="math notranslate nohighlight">\(HAsO_4^{2-}\)</span>) to thousands of nanometers for clay and protozoa.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 83 </span><span class="caption-text">The size range of particles and nanoparticles that are important in drinking water treatment ranges from approximately a nanometer (for example arsenic <span class="math notranslate nohighlight">\(HAsO_4^{2-}\)</span>) to thousands of nanometers for clay and protozoa.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <section id="dissolved-organic-matter">
@@ -380,7 +382,7 @@ Verifying Robust Reduction of Turbidity and Escherichia coli during Wet and Dry 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Flow_Control_and_Measurement/ET_Design.html" class="btn btn-neutral float-left" title="Entrance Tank Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html" class="btn btn-neutral float-left" title="Flow Measure Design Challenge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="RM_Design.html" class="btn btn-neutral float-right" title="Rapid Mix Design" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

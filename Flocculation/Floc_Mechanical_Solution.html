@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mechanical Flocculator Solution &mdash; AguaClara v1.4.35 documentation</title>
+  <title>Mechanical Flocculator Solution &mdash; AguaClara v1.4.36 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=11caa1ce"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=26322ba4"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -36,7 +36,7 @@
             AguaClara
           </a>
               <div class="version">
-                v1.4.35
+                v1.4.36
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -82,6 +82,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -246,8 +248,8 @@ removal</p></td>
 <p>According to the Ten State Standards, “Agitators (Flocculators) shall be driven by variable speed drives with the peripheral speed of paddles ranging from 0.5 to 3.0 feet per second.” Note that they do not specify the size of the propeller and yet that is a critical dimension that determines the energy dissipation rate in the wake of the spinning propeller.</p>
 <p>The wake behind the propeller or paddle is similar in size to the small dimension of the propeller or paddle normal to the velocity. Thus we can use the propeller height to estimate the energy dissipation rate of the plate wake. The relative velocity between the wake and the surrounding fluid is approximately equal to the propeller velocity.</p>
 <p>Calculate the maximum energy dissipation rate that occurs in the wake behind the tip of a propeller which has a height of 3 cm and is moving at 3 ft/s. In this case, assume that the plate ratio for the maximum energy dissipation rate in the wake, <span class="math notranslate nohighlight">\(\Pi_{Plate}\)</span>, is 0.04.</p>
-<div class="math notranslate nohighlight" id="equation-flocculation-floc-mechanical-solution-0">
-<span class="eqno">(535)<a class="headerlink" href="#equation-flocculation-floc-mechanical-solution-0" title="Permalink to this equation"></a></span>\[\epsilon=\Pi_{Plate}\frac{\left ( V  \right )^{3}}{W_{Plate}}\]</div>
+<div class="math notranslate nohighlight">
+\[\epsilon=\Pi_{Plate}\frac{\left ( V  \right )^{3}}{W_{Plate}}\]</div>
 <p>You may assume that the relative velocity between propeller and water is equal to 75% of the propeller velocity.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=-DSq8HEHw-su&amp;line=5&amp;uniqifier=1">Colab worksheet calculating the propeller energy dissipation rate</a></p>
 <p>The maximum energy dissipation rate behind the propeller tip is 430 mW/kg</p>

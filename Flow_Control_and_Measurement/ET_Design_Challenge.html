@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrance Tank Design Challenge &mdash; AguaClara v1.4.36 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=26322ba4"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Flow Measure Design Challenge" href="Flow_Measure_Design_Challenge.html" />
+    <link rel="prev" title="Entrance Tank Design" href="ET_Design.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AguaClara
+          </a>
+              <div class="version">
+                v1.4.36
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Authors.html">Authors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 1: Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">The Physics of Water Treatment Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Challenges.html">Challenges</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 2: Fluids and Hydraulics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics.html">Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Fluid_Mechanics_Derivations.html">Fluid Mechanics Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Plant_Hydraulics.html">Plant Hydraulics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluids_and_Hydraulics/Manifold_Hydraulics.html">Manifold Hydraulics</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 3: Fluid Deformation, Fractals, and Forces</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Intro.html">Energy Dissipation Rate, Velocity Gradient, and Mixing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html">Fluid Deformation and Energy Dissipation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html">Flocs, Fractals, Forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Suspensions.html">Fluidized Suspensions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 4: Chemistry of Water Treatment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Intro.html">Chemistry of Coagulant Nanoparticles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html">Carbonate Reactions, Buffering, and pH</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 5: Flow Control and Measurement</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="FCM_Intro.html">Constant Head Tanks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FCM_Design.html">AguaClara Flow Control and Measurement Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FCM_Solution.html">Flow Control and Measurement Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Entrance Tank Design Challenge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#assignment-logistics">Assignment Logistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#you-will-learn-how-to">You will learn how to:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup">SetUp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aide-feature-studios">AIDE Feature Studios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#units-in-aide">Units in AIDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hydraulic-functions">Hydraulic functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#entrance-tank-design">Entrance Tank Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#part-1-feature-studio-steps">Part 1: Feature Studio Steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#follow-each-step-as-described-in-the-entrance-tank-fs-for-problems-1-11">Follow each step as described in the Entrance Tank.fs for problems 1-11.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#part-2-part-studio-steps">Part 2: Part Studio Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#play-and-reflect">Play and Reflect!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Intro.html">Rapid Mix Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design.html">Rapid Mix Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Examples.html">Rapid Mix: Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Theory_and_Future_Work.html">Rapid Mix Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Mechanical_Solution.html">Rapid Mix Mechanical Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Rapid_Mix/RM_Design_Solution.html">Rapid Mix Design Solution</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 7: Flocculation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model.html">AguaClara Hydraulic Flocculation Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Derivations.html">Flocculation Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design.html">Flocculation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Challenge.html">Flocculation Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Mechanical_Solution.html">Mechanical Flocculator Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Model_Solution.html">Flocculation Model Solution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flocculation/Floc_Design_Solution.html">Flocculator Design Solution</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 8: Clarification</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Intro.html">Clarification Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Derivations.html">Clarifier Derivations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design.html">Clarifier Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Design_Challenge.html">Clarification Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Theory_and_Future_Work.html">Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Clarification/Clarifier_Examples.html">Clarification Examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 9: Filtration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Intro.html">Filtration  Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design.html">Open Stacked Rapid Sand Filter Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Challenge.html">Filtration Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Theory_and_Future_Work.html">Filtration Theory and Future Work</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Filtration/Filtration_Design_Solution.html">Filtration Design Solution</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 10: Design and Implementation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AIDE/AIDE.html">AguaClara Infrastructure Design Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AIDE/Specifications.html">AguaClara Specifications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 11: Dissolved Gas</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Dissolved_Gas/DG_Intro.html">Dissolved Gas Introduction</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Chapter 12: Operation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Operation/Coagulant_Automation.html">Coagulant Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Operation/Troubleshooting.html">Plant Operation Troubleshooting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix 1 + Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Python_Tutorial.html">Python Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../equations.html">Equation Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributor's guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/rst_intro.html">Introduction to RST and Sphinx for Textbook Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/example_aguaclara_rst.html">Functionality in RST and AguaClara Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Textbook_Creation_Help/parameter_convention_list.html">Parameter Convention List</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AguaClara</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Entrance Tank Design Challenge</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Flow_Control_and_Measurement/ET_Design_Challenge.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <embed>
+   <link rel="canonical" href="https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/ET_Design_Challenge.html" />
+   <script src="https://hypothes.is/embed.js" async></script>
+</embed><section id="entrance-tank-design-challenge">
+<span id="title-entrance-tank-design-challenge"></span><h1>Entrance Tank Design Challenge<a class="headerlink" href="#entrance-tank-design-challenge" title="Permalink to this heading"></a></h1>
+<p>AguaClara Reach is creating the AguaClara Infrastructure Design Engine (AIDE) so that they can provide customized designs of drinking water treatment plants for implementation partners. Conventional design approaches would take months of engineering time to create a water treatment plant design for a community. AIDE makes it possible to change the design inputs and generate a new design in a matter of minutes (or seconds). AIDE makes it possible to mass produce customized designs.</p>
+<p>This design challenge is to create a slightly simplified version of an <a class="reference external" href="https://cad.onshape.com/documents/4c47a124da3abec33e0ce813/w/3955cd0d266daedd3eabf165/e/bcf152c5be02d9ab5b2b5285?renderMode=0&amp;uiState=63bed8e9b21e0705e88efcae">entrance tank</a> for a water treatment plant.</p>
+<section id="assignment-logistics">
+<h2>Assignment Logistics<a class="headerlink" href="#assignment-logistics" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>The ideal learning method is to do all of the steps of this assignment yourself while working with your teammates to help each other quickly learn the steps.</p></li>
+<li><p>Collaborate with your classmates and TA to learn and complete all of these steps efficiently</p></li>
+<li><p>Work together to polish one of the documents that you and your teammates have created for submission.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="you-will-learn-how-to">
+<h2>You will learn how to:<a class="headerlink" href="#you-will-learn-how-to" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>perform a series of design steps in FeatureScript</p></li>
+<li><p>connect design results to a 3-D geometric model</p></li>
+<li><p>use existing functions to connect client needs to the design of a system</p></li>
+<li><p>enter params that set minimum, default, and maximum values for inputs</p></li>
+<li><p>access AguaClara functions to calculate the diameter of a pipe</p></li>
+<li><p>see the results of your calculations in the variable table and in a 3-D model of the entrance tank</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="setup">
+<h2>SetUp<a class="headerlink" href="#setup" title="Permalink to this heading"></a></h2>
+<p>Set up your Onshape workspace so that you have access to the following custom features created by AguaClara.</p>
+<figure class="align-center" id="id1">
+<span id="figure-addcustomfeature"></span><a class="reference internal image-reference" href="../_images/add_custom_features.png"><img alt="Custom variable table." src="../_images/add_custom_features.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Add custom features to the feature menu.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Copy the document path below and paste it into the search box for adding custom features to quickly find each feature.</p>
+<blockquote>
+<div><p>1. Civil Tank: inside Core Parts open up tanks and select Civil Tank (cad.onshape.com/documents/c0af0d6b5703e7a8fb53f53f)
+1. Overflow Pipe: select overflow.fs and then select Overflow Pipe (cad.onshape.com/documents/50136809eb4dab5feb113036)
+1. Embed: select Embed.fs (cad.onshape.com/documents/c35baaea9a3ba0044a66bc94)</p>
+</div></blockquote>
+<p>When you have completed these steps all of these features should show up in your custom feature menu.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="cad.onshape.com/documents/c0af0d6b5703e7a8fb53f53f"><img alt="civilTank" src="../_images/civilTank.png" /></a></p></li>
+<li><p><a class="reference external" href="cad.onshape.com/documents/50136809eb4dab5feb113036"><img alt="overflowPipe" src="../_images/overflowPipe.png" /></a></p></li>
+<li><p><a class="reference external" href="cad.onshape.com/documents/c35baaea9a3ba0044a66bc94"><img alt="EMBED" src="../_images/Embed.png" /></a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="aide-feature-studios">
+<h2>AIDE Feature Studios<a class="headerlink" href="#aide-feature-studios" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>The Feature Studio is where we can do the calculations for the design of the parts that we are making in the Part Studio. AIDE Feature Studios have 3 main sections.</dt><dd><ul class="simple">
+<li><p>Tree - where we define the function calls (designers) and input parameters (params) required for the design. In more complex designs the Tree is also used to define the connections with parts that are children or subcomponents.</p></li>
+<li><p>Designer - where we calculate the dimensions of the part we are designing. The variables that we define are all part of the design map and can be accessed as <code class="code docutils literal notranslate"><span class="pre">design.varName</span></code>. Thus the length of a part would be defined as <code class="code docutils literal notranslate"><span class="pre">design.L</span></code>.</p></li>
+<li><p>Feature - this is the code that inserts the results of our calculations (the design map) into the part studio. This feature is inserted as the very first feature in the part studio so that all of the subsequent features have access to the  variables in the design map.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="units-in-aide">
+<h2>Units in AIDE<a class="headerlink" href="#units-in-aide" title="Permalink to this heading"></a></h2>
+<p>Engineering design calculations should always be done using software tools that support units. Units provide an import check on all calculations and using units ensures that the we don’t burn up our spacecraft because of a failure to use the right units in an equation. In Onshape all of our calculations include units. Unfortunately there is a limitation on how we pass parameters from one component to another component as we create complex designs with multiple components. To get around this limitation we have adopted a strict <a class="reference external" href="https://cad.onshape.com/documents/7e7bfd441e81a4b207bb9b86/w/36fcd65eb9f3ae9f72ccf937/e/9c67513c34ba306ef874295f">variable naming convention</a> so that we know what units a variable has just from looking at its name. Here are a couple examples of variable names, their units [] and an evaluation of whether or not they meet our requirements.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">myFavorityDimensionIsL</span></code> [meter] YES!</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">V_MAX</span></code> [oops] NO! subscripts must be lower case - should be V_max</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">riverQ</span></code> [meter^3/s] YES!</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">riverQm</span></code> [L/s] YES! The m really means milli (m^3/s) which is the same as L/s.</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">pipeWallS</span></code> [meter] YES! This is the Space between a pipe and a wall</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="hydraulic-functions">
+<h2>Hydraulic functions<a class="headerlink" href="#hydraulic-functions" title="Permalink to this heading"></a></h2>
+<p>AguaClara has added a limited number of hydraulic-related functions in FeatureScript in <a class="reference external" href="https://cad.onshape.com/documents/6750b53736b16374e515f93d/w/e1f0d6546c0ebff38956e2f7/e/397556f7ec0f2b14bcbdc049">AguaClara Core FS</a>. The most commonly used functions for this course are in the tabs headloss and physical chemistry. The pipe design equations that work for both laminar and turbulent flow regimes are found in those two tabs. For example the function</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">flowPipe</span> <span class="pre">(diam,</span> <span class="pre">headloss,</span> <span class="pre">length,</span> <span class="pre">nu,</span> <span class="pre">roughness,</span> <span class="pre">kMinor)</span></code>  will calculate the flow rate in a given pipe given the available energy (head loss).</p></li>
+<li><p>The companion function to calculate the minimum required pipe diameter given a desired flow rate is <code class="code docutils literal notranslate"><span class="pre">diamPipe(flowRate,</span> <span class="pre">head</span> <span class="pre">loss,</span> <span class="pre">length,</span> <span class="pre">nu,</span> <span class="pre">pipeRough,</span> <span class="pre">kMinor)</span></code></p></li>
+<li><p>The actual head loss given a pipe and a flow rate is <code class="code docutils literal notranslate"><span class="pre">pipeHeadloss(flowRate,</span> <span class="pre">diam,</span> <span class="pre">length,</span> <span class="pre">nu,</span> <span class="pre">pipeRough,</span> <span class="pre">kMinor)</span></code></p></li>
+<li><p>The density and viscosity of water are available as functions of temperature in the physical chemistry tab.</p></li>
+</ul>
+</div></blockquote>
+<p>You can access these functions quickly while editing in featurescript by typing the part of the function name that you remember and Onshape will provide a list of possible functions for you to select from.</p>
+</section>
+<section id="entrance-tank-design">
+<h2>Entrance Tank Design<a class="headerlink" href="#entrance-tank-design" title="Permalink to this heading"></a></h2>
+<p>An AguaClara entrance tank performs the following functions:</p>
+<blockquote>
+<div><p>1. removes trash with a trash rack (leaves, twigs, litter) to prevent clogging of the inlet diffusers in the sedimentation tank
+1. removes grit by sedimentation
+1. dumps water that exceeds the design flow rate of the plant
+1. measures the flow into the plant
+1. water level in the entrance tank is used to set the flow of coagulant and chlorine.
+1. coagulant is injected at the outlet of the entrance tank</p>
+</div></blockquote>
+<p>For this design challenge we will do a simplified design to remove grit and dump excess water.</p>
+</section>
+<section id="part-1-feature-studio-steps">
+<h2>Part 1: Feature Studio Steps<a class="headerlink" href="#part-1-feature-studio-steps" title="Permalink to this heading"></a></h2>
+<p><strong>If your instructor has not provided you with a link to the starting document</strong>, you can create a copy of the <a class="reference external" href="https://cad.onshape.com/documents/9f328e7469cf14badb5e3dc7/w/4685a40508e8c33569b72627/e/bf3d6bc51cf7511178df36b4">Entrance Tank Template</a>.
+Name the file “[your team name] Entrance Tank”.</p>
+<section id="follow-each-step-as-described-in-the-entrance-tank-fs-for-problems-1-11">
+<h3>Follow each step as described in the Entrance Tank.fs for problems 1-11.<a class="headerlink" href="#follow-each-step-as-described-in-the-entrance-tank-fs-for-problems-1-11" title="Permalink to this heading"></a></h3>
+<p>Open the tab Entrance Tank.fs. You will see commented out blue directions for the code that you need to create. This is the core of the coding part of this challenge!</p>
+<p>Check that each line of your code works before proceeding to the next step. Monitor FeatureScript Notices to make sure no warnings or errors are being reported. FeatureScript Notices will also show your printed answers as you are working if you select Monitoring Entrance Tank PS in the upper right of the FeatureScript window.</p>
+<p>NOTE: Question 3 in the FeatureScript mentions using either an if statement or a min/max function, we recommend using the min/max function!</p>
+<p>A few hints for FeatureScript
+* almost all lines of code end in a semicolon;
+* new variables that are part of the design map can be defined like this example: design.planViewA_min = design.Qm_max * design.captureV;</p>
+</section>
+</section>
+<section id="part-2-part-studio-steps">
+<h2>Part 2: Part Studio Steps<a class="headerlink" href="#part-2-part-studio-steps" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Insert the Civil Tank feature into the part studio and link design variables that you created in the Entrance Tank.fs to the Civil Tank</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>implementation partner <img alt="ip" src="../_images/civilTankip.png" /></p></li>
+<li><p>inside wall height <img alt="H" src="../_images/civilTankH.png" /></p></li>
+<li><p>water depth <img alt="HW" src="../_images/civilTankHW.png" /></p></li>
+<li><p>tank length <img alt="L" src="../_images/civilTankL.png" /></p></li>
+<li><p>tank width <img alt="W" src="../_images/civilTankW.png" /></p></li>
+<li><p>constants for other inputs <img alt="constants" src="../_images/civilTankConstants.png" /></p></li>
+<li><p>Location can be set by clicking in the blue box in the drop down menu labeled ‘Location(s)’ and then clicking on the origin of the Part Studio <img alt="location" src="../_images/civilTankLocation.png" /></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>Selecting the option to place design in context will take the dimensions and other part information of the tank and add that to a map (called tank in this case) so that those parameters can be used in subsequent design steps. You can see the tank map by clicking on the variable table on the middle right side of the screen.
+The resulting tank should look like this!</p>
+<p><img alt="iso" src="../_images/civilTankiso.png" /></p>
+<ol class="arabic simple" start="2">
+<li><p>All of the parts we are using for design come from a database that includes costs. To view this information, access the bill of materials and cut list custom tables by clicking on custom tables.</p></li>
+<li><p>Add the overflow pipe to the part studio. The goal is to place the overflow pipe centered in the tank and perhaps a distance of the tank width/2 from the end of the tank. The overflow pipe origin is at the center of the pipe at the top surface of the bottom of the tank. You can select a good mate connector for the location by hovering over the bottom of the tank and then moving your mouse toward the end of the tank where you want to install the overflow pipe.</p></li>
+</ol>
+<p><img alt="mateAtEndOfTank" src="../_images/mateAtEndOfTank.png" /></p>
+<p>Click on the mate connector to select it. The blue location box should now have a reference to the selected mate connector.</p>
+<p><img alt="clickToEditMate" src="../_images/clickToEditMate.png" /></p>
+<p>Click on the reference to the mate connector in the location box to edit the mate connector. This is a cool feature that makes it easy to move the part to exactly where you want it. In this case we want to move the overflow pipe away from the very end of the tank by a distance of W/2. Enter the Y value move distance as shown.</p>
+<p><img alt="editMate" src="../_images/editMate.png" /></p>
+<p>Now close the Mate connector dialog box and the overflow pipe should be at the correct location.</p>
+<p>Link the minimum temperature, flow rate, water depth, and maximum pipe SDR to params that are inputs for your design. The flow safety factor can be set to 1 and the depth safety factor set to 0 meter. The length of pipe below the bottom of the tank can be used to ensure that the pipe goes the whole way through the bottom slab. To do this we can link to the slab thickness. Given that the Civil Tank put its dimension info in the map “tank” we can access that inside the Overflow Pipe as #tank.slab.T.  You can look at the bottom of the tank and see that the pipe is trying to break through the surface.</p>
+<p>The last step is to delete the concrete to make a hole for the overflow pipe. Use the <a class="reference external" href="cad.onshape.com/documents/c35baaea9a3ba0044a66bc94"><img alt="EMBED" src="../_images/Embed.png" /></a> feature. The embed feature pass a pipe through concrete and makes a hole in the concrete for the pipe. The pipe is thus embedded in the concrete and the concrete is the embedding matrix. The embed feature allows you to select the entities to embed or the features that created the object to embed.
+The easiest way to select the pipes that need to go through the wall is to select the Feature that made the pipes. Thus select the overflow pipe feature in the feature list as the “feature creating the entity to embed” in the dialog box. Similarly you can either the specific slab of concrete or the feature creating the tank as the embedding matrix or substrate. Confirm that the concrete inside the pipe has been removed.</p>
+</section>
+<section id="play-and-reflect">
+<h2>Play and Reflect!<a class="headerlink" href="#play-and-reflect" title="Permalink to this heading"></a></h2>
+<p>Answer the following questions as a comment in FeatureScript.</p>
+<blockquote>
+<div><p>1. How much does the entrance tank cost for a 10 L/s flow rate?
+1. Which part is most expensive?</p>
+</div></blockquote>
+<p>You can edit the overrides to get new designs quickly. Change the flow rate to 100 L/s.</p>
+<blockquote>
+<div><p>3. Why did the tank get wider?
+1. Which design constraint controls the width?
+1. Why did the tank get deeper?
+1. Which design constraint controls the depth?
+1. Why did the overflow pipe diameter change?
+1. We could have done this assignment using pencil and paper or and Excel spreadsheet for the design and a cad program for the drawing. List as many advantages and disadvantages as you can for the Onshape AIDE design process vs Excel and a cad program.
+1. Make <strong>one</strong> change or addition to the design. It can be anything. Here are some ideas…</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Add a new param for the minimum distance between the cap of the overflow pipe and the end wall of the tank and then move the overflow pipe into that new position.</p></li>
+<li><p>Add a channel below the entrance tank that will collect the overflow water.</p></li>
+<li><p>Replace the tank slab with hoppers so that the sediment that is captured can drain out.</p></li>
+<li><p>Add a pipe representing the inlet that would dump water into the entrance tank near the overflow pipe.</p></li>
+<li><p>Your idea here!</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ET_Design.html" class="btn btn-neutral float-left" title="Entrance Tank Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Flow_Measure_Design_Challenge.html" class="btn btn-neutral float-right" title="Flow Measure Design Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, AguaClara Reach.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+    <!-- Hotjar Tracking Code for https://aguaclara.github.io/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2936859,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

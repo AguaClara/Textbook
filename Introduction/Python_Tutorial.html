@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Python Tutorial &mdash; AguaClara v1.4.35 documentation</title>
+  <title>Python Tutorial &mdash; AguaClara v1.4.36 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=11caa1ce"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=26322ba4"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -36,7 +36,7 @@
             AguaClara
           </a>
               <div class="version">
-                v1.4.35
+                v1.4.36
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -82,6 +82,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -273,8 +275,8 @@ can do the following import inspect inspect.getsource(foo)</p>
 <section id="markdown">
 <h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this heading"></a></h2>
 <p>Markdown allow you to mix code, beautiful Latex equations, nicely formatted text, figures, and tables.</p>
-<div class="math notranslate nohighlight" id="equation-introduction-python-tutorial-0">
-<span class="eqno">(830)<a class="headerlink" href="#equation-introduction-python-tutorial-0" title="Permalink to this equation"></a></span>\[c = \sqrt{a^2 + b^2}\]</div>
+<div class="math notranslate nohighlight">
+\[c = \sqrt{a^2 + b^2}\]</div>
 <p>Markdown does not handle automatic numbering of equations, figures, and tables.</p>
 <p>The Python Kernel remembers all definitions (functions and variables) as they are defined based on execution. Thus if you fail to execute a line of code, the parameters defined in that line won’t be available. Similarly, if you define a parameter and then delete that line of code, that parameter remains defined until you reset all runtimes or restart.</p>
 <p>Before submitting a file for others to use, you need to verify that all of the dependencies are defined and that you didn’t accidently delete a definition that is required. You can do this by resetting all runtimes (Runtime menu) and then running all.</p>
@@ -461,7 +463,7 @@ The surface loading rate is 0.68 millimeter / second</p>
 <figure class="align-center" id="id2">
 <span id="figure-lfom-flow-vs-height"></span><a class="reference internal image-reference" href="../_images/LFOM_flow_vs_height.png"><img alt="LFOM flow vs height" src="../_images/LFOM_flow_vs_height.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 244 </span><span class="caption-text">The flow through an LFOM is directly proportional to the height of the water above the bottom of the first row of orifices.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 245 </span><span class="caption-text">The flow through an LFOM is directly proportional to the height of the water above the bottom of the first row of orifices.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Indexing is done by row and then by column. To call all of the elements in a row or column, use a colon. As you can see in the following example, indexing in python begins at zero. So <code class="docutils literal notranslate"><span class="pre">a[:,1]</span></code> is calling all rows in the second column</p>

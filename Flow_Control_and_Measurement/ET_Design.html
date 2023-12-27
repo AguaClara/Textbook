@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entrance Tank Design &mdash; AguaClara v1.4.35 documentation</title>
+  <title>Entrance Tank Design &mdash; AguaClara v1.4.36 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,14 +13,14 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=11caa1ce"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=26322ba4"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Rapid Mix Introduction" href="../Rapid_Mix/RM_Intro.html" />
+    <link rel="next" title="Entrance Tank Design Challenge" href="ET_Design_Challenge.html" />
     <link rel="prev" title="Flow Control and Measurement Solution" href="FCM_Solution.html" /> 
 </head>
 
@@ -36,7 +36,7 @@
             AguaClara
           </a>
               <div class="version">
-                v1.4.35
+                v1.4.36
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -87,6 +87,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -211,17 +213,17 @@
 <p>The trash rack is specifically designed to remove low density debris that could easily be carried through the plant and clog any small flow passages. In an AguaClara plant, there are critical flow passages in the clarifier inlet manifold diffusers and in the flow injection system in the stacked rapid sand filters. The inlet manifold diffusers have flared nozzles which currently have a minimum dimension of about 4 mm. The opening dimension for the trash rack must therefore be less than the opening size of the inlet manifold nozzles.</p>
 <p>The minimum trash rack area is set to minimize head loss through the plant while maintaining an overall trash rack size that is reasonably compact. We recommend that the trash rack be designed to reach a terminal head loss of 5 cm when it is 90% clogged. The guiding principle for the design is the orifice equation modified to incorporate the fraction of the the trash rack area that is actually available for water to flow through. This area is reduced by the porosity, vena contracta, and amount of debris.</p>
 <div class="math notranslate nohighlight" id="equation-trashrack-flow">
-<span class="eqno">(386)<a class="headerlink" href="#equation-trashrack-flow" title="Permalink to this equation"></a></span>\[ Q = (1-\Pi_{clogged})\Pi_{vc} \phi A_{trashrack}\sqrt{2gh}\]</div>
+<span class="eqno">(146)<a class="headerlink" href="#equation-trashrack-flow" title="Permalink to this equation"></a></span>\[ Q = (1-\Pi_{clogged})\Pi_{vc} \phi A_{trashrack}\sqrt{2gh}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi_{trashrack}\)</span> is the fraction of clean trash rack that is open, <span class="math notranslate nohighlight">\(\Pi_{vc}\)</span> is the <em>vena contracta</em> coefficient, and <span class="math notranslate nohighlight">\(\Pi_{clogged}\)</span> is the clogged fraction of the trash rack. The ideal trash rack has a high porosity and a large <em>vena contracta</em> coefficient. The <em>vena contracta</em> coefficient is set by the entrance geometry of the trash rack openings. If the entrance has a sharp edge, then the vena contract coefficient will have a value of approximately 0.62. If the entrance is rounded then the <em>vena contracta</em> could approach 1.0. Thus, it is more efficient for a trash rack to have rounded openings.</p>
 <p>The area of the trash rack can be solved for as follows:</p>
 <div class="math notranslate nohighlight" id="equation-trashrack-area">
-<span class="eqno">(387)<a class="headerlink" href="#equation-trashrack-area" title="Permalink to this equation"></a></span>\[ A_{trashrack} = \frac{Q}{(1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}}\]</div>
+<span class="eqno">(147)<a class="headerlink" href="#equation-trashrack-area" title="Permalink to this equation"></a></span>\[ A_{trashrack} = \frac{Q}{(1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}}\]</div>
 <p>Set the fraction clogged to between 80 and 90%. The <em>vena contracta</em> coefficient is 0.62 for sharp edged orifices and could be 1 for round wire.
 Porosity varies widely depending on the fabrication method.
 For AguaClara plants, a maximum head loss of 5 cm is recommended.</p>
 <p>Also of interest is the effective velocity taking into account the whole area of the trash rack.</p>
 <div class="math notranslate nohighlight" id="equation-trashrack-velocity">
-<span class="eqno">(388)<a class="headerlink" href="#equation-trashrack-velocity" title="Permalink to this equation"></a></span>\[ v_{trashrack} = \frac{Q}{A_{trashrack} } = (1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}\]</div>
+<span class="eqno">(148)<a class="headerlink" href="#equation-trashrack-velocity" title="Permalink to this equation"></a></span>\[ v_{trashrack} = \frac{Q}{A_{trashrack} } = (1-\Pi_{clogged})\Pi_{vc} \phi \sqrt{2gh}\]</div>
 <p>The trash rack characteristic velocity is 50 mm/s for 50% porosity, 90% clogged, <em>vena contracta</em> of 1, and a maximum head loss of 5 cm.</p>
 </section>
 <section id="grit-chamber-design">
@@ -236,26 +238,26 @@ For AguaClara plants, a maximum head loss of 5 cm is recommended.</p>
 </ol>
 <p>Recall that Stokes Law tells us the terminal velocity of a particle settling under laminar flow, and can be calculated as:</p>
 <div class="math notranslate nohighlight" id="equation-grit-criticalvelocity">
-<span class="eqno">(389)<a class="headerlink" href="#equation-grit-criticalvelocity" title="Permalink to this equation"></a></span>\[ v_c = \frac{(\rho_p - \rho_{H_20})\cdot g\cdot(d_p)^2}{18 \cdot \nu \cdot\rho_{H_20}}\]</div>
+<span class="eqno">(149)<a class="headerlink" href="#equation-grit-criticalvelocity" title="Permalink to this equation"></a></span>\[ v_c = \frac{(\rho_p - \rho_{H_20})\cdot g\cdot(d_p)^2}{18 \cdot \nu \cdot\rho_{H_20}}\]</div>
 <p>where d:sub:’p’ is the minimum particle diameter to be removed (Kawamura recommends 0.1 mm).</p>
 <p>As a check, calculate the Reynolds number to confirm that flow is in the laminar regime for Stokes’ Law to be valid.</p>
 <div class="math notranslate nohighlight" id="equation-grit-re">
-<span class="eqno">(390)<a class="headerlink" href="#equation-grit-re" title="Permalink to this equation"></a></span>\[   Re = \frac{v_c \cdot d_p}{\nu}\]</div>
+<span class="eqno">(150)<a class="headerlink" href="#equation-grit-re" title="Permalink to this equation"></a></span>\[   Re = \frac{v_c \cdot d_p}{\nu}\]</div>
 <p>The required plan view area to capture the minimum particle can be calculated by dividing the plant flow rate by the critical particle velocity:</p>
 <div class="math notranslate nohighlight" id="equation-planviewa">
-<span class="eqno">(391)<a class="headerlink" href="#equation-planviewa" title="Permalink to this equation"></a></span>\[ A = \frac{Q}{v_c}\]</div>
+<span class="eqno">(151)<a class="headerlink" href="#equation-planviewa" title="Permalink to this equation"></a></span>\[ A = \frac{Q}{v_c}\]</div>
 <p>The next step is to determine the optimal dimensions of the entrance tank. For constructibility purposes, the entrance tank must not be smaller than 50 cm, as a mason needs to work inside to apply a waterproof coating. Additionally, the entrance tank should not be longer than the flocculator. The ideal width of the entrance tank would be the area of the grit chamber divided by the length of the flocculator, or the minimum width of 50 cm, whichever is larger.</p>
 <div class="math notranslate nohighlight" id="equation-width-et">
-<span class="eqno">(392)<a class="headerlink" href="#equation-width-et" title="Permalink to this equation"></a></span>\[ W_{ET} = max(\frac{A}{L_{flocculator}}, W_{min})\]</div>
+<span class="eqno">(152)<a class="headerlink" href="#equation-width-et" title="Permalink to this equation"></a></span>\[ W_{ET} = max(\frac{A}{L_{flocculator}}, W_{min})\]</div>
 <p>The corresponding entrance tank length would be:</p>
 <div class="math notranslate nohighlight" id="equation-length-et">
-<span class="eqno">(393)<a class="headerlink" href="#equation-length-et" title="Permalink to this equation"></a></span>\[ L_{ET} = \frac{A}{W_{ET}}\]</div>
+<span class="eqno">(153)<a class="headerlink" href="#equation-length-et" title="Permalink to this equation"></a></span>\[ L_{ET} = \frac{A}{W_{ET}}\]</div>
 <p>The maximum height of water in the entrance tank is governed by either the trash rack or the head loss of the LFOM, and depends on the design flow rate of the plant. The minimum depth of the trash rack is its active area divided by the width of the entrance tank, and the LFOM head loss for a typical AguaClara plant is 20 cm.</p>
 <div class="math notranslate nohighlight" id="equation-depth-trashrack">
-<span class="eqno">(394)<a class="headerlink" href="#equation-depth-trashrack" title="Permalink to this equation"></a></span>\[d_{trashrack} = \frac{A_{trashrack}}{W_{ET}}\]</div>
+<span class="eqno">(154)<a class="headerlink" href="#equation-depth-trashrack" title="Permalink to this equation"></a></span>\[d_{trashrack} = \frac{A_{trashrack}}{W_{ET}}\]</div>
 <p>The depth of the entrance tank is therefore the maximum of the trashrack depth and the LFOM headloss, plus some freeboard (typically 10 cm for AguaClara).</p>
 <div class="math notranslate nohighlight" id="equation-depth-et">
-<span class="eqno">(395)<a class="headerlink" href="#equation-depth-et" title="Permalink to this equation"></a></span>\[d_{ET} = max(d_{trashrack}, HL_{LFOM}) + FB\]</div>
+<span class="eqno">(155)<a class="headerlink" href="#equation-depth-et" title="Permalink to this equation"></a></span>\[d_{ET} = max(d_{trashrack}, HL_{LFOM}) + FB\]</div>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
@@ -268,7 +270,7 @@ For AguaClara plants, a maximum head loss of 5 cm is recommended.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="FCM_Solution.html" class="btn btn-neutral float-left" title="Flow Control and Measurement Solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../Rapid_Mix/RM_Intro.html" class="btn btn-neutral float-right" title="Rapid Mix Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ET_Design_Challenge.html" class="btn btn-neutral float-right" title="Entrance Tank Design Challenge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

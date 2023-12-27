@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rapid Mix: Examples &mdash; AguaClara v1.4.35 documentation</title>
+  <title>Rapid Mix: Examples &mdash; AguaClara v1.4.36 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=11caa1ce"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=26322ba4"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -36,7 +36,7 @@
             AguaClara
           </a>
               <div class="version">
-                v1.4.35
+                v1.4.36
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -82,6 +82,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul class="current">
@@ -187,14 +189,14 @@
 <figure class="align-center" id="id2">
 <span id="figure-manzaragua-wtp"></span><a class="reference internal image-reference" href="../_images/Manzaragua_WTP.jpg"><img alt="Manzaragua WTP" src="../_images/Manzaragua_WTP.jpg" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 84 </span><span class="caption-text">Manzaragua water treatment plant using two of the AguaClara 1 L/s plants in parallel.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 85 </span><span class="caption-text">Manzaragua water treatment plant using two of the AguaClara 1 L/s plants in parallel.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The plant performed very poorly from the first day of operation. The first attempted fix was to double the flocculator residence time by increasing the number of flocculator pipes (3 inch diameter by 1.5 m long) from 12 to 24. This improved performance, but the plant continued to perform poorly. A raw water sample was analyzed on May 30, 2018 and the following results were obtained.</p>
 <figure class="align-center" id="id3">
 <span id="figure-manzaragua-water-analysis"></span><a class="reference internal image-reference" href="../_images/Manzaragua_Water_Analysis.jpg"><img alt="Manzaragua Water Analysis" src="../_images/Manzaragua_Water_Analysis.jpg" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 85 </span><span class="caption-text">Water quality analysis for Manzaragua.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 86 </span><span class="caption-text">Water quality analysis for Manzaragua.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <span id="table-manzaragua-water-quality-analysis"></span><table class="docutils align-center" id="id4">
@@ -267,7 +269,7 @@
 <p>This water has high color which suggests a high concentration of dissolved organic matter. The pH is a clear problem because the pH is too low for the coagulant nanoparticles to precipitate. As the water sample has a pH of 5.91 a significant fraction of the coagulant will remain soluble.</p>
 <p>Our goal is to determine how much base will need to be added to raise the pH. We do not have data on the <em>optimal</em> pH for treating high color water with PACl and so we will use pH 7 as the target.</p>
 <p>At circumneutral pH (pH close to 7) the buffering capacity of the water is dominated by carbonate chemistry and specifically by the equilibrium between <span class="math notranslate nohighlight">\({H_2}CO_3^{\star}\)</span> and <span class="math notranslate nohighlight">\(HCO_3^-\)</span> . We will use the acid neutralizing capacity (reported as calcium carbonate alkalinity) and the pH from the sample analysis to estimate the total concentration of carbonates. We will not use the sample analysis carbonate concentrations because they can not be precisely correct.</p>
-<p>We will find the amount of base that must be added using Equation <a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html#equation-base-for-ph-adjust">(333)</a>.</p>
+<p>We will find the amount of base that must be added using Equation <a class="reference internal" href="../Chemistry_of_Water_Treatment/Chemistry_Derivations.html#equation-base-for-ph-adjust">(142)</a>.</p>
 <span id="table-anc-and-carbonate-values-for-several-bases-and-acids"></span><table class="docutils align-center" id="id5">
 <caption><span class="caption-number">Table 12 </span><span class="caption-text">ANC and carbonate values for several bases and acids</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
 <colgroup>
@@ -343,13 +345,13 @@
 <figure class="align-center" id="id7">
 <span id="figure-mole-base-for-target-ph"></span><a class="reference internal image-reference" href="../_images/mole_base_for_target_pH.png"><img alt="mole base for target pH" src="../_images/mole_base_for_target_pH.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 86 </span><span class="caption-text">Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 87 </span><span class="caption-text">Dose of three bases (in mole/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id8">
 <span id="figure-mg-base-for-target-ph"></span><a class="reference internal image-reference" href="../_images/mg_base_for_target_pH.png"><img alt="mg base for target pH" src="../_images/mg_base_for_target_pH.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 87 </span><span class="caption-text">Dose of two bases (in mg/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">Dose of two bases (in mg/L) required to achieve a target pH for the Manzaragua water. Carbonates provide more buffering and less change in the pH compared with <span class="math notranslate nohighlight">\(NaOH\)</span>.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The required dose for each of the bases is summarized below.</p>
@@ -393,7 +395,7 @@
 <h2>Example Problem: Energy Dissipation Rate in a Straight Pipe<a class="headerlink" href="#example-problem-energy-dissipation-rate-in-a-straight-pipe" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Calculate the friction factor.</p></li>
-<li><p>Use Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-mixing-pipe-diameters">(124)</a> to estimate the mixing length in pipe diameters.</p></li>
+<li><p>Use Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-mixing-pipe-diameters">(48)</a> to estimate the mixing length in pipe diameters.</p></li>
 <li><p>Convert to pipe length in meters.</p></li>
 </ol>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=tsf9Xo4a1Tjp&amp;line=10&amp;uniqifier=1">Colab worksheet calculating the mixing length in pipe diameters</a></p>
