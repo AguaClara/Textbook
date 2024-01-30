@@ -21,12 +21,9 @@ release = '0.0.0'
 
 extensions = ['sphinx.ext.doctest',
               'sphinx.ext.mathjax',
-            #   'sphinx.ext.todo',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.disqus',
-              'rinoh.frontend.sphinx',
-              'keyword_replacer',
-              'todo'
+              'rinoh.frontend.sphinx'
               ]
 
 todo_include_todos = False
