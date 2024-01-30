@@ -19,7 +19,6 @@ extensions = ['sphinx.ext.doctest',
               'sphinx.ext.todo',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.disqus',
-              'rinoh.frontend.sphinx',
               'sphinx_ext_substitution'
               ]
 

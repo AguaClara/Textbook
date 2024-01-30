@@ -9,7 +9,7 @@ sphinx-rtd-theme = "==1.3.0rc1"
 sphinxcontrib-bibtex = "*"
 sphinxcontrib-disqus = "*"
 jsonpath-ng = "*"
-sphinx-ext-substitution = {ref = "support_recursive_dicts", git = "https://github.com/eak24/sphinx_ext_substitution.git"}
+sphinx-ext-substitution = "*"
 
 [dev-packages]
 

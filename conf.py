@@ -22,8 +22,7 @@ release = '0.0.0'
 extensions = ['sphinx.ext.doctest',
               'sphinx.ext.mathjax',
               'sphinxcontrib.bibtex',
-              'sphinxcontrib.disqus',
-              'rinoh.frontend.sphinx'
+              'sphinxcontrib.disqus'
               ]
 
 todo_include_todos = False
