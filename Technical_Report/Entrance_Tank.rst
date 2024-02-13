@@ -14,7 +14,7 @@ The entrance tank (see :numref:`figure_spec_ET_Diagram_Labeled`) has multiple fu
 #. Remove leaves and other debris to prevent clogging of the diffusers in the clarifier inlet
 #. Dissipate kinetic energy to keep the water level steady for accurate flow measurement
 #. Measure the incoming flow rate with the Linear Flow Orifice Meter (LFOM) so that operators can make adjustments and respond to changes in water demand
-#. Inject the coagulant and any other amendments required for flocculation.
+#. Inject the coagulant and any other amendments required for flocculation
 
 .. _figure_spec_ET_Diagram_Labeled:
 
