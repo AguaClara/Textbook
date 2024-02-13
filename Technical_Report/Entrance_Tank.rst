@@ -4,7 +4,6 @@
 Entrance Tank
 *************
 
-:sub:`(hi) no-sub`
 :sub:`($..lfom.rowN) no-sub`
 
 
