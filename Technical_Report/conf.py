@@ -22,8 +22,8 @@ extensions = ['sphinx.ext.doctest',
               'sphinx_ext_substitution'
               ]
 
-# substitute_path = '/Users/ethan/repos/Textbook/Technical_Report/plant.yaml'
-substitute_path = 'plant.yaml'
+
+substitute_path = 'clt1_8.yaml'
 substitute_mode = 'replace'
 
 todo_include_todos = False

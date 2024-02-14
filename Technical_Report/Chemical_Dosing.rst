@@ -20,9 +20,42 @@ The main components of the system are:
 
 This system has the characteristic of maintaining a constant chemical **dosage** even as the flow rate through the plant varies. This enables an experienced operator to vary the chemical dosage directly, without doing any calculations, and without having to manipulate the system every time the flow rate in the plant changes. The AguaClara dosing system provides the added benefit of automatically turning off the chemical flow when there is no flow in the plant. This provides security against contamination with excess chemicals and chemical waste in the event that the plant is shut down inadvertently as may occur if the transmission line is damaged.
 
+General Specifications
+======================
+
+.. _table_Chemical_Dosing_General_Specifications:
+
+.. csv-table:: Chemical Dosing General Specifications.
+   :header: "Parameter", "value"
+   :align: left
+   :widths: 50 50
+
+   Plant maximum flow rate,  :sub:`($..Qm_max) no-sub`
+   Coagulant stock concentration, :sub:`($..chemPipes.coagStockC) no-sub`
+   Coagulant maximum dose, :sub:`($..chemPipes.coagDoseCm_max) no-sub`
+   Coagulant maximum flow rate, :sub:`($..chemPipes.coagQu_max) no-sub`
+   Chlorine stock concentration, :sub:`($..chemPipes.chlorineStockC) no-sub`
+   Chlorine maximum dose, :sub:`($..chemPipes.chlorineDoseCm_max) no-sub`
+   Chlorine maximum flow rate, :sub:`($..chemPipes.chlorineQu_max) no-sub`
+   Maximum head loss thru doser tubes, :sub:`($..doserTubes.HL_max) no-sub`
+   
+
+
 Constant Level Tanks
 ====================
 
+The constant level tanks prevent the changing chemical levels in the stock tanks from influencing the flow rate thru the dosing system. Float valves maintain a relatively constant level of chlorine and coagulant. The float valves are sized to provide up to the maximum chemical flow rate of :sub:`($..chemPipes.chemQu_max) no-sub` given the minimum head provided by stock tanks (:sub:`($..floatvalveHL_bod) no-sub`).
+
+.. _table_Constant_Level_Tank_Specifications:
+
+.. csv-table:: Constant Level Tank Specifications.
+   :header: "Parameter", "value"
+   :align: left
+   :widths: 50 50
+
+   Minimum head provided by stock tanks,  :sub:`($..floatvalveHL_bod) no-sub`
+   Maximum head loss through the float valve orifice,  :sub:`($..floatValve.HL_max) no-sub`
+   Float valve orifice diameter, :sub:`($..floatValve.orificeD) no-sub`
 
 
 Dosing Tubes
@@ -36,16 +69,30 @@ Dosing Tubes
    :widths: 50 50
 
    Number of tubes per module,  :sub:`($..coagDoserTube.N) no-sub`
-   Inner diameter, :sub:`($..coagDoserTube.ID) no-sub`
-   Outer diameter, :sub:`($..coagDoserTube.OD) no-sub`
-   Length, :sub:`($..coagDoserTube.L) no-sub`
+   Tube inner diameter, :sub:`($..coagDoserTube.tube.ID) no-sub`
+   Tube outer diameter, :sub:`($..coagDoserTube.tube.OD) no-sub`
+   Tube length, :sub:`($..coagDoserTube.tube.L) no-sub`
+   Pipe guard length, :sub:`($..coagDoserTube.shell.pipe.L) no-sub`
+  
+
+.. _table_Chlorine_Dosing_Tube_Specifications:
+
+.. csv-table:: Chlorine Dosing Tube Specifications.
+   :header: "Parameter", "value"
+   :align: left
+   :widths: 50 50
+
+   Number of tubes per module,  :sub:`($..chlorineDoserTube.N) no-sub`
+   Tube inner diameter, :sub:`($..chlorineDoserTube.tube.ID) no-sub`
+   Tube outer diameter, :sub:`($..chlorineDoserTube.tube.OD) no-sub`
+   Tube length, :sub:`($..chlorineDoserTube.tube.L) no-sub`
+   Pipe guard length, :sub:`($..chlorineDoserTube.shell.pipe.L) no-sub`
   
 
 Doser
 =====
 
-Monroe added random text
-Izumi added random text
+
 
 Injection Points
 ================

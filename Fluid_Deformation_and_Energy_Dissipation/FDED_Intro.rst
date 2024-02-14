@@ -43,8 +43,6 @@ Understanding :math:`G` and :math:`\varepsilon`
 
 As mentioned above, EDR and velocity gradients play an important role in mixing and in causing suspended particles to collide with each other, both of which are important topics in flocculation. Their use is not limited to flocculation, they are also helpful in understanding failure modes of plate settlers and terminal head loss of sand filters
 
-.. todo:: Add links to textbook sections for plate settlers and filtration
-
 We will begin by defining the concept of energy dissipation rate for a control volume. In a control volume that does not include pumps, turbines or other external energy sources or sinks, the mechanical energy lost is indicated by a change in elevation and quantified as :math:`g h_L`. That mechanical energy is lost in the time, :math:`\theta`, that the fluid is in the control volume.
 
 .. math::  \bar\varepsilon \theta = g h_L

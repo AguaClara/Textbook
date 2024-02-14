@@ -117,5 +117,3 @@ The diameter of the cylinders is equal to
 * The width of the contractions is 0.07779 meter
 * The diameter of the cylinder is 0.3424 meter
 
-
-.. todo:: Add a section on conventional design for a comparison.

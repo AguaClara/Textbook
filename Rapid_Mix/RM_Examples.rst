@@ -85,8 +85,6 @@ For :math:`Na_2CO_3` \* :math:`\Pi_{ANC}` = 2 we are adding
 
 `Colab worksheet calculating the required base addition <https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=EYj26XBJa9DD&line=6&uniqifier=1>`_.
 
-.. todo:: This code needs to move to aguaclara.research. Then the short code snippits can be doc tested.
-
 In following through the example it becomes apparent that the choice of base matters. The most efficient (on a mass or mole basis) base is :math:`NaOH` because it doesn't add any carbonates that don't fully react with the hydrogen ions. The decision about which base to use will be influenced by economics, operator safety, and by whether additional carbonate buffering simplifies plant operation with changing raw water quality.
 
 

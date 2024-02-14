@@ -71,8 +71,6 @@ The ANC of the aluminum coagulant can be obtained from the number of protons it 
 
 Thus the ANC of alum (with 0 hydroxides) is :math:`-3[Al]`. The method of calculating the :math:`ANC_{Al}` will be used to calculate the amount of base that must be added to achieve a target pH.
 
-.. todo:: Add link to the pH_adjust function that is currently in the RM_Exmaples.rst sheet.
-
 The molecular formula of the PACl nanoparticles is always some combination of Al, O, and H. One common molecular structure is a Keggin structure with 13 aluminum atoms. This molecule has a tetrahedral Al atom in the center of the cluster coordinated to 4 oxygen atoms. The molecular formula of the Keggin structured aluminum molecule is
 
 .. math:: AlO_4Al_{12}(OH)_{24}(H_2O)_{12}^{7+}
