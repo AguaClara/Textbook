@@ -1,3 +1,4 @@
+{"clt":
 {
   "OL": "271 mm",
 
@@ -17,7 +18,7 @@
 
   "backWallLowerH": "418 mm",
 
-  "chemDrainChannelH": "2.71 m",
+  "chemDrainChannelH": "1.71 m",
 
   "chemDrainChannelH_min": "200 mm",
 
@@ -1221,52 +1222,6 @@
       "wallT": "6.35 mm",
 
       "wallType":        "PANEL"
-    },
-
-    "spacer": {
-      "H": "44.5 mm",
-
-      "L": "24.1 mm",
-
-      "W": "20.1 mm",
-
-      "atWallL": "30.2 mm",
-
-      "atWallW": "20.6 mm",
-
-      "clampingHangerMaterial":        "NYLON_PLASTIC",
-
-      "clampingHangerType":        "SPACER",
-
-      "color": {
-        "alpha": "1",
-
-        "blue": "0.5",
-
-        "green": "0.5",
-
-        "red": "0.5"
-      },
-
-      "costBasis": "0",
-
-      "hangerMakeSource":        "PLASTICCLAMP_PS",
-
-      "id":        "MMC: 30075T91",
-
-      "implementationPartner":        "GENERIC",
-
-      "material":        "NYLON_PLASTIC",
-
-      "mountingHoleW": "6.35 mm",
-
-      "name":        "1.1875 in. Long Spacer for Plastic Clamping Hanger",
-
-      "pn":        "30075T91",
-
-      "unitCost": "1.83",
-
-      "vendor":        "MMC"
     }
   },
 
@@ -2148,7 +2103,9 @@
 
     "doserTubes": {
       "L_max": "4 m"
-    }
+    },
+
+    "slabBottomtoChemLevelS": "1.5 m"
   },
 
   "done":    "true",
@@ -2493,7 +2450,7 @@
     "pipeToWallS": "24.6 mm"
   },
 
-  "outletH": "10 mm",
+  "outletH": "0 m",
 
   "pipeB": "99.9 mm",
 
@@ -2511,13 +2468,13 @@
 
   "sightTubeS": "1.12 m",
 
-  "slabBottomtoChemLevelS": "500 mm",
+  "slabBottomtoChemLevelS": "1.5 m",
 
   "slotD": "5 mm",
 
   "slotL": "50 mm",
 
-  "tankB": "607 mm",
+  "tankB": "599 mm",
 
   "tankFB": "50 mm",
 
@@ -2562,4 +2519,5 @@
   "wallSlotS": "50 mm",
 
   "wallT": "6.35 mm"
+}
 }

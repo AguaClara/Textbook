@@ -23,7 +23,7 @@ extensions = ['sphinx.ext.doctest',
               ]
 
 
-substitute_path = 'clt1_8.yaml'
+substitute_path = ['clt1_8.yaml']
 substitute_mode = 'replace'
 
 todo_include_todos = False
