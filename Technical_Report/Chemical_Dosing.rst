@@ -13,32 +13,12 @@ The main components of the system are:
 
 * Tanks to store the coagulant and chlorine stock solutions
 * An elevated platform to support the chemical storage tanks at the correct elevation for gravity powered dosing
-* A flow measurement cylinder for each chemical
+* A flow measurement calibration column for each chemical
 * A pair of constant level tank with float valves that maintains a constant level for both chemical solutions
-* Two dosing tube modules that provides the necessary relationship between pressure drop and chemical flow rates for both chemical solutions
-* A balance that connects the water level in the plant's entrance tank to the level at the outlet of the chemical dosing system
+* Two dosing tube modules that provide the necessary relationship between pressure drop and chemical flow rates for each chemical
+* A chemical doser (the balance) that connects the water level in the plant's entrance tank to the level at the outlet of the chemical dosing system
 
-This system has the characteristic of maintaining a constant chemical **dosage** even as the flow rate through the plant varies. This enables an experienced operator to vary the chemical dosage directly, without doing any calculations, and without having to manipulate the system every time the flow rate in the plant changes. The AguaClara dosing system provides the added benefit of automatically turning off the chemical flow when there is no flow in the plant. This provides security against contamination with excess chemicals and chemical waste in the event that the plant is shut down inadvertently as may occur if the transmission line is damaged.
-
-.. _figure_clt_overview:
-
-.. figure:: Images/clt_overview.png
-    :width: 400px
-    :align: center
-    :alt: constant level tank overview
-
-    Overview of the constant level tank module mounted on the side of the chemical stock tank platform.
-
-.. _table_clt_overview:
-
-.. csv-table:: Constant level tanks Overview
-   :header: "Parameter", "value"
-   :align: left
-   :widths: 10 90
-
-   A, chlorine stock tank volume and flow calibration column sight tube
-   B, constant level tank
-   C, dosing tube module
+This system has the characteristic of maintaining a constant chemical **dosage** even as the flow rate through the plant varies. The plant operator can vary the chemical dosage directly, without doing any calculations, and without having to manipulate the system every time the flow rate in the plant changes. The AguaClara dosing system provides the added benefit of automatically turning off the chemical flow when there is no flow in the plant. This provides security against contamination with excess chemicals and chemical waste in the event that the plant is shut down inadvertently as may occur if the transmission line is damaged.
 
 General Specifications
 ======================
@@ -51,21 +31,38 @@ General Specifications
    :widths: 50 50
 
    Plant maximum flow rate,  :sub:`($..Qm_max) no-sub`
+   Maximum head loss thru doser tubes, :sub:`($..doserTubes.HL_max) no-sub`
    Coagulant stock concentration, :sub:`($..chemPipes.coagStockC) no-sub`
    Coagulant maximum dose, :sub:`($..chemPipes.coagDoseCm_max) no-sub`
    Coagulant maximum flow rate, :sub:`($..chemPipes.coagQu_max) no-sub`
    Chlorine stock concentration, :sub:`($..chemPipes.chlorineStockC) no-sub`
    Chlorine maximum dose, :sub:`($..chemPipes.chlorineDoseCm_max) no-sub`
    Chlorine maximum flow rate, :sub:`($..chemPipes.chlorineQu_max) no-sub`
-   Maximum head loss thru doser tubes, :sub:`($..doserTubes.HL_max) no-sub`
-   
 
-The constant level tank system provides convenient central controls for  
 
-add modularity, redundancy, 
+The constant level tank system provides convenient central controls for selection of stock tank, flow calibration, purging sediment, and selection of which of the duplicate chemical feed systems to use. The system has built in redundancy with duplicate systems for dosing each chemical to facilitate routine cleaning and maintenance.
 
 Constant Level Tanks
 ====================
+
+The dosing system controls are centralized around the constant level tanks (see :numref:`figure_clt_overview`).
+
+.. _figure_clt_overview:
+
+.. figure:: Images/clt_overview.png
+    :width: 400px
+    :align: left
+    :alt: constant level tank overview
+
+    Overview of the constant level tank module mounted on the side of the chemical stock tank platform.
+
+    ===  ============
+    Key  Description
+    ===  ============
+     A   chlorine stock tank volume and flow calibration column sight tube 
+     B   constant level tank
+     C   dosing tube module
+    ===  ============
 
 The constant level tanks prevent the changing chemical levels in the stock tanks from influencing the flow rate thru the dosing system. Float valves maintain a relatively constant level of chlorine and coagulant. The float valves are sized to provide up to the maximum chemical flow rate of :sub:`($..chemPipes.chemQu_max) no-sub` given the minimum head provided by stock tanks (:sub:`($..floatvalveHL_bod) no-sub`).
 
@@ -73,31 +70,29 @@ The constant level tanks prevent the changing chemical levels in the stock tanks
 
 .. figure:: Images/clt_details.png
     :width: 300px
-    :align: center
+    :align: left
     :alt: constant level tank details
 
-    Cross-section of an entrance tank. Chemical dosing system not shown.
+    Constant level tank with associated valves and dosing tubes. The valves with orange handles are compatible with chlorine and have chlorine resistant o'rings.
 
-.. _table_clt_details:
+    ===  ============
+    Key  Description
+    ===  ============
+     A   coagulant stock tank volume and flow calibration column sight tube
+     B   valve to select constant level tank and dosing tube set
+     C   float valve to provide constant level of coagulant
+     D   constant level tank
+     E   air vent to discharge bubbles from dosing tubes
+     F   valve to select which stock tank to use
+     G   dosing tubes to provide linear relationship between chemical flow rate and head loss
+     H   valve to drain constant level tank (for cleaning with vinegar)
+     I   sediment trap to capture particles from the stock tank
+     J   valve to purge the sediment trap
+     K   connection to feed line to the doser
+     L   valve to drain the line going to the doser (for cleaning with vinegar)
+    ===  ============
 
-.. csv-table:: Constant level tank module details
-   :header: "Parameter", "value"
-   :align: left
-   :widths: 10 90
-
-   A, coagulant stock tank volume and flow calibration column sight tube
-   B, valve to select constant level tank and dosing tube set
-   C, float valve to provide constant level of coagulant
-   D, constant level tank
-   E, air vent to discharge bubbles from dosing tubes
-   F, valve to select which stock tank to use
-   G, dosing tubes to provide linear relationship between chemical flow rate and head loss
-   H, valve to drain constant level tank (for cleaning with vinegar)
-   I, sediment trap to capture particles from the stock tank
-   J, valve to purge the sediment trap
-   K, connection to feed line to the doser
-   L, valve to drain the line going to the doser (for cleaning with vinegar)
-
+There is a pair of constant level tanks for each chemical feed. The specifications for each tanks are given in  :numref:`table_Constant_Level_Tank_Specifications`.
 
 .. _table_Constant_Level_Tank_Specifications:
 
@@ -126,26 +121,22 @@ The number of dosing tubes is increased as needed to ensure that the maximum all
 
 .. figure:: Images/dosing_tube_module.png
     :width: 300px
-    :align: center
+    :align: left
     :alt: constant level tank details
 
     Cross-section of an entrance tank. Chemical dosing system not shown.
 
-.. _table_dosing_tube_module:
-
-.. csv-table:: Dosing tube module details
-   :header: "Parameter", "value"
-   :align: left
-   :widths: 10 90
-
-   A, reducer
-   B, union
-   C, part of union that is glued to the pipe shield and disk
-   D, dosing tubes
-   E, pipe shield that maintains the dosing tubes in tension 
-   F, PVC disk that is glued to the union and that has slightly undersized holes for the dosing tubes
-   G, isometric view of the union showing that the dosing tubes are visible above the disk
-
+    ===  ============
+    Key  Description
+    ===  ============
+     A   reducer
+     B   union
+     C   part of union that is glued to the pipe shield and disk
+     D   dosing tubes
+     E   pipe shield that maintains the dosing tubes in tension 
+     F   PVC disk that is glued to the union and that has slightly undersized holes for the dosing tubes
+     G   isometric view of the union showing that the dosing tubes are visible above the disk
+    ===  ============
 
 
 
