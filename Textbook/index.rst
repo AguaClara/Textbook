@@ -36,12 +36,6 @@ The Physics of Water Treatment Design
   Authors.rst
 
 .. toctree::
-  :caption: Chapter 1: Technical Report
-  :maxdepth: 1
-
-  Technical_Report/lfom.rst
-
-.. toctree::
   :caption: Chapter 1: Introduction
   :maxdepth: 1
 

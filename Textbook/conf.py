@@ -40,10 +40,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
-technical_report = 'Technical_Report/lfom'
 
-# root_doc = 'index'
-root_doc = technical_report
+root_doc = 'index'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -53,7 +51,7 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 rinoh_documents = [
-    dict(doc=technical_report, target='aguaclara')
+    dict(doc=root_doc, target='aguaclara')
 ]
 
 # -- Options for PDF output --------------------------------------------------
@@ -73,7 +71,7 @@ rinoh_documents = [
 # regardless of the global 'pdf_compressed' setting.
 
 pdf_documents = [
-    ('Technical_Report/lfom', 'AguaClara', 'AguaClara Textbook', 'AguaClara Reach'),
+    ('index', 'AguaClara', 'AguaClara Textbook', 'AguaClara Reach'),
 ]
 
 # A comma-separated list of custom stylesheets. Example:
