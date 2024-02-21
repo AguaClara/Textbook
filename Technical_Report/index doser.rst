@@ -12,43 +12,11 @@ AguaClara Technical Report
 =====================================
 
 .. toctree::
-  :caption: Introduction
-  :maxdepth: 1
-
-  Introduction.rst
-
-.. toctree::
   :caption: Chapter 1: Preparation for Treatment
   :maxdepth: 1
 
-  Entrance_Tank.rst
-  LFOM.rst
-  Chemical_Dosing.rst
-  Chemical_Stock_Tanks.rst
-
-.. toctree::
-  :caption: Chapter 2: Flocculator
-  :maxdepth: 1
-
-  Flocculator.rst
-
-
-.. toctree::
-  :caption: Chapter 3: Clarifier
-  :maxdepth: 1
-
-  Clarifier.rst
-
-.. toctree::
-  :caption: Chapter 4: Stacked Rapid Sand Filtration
-  :maxdepth: 1
-
-  StaRS.rst
-
-
-
-
-
+    Chemical_Dosing.rst
+  
 
 This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_.
 
