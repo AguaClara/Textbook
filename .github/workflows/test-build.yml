@@ -1,0 +1,43 @@
+name: Test
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+    - name: Install Ruby Dependencies
+      run: sudo apt-get update --fix-missing && sudo apt install libcurl4-openssl-dev
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements-dev.txt
+        gem install html-proofer
+    - name: Build HTML Docs
+      run: |
+        make html
+        touch _build/html/.nojekyll
+    - name: Run HTML Proofer and Doctest
+      run: |
+        make doctest
+        htmlproofer _build/html --help --typhoeus-config='{"headers":{"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36"}}' --allow_hash_href --only_4xx --file_ignore "_build/html/search.html" --url-ignore https://rawgit.com/AguaClara/Textbook/test/html/index.html
+    - name: Test Publish Docs
+      uses: JamesIves/github-pages-deploy-action@releases/v4
+      with:
+        token: ${{ secrets.ACCESS_TOKEN }}
+        branch: test # The branch the action should deploy to.
+        folder: _build/html/ # The folder the action should deploy.
+  #  - name: Test Build LaTeX
+  #    run: make latex
+   # - name: Test Build PDF
+    #  uses: xu-cheng/latex-action@v2
+     # with:
+      #  working_directory: _build/latex
+       # root_file: AguaClaraTextbook.tex

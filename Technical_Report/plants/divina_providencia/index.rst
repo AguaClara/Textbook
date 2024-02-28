@@ -12,7 +12,7 @@ AguaClara Technical Report
 =====================================
 
 .. toctree::
-  :caption: Chapter 1: Preparation for Treatment
+  :caption: Divina Providencia
   :maxdepth: 1
 
     Chemical_Dosing.rst

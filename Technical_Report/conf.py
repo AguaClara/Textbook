@@ -10,6 +10,8 @@ project = 'AguaClara'
 copyright = '2024, AguaClara Reach'
 author = 'AguaClara Reach'
 release = '0.0.0'
+root_doc = 'index'
+substitute_path = ['default.yaml']
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -23,7 +25,8 @@ extensions = ['sphinx.ext.doctest',
               ]
 
 
-substitute_path = ['default.yaml']
+
+
 substitute_mode = 'replace'
 
 todo_include_todos = False
@@ -39,10 +42,7 @@ exclude_patterns = ['_build',
                     'Thumbs.db',
                     '.DS_Store']
 
-technical_report = 'index'
 
-# root_doc = 'index'
-root_doc = 'index'
 numfig = True
 
 # -- Options for HTML output -------------------------------------------------
@@ -51,9 +51,9 @@ numfig = True
 html_theme = 'sphinx_rtd_theme'
 # html_static_path = ['_static']
 
-rinoh_documents = [
-    dict(doc=technical_report, target='aguaclara')
-]
+# rinoh_documents = [
+#     dict(doc=root_doc, target='aguaclara')
+# ]
 
 # -- Options for PDF output --------------------------------------------------
 
@@ -157,3 +157,11 @@ pdf_repeat_table_rows = True
 
 # Enable smart quotes (1, 2 or 3) or disable by setting to 0
 pdf_smartquotes = 0
+
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
+print(os.path.abspath('.'))
+from plants.divina_providencia.conf import *
+
+#.divina_providencia.conf

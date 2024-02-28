@@ -12,10 +12,10 @@ AguaClara Technical Report
 =====================================
 
 .. toctree::
-  :caption: Chapter 1: Preparation for Treatment
+  :caption: Divina Providencia
   :maxdepth: 1
 
-    Chemical_Dosing.rst
+    plant/divina_providencia/Chemical_Dosing.rst
   
 
 This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_.
