@@ -20,8 +20,11 @@ jobs:
         pip install -r requirements-dev.txt
     - name: Generate Docs
       run: |
+        cd Textbook
         make html
         touch _build/html/.nojekyll
+        cd ../Technical_Report
+        make html
     - name: Publish Docs Master
       uses: JamesIves/github-pages-deploy-action@releases/v4
       with:
