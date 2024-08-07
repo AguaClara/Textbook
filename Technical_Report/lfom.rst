@@ -51,8 +51,8 @@ The diameter of the LFOM pipe is set by the velocity of the falling water inside
    :align: left
    :widths: 50 50
 
-   Number of rows of orifices, :sub:`($..et.lfom.rowN) rowN`
-   Max flow rate, :sub:`($..et.lfom.Qm_max) Qm_max`
+   Number of rows of orifices, :sub:`($..et.lfom.rowN) no-sub`
+   Max flow rate, :sub:`($..et.lfom.Qm_max) no-sub`
    Head loss at max flow, :sub:`($..et.lfom.HL_max) no-sub`
-   Orifices in each row starting from bottom row, :sub:`($..et.lfom.orificeNPerRow) no-sub`
-   Elevation of each row from zero flow datum, :sub:`($..et.lfom.orificeHPerRow) no-sub`
+   Orifices in each row starting from bottom row, :sub:`($..et.lfom.rowOrificeN_VEC) no-sub`
+   Elevation of each row from zero flow datum, :sub:`($..et.lfom.rowOrificeH_VEC) no-sub`

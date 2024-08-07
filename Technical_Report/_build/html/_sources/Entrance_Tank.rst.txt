@@ -40,7 +40,7 @@ The trash rack area shall be sufficient such that it can be at least :sub:`($..e
    :align: left
    :widths: 50 50
 
-   Channel width, :sub:`($..et.trashRack.W) no-sub`
+   Channel width, :sub:`($..trashRack.W) no-sub`
    Trash rack height, :sub:`($..et.trashRack.L) no-sub`
    Fractional open area, :sub:`($..et.trashRack.PO) no-sub`
    Downstream water depth, :sub:`($..et.trashRack.downstreamHW) no-sub`
@@ -61,3 +61,8 @@ To allow for easy maintenance, N.EtHoppers hoppers must be built into the entran
 As the raw water flows from the first hopper to the subsequent ones, it must pass through two trash racks, preventing large debris from entering the treatment process. Having two trash racks allows the plant to run with a grit screen even while the operator cleans one of them. The trash racks are made of rebar and slide into two slots built into the entrance tank wall. The center-to-center distance between the rebar, B.EtRebar m, is set to ensure that debris large enough to clog the orifices in the linear flow orifice meter downstream (LFOM) are kept out.
 
 Suspended particulates in the water settle out over the length of the entrance tank into the hoppers below. When enough sludge has accumulated at the bottom, the hopper stops can be removed to flush out the debris down into the drain channel below, and they can then be replaced to resume normal operation. The ND.EtDrain in nominal diameter hopper stop is L.EtDrainStopper m long, ensuring the top of the pipe is above the maximum water height in the tank. Table 3 summarizes the entrance tank design specifications below.
+
+Number of rows of orifices, :sub:`($..et.lfom.rowN) no-sub`
+
+
+.. include:: lfom.rst

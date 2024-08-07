@@ -1,0 +1,455 @@
+{
+  "lfom": {
+    "FB": "100 mm",
+
+    "HL_max": "200 mm",
+
+    "HL_min": "200 mm",
+
+    "ID_max": "302 mm",
+
+    "ID_min": "42.6 mm",
+
+    "N": "1",
+
+    "ND": "2",
+
+    "ND_max": "12",
+
+    "ND_min": "1",
+
+    "QPerRow": "[ 100 mL/s, 200 mL/s, 300 mL/s, 400 mL/s, 500 mL/s, 600 mL/s, 700 mL/s, 800 mL/s, 900 mL/s, 1 L/s]",
+
+    "QSF_pi": "1.2",
+
+    "Qm_max": "1 L/s",
+
+    "SDR": "14.5",
+
+    "Tm_min": "3 mm",
+
+    "V_max": "700 mm/s",
+
+    "botRowH": "200 mm",
+
+    "clampingHanger": {
+      "H": "69.4 mm",
+
+      "L": "44.5 mm",
+
+      "W": "146 mm",
+
+      "pipeL_max": "94.6 m",
+
+      "pipeToWallS": "68.3 mm"
+    },
+
+    "coupling": {
+      "OD": "68.3 mm",
+
+      "axisL": "36.1 mm",
+
+      "socketID": "60.6 mm",
+
+      "socketL": "34.9 mm"
+    },
+
+    "done":      "true",
+
+    "drillD_max": "100 mm",
+
+    "elbow_90": {
+      "OD": "69.9 mm",
+
+      "axisL": "65.9 mm",
+
+      "socketID": "60.6 mm",
+
+      "socketL": "34.1 mm"
+    },
+
+    "ip":      "GENERIC",
+
+    "metric":      "false",
+
+    "orificeA": "3.17e-5 m^2",
+
+    "orificeD": "6.35 mm",
+
+    "orificeD_max": "8.16 mm",
+
+    "orificeHPerRow": "[ 3.18 mm, 24.7 mm, 46.2 mm, 67.7 mm, 89.2 mm, 111 mm, 132 mm, 154 mm, 175 mm, 197 mm]",
+
+    "orificeNPerRow": "[ 9, 4, 4, 2, 3, 2, 3, 1, 2, 2]",
+
+    "orificePerRowN_max": "17",
+
+    "orificeS": "3 mm",
+
+    "pipe": {
+      "ID": "52 mm",
+
+      "OD": "60.3 mm",
+
+      "T": "4.17 mm"
+    },
+
+    "qPerOrifice": "[ 11.4 mL/s, 16.9 mL/s, 21 mL/s, 24.4 mL/s, 27.4 mL/s, 30.1 mL/s, 32.6 mL/s, 34.9 mL/s, 37.1 mL/s, 39.1 mL/s]",
+
+    "rep":      "true",
+
+    "rowB": "20 mm",
+
+    "rowN": "10",
+
+    "rowN_max": "10",
+
+    "rowN_min": "5",
+
+    "staggerRows":      "true",
+
+    "tee": {
+      "OD": "68.3 mm",
+
+      "axisL": "66.7 mm",
+
+      "socketID": "60.6 mm",
+
+      "socketL": "34.9 mm"
+    },
+
+    "topRowOrificeA": "5.23e-5 m^2"
+  },
+
+  "tank": {
+    "H": "2 m",
+
+    "HW": "2 m",
+
+    "L": "2 m",
+
+    "N": "2",
+
+    "OL": "2.34 m",
+
+    "OW": "4.51 m",
+
+    "W": "2 m",
+
+    "back":      "true",
+
+    "bottom":      "true",
+
+    "bottomSuspended":      "false",
+
+    "column": {
+      "HW": "2 m",
+
+      "L": "2 m",
+
+      "T": "170 mm",
+
+      "W": "170 mm",
+
+      "col":        "false",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "COLUMN"
+    },
+
+    "front":      "true",
+
+    "hasPort":      "false",
+
+    "innerW": "4.17 m",
+
+    "ip":      "GENERIC",
+
+    "left":      "true",
+
+    "location": {
+      "queryType":        "UNION",
+
+      "subqueries": [
+         {
+          "bodyType": [
+                          "MATE_CONNECTOR"
+          ],
+
+          "queryType":            "BODY_TYPE",
+
+          "subquery": {
+            "entityType":              "BODY",
+
+            "featureId": [
+                              "Fp0uOvy29yzPSLP"
+            ],
+
+            "queryType":              "CREATED_BY"
+          }
+        }
+      ]
+    },
+
+    "mapToContext":      "true",
+
+    "port": {
+      "HW": "2 m",
+
+      "L": "0 m",
+
+      "T": "170 mm",
+
+      "W": "300 mm",
+
+      "col":        "true",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "WALL"
+    },
+
+    "portH": "300 mm",
+
+    "portSwap":      "false",
+
+    "portW": "0 m",
+
+    "right":      "true",
+
+    "sheetMaterial":      "AUTO",
+
+    "sheetType":      "WALL",
+
+    "slab": {
+      "HW": "2 m",
+
+      "L": "2 m",
+
+      "T": "120 mm",
+
+      "W": "4.17 m",
+
+      "col":        "false",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "SLAB0"
+    },
+
+    "slab1": {
+      "HW": "0 m",
+
+      "L": "2 m",
+
+      "T": "150 mm",
+
+      "W": "4.17 m",
+
+      "col":        "false",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "SLAB1"
+    },
+
+    "slab1Corner": {
+      "HW": "0 m",
+
+      "L": "170 mm",
+
+      "T": "150 mm",
+
+      "W": "170 mm",
+
+      "col":        "false",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "SLAB1"
+    },
+
+    "slab1End": {
+      "HW": "0 m",
+
+      "L": "4.17 m",
+
+      "T": "150 mm",
+
+      "W": "170 mm",
+
+      "col":        "false",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "SLAB1"
+    },
+
+    "slab1OffsetL": "2 m",
+
+    "slab1Side": {
+      "HW": "0 m",
+
+      "L": "2 m",
+
+      "T": "150 mm",
+
+      "W": "170 mm",
+
+      "col":        "false",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "SLAB1"
+    },
+
+    "slabCorner": {
+      "HW": "2 m",
+
+      "L": "170 mm",
+
+      "T": "120 mm",
+
+      "W": "170 mm",
+
+      "col":        "false",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "SLAB0"
+    },
+
+    "slabEnd": {
+      "HW": "2 m",
+
+      "L": "4.17 m",
+
+      "T": "120 mm",
+
+      "W": "170 mm",
+
+      "col":        "false",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "SLAB0"
+    },
+
+    "slabSide": {
+      "HW": "2 m",
+
+      "L": "2 m",
+
+      "T": "120 mm",
+
+      "W": "170 mm",
+
+      "col":        "false",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "SLAB0"
+    },
+
+    "submap":      "tank",
+
+    "suppressFront":      "false",
+
+    "top":      "true",
+
+    "wall": {
+      "HW": "2 m",
+
+      "L": "2 m",
+
+      "T": "170 mm",
+
+      "W": "2 m",
+
+      "col":        "true",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "WALL"
+    },
+
+    "wallDivider": {
+      "HW": "2 m",
+
+      "L": "2 m",
+
+      "T": "170 mm",
+
+      "W": "2 m",
+
+      "col":        "true",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "WALL",
+
+      "t":        "wallDivider"
+    },
+
+    "wallEnd": {
+      "HW": "2 m",
+
+      "L": "2 m",
+
+      "T": "170 mm",
+
+      "W": "2 m",
+
+      "col":        "true",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "WALL"
+    },
+
+    "wallSide": {
+      "HW": "2 m",
+
+      "L": "2 m",
+
+      "T": "170 mm",
+
+      "W": "2 m",
+
+      "col":        "true",
+
+      "ip":        "GENERIC",
+
+      "sheetMaterial":        "AUTO",
+
+      "sheetType":        "WALL"
+    }
+  }
+}

@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Linear Flow Orifice Meter &mdash; Divina Providencia Doser 0.0.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/sphinx_ext_substitution.css" type="text/css" />
+  <title>Linear Flow Orifice Meter &mdash; San Juan Planes 0.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx_ext_substitution.css?v=d40dd5bd" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=525cde36"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/documentation_options.js?v=7026087e"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -31,8 +33,8 @@
 
           
           
-          <a href="plants/divina_providencia/index.html" class="icon icon-home">
-            Divina Providencia Doser
+          <a href="plants/san_juan_planes/index.html" class="icon icon-home">
+            San Juan Planes
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -53,17 +55,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="plants/divina_providencia/index.html">Divina Providencia Doser</a>
+          <a href="plants/san_juan_planes/index.html">San Juan Planes</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="plants/divina_providencia/index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li><a href="plants/san_juan_planes/index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Linear Flow Orifice Meter</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/LFOM.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/lfom.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -72,12 +74,12 @@
            <div itemprop="articleBody">
              
   <section id="linear-flow-orifice-meter">
-<span id="title-lfom"></span><h1>Linear Flow Orifice Meter<a class="headerlink" href="#linear-flow-orifice-meter" title="Permalink to this heading"></a></h1>
+<span id="title-lfom"></span><h1>Linear Flow Orifice Meter<a class="headerlink" href="#linear-flow-orifice-meter" title="Link to this heading"></a></h1>
 <p>The LFOM is a weir shape cut into a pipe. It was meant to imitate <a class="reference external" href="https://confluence.cornell.edu/display/AGUACLARA/LFOM+sutro+weir+research">the Sutro Weir</a> while being far easier to build. The LFOM is a pipe with rows of holes, or orifices, drilled into it. There are progressively fewer holes per row as you move up the LFOM, as the shape is meant to resemble half a parabola on each side. The size of all holes is the same, and the amount of holes per row are precisely calculated. Water in the entrance tank flows into and down the LFOM, towards the rapid mix orifice and flocculator.</p>
 <figure class="align-center" id="id1">
 <span id="figure-sutro-v-lfom"></span><a class="reference internal image-reference" href="_images/sutro_v_lfom.png"><img alt="A sutro weir and an LFOM" src="_images/sutro_v_lfom.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the Sutro weir’s geometry. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-text">On the left is a sutro weir. On the right is AguaClara’s approximation of the Sutro weir’s geometry. This elegant innovation is called a linear flow orifice meter, or LFOM for short.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The LFOM does one thing and serves two purposes.</p>
@@ -95,12 +97,12 @@
 <p>Before the water level reaches the second row of holes, the LFOM is simulating a rectangular weir, and thus <span class="math notranslate nohighlight">\(h \not\propto Q\)</span>. The Sutro weir also experiences this problem. Similarly, if the water level exceeds the topmost row of the LFOM’s orifices, the linearity also breaks down. The entire LFOM begins to act like an orifice, the exponent of <span class="math notranslate nohighlight">\(Q\)</span> in <span class="math notranslate nohighlight">\(h \propto Q\)</span> becomes greater than 1. This is because the LFOM approaches orifice behavior, and for orifices, <span class="math notranslate nohighlight">\(h \propto Q^2\)</span>.</p>
 <p>The diameter of the LFOM pipe is set by the velocity of the falling water inside the LFOM at the bottom of the bottom row of orifices. This velocity is obtained by summing up all of the momentum of the falling water and dividing by the total flow for the case where the LFOM is operating at maximum capacity. The Sutro weir equations (not yet provided here) can be integrated to obtain an equation for the falling velocity of the water inside the LFOM. This maximum vertical velocity of the falling water sets the minimum flow area of the LFOM and hence continuity can be used to obtain the minimum pipe diameter.</p>
 <div class="math notranslate nohighlight" id="equation-lfom-v-max">
-<span class="eqno">()<a class="headerlink" href="#equation-lfom-v-max" title="Permalink to this equation"></a></span>\[  V_{max} = \frac{4}{3 \pi} \sqrt{2gh_L}\]</div>
+<span class="eqno">()<a class="headerlink" href="#equation-lfom-v-max" title="Link to this equation"></a></span>\[  V_{max} = \frac{4}{3 \pi} \sqrt{2gh_L}\]</div>
 <span id="table-lfom-specifications"></span><table class="docutils align-left" id="id2">
-<caption><span class="caption-text">LFOM Specifications.</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<caption><span class="caption-text">LFOM Specifications.</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Parameter</p></th>
@@ -109,19 +111,19 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Number of rows of orifices</p></td>
-<td><p>rowN</p></td>
+<td><p>10</p></td>
 </tr>
 <tr class="row-odd"><td><p>Max flow rate</p></td>
-<td><p>Qm_max</p></td>
+<td><p>12 L/s</p></td>
 </tr>
 <tr class="row-even"><td><p>Head loss at max flow</p></td>
-<td><p>no-sub</p></td>
+<td><p>200 mm</p></td>
 </tr>
 <tr class="row-odd"><td><p>Orifices in each row starting from bottom row</p></td>
-<td><p>no-sub</p></td>
+<td><p>[ 15, 4, 5, 3, 3, 4, 2, 2, 3, 2]</p></td>
 </tr>
 <tr class="row-even"><td><p>Elevation of each row from zero flow datum</p></td>
-<td><p>no-sub</p></td>
+<td><p>[ 9.53 mm, 29.6 mm, 49.7 mm, 69.8 mm, 89.9 mm, 110 mm, 130 mm, 150 mm, 170 mm, 190 mm]</p></td>
 </tr>
 </tbody>
 </table>

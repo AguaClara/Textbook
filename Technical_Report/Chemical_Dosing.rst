@@ -30,7 +30,7 @@ General Specifications
    :align: left
    :widths: 50 50
 
-   Plant maximum flow rate,  :sub:`($..Qm_max) no-sub`
+   Plant maximum flow rate,  :sub:`($..et.lfom.Qm_max) no-sub`
    Maximum head loss thru doser tubes, :sub:`($..doserTubes.HL_max) no-sub`
    Coagulant stock concentration, :sub:`($..chemPipes.coagStockC) no-sub`
    Coagulant maximum dose, :sub:`($..chemPipes.coagDoseCm_max) no-sub`

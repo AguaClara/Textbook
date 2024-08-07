@@ -22,7 +22,6 @@ AguaClara Technical Report
   :maxdepth: 1
 
   Entrance_Tank.rst
-  LFOM.rst
   Chemical_Dosing.rst
   Chemical_Stock_Tanks.rst
 
