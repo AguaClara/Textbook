@@ -32,12 +32,26 @@ AguaClara treatment technologies include trash and grit removal, flow measuremen
 
 .. _figure_treatment_train:
 
-.. figure:: ../Textbook/Images/treatmentTrain.png
+.. figure:: images/treatmentTrain.png
     :width: 900px
     :align: center
     :alt: AC treatment train
 
     Schematic showing the AguaClara treatment processes.
+
+    
+    ====  ============
+    Key   Description
+    ====  ============
+    1     raw water from source
+    2     entrance tank
+    3     chemical dose controller
+    4     chemical constant level tanks
+    5     flocculator
+    6     clarifier
+    7     stacked rapid sand filter
+    8     treated water to the community distribution tank
+    ====  ============
 
 Water Quality Parameters
 ========================

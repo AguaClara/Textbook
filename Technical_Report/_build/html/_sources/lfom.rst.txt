@@ -16,16 +16,17 @@ The LFOM is a weir shape cut into a pipe. It was meant to imitate `the Sutro Wei
 
     On the left is a sutro weir. On the right is AguaClara's approximation of the Sutro weir's geometry. This elegant innovation is called a linear flow orifice meter, or LFOM for short.
 
+
 The LFOM does one thing and serves two purposes.
 
 What it does:
 
-**The LFOM creates a linear relationship between water level in the entrance tank and the flow out of the entrance tank.** *It does not control the flow through the plant*. If the LFOM were replaced with a hole in the bottom of the entrance tank, the same flow rate would go through the plant, the only difference being that the water level in the entrance tank would scale with flow squared :math:`h \propto Q^2` instead of :math:`h \propto Q`. For example, if an LFOM has 10 rows of holes and has been designed for a plant whose maximum flow rate is 10 L/s, then the operator knows that the number of rows submerged in water is equal to the flow rate of the plant in L/s. So if the water were up to the third row of holes, there would be 3 L/s of water flowing through the plant.
+**The LFOM creates a linear relationship between water level in the entrance tank and the flow out of the entrance tank.** *It does not control the flow through the plant*. If the LFOM were replaced with a hole in the bottom of the entrance tank, the same flow rate would go through the plant, the only difference being that the water level in the entrance tank would scale with flow squared :math:`h \propto Q^2` instead of :math:`h \propto Q`.
 
 Why it is useful:
 
-#. Allows the operator to measure the flow through the plant quickly and easily, explained above.
-#. Allows for the Linear Chemical Dose Controller, which will be explained next, to automatically adjust the flow of coagulant/chlorine into the plant as the plant flow rate changes. This means the operator would only need to adjust the flow of coagulant when there is a change in turbidity or organic matter.
+#. Allows the operator to measure the flow through the plant quickly and easily.
+#. Allows for the Linear Chemical Dose Controller, which will be explained next, to automatically adjust the flow of coagulant and chlorine into the plant as the plant flow rate changes. This means the operators only need to adjust the coagulant when there is a need to change the **dose** due to a change in turbidity or organic matter concentration.
 
 This is best understood with examples. By shaping a weir differently, different relationships between :math:`Q` and :math:`h` are formed:
 * In the case of a `rectangular weir <https://swmm5.files.wordpress.com/2016/09/image00124.jpg>`_, :math:`Q \propto h^{\frac{3}{2}}`
@@ -35,24 +36,50 @@ This is best understood with examples. By shaping a weir differently, different 
 
 Before the water level reaches the second row of holes, the LFOM is simulating a rectangular weir, and thus :math:`h \not\propto Q`. The Sutro weir also experiences this problem. Similarly, if the water level exceeds the topmost row of the LFOM’s orifices, the linearity also breaks down. The entire LFOM begins to act like an orifice, the exponent of :math:`Q` in :math:`h \propto Q` becomes greater than 1. This is because the LFOM approaches orifice behavior, and for orifices, :math:`h \propto Q^2`.
 
-The diameter of the LFOM pipe is set by the velocity of the falling water inside the LFOM at the bottom of the bottom row of orifices. This velocity is obtained by summing up all of the momentum of the falling water and dividing by the total flow for the case where the LFOM is operating at maximum capacity. The Sutro weir equations (not yet provided here) can be integrated to obtain an equation for the falling velocity of the water inside the LFOM. This maximum vertical velocity of the falling water sets the minimum flow area of the LFOM and hence continuity can be used to obtain the minimum pipe diameter.
+The diameter of the LFOM pipe is set by the velocity of the falling water inside the LFOM at the bottom of the bottom row of orifices. This velocity is obtained by summing up all of the momentum of the falling water and dividing by the total flow for the case where the LFOM is operating at maximum capacity. The Sutro weir equations can be integrated to obtain an equation for the falling velocity of the water inside the LFOM. 
 
 .. math::
   :label: LFOM_V_max
 
     V_{max} = \frac{4}{3 \pi} \sqrt{2gh_L}
 
+This maximum vertical velocity of the falling water sets the minimum flow area of the LFOM and hence continuity can be used to obtain the minimum pipe diameter. The orifice pattern was developed to approximate the Sutro weir while simplifying the fabrication.
 
+.. _figure_lfom_overview:
+
+.. figure:: Images/lfom_overview.png
+    :width: 200px
+    :align: center
+    :alt: An LFOM
+
+    An AguaClara LFOM showing the flow rate in L/s.
+
+
+    ====  ============
+    Key   Description
+    ====  ============
+    1     maximum flow rate in L/s and maximum water level
+    2     zero flow and minimum water level
+    3     pipe stub that can be removed
+    4     invert of entrance tank
+    5     pipe coupling that is embedded in concrete
+    ====  ============
+
+
+The LFOM specifications are given below.
 
 .. _table_LFOM_Specifications:
 
 .. csv-table:: LFOM Specifications.
    :header: "Parameter", "value"
-   :align: left
-   :widths: 50 50
+   :align: center
+   :widths: 30 70
+   :class: wraptable
 
    Number of rows of orifices, :sub:`($..et.lfom.rowN) no-sub`
    Max flow rate, :sub:`($..et.lfom.Qm_max) no-sub`
    Head loss at max flow, :sub:`($..et.lfom.HL_max) no-sub`
+   Diameter of orifices, :sub:`($..et.lfom.orificeD) no-sub`
+   Space between orifices measured on the outside of the pipe,  :sub:`($..et.lfom.orificeS) no-sub`
    Orifices in each row starting from bottom row, :sub:`($..et.lfom.rowOrificeN_VEC) no-sub`
    Elevation of each row from zero flow datum, :sub:`($..et.lfom.rowOrificeH_VEC) no-sub`

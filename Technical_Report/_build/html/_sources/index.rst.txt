@@ -7,9 +7,9 @@
   :target: https://www.aguaclarareach.org/
   :height: 40
 
-=====================================
-AguaClara Technical Report
-=====================================
+==============================================
+AguaClara Technical Report for San Juan Planes
+==============================================
 
 .. toctree::
   :caption: Introduction
@@ -43,11 +43,7 @@ AguaClara Technical Report
   :maxdepth: 1
 
   StaRS.rst
-
-
-
-
-
+  
 
 This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_.
 

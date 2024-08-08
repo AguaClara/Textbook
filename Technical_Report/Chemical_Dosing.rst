@@ -29,6 +29,7 @@ General Specifications
    :header: "Parameter", "value"
    :align: left
    :widths: 50 50
+   :class: wraptable
 
    Plant maximum flow rate,  :sub:`($..et.lfom.Qm_max) no-sub`
    Maximum head loss thru doser tubes, :sub:`($..doserTubes.HL_max) no-sub`
@@ -100,6 +101,7 @@ There is a pair of constant level tanks for each chemical feed. The specificatio
    :header: "Parameter", "value"
    :align: left
    :widths: 50 50
+   :class: wraptable
 
    Minimum head provided by stock tanks,  :sub:`($..floatvalveHL_bod) no-sub`
    Maximum head loss through the float valve orifice,  :sub:`($..floatValve.HL_max) no-sub`
@@ -146,6 +148,7 @@ The coagulant dosing tube specifications are given below.
    :header: "Parameter", "value"
    :align: left
    :widths: 50 50
+   :class: wraptable
 
    Number of tubes per module,  :sub:`($..coagDoserTube.N) no-sub`
    Tube inner diameter, :sub:`($..coagDoserTube.tube.ID) no-sub`
@@ -161,6 +164,7 @@ The chlorine dosing tube specifications are given below.
    :header: "Parameter", "value"
    :align: left
    :widths: 50 50
+   :class: wraptable
 
    Number of tubes per module,  :sub:`($..chlorineDoserTube.N) no-sub`
    Tube inner diameter, :sub:`($..chlorineDoserTube.tube.ID) no-sub`
