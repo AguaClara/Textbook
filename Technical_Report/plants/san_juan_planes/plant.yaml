@@ -4,6 +4,8 @@
 
   "Clarifier":    "true",
 
+  "Doser":    "true",
+
   "DrainChannel":    "true",
 
   "ET":    "true",
@@ -14,6 +16,8 @@
 
   "Floc":    "true",
 
+  "Floor":    "true",
+
   "GT_min": "35000",
 
   "G_bod": "30 Hz",
@@ -22,7 +26,7 @@
 
   "Qm_max": "12 L/s",
 
-  "Rename_for_AutoCAD":    "true",
+  "Rename_for_AutoCAD":    "false",
 
   "TEMP_max": "30 °C",
 
@@ -387,7 +391,7 @@
 
     "OL": "3.36 m",
 
-    "OW": "5.04 m",
+    "OW": "4.8 m",
 
     "Qm_max": "12 L/s",
 
@@ -404,13 +408,13 @@
     "chemBase": {
       "H": "1.7 m",
 
-      "H_max": "1.25 m",
+      "H_max": "1.44 m",
 
       "L": "3.02 m",
 
       "OL": "3.36 m",
 
-      "OW": "5.04 m",
+      "OW": "4.8 m",
 
       "Qm_max": "12 L/s",
 
@@ -420,7 +424,7 @@
 
       "TI": "173000 s",
 
-      "W": "4.7 m",
+      "W": "4.46 m",
 
       "basePlatform": {
         "H": "1.55 m",
@@ -433,9 +437,9 @@
 
         "OL": "3.36 m",
 
-        "OW": "5.04 m",
+        "OW": "4.8 m",
 
-        "W": "4.7 m",
+        "W": "4.46 m",
 
         "back":          "true",
 
@@ -467,7 +471,7 @@
 
         "hasPort":          "false",
 
-        "innerW": "4.7 m",
+        "innerW": "4.46 m",
 
         "ip":          "APP",
 
@@ -510,7 +514,7 @@
 
           "T": "120 mm",
 
-          "W": "4.7 m",
+          "W": "4.46 m",
 
           "col":            "false",
 
@@ -528,7 +532,7 @@
 
           "T": "150 mm",
 
-          "W": "4.7 m",
+          "W": "4.46 m",
 
           "col":            "false",
 
@@ -560,7 +564,7 @@
         "slab1End": {
           "HW": "0 m",
 
-          "L": "4.7 m",
+          "L": "4.46 m",
 
           "T": "150 mm",
 
@@ -616,7 +620,7 @@
         "slabEnd": {
           "HW": "0 m",
 
-          "L": "4.7 m",
+          "L": "4.46 m",
 
           "T": "120 mm",
 
@@ -694,7 +698,7 @@
         "wallEnd": {
           "HW": "0 m",
 
-          "L": "4.7 m",
+          "L": "4.46 m",
 
           "T": "170 mm",
 
@@ -728,9 +732,9 @@
         }
       },
 
-      "bottomH": "10 mm",
+      "bottomH": "4 mm",
 
-      "calScale_max": "327",
+      "calScale_max": "377",
 
       "chemBaseH": "1.55 m",
 
@@ -1119,7 +1123,7 @@
 
         "patternL": "282 mm",
 
-        "rep":          "false",
+        "rep":          "true",
 
         "stepH": "189 mm",
 
@@ -1129,13 +1133,13 @@
       "chlorineTank": {
         "B": "1.36 m",
 
-        "H": "1.12 m",
+        "H": "1.1 m",
 
         "Qm_max": "12 L/s",
 
         "S": "300 mm",
 
-        "T": "10 mm",
+        "T": "4 mm",
 
         "T_min": "100 μm",
 
@@ -1145,7 +1149,7 @@
 
         "botD": "1.06 m",
 
-        "botH": "830 mm",
+        "botH": "700 mm",
 
         "chemPipes": {
           "TEMP_ave": "20 °C",
@@ -1502,15 +1506,15 @@
         "ip":          "APP",
 
         "tank": {
-          "H": "1.12 m",
+          "H": "1.1 m",
 
-          "T": "10 mm",
+          "T": "4 mm",
 
           "VOLm": "750 L",
 
           "botD": "1.06 m",
 
-          "botH": "830 mm",
+          "botH": "700 mm",
 
           "topD": "550 mm"
         },
@@ -1519,9 +1523,9 @@
 
         "topD": "550 mm",
 
-        "x1L": "3.87 m",
+        "x1L": "3.63 m",
 
-        "x2L": "3.87 m",
+        "x2L": "3.63 m",
 
         "y1L": "830 mm",
 
@@ -1919,7 +1923,7 @@
           "wallS": "50 mm"
         },
 
-        "chemTankHW_max": "1.25 m",
+        "chemTankHW_max": "1.44 m",
 
         "chlorineDoserTube": {
           "B": "6.76 mm",
@@ -4042,15 +4046,15 @@
 
         "pipeB": "99.9 mm",
 
-        "rep":          "false",
+        "rep":          "true",
 
         "sideWallLowerH": "40.6 mm",
 
         "sightTubeFB": "200 mm",
 
-        "sightTubeH": "1.75 m",
+        "sightTubeH": "1.94 m",
 
-        "sightTubeL": "1.54 m",
+        "sightTubeL": "1.73 m",
 
         "sightTubeS": "1.12 m",
 
@@ -4112,15 +4116,15 @@
       "cltMidSupplyLocB": "409 mm",
 
       "coagTank": {
-        "B": "1.52 m",
+        "B": "1.4 m",
 
-        "H": "1.25 m",
+        "H": "1.44 m",
 
         "Qm_max": "12 L/s",
 
         "S": "300 mm",
 
-        "T": "10 mm",
+        "T": "4 mm",
 
         "T_min": "100 μm",
 
@@ -4128,9 +4132,9 @@
 
         "VOLm_min": "864 L",
 
-        "botD": "1.22 m",
+        "botD": "1.1 m",
 
-        "botH": "1.04 m",
+        "botH": "1.1 m",
 
         "chemPipes": {
           "TEMP_ave": "20 °C",
@@ -4487,30 +4491,30 @@
         "ip":          "APP",
 
         "tank": {
-          "H": "1.25 m",
+          "H": "1.44 m",
 
-          "T": "10 mm",
+          "T": "4 mm",
 
           "VOLm": "1.1 kL",
 
-          "botD": "1.22 m",
+          "botD": "1.1 m",
 
-          "botH": "1.04 m",
+          "botH": "1.1 m",
 
           "topD": "550 mm"
         },
 
-        "tankToHoleB": "192 mm",
+        "tankToHoleB": "187 mm",
 
         "topD": "550 mm",
 
-        "x1L": "910 mm",
+        "x1L": "850 mm",
 
-        "x2L": "2.43 m",
+        "x2L": "2.25 m",
 
-        "y1L": "910 mm",
+        "y1L": "850 mm",
 
-        "y2L": "910 mm"
+        "y2L": "850 mm"
       },
 
       "coagValve": {
@@ -4561,7 +4565,7 @@
 
       "platformCltHW_delta": "304 mm",
 
-      "rep":        "false",
+      "rep":        "true",
 
       "roundLm": "10 mm",
 
@@ -4935,26 +4939,28 @@
         "ip":          "APP",
 
         "tank": {
-          "H": "1.12 m",
+          "H": "780 mm",
 
-          "T": "10 mm",
+          "T": "4 mm",
 
-          "VOLm": "750 L",
+          "VOLm": "250 L",
 
-          "botD": "1.06 m",
+          "botD": "710 mm",
 
-          "botH": "830 mm",
+          "botH": "610 mm",
 
           "topD": "550 mm"
         },
 
-        "tankToHoleB": "186 mm"
+        "tankToHoleB": "171 mm"
       },
 
       "stairs": {
         "HL_pi": "0.9",
 
         "W": "1 m",
+
+        "exterior":          "false",
 
         "headH": "2 m"
       },
@@ -4984,9 +4990,9 @@
 
         "OL": "3.36 m",
 
-        "OW": "5.04 m",
+        "OW": "4.8 m",
 
-        "W": "4.7 m",
+        "W": "4.46 m",
 
         "back":          "true",
 
@@ -5018,7 +5024,7 @@
 
         "hasPort":          "false",
 
-        "innerW": "4.7 m",
+        "innerW": "4.46 m",
 
         "ip":          "APP",
 
@@ -5061,7 +5067,7 @@
 
           "T": "120 mm",
 
-          "W": "4.7 m",
+          "W": "4.46 m",
 
           "col":            "false",
 
@@ -5079,7 +5085,7 @@
 
           "T": "150 mm",
 
-          "W": "4.7 m",
+          "W": "4.46 m",
 
           "col":            "false",
 
@@ -5111,7 +5117,7 @@
         "slab1End": {
           "HW": "0 m",
 
-          "L": "4.7 m",
+          "L": "4.46 m",
 
           "T": "150 mm",
 
@@ -5167,7 +5173,7 @@
         "slabEnd": {
           "HW": "0 m",
 
-          "L": "4.7 m",
+          "L": "4.46 m",
 
           "T": "120 mm",
 
@@ -5245,7 +5251,7 @@
         "wallEnd": {
           "HW": "0 m",
 
-          "L": "4.7 m",
+          "L": "4.46 m",
 
           "T": "170 mm",
 
@@ -5279,7 +5285,7 @@
         }
       },
 
-      "wallCoagTankB": "910 mm",
+      "wallCoagTankB": "850 mm",
 
       "wallPipeS": "100 mm",
 
@@ -5730,7 +5736,7 @@
 
     "floatvalveHL_bod": "300 mm",
 
-    "frontY": "-6.07 m",
+    "frontY": "-5.83 m",
 
     "ipCiv":      "APP",
 
@@ -5744,9 +5750,9 @@
 
     "platformCltHW_delta": "304 mm",
 
-    "rep":      "false",
+    "rep":      "true",
 
-    "rightX": "5.04 m",
+    "rightX": "4.8 m",
 
     "roundLm": "10 mm",
 
@@ -5760,6 +5766,8 @@
       "HL_pi": "0.9",
 
       "W": "1 m",
+
+      "exterior":        "false",
 
       "headH": "2 m"
     },
@@ -6034,46 +6042,46 @@
           "bayL": "5.58 m",
 
           "divider": {
-            "L": "5.58 m",
+            "L": "5.57 m",
 
             "T": "3.18 mm",
 
             "T_min": "3 mm",
 
-            "centerOffsetL": "-51.8 mm",
+            "centerOffsetL": "-51.3 mm",
 
-            "chordL": "183 mm",
+            "chordL": "181 mm",
 
-            "depthH": "157 mm"
+            "depthH": "155 mm"
           },
 
           "done":            "true",
 
           "equalizer": {
-            "ED": "0.00621 W/kg",
+            "ED": "0.00634 W/kg",
 
-            "G_ave": "88.1 Hz",
+            "G_ave": "89 Hz",
 
-            "VOL": "38.8 L"
+            "VOL": "38.1 L"
           },
 
           "gapS": "20 mm",
 
           "inletManifold": {
-            "A": "0.0278 m^2",
+            "A": "0.0273 m^2",
 
             "ND": "8",
 
-            "SDR": "51",
+            "SDR": "41",
 
-            "V": "216 mm/s",
+            "V": "220 mm/s",
 
             "pipe": {
-              "ID": "210 mm",
+              "ID": "208 mm",
 
               "OD": "219 mm",
 
-              "T": "4.3 mm"
+              "T": "5.34 mm"
             }
           },
 
@@ -6118,32 +6126,32 @@
           },
 
           "portReverser": {
-            "ND": "2",
+            "ND": "3",
 
-            "SDR": "17",
+            "SDR": "26",
 
             "pipe": {
-              "ID": "53.2 mm",
+              "ID": "82.1 mm",
 
-              "OD": "60.3 mm",
+              "OD": "88.9 mm",
 
-              "T": "3.55 mm"
+              "T": "3.42 mm"
             }
           },
 
-          "rep":            "false"
+          "rep":            "true"
         },
 
         "gapS": "10 mm",
 
-        "inletManifoldTm_min": "6 mm",
+        "inletManifoldTm_min": "2 mm",
 
         "ip":          "APP",
 
         "manifold": {
-          "HL": "2.56 mm",
+          "HL": "2.5 mm",
 
-          "HL_max": "3.67 mm",
+          "HL_max": "3.56 mm",
 
           "ID_min": "221 mm",
 
@@ -6153,11 +6161,11 @@
 
           "Qm_max": "6 L/s",
 
-          "SDR": "32.5",
+          "SDR": "41",
 
           "TEMP_min": "5 °C",
 
-          "Tm_min": "6 mm",
+          "Tm_min": "2 mm",
 
           "V_max": "156 mm/s",
 
@@ -6253,13 +6261,13 @@
 
               "costBasis": "2",
 
-              "factoryL": "3.05 m",
+              "factoryL": "2.54 m",
 
               "factoryT": "203 μm",
 
-              "factoryW": "610 mm",
+              "factoryW": "152 mm",
 
-              "id":                "MMC:3774T25",
+              "id":                "MMC:9548K256",
 
               "implementationPartner":                "GENERIC",
 
@@ -6267,15 +6275,15 @@
 
               "material":                "STAINLESS_STEEL",
 
-              "name":                "0.2032 mm stainless steel sheet",
+              "name":                "0.2032 mm 316 stainless steel sheet",
 
-              "pn":                "3774T25",
+              "pn":                "9548K256",
 
               "sheetMaterial":                "STAINLESS_STEEL",
 
               "sheetType":                "SHEET",
 
-              "unitCost": "20.3",
+              "unitCost": "208",
 
               "vendor":                "MMC"
             },
@@ -6284,7 +6292,15 @@
 
             "ip":              "APP",
 
-            "pipeOD": "219 mm"
+            "pipeOD": "219 mm",
+
+            "shearA": "0.00014 m^2",
+
+            "shearF": "58700 { kilogram : 1 , meter : 1 , second : -2 }",
+
+            "shearStrengthP": "420 MPa",
+
+            "tensileP": "700 MPa"
           },
 
           "bandW": "40 mm",
@@ -6330,35 +6346,37 @@
           "orificeZoneL": "5.49 m",
 
           "pipe": {
-            "ID": "206 mm",
+            "ID": "208 mm",
 
             "OD": "219 mm",
 
-            "T": "6.74 mm"
+            "T": "5.34 mm"
           },
 
-          "pipeHL": "928 μm",
+          "pipeHL": "875 μm",
 
-          "pipeHL_max": "2.04 mm",
+          "pipeHL_max": "1.93 mm",
 
           "pipeL": "5.58 m",
 
           "portHL": "1.63 mm",
 
-          "rep":            "false",
+          "rep":            "true",
 
           "stubL": "135 mm",
 
           "useND":            "true",
 
-          "ventD": "9.53 mm"
+          "ventD": "9.53 mm",
+
+          "ventL": "50 mm"
         },
 
         "manifoldPortQ_pi": "0.67",
 
         "manifoldV_max": "183 mm/s",
 
-        "rep":          "false",
+        "rep":          "true",
 
         "revID": "82.1 mm",
 
@@ -6378,11 +6396,11 @@
 
         "ND": "6",
 
-        "SDR": "51",
+        "SDR": "41",
 
         "Tm_min": "3 mm",
 
-        "V_max": "292 mm/s",
+        "V_max": "298 mm/s",
 
         "coupling": {
           "OD": "185 mm",
@@ -6394,20 +6412,20 @@
           "socketL": "88.9 mm"
         },
 
-        "exitHL": "4.36 mm",
+        "exitHL": "4.53 mm",
 
         "orificeB": "100 mm",
 
         "orificeD": "15.9 mm",
 
-        "orificeHL_bod": "45.6 mm",
+        "orificeHL_bod": "45.5 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "portQ_pi": "0.75",
@@ -6437,7 +6455,7 @@
         "overlapW": "16 mm"
       },
 
-      "rep":        "false",
+      "rep":        "true",
 
       "reverser": {
         "ND": "3",
@@ -6513,9 +6531,11 @@
 
           "done":            "true",
 
+          "holeLengthEdgeB": "50 mm",
+
           "holeLengthEdgeS_max": "110 mm",
 
-          "holeWidthEdgeS": "134 mm",
+          "holeWidthEdgeB": "134 mm",
 
           "ip":            "APP",
 
@@ -6565,7 +6585,9 @@
 
           "plateW": "1.09 m",
 
-          "rep":            "false"
+          "rep":            "true",
+
+          "widthwiseHoleB": "401 mm"
         },
 
         "lastModuleActiveL_x": "5.24 m",
@@ -6595,9 +6617,11 @@
 
           "done":            "true",
 
+          "holeLengthEdgeB": "50 mm",
+
           "holeLengthEdgeS_max": "199 mm",
 
-          "holeWidthEdgeS": "134 mm",
+          "holeWidthEdgeB": "134 mm",
 
           "ip":            "APP",
 
@@ -6647,7 +6671,9 @@
 
           "plateW": "1.09 m",
 
-          "rep":            "false"
+          "rep":            "true",
+
+          "widthwiseHoleB": "401 mm"
         },
 
         "moduleN": "16",
@@ -6668,13 +6694,13 @@
 
         "plateT": "800 μm",
 
-        "rep":          "false",
+        "rep":          "true",
 
         "totalPlateN": "181"
       },
 
       "settlerSupport": {
-        "Tm_min": "3 mm",
+        "Tm_min": "2.3 mm",
 
         "W": "1.07 m",
 
@@ -6693,7 +6719,7 @@
 
           "ND": "2",
 
-          "SDR": "17",
+          "SDR": "26",
 
           "coupling": {
             "OD": "68.3 mm",
@@ -6708,11 +6734,11 @@
           "firstB": "440 mm",
 
           "pipe": {
-            "ID": "53.2 mm",
+            "ID": "55.7 mm",
 
             "OD": "60.3 mm",
 
-            "T": "3.55 mm"
+            "T": "2.32 mm"
           }
         },
 
@@ -6738,7 +6764,7 @@
           }
         },
 
-        "rep":          "false",
+        "rep":          "true",
 
         "roundLm": "10 mm",
 
@@ -7356,12 +7382,12 @@
       "pipes": {
         "S": "10 mm",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2.3 mm",
 
         "bypass": {
-          "HL": "297 mm",
+          "HL": "317 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -7373,7 +7399,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -7410,11 +7436,11 @@
           },
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -7429,11 +7455,11 @@
         },
 
         "clarified": {
-          "HL": "20 mm",
+          "HL": "20.8 mm",
 
           "HSF": "100 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "175 mm",
 
@@ -7445,7 +7471,7 @@
 
           "ND_max": "12",
 
-          "SDR": "51",
+          "SDR": "41",
 
           "V_max": "500 mm/s",
 
@@ -7482,11 +7508,11 @@
           },
 
           "pipe": {
-            "ID": "210 mm",
+            "ID": "208 mm",
 
             "OD": "219 mm",
 
-            "T": "4.3 mm"
+            "T": "5.34 mm"
           },
 
           "tee": {
@@ -7503,7 +7529,7 @@
         "clarifierS": "200 mm",
 
         "filtered": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -7513,7 +7539,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -7550,11 +7576,11 @@
           },
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -7573,7 +7599,7 @@
 
           "HL_max": "200 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "148 mm",
 
@@ -7589,9 +7615,9 @@
 
           "Qm_max": "1 L/s",
 
-          "SDR": "51",
+          "SDR": "41",
 
-          "Tm_min": "3 mm",
+          "Tm_min": "2 mm",
 
           "V_max": "700 mm/s",
 
@@ -7638,11 +7664,11 @@
           "orificeS": "3 mm",
 
           "pipe": {
-            "ID": "162 mm",
+            "ID": "160 mm",
 
             "OD": "168 mm",
 
-            "T": "3.3 mm"
+            "T": "4.1 mm"
           },
 
           "rep":            "true",
@@ -7665,7 +7691,7 @@
         },
 
         "recycle": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "18.1 mm",
 
@@ -7677,7 +7703,7 @@
 
           "Q_pi": "0.03",
 
-          "SDR": "17",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -7714,11 +7740,11 @@
           },
 
           "pipe": {
-            "ID": "53.2 mm",
+            "ID": "55.7 mm",
 
             "OD": "60.3 mm",
 
-            "T": "3.55 mm"
+            "T": "2.32 mm"
           },
 
           "tee": {
@@ -7733,7 +7759,7 @@
         },
 
         "source": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -7743,7 +7769,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -7780,11 +7806,11 @@
           },
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -7801,7 +7827,7 @@
         "wallS": "50 mm"
       },
 
-      "rep":        "false",
+      "rep":        "true",
 
       "roundLm": "10 mm",
 
@@ -8157,30 +8183,30 @@
     "gapS": "10 mm",
 
     "hopperPort": {
-      "ND": "2",
+      "ND": "3",
 
-      "SDR": "17",
+      "SDR": "26",
 
       "coupling": {
-        "OD": "68.3 mm",
+        "OD": "101 mm",
 
-        "axisL": "36.1 mm",
+        "axisL": "53.2 mm",
 
-        "socketID": "60.3 mm",
+        "socketID": "88.9 mm",
 
-        "socketL": "34.9 mm"
+        "socketL": "50.8 mm"
       },
 
       "pipe": {
-        "ID": "53.2 mm",
+        "ID": "82.1 mm",
 
-        "OD": "60.3 mm",
+        "OD": "88.9 mm",
 
-        "T": "3.55 mm"
+        "T": "3.42 mm"
       }
     },
 
-    "hopperPortND": "2",
+    "hopperPortND": "3",
 
     "hopperPortTm_min": "3 mm",
 
@@ -8191,7 +8217,7 @@
 
       "N": "2",
 
-      "Tm_min": "2 mm",
+      "Tm_min": "1 mm",
 
       "bay": {
         "B": "1.24 m",
@@ -8218,7 +8244,7 @@
       "bayDrain": {
         "ND": "3",
 
-        "SDR": "41",
+        "SDR": "26",
 
         "coupling": {
           "OD": "101 mm",
@@ -8231,17 +8257,17 @@
         },
 
         "pipe": {
-          "ID": "84.6 mm",
+          "ID": "82.1 mm",
 
           "OD": "88.9 mm",
 
-          "T": "2.17 mm"
+          "T": "3.42 mm"
         }
       },
 
       "bayDrainND": "3",
 
-      "bayDrainValveB": "815 mm",
+      "bayDrainValveB": "715 mm",
 
       "channelH": "600 mm",
 
@@ -8271,7 +8297,7 @@
         "wallH_min": "600 mm"
       },
 
-      "flocDrainAN": "14.284 degrees",
+      "flocDrainAN": "16.183 degrees",
 
       "flocWall":        "true",
 
@@ -8293,9 +8319,9 @@
 
       "overhangW": "515 mm",
 
-      "rep":        "false",
+      "rep":        "true",
 
-      "repBay":        "false",
+      "repBay":        "true",
 
       "revManB": "270 mm",
 
@@ -8308,7 +8334,7 @@
       "sludgeBleed": {
         "ND": "0.5",
 
-        "SDR": "7.06",
+        "SDR": "13.5",
 
         "elbow_90": {
           "OD": "27 mm",
@@ -8327,24 +8353,24 @@
 
           "W": "20.6 mm",
 
-          "pipeL_max": "203 m",
+          "pipeL_max": "201 m",
 
           "pipeToWallS": "24.6 mm"
         },
 
         "pipe": {
-          "ID": "15.3 mm",
+          "ID": "18.3 mm",
 
-          "OD": "21.3 mm",
+          "OD": "21.4 mm",
 
-          "T": "3.02 mm"
+          "T": "1.59 mm"
         }
       },
 
       "sludgeDrain": {
         "ND": "1",
 
-        "SDR": "9.2",
+        "SDR": "26",
 
         "clampingHanger": {
           "H": "55.6 mm",
@@ -8353,7 +8379,7 @@
 
           "W": "20.6 mm",
 
-          "pipeL_max": "120 m",
+          "pipeL_max": "121 m",
 
           "pipeToWallS": "32.3 mm"
         },
@@ -8379,11 +8405,11 @@
         },
 
         "pipe": {
-          "ID": "26.1 mm",
+          "ID": "30.8 mm",
 
-          "OD": "33.4 mm",
+          "OD": "33.3 mm",
 
-          "T": "3.63 mm"
+          "T": "1.28 mm"
         },
 
         "tee": {
@@ -8405,7 +8431,7 @@
 
       "sludgeDrainB": "490 mm",
 
-      "sludgeDrainL": "665 mm",
+      "sludgeDrainL": "671 mm",
 
       "sludgeDrainND": "1",
 
@@ -8753,12 +8779,12 @@
     "pipes": {
       "S": "10 mm",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2.3 mm",
 
       "bypass": {
-        "HL": "297 mm",
+        "HL": "317 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -8770,7 +8796,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -8807,11 +8833,11 @@
         },
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -8826,11 +8852,11 @@
       },
 
       "clarified": {
-        "HL": "20 mm",
+        "HL": "20.8 mm",
 
         "HSF": "100 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "175 mm",
 
@@ -8842,7 +8868,7 @@
 
         "ND_max": "12",
 
-        "SDR": "51",
+        "SDR": "41",
 
         "V_max": "500 mm/s",
 
@@ -8879,11 +8905,11 @@
         },
 
         "pipe": {
-          "ID": "210 mm",
+          "ID": "208 mm",
 
           "OD": "219 mm",
 
-          "T": "4.3 mm"
+          "T": "5.34 mm"
         },
 
         "tee": {
@@ -8900,7 +8926,7 @@
       "clarifierS": "200 mm",
 
       "filtered": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -8910,7 +8936,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -8947,11 +8973,11 @@
         },
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -8970,7 +8996,7 @@
 
         "HL_max": "200 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "148 mm",
 
@@ -8986,9 +9012,9 @@
 
         "Qm_max": "1 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "700 mm/s",
 
@@ -9035,11 +9061,11 @@
         "orificeS": "3 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "rep":          "true",
@@ -9062,7 +9088,7 @@
       },
 
       "recycle": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "18.1 mm",
 
@@ -9074,7 +9100,7 @@
 
         "Q_pi": "0.03",
 
-        "SDR": "17",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -9111,11 +9137,11 @@
         },
 
         "pipe": {
-          "ID": "53.2 mm",
+          "ID": "55.7 mm",
 
           "OD": "60.3 mm",
 
-          "T": "3.55 mm"
+          "T": "2.32 mm"
         },
 
         "tee": {
@@ -9130,7 +9156,7 @@
       },
 
       "source": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -9140,7 +9166,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -9177,11 +9203,11 @@
         },
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -9218,9 +9244,9 @@
       "overlapW": "16 mm"
     },
 
-    "rep":      "false",
+    "rep":      "true",
 
-    "repBay":      "false",
+    "repBay":      "true",
 
     "rightX": "7.73 m",
 
@@ -9679,7 +9705,7 @@
 
       "headD": "13 mm",
 
-      "id":        "MMC:92871A286",
+      "id":        "MMC:92871A354",
 
       "implementationPartner":        "GENERIC",
 
@@ -9687,15 +9713,15 @@
 
       "metricThreadID":        "M6",
 
-      "name":        "18-8SS Unthreaded Spacer for M6, 13mm OD, 51mm Long",
+      "name":        "18-8SS Unthreaded Spacer for M6, 13mm OD, 26mm Long",
 
-      "pn":        "92871A286",
+      "pn":        "92871A354",
 
-      "shaftL": "51 mm",
+      "shaftL": "26 mm",
 
       "threadD": "6.3 mm",
 
-      "unitCost": "9.36",
+      "unitCost": "5.55",
 
       "unitSystem":        "METRIC",
 
@@ -9765,25 +9791,25 @@
 
       "fastenerType":        "NUT",
 
-      "headD": "5.5 mm",
+      "headD": "10 mm",
 
-      "headL": "2.4 mm",
+      "headL": "5 mm",
 
-      "id":        "MMC:94150A325",
+      "id":        "MMC:94150A345",
 
       "implementationPartner":        "GENERIC",
 
       "material":        "STAINLESS_STEEL",
 
-      "metricThreadID":        "M3",
+      "metricThreadID":        "M6",
 
-      "name":        "316SS Nut M3 x 0.5 mm Thread Size",
+      "name":        "316SS Nut M6 x 1 mm Thread Size",
 
-      "pn":        "94150A325",
+      "pn":        "94150A345",
 
-      "threadD": "3 mm",
+      "threadD": "6 mm",
 
-      "unitCost": "0.06",
+      "unitCost": "0.19",
 
       "unitSystem":        "METRIC",
 
@@ -9809,25 +9835,25 @@
 
       "fastenerType":        "UNTHREADED_SPACER",
 
-      "headD": "6 mm",
+      "headD": "13 mm",
 
-      "id":        "MMC:92871A207",
+      "id":        "MMC:92871A354",
 
       "implementationPartner":        "GENERIC",
 
       "material":        "STAINLESS_STEEL",
 
-      "metricThreadID":        "M3",
+      "metricThreadID":        "M6",
 
-      "name":        "18-8SS Unthreaded Spacer for M3, 6mm OD, 45mm Long",
+      "name":        "18-8SS Unthreaded Spacer for M6, 13mm OD, 26mm Long",
 
-      "pn":        "92871A207",
+      "pn":        "92871A354",
 
-      "shaftL": "45 mm",
+      "shaftL": "26 mm",
 
-      "threadD": "3 mm",
+      "threadD": "6.3 mm",
 
-      "unitCost": "4.09",
+      "unitCost": "5.55",
 
       "unitSystem":        "METRIC",
 
@@ -9853,25 +9879,25 @@
 
       "fastenerType":        "THIN_NUT",
 
-      "headD": "5.5 mm",
+      "headD": "10 mm",
 
-      "headL": "1.8 mm",
+      "headL": "3.2 mm",
 
-      "id":        "MMC:93935A320",
+      "id":        "MMC:93935A335",
 
       "implementationPartner":        "GENERIC",
 
       "material":        "STAINLESS_STEEL",
 
-      "metricThreadID":        "M3",
+      "metricThreadID":        "M6",
 
-      "name":        "316SS Thin Nut M3 x 0.5 mm Thread Size",
+      "name":        "316SS Thin Nut M6 x 1 mm Thread Size",
 
-      "pn":        "93935A320",
+      "pn":        "93935A335",
 
-      "threadD": "3 mm",
+      "threadD": "6 mm",
 
-      "unitCost": "0.11",
+      "unitCost": "0.15",
 
       "unitSystem":        "METRIC",
 
@@ -9882,52 +9908,6 @@
 
     "counterweight": {
       "RHO": "7.99 kg/L"
-    },
-
-    "counterweightBoltData": {
-      "color": {
-        "alpha": "1",
-
-        "blue": "0.85",
-
-        "green": "0.85",
-
-        "red": "0.85"
-      },
-
-      "costBasis": "0",
-
-      "driveW": "5 mm",
-
-      "fastenerMaterial":        "STAINLESS_STEEL",
-
-      "fastenerType":        "SOCKET_HEAD",
-
-      "headD": "10 mm",
-
-      "headL": "6 mm",
-
-      "id":        "MMC:92290A791",
-
-      "implementationPartner":        "GENERIC",
-
-      "material":        "STAINLESS_STEEL",
-
-      "metricThreadID":        "M6",
-
-      "name":        "316SS Socket Head Screw M6 x 1 mm Thread, 6 mm Long",
-
-      "pn":        "92290A791",
-
-      "shaftL": "6 mm",
-
-      "threadD": "6 mm",
-
-      "unitCost": "0.81",
-
-      "unitSystem":        "METRIC",
-
-      "vendor":        "MMC"
     },
 
     "counterweightBoltToCapGapS": "20 mm",
@@ -10018,17 +9998,17 @@
     },
 
     "counterweightDummyPipeData": {
-      "ID": "34.5 mm",
+      "ID": "62.1 mm",
 
       "L": "2 m",
 
-      "ND": "1.25",
+      "ND": "2.5",
 
-      "OD": "42.2 mm",
+      "OD": "73 mm",
 
-      "SDR": "11.1",
+      "SDR": "13.4",
 
-      "T": "3.81 mm",
+      "T": "5.46 mm",
 
       "color": {
         "alpha": "1",
@@ -10046,32 +10026,114 @@
 
       "factoryL": "6.1 m",
 
-      "id":        "PPS: H0400125PW2000",
+      "id":        "PPS: H0400250PW2000",
 
       "implementationPartner":        "GENERIC",
 
       "material":        "PVC",
 
-      "name":        "1.25 ND SCH 40 PVC Pipe: White, 6.096 m",
+      "name":        "2.5 ND SCH 40 PVC Pipe: White, 6.096 m",
 
       "pipeMaterial":        "PVC",
 
-      "pn":        "H0400125PW2000",
+      "pn":        "H0400250PW2000",
 
       "series":        "SCHEDULE",
 
       "slotType":        "NOT_SLOTTED",
 
-      "unitCost": "5.79",
+      "unitCost": "15.2",
 
       "use":        "false",
 
       "vendor":        "PPS"
     },
 
+    "counterweightNutData": {
+      "color": {
+        "alpha": "1",
+
+        "blue": "0.85",
+
+        "green": "0.85",
+
+        "red": "0.85"
+      },
+
+      "costBasis": "0",
+
+      "fastenerMaterial":        "STAINLESS_STEEL",
+
+      "fastenerType":        "NUT",
+
+      "headD": "10 mm",
+
+      "headL": "5 mm",
+
+      "id":        "MMC:94150A345",
+
+      "implementationPartner":        "GENERIC",
+
+      "material":        "STAINLESS_STEEL",
+
+      "metricThreadID":        "M6",
+
+      "name":        "316SS Nut M6 x 1 mm Thread Size",
+
+      "pn":        "94150A345",
+
+      "threadD": "6 mm",
+
+      "unitCost": "0.19",
+
+      "unitSystem":        "METRIC",
+
+      "vendor":        "MMC"
+    },
+
+    "counterweightThreadedRodData": {
+      "color": {
+        "alpha": "1",
+
+        "blue": "0.85",
+
+        "green": "0.85",
+
+        "red": "0.85"
+      },
+
+      "costBasis": "1",
+
+      "fastenerMaterial":        "STAINLESS_STEEL",
+
+      "fastenerType":        "THREADED_ROD",
+
+      "id":        "MMC:94185A210",
+
+      "implementationPartner":        "GENERIC",
+
+      "material":        "STAINLESS_STEEL",
+
+      "metricThreadID":        "M6",
+
+      "name":        "316SS Threaded Rod M6 x 1 mm Thread Size, 2 m Long",
+
+      "pn":        "94185A210",
+
+      "shaftL": "2 m",
+
+      "threadD": "6 mm",
+
+      "unitCost": "12.7",
+
+      "unitSystem":        "METRIC",
+
+      "vendor":        "MMC"
+    },
+
     "done":      "true",
 
-    "doseErrorC_pi": "0.03",
+    "doseErrorC_pi": "0.06",
 
     "dripIntoLfom":      "true",
 
@@ -10593,6 +10655,8 @@
 
     "fulcrumWasherN": "6",
 
+    "innerOuterFrameS": "51.5 mm",
+
     "ip":      "APP",
 
     "isThreadedRod":      "false",
@@ -10614,7 +10678,7 @@
 
       "HL_max": "200 mm",
 
-      "ID_max": "311 mm",
+      "ID_max": "308 mm",
 
       "ID_min": "148 mm",
 
@@ -10630,9 +10694,9 @@
 
       "Qm_max": "1 L/s",
 
-      "SDR": "51",
+      "SDR": "41",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2 mm",
 
       "V_max": "700 mm/s",
 
@@ -10679,11 +10743,11 @@
       "orificeS": "3 mm",
 
       "pipe": {
-        "ID": "162 mm",
+        "ID": "160 mm",
 
         "OD": "168 mm",
 
-        "T": "3.3 mm"
+        "T": "4.1 mm"
       },
 
       "rep":        "true",
@@ -10712,12 +10776,12 @@
     "pipes": {
       "S": "10 mm",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2.3 mm",
 
       "bypass": {
-        "HL": "297 mm",
+        "HL": "317 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -10729,7 +10793,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -10766,11 +10830,11 @@
         },
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -10785,11 +10849,11 @@
       },
 
       "clarified": {
-        "HL": "20 mm",
+        "HL": "20.8 mm",
 
         "HSF": "100 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "175 mm",
 
@@ -10801,7 +10865,7 @@
 
         "ND_max": "12",
 
-        "SDR": "51",
+        "SDR": "41",
 
         "V_max": "500 mm/s",
 
@@ -10838,11 +10902,11 @@
         },
 
         "pipe": {
-          "ID": "210 mm",
+          "ID": "208 mm",
 
           "OD": "219 mm",
 
-          "T": "4.3 mm"
+          "T": "5.34 mm"
         },
 
         "tee": {
@@ -10859,7 +10923,7 @@
       "clarifierS": "200 mm",
 
       "filtered": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -10869,7 +10933,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -10906,11 +10970,11 @@
         },
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -10929,7 +10993,7 @@
 
         "HL_max": "200 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "148 mm",
 
@@ -10945,9 +11009,9 @@
 
         "Qm_max": "1 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "700 mm/s",
 
@@ -10994,11 +11058,11 @@
         "orificeS": "3 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "rep":          "true",
@@ -11021,7 +11085,7 @@
       },
 
       "recycle": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "18.1 mm",
 
@@ -11033,7 +11097,7 @@
 
         "Q_pi": "0.03",
 
-        "SDR": "17",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -11070,11 +11134,11 @@
         },
 
         "pipe": {
-          "ID": "53.2 mm",
+          "ID": "55.7 mm",
 
           "OD": "60.3 mm",
 
-          "T": "3.55 mm"
+          "T": "2.32 mm"
         },
 
         "tee": {
@@ -11089,7 +11153,7 @@
       },
 
       "source": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -11099,7 +11163,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -11136,11 +11200,11 @@
         },
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -11157,7 +11221,7 @@
       "wallS": "50 mm"
     },
 
-    "rep":      "false",
+    "rep":      "true",
 
     "slider": {
       "Qm_max": "1 L/s",
@@ -11558,21 +11622,19 @@
         "vendor":          "MMC"
       },
 
-      "dropTubeElbowData": {
+      "dropTubeCapData": {
         "ND": "0.5",
 
-        "OD": "27.8 mm",
+        "OD": "27 mm",
 
         "axes": [
-           "[ 1, 0, 0]",
-
-           "[ 0, 1, 0]"
+           "[ 1, 0, 0]"
         ],
 
         "axesDimensions": [
         ],
 
-        "axisL": "31.8 mm",
+        "axisL": "18.3 mm",
 
         "caAxisNumber": "-1",
 
@@ -11594,11 +11656,11 @@
 
         "endCondition":          "SPHERICAL",
 
-        "fittingShape":          "ELBOW_90",
+        "fittingShape":          "CAP",
 
-        "fittingType":          "CONNECTOR",
+        "fittingType":          "CAP",
 
-        "id":          "MMC: 4880K21",
+        "id":          "MMC: 4880K51",
 
         "implementationPartner":          "GENERIC",
 
@@ -11608,15 +11670,15 @@
 
         "material":          "PVC",
 
-        "name":          "Short 90 Degree Elbow Connector, 0.5 ND Socket Female: White",
+        "name":          "Cap, 0.5 ND Socket Female: White",
 
         "output": [
            {
-            "OD": "27.8 mm",
+            "OD": "27 mm",
 
             "axis": "[ 1, 0, 0]",
 
-            "axisL": "31.8 mm",
+            "axisL": "18.3 mm",
 
             "connectionStyle":              "SOCKET_CONNECT",
 
@@ -11628,37 +11690,17 @@
 
             "socketID": "21.5 mm",
 
-            "socketL": "19.1 mm"
-          },
-
-           {
-            "OD": "27.8 mm",
-
-            "axis": "[ 0, 1, 0]",
-
-            "axisL": "31.8 mm",
-
-            "connectionStyle":              "SOCKET_CONNECT",
-
-            "endCondition":              "SPHERICAL",
-
-            "isInnie":              "false",
-
-            "nominalDiameter": "0.5",
-
-            "socketID": "21.5 mm",
-
-            "socketL": "19.1 mm"
+            "socketL": "18.3 mm"
           }
         ],
 
-        "pn":          "4880K21",
+        "pn":          "4880K51",
 
         "socketID": "21.5 mm",
 
-        "socketL": "19.1 mm",
+        "socketL": "18.3 mm",
 
-        "unitCost": "0.41",
+        "unitCost": "0.37",
 
         "vendor":          "MMC"
       },
@@ -11703,133 +11745,6 @@
         "unitCost": "0.08",
 
         "unitSystem":          "ENGLISH",
-
-        "vendor":          "MMC"
-      },
-
-      "dropTubeTeeData": {
-        "ND": "0.5",
-
-        "OD": "27.8 mm",
-
-        "axes": [
-           "[ -1, 0, 0]",
-
-           "[ 1, 0, 0]",
-
-           "[ 0, 1, 0]"
-        ],
-
-        "axesDimensions": [
-        ],
-
-        "axisL": "31.8 mm",
-
-        "caAxisNumber": "-1",
-
-        "color": {
-          "alpha": "1",
-
-          "blue": "1",
-
-          "green": "1",
-
-          "red": "1"
-        },
-
-        "connectionStyle":          "SOCKET_CONNECT",
-
-        "costBasis": "0",
-
-        "customAxis":          "false",
-
-        "endCondition":          "FLAT",
-
-        "fittingShape":          "TEE",
-
-        "fittingType":          "CONNECTOR",
-
-        "id":          "MMC: 4880K41",
-
-        "implementationPartner":          "GENERIC",
-
-        "isInnie":          "false",
-
-        "makeSource":          "FS",
-
-        "material":          "PVC",
-
-        "name":          "Tee Connector, 0.5 ND Socket Female: White",
-
-        "output": [
-           {
-            "OD": "27.8 mm",
-
-            "axis": "[ -1, 0, 0]",
-
-            "axisL": "31.8 mm",
-
-            "connectionStyle":              "SOCKET_CONNECT",
-
-            "endCondition":              "FLAT",
-
-            "isInnie":              "false",
-
-            "nominalDiameter": "0.5",
-
-            "socketID": "21.5 mm",
-
-            "socketL": "19.1 mm"
-          },
-
-           {
-            "OD": "27.8 mm",
-
-            "axis": "[ 1, 0, 0]",
-
-            "axisL": "31.8 mm",
-
-            "connectionStyle":              "SOCKET_CONNECT",
-
-            "endCondition":              "FLAT",
-
-            "isInnie":              "false",
-
-            "nominalDiameter": "0.5",
-
-            "socketID": "21.5 mm",
-
-            "socketL": "19.1 mm"
-          },
-
-           {
-            "OD": "27.8 mm",
-
-            "axis": "[ 0, 1, 0]",
-
-            "axisL": "31.8 mm",
-
-            "connectionStyle":              "SOCKET_CONNECT",
-
-            "endCondition":              "FLAT",
-
-            "isInnie":              "false",
-
-            "nominalDiameter": "0.5",
-
-            "socketID": "21.5 mm",
-
-            "socketL": "19.1 mm"
-          }
-        ],
-
-        "pn":          "4880K41",
-
-        "socketID": "21.5 mm",
-
-        "socketL": "19.1 mm",
-
-        "unitCost": "0.51",
 
         "vendor":          "MMC"
       },
@@ -11930,6 +11845,12 @@
         "vendor":          "MMC"
       },
 
+      "inletAccessHoleGapS": "2 mm",
+
+      "inletCapGapS": "1 mm",
+
+      "inletTubeHoleConstrictionS": "397 μm",
+
       "ip":        "APP",
 
       "leverAN": "23.578 degrees",
@@ -11938,7 +11859,7 @@
 
       "movingGapS": "100 μm",
 
-      "rep":        "false",
+      "rep":        "true",
 
       "sliderLockBoltD": "4 mm",
 
@@ -12021,7 +11942,7 @@
   "drainChannel": {
     "AN": "90 degrees",
 
-    "H": "770 mm",
+    "H": "930 mm",
 
     "H_min": "2 m",
 
@@ -12031,7 +11952,7 @@
 
     "Y": "-1.2 m",
 
-    "botZ": "-3.02 m",
+    "botZ": "-3.18 m",
 
     "curbH": "200 mm",
 
@@ -12041,7 +11962,7 @@
 
     "slopePI": "0.01",
 
-    "toFloorH": "1.9 m"
+    "toFloorH": "2.06 m"
   },
 
   "dripIntoLfom":    "true",
@@ -12104,6 +12025,8 @@
     "Qm_max": "12 L/s",
 
     "TEMP_min": "5 °C",
+
+    "Tm_min": "2 mm",
 
     "W": "500 mm",
 
@@ -12536,7 +12459,7 @@
 
       "Qm_max": "12 L/s",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2.3 mm",
 
       "W": "500 mm",
 
@@ -12575,9 +12498,9 @@
 
         "Qm_max": "0 kL/s",
 
-        "SDR": "17",
+        "SDR": "26",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2.3 mm",
 
         "coupling": {
           "OD": "68.3 mm",
@@ -12594,14 +12517,14 @@
         "ip":          "APP",
 
         "pipe": {
-          "ID": "53.2 mm",
+          "ID": "55.7 mm",
 
           "OD": "60.3 mm",
 
-          "T": "3.55 mm"
+          "T": "2.32 mm"
         },
 
-        "rep":          "false",
+        "rep":          "true",
 
         "slabPipeL": "114 mm",
 
@@ -12956,7 +12879,7 @@
 
       "overflowL": "320 mm",
 
-      "rep":        "false",
+      "rep":        "true",
 
       "roundLm": "10 mm",
 
@@ -13337,7 +13260,7 @@
 
         "HL_max": "200 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "148 mm",
 
@@ -13353,9 +13276,9 @@
 
         "Qm_max": "1 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "700 mm/s",
 
@@ -13402,11 +13325,11 @@
         "orificeS": "3 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "rep":          "true",
@@ -13435,7 +13358,7 @@
 
         "HL_max": "200 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "148 mm",
 
@@ -13451,9 +13374,9 @@
 
         "Qm_max": "1 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "700 mm/s",
 
@@ -13505,16 +13428,16 @@
 
         "orificeD_max": "28.3 mm",
 
-        "orificePerRowN_max": "23",
+        "orificePerRowN_max": "22",
 
         "orificeS": "3 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "rep":          "true",
@@ -13559,12 +13482,12 @@
       "pipes": {
         "S": "10 mm",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2.3 mm",
 
         "bypass": {
-          "HL": "297 mm",
+          "HL": "317 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -13576,7 +13499,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -13617,11 +13540,11 @@
           "mirroretB": "970 mm",
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -13636,11 +13559,11 @@
         },
 
         "clarified": {
-          "HL": "20 mm",
+          "HL": "20.8 mm",
 
           "HSF": "100 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "175 mm",
 
@@ -13652,7 +13575,7 @@
 
           "ND_max": "12",
 
-          "SDR": "51",
+          "SDR": "41",
 
           "V_max": "500 mm/s",
 
@@ -13689,11 +13612,11 @@
           },
 
           "pipe": {
-            "ID": "210 mm",
+            "ID": "208 mm",
 
             "OD": "219 mm",
 
-            "T": "4.3 mm"
+            "T": "5.34 mm"
           },
 
           "tee": {
@@ -13710,7 +13633,7 @@
         "clarifierS": "200 mm",
 
         "filtered": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -13720,7 +13643,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -13757,11 +13680,11 @@
           },
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -13780,7 +13703,7 @@
 
           "HL_max": "200 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "148 mm",
 
@@ -13796,9 +13719,9 @@
 
           "Qm_max": "1 L/s",
 
-          "SDR": "51",
+          "SDR": "41",
 
-          "Tm_min": "3 mm",
+          "Tm_min": "2 mm",
 
           "V_max": "700 mm/s",
 
@@ -13845,11 +13768,11 @@
           "orificeS": "3 mm",
 
           "pipe": {
-            "ID": "162 mm",
+            "ID": "160 mm",
 
             "OD": "168 mm",
 
-            "T": "3.3 mm"
+            "T": "4.1 mm"
           },
 
           "rep":            "true",
@@ -13872,7 +13795,7 @@
         },
 
         "recycle": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "18.1 mm",
 
@@ -13884,7 +13807,7 @@
 
           "Q_pi": "0.03",
 
-          "SDR": "17",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -13925,11 +13848,11 @@
           "mirroretB": "850 mm",
 
           "pipe": {
-            "ID": "53.2 mm",
+            "ID": "55.7 mm",
 
             "OD": "60.3 mm",
 
-            "T": "3.55 mm"
+            "T": "2.32 mm"
           },
 
           "tee": {
@@ -13944,7 +13867,7 @@
         },
 
         "source": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -13954,7 +13877,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -13995,11 +13918,11 @@
           "mirroretB": "893 mm",
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -14016,7 +13939,7 @@
         "wallS": "50 mm"
       },
 
-      "rep":        "false",
+      "rep":        "true",
 
       "sleeve": {
         "ND": "1.5",
@@ -14553,7 +14476,7 @@
 
         "HL_max": "200 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "148 mm",
 
@@ -14569,9 +14492,9 @@
 
         "Qm_max": "1 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "700 mm/s",
 
@@ -14618,11 +14541,11 @@
         "orificeS": "3 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "rep":          "true",
@@ -14651,7 +14574,7 @@
 
         "HL_max": "200 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "148 mm",
 
@@ -14667,9 +14590,9 @@
 
         "Qm_max": "1 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "700 mm/s",
 
@@ -14721,16 +14644,16 @@
 
         "orificeD_max": "28.3 mm",
 
-        "orificePerRowN_max": "23",
+        "orificePerRowN_max": "22",
 
         "orificeS": "3 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "rep":          "true",
@@ -14775,12 +14698,12 @@
       "pipes": {
         "S": "10 mm",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2.3 mm",
 
         "bypass": {
-          "HL": "297 mm",
+          "HL": "317 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -14792,7 +14715,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -14833,11 +14756,11 @@
           "mirroretB": "970 mm",
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -14852,11 +14775,11 @@
         },
 
         "clarified": {
-          "HL": "20 mm",
+          "HL": "20.8 mm",
 
           "HSF": "100 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "175 mm",
 
@@ -14868,7 +14791,7 @@
 
           "ND_max": "12",
 
-          "SDR": "51",
+          "SDR": "41",
 
           "V_max": "500 mm/s",
 
@@ -14905,11 +14828,11 @@
           },
 
           "pipe": {
-            "ID": "210 mm",
+            "ID": "208 mm",
 
             "OD": "219 mm",
 
-            "T": "4.3 mm"
+            "T": "5.34 mm"
           },
 
           "tee": {
@@ -14926,7 +14849,7 @@
         "clarifierS": "200 mm",
 
         "filtered": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -14936,7 +14859,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -14973,11 +14896,11 @@
           },
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -14996,7 +14919,7 @@
 
           "HL_max": "200 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "148 mm",
 
@@ -15012,9 +14935,9 @@
 
           "Qm_max": "1 L/s",
 
-          "SDR": "51",
+          "SDR": "41",
 
-          "Tm_min": "3 mm",
+          "Tm_min": "2 mm",
 
           "V_max": "700 mm/s",
 
@@ -15061,11 +14984,11 @@
           "orificeS": "3 mm",
 
           "pipe": {
-            "ID": "162 mm",
+            "ID": "160 mm",
 
             "OD": "168 mm",
 
-            "T": "3.3 mm"
+            "T": "4.1 mm"
           },
 
           "rep":            "true",
@@ -15088,7 +15011,7 @@
         },
 
         "recycle": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "18.1 mm",
 
@@ -15100,7 +15023,7 @@
 
           "Q_pi": "0.03",
 
-          "SDR": "17",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -15141,11 +15064,11 @@
           "mirroretB": "850 mm",
 
           "pipe": {
-            "ID": "53.2 mm",
+            "ID": "55.7 mm",
 
             "OD": "60.3 mm",
 
-            "T": "3.55 mm"
+            "T": "2.32 mm"
           },
 
           "tee": {
@@ -15160,7 +15083,7 @@
         },
 
         "source": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -15170,7 +15093,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -15211,11 +15134,11 @@
           "mirroretB": "893 mm",
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -15232,7 +15155,7 @@
         "wallS": "50 mm"
       },
 
-      "rep":        "false",
+      "rep":        "true",
 
       "sleeve": {
         "ND": "1.5",
@@ -15420,7 +15343,7 @@
 
       "HL_max": "200 mm",
 
-      "ID_max": "311 mm",
+      "ID_max": "308 mm",
 
       "ID_min": "148 mm",
 
@@ -15436,9 +15359,9 @@
 
       "Qm_max": "12 L/s",
 
-      "SDR": "51",
+      "SDR": "41",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2 mm",
 
       "V_max": "700 mm/s",
 
@@ -15490,19 +15413,19 @@
 
       "orificeD_max": "28.3 mm",
 
-      "orificePerRowN_max": "23",
+      "orificePerRowN_max": "22",
 
       "orificeS": "3 mm",
 
       "pipe": {
-        "ID": "162 mm",
+        "ID": "160 mm",
 
         "OD": "168 mm",
 
-        "T": "3.3 mm"
+        "T": "4.1 mm"
       },
 
-      "rep":        "false",
+      "rep":        "true",
 
       "rowB": "20 mm",
 
@@ -15568,17 +15491,17 @@
 
       "ND_hyd": "4",
 
-      "ND_min": "2",
+      "ND_min": "1",
 
       "QSF_pi": "1.5",
 
       "Qm_max": "12 L/s",
 
-      "SDR": "32.5",
+      "SDR": "26",
 
       "TEMP_min": "5 °C",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2.3 mm",
 
       "capFerncoS": "50 mm",
 
@@ -15597,14 +15520,14 @@
       "ip":        "APP",
 
       "pipe": {
-        "ID": "107 mm",
+        "ID": "106 mm",
 
         "OD": "114 mm",
 
-        "T": "3.52 mm"
+        "T": "4.4 mm"
       },
 
-      "rep":        "false",
+      "rep":        "true",
 
       "siphonCap":        "false",
 
@@ -15617,9 +15540,9 @@
 
         "ND": "4",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2.3 mm",
 
         "capFerncoS": "50 mm",
 
@@ -15638,19 +15561,19 @@
         "ip":          "APP",
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
-        "rep":          "false",
+        "rep":          "true",
 
         "siphonCap":          "false"
       },
 
-      "weirHL": "71.6 mm",
+      "weirHL": "72.4 mm",
 
       "weirHW_max": "75.2 mm"
     },
@@ -15662,12 +15585,12 @@
     "pipes": {
       "S": "10 mm",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2.3 mm",
 
       "bypass": {
-        "HL": "297 mm",
+        "HL": "317 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -15679,7 +15602,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -15720,11 +15643,11 @@
         "mirroretB": "970 mm",
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -15739,11 +15662,11 @@
       },
 
       "clarified": {
-        "HL": "20 mm",
+        "HL": "20.8 mm",
 
         "HSF": "100 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "175 mm",
 
@@ -15755,7 +15678,7 @@
 
         "ND_max": "12",
 
-        "SDR": "51",
+        "SDR": "41",
 
         "V_max": "500 mm/s",
 
@@ -15792,11 +15715,11 @@
         },
 
         "pipe": {
-          "ID": "210 mm",
+          "ID": "208 mm",
 
           "OD": "219 mm",
 
-          "T": "4.3 mm"
+          "T": "5.34 mm"
         },
 
         "tee": {
@@ -15813,7 +15736,7 @@
       "clarifierS": "200 mm",
 
       "filtered": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -15823,7 +15746,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -15860,11 +15783,11 @@
         },
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -15883,7 +15806,7 @@
 
         "HL_max": "200 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "148 mm",
 
@@ -15899,9 +15822,9 @@
 
         "Qm_max": "1 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "700 mm/s",
 
@@ -15948,11 +15871,11 @@
         "orificeS": "3 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "rep":          "true",
@@ -15975,7 +15898,7 @@
       },
 
       "recycle": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "18.1 mm",
 
@@ -15987,7 +15910,7 @@
 
         "Q_pi": "0.03",
 
-        "SDR": "17",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -16028,11 +15951,11 @@
         "mirroretB": "850 mm",
 
         "pipe": {
-          "ID": "53.2 mm",
+          "ID": "55.7 mm",
 
           "OD": "60.3 mm",
 
-          "T": "3.55 mm"
+          "T": "2.32 mm"
         },
 
         "tee": {
@@ -16047,7 +15970,7 @@
       },
 
       "source": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -16057,7 +15980,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -16098,11 +16021,11 @@
         "mirroretB": "893 mm",
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -16121,7 +16044,7 @@
 
     "recycleH": "850 mm",
 
-    "rep":      "false",
+    "rep":      "true",
 
     "rightX": "840 mm",
 
@@ -16194,7 +16117,7 @@
 
       "rectTubeW": "12.7 mm",
 
-      "rep":        "false",
+      "rep":        "true",
 
       "uChannelFrameS": "1.27 mm",
 
@@ -16237,13 +16160,13 @@
 
     "FB": "150 mm",
 
-    "H": "4.57 m",
+    "H": "4.61 m",
 
     "HSF": "100 mm",
 
-    "HW_clean": "3.61 m",
+    "HW_clean": "3.66 m",
 
-    "HW_clogged": "4.41 m",
+    "HW_clogged": "4.46 m",
 
     "L": "900 mm",
 
@@ -16261,7 +16184,7 @@
 
     "TEMP_min": "5 °C",
 
-    "Tm_min": "3 mm",
+    "Tm_min": "2 mm",
 
     "W_est": "1.44 m",
 
@@ -16275,52 +16198,56 @@
 
     "activeW": "1.27 m",
 
+    "airValveND": "0.5",
+
     "bayOL": "1.4 m",
 
     "bayOW": "1.94 m",
 
     "bayW": "1.44 m",
 
-    "bwFillTI": "171 s",
+    "bwFillTI": "181 s",
 
-    "bwFillVOL": "2.05 kL",
+    "bwFillVOL": "2.18 kL",
 
-    "bwFlushH": "2.38 m",
+    "bwFlushH": "2.48 m",
 
-    "bwFlushVOL": "3.09 kL",
+    "bwFlushVOL": "3.21 kL",
 
-    "bwHW": "2.03 m",
+    "bwHSF": "100 mm",
 
-    "bwInletBoxFilterBoxHW": "1.4 m",
+    "bwHW": "1.98 m",
 
-    "bwSandWaterHW": "319 mm",
+    "bwInletBoxFilterBoxHW": "1.5 m",
+
+    "bwSandWaterHW": "268 mm",
 
     "bwTI": "600 s",
 
     "bwTank": {
-      "H": "2.15 m",
+      "H": "2.03 m",
 
-      "HW_max": "2 m",
+      "HW_max": "1.88 m",
 
       "L": "3.89 m",
 
       "OL": "4.06 m",
 
-      "VOL": "22 kL",
+      "VOL": "20.7 kL",
 
       "W": "2.83 m",
 
-      "bwCyclesN": "2.14"
+      "bwCyclesN": "1.99"
     },
 
     "bwTankOverflow": {
       "HSF": "0 m",
 
-      "HW": "2.55 m",
+      "HW": "2.43 m",
 
-      "HW_max": "2 m",
+      "HW_max": "1.88 m",
 
-      "ID_min": "88.9 mm",
+      "ID_min": "90.1 mm",
 
       "K": "4",
 
@@ -16330,32 +16257,32 @@
 
       "ND_hyd": "4",
 
-      "ND_min": "2",
+      "ND_min": "1",
 
       "QSF_pi": "1.5",
 
       "Qm_max": "12 L/s",
 
-      "SDR": "32.5",
+      "SDR": "26",
 
       "TEMP_min": "5 °C",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2 mm",
 
       "cap": {
-        "H": "53.6 mm",
+        "H": "52.8 mm",
 
-        "ID": "162 mm",
+        "ID": "160 mm",
 
         "ND": "6",
 
         "OD": "168 mm",
 
-        "OH": "58.4 mm",
+        "OH": "70.3 mm",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "T": "3.3 mm"
+        "T": "4.1 mm"
       },
 
       "capFerncoS": "50 mm",
@@ -16370,9 +16297,9 @@
         "socketL": "51.6 mm"
       },
 
-      "crossW": "6.6 mm",
+      "crossW": "8.21 mm",
 
-      "discT": "4.76 mm",
+      "discT": "17.5 mm",
 
       "done":        "true",
 
@@ -16397,44 +16324,44 @@
       "ip":        "APP",
 
       "pipe": {
-        "ID": "107 mm",
+        "ID": "106 mm",
 
         "OD": "114 mm",
 
-        "T": "3.52 mm"
+        "T": "4.4 mm"
       },
 
-      "rep":        "false",
+      "rep":        "true",
 
       "siphonCap":        "true",
 
       "subOverflow": {
         "HSF": "0 m",
 
-        "HW_max": "2 m",
+        "HW_max": "1.88 m",
 
         "L": "107 mm",
 
         "ND": "4",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "cap": {
-          "H": "53.6 mm",
+          "H": "52.8 mm",
 
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "ND": "6",
 
           "OD": "168 mm",
 
-          "OH": "58.4 mm",
+          "OH": "70.3 mm",
 
-          "SDR": "51",
+          "SDR": "41",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "capFerncoS": "50 mm",
@@ -16449,9 +16376,9 @@
           "socketL": "51.6 mm"
         },
 
-        "crossW": "6.6 mm",
+        "crossW": "8.21 mm",
 
-        "discT": "4.76 mm",
+        "discT": "17.5 mm",
 
         "done":          "true",
 
@@ -16464,28 +16391,28 @@
         "ip":          "APP",
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
-        "rep":          "false",
+        "rep":          "true",
 
         "siphonCap":          "true"
       },
 
-      "weirHL": "71.6 mm",
+      "weirHL": "72.4 mm",
 
       "weirHW_max": "20 mm"
     },
 
-    "bwUpliftHW_max": "1 m",
+    "bwUpliftHW_max": "1.1 m",
 
     "bwV": "11 mm/s",
 
-    "bwVOL": "10.3 kL",
+    "bwVOL": "10.4 kL",
 
     "chemPipes": {
       "TEMP_ave": "20 °C",
@@ -16844,7 +16771,7 @@
     "drainChannel": {
       "AN": "0.57294 degrees",
 
-      "H": "770 mm",
+      "H": "930 mm",
 
       "H_min": "2 m",
 
@@ -16859,7 +16786,7 @@
       "slopePI": "0.01"
     },
 
-    "dynamicHW": "3.61 m",
+    "dynamicHW": "3.66 m",
 
     "elevations": {
       "W": "1.2 m",
@@ -16911,7 +16838,7 @@
 
         "Qm": "12 L/s",
 
-        "Qm_max": "25.3 L/s",
+        "Qm_max": "26.9 L/s",
 
         "Qm_maxbod": "60 L/s",
 
@@ -17005,7 +16932,7 @@
           "portQ_pi": "0.8",
 
           "top": {
-            "portB": "90.8 mm"
+            "portB": "90.3 mm"
           }
         },
 
@@ -17029,22 +16956,22 @@
       "bwLayerH": "200 mm",
 
       "bwOrifice": {
-        "D": "67.5 mm",
+        "D": "67.9 mm",
 
-        "HE": "31.2 mm",
+        "HE": "30.8 mm",
 
-        "T": "6.47 mm",
+        "T": "4.1 mm",
 
         "handle": {
           "ND": "1",
 
           "OD": "33.4 mm",
 
-          "OD_max": "50.4 mm",
+          "OD_max": "50.2 mm",
 
           "Tm_min": "3 mm",
 
-          "offsetL": "58.9 mm"
+          "offsetL": "59 mm"
         }
       },
 
@@ -17053,15 +16980,15 @@
 
         "ND": "6",
 
-        "SDR": "26",
+        "SDR": "41",
 
-        "Tm_min": "6 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "1.45 m/s",
 
         "bwHE_max": "450 mm",
 
-        "bwV": "633 mm/s",
+        "bwV": "596 mm/s",
 
         "coupling": {
           "OD": "185 mm",
@@ -17083,20 +17010,20 @@
           "socketL": "88.9 mm"
         },
 
-        "fiV": "106 mm/s",
+        "fiV": "99.4 mm/s",
 
         "floorS": "50 mm",
 
-        "inletbwHE": "161 mm",
+        "inletbwHE": "156 mm",
 
-        "inletfiHE": "35.1 mm",
+        "inletfiHE": "34.6 mm",
 
         "pipe": {
-          "ID": "155 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "6.47 mm"
+          "T": "4.1 mm"
         },
 
         "portQ_pi": "0.9"
@@ -17125,9 +17052,9 @@
 
         "Qm_max": "12 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "700 mm/s",
 
@@ -17162,11 +17089,11 @@
         "orificeS": "3 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "rep":          "true",
@@ -17181,7 +17108,7 @@
       "receptor": {
         "ND": "3",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "deflectionL_max": "1 mm",
 
@@ -17243,11 +17170,13 @@
 
         "ND_max": "6",
 
+        "ND_min": "2",
+
         "S": "15 mm",
 
-        "SDR": "26",
+        "SDR": "41",
 
-        "Tm_min": "6 mm",
+        "Tm_min": "2 mm",
 
         "coupling": {
           "OD": "185 mm",
@@ -17281,35 +17210,35 @@
 
         "fiHE_max": "50 mm",
 
-        "inletInnerHE": "35.1 mm",
+        "inletInnerHE": "34.6 mm",
 
-        "inletTopHE": "35.1 mm",
+        "inletTopHE": "34.6 mm",
 
-        "innerV": "211 mm/s",
+        "innerV": "199 mm/s",
 
         "innerV_max": "445 mm/s",
 
         "pipe": {
-          "ID": "155 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "6.47 mm"
+          "T": "4.1 mm"
         },
 
         "portPSI_pi": "0.21",
 
         "portQ_pi": "0.9",
 
-        "portTopV": "788 mm/s"
+        "portTopV": "784 mm/s"
       }
     },
 
-    "fibwInletBoxHW": "981 mm",
+    "fibwInletBoxHW": "980 mm",
 
-    "filterBottomTankH": "3.28 m",
+    "filterBottomTankH": "3.32 m",
 
-    "filterBottomTankH_noround": "3.28 m",
+    "filterBottomTankH_noround": "3.33 m",
 
     "filterHL_pi": "0",
 
@@ -17337,12 +17266,12 @@
 
     "inWaterZ": "-659 mm",
 
-    "inletHW_max": "981 mm",
+    "inletHW_max": "980 mm",
 
     "inletWeirHL": "50 mm",
 
     "internalPipes": {
-      "bwUpliftHW_max": "1 m",
+      "bwUpliftHW_max": "1.1 m",
 
       "fiPipes": {
         "band": {
@@ -17358,7 +17287,7 @@
 
           "Qm": "12 L/s",
 
-          "Qm_max": "25.3 L/s",
+          "Qm_max": "26.9 L/s",
 
           "Qm_maxbod": "60 L/s",
 
@@ -17452,7 +17381,7 @@
             "portQ_pi": "0.8",
 
             "top": {
-              "portB": "90.8 mm"
+              "portB": "90.3 mm"
             }
           },
 
@@ -17476,22 +17405,22 @@
         "bwLayerH": "200 mm",
 
         "bwOrifice": {
-          "D": "67.5 mm",
+          "D": "67.9 mm",
 
-          "HE": "31.2 mm",
+          "HE": "30.8 mm",
 
-          "T": "6.47 mm",
+          "T": "4.1 mm",
 
           "handle": {
             "ND": "1",
 
             "OD": "33.4 mm",
 
-            "OD_max": "50.4 mm",
+            "OD_max": "50.2 mm",
 
             "Tm_min": "3 mm",
 
-            "offsetL": "58.9 mm"
+            "offsetL": "59 mm"
           }
         },
 
@@ -17500,15 +17429,15 @@
 
           "ND": "6",
 
-          "SDR": "26",
+          "SDR": "41",
 
-          "Tm_min": "6 mm",
+          "Tm_min": "2 mm",
 
           "V_max": "1.45 m/s",
 
           "bwHE_max": "450 mm",
 
-          "bwV": "633 mm/s",
+          "bwV": "596 mm/s",
 
           "coupling": {
             "OD": "185 mm",
@@ -17530,20 +17459,20 @@
             "socketL": "88.9 mm"
           },
 
-          "fiV": "106 mm/s",
+          "fiV": "99.4 mm/s",
 
           "floorS": "50 mm",
 
-          "inletbwHE": "161 mm",
+          "inletbwHE": "156 mm",
 
-          "inletfiHE": "35.1 mm",
+          "inletfiHE": "34.6 mm",
 
           "pipe": {
-            "ID": "155 mm",
+            "ID": "160 mm",
 
             "OD": "168 mm",
 
-            "T": "6.47 mm"
+            "T": "4.1 mm"
           },
 
           "portQ_pi": "0.9"
@@ -17572,9 +17501,9 @@
 
           "Qm_max": "12 L/s",
 
-          "SDR": "51",
+          "SDR": "41",
 
-          "Tm_min": "3 mm",
+          "Tm_min": "2 mm",
 
           "V_max": "700 mm/s",
 
@@ -17609,11 +17538,11 @@
           "orificeS": "3 mm",
 
           "pipe": {
-            "ID": "162 mm",
+            "ID": "160 mm",
 
             "OD": "168 mm",
 
-            "T": "3.3 mm"
+            "T": "4.1 mm"
           },
 
           "rep":            "true",
@@ -17628,7 +17557,7 @@
         "receptor": {
           "ND": "3",
 
-          "Tm_min": "3 mm",
+          "Tm_min": "2 mm",
 
           "deflectionL_max": "1 mm",
 
@@ -17690,11 +17619,13 @@
 
           "ND_max": "6",
 
+          "ND_min": "2",
+
           "S": "15 mm",
 
-          "SDR": "26",
+          "SDR": "41",
 
-          "Tm_min": "6 mm",
+          "Tm_min": "2 mm",
 
           "coupling": {
             "OD": "185 mm",
@@ -17728,27 +17659,27 @@
 
           "fiHE_max": "50 mm",
 
-          "inletInnerHE": "35.1 mm",
+          "inletInnerHE": "34.6 mm",
 
-          "inletTopHE": "35.1 mm",
+          "inletTopHE": "34.6 mm",
 
-          "innerV": "211 mm/s",
+          "innerV": "199 mm/s",
 
           "innerV_max": "445 mm/s",
 
           "pipe": {
-            "ID": "155 mm",
+            "ID": "160 mm",
 
             "OD": "168 mm",
 
-            "T": "6.47 mm"
+            "T": "4.1 mm"
           },
 
           "portPSI_pi": "0.21",
 
           "portQ_pi": "0.9",
 
-          "portTopV": "788 mm/s"
+          "portTopV": "784 mm/s"
         }
       },
 
@@ -17758,7 +17689,7 @@
 
       "isDoubleSided":        "true",
 
-      "rep":        "false",
+      "rep":        "true",
 
       "tankL": "900 mm",
 
@@ -17837,7 +17768,7 @@
 
         "Qm_max": "12 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
         "Tm_min": "3 mm",
 
@@ -17872,11 +17803,11 @@
         "ip":          "APP",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "rep":          "true",
@@ -17884,9 +17815,9 @@
         "slabT": "0 m"
       },
 
-      "bypassAN": "6.31 degrees",
+      "bypassAN": "0 degrees",
 
-      "bypassBottomH": "781 mm",
+      "bypassBottomH": "780 mm",
 
       "bypassHorizontalL": "362 mm",
 
@@ -17904,7 +17835,7 @@
 
       "channelA_min": "0.0655 m^2",
 
-      "channelFillH": "594 mm",
+      "channelFillH": "593 mm",
 
       "channelV_max": "183 mm/s",
 
@@ -18255,36 +18186,36 @@
       },
 
       "chlorineConduit": {
-        "ND": "2",
+        "ND": "3",
 
-        "SDR": "17",
+        "SDR": "26",
 
         "coupling": {
-          "OD": "68.3 mm",
+          "OD": "101 mm",
 
-          "axisL": "36.1 mm",
+          "axisL": "53.2 mm",
 
-          "socketID": "60.3 mm",
+          "socketID": "88.9 mm",
 
-          "socketL": "34.9 mm"
+          "socketL": "50.8 mm"
         },
 
         "elbow_90": {
-          "OD": "68.3 mm",
+          "OD": "101 mm",
 
-          "axisL": "65.9 mm",
+          "axisL": "96.8 mm",
 
-          "socketID": "60.3 mm",
+          "socketID": "88.9 mm",
 
-          "socketL": "34.1 mm"
+          "socketL": "50.8 mm"
         },
 
         "pipe": {
-          "ID": "53.2 mm",
+          "ID": "82.1 mm",
 
-          "OD": "60.3 mm",
+          "OD": "88.9 mm",
 
-          "T": "3.55 mm"
+          "T": "3.42 mm"
         }
       },
 
@@ -18294,7 +18225,7 @@
 
       "done":        "true",
 
-      "dynamicInletHW": "181 mm",
+      "dynamicInletHW": "180 mm",
 
       "dynamicOutletHW": "158 mm",
 
@@ -18312,7 +18243,7 @@
 
           "Qm": "12 L/s",
 
-          "Qm_max": "25.3 L/s",
+          "Qm_max": "26.9 L/s",
 
           "Qm_maxbod": "60 L/s",
 
@@ -18406,7 +18337,7 @@
             "portQ_pi": "0.8",
 
             "top": {
-              "portB": "90.8 mm"
+              "portB": "90.3 mm"
             }
           },
 
@@ -18430,11 +18361,11 @@
         "bwLayerH": "200 mm",
 
         "bwOrifice": {
-          "D": "67.5 mm",
+          "D": "67.9 mm",
 
-          "HE": "31.2 mm",
+          "HE": "30.8 mm",
 
-          "T": "6.47 mm",
+          "T": "4.1 mm",
 
           "handle": {
             "L": "1.23 m",
@@ -18443,11 +18374,11 @@
 
             "OD": "33.4 mm",
 
-            "OD_max": "50.4 mm",
+            "OD_max": "50.2 mm",
 
             "Tm_min": "3 mm",
 
-            "offsetL": "58.9 mm"
+            "offsetL": "59 mm"
           }
         },
 
@@ -18456,15 +18387,15 @@
 
           "ND": "6",
 
-          "SDR": "26",
+          "SDR": "41",
 
-          "Tm_min": "6 mm",
+          "Tm_min": "2 mm",
 
           "V_max": "1.45 m/s",
 
           "bwHE_max": "450 mm",
 
-          "bwV": "633 mm/s",
+          "bwV": "596 mm/s",
 
           "coupling": {
             "OD": "185 mm",
@@ -18486,20 +18417,20 @@
             "socketL": "88.9 mm"
           },
 
-          "fiV": "106 mm/s",
+          "fiV": "99.4 mm/s",
 
           "floorS": "50 mm",
 
-          "inletbwHE": "161 mm",
+          "inletbwHE": "156 mm",
 
-          "inletfiHE": "35.1 mm",
+          "inletfiHE": "34.6 mm",
 
           "pipe": {
-            "ID": "155 mm",
+            "ID": "160 mm",
 
             "OD": "168 mm",
 
-            "T": "6.47 mm"
+            "T": "4.1 mm"
           },
 
           "portQ_pi": "0.9"
@@ -18528,9 +18459,9 @@
 
           "Qm_max": "12 L/s",
 
-          "SDR": "51",
+          "SDR": "41",
 
-          "Tm_min": "3 mm",
+          "Tm_min": "2 mm",
 
           "V_max": "700 mm/s",
 
@@ -18565,11 +18496,11 @@
           "orificeS": "3 mm",
 
           "pipe": {
-            "ID": "162 mm",
+            "ID": "160 mm",
 
             "OD": "168 mm",
 
-            "T": "3.3 mm"
+            "T": "4.1 mm"
           },
 
           "rep":            "true",
@@ -18584,7 +18515,7 @@
         "receptor": {
           "ND": "3",
 
-          "Tm_min": "3 mm",
+          "Tm_min": "2 mm",
 
           "deflectionL_max": "1 mm",
 
@@ -18646,11 +18577,13 @@
 
           "ND_max": "6",
 
+          "ND_min": "2",
+
           "S": "15 mm",
 
-          "SDR": "26",
+          "SDR": "41",
 
-          "Tm_min": "6 mm",
+          "Tm_min": "2 mm",
 
           "coupling": {
             "OD": "185 mm",
@@ -18684,31 +18617,31 @@
 
           "fiHE_max": "50 mm",
 
-          "inletInnerHE": "35.1 mm",
+          "inletInnerHE": "34.6 mm",
 
-          "inletTopHE": "35.1 mm",
+          "inletTopHE": "34.6 mm",
 
-          "innerV": "211 mm/s",
+          "innerV": "199 mm/s",
 
           "innerV_max": "445 mm/s",
 
           "pipe": {
-            "ID": "155 mm",
+            "ID": "160 mm",
 
             "OD": "168 mm",
 
-            "T": "6.47 mm"
+            "T": "4.1 mm"
           },
 
           "portPSI_pi": "0.21",
 
           "portQ_pi": "0.9",
 
-          "portTopV": "788 mm/s"
+          "portTopV": "784 mm/s"
         }
       },
 
-      "filterBottomTankH": "3.28 m",
+      "filterBottomTankH": "3.32 m",
 
       "filterHL_pi": "0",
 
@@ -18737,7 +18670,7 @@
 
         "Qm_max": "12 L/s",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "Tm_min": "3 mm",
 
@@ -18766,14 +18699,14 @@
         "ip":          "APP",
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
-        "rep":          "false",
+        "rep":          "true",
 
         "slabPipeL": "96.4 mm",
 
@@ -18802,7 +18735,7 @@
 
       "inletBeamGapS": "130 mm",
 
-      "inletHW_max": "981 mm",
+      "inletHW_max": "980 mm",
 
       "inletL": "1.44 m",
 
@@ -18843,7 +18776,7 @@
 
         "HL_max": "200 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "148 mm",
 
@@ -18859,9 +18792,9 @@
 
         "Qm_max": "12 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "700 mm/s",
 
@@ -18913,19 +18846,19 @@
 
         "orificeD_max": "28.3 mm",
 
-        "orificePerRowN_max": "23",
+        "orificePerRowN_max": "22",
 
         "orificeS": "3 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
-        "rep":          "false",
+        "rep":          "true",
 
         "rowB": "20 mm",
 
@@ -18979,7 +18912,7 @@
       "overflow": {
         "HSF": "0 m",
 
-        "HW_max": "981 mm",
+        "HW_max": "980 mm",
 
         "ID_min": "86.5 mm",
 
@@ -18997,26 +18930,26 @@
 
         "Qm_max": "12 L/s",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "TEMP_min": "5 °C",
 
         "Tm_min": "3 mm",
 
         "cap": {
-          "H": "53.6 mm",
+          "H": "52.8 mm",
 
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "ND": "6",
 
           "OD": "168 mm",
 
-          "OH": "58.4 mm",
+          "OH": "70.3 mm",
 
-          "SDR": "51",
+          "SDR": "41",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "capFerncoS": "50 mm",
@@ -19031,9 +18964,9 @@
           "socketL": "51.6 mm"
         },
 
-        "crossW": "6.6 mm",
+        "crossW": "8.21 mm",
 
-        "discT": "4.76 mm",
+        "discT": "17.5 mm",
 
         "done":          "false",
 
@@ -19046,44 +18979,44 @@
         "ip":          "APP",
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
-        "rep":          "false",
+        "rep":          "true",
 
         "siphonCap":          "true",
 
         "subOverflow": {
           "HSF": "0 m",
 
-          "HW_max": "981 mm",
+          "HW_max": "980 mm",
 
           "L": "150 mm",
 
           "ND": "4",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "Tm_min": "3 mm",
 
           "cap": {
-            "H": "53.6 mm",
+            "H": "52.8 mm",
 
-            "ID": "162 mm",
+            "ID": "160 mm",
 
             "ND": "6",
 
             "OD": "168 mm",
 
-            "OH": "58.4 mm",
+            "OH": "70.3 mm",
 
-            "SDR": "51",
+            "SDR": "41",
 
-            "T": "3.3 mm"
+            "T": "4.1 mm"
           },
 
           "capFerncoS": "50 mm",
@@ -19098,9 +19031,9 @@
             "socketL": "51.6 mm"
           },
 
-          "crossW": "6.6 mm",
+          "crossW": "8.21 mm",
 
-          "discT": "4.76 mm",
+          "discT": "17.5 mm",
 
           "done":            "true",
 
@@ -19113,19 +19046,19 @@
           "ip":            "APP",
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
-          "rep":            "false",
+          "rep":            "true",
 
           "siphonCap":            "true"
         },
 
-        "weirHL": "71.6 mm",
+        "weirHL": "72.4 mm",
 
         "weirHW_max": "20 mm"
       },
@@ -19137,12 +19070,12 @@
       "pipes": {
         "S": "10 mm",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2.3 mm",
 
         "bypass": {
-          "HL": "297 mm",
+          "HL": "317 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -19154,7 +19087,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -19191,11 +19124,11 @@
           },
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -19210,11 +19143,11 @@
         },
 
         "clarified": {
-          "HL": "20 mm",
+          "HL": "20.8 mm",
 
           "HSF": "100 mm",
 
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "175 mm",
 
@@ -19226,7 +19159,7 @@
 
           "ND_max": "12",
 
-          "SDR": "51",
+          "SDR": "41",
 
           "V_max": "500 mm/s",
 
@@ -19263,11 +19196,11 @@
           },
 
           "pipe": {
-            "ID": "210 mm",
+            "ID": "208 mm",
 
             "OD": "219 mm",
 
-            "T": "4.3 mm"
+            "T": "5.34 mm"
           },
 
           "tee": {
@@ -19284,7 +19217,7 @@
         "clarifierS": "200 mm",
 
         "filtered": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -19294,7 +19227,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -19331,11 +19264,11 @@
           },
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -19350,7 +19283,7 @@
         },
 
         "recycle": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "18.1 mm",
 
@@ -19362,7 +19295,7 @@
 
           "Q_pi": "0.03",
 
-          "SDR": "17",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -19399,11 +19332,11 @@
           },
 
           "pipe": {
-            "ID": "53.2 mm",
+            "ID": "55.7 mm",
 
             "OD": "60.3 mm",
 
-            "T": "3.55 mm"
+            "T": "2.32 mm"
           },
 
           "tee": {
@@ -19418,7 +19351,7 @@
         },
 
         "source": {
-          "ID_max": "311 mm",
+          "ID_max": "308 mm",
 
           "ID_min": "104 mm",
 
@@ -19428,7 +19361,7 @@
 
           "ND_max": "12",
 
-          "SDR": "32.5",
+          "SDR": "26",
 
           "V_max": "1.4 m/s",
 
@@ -19465,11 +19398,11 @@
           },
 
           "pipe": {
-            "ID": "107 mm",
+            "ID": "106 mm",
 
             "OD": "114 mm",
 
-            "T": "3.52 mm"
+            "T": "4.4 mm"
           },
 
           "tee": {
@@ -19486,9 +19419,9 @@
         "wallS": "50 mm"
       },
 
-      "rep":        "false",
+      "rep":        "true",
 
-      "repBay":        "false",
+      "repBay":        "true",
 
       "roundLm": "10 mm",
 
@@ -19676,7 +19609,7 @@
     },
 
     "ioSupportColumn": {
-      "L": "3.3 m"
+      "L": "3.34 m"
     },
 
     "ioWallH_min": "1.52 m",
@@ -19698,12 +19631,12 @@
     "pipes": {
       "S": "10 mm",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2.3 mm",
 
       "bypass": {
-        "HL": "297 mm",
+        "HL": "317 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -19715,7 +19648,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -19752,11 +19685,11 @@
         },
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -19771,11 +19704,11 @@
       },
 
       "clarified": {
-        "HL": "20 mm",
+        "HL": "20.8 mm",
 
         "HSF": "100 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "175 mm",
 
@@ -19787,7 +19720,7 @@
 
         "ND_max": "12",
 
-        "SDR": "51",
+        "SDR": "41",
 
         "V_max": "500 mm/s",
 
@@ -19824,11 +19757,11 @@
         },
 
         "pipe": {
-          "ID": "210 mm",
+          "ID": "208 mm",
 
           "OD": "219 mm",
 
-          "T": "4.3 mm"
+          "T": "5.34 mm"
         },
 
         "tee": {
@@ -19845,7 +19778,7 @@
       "clarifierS": "200 mm",
 
       "filtered": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -19855,7 +19788,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -19892,11 +19825,11 @@
         },
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -19915,7 +19848,7 @@
 
         "HL_max": "200 mm",
 
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "148 mm",
 
@@ -19931,9 +19864,9 @@
 
         "Qm_max": "1 L/s",
 
-        "SDR": "51",
+        "SDR": "41",
 
-        "Tm_min": "3 mm",
+        "Tm_min": "2 mm",
 
         "V_max": "700 mm/s",
 
@@ -19980,11 +19913,11 @@
         "orificeS": "3 mm",
 
         "pipe": {
-          "ID": "162 mm",
+          "ID": "160 mm",
 
           "OD": "168 mm",
 
-          "T": "3.3 mm"
+          "T": "4.1 mm"
         },
 
         "rep":          "true",
@@ -20007,7 +19940,7 @@
       },
 
       "recycle": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "18.1 mm",
 
@@ -20019,7 +19952,7 @@
 
         "Q_pi": "0.03",
 
-        "SDR": "17",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -20056,11 +19989,11 @@
         },
 
         "pipe": {
-          "ID": "53.2 mm",
+          "ID": "55.7 mm",
 
           "OD": "60.3 mm",
 
-          "T": "3.55 mm"
+          "T": "2.32 mm"
         },
 
         "tee": {
@@ -20075,7 +20008,7 @@
       },
 
       "source": {
-        "ID_max": "311 mm",
+        "ID_max": "308 mm",
 
         "ID_min": "104 mm",
 
@@ -20085,7 +20018,7 @@
 
         "ND_max": "12",
 
-        "SDR": "32.5",
+        "SDR": "26",
 
         "V_max": "1.4 m/s",
 
@@ -20122,11 +20055,11 @@
         },
 
         "pipe": {
-          "ID": "107 mm",
+          "ID": "106 mm",
 
           "OD": "114 mm",
 
-          "T": "3.52 mm"
+          "T": "4.4 mm"
         },
 
         "tee": {
@@ -20150,7 +20083,7 @@
 
       "OW": "321 mm",
 
-      "SDR": "17",
+      "SDR": "26",
 
       "bottomH": "169 mm",
 
@@ -20193,11 +20126,11 @@
       "name":        "Submersible Fountain Pump, 0.5 HP",
 
       "pipe": {
-        "ID": "53.2 mm",
+        "ID": "55.7 mm",
 
         "OD": "60.3 mm",
 
-        "T": "3.55 mm"
+        "T": "2.32 mm"
       },
 
       "pipeOD": "57.6 mm",
@@ -20217,9 +20150,9 @@
 
     "recycleH": "850 mm",
 
-    "rep":      "false",
+    "rep":      "true",
 
-    "repBay":      "false",
+    "repBay":      "true",
 
     "rightX": "7.73 m",
 
@@ -20228,7 +20161,7 @@
     "roundup":      "true",
 
     "sandChannel": {
-      "H": "2.15 m",
+      "H": "2.03 m",
 
       "L": "2.83 m",
 
@@ -20294,7 +20227,7 @@
 
       "Qm_max": "6 L/s",
 
-      "SDR": "17",
+      "SDR": "26",
 
       "V": "3 m/s",
 
@@ -20321,97 +20254,97 @@
       },
 
       "pipe": {
-        "ID": "53.2 mm",
+        "ID": "55.7 mm",
 
         "OD": "60.3 mm",
 
-        "T": "3.55 mm"
+        "T": "2.32 mm"
       }
     },
 
     "shallowWallT": "170 mm",
 
     "siphon": {
-      "B": "507 mm",
+      "B": "406 mm",
 
-      "HL": "31.9 mm",
+      "HL": "95.4 mm",
 
-      "ID_min": "186 mm",
+      "ID_min": "156 mm",
 
       "K": "5.26",
 
-      "ND": "8",
+      "ND": "6",
 
       "PortQ_pi": "0.6",
 
-      "SDR": "51",
+      "SDR": "41",
 
-      "V_max": "2.98 m/s",
+      "V_max": "3.04 m/s",
 
-      "airlockH": "3.91 m",
+      "airlockH": "3.98 m",
 
       "coupling": {
-        "OD": "237 mm",
+        "OD": "185 mm",
 
-        "axisL": "115 mm",
+        "axisL": "92.1 mm",
 
-        "socketID": "219 mm",
+        "socketID": "168 mm",
 
-        "socketL": "114 mm"
+        "socketL": "88.9 mm"
       },
 
-      "drainTI": "90 s",
+      "drainTI": "140 s",
 
       "elbow_90": {
-        "OD": "237 mm",
+        "OD": "185 mm",
 
-        "axisL": "229 mm",
+        "axisL": "178 mm",
 
-        "socketID": "219 mm",
+        "socketID": "168 mm",
 
-        "socketL": "114 mm"
+        "socketL": "88.9 mm"
       },
 
-      "initialQ": "104 L/s",
+      "initialQ": "61.2 L/s",
 
-      "initialQ_min": "80.7 L/s",
+      "initialQ_min": "57.9 L/s",
 
-      "jetH_max": "453 mm",
+      "jetH_max": "471 mm",
 
-      "manifoldH": "1.82 m",
+      "manifoldH": "1.8 m",
 
       "manifoldPortPSI_pi": "0.941",
 
       "pipe": {
-        "ID": "210 mm",
+        "ID": "160 mm",
 
-        "OD": "219 mm",
+        "OD": "168 mm",
 
-        "T": "4.3 mm"
+        "T": "4.1 mm"
       },
 
       "tee": {
-        "OD": "237 mm",
+        "OD": "185 mm",
 
-        "axisL": "229 mm",
+        "axisL": "179 mm",
 
-        "socketID": "219 mm",
+        "socketID": "168 mm",
 
-        "socketL": "114 mm"
+        "socketL": "89.7 mm"
       }
     },
 
     "siphonManifold": {
       "L": "900 mm",
 
-      "ND": "8",
+      "ND": "6",
 
-      "SDR": "51",
+      "SDR": "41",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2 mm",
 
       "bandCoupling": {
-        "D": "219 mm",
+        "D": "169 mm",
 
         "T": "200 μm",
 
@@ -20423,15 +20356,15 @@
           "S": "20 mm",
 
           "clamp": {
-            "D": "219 mm",
+            "D": "169 mm",
 
-            "D_max": "254 mm",
+            "D_max": "178 mm",
 
-            "D_min": "181 mm",
+            "D_min": "105 mm",
 
             "T": "584 μm",
 
-            "W": "14.3 mm",
+            "W": "12.7 mm",
 
             "bodyT": "2 mm",
 
@@ -20453,7 +20386,7 @@
 
             "hoseClampType":              "HOSE_CLAMP",
 
-            "id":              "MMC:5011T43",
+            "id":              "MMC:5011T38",
 
             "implementationPartner":              "GENERIC",
 
@@ -20461,11 +20394,11 @@
 
             "name":              "SS316 hose_clamp",
 
-            "pn":              "5011T43",
+            "pn":              "5011T38",
 
             "stainlessSteelGrade":              "SS316",
 
-            "unitCost": "4.82",
+            "unitCost": "3.02",
 
             "vendor":              "MMC"
           },
@@ -20480,9 +20413,9 @@
 
           "HW": "0 m",
 
-          "L": "758 mm",
+          "L": "583 mm",
 
-          "OD": "220 mm",
+          "OD": "169 mm",
 
           "W": "40 mm",
 
@@ -20500,13 +20433,13 @@
 
           "costBasis": "2",
 
-          "factoryL": "3.05 m",
+          "factoryL": "2.54 m",
 
           "factoryT": "203 μm",
 
-          "factoryW": "610 mm",
+          "factoryW": "152 mm",
 
-          "id":            "MMC:3774T25",
+          "id":            "MMC:9548K256",
 
           "implementationPartner":            "GENERIC",
 
@@ -20514,34 +20447,42 @@
 
           "material":            "STAINLESS_STEEL",
 
-          "name":            "0.2032 mm stainless steel sheet",
+          "name":            "0.2032 mm 316 stainless steel sheet",
 
-          "pn":            "3774T25",
+          "pn":            "9548K256",
 
           "sheetMaterial":            "STAINLESS_STEEL",
 
           "sheetType":            "SHEET",
 
-          "unitCost": "20.3",
+          "unitCost": "208",
 
           "vendor":            "MMC"
         },
 
-        "gapS": "1.71 mm",
+        "gapS": "3.3 mm",
 
         "ip":          "APP",
 
-        "pipeOD": "219 mm"
+        "pipeOD": "168 mm",
+
+        "shearA": "0.000107 m^2",
+
+        "shearF": "45100 { kilogram : 1 , meter : 1 , second : -2 }",
+
+        "shearStrengthP": "420 MPa",
+
+        "tensileP": "700 MPa"
       },
 
       "coupling": {
-        "OD": "237 mm",
+        "OD": "185 mm",
 
-        "axisL": "115 mm",
+        "axisL": "92.1 mm",
 
-        "socketID": "219 mm",
+        "socketID": "168 mm",
 
-        "socketL": "114 mm"
+        "socketL": "88.9 mm"
       },
 
       "done":        "true",
@@ -20551,55 +20492,57 @@
       "ip":        "APP",
 
       "pipe": {
-        "ID": "210 mm",
+        "ID": "160 mm",
 
-        "OD": "219 mm",
+        "OD": "168 mm",
 
-        "T": "4.3 mm"
+        "T": "4.1 mm"
       },
 
       "pipeL": "850 mm",
 
-      "portA": "0.0231 m^2",
+      "portA": "0.0133 m^2",
 
-      "portB": "72.2 mm",
+      "portB": "49.9 mm",
 
-      "portD": "68.3 mm",
+      "portD": "42.4 mm",
 
-      "portN": "10",
+      "portN": "15",
 
       "portQ_pi": "0.8",
 
       "portS_min": "10 mm",
 
-      "portStartB": "95 mm",
+      "portStartB": "71 mm",
 
-      "portZoneL": "722 mm",
+      "portZoneL": "748 mm",
 
       "portZoneL_est": "790 mm",
 
-      "rep":        "false"
+      "rep":        "true"
     },
 
     "siphonWaterSeal": {
-      "HL": "35.2 mm",
+      "HL": "39.7 mm",
 
       "HL_max": "50 mm",
 
-      "L": "1.98 m",
+      "L": "1.93 m",
 
-      "ND": "12",
+      "ND": "10",
 
-      "SDR": "51",
+      "SDR": "41",
 
-      "areaID_min": "287 mm",
+      "areaID_min": "229 mm",
+
+      "fillH": "1.66 m",
 
       "pipe": {
-        "ID": "311 mm",
+        "ID": "260 mm",
 
-        "OD": "324 mm",
+        "OD": "273 mm",
 
-        "T": "6.35 mm"
+        "T": "6.66 mm"
       },
 
       "weirID_min": "184 mm"
@@ -20609,13 +20552,13 @@
 
     "slabT": "120 mm",
 
-    "slabToClarifierTopH": "4.95 m",
+    "slabToClarifierTopH": "4.99 m",
 
-    "slabToDatumH": "4.35 m",
+    "slabToDatumH": "4.39 m",
 
-    "slabToFilterInWaterH": "4.66 m",
+    "slabToFilterInWaterH": "4.7 m",
 
-    "slabToFloorH": "4.2 m",
+    "slabToFloorH": "4.24 m",
 
     "slottedDrain": {
       "H": "38.6 mm",
@@ -20660,27 +20603,27 @@
     "stairs": {
       "HL_pi": "0.9",
 
-      "H_bwtank": "2.3 m",
+      "H_bwtank": "2.18 m",
 
-      "H_lower": "2.3 m",
+      "H_lower": "2.18 m",
 
-      "H_total": "4.35 m",
+      "H_total": "4.39 m",
 
-      "H_upper": "2.05 m",
+      "H_upper": "2.21 m",
 
       "W": "1 m",
 
-      "bwTankHL_pi": "1.1",
+      "bwTankHL_pi": "1.04",
 
-      "cutoutL": "2.67 m",
+      "cutoutL": "2.82 m",
 
       "guardH": "1 m",
 
       "headH": "2 m",
 
-      "lowerHL_pi": "0.804",
+      "lowerHL_pi": "0.762",
 
-      "upperHL_pi": "0.762",
+      "upperHL_pi": "0.822",
 
       "wellL": "2.69 m"
     },
@@ -20694,7 +20637,7 @@
 
       "belowFloorH": "300 mm",
 
-      "overflowHW": "2.33 m",
+      "overflowHW": "2.21 m",
 
       "slopedH": "28.3 mm"
     },
@@ -20882,6 +20825,10 @@
 
           "OD": "21.4 mm",
 
+          "SDR": "13.5",
+
+          "T": "1.59 mm",
+
           "botvedgeB": "240 mm",
 
           "colN": "3",
@@ -20889,6 +20836,8 @@
           "colS": "270 mm",
 
           "hedgeB": "100 mm",
+
+          "holeD": "22.4 mm",
 
           "midrowN": "1",
 
@@ -20899,7 +20848,7 @@
           "topvedgeB": "100 mm"
         },
 
-        "rep":          "false",
+        "rep":          "true",
 
         "spacer": {
           "ID": "23.5 mm",
@@ -20907,6 +20856,10 @@
           "ND": "0.75",
 
           "OD": "26.6 mm",
+
+          "SDR": "17",
+
+          "T": "1.56 mm",
 
           "botbackL": "108 mm",
 
@@ -20996,7 +20949,7 @@
 
       "ip":        "APP",
 
-      "rep":        "false",
+      "rep":        "true",
 
       "tankH": "1.77 m"
     },
@@ -21044,7 +20997,7 @@
 
       "SDR": "26",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2 mm",
 
       "componentS": "30 mm",
 
@@ -21084,7 +21037,7 @@
         "T": "3.42 mm"
       },
 
-      "rep":        "false",
+      "rep":        "true",
 
       "slabT": "120 mm"
     },
@@ -21155,7 +21108,7 @@
 
     "portS": "140 mm",
 
-    "rep":      "false",
+    "rep":      "true",
 
     "retro": {
       "L": "7 m",
@@ -21825,7 +21778,7 @@
 
     "HL_max": "200 mm",
 
-    "ID_max": "311 mm",
+    "ID_max": "308 mm",
 
     "ID_min": "148 mm",
 
@@ -21841,9 +21794,9 @@
 
     "Qm_max": "1 L/s",
 
-    "SDR": "51",
+    "SDR": "41",
 
-    "Tm_min": "3 mm",
+    "Tm_min": "2 mm",
 
     "V_max": "700 mm/s",
 
@@ -21890,11 +21843,11 @@
     "orificeS": "3 mm",
 
     "pipe": {
-      "ID": "162 mm",
+      "ID": "160 mm",
 
       "OD": "168 mm",
 
-      "T": "3.3 mm"
+      "T": "4.1 mm"
     },
 
     "rep":      "true",
@@ -21921,12 +21874,12 @@
   "pipes": {
     "S": "10 mm",
 
-    "Tm_min": "3 mm",
+    "Tm_min": "2.3 mm",
 
     "bypass": {
-      "HL": "297 mm",
+      "HL": "317 mm",
 
-      "ID_max": "311 mm",
+      "ID_max": "308 mm",
 
       "ID_min": "104 mm",
 
@@ -21938,7 +21891,7 @@
 
       "ND_max": "12",
 
-      "SDR": "32.5",
+      "SDR": "26",
 
       "V_max": "1.4 m/s",
 
@@ -21975,11 +21928,11 @@
       },
 
       "pipe": {
-        "ID": "107 mm",
+        "ID": "106 mm",
 
         "OD": "114 mm",
 
-        "T": "3.52 mm"
+        "T": "4.4 mm"
       },
 
       "tee": {
@@ -21994,11 +21947,11 @@
     },
 
     "clarified": {
-      "HL": "20 mm",
+      "HL": "20.8 mm",
 
       "HSF": "100 mm",
 
-      "ID_max": "311 mm",
+      "ID_max": "308 mm",
 
       "ID_min": "175 mm",
 
@@ -22010,7 +21963,7 @@
 
       "ND_max": "12",
 
-      "SDR": "51",
+      "SDR": "41",
 
       "V_max": "500 mm/s",
 
@@ -22047,11 +22000,11 @@
       },
 
       "pipe": {
-        "ID": "210 mm",
+        "ID": "208 mm",
 
         "OD": "219 mm",
 
-        "T": "4.3 mm"
+        "T": "5.34 mm"
       },
 
       "tee": {
@@ -22068,7 +22021,7 @@
     "clarifierS": "200 mm",
 
     "filtered": {
-      "ID_max": "311 mm",
+      "ID_max": "308 mm",
 
       "ID_min": "104 mm",
 
@@ -22078,7 +22031,7 @@
 
       "ND_max": "12",
 
-      "SDR": "32.5",
+      "SDR": "26",
 
       "V_max": "1.4 m/s",
 
@@ -22115,11 +22068,11 @@
       },
 
       "pipe": {
-        "ID": "107 mm",
+        "ID": "106 mm",
 
         "OD": "114 mm",
 
-        "T": "3.52 mm"
+        "T": "4.4 mm"
       },
 
       "tee": {
@@ -22138,7 +22091,7 @@
 
       "HL_max": "200 mm",
 
-      "ID_max": "311 mm",
+      "ID_max": "308 mm",
 
       "ID_min": "148 mm",
 
@@ -22154,9 +22107,9 @@
 
       "Qm_max": "1 L/s",
 
-      "SDR": "51",
+      "SDR": "41",
 
-      "Tm_min": "3 mm",
+      "Tm_min": "2 mm",
 
       "V_max": "700 mm/s",
 
@@ -22203,11 +22156,11 @@
       "orificeS": "3 mm",
 
       "pipe": {
-        "ID": "162 mm",
+        "ID": "160 mm",
 
         "OD": "168 mm",
 
-        "T": "3.3 mm"
+        "T": "4.1 mm"
       },
 
       "rep":        "true",
@@ -22230,7 +22183,7 @@
     },
 
     "recycle": {
-      "ID_max": "311 mm",
+      "ID_max": "308 mm",
 
       "ID_min": "18.1 mm",
 
@@ -22242,7 +22195,7 @@
 
       "Q_pi": "0.03",
 
-      "SDR": "17",
+      "SDR": "26",
 
       "V_max": "1.4 m/s",
 
@@ -22279,11 +22232,11 @@
       },
 
       "pipe": {
-        "ID": "53.2 mm",
+        "ID": "55.7 mm",
 
         "OD": "60.3 mm",
 
-        "T": "3.55 mm"
+        "T": "2.32 mm"
       },
 
       "tee": {
@@ -22298,7 +22251,7 @@
     },
 
     "source": {
-      "ID_max": "311 mm",
+      "ID_max": "308 mm",
 
       "ID_min": "104 mm",
 
@@ -22308,7 +22261,7 @@
 
       "ND_max": "12",
 
-      "SDR": "32.5",
+      "SDR": "26",
 
       "V_max": "1.4 m/s",
 
@@ -22345,11 +22298,11 @@
       },
 
       "pipe": {
-        "ID": "107 mm",
+        "ID": "106 mm",
 
         "OD": "114 mm",
 
-        "T": "3.52 mm"
+        "T": "4.4 mm"
       },
 
       "tee": {
@@ -22370,9 +22323,9 @@
 
   "recycleH": "848 mm",
 
-  "rep":    "false",
+  "rep":    "true",
 
-  "repBay":    "false",
+  "repBay":    "true",
 
   "roundLm": "10 mm",
 

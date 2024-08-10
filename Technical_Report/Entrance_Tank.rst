@@ -66,12 +66,13 @@ Design Data
    Maximum depth of water at the LFOM,  :sub:`($..et.lfomHW) no-sub`
    Number of hoppers, :sub:`($..et.etHopper.N) no-sub`
    Hopper angle,  :sub:`($..et.etHopper.AN) no-sub`
+   Drain diameter,  :sub:`($..et.etHopper.drain.ND) no-sub`
 
 
 Trash Rack
 ==========
 
-As the raw water flows from the first hopper to the subsequent ones, it must pass through two trash racks, preventing large debris from entering the treatment process. Having two trash racks allows the operator to remove one of the trash racks for cleaning. The trash racks are made of a frame and fishing line or other suitable material. The trash racks are designed to remove any particles that would be large enough to obstruct downstream processes. The smallest flow dimensions are the diffusers in the clarifier with a width of :sub:`($..inletManifold.diffuser.slotW) no-sub` and the orifices in the stacked rapid sand filter inlet branches with a diameter of :sub:`($..filter.fiPipes.branch.inlet.portD) no-sub`. The spacing between the trashrack strings is :sub:`($..trashRack.Sm) no-sub`.
+As the raw water flows from the first hopper to the subsequent ones, it must pass through two trash racks, preventing large debris from entering the treatment process. Having two trash racks allows the operator to remove one of the trash racks for cleaning. The trash racks are made of a frame and fishing line or other suitable material. The trash racks are designed to remove any particles that would be large enough to obstruct downstream processes. The smallest flow dimensions are the diffusers in the clarifier with a width of :sub:`($..inletManifold.diffuser.slotW) no-sub` and the orifices in the stacked rapid sand filter inlet branches with a diameter of :sub:`($..filter.fiPipes.branch.inlet.portD) no-sub`. The maximum spacing between the trashrack strings is :sub:`($..trashRack.Sm) no-sub`.
 
 The trash rack area is sufficient such that the fractional clogging can be as high as :sub:`($..et.trashRack.PO_pi) no-sub` before exceeding the maximum available head loss of :sub:`($..et.trashRack.HL_max) no-sub` in the entrance tank.
 
@@ -98,12 +99,9 @@ Sediment and Grit Removal
 
 The entrance tank has a capture velocity of :sub:`($..et.captureVm) no-sub` to remove particules that would otherwise settle in the bottom of the flocculator. Large particulates settle out in the hoppers, and collect near the drains at the bottom. 
 
+The entrance tank length of :sub:`($..et.L) no-sub` corresponds to the clarifier tank length. The width, :sub:`($..et.W) no-sub`, ensurse the minimum desired capture velocity is met while still allowing enough space for a person to fit inside and construct the tank.
 
-A length of L.Et is assigned to the entrance tank to correspond to the sedimentation tank length plus enough space to fit the float of the chemical dose controller and the rapid mix pipes. The width, W.Et, is then assigned to ensure the minimum desired capture velocity is met while still allowing enough space for a person to fit inside and construct the tank. The depth of the tank is then determined such that the velocity in the upper rectangular portion of the tank does not exceed the velocity in the flocculator, V.Floc, while ensuring the depth is sufficiently small that the drains are easy to access. In this case, the tank has a height of H.Et.
-
-To allow for easy maintenance, N.EtHoppers hoppers must be built into the entrance tank, at an angle of AN.EtSlope, forcing sediments to slide to the bottom where the ND.EtDrain drains are located. When too much sediment has accumulated, the upper drain pipes must be removed until the sludge is flushed out. Directly below the entrance tank, there is a drain channel to collect the waste.
-
-Suspended particulates in the water settle out over the length of the entrance tank into the hoppers below. When enough sludge has accumulated at the bottom, the hopper stops can be removed to flush out the debris down into the drain channel below, and they can then be replaced to resume normal operation. The ND.EtDrain in nominal diameter hopper stop is L.EtDrainStopper m long, ensuring the top of the pipe is above the maximum water height in the tank. Table 3 summarizes the entrance tank design specifications below.
+The :sub:`($..et.etHopper.N) no-sub` hoppers collect sand and grit that then slides to the bottom where the :sub:`($..et.etHopper.drain.ND) no-sub` inch nominal diameter drains are located. When too much sediment has accumulated, the drain pipes must be removed until the sludge is flushed out. Directly below the entrance tank, there is a drain channel that transfers the waste to the main plant drain channel.
 
 
 .. include:: lfom.rst

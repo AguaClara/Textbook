@@ -65,7 +65,6 @@ In an AguaClara plant, the flocculator is a series of channels with sheets or ba
     ===  ============
 
 
-
 .. _figure_floc_baffle_module:
 
 .. figure:: Images/floc_baffle_module.png
@@ -82,8 +81,6 @@ In an AguaClara plant, the flocculator is a series of channels with sheets or ba
      2   PVC pipe frame
      3   temporary pipes used to elevate a baffle assembly while the flocculator is filled with water
     ===  ============
-
-
 
 
 .. _figure_floc_baffle_spacer_detail:
@@ -107,9 +104,9 @@ In an AguaClara plant, the flocculator is a series of channels with sheets or ba
 Design Data
 ===========
 
-.. _table_Flocculator_Construction_Data:
+.. _table_Flocculator_Civil_Construction_Parameters:
 
-.. csv-table:: Flocculator Construction.
+.. csv-table:: Flocculator Civil Construction Parameters.
     :header: "Parameter", "value"
     :align: left
     :widths: 50 50
