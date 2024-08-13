@@ -56,7 +56,7 @@ html_static_path = ['_static']
 html_css_files = [
     'custom.css',
 ]
- 
+
 # rinoh_documents = [
 #     dict(doc=root_doc, target='aguaclara')
 # ]

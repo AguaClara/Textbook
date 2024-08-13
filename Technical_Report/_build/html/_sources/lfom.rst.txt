@@ -48,7 +48,7 @@ This maximum vertical velocity of the falling water sets the minimum flow area o
 .. _figure_lfom_overview:
 
 .. figure:: Images/lfom_overview.png
-    :width: 200px
+    :width: 150px
     :align: center
     :alt: An LFOM
 

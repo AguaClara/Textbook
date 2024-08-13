@@ -13,7 +13,7 @@ Copyright © 2024 AguaClara Reach
 
 Authors:  AguaClara Reach
 
-This design was created using the AguaClara Infrastructure Design Engine developed by AguaClara Reach. It is subject to the Creative Commons Attribution-Share Alike 3.0 United States license. If you alter, transform, or build upon this work, you may distribute the resulting work only under the same, similar or a compatible license.
+This design was created using the AguaClara Infrastructure Design Engine developed by AguaClara Reach. This work is licensed under `CC BY-NC-SA 4.0<https://creativecommons.org/licenses/by-nc-sa/4.0/>`_
 
 Any water treatment plants built using this WORK shall be designed and supervised by a licensed civil engineer.
 
