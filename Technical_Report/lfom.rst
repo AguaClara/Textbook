@@ -76,6 +76,7 @@ The LFOM specifications are given below.
    :widths: 30 70
    :class: wraptable
 
+   Nominal diameter, :sub:`($..et.lfom.ND) no-sub` inch
    Number of rows of orifices, :sub:`($..et.lfom.rowN) no-sub`
    Max flow rate, :sub:`($..et.lfom.Qm_max) no-sub`
    Head loss at max flow, :sub:`($..et.lfom.HL_max) no-sub`
