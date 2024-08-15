@@ -52,7 +52,7 @@ The dosing system controls are centralized around the constant level tanks (see 
 
 .. figure:: Images/clt_overview.png
     :width: 400px
-    :align: left
+    :align: center
     :alt: constant level tank overview
 
     Overview of the constant level tank module mounted on the side of the chemical stock tank platform.
@@ -71,7 +71,7 @@ The constant level tanks prevent the changing chemical levels in the stock tanks
 
 .. figure:: Images/clt_details.png
     :width: 300px
-    :align: left
+    :align: center
     :alt: constant level tank details
 
     Constant level tank with associated valves and dosing tubes. The valves with orange handles are compatible with chlorine and have chlorine resistant o'rings.
@@ -123,7 +123,7 @@ The number of dosing tubes is increased as needed to ensure that the maximum all
 
 .. figure:: Images/dosing_tube_module.png
     :width: 300px
-    :align: left
+    :align: center
     :alt: constant level tank details
 
     The dosing tubes are assembled in a module to facilitate cleaning and replacement.

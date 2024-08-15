@@ -13,13 +13,23 @@ Purpose and Description
 
 The StaRS filter removes particles and pathogens from the clarified water. 
 
+.. _figure_filter_top:
+
+.. figure:: Images/filter_top.png
+    :width: 600px
+    :align: center
+    :alt: filter top view
+
+    Filter top view showing filter hydraulic controls and filter chambers for a 2 filter chamber design.
+
+
 Filter Hydraulic Controls Key
 =============================
 
 
 .. _table_Distribution_to_the_filter_inlet_tanks:
 
-.. csv-table:: Distribution to the filter inlet tanks.
+.. csv-table:: Distribution to the filter inlet tanks. |filter_distribution_icon|
     :header: "Key", "Name", "Purpose"
     :align: left
     :widths: 3 25 62
@@ -34,7 +44,7 @@ Filter Hydraulic Controls Key
 
 .. _table_Filter_inlet_tanks:
 
-.. csv-table:: Filter inlet tank.
+.. csv-table:: Filter inlet tank. |filter_inlet_icon|
     :header: "Key", "Name", "Purpose"
     :align: left
     :widths: 3 25 62
@@ -49,7 +59,7 @@ Filter Hydraulic Controls Key
 
 .. _table_Filter_outlet_tank:    
 
-.. csv-table:: Filter outlet tank.
+.. csv-table:: Filter outlet tank. |filter_outlet_icon|
     :header: "Key", "Name", "Purpose"
     :align: left
     :widths: 3 25 62
@@ -65,7 +75,7 @@ Filter Hydraulic Controls Key
 
 .. _table_Filter_chamber:    
 
-.. csv-table:: Filter chamber.
+.. csv-table:: Filter chamber. |filter_chamber_icon|
     :header: "Key", "Name", "Purpose"
     :align: left
     :widths: 3 25 62
@@ -79,7 +89,7 @@ Filter Hydraulic Controls Key
 
 .. _table_Filter_internal_piping:    
 
-.. csv-table:: Filter internal piping.
+.. csv-table:: Filter internal piping. |filter_internalPiping_icon|
     :header: "Key", "Name", "Purpose"
     :align: left
     :widths: 3 25 62
@@ -101,12 +111,12 @@ Filter Hydraulic Controls Design Parameters
 ===========================================
 
 
-.. _table_Distribution_to_the_filter_inlet_tanks_design_parameters:
+.. _table_Distribution_to_the_filter_inlet_tanks_design_parameters.
 
-.. csv-table:: Distribution to the filter inlet tanks design parameters.
+.. csv-table:: Distribution to the filter inlet tanks design parameters. |filter_distribution_icon|
     :header: "Key", "Name", "Value"
     :align: left
-    :widths: 3 57 40
+    :widths: 5 55 40
     :class: wraptable
    
     1, **inlet channel**, 
@@ -123,6 +133,7 @@ Filter Hydraulic Controls Design Parameters
      , Width, :sub:`($..filter.ioControls.bypassW) no-sub`
     5, **LFOM**,
      , Nominal diameter, :sub:`($..filter.ioControls.lfom.ND) no-sub` inch
+     , SDR, :sub:`($..filter.ioControls.lfom.SDR) no-sub`
      , Number of rows of orifices, :sub:`($..filter.ioControls.lfom.rowN) no-sub`
      , Max flow rate, :sub:`($..filter.ioControls.lfom.Qm_max) no-sub`
      , Head loss at max flow, :sub:`($..filter.ioControls.lfom.HL_max) no-sub`
@@ -132,13 +143,14 @@ Filter Hydraulic Controls Design Parameters
      , Elevation of each row from zero flow datum, :sub:`($..filter.ioControls.lfom.rowOrificeH_VEC) no-sub`
     6, **bypass pipe**
      , Nominal diameter, :sub:`($..filter.ioControls.bypass.ND) no-sub` inch
+     , SDR, :sub:`($..filter.ioControls.bypass.SDR) no-sub`
   
 .. _table_Inlet_tanks_design_parameters:
 
-.. csv-table:: Inlet tanks design parameters.
+.. csv-table:: Inlet tanks design parameters. |filter_inlet_icon|
     :header: "Key", "Name", "Value"
     :align: left
-    :widths: 3 57 40
+    :widths: 5 55 40
     :class: wraptable
  
     7, **filter inlet tank**, 
@@ -146,6 +158,7 @@ Filter Hydraulic Controls Design Parameters
      , Width, :sub:`($..filter.ioControls.inletW) no-sub`
     8, **overflow**, 
      , Nominal diameter, :sub:`($..filter.ioControls.overflow.ND) no-sub` inch
+     , SDR, :sub:`($..filter.ioControls.overflow.SDR) no-sub`
      , Maximum water depth, :sub:`($..filter.ioControls.overflow.HW_max) no-sub`
     9, **bubble weir**,
      , Height, :sub:`($..filter.ioControls.bubbleWeir.opening.H) no-sub`
@@ -154,12 +167,14 @@ Filter Hydraulic Controls Design Parameters
      , Orifice diameter, :sub:`($..filter.ioControls.bwOrifice.D) no-sub`
     11, **backwash trunk**
      , Nominal diameter, :sub:`($..filter.fiPipes.bwTrunk.ND) no-sub` inch
+     , SDR, :sub:`($..filter.fiPipes.bwTrunk.SDR) no-sub`
      , Maximum head loss during filtration, :sub:`($..filter.fiPipes.bwTrunk.inletfiHE) no-sub`
      , Maximum velocity during filtration, :sub:`($..filter.fiPipes.bwTrunk.fiV) no-sub`
      , Maximum head loss during backwash, :sub:`($..filter.fiPipes.bwTrunk.inletbwHE) no-sub`
      , Maximum velocity during filtration, :sub:`($..filter.fiPipes.bwTrunk.bwV) no-sub`
     12, **inlet trunks**
      , Nominal diameter, :sub:`($..filter.fiPipes.trunk.ND) no-sub` inch
+     , SDR, :sub:`($..filter.fiPipes.trunk.SDR) no-sub`
      , Maximum head loss during filtration, :sub:`($..filter.fiPipes.trunk.inletInnerHE) no-sub`
      , Inner trunks maximum velocity during filtration, :sub:`($..filter.fiPipes.trunk.innerV) no-sub`
      , Inlet 1 (backwash) pipe stub height, none
@@ -170,10 +185,10 @@ Filter Hydraulic Controls Design Parameters
 
 .. _table_Outlet_tanks_design_parameters:
 
-.. csv-table:: Outlet tanks design parameters.
+.. csv-table:: Outlet tanks design parameters. |filter_outlet_icon|
     :header: "Key", "Name", "Value"
     :align: left
-    :widths: 3 57 40
+    :widths: 5 55 40
     :class: wraptable
  
     13, **outlet tank**, 
@@ -181,8 +196,10 @@ Filter Hydraulic Controls Design Parameters
      , Width, :sub:`($..filter.ioControls.outletW) no-sub`
     14, **outlet trunks**,
      , Nominal diameter, :sub:`($..filter.fiPipes.trunk.ND) no-sub` inch
+     , SDR, :sub:`($..filter.fiPipes.trunk.SDR) no-sub` inch
     15, **filter to waste**,
      , Nominal diameter, :sub:`($..filter.ioControls.filterToWaste.ND) no-sub` inch
+     , SDR, :sub:`($..filter.ioControls.filterToWaste.SDR) no-sub`
     16, **filtered water weir**,
      , Height, :sub:`($..filter.ioControls.HSF) no-sub`
      , Maximum head loss, :sub:`($..filter.ioControls.outletWeirHL) no-sub`
@@ -190,15 +207,17 @@ Filter Hydraulic Controls Design Parameters
      , Half width, :sub:`($..filter.ioControls.finishedWaterW) no-sub`
     18, **chlorination conduit**,
      , Nominal diameter, :sub:`($..filter.ioControls.chlorineConduit.ND) no-sub` inch
+     , SDR, :sub:`($..filter.ioControls.chlorineConduit.SDR) no-sub`
     19, **finished water pipe**,
      , Nominal diameter, :sub:`($..filter.pipes.filtered.ND) no-sub` inch
+     , SDR, :sub:`($..filter.pipes.filtered.SDR) no-sub`
 
 .. _table_Filter_chambers_design_parameters:
 
-.. csv-table:: Filter chambers design parameters.
+.. csv-table:: Filter chambers design parameters. |filter_chamber_icon|
     :header: "Key", "Name", "Value"
     :align: left
-    :widths: 3 57 40
+    :widths: 5 55 40
     :class: wraptable
 
     20, **filter chamber**,
@@ -211,11 +230,17 @@ Filter Hydraulic Controls Design Parameters
      , Nominal diameter, :sub:`($..filter.slottedDrain.ND) no-sub` inch
     22, **sand dump pipe**,
      , Nominal diameter, :sub:`($..filter.sandDump.ND) no-sub` inch
+     , SDR, :sub:`($..filter.sandDump.SDR) no-sub`
      , Discharge height,  :sub:`($..filter.sandDump.H) no-sub`
     23, **siphon pipe**,
      , Nominal diameter, :sub:`($..filter.siphon.ND) no-sub` inch
+     , SDR, :sub:`($..filter.siphon.SDR) no-sub`
      , Initial flow rate at beginning of backwash,  :sub:`($..filter.siphon.initialQ) no-sub`
      , Head loss at filter chamber design flow, :sub:`($..filter.siphon.HL) no-sub`
+     , Number of orifices,  :sub:`($..filter.siphonManifold.portN) no-sub`
+     , Orifice diameter,  :sub:`($..filter.siphonManifold.portD) no-sub`
+     , Orifice center to center spacing,  :sub:`($..filter.siphonManifold.portB) no-sub`
+     , Nominal diameter siphon control air vent valve,  :sub:`($..filter.airValveND) no-sub`
     24, **sand**
      , Depth,  :sub:`($..filter.fiPipes.sand.H) no-sub`
      , Fluidized depth,  :sub:`($..filter.fiPipes.sand.liveH) no-sub`
@@ -230,37 +255,51 @@ Filter Hydraulic Controls Design Parameters
 
 .. _table_Filter_internal_piping_design_parameters:    
 
-.. csv-table:: Filter internal piping design parameters.
+.. csv-table:: Filter internal piping design parameters. |filter_internalPiping_icon|
     :header: "Key", "Name", "Value"
     :align: left
-    :widths: 3 57 40
+    :widths: 5 55 40
     :class: wraptable
 
-    25, **band clamps**,#
-     , band width  :sub:`($..filter.fiPipes.band.W) no-sub`
-     , band thickness  :sub:`($..filter.fiPipes.band.T no-sub`
+    25, **band clamps**,
+     , band width,  :sub:`($..filter.fiPipes.band.W) no-sub`
+     , band thickness,  :sub:`($..filter.fiPipes.band.T) no-sub`
     26, **winged branch pipes**,
-     , Nominal diameter, :sub:`($..filter.fiPipes.branch.ND) no-sub` inch
+     , Nominal diameter, :sub:`($..filter.fiPipes.branch.inlet.ND) no-sub` inch
+      , SDR, :sub:`($..filter.fiPipes.branch.inlet.SDR) no-sub`
     27, **slotted branch pipes**,
-     , Nominal diameter, :sub:`($..filter.fiPipes.branch.ND) no-sub` inch
+     , Nominal diameter, :sub:`($..filter.fiPipes.branch.outlet.ND) no-sub` inch
+      , SDR, :sub:`($..filter.fiPipes.branch.outlet.SDR) no-sub`
     28, **receptor pipes**,
-     , Nominal diameter, :sub:`($..filter.fiPipes.receptor.ND) no-sub` inch
+     , Nominal diameter, :sub:`($..filter.fiPipes.receptor.pipe.ND) no-sub` inch
+      , SDR, :sub:`($..filter.fiPipes.receptor.pipe.SDR) no-sub`
     29, **trunk spacer**,
-
+     , thickness,   :sub:`($..filter.internalPipes.spacer.spacerData.factoryT) no-sub` 
     30, **receptor spacer**,
-
+     , thickness,   :sub:`($..filter.internalPipes.spacer.spacerData.factoryT) no-sub` 
     31, **anchor bolts**,
-
+     , maximum force on anchor bolts, :sub:`($..filter.internalPipes.trunkCableF) no-sub` 
     32, **cable**,
-
+     , diameter,  :sub:`($..filter.internalPipes.spacer.cableD) no-sub` 
+     , maximum force on trunk cables, :sub:`($..filter.internalPipes.trunkCableF) no-sub`
     33, **hose clamp**,
 
-.. _figure_filter_top:
 
-.. figure:: Images/filter_top.png
-    :width: 600px
-    :align: center
-    :alt: filter top view
 
-    Filter top view showing filter hydraulic controls and filter chambers for a 2 filter chamber design.
 
+.. |filter_distribution_icon| image:: /Images/filter_distribution_icon.png
+  :height: 40
+
+.. |filter_inlet_icon| image:: /Images/filter_inlet_icon.png
+  :height: 40
+
+.. |filter_outlet_icon| image:: /Images/filter_outlet_icon.png
+  :height: 40
+
+.. |filter_chamber_icon| image:: /Images/filter_chamber_icon.png
+  :height: 40
+
+.. |filter_internalPiping_icon| image:: /Images/filter_internalPiping_icon.png
+  :height: 40
+
+  

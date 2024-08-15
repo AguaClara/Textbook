@@ -2,11 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Technical_Report",
-    "\\Technical_Report\\junk_YAML",
+    "\\Technical_Report\\Images",
     "\\Technical_Report\\plants",
-    "\\Technical_Report\\plants\\divina_providencia",
-    "\\Technical_Report\\plants\\san_juan_planes"
+    "\\Technical_Report\\plants\\san_juan_planes",
+    "\\Technical_Report\\_build\\html",
+    "\\Textbook\\Flocculation"
   ],
-  "SelectedNode": "\\Technical_Report\\lfom.rst",
+  "SelectedNode": "\\Technical_Report\\Images\\clarifier_inlet_collector.png",
   "PreviewInSolutionExplorer": false
 }
