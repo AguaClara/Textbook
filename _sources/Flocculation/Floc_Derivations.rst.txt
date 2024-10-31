@@ -224,6 +224,36 @@ Solve Equation :eq:`W_min_HVFloc` for :math:`H_e`. The minimum depth, :math:`H_{
 
 This equation represents the minimum depth of a flocculator channel given the maximum channel width. This constraint will be important as the flow rate increases.
 
+The volume of a flocculator is defined given :math:`\tilde{G}` and :math:`\tilde{G}\theta`. Given a required length and number of channels, the relationship between depth and width is also constrained.
+
+.. math::
+  :label: width_height_H_min_HVFloc
+
+    W_{max} = \frac{Q \theta}{H_{e_{min}} L N_{channel}}
+
+We can substitute Equation :eq:`width_height_H_min_HVFloc` for :math:`W_{max}` in Equation :eq:`H_min_HVFloc` to obtain
+
+.. math::
+  :label: H_min_partial_HVFloc
+
+
+    H_{e_{min}}=\left[\left( \frac{\Pi_{H_eS_{min}} H_{e_{min}} L N_{channel}}{\theta}\right)^3\left( \frac{K_{baffle}}{2 \nu \tilde{G}^2} \right)\right]^\frac{1}{4}
+
+Now solve for :math:`H_{e_{min}}`.
+
+.. math::
+  :label: H_min_of_theta_HVFloc
+
+
+    H_{e_{min}}=\left[\left( \frac{\Pi_{H_eS_{min}} L N_{channel}}{\theta}\right)^3\left( \frac{K_{baffle}}{2 \nu \tilde{G}^2} \right)\right]
+
+The number of channels has to be an integer and thus getting the right number of channels is a critical early step in the design. An estimate of the number of channels can be obtained from Equation :eq:`H_min_of_theta_HVFloc` by assuming that the flocculator depth is approximately the same as the clarifier depth.
+
+.. math::
+  :label: channelN_estimate
+
+    N_{channel} =\left( \frac{\theta}{\Pi_{H_eS_{min}} L }\right)\left( \frac{2 \nu \tilde{G}^2 H_{e_{est}}}{K_{baffle}} \right)^\frac{1}{3}
+
 
 Baffle Spacing
 ==============

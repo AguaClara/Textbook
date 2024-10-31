@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rapid Mix Theory and Future Work &mdash; AguaClara v1.4.37 documentation</title>
+  <title>Rapid Mix Theory and Future Work &mdash; AguaClara 0.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=824aafbd"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=525cde36"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -35,9 +35,6 @@
           <a href="../index.html" class="icon icon-home">
             AguaClara
           </a>
-              <div class="version">
-                v1.4.37
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -82,8 +79,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul class="current">
@@ -200,11 +195,11 @@
 <p>The following is a very preliminary estimate of the time required for attachment of the nanoparticles to the clay particles. This analysis includes multiple simplifying assumptions and there is a reasonable possibility that some of those assumptions are wrong. However, the core assumption that coagulant nanoparticles are transported to clay particles by a combination of fluid deformation (shear) and molecular diffusion is reasonable.</p>
 <p>The following analysis is similar to the collision analysis that was developed in the AguaClara flocculation model. The core idea is that viscous shear dominated fluid deformation causes relative motion between the coagulant nanoparticles and the clay particles (or other suspended particles) with which they eventually will collide. The collision between these particles that are very different in size is difficult to achieve because there is a viscous layer of fluid around the clay particles that the clay particles drag with them as they rotate in deforming fluid. Diffusion helps transport the coagulant nanoparticles through this viscous layer.</p>
 <p>The volume of the suspension that is cleared of nanoparticles is proportional to a collision area defined by a ring around the clay particles with width of the diameter of the nanoparticle diffusion band. This diffusion band is the length scale over which diffusion is able to transport coagulant particles to the clay surface during the time that the nanoparticles are sliding past the clay particles.</p>
-<p>If we go backwards in time, the ring of fluid around the clay particles would deform into two separate highly distorted volumes of fluid, one located to the left of the clay particle and one to the right (see figure <a class="reference internal" href="#figure-coagulant-nanoparticle-clay-collisions"><span class="std std-numref">Fig. 89</span></a>). This volume of fluid is assumed to receive nanoparticles that are transported in by fluid deformation.</p>
-<figure class="align-center" id="id2">
+<p>If we go backwards in time, the ring of fluid around the clay particles would deform into two separate highly distorted volumes of fluid, one located to the left of the clay particle and one to the right (see figure <a class="reference internal" href="#figure-coagulant-nanoparticle-clay-collisions"><span class="std std-numref">Fig. 88</span></a>). This volume of fluid is assumed to receive nanoparticles that are transported in by fluid deformation.</p>
+<figure class="align-center" id="id1">
 <span id="figure-coagulant-nanoparticle-clay-collisions"></span><a class="reference internal image-reference" href="../_images/Coagulant_nanoparticle_clay_collisions.png"><img alt="Coagulant nanoparticle clay collisions" src="../_images/Coagulant_nanoparticle_clay_collisions.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 89 </span><span class="caption-text">Fluid deformation moves coagulant nanoparticles close to clay particles and diffusion helps transport the nanoparticles the last nanometers toward a successful collision.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">Fluid deformation moves coagulant nanoparticles close to clay particles and diffusion helps transport the nanoparticles the last nanometers toward a successful collision.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The time required for shear to transport all of the fluid past the clay so that diffusion can transport the coagulant nanoparticles to the clay surface is significant. The diffusion coefficient for coagulant nanoparticles is given by</p>
@@ -223,10 +218,10 @@
 <blockquote>
 <div><p><a class="reference external" href="https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=xLb8eJza5gs0&amp;line=1&amp;uniqifier=1">Colab worksheet to estimate the diffusion layer thickness</a>.</p>
 </div></blockquote>
-<figure class="align-center" id="id3">
+<figure class="align-center" id="id2">
 <span id="figure-diffusion-band-thickness"></span><a class="reference internal image-reference" href="../_images/Diffusion_band_thickness.png"><img alt="Diffusion band thickness" src="../_images/Diffusion_band_thickness.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 90 </span><span class="caption-text">Molecular diffusion band thickness as a function of velocity gradient. This length scale marks the transition between transport by fluid deformation and by diffusion.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 89 </span><span class="caption-text">Molecular diffusion band thickness as a function of velocity gradient. This length scale marks the transition between transport by fluid deformation and by diffusion.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Diffusion transports the coagulant nanoparticles a relatively short distance, a fraction of a <span class="math notranslate nohighlight">\(\mu m\)</span>.</p>
@@ -300,10 +295,10 @@
 \[t_{coagulant, \, application} = \frac{2.3p C_{CN} \, \Lambda_{Clay}^2}{\pi G k \, d_{Clay}\,  L_{Diff_{CN}} }\]</div>
 <p>The time required for the coagulant to be transported to clay surfaces is strongly dependent on the turbidity as indicated by the average spacing of clay particles, <span class="math notranslate nohighlight">\(\Lambda_{Clay}\)</span>. As turbidity increases the spacing between clay particles decreases and the time required for shear to transport coagulant nanoparticles to the clay decreases. Increasing the shear also results in faster transport of the coagulant nanoparticles to clay surfaces. The times required are strongly influenced by the size of the coagulant nanoparticles because larger nanoparticles diffuse more slowly.</p>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=FiqAt0PF6L1t&amp;line=13&amp;uniqifier=1">Colab worksheet estimating the time required to achieve 80% attachment of nanoparticles in a 10 NTU clay suspension in a reactor with a G of 100 Hz</a>.</p>
-<figure class="align-center" id="id4">
+<figure class="align-center" id="id3">
 <span id="figure-coag-attach-time"></span><a class="reference internal image-reference" href="../_images/Coag_attach_time.png"><img alt="Coag attach time" src="../_images/Coag_attach_time.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 91 </span><span class="caption-text">An estimate of the time required for 80% of the coagulant nanoparticles to attach to clay particles given a raw water turbidity of 10 NTU.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 90 </span><span class="caption-text">An estimate of the time required for 80% of the coagulant nanoparticles to attach to clay particles given a raw water turbidity of 10 NTU.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -312,10 +307,10 @@
 <div class="math notranslate nohighlight">
 \[\Delta h =  \frac{G^2 \nu \theta}{g}\]</div>
 <p><a class="reference external" href="https://colab.research.google.com/drive/1tq6eHiIw47JGIPd4P_16AsewbC5GsEMk#scrollTo=lSrjJEAT6-Gd&amp;line=8&amp;uniqifier=1">This code</a> shows how the following plot can be generated</p>
-<figure class="align-center" id="id5">
+<figure class="align-center" id="id4">
 <span id="figure-coag-attach-head-loss"></span><a class="reference internal image-reference" href="../_images/Coag_attach_head_loss.png"><img alt="Coag attach head loss" src="../_images/Coag_attach_head_loss.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 92 </span><span class="caption-text">The total energy required to attach coagulant nanoparticles to raw water inorganic particles increases rapidly with the velocity gradient used in the rapid mix process.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 91 </span><span class="caption-text">The total energy required to attach coagulant nanoparticles to raw water inorganic particles increases rapidly with the velocity gradient used in the rapid mix process.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>There is an economic tradeoff between reactor volume and energy input. The reactor volume results in a higher capital cost and the energy input requires both higher operating costs and higher capital costs. This provides an opportunity to optimize rapid mix design once we have a confirmed model characterizing the process.</p>
@@ -346,7 +341,7 @@ for G given a head loss.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, AguaClara Reach.</p>
+    <p>&#169; Copyright 2024, AguaClara Reach.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -858,8 +858,6 @@ Flow expansions are used intentionally or unavoidable in multiple locations in h
 Round Jet
 -----------
 
-.. todo:: need images for jets. add drawings that define dimensions.
-
 The energy dissipation rate at the centerline of a round jet is a well studied phenomenon (`Baldyga, et al. 1995 <https://doi.org/10.1016/0009-2509(95)00049-B>`__).
 
 

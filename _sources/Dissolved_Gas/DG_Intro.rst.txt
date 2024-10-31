@@ -20,8 +20,6 @@ Dissolved gas supersaturation and subsequent bubble formation can cause signific
 Henry's Law
 ===========
 
-.. todo:: decide which version of the Henry's Law equation to use and develop them here.
-
 .. _heading_Effects_of_Gas_Bubbles_in_Water_Treatment_Plants:
 
 Effects of Gas Bubbles in Water Treatment Plants
@@ -30,8 +28,6 @@ Effects of Gas Bubbles in Water Treatment Plants
 The American Water Works Association recognized the detrimental effects of gas bubble evolution in drinking water treatment plants and sponsored research at Virginia Polytechnic Institute and State University. `Paolo Scardina's Dissertation <../_static/references/PaoloScardinaDissertation2004.pdf>`_ provides an excellent review of the problems that are caused by gas bubbles.
 
 Dissolved gas removal is also a goal after anaerobic wastewater treatment for enhanced removal of dissolved methane.
-
-.. todo:: Identify other examples where degassing is required.
 
 .. _heading_DG_Flocculation:
 
@@ -54,7 +50,6 @@ Clarification
 
 Bubbles carry flocs rapidly to the top of the clarifier where they form a surface mat of flocs. The surface mat of flocs isn't necessarily harmful to plant performance, but it is a nuisance and requires that the operators scrape the flocs to remove them from the clarifier. Some of the rising flocs are swept into the exit manifold and thus the settled water turbidity can be significantly increased by these rising flocs.
 
-.. todo:: Invent a clarifier effluent manifold with floc deflectors to prevent entrainment of rising flocs into the manifold.
 
 .. _heading_DG_Filtration:
 
@@ -65,9 +60,6 @@ Filtration performance can be severely harmed by gas bubbles. The bubbles form i
 
 At the El PODA Nicaragua AguaClara plant there was so much dissolved air in the influent water that the filters could only operate for one hour before requiring backwash.
 
-.. todo:: Determine if sand provides nucleation sites for gas bubble formation or if it simply serves as a trap preventing exit of gas bubbles and the gas bubbles serve as collectors for dissolved gas molecules.
-
-.. todo:: Nucleation sites can be created by surface roughness on a particle that retains small gas bubbles in the cavities of the rough particle. Find an appropriate solid media that retains trapped gas that can serve as nucleation sites for bubble formation.
 
 .. _heading_Dissolved_Gas_Sources:
 

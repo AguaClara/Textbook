@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flocculation Derivations &mdash; AguaClara v1.4.37 documentation</title>
+  <title>Flocculation Derivations &mdash; AguaClara 0.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=824aafbd"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=525cde36"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -35,9 +35,6 @@
           <a href="../index.html" class="icon icon-home">
             AguaClara
           </a>
-              <div class="version">
-                v1.4.37
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -82,8 +79,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -190,14 +185,14 @@
 <p>For contractions in series the minor loss coefficient is strongly influenced by the distance between the contractions. When the contractions are spaced so closely that the flow can’t fully expand between contractions the velocity exiting the contraction is greater and the resulting head loss is greater. The distance required for the flow to expand can be estimated based on jet expansion equations. The flow exiting a rectangular contraction can be modeled as a plane jet and plane jets grow in width at a rate</p>
 <div class="math notranslate nohighlight" id="equation-planejet-expansion">
 <span class="eqno">(186)<a class="headerlink" href="#equation-planejet-expansion" title="Permalink to this equation"></a></span>\[W_{jet} = 0.116x\]</div>
-<p>where x is the distance along the path of the jet centerline and <span class="math notranslate nohighlight">\(\Pi_{PlaneJet_{exp}} = 0.116\)</span> for a plane jet in an infinite medium. The location of this expanding jet is shown in Figure <a class="reference internal" href="#figure-baffle-geometry"><span class="std std-numref">Fig. 127</span></a>. The jet is influenced by the presence of the baffle on the one side. Andrew Pennock, 2022, used Computational Fluid Dynamics (CFD) to determine that the jet is effectively only expanding on the side that is in contact with the recirculation zone. Thus</p>
+<p>where x is the distance along the path of the jet centerline and <span class="math notranslate nohighlight">\(\Pi_{PlaneJet_{exp}} = 0.116\)</span> for a plane jet in an infinite medium. The location of this expanding jet is shown in Figure <a class="reference internal" href="#figure-baffle-geometry"><span class="std std-numref">Fig. 126</span></a>. The jet is influenced by the presence of the baffle on the one side. Andrew Pennock, 2022, used Computational Fluid Dynamics (CFD) to determine that the jet is effectively only expanding on the side that is in contact with the recirculation zone. Thus</p>
 <div class="math notranslate nohighlight" id="equation-bafflejet-expansion">
 <span class="eqno">(187)<a class="headerlink" href="#equation-bafflejet-expansion" title="Permalink to this equation"></a></span>\[ \Pi_{BaffleJet_{exp}} = 0.5 \Pi_{PlaneJet_{exp}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Pi_{BaffleJet_{exp}}\)</span> is the dimensionless rate of expansion for the jet that has a baffle on the one side.</p>
 <figure class="align-center" id="id1">
 <span id="figure-baffle-geometry"></span><a class="reference internal image-reference" href="../_images/baffle_geometry.png"><img alt="CFD vc baffle" src="../_images/baffle_geometry.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 127 </span><span class="caption-text">Baffle geometry for a hydraulic flocculator where S is the space between baffles, <span class="math notranslate nohighlight">\(L_{jet}\)</span> is the distance over which a jet can expand, and <span class="math notranslate nohighlight">\(H_e\)</span> is the approximate total distance between expansions.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 126 </span><span class="caption-text">Baffle geometry for a hydraulic flocculator where S is the space between baffles, <span class="math notranslate nohighlight">\(L_{jet}\)</span> is the distance over which a jet can expand, and <span class="math notranslate nohighlight">\(H_e\)</span> is the approximate total distance between expansions.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The distance over which the jet can expand is given by <span class="math notranslate nohighlight">\(L_{jet}\)</span>. The path length is given by</p>
@@ -234,19 +229,19 @@
 <li><p>The <span class="math notranslate nohighlight">\(\Pi_{BaffleJet_{exp}}\)</span> may be missing a correction to account for a secondary effect of the baffle.</p></li>
 <li><p>The effective dimensionless length of the curved and contracted flow path, <span class="math notranslate nohighlight">\(\Pi _{LS_{curve}}'\)</span>, is unknown.</p></li>
 </ol>
-<p>Andrew Pennock conducted CFD analysis (see <a class="reference internal" href="#figure-k-baffle-cfd"><span class="std std-numref">Fig. 128</span></a>) to estimate the baffle loss coefficient as a function of the <span class="math notranslate nohighlight">\(\Pi_{H_{e}S}\)</span> (see <a class="reference internal" href="#figure-k-baffle"><span class="std std-numref">Fig. 129</span></a>) and used error minimization to estimate the previous two factors. The baffle jet expansion rate had a value of approximately <span class="math notranslate nohighlight">\(0.5 \Pi_{PlaneJet_{exp}}\)</span>. This result is consistent with the idea that the jet is expanding into the zone of recirculation and is not expanding on the side of the jet that is against the baffle.</p>
+<p>Andrew Pennock conducted CFD analysis (see <a class="reference internal" href="#figure-k-baffle-cfd"><span class="std std-numref">Fig. 127</span></a>) to estimate the baffle loss coefficient as a function of the <span class="math notranslate nohighlight">\(\Pi_{H_{e}S}\)</span> (see <a class="reference internal" href="#figure-k-baffle"><span class="std std-numref">Fig. 128</span></a>) and used error minimization to estimate the previous two factors. The baffle jet expansion rate had a value of approximately <span class="math notranslate nohighlight">\(0.5 \Pi_{PlaneJet_{exp}}\)</span>. This result is consistent with the idea that the jet is expanding into the zone of recirculation and is not expanding on the side of the jet that is against the baffle.</p>
 <figure class="align-center" id="id2">
 <span id="figure-k-baffle-cfd"></span><a class="reference internal image-reference" href="../_images/K_baffle_CFD.png"><img alt="CFD vc baffle" src="../_images/K_baffle_CFD.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 128 </span><span class="caption-text">CFD analysis of flow around baffles with <span class="math notranslate nohighlight">\(\Pi_{H_{e}S} = 8\)</span> showing the gradual flow expansion and return to a nearly uniform velocity before making the next bend (Andrew Pennock, 2022).</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 127 </span><span class="caption-text">CFD analysis of flow around baffles with <span class="math notranslate nohighlight">\(\Pi_{H_{e}S} = 8\)</span> showing the gradual flow expansion and return to a nearly uniform velocity before making the next bend (Andrew Pennock, 2022).</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>If we take <span class="math notranslate nohighlight">\(\Pi_{BaffleJet_{exp}} = 0.5 \Pi_{PlaneJet_{exp}}\)</span> as a given, then the remaining unknown is the dimensionless length of the curved and contracted flow path, <span class="math notranslate nohighlight">\(\Pi _{LS_{curve}}'\)</span>. Andrew Pennock found <span class="math notranslate nohighlight">\(\Pi _{LS_{curve}}' = 4.3\)</span> using CFD. We also obtained one head loss measurement from the Gracias AguaClara plant shortly after the plant was first commissioned. It became apparent that the flocculator head loss exceeded the expected values because water was overflowing at the upstream end of the flocculator. The calculated <span class="math notranslate nohighlight">\(K_{baffle_{exp}}\)</span> for the original design of the Gracias flocculator is plotted in <a class="reference internal" href="#figure-k-baffle"><span class="std std-numref">Fig. 129</span></a>. The model fit through that single data point requires the dimensionless distance for the jet to fully expand to be <span class="math notranslate nohighlight">\(\Pi _{LS_{curve}}' = 3\)</span>.</p>
+<p>If we take <span class="math notranslate nohighlight">\(\Pi_{BaffleJet_{exp}} = 0.5 \Pi_{PlaneJet_{exp}}\)</span> as a given, then the remaining unknown is the dimensionless length of the curved and contracted flow path, <span class="math notranslate nohighlight">\(\Pi _{LS_{curve}}'\)</span>. Andrew Pennock found <span class="math notranslate nohighlight">\(\Pi _{LS_{curve}}' = 4.3\)</span> using CFD. We also obtained one head loss measurement from the Gracias AguaClara plant shortly after the plant was first commissioned. It became apparent that the flocculator head loss exceeded the expected values because water was overflowing at the upstream end of the flocculator. The calculated <span class="math notranslate nohighlight">\(K_{baffle_{exp}}\)</span> for the original design of the Gracias flocculator is plotted in <a class="reference internal" href="#figure-k-baffle"><span class="std std-numref">Fig. 128</span></a>. The model fit through that single data point requires the dimensionless distance for the jet to fully expand to be <span class="math notranslate nohighlight">\(\Pi _{LS_{curve}}' = 3\)</span>.</p>
 <p>Given the slight disagreement between the two sources of information, CFD and a single head loss measurement at the Gracias AguaClara plant, it isn’t clear which value to use for <span class="math notranslate nohighlight">\(\Pi _{LS_{curve}}'\)</span>. Further research is required and hydraulic flume experiments could provide the most definitive answer.</p>
 <figure class="align-center" id="id3">
 <span id="figure-k-baffle"></span><a class="reference internal image-reference" href="../_images/K_baffle_model.png"><img alt="CFD vc baffle" src="../_images/K_baffle_model.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 129 </span><span class="caption-text">Baffle minor loss coefficient (Equation <a class="reference internal" href="#equation-k-baffle-expanding">(196)</a>) was fit to the CFD analysis by Andrew Pennock. Additional data is needed to resolve the difference between the CFD analysis and the data point from the Gracias AguaClara plant.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 128 </span><span class="caption-text">Baffle minor loss coefficient (Equation <a class="reference internal" href="#equation-k-baffle-expanding">(196)</a>) was fit to the CFD analysis by Andrew Pennock. Additional data is needed to resolve the difference between the CFD analysis and the data point from the Gracias AguaClara plant.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Until further results are obtained we need to make an engineering judgement to select the least risky model for the baffle loss coefficient. Given a fully fabricated flocculator it is easier to reduce the baffle spacing by shortening the spacers between baffles than it is to increase the baffle spacing. Thus it would be best to err on the side of obtaining less head loss than the design specifications. To obtain less head loss than predicted we need to use the maximum estimate of <span class="math notranslate nohighlight">\(K_{baffle_{exp}}\)</span>. The Gracias measurement gives the maximum estimate of <span class="math notranslate nohighlight">\(K_{baffle_{exp}}\)</span> based on <span class="math notranslate nohighlight">\(\Pi _{LS_{curve}}' = 3\)</span>.</p>
@@ -298,22 +293,34 @@ serves as a basis for design. The final parameter derived is
 <div class="math notranslate nohighlight" id="equation-h-min-hvfloc">
 <span class="eqno">(200)<a class="headerlink" href="#equation-h-min-hvfloc" title="Permalink to this equation"></a></span>\[  H_{e_{min}}=\left[\left( \frac{\Pi_{H_eS_{min}} Q}{W_{max}}\right)^3\left( \frac{K_{baffle}}{2 \nu \tilde{G}^2} \right)\right]^\frac{1}{4}\]</div>
 <p>This equation represents the minimum depth of a flocculator channel given the maximum channel width. This constraint will be important as the flow rate increases.</p>
+<p>The volume of a flocculator is defined given <span class="math notranslate nohighlight">\(\tilde{G}\)</span> and <span class="math notranslate nohighlight">\(\tilde{G}\theta\)</span>. Given a required length and number of channels, the relationship between depth and width is also constrained.</p>
+<div class="math notranslate nohighlight" id="equation-width-height-h-min-hvfloc">
+<span class="eqno">(201)<a class="headerlink" href="#equation-width-height-h-min-hvfloc" title="Permalink to this equation"></a></span>\[  W_{max} = \frac{Q \theta}{H_{e_{min}} L N_{channel}}\]</div>
+<p>We can substitute Equation <a class="reference internal" href="#equation-width-height-h-min-hvfloc">(201)</a> for <span class="math notranslate nohighlight">\(W_{max}\)</span> in Equation <a class="reference internal" href="#equation-h-min-hvfloc">(200)</a> to obtain</p>
+<div class="math notranslate nohighlight" id="equation-h-min-partial-hvfloc">
+<span class="eqno">(202)<a class="headerlink" href="#equation-h-min-partial-hvfloc" title="Permalink to this equation"></a></span>\[  H_{e_{min}}=\left[\left( \frac{\Pi_{H_eS_{min}} H_{e_{min}} L N_{channel}}{\theta}\right)^3\left( \frac{K_{baffle}}{2 \nu \tilde{G}^2} \right)\right]^\frac{1}{4}\]</div>
+<p>Now solve for <span class="math notranslate nohighlight">\(H_{e_{min}}\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-h-min-of-theta-hvfloc">
+<span class="eqno">(203)<a class="headerlink" href="#equation-h-min-of-theta-hvfloc" title="Permalink to this equation"></a></span>\[  H_{e_{min}}=\left[\left( \frac{\Pi_{H_eS_{min}} L N_{channel}}{\theta}\right)^3\left( \frac{K_{baffle}}{2 \nu \tilde{G}^2} \right)\right]\]</div>
+<p>The number of channels has to be an integer and thus getting the right number of channels is a critical early step in the design. An estimate of the number of channels can be obtained from Equation <a class="reference internal" href="#equation-h-min-of-theta-hvfloc">(203)</a> by assuming that the flocculator depth is approximately the same as the clarifier depth.</p>
+<div class="math notranslate nohighlight" id="equation-channeln-estimate">
+<span class="eqno">(204)<a class="headerlink" href="#equation-channeln-estimate" title="Permalink to this equation"></a></span>\[  N_{channel} =\left( \frac{\theta}{\Pi_{H_eS_{min}} L }\right)\left( \frac{2 \nu \tilde{G}^2 H_{e_{est}}}{K_{baffle}} \right)^\frac{1}{3}\]</div>
 </section>
 <section id="baffle-spacing">
 <h2>Baffle Spacing<a class="headerlink" href="#baffle-spacing" title="Permalink to this heading"></a></h2>
 <p>The core equation relating flow geometry and velocity gradient is Equation <a class="reference internal" href="#equation-flocgeog">(198)</a>. If the jet has fully expanded before entering the next contraction then the minor loss coefficient is a constant. Rearranging for <span class="math notranslate nohighlight">\(S\)</span>, we obtain:</p>
 <div class="math notranslate nohighlight" id="equation-floc-baffle-spacing-of-k">
-<span class="eqno">(201)<a class="headerlink" href="#equation-floc-baffle-spacing-of-k" title="Permalink to this equation"></a></span>\[ S = \left( \frac{K_{baffle}}{2 H_e \tilde{G}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W}\]</div>
-<p>If the jet has not fully expanded before entering the next contraction or if it is unknown if the jet has fully expanded then iteratively use Equation <a class="reference internal" href="#equation-floc-baffle-spacing-of-k">(201)</a> and after each iteration get a better estimate of <span class="math notranslate nohighlight">\(K_{baffle}\)</span> by using Equation <a class="reference internal" href="#equation-k-baffle-expanding">(196)</a>.</p>
+<span class="eqno">(205)<a class="headerlink" href="#equation-floc-baffle-spacing-of-k" title="Permalink to this equation"></a></span>\[ S = \left( \frac{K_{baffle}}{2 H_e \tilde{G}^2 \nu } \right)^\frac{1}{3} \frac{Q}{W}\]</div>
+<p>If the jet has not fully expanded before entering the next contraction or if it is unknown if the jet has fully expanded then iteratively use Equation <a class="reference internal" href="#equation-floc-baffle-spacing-of-k">(205)</a> and after each iteration get a better estimate of <span class="math notranslate nohighlight">\(K_{baffle}\)</span> by using Equation <a class="reference internal" href="#equation-k-baffle-expanding">(196)</a>.</p>
 <p>One possible set of assumptions for Horizontal-Horizontal and Vertical-Horizontal flow flocculators is that <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> is specified (perhaps = 6).</p>
 <div class="math notranslate nohighlight" id="equation-heofpi-hs">
-<span class="eqno">(202)<a class="headerlink" href="#equation-heofpi-hs" title="Permalink to this equation"></a></span>\[H_e = \Pi_{H_eS} S\]</div>
-<p>If <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> and the flow width, <span class="math notranslate nohighlight">\(W\)</span>, are specified we can substitution Equation <a class="reference internal" href="#equation-heofpi-hs">(202)</a> into Equation <a class="reference internal" href="#equation-flocgeog">(198)</a> and solve for the baffle space, <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<span class="eqno">(206)<a class="headerlink" href="#equation-heofpi-hs" title="Permalink to this equation"></a></span>\[H_e = \Pi_{H_eS} S\]</div>
+<p>If <span class="math notranslate nohighlight">\(\Pi_{H_eS}\)</span> and the flow width, <span class="math notranslate nohighlight">\(W\)</span>, are specified we can substitution Equation <a class="reference internal" href="#equation-heofpi-hs">(206)</a> into Equation <a class="reference internal" href="#equation-flocgeog">(198)</a> and solve for the baffle space, <span class="math notranslate nohighlight">\(S\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-floc-baffle-spacing-const-pihs">
-<span class="eqno">(203)<a class="headerlink" href="#equation-floc-baffle-spacing-const-pihs" title="Permalink to this equation"></a></span>\[S = \left[\frac{K_{baffle}}{2 \nu \tilde{G}^2 \Pi_{H_eS}} \left( \frac{Q}{W} \right)^3\right]^{\frac{1}{4}}\]</div>
+<span class="eqno">(207)<a class="headerlink" href="#equation-floc-baffle-spacing-const-pihs" title="Permalink to this equation"></a></span>\[S = \left[\frac{K_{baffle}}{2 \nu \tilde{G}^2 \Pi_{H_eS}} \left( \frac{Q}{W} \right)^3\right]^{\frac{1}{4}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(K_{baffle}\)</span> is obtained using Equation <a class="reference internal" href="#equation-k-baffle-expanding">(196)</a>. An alternative assumption is that the flow width and the baffle spacing are equal. Given those assumptions we can make those substitutions and solve Equation <a class="reference internal" href="#equation-flocgeog">(198)</a> for the baffle space, S.</p>
 <div class="math notranslate nohighlight" id="equation-floc-baffle-spacing-squaregeometry">
-<span class="eqno">(204)<a class="headerlink" href="#equation-floc-baffle-spacing-squaregeometry" title="Permalink to this equation"></a></span>\[ S = \left(\frac{K_{baffle}Q^3}{2  \nu \tilde{G}^2 \Pi_{H_eS}} \right)^{\frac{1}{7}}\]</div>
+<span class="eqno">(208)<a class="headerlink" href="#equation-floc-baffle-spacing-squaregeometry" title="Permalink to this equation"></a></span>\[ S = \left(\frac{K_{baffle}Q^3}{2  \nu \tilde{G}^2 \Pi_{H_eS}} \right)^{\frac{1}{7}}\]</div>
 </section>
 </section>
 
@@ -328,7 +335,7 @@ serves as a basis for design. The final parameter derived is
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, AguaClara Reach.</p>
+    <p>&#169; Copyright 2024, AguaClara Reach.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

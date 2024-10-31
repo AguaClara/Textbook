@@ -108,7 +108,6 @@ The fraction of the total water that is lost due to backwash is 0.01048 dimensio
 
 `15) Now we will evaluate the very first data set from a full scale SRSF. The performance data provided is the settled water turbidity and then the filtered water turbidity during one filter run. The time step is 5 minutes. Plot pC\* for the filter as well as effluent turbidity as a function of time on two separate graphs. <https://colab.research.google.com/drive/15IrqdHgnk3NZVTiIuhQc6YdwFgquIHD1#scrollTo=-I-OQ1YflL87&line=2&uniqifier=1>`_
 
-.. todo:: Get an updated data for filter performance evaluation.
 
 .. _figure_Filter_run_time_vs_removal_efficiency:
 

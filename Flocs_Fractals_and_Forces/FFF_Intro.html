@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flocs, Fractals, Forces &mdash; AguaClara v1.4.37 documentation</title>
+  <title>Flocs, Fractals, Forces &mdash; AguaClara 0.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=824aafbd"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=525cde36"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -35,9 +35,6 @@
           <a href="../index.html" class="icon icon-home">
             AguaClara
           </a>
-              <div class="version">
-                v1.4.37
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -95,8 +92,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -504,7 +499,7 @@ n_{cp} \frac{\pi}{6} D_{cp}^3\]</div>
 <p>It would be helpful to develop a design guideline based on Equation <a class="reference internal" href="#equation-g-of-vc-and-fractal-of-2">(114)</a>. We place the parameters that represent properties of the core particle on the right hand side. The left hand side of the equation is a combination of design parameters, <span class="math notranslate nohighlight">\(G_{max}\)</span> and <span class="math notranslate nohighlight">\(v_c\)</span>, as well as the water viscosity that is a function of temperature.  The right hand side of the equation represents a combination of the bond strength, the density of the core particle, and the diameter of the core particle.</p>
 <div class="math notranslate nohighlight" id="equation-g-of-vc-and-floc-props">
 <span class="eqno">(115)<a class="headerlink" href="#equation-g-of-vc-and-floc-props" title="Permalink to this equation"></a></span>\[\xi_{breakup} = G_{max} \nu^3 v_c^2 \approx   \frac{4F_{bond}}{3 \pi  \rho_{H_2O}}\left(  \frac{ D_{cp} g}{18} \frac{\rho_{cp} - \rho_{H_2O}}{\rho_{H_2O}}\right) ^2\]</div>
-<p>Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of Equation <a class="reference internal" href="#equation-g-of-vc-and-floc-props">(115)</a>, <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span>, is  <span class="math notranslate nohighlight">\(50 \cdot \frac{mm^8}{s^6}\)</span>, <span class="math notranslate nohighlight">\(\left(50 \cdot  10^{-24}\frac{m^8}{s^6}\right)\)</span>, for a kaolin suspension. <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> represent an upper limit on the maximum velocity gradient to prevent floc breakup and plate settler capture velocity design parameters and is a combination of properties of the core particles. The expectation is that <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> will be less than 50 <span class="math notranslate nohighlight">\(\frac{mm^8}{s^6}\)</span> for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see <a class="reference internal" href="../Flocculation/Floc_Model.html#figure-pennockfig3"><span class="std std-numref">Fig. 122</span></a>).</p>
+<p>Given the experimental conditions used by Casey Garland where performance began to decline, the value of left side of Equation <a class="reference internal" href="#equation-g-of-vc-and-floc-props">(115)</a>, <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span>, is  <span class="math notranslate nohighlight">\(50 \cdot \frac{mm^8}{s^6}\)</span>, <span class="math notranslate nohighlight">\(\left(50 \cdot  10^{-24}\frac{m^8}{s^6}\right)\)</span>, for a kaolin suspension. <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> represent an upper limit on the maximum velocity gradient to prevent floc breakup and plate settler capture velocity design parameters and is a combination of properties of the core particles. The expectation is that <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> will be less than 50 <span class="math notranslate nohighlight">\(\frac{mm^8}{s^6}\)</span> for core particles that include dissolved organic matter. It is also expected that the density of the core particles decreases at high coagulant doses and this may explain the reduction in performance at high coagulant doses (see <a class="reference internal" href="../Flocculation/Floc_Model.html#figure-pennockfig3"><span class="std std-numref">Fig. 121</span></a>).</p>
 <p>Equation <a class="reference internal" href="#equation-g-of-vc-and-floc-props">(115)</a> reveals the key relationships between jet reverser and plate settler design. The jet reverser velocity gradient must decrease in proportion to the square of the plate settler capture velocity. If AguaClara were to increase the plate settler capture velocity from 0.12 to 0.3 mm/s the jet reverser velocity gradient would need to decrease by a factor of 6.25. The dramatic effect of temperature is revealed as well. It is well known that flocculation and sedimentation processes perform poorly at low temperatures. The kinematic viscosity of water approximately doubles as the temperature drops from 20°C to 0°C. That results in a need to decrease the velocity gradient by a factor of 8! Finally, the dissolved organic matter and inorganic particles together determine the density and diameter of the core particles that make up the flocs. Organic matter reduces the density of the core particles and that requires a lower velocity gradient. The worst combination of parameters is a cold water with a high dissolved organic concentration and a low concentration of inorganic particles.</p>
 <p>The effect of water temperature and plate settler capture velocity on the maximum jet reverser velocity gradient for kaolin suspensions are shown in <a class="reference internal" href="#figure-gmax-of-t-and-vc"><span class="std std-numref">Fig. 50</span></a> (<a class="reference external" href="https://colab.research.google.com/github/AguaClara/Textbook/blob/master/Flocs_Fractals_and_Forces/Colab/FFF.ipynb#scrollTo=r_wm34KQ8jm4&amp;line=3&amp;uniqifier=1">see Flocs, Fractals, and Forces Colab Worksheet</a>).</p>
 <figure class="align-center" id="id14">
@@ -663,7 +658,7 @@ n_{cp} \frac{\pi}{6} D_{cp}^3\]</div>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, AguaClara Reach.</p>
+    <p>&#169; Copyright 2024, AguaClara Reach.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flocculation Model Solution &mdash; AguaClara v1.4.37 documentation</title>
+  <title>Flocculation Model Solution &mdash; AguaClara 0.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -13,7 +13,7 @@
   
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=824aafbd"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=525cde36"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -35,9 +35,6 @@
           <a href="../index.html" class="icon icon-home">
             AguaClara
           </a>
-              <div class="version">
-                v1.4.37
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -82,8 +79,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -190,7 +185,7 @@
    <script src="https://hypothes.is/embed.js" async></script>
 </embed><section id="flocculation-model-solution">
 <h1>Flocculation Model Solution<a class="headerlink" href="#flocculation-model-solution" title="Permalink to this heading"></a></h1>
-<p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=i0Xa-13Uyu33&amp;line=7&amp;uniqifier=1">Remember to run this code blok prior to reviewing the solutions to ensure all functions are imported</a></p>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=i0Xa-13Uyu33&amp;line=7&amp;uniqifier=1">Remember to run this code block prior to reviewing the solutions to ensure all functions are imported</a></p>
 <p>Please note that certain functions were removed from the aguaclara package as the underlying equations are under suspicison. As a result, this code for this section cannot be run in its entirety and some sections have been commented out.</p>
 <p>Many of the fractal floc equations are available in the <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> file in the aguaclara repository. Look through <code class="docutils literal notranslate"><span class="pre">`floc_model.py</span></code> &lt;<a class="reference external" href="https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py">https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py</a>&gt;`_ within the aguaclara repository. The following constants are defined in that file. NTU has been defined as an approximate empirical relationship between the concentration of kaolin clay and the turbidity, such that 1 NTU is equivalent to 1.7 mg/L. The diameter of a primary clay particle is assumed to be 7 micrometers. The fractal dimension for flocs is defined as <code class="docutils literal notranslate"><span class="pre">DIM_FRACTAL</span></code> and is equal to 2.1. We are using PACl as a coagulant for this analysis, so you shall call <code class="docutils literal notranslate"><span class="pre">fm.PACl</span></code>, when a function within <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> requires ‘coag’ as an input.</p>
 <p>Whenever possible, use variables defined within <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> instead of redefining them. Relevant variables defined in <code class="docutils literal notranslate"><span class="pre">floc_model.py</span></code> include:</p>
@@ -301,7 +296,7 @@ The average distance between clay particles at 1 NTU is 0.654 mm</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, AguaClara Reach.</p>
+    <p>&#169; Copyright 2024, AguaClara Reach.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

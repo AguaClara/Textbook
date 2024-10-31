@@ -10,12 +10,9 @@
 Flocculation Model Solution
 ***************************
 
-`Remember to run this code blok prior to reviewing the solutions to ensure all functions are imported <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=i0Xa-13Uyu33&line=7&uniqifier=1>`_
+`Remember to run this code block prior to reviewing the solutions to ensure all functions are imported <https://colab.research.google.com/drive/1HhsaTHEzVKtkoiCQF-XnD0ssGJ93DsXn#scrollTo=i0Xa-13Uyu33&line=7&uniqifier=1>`_
 
 Please note that certain functions were removed from the aguaclara package as the underlying equations are under suspicison. As a result, this code for this section cannot be run in its entirety and some sections have been commented out.
-
-
-.. todo:: Review this file after the new AguaClara code is released.
 
 Many of the fractal floc equations are available in the ``floc_model.py`` file in the aguaclara repository. Look through ```floc_model.py`` <https://github.com/AguaClara/aguaclara/blob/master/aguaclara/research/floc_model.py>`_ within the aguaclara repository. The following constants are defined in that file. NTU has been defined as an approximate empirical relationship between the concentration of kaolin clay and the turbidity, such that 1 NTU is equivalent to 1.7 mg/L. The diameter of a primary clay particle is assumed to be 7 micrometers. The fractal dimension for flocs is defined as ``DIM_FRACTAL`` and is equal to 2.1. We are using PACl as a coagulant for this analysis, so you shall call ``fm.PACl``, when a function within ``floc_model.py`` requires ‘coag’ as an input.
 

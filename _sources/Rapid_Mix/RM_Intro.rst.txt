@@ -217,8 +217,6 @@ Dissolved organic matter (DOM) includes humic substances, fulvic acids, and othe
 
 Because of its small size the DOM has a large surface per unit mass. Water that contains high DOM concentrations requires much higher coagulant dosages to achieve effective flocculation. Removal of DOM is a high priority for drinking water treatment plants because DOM both interferes with disinfection processes and produces disinfection by products. A significant fraction of DOM can be removed by coagulant nanoparticles.
 
-.. todo:: cite William's paper with model for flocculation of humic acid and clay suspension.
-
 .. _heading_Suspended_Solids_and_Coagulant:
 
 Suspended Solids

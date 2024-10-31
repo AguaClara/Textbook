@@ -23,8 +23,6 @@ Diffusion and Shear Transport Coagulant Nanoparticles to Clay
 
 The time required for shear and diffusion to transport coagulant nanoparticles to clay has previously been assumed to be a rapid process.
 
-.. todo:: Find references for time required for coagulant attachment to suspended particles.
-
 Our analysis suggests that this critical step may require significant time especially given our effort to reduce the time allotted for flocculation.
 
   - Turbulent eddies, viscous shear, and diffusion blends the coagulant with the raw water sufficiently (:ref:`in a few seconds<heading_Mixing_time>`) so that the coagulant precipitates and forms nanoparticles.

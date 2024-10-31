@@ -35,7 +35,6 @@ The Physics of Water Treatment Design
   Acknowledgements.rst
   Authors.rst
 
-
 .. toctree::
   :caption: Chapter 1: Introduction
   :maxdepth: 1
