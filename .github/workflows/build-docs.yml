@@ -19,6 +19,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements-dev.txt
     - name: Generate Docs
+      working-directory: ./Textbook
       run: |
         make html
         touch _build/html/.nojekyll
@@ -27,7 +28,7 @@ jobs:
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
         branch: gh-pages # The branch the action should deploy to.
-        folder: _build/html/ # The folder the action should deploy.
+        folder: Textbook/_build/html/ # The folder the action should deploy.
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
