@@ -8,7 +8,7 @@ Design information for the AguaClara flocculator is available in `the Entrance T
 
 
 Purpose and Description
------------------------
+~~~~~~~~~~~~~~
 
 
 The entrance tank (see :numref:`figure_spec_ET_Diagram_Labeled`) has multiple functions in a drinking water treatment plant.
@@ -47,6 +47,9 @@ G. Inject the coagulant and any other amendments required for flocculation
      12  Drain channel that connects to the main plant drain channel
      13  Pipe leading to the flocculator
     ===  ============
+
+Flow Path
+---------
 
 Raw water enters the the entrance tank as shown in :numref:`figure_spec_ET_Diagram_Labeled` and flows across the hoppers at the bottom of the tank. The first hopper contains an overflow pipe to waste any water entering the plant in excess of the plant flow rate. The overflow pipe has a nominal diameter of :sub:`($..et.overflow.ND) no-sub` inches, sized to handle the total plant flow rate. A :sub:`($..et.etHopper.drainND) no-sub` inch nominal diameter removable drain pipe stub is installed in each hopper, allowing the operator to discharge accumulated sediment from the hoppers while the plant is in operation.  
 
