@@ -21,10 +21,8 @@ extensions = ['sphinx.ext.doctest',
               'sphinx.ext.todo',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.disqus',
-              'sphinx_ext_substitution'
+              'sphinx_ext_substitution',
               ]
-
-
 
 
 substitute_mode = 'replace'
