@@ -8,7 +8,7 @@ Design information for the AguaClara flocculator is available in `the Entrance T
 
 
 Purpose and Description
-~~~~~~~~~~~~~~
+-----------------------
 
 
 The entrance tank (see :numref:`figure_spec_ET_Diagram_Labeled`) has multiple functions in a drinking water treatment plant.
@@ -71,7 +71,7 @@ Design Data
    Hopper angle,  :sub:`($..et.etHopper.AN) no-sub`
    Drain diameter,  :sub:`($..et.etHopper.drain.ND) no-sub`
 
-
+==========
 Trash Rack
 ==========
 
@@ -96,7 +96,7 @@ The trash rack area is sufficient such that the fractional clogging can be as hi
    String diameter, :sub:`($..et.trashRack.Dm) no-sub`
    Open space between strings, :sub:`($..et.trashRack.Sm) no-sub`
 
-
+=========================
 Sediment and Grit Removal
 =========================
 
@@ -109,7 +109,7 @@ The :sub:`($..et.etHopper.N) no-sub` hoppers collect sand and grit that then sli
 
 .. include:: lfom.rst
 
-
+=========================
 Linear Flow Orifice Meter
 =========================
 
