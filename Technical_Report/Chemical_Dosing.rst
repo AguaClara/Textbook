@@ -4,8 +4,13 @@
 Chemical Dosing
 *************************
 
+.. Design information for the AguaClara entrance tank is available in `the Entrance Tank Design chapter of The Physics of Water Treatment Design <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/ET_Design.html>`_.
+
+General
+-------
+
 Purpose and Description
-=======================
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The coagulation and disinfection processes require the precise dosage of coagulant to the plant influent and calcium hypochlorite to the plant effluent. To carry out this process without pumps, the AguaClara plant uses a hydraulic dosing system.
 
@@ -14,21 +19,19 @@ The main components of the system are:
 * Tanks to store the coagulant and chlorine stock solutions
 * An elevated platform to support the chemical storage tanks at the correct elevation for gravity powered dosing
 * A flow measurement calibration column for each chemical
-* A pair of constant level tank with float valves that maintains a constant level for both chemical solutions
+* A pair of constant level tanks with float valves that maintain a constant level for both chemical solutions
 * Two dosing tube modules that provide the necessary relationship between pressure drop and chemical flow rates for each chemical
 * A chemical doser (the balance) that connects the water level in the plant's entrance tank to the level at the outlet of the chemical dosing system
 
 This system has the characteristic of maintaining a constant chemical **dosage** even as the flow rate through the plant varies. The plant operator can vary the chemical dosage directly, without doing any calculations, and without having to manipulate the system every time the flow rate in the plant changes. The AguaClara dosing system provides the added benefit of automatically turning off the chemical flow when there is no flow in the plant. This provides security against contamination with excess chemicals and chemical waste in the event that the plant is shut down inadvertently as may occur if the transmission line is damaged.
 
-General Specifications
-======================
-
+Specifications
+^^^^^^^^^^^^^^
 .. _table_Chemical_Dosing_General_Specifications:
-
 .. csv-table:: Chemical Dosing General Specifications
-   :header: "Parameter", "value"
+   :header: "Parameter", "Value"
    :align: left
-   :widths: 50 50
+   :widths: 70 30
    :class: wraptable
 
    Plant maximum flow rate,  :sub:`($..et.lfom.Qm_max) no-sub`
@@ -40,13 +43,16 @@ General Specifications
    Chlorine maximum dose, :sub:`($..chemPipes.chlorineDoseCm_max) no-sub`
    Chlorine maximum flow rate, :sub:`($..chemPipes.chlorineQu_max) no-sub`
 
-
-The constant level tank system provides convenient central controls for selection of stock tank, flow calibration, purging sediment, and selection of which of the duplicate chemical feed systems to use. The system has built in redundancy with duplicate systems for dosing each chemical to facilitate routine cleaning and maintenance.
+Chemical Stock Tanks
+--------------------
+Pending.
 
 Constant Level Tanks
-====================
+--------------------
 
-The dosing system controls are centralized around the constant level tanks (see :numref:`figure_clt_overview`).
+Purpose and Description
+^^^^^^^^^^^^^^^^^^^^^^^
+The constant level tank (CLT) system provides convenient central controls for selection of stock tank, flow calibration, purging sediment, and selection of which of the duplicate chemical feed systems to use. The system has built in redundancy with duplicate systems for dosing each chemical to facilitate routine cleaning and maintenance. The dosing system controls are centralized around the constant level tanks (see :numref:`figure_clt_overview`).
 
 .. _figure_clt_overview:
 
@@ -57,15 +63,17 @@ The dosing system controls are centralized around the constant level tanks (see 
 
     Overview of the constant level tank module mounted on the side of the chemical stock tank platform.
 
-    ===  ============
-    Key  Description
-    ===  ============
-     1   chlorine stock tank volume and flow calibration column sight tube 
-     2   constant level tank
-     3   dosing tube module
-    ===  ============
+.. csv-table:: CLT Overview Labeled Descriptions for Above Fig.
+   :header: "Key", "Description"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
 
-The constant level tanks prevent the changing chemical levels in the stock tanks from influencing the flow rate thru the dosing system. Float valves maintain a relatively constant level of chlorine and coagulant. The float valves are sized to provide up to the maximum chemical flow rate of :sub:`($..chemPipes.chemQu_max) no-sub` given the minimum head provided by stock tanks (:sub:`($..floatvalveHL_bod) no-sub`).
+   "1", "Chlorine stock tank volume and flow calibration column sight tube"
+   "2", "Constant level tank"
+   "3", "Dosing tube module"
+
+The constant level tanks prevent the changing chemical levels in the stock tanks from influencing the flow rate through the dosing system. Float valves maintain a relatively constant level of chlorine and coagulant. The float valves are sized to provide up to the maximum chemical flow rate of :sub:`($..chemPipes.chemQu_max) no-sub` given the minimum head provided by stock tanks (:sub:`($..floatvalveHL_bod) no-sub`).
 
 .. _figure_clt_details:
 
@@ -76,29 +84,33 @@ The constant level tanks prevent the changing chemical levels in the stock tanks
 
     Constant level tank with associated valves and dosing tubes. The valves with orange handles are compatible with chlorine and have chlorine resistant o'rings.
 
-    ===  ============
-    Key  Description
-    ===  ============
-     1   coagulant stock tank volume and flow calibration column sight tube
-     2   valve to select constant level tank and dosing tube set
-     3   float valve to provide constant level of coagulant
-     4   constant level tank
-     5   air vent to discharge bubbles from dosing tubes
-     6   valve to select which stock tank to use
-     7   dosing tubes to provide linear relationship between chemical flow rate and head loss
-     8   valve to drain constant level tank (for cleaning with vinegar)
-     9   sediment trap to capture particles from the stock tank
-     10  valve to purge the sediment trap
-     11  connection to feed line to the doser
-     12  valve to drain the line going to the doser (for cleaning with vinegar)
-    ===  ============
+.. csv-table:: CLT Detailed Labeled Descriptions for Above Fig.
+   :header: "Key", "Description"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
+
+   "1", "Coagulant stock tank volume and flow calibration column sight tube"
+   "2", "Valve to select constant level tank and dosing tube set"
+   "3", "Float valve to provide constant level of coagulant"
+   "4", "Constant level tank"
+   "5", "Air vent to discharge bubbles from dosing tubes"
+   "6", "Valve to select which stock tank to use"
+   "7", "Dosing tubes to provide linear relationship between chemical flow rate and head loss"
+   "8", "Valve to drain constant level tank (for cleaning with vinegar)"
+   "9", "Sediment trap to capture particles from the stock tank"
+   "10", "Valve to purge the sediment trap"
+   "11", "Connection to feed line to the doser"
+   "12", "Valve to drain the line going to the doser (for cleaning with vinegar)"
 
 There is a pair of constant level tanks for each chemical feed. The specifications for each tank is given in :numref:`table_Constant_Level_Tank_Specifications`.
 
+Specifications
+^^^^^^^^^^^^^^
 .. _table_Constant_Level_Tank_Specifications:
 
 .. csv-table:: Constant level tank specifications
-   :header: "Parameter", "value"
+   :header: "Parameter", "Value"
    :align: left
    :widths: 50 50
    :class: wraptable
@@ -113,8 +125,10 @@ There is a pair of constant level tanks for each chemical feed. The specificatio
 
 
 Dosing Tubes
-============
+------------
 
+Purpose and Description
+^^^^^^^^^^^^^^^^^^^^^^^
 Dosing tubes use laminar flow in a long straight small diameter tube to establish a linear relationship between head loss and flow rate. The velocity in the tubes is limited to ensure that minor losses that scale with velocity squared remain less than :sub:`($..doserTubes.minorHL_pi) no-sub` of the maximum head loss, :sub:`($..doserTubes.HL_max) no-sub`, is from minor losses. 
 
 The number of dosing tubes is increased as needed to ensure that the maximum allowable tube velocity is not exceeded. The dosing tubes are mounted in a module 
@@ -128,24 +142,28 @@ The number of dosing tubes is increased as needed to ensure that the maximum all
 
     The dosing tubes are assembled in a module to facilitate cleaning and replacement.
 
-    ===  ============
-    Key  Description
-    ===  ============
-     1   reducer
-     2   union
-     3   part of union that is glued to the pipe shield and disk
-     4   dosing tubes
-     5   pipe shield that maintains the dosing tubes in tension 
-     6   PVC disk that is glued to the union and that has slightly undersized holes for the dosing tubes
-     7   isometric view of the union showing that the dosing tubes are visible above the disk
-    ===  ============
+.. csv-table:: Dosing Tubes Labeled Descriptions for Above Fig.
+   :header: "Key", "Description"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
 
+   "1", "Reducer"
+   "2", "Union"
+   "3", "Part of union that is glued to the pipe shield and disk"
+   "4", "Dosing tubes"
+   "5", "Pipe shield that maintains the dosing tubes in tension"
+   "6", "PVC disk that is glued to the union and that has slightly undersized holes for the dosing tubes"
+   "7", "Isometric view of the union showing that the dosing tubes are visible above the disk"
+
+Specifications
+^^^^^^^^^^^^^^^
 The coagulant dosing tube specifications are given below.
 
 .. _table_Coagulant_Dosing_Tube_Specifications:
 
 .. csv-table:: Coagulant dosing tube specifications
-   :header: "Parameter", "value"
+   :header: "Parameter", "Value"
    :align: left
    :widths: 50 50
    :class: wraptable
@@ -161,7 +179,7 @@ The chlorine dosing tube specifications are given below.
 .. _table_Chlorine_Dosing_Tube_Specifications:
 
 .. csv-table:: Chlorine dosing tube specifications
-   :header: "Parameter", "value"
+   :header: "Parameter", "Value"
    :align: left
    :widths: 50 50
    :class: wraptable
@@ -174,11 +192,11 @@ The chlorine dosing tube specifications are given below.
   
 
 Doser
-=====
+-----
 
 Pending.
 
 Injection Points
-================
+-----------------
 
 Pending.

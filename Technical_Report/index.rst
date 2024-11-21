@@ -18,28 +18,32 @@ AguaClara Technical Report for San Juan Planes
   Introduction.rst
 
 .. toctree::
-  :caption: Chapter 1: Preparation for Treatment
+  :caption: Chapter 1: Chemical Dosing
+  :maxdepth: 1
+
+  Chemical_Dosing.rst
+
+.. toctree::
+  :caption: Chapter 2: Entrance Tank
   :maxdepth: 1
 
   Entrance_Tank.rst
-  Chemical_Dosing.rst
-  Chemical_Stock_Tanks.rst
 
 .. toctree::
-  :caption: Chapter 2: Flocculator
+  :caption: Chapter 3: Flocculator
   :maxdepth: 1
 
   Flocculator.rst
 
 
 .. toctree::
-  :caption: Chapter 3: Clarifier
+  :caption: Chapter 4: Clarifier
   :maxdepth: 1
 
   Clarifier.rst
 
 .. toctree::
-  :caption: Chapter 4: Stacked Rapid Sand Filtration
+  :caption: Chapter 5: Stacked Rapid Sand Filtration
   :maxdepth: 1
 
   StaRS.rst
