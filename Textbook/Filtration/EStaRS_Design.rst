@@ -58,3 +58,56 @@ Elevation considerations
 ========================
 
 The head loss through the sand during backwash is equal to the settled depth of sand. This means that the water level in the top inlet pipe will drop by an amount equal to the depth of the sand. That means that the bottom of the inlet tank must be ABOVE the top of the sand + the OD of the trunk + head loss in the backwash trunk inlet.
+
+Rectangular tank option
+=======================
+
+As of 2024 the best option for fabricating EStaRS filters seems to be from HDPE sheets welded together to create rectangular tanks. The rectangular tank option eliminates the challenges of providing support to the branches in the round EStaRS
+
+Structural Analysis of Rectangular tank 
+
+
+Equation for deflection of simple beam with uniform loading with sliding support. This will be a conservative analysis because the ends of the PVC sheet continue across the next support and thus there is an additional constraint at the support points. The PVC is not able to rotate at the support points. 
+[equation source](https://ocw.nthu.edu.tw/ocw/upload/8/258/Chapter_9-98.pdf)
+
+$$\delta = \frac{5qL^4}{384EI}$$
+
+E is the modulus of elasticity, Young's modulus or the tensile modulus and is the material's stiffness
+
+For a rectangle
+$$I_x = \frac{b h^3}{12}$$
+where b is the width of the rectangle and h is the height. h is thus the thickness, t, of the PVC.
+
+Pressure is force per area or force per length per width
+$$ P = \frac{F}{A} = \frac{q}{b}$$
+
+Now combine the previous 3 equations to get deflection, $\delta$ as a function of the pressure and substitute t for h.
+
+$$\delta = \frac{5PbL^4}{384E}\frac{12}{b t^3}$$
+
+As expected b cancels out
+
+$$\delta = \frac{5P L^4}{32E h^3}$$
+
+Pressure is a function of depth
+$$ P = \rho g \bar h_w$$
+
+Substituting into the deflection equation we obtain
+
+$$\delta = \frac{5 \rho g \bar h_w L^4}{32E t^3}$$
+
+Solve for the allowed span between supports, W.
+
+$$W = \left(\frac{32E t^3\delta}{5 \rho g \bar h_w }\right)^{1/4} $$
+
+We need an equation that calculates the elevation of the next horizontal support, $h_{w_{i+1}}$ given the elevation of a horizontal support, $h_{w_i}$ and the angle of the wall relative to the horizontal, $\theta$.
+
+$$ \bar h_w = \frac{h_{w_i} + h_{w_{i+1}}}{2}$$
+
+$$ W = \frac{h_{w_{i+1}} - h_{w_i}}{sin(\theta)}$$
+
+We will use a system of 3 equations and iteration to solve at each step. First assume that $h_{w_{i+1}}$ = $h_{w_i}$, solve for W, then calculate a new $h_{w_{i+1}}$ and repeat.
+
+Rearrange previous equation to get $h_{w_{i+1}}$ as a function of W.
+
+$$ h_{w_{i+1}} = W sin(\theta) + h_{w_i} $$
