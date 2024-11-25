@@ -160,12 +160,12 @@ There are three types of inlet branches (:numref:`figure_filter_inlet_branches`)
     :widths: 5 25 62
     :class: wraptable
 
-    1, Inlet channel, receives the water from :sub:`($..filter.pipes.clarified.N) no-sub` clarified water pipe coming from the clarifier and distributes the water to :sub:`($..filter.fiPipes.bay.N) no-sub` filter chambers
-    2, Wide weir, uses head loss to divide the flow equally between the filter chambers 
-    3, Removable gate, can be removed to provide full design flow to a filter during backwash
-    4, Bypass channel, provides option to bypass the filter by swapping the LFOM and bypass pipes
-    5, LFOM, measures the flow rate into the filter
-    6, Bypass pipe, pipe stub that can be swapped with the lfom to bypass the filter
+    1, Inlet channel, Receives the water from :sub:`($..filter.pipes.clarified.N) no-sub` clarified water pipe coming from the clarifier and distributes the water to :sub:`($..filter.fiPipes.bay.N) no-sub` filter chambers
+    2, Wide weir, Uses head loss to divide the flow equally between the filter chambers 
+    3, Removable gate, Can be removed to provide full design flow to a filter during backwash
+    4, Bypass channel, Provides option to bypass the filter by swapping the LFOM and bypass pipes
+    5, LFOM, Measures the flow rate into the filter
+    6, Bypass pipe, Pipe stub that can be swapped with the lfom to bypass the filter
 
 .. _table_Filter_inlet_tanks:
 
@@ -175,12 +175,12 @@ There are three types of inlet branches (:numref:`figure_filter_inlet_branches`)
     :widths: 5 25 62
     :class: wraptable
 
-    7, Inlet tank, distributes the clarified water to the 4 filter inlets
-    8, Overflow, automatically diverts clarified water to the pipe gallery when the filter head loss exceeds the maximum design value
-    9, Bubble weir, lifts bubbles to prevent them from entering the inlets to the filter
-    10, Backwash orifice plate, adds head loss to filter inlet 1 during filtration so that it has the same head loss as the other inlets. Removed during backwash.
-    11, Backwash trunk, deliver water from the inlet tank to the filter chamber during filtration and during backwash
-    12, Inlet trunks, deliver water from the inlet tank to the filter chamber during filtration
+    7, Inlet tank, Distributes the clarified water to the 4 filter inlets
+    8, Overflow, Automatically diverts clarified water to the pipe gallery when the filter head loss exceeds the maximum design value
+    9, Bubble weir, Lifts bubbles to prevent them from entering the inlets to the filter
+    10, Backwash orifice plate, Adds head loss to filter inlet 1 during filtration so that it has the same head loss as the other inlets. Removed during backwash.
+    11, Backwash trunk, Deliver water from the inlet tank to the filter chamber during filtration and during backwash
+    12, Inlet trunks, Deliver water from the inlet tank to the filter chamber during filtration
 
 .. _table_Filter_outlet_tank:    
 
@@ -190,13 +190,13 @@ There are three types of inlet branches (:numref:`figure_filter_inlet_branches`)
     :widths: 5 25 62
     :class: wraptable
 
-    13, Outlet tank, collects filtered water from the 3 outlet trunks
-    14, Outlet trunks, deliver water from the filter chamber to the outlet tank during filtration
-    15, Filter to waste, dumps filtered water to the pipe gallery. Remove the pipe stub after backwash to waste filtered water that doesn't meet treatment standards.
-    16, Filtered water weir, enables filtering to waste
-    17, Finished water tank, adds chlorine to the filtered water and delivers the water to the finished water pipe
-    18, Chlorination conduit, provides a path for a chlorination tube to drip into the water exiting from one of the filters
-    19, Finished water pipe, delivers the finished water to the community water storage tank
+    13, Outlet tank, Collects filtered water from the 3 outlet trunks
+    14, Outlet trunks, Deliver water from the filter chamber to the outlet tank during filtration
+    15, Filter to waste, Dumps filtered water to the pipe gallery. Remove the pipe stub after backwash to waste filtered water that doesn't meet treatment standards.
+    16, Filtered water weir, Enables filtering to waste
+    17, Finished water tank, Adds chlorine to the filtered water and delivers the water to the finished water pipe
+    18, Chlorination conduit, Provides a path for a chlorination tube to drip into the water exiting from one of the filters
+    19, Finished water pipe, Delivers the finished water to the community water storage tank
 
 .. _table_Filter_chamber:    
 
@@ -206,13 +206,13 @@ There are three types of inlet branches (:numref:`figure_filter_inlet_branches`)
     :widths: 5 25 62
     :class: wraptable
 
-    20, Filter chamber, contains the filter internal piping and filtered sand
-    21, Filter chamber drain, drains water for maintenance operations 
-    22, Sand dump pipe, empties the sand from the filter
-    23, Siphon pipe, discharges backwash to the pipe gallery
-    24, Siphon air valve, controls the siphon and switches the filter from filtration to backwash and back again
-    25, Siphon water seal, prevents the water from exiting the siphon at the end of the backwash
-    26, Sand, provides the filter media and pore structure for capture of flocs and particles
+    20, Filter chamber, Contains the filter internal piping and filtered sand
+    21, Filter chamber drain, Drains water for maintenance operations 
+    22, Sand dump pipe, Empties the sand from the filter
+    23, Siphon pipe, Discharges backwash to the pipe gallery
+    24, Siphon air valve, Controls the siphon and switches the filter from filtration to backwash and back again
+    25, Siphon water seal, Prevents the water from exiting the siphon at the end of the backwash
+    26, Sand, Provides the filter media and pore structure for capture of flocs and particles
 
 .. _table_Filter_internal_piping:    
 
@@ -222,15 +222,15 @@ There are three types of inlet branches (:numref:`figure_filter_inlet_branches`)
     :widths: 5 25 62
     :class: wraptable
 
-    27, Band clamps, attach the trunks to the pipes that are embedded in the filter tank chamber wall
-    28, Winged branch pipes, injects clarified water into the sand bed
-    29, Slotted branch pipes, extracts filtered water from the sand bed
-    30, Receptor pipes, terminate and support the winged and slotted branch pipes
-    31, Trunk spacer, supports the end of the trunks
-    32, Receptor spacer, supports the receptor spacers
-    33, Anchor bolts, connects the cable to the concrete slab
-    34, Cable, prevents the internal pipe modules from lifting during backwash initation
-    35, Hose clamp, "tightens all of the connections between branches, receptors, and trunks to prevent sand leaks"
+    27, Band clamps, Attach the trunks to the pipes that are embedded in the filter tank chamber wall
+    28, Winged branch pipes, Injects clarified water into the sand bed
+    29, Slotted branch pipes, Extracts filtered water from the sand bed
+    30, Receptor pipes, Terminate and support the winged and slotted branch pipes
+    31, Trunk spacer, Supports the end of the trunks
+    32, Receptor spacer, Supports the receptor spacers
+    33, Anchor bolts, Connects the cable to the concrete slab
+    34, Cable, Prevents the internal pipe modules from lifting during backwash initation
+    35, Hose clamp, "Tightens all of the connections between branches, receptors, and trunks to prevent sand leaks"
 
 
 .. _table_Filter_appurtenances:    
@@ -241,12 +241,12 @@ There are three types of inlet branches (:numref:`figure_filter_inlet_branches`)
     :widths: 5 25 62
     :class: wraptable
 
-    36, sand tank, "receives, drains, and temporarily stores filter sand during filter maintenance operations"
-    37, sand tank overflow weir, excess water discharges over this weir
-    38, slotted sand drain, discharges water from the sand
-    39, sand tank overflow drain, discharges overflow water from the sand tank
-    40, pipe gallery and filter backwash water tank, option to use this tank to enable recycle of backwash water 
-    41, pipe gallery drain, discharges water from the pipe gallery
+    36, Sand tank, "Receives, drains, and temporarily stores filter sand during filter maintenance operations"
+    37, Sand tank overflow weir, Excess water discharges over this weir
+    38, Slotted sand drain, Discharges water from the sand
+    39, Sand tank overflow drain, Discharges overflow water from the sand tank
+    40, Pipe gallery and filter backwash water tank, Option to use this tank to enable recycle of backwash water 
+    41, Pipe gallery drain, Discharges water from the pipe gallery
 
 
 
