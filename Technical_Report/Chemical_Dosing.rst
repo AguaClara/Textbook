@@ -4,7 +4,7 @@
 Chemical Dosing
 *************************
 
-.. Design information for the AguaClara entrance tank is available in `the Entrance Tank Design chapter of The Physics of Water Treatment Design <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/ET_Design.html>`_.
+.. add design information from textbook where it exists 
 
 General
 -------
@@ -24,6 +24,12 @@ The main components of the system are:
 * A chemical doser (the balance) that connects the water level in the plant's entrance tank to the level at the outlet of the chemical dosing system
 
 This system has the characteristic of maintaining a constant chemical **dosage** even as the flow rate through the plant varies. The plant operator can vary the chemical dosage directly, without doing any calculations, and without having to manipulate the system every time the flow rate in the plant changes. The AguaClara dosing system provides the added benefit of automatically turning off the chemical flow when there is no flow in the plant. This provides security against contamination with excess chemicals and chemical waste in the event that the plant is shut down inadvertently as may occur if the transmission line is damaged.
+
+Chemical Flow Path
+^^^^^^^^^^^^^^^^^^
+Pending.
+
+.. may need a photo for this
 
 Specifications
 ^^^^^^^^^^^^^^
@@ -63,7 +69,7 @@ The constant level tank (CLT) system provides convenient central controls for se
 
     Overview of the constant level tank module mounted on the side of the chemical stock tank platform.
 
-.. csv-table:: CLT Overview Labeled Descriptions for Above Fig.
+.. csv-table:: CLT Overview Figure Key
    :header: "Key", "Description"
    :align: left
    :widths: 20 80
@@ -84,7 +90,7 @@ The constant level tanks prevent the changing chemical levels in the stock tanks
 
     Constant level tank with associated valves and dosing tubes. The valves with orange handles are compatible with chlorine and have chlorine resistant o'rings.
 
-.. csv-table:: CLT Detailed Labeled Descriptions for Above Fig.
+.. csv-table:: CLT Details Figure Key
    :header: "Key", "Description"
    :align: left
    :widths: 20 80
@@ -142,7 +148,7 @@ The number of dosing tubes is increased as needed to ensure that the maximum all
 
     The dosing tubes are assembled in a module to facilitate cleaning and replacement.
 
-.. csv-table:: Dosing Tubes Labeled Descriptions for Above Fig.
+.. csv-table:: Dosing Tubes Figure Key
    :header: "Key", "Description"
    :align: left
    :widths: 20 80

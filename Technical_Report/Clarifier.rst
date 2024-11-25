@@ -4,7 +4,7 @@
 Clarifier
 *********
 
-Design information for the AguaClara clarifier is available in `the Clarifier Design chapter of The Physics of Water Treatment Design <https://aguaclara.github.io/Textbook/Clarification/Clarifier_Design.html>`_
+Design information for the AguaClara clarifier is available in `the Clarifier Design chapter of The Physics of Water Treatment Design <https://aguaclara.github.io/Textbook/Clarification/Clarifier_Design.html>`_.
 
 
 Purpose and Description
@@ -14,41 +14,6 @@ The clarifier removes the majority of the particles and pathogens from the raw w
 
 #. Floc filter - Flocs that form a fluidized bed in the lower part of the clarifier are able to capture small particles as water flows through the porous flocs. 
 #. Plate settlers -  Particles with a terminal velocity greater than the plate settler capture velocity (:sub:`($..clarifier.captureVm) no-sub`) settle unto the plates and then slide back down into the floc filter as an avalanche
-
-.. _table_Clarifier_Key:
-
-.. csv-table:: Clarifier Figure Key.
-    :header: "Key", "Name", "Purpose"
-    :align: left
-    :widths: 10 40 50
-    :class: wraptable
-
- 
-    1, Outlet collector, Transports the clarified water out of the clarifier chamber 
-    2, Plate settlers, Capture particles that have a terminal velocity greater than the capture velocity
-    3, Outlet collector channel drain, Used during plant maintenance to clean this channel
-    4, Outlet channel drain, Dumps clarified water that doesn't meet specifications
-    5, Inlet dump channel drain, Sends poorly flocculated water to the plant waste channel when the inlet collectors are blocked with pipe stubs
-    6, Sludge bleed, Dumps flocs from the floc hopper cones
-    7, Clarifier chamber drain, Drains the clarifier for maintenance
-    8, Sludge hopper access port, Enables inserting a manual mixer into the floc hopper cone to fluidize the sludge
-    9, Inlet collector, Delivers flocculated water to the diffusers
-    10, Inlet channel, Delivers flocculated water to the inlet collectors
-    11, Inlet dump weir, Overflows when the inlet collectors are shut off to prevent poorly flocculated water from entering the clarifier
-    12, Inlet dump channel, Dumps poorly flocculated water
-    13, Divider wall, Separates flocculated water from clarified water
-    14, Outlet channel, Delivers clarified water to pipes carrying clarified water to the filters
-    15, Outlet weir, Sets the height of water in the clarifiers and helps ensure equal flow distribution to all of the clarifier chambers
-    16, Outlet collector channel, Merges the clarified water from all of the outlet collectors and ensures that all of the clarifier chambers have the same water level
-    17, Plate settler support frame, Supports the plate settler modules
-    18, Inlet collector diffusers, Create a line jet that extends the full length of the clarifier chamber
-    19, Jet reverser half pipe, Reverses the direction of the jets created by the diffusers so that the flow is vertically upward so it can resuspend flocs that have settled on the main chamber hopper
-    20, Floc filter weir, Sets the depth of the floc filter in the main chamber
-    21, Floc hopper cone, Concentrates the sludge before discharge
-    22, Main chamber hopper, Ensures that all flocs that settle to the bottom of the clarifier are resuspended by the diffuser jets 
-    23, Main chamber water surface, Maximum water level in the main chamber is set by the outlet weir and the head loss through the outlet collector orifices
-    24, Floc filter top surface, Marks the transition between the floc filter and the plate settlers
-    25, Inlet collector air vent, Discharges air when the main chamber is being filled with water
 
 
 .. _figure_clarifier_top:
@@ -140,7 +105,44 @@ The clarifier removes the majority of the particles and pathogens from the raw w
 
     Diffuser showing isometric, side, and bottom views.
 
-Design Data
+
+.. _table_Clarifier_Key:
+
+.. csv-table:: Clarifier Figure Key
+    :header: "Key", "Name", "Purpose"
+    :align: left
+    :widths: 10 40 50
+    :class: wraptable
+
+ 
+    1, Outlet collector, Transports the clarified water out of the clarifier chamber 
+    2, Plate settlers, Capture particles that have a terminal velocity greater than the capture velocity
+    3, Outlet collector channel drain, Used during plant maintenance to clean this channel
+    4, Outlet channel drain, Dumps clarified water that doesn't meet specifications
+    5, Inlet dump channel drain, Sends poorly flocculated water to the plant waste channel when the inlet collectors are blocked with pipe stubs
+    6, Sludge bleed, Dumps flocs from the floc hopper cones
+    7, Clarifier chamber drain, Drains the clarifier for maintenance
+    8, Sludge hopper access port, Enables inserting a manual mixer into the floc hopper cone to fluidize the sludge
+    9, Inlet collector, Delivers flocculated water to the diffusers
+    10, Inlet channel, Delivers flocculated water to the inlet collectors
+    11, Inlet dump weir, Overflows when the inlet collectors are shut off to prevent poorly flocculated water from entering the clarifier
+    12, Inlet dump channel, Dumps poorly flocculated water
+    13, Divider wall, Separates flocculated water from clarified water
+    14, Outlet channel, Delivers clarified water to pipes carrying clarified water to the filters
+    15, Outlet weir, Sets the height of water in the clarifiers and helps ensure equal flow distribution to all of the clarifier chambers
+    16, Outlet collector channel, Merges the clarified water from all of the outlet collectors and ensures that all of the clarifier chambers have the same water level
+    17, Plate settler support frame, Supports the plate settler modules
+    18, Inlet collector diffusers, Create a line jet that extends the full length of the clarifier chamber
+    19, Jet reverser half pipe, Reverses the direction of the jets created by the diffusers so that the flow is vertically upward so it can resuspend flocs that have settled on the main chamber hopper
+    20, Floc filter weir, Sets the depth of the floc filter in the main chamber
+    21, Floc hopper cone, Concentrates the sludge before discharge
+    22, Main chamber hopper, Ensures that all flocs that settle to the bottom of the clarifier are resuspended by the diffuser jets 
+    23, Main chamber water surface, Maximum water level in the main chamber is set by the outlet weir and the head loss through the outlet collector orifices
+    24, Floc filter top surface, Marks the transition between the floc filter and the plate settlers
+    25, Inlet collector air vent, Discharges air when the main chamber is being filled with water
+
+
+Specifications
 ===========
 
 .. _table_Clarifier_Design:

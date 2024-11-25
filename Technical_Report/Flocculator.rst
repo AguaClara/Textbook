@@ -4,7 +4,7 @@
 Flocculator
 ***********
 
-Design information for the AguaClara flocculator is available in `the Flocculation Design chapter of The Physics of Water Treatment Design <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html>`_
+Design information for the AguaClara flocculator is available in the `Flocculation Design chapter of The Physics of Water Treatment Design <https://aguaclara.github.io/Textbook/Flocculation/Floc_Design.html>`_.
 
 
 Purpose and Description
@@ -52,18 +52,19 @@ In an AguaClara plant, the flocculator is a series of channels with sheets or ba
 
     View of an AguaClara flocculator with one wall removed. Blue arrows indicate the direction of water flow between the baffles.
 
-    ===  ============
-    Key  Description
-    ===  ============
-     1   water surface that slopes downward in the direction of flow 
-     2   port through the channel wall for flow to pass into the next channel
-     3   lower baffle
-     4   upper baffle
-     5   location where water enters this channel through the hidden wall
-     6   pipe stub that can be removed to drain the flocculator
-     7   channel connecting the flocculator to the clarifier
-    ===  ============
+.. csv-table:: Flocculator Figure Key
+    :header: "Key", "Description"
+    :align: left
+    :widths: 20 80
+    :class: wraptable
 
+    "1", "Water surface that slopes downward in the direction of flow" 
+    "2", "Port through the channel wall for flow to pass into the next channel"
+    "3", "Lower baffle"
+    "4", "Upper baffle"
+    "5", "Location where water enters this channel through the hidden wall"
+    "6", "Pipe stub that can be removed to drain the flocculator"
+    "7", "Channel connecting the flocculator to the clarifier"
 
 .. _figure_floc_baffle_module:
 
@@ -74,14 +75,15 @@ In an AguaClara plant, the flocculator is a series of channels with sheets or ba
 
     The AguaClara modular baffle assembly simplifies both fabrication and maintenance. The baffle assembly can be elevated, as shown in the assembly on the right, to allow water to flow under the baffles during flocculator cleaning and during filling and emptying.
 
-    ===  ============
-    Key  Description
-    ===  ============
-     1   polycarbonate baffle 
-     2   PVC pipe frame
-     3   temporary pipes used to elevate a baffle assembly while the flocculator is filled with water
-    ===  ============
+.. csv-table:: Flocculator Baffle Figure Key
+    :header: "Key", "Description"
+    :align: left
+    :widths: 20 80
+    :class: wraptable
 
+    "1", "Polycarbonate baffle"
+    "2", "PVC pipe frame"
+    "3", "Temporary pipes used to elevate a baffle assembly while the flocculator is filled with water"
 
 .. _figure_floc_baffle_spacer_detail:
 
@@ -92,22 +94,25 @@ In an AguaClara plant, the flocculator is a series of channels with sheets or ba
 
     The washer is located downstream of the polycarbonate baffle so that the force of the water on the baffle is first transferred to the washer before being transferred to the pipe spacer to reduce the forces applied near the hole through the baffle.
 
-    ===  ============
-    Key  Description
-    ===  ============
-     1   polycarbonate baffle 
-     2   plastic washer
-     3   spacer pipe that sets the spacing between baffles
-     4   frame pipe that connects everything together
-    ===  ============
+.. csv-table:: Baffle/Spacer Detail Figure Key
+    :header: "Key", "Description"
+    :align: left
+    :widths: 20 80
+    :class: wraptable
+   
+    "1", "Polycarbonate baffle" 
+    "2", "Plastic washer"
+    "3", "Spacer pipe that sets the spacing between baffles"
+    "4", "Frame pipe that connects everything together"
 
-Design Data
+
+Specifications
 ===========
 
 .. _table_Flocculator_Civil_Construction_Parameters:
 
-.. csv-table:: Flocculator Civil Construction Parameters.
-    :header: "Parameter", "value"
+.. csv-table:: Flocculator Civil Construction Parameters
+    :header: "Parameter", "Value"
     :align: left
     :widths: 50 50
     :class: wraptable
@@ -128,8 +133,8 @@ Design Data
 
 .. _table_Flocculator_Hydraulic_Parameters:
 
-.. csv-table:: Flocculator Hydraulic Parameters.
-   :header: "Parameter", "value"
+.. csv-table:: Flocculator Hydraulic Parameters
+   :header: "Parameter", "Value"
    :align: left
    :widths: 50 50
    :class: wraptable
@@ -149,7 +154,7 @@ Design Data
 .. _table_Flocculator_Pipe_Parameters:
 
 .. csv-table:: Flocculator Pipe Parameters.
-   :header: "Parameter", "value"
+   :header: "Parameter", "Value"
    :align: left
    :widths: 50 50
    :class: wraptable
@@ -157,5 +162,3 @@ Design Data
     Drains,   :sub:`($..floc.drain.ND) no-sub`
     Baffle frame nominal diameter,    :sub:`($..floc.baffleSet.baffle.pipe.ND) no-sub`
     Baffle spacers nominal diameter,   :sub:`($..floc.baffleSet.baffle.spacer.ND) no-sub`
-
-

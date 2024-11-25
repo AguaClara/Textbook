@@ -5,7 +5,7 @@ Stacked Rapid Sand Filter
 *************************
 
 
-Design information for the AguaClara Stacked Rapid Sand Filter (StaRS) is available in `the Open Stacked Rapid Sand Filter Design chapter of The Physics of Water Treatment Design <https://aguaclara.github.io/Textbook/Filtration/Filtration_Design.html>`_
+Design information for the AguaClara Stacked Rapid Sand Filter (StaRS) is available in `the Open Stacked Rapid Sand Filter Design chapter of The Physics of Water Treatment Design <https://aguaclara.github.io/Textbook/Filtration/Filtration_Design.html>`_.
 
 
 Purpose and Description
@@ -152,10 +152,6 @@ There are three types of inlet branches (:numref:`figure_filter_inlet_branches`)
 
 
 
-Filter Keys
-===========
-
-
 .. _table_Distribution_to_the_filter_inlet_tanks:
 
 .. csv-table:: Distribution to the filter inlet tanks. |filter_distribution_icon|
@@ -164,12 +160,12 @@ Filter Keys
     :widths: 5 25 62
     :class: wraptable
 
-    1, inlet channel, receives the water from :sub:`($..filter.pipes.clarified.N) no-sub` clarified water pipe coming from the clarifier and distributes the water to :sub:`($..filter.fiPipes.bay.N) no-sub` filter chambers
-    2, wide weir, uses head loss to divide the flow equally between the filter chambers 
-    3, removable gate, can be removed to provide full design flow to a filter during backwash
-    4, bypass channel, provides option to bypass the filter by swapping the LFOM and bypass pipes
+    1, Inlet channel, receives the water from :sub:`($..filter.pipes.clarified.N) no-sub` clarified water pipe coming from the clarifier and distributes the water to :sub:`($..filter.fiPipes.bay.N) no-sub` filter chambers
+    2, Wide weir, uses head loss to divide the flow equally between the filter chambers 
+    3, Removable gate, can be removed to provide full design flow to a filter during backwash
+    4, Bypass channel, provides option to bypass the filter by swapping the LFOM and bypass pipes
     5, LFOM, measures the flow rate into the filter
-    6, bypass pipe, pipe stub that can be swapped with the lfom to bypass the filter
+    6, Bypass pipe, pipe stub that can be swapped with the lfom to bypass the filter
 
 .. _table_Filter_inlet_tanks:
 
@@ -179,12 +175,12 @@ Filter Keys
     :widths: 5 25 62
     :class: wraptable
 
-    7, inlet tank, distributes the clarified water to the 4 filter inlets
-    8, overflow, automatically diverts clarified water to the pipe gallery when the filter head loss exceeds the maximum design value
-    9, bubble weir, lifts bubbles to prevent them from entering the inlets to the filter
-    10, backwash orifice plate, adds head loss to filter inlet 1 during filtration so that it has the same head loss as the other inlets. Removed during backwash.
-    11, backwash trunk, deliver water from the inlet tank to the filter chamber during filtration and during backwash
-    12, inlet trunks, deliver water from the inlet tank to the filter chamber during filtration
+    7, Inlet tank, distributes the clarified water to the 4 filter inlets
+    8, Overflow, automatically diverts clarified water to the pipe gallery when the filter head loss exceeds the maximum design value
+    9, Bubble weir, lifts bubbles to prevent them from entering the inlets to the filter
+    10, Backwash orifice plate, adds head loss to filter inlet 1 during filtration so that it has the same head loss as the other inlets. Removed during backwash.
+    11, Backwash trunk, deliver water from the inlet tank to the filter chamber during filtration and during backwash
+    12, Inlet trunks, deliver water from the inlet tank to the filter chamber during filtration
 
 .. _table_Filter_outlet_tank:    
 
@@ -194,13 +190,13 @@ Filter Keys
     :widths: 5 25 62
     :class: wraptable
 
-    13, outlet tank, collects filtered water from the 3 outlet trunks
-    14, outlet trunks, deliver water from the filter chamber to the outlet tank during filtration
-    15, filter to waste, dumps filtered water to the pipe gallery. Remove the pipe stub after backwash to waste filtered water that doesn't meet treatment standards.
-    16, filtered water weir, enables filtering to waste
-    17, finished water tank, adds chlorine to the filtered water and delivers the water to the finished water pipe
-    18, chlorination conduit, provides a path for a chlorination tube to drip into the water exiting from one of the filters
-    19, finished water pipe, delivers the finished water to the community water storage tank
+    13, Outlet tank, collects filtered water from the 3 outlet trunks
+    14, Outlet trunks, deliver water from the filter chamber to the outlet tank during filtration
+    15, Filter to waste, dumps filtered water to the pipe gallery. Remove the pipe stub after backwash to waste filtered water that doesn't meet treatment standards.
+    16, Filtered water weir, enables filtering to waste
+    17, Finished water tank, adds chlorine to the filtered water and delivers the water to the finished water pipe
+    18, Chlorination conduit, provides a path for a chlorination tube to drip into the water exiting from one of the filters
+    19, Finished water pipe, delivers the finished water to the community water storage tank
 
 .. _table_Filter_chamber:    
 
@@ -210,13 +206,13 @@ Filter Keys
     :widths: 5 25 62
     :class: wraptable
 
-    20, filter chamber, contains the filter internal piping and filtered sand
-    21, filter chamber drain, drains water for maintenance operations 
-    22, sand dump pipe, empties the sand from the filter
-    23, siphon pipe, discharges backwash to the pipe gallery
-    24, siphon air valve, controls the siphon and switches the filter from filtration to backwash and back again
-    25, siphon water seal, prevents the water from exiting the siphon at the end of the backwash
-    26, sand, provides the filter media and pore structure for capture of flocs and particles
+    20, Filter chamber, contains the filter internal piping and filtered sand
+    21, Filter chamber drain, drains water for maintenance operations 
+    22, Sand dump pipe, empties the sand from the filter
+    23, Siphon pipe, discharges backwash to the pipe gallery
+    24, Siphon air valve, controls the siphon and switches the filter from filtration to backwash and back again
+    25, Siphon water seal, prevents the water from exiting the siphon at the end of the backwash
+    26, Sand, provides the filter media and pore structure for capture of flocs and particles
 
 .. _table_Filter_internal_piping:    
 
@@ -226,15 +222,15 @@ Filter Keys
     :widths: 5 25 62
     :class: wraptable
 
-    27, band clamps, attach the trunks to the pipes that are embedded in the filter tank chamber wall
-    28, winged branch pipes, injects clarified water into the sand bed
-    29, slotted branch pipes, extracts filtered water from the sand bed
-    30, receptor pipes, terminate and support the winged and slotted branch pipes
-    31, trunk spacer, supports the end of the trunks
-    32, receptor spacer, supports the receptor spacers
-    33, anchor bolts, connects the cable to the concrete slab
-    34, cable, prevents the internal pipe modules from lifting during backwash initation
-    35, hose clamp, "tightens all of the connections between branches, receptors, and trunks to prevent sand leaks"
+    27, Band clamps, attach the trunks to the pipes that are embedded in the filter tank chamber wall
+    28, Winged branch pipes, injects clarified water into the sand bed
+    29, Slotted branch pipes, extracts filtered water from the sand bed
+    30, Receptor pipes, terminate and support the winged and slotted branch pipes
+    31, Trunk spacer, supports the end of the trunks
+    32, Receptor spacer, supports the receptor spacers
+    33, Anchor bolts, connects the cable to the concrete slab
+    34, Cable, prevents the internal pipe modules from lifting during backwash initation
+    35, Hose clamp, "tightens all of the connections between branches, receptors, and trunks to prevent sand leaks"
 
 
 .. _table_Filter_appurtenances:    
@@ -254,8 +250,8 @@ Filter Keys
 
 
 
-Filter Design Parameters
-========================
+Specifications
+==============
 
 
 .. _table_Distribution_to_the_filter_inlet_tanks_design_parameters:
@@ -266,30 +262,30 @@ Filter Design Parameters
     :widths: 5 55 40
     :class: wraptable
    
-    1, **inlet channel**, 
-     , water depth, :sub:`($..filter.ioControls.ioChannelsHW) no-sub`
-     , width, :sub:`($..filter.ioControls.inletW) no-sub`
-    2, **wide weir**, 
-     , height, :sub:`($..filter.ioControls.wideWeir.H) no-sub`
-     , width, :sub:`($..filter.ioControls.wideWeir.W) no-sub`
-     , maximum head loss, :sub:`($..filter.ioControls.inletWeirHL) no-sub`
-    3, **removable gate**
-     , height, :sub:`($..filter.ioControls.gateOpening.H) no-sub`
-     , width, :sub:`($..filter.ioControls.gateOpening.W) no-sub`
-    4, **bypass channel**,
-     , width, :sub:`($..filter.ioControls.bypassW) no-sub`
+    1, **Inlet channel**, 
+     , Water depth, :sub:`($..filter.ioControls.ioChannelsHW) no-sub`
+     , Width, :sub:`($..filter.ioControls.inletW) no-sub`
+    2, **Wide weir**, 
+     , Height, :sub:`($..filter.ioControls.wideWeir.H) no-sub`
+     , Width, :sub:`($..filter.ioControls.wideWeir.W) no-sub`
+     , Maximum head loss, :sub:`($..filter.ioControls.inletWeirHL) no-sub`
+    3, **Removable gate**
+     , Height, :sub:`($..filter.ioControls.gateOpening.H) no-sub`
+     , Width, :sub:`($..filter.ioControls.gateOpening.W) no-sub`
+    4, **Bypass channel**,
+     , Width, :sub:`($..filter.ioControls.bypassW) no-sub`
     5, **LFOM**,
-     , nominal diameter, :sub:`($..filter.ioControls.lfom.ND) no-sub` inch
+     , Nominal diameter, :sub:`($..filter.ioControls.lfom.ND) no-sub` inch
      , SDR, :sub:`($..filter.ioControls.lfom.SDR) no-sub`
-     , number of rows of orifices, :sub:`($..filter.ioControls.lfom.rowN) no-sub`
-     , maximum flow rate, :sub:`($..filter.ioControls.lfom.Qm_max) no-sub`
-     , head loss at maximum flow, :sub:`($..filter.ioControls.lfom.HL_max) no-sub`
-     , diameter of orifices, :sub:`($..filter.ioControls.lfom.orificeD) no-sub`
-     , space between orifices measured on the outside of the pipe,  :sub:`($..filter.ioControls.lfom.orificeS) no-sub`
-     , orifices in each row starting from bottom row, :sub:`($..filter.ioControls.lfom.rowOrificeN_VEC) no-sub`
-     , elevation of each row from zero flow datum, :sub:`($..filter.ioControls.lfom.rowOrificeH_VEC) no-sub`
-    6, **bypass pipe**
-     , nominal diameter, :sub:`($..filter.ioControls.bypass.ND) no-sub` inch
+     , Number of rows of orifices, :sub:`($..filter.ioControls.lfom.rowN) no-sub`
+     , Maximum flow rate, :sub:`($..filter.ioControls.lfom.Qm_max) no-sub`
+     , Head loss at maximum flow, :sub:`($..filter.ioControls.lfom.HL_max) no-sub`
+     , Diameter of orifices, :sub:`($..filter.ioControls.lfom.orificeD) no-sub`
+     , Space between orifices measured on the outside of the pipe,  :sub:`($..filter.ioControls.lfom.orificeS) no-sub`
+     , Orifices in each row starting from bottom row, :sub:`($..filter.ioControls.lfom.rowOrificeN_VEC) no-sub`
+     , Elevation of each row from zero flow datum, :sub:`($..filter.ioControls.lfom.rowOrificeH_VEC) no-sub`
+    6, **Bypass pipe**
+     , Nominal diameter, :sub:`($..filter.ioControls.bypass.ND) no-sub` inch
      , SDR, :sub:`($..filter.ioControls.bypass.SDR) no-sub`
   
 .. _table_Inlet_tanks_design_parameters:
@@ -300,34 +296,34 @@ Filter Design Parameters
     :widths: 5 55 40
     :class: wraptable
  
-    7, **filter inlet tank**, 
-     , length, :sub:`($..filter.ioControls.inletL) no-sub`
-     , width, :sub:`($..filter.ioControls.inletW) no-sub`
-    8, **overflow**, 
-     , nominal diameter, :sub:`($..filter.ioControls.overflow.ND) no-sub` inch
+    7, **Filter inlet tank**, 
+     , Length, :sub:`($..filter.ioControls.inletL) no-sub`
+     , Width, :sub:`($..filter.ioControls.inletW) no-sub`
+    8, **Overflow**, 
+     , Nominal diameter, :sub:`($..filter.ioControls.overflow.ND) no-sub` inch
      , SDR, :sub:`($..filter.ioControls.overflow.SDR) no-sub`
-     , maximum water depth, :sub:`($..filter.ioControls.overflow.HW_max) no-sub`
-    9, **bubble weir**,
-     , height, :sub:`($..filter.ioControls.bubbleWeir.opening.H) no-sub`
-     , width, :sub:`($..filter.ioControls.bubbleWeir.opening.W) no-sub`
-    10, **backwash orifice plate**,
-     , orifice diameter, :sub:`($..filter.ioControls.bwOrifice.D) no-sub`
-    11, **backwash trunk**
-     , nominal diameter, :sub:`($..filter.fiPipes.bwTrunk.ND) no-sub` inch
+     , Maximum water depth, :sub:`($..filter.ioControls.overflow.HW_max) no-sub`
+    9, **Bubble weir**,
+     , Height, :sub:`($..filter.ioControls.bubbleWeir.opening.H) no-sub`
+     , Width, :sub:`($..filter.ioControls.bubbleWeir.opening.W) no-sub`
+    10, **Backwash orifice plate**,
+     , Orifice diameter, :sub:`($..filter.ioControls.bwOrifice.D) no-sub`
+    11, **Backwash trunk**
+     , Nominal diameter, :sub:`($..filter.fiPipes.bwTrunk.ND) no-sub` inch
      , SDR, :sub:`($..filter.fiPipes.bwTrunk.SDR) no-sub`
-     , maximum head loss during filtration, :sub:`($..filter.fiPipes.bwTrunk.inletfiHE) no-sub`
-     , maximum velocity during filtration, :sub:`($..filter.fiPipes.bwTrunk.fiV) no-sub`
-     , maximum head loss during backwash, :sub:`($..filter.fiPipes.bwTrunk.inletbwHE) no-sub`
-     , maximum velocity during filtration, :sub:`($..filter.fiPipes.bwTrunk.bwV) no-sub`
-    12, **inlet trunks**
-     , nominal diameter, :sub:`($..filter.fiPipes.trunk.ND) no-sub` inch
+     , Maximum head loss during filtration, :sub:`($..filter.fiPipes.bwTrunk.inletfiHE) no-sub`
+     , Maximum velocity during filtration, :sub:`($..filter.fiPipes.bwTrunk.fiV) no-sub`
+     , Maximum head loss during backwash, :sub:`($..filter.fiPipes.bwTrunk.inletbwHE) no-sub`
+     , Maximum velocity during filtration, :sub:`($..filter.fiPipes.bwTrunk.bwV) no-sub`
+    12, **Inlet trunks**
+     , Nominal diameter, :sub:`($..filter.fiPipes.trunk.ND) no-sub` inch
      , SDR, :sub:`($..filter.fiPipes.trunk.SDR) no-sub`
-     , maximum head loss during filtration, :sub:`($..filter.fiPipes.trunk.inletInnerHE) no-sub`
-     , inner trunks maximum velocity during filtration, :sub:`($..filter.fiPipes.trunk.innerV) no-sub`
-     , inlet 1 (backwash) pipe stub height, none
-     , inlet 2 pipe stub height above the slab,  :sub:`($..filter.HSF) no-sub`
-     , inlet 3 pipe stub height above the slab,  1.25 * :sub:`($..filter.HSF) no-sub`
-     , inlet 4 pipe stub height above the slab,  1.5 * :sub:`($..filter.HSF) no-sub`
+     , Maximum head loss during filtration, :sub:`($..filter.fiPipes.trunk.inletInnerHE) no-sub`
+     , Inner trunks maximum velocity during filtration, :sub:`($..filter.fiPipes.trunk.innerV) no-sub`
+     , Inlet 1 (backwash) pipe stub height, none
+     , Inlet 2 pipe stub height above the slab,  :sub:`($..filter.HSF) no-sub`
+     , Inlet 3 pipe stub height above the slab,  1.25 * :sub:`($..filter.HSF) no-sub`
+     , Inlet 4 pipe stub height above the slab,  1.5 * :sub:`($..filter.HSF) no-sub`
 
 
 .. _table_Outlet_tanks_design_parameters:
@@ -338,25 +334,25 @@ Filter Design Parameters
     :widths: 5 55 40
     :class: wraptable
  
-    13, **outlet tank**, 
-     , length, :sub:`($..filter.ioControls.outletL) no-sub`
-     , width, :sub:`($..filter.ioControls.outletW) no-sub`
-    14, **outlet trunks**,
-     , nominal diameter, :sub:`($..filter.fiPipes.trunk.ND) no-sub` inch
+    13, **Outlet tank**, 
+     , Length, :sub:`($..filter.ioControls.outletL) no-sub`
+     , Width, :sub:`($..filter.ioControls.outletW) no-sub`
+    14, **Outlet trunks**,
+     , Nominal diameter, :sub:`($..filter.fiPipes.trunk.ND) no-sub` inch
      , SDR, :sub:`($..filter.fiPipes.trunk.SDR) no-sub` inch
-    15, **filter to waste**,
-     , nominal diameter, :sub:`($..filter.ioControls.filterToWaste.ND) no-sub` inch
+    15, **Filter to waste**,
+     , Nominal diameter, :sub:`($..filter.ioControls.filterToWaste.ND) no-sub` inch
      , SDR, :sub:`($..filter.ioControls.filterToWaste.SDR) no-sub`
-    16, **filtered water weir**,
-     , height, :sub:`($..filter.ioControls.HSF) no-sub`
-     , maximum head loss, :sub:`($..filter.ioControls.outletWeirHL) no-sub`
-    17, **finished water tank**
-     , half width, :sub:`($..filter.ioControls.finishedWaterW) no-sub`
-    18, **chlorination conduit**,
-     , nominal diameter, :sub:`($..filter.ioControls.chlorineConduit.ND) no-sub` inch
+    16, **Filtered water weir**,
+     , Height, :sub:`($..filter.ioControls.HSF) no-sub`
+     , Maximum head loss, :sub:`($..filter.ioControls.outletWeirHL) no-sub`
+    17, **Finished water tank**
+     , Half width, :sub:`($..filter.ioControls.finishedWaterW) no-sub`
+    18, **Chlorination conduit**,
+     , Nominal diameter, :sub:`($..filter.ioControls.chlorineConduit.ND) no-sub` inch
      , SDR, :sub:`($..filter.ioControls.chlorineConduit.SDR) no-sub`
-    19, **finished water pipe**,
-     , nominal diameter, :sub:`($..filter.pipes.filtered.ND) no-sub` inch
+    19, **Finished water pipe**,
+     , Nominal diameter, :sub:`($..filter.pipes.filtered.ND) no-sub` inch
      , SDR, :sub:`($..filter.pipes.filtered.SDR) no-sub`
 
 .. _table_Filter_chambers_design_parameters:
@@ -367,45 +363,45 @@ Filter Design Parameters
     :widths: 5 55 40
     :class: wraptable
 
-    20, **filter chamber**,
-     , number of filter chambers, :sub:`($..filter.fiPipes.bay.N) no-sub`
-     , number of spare filter chambers, :sub:`($..filter.fiPipes.bay.spare) no-sub`
-     , length, :sub:`($..filter.L) no-sub`
-     , width, :sub:`($..filter.bayW) no-sub`
-     , height, :sub:`($..filter.H) no-sub`
-     , number of stacked filters, :sub:`($..filter.layerN) no-sub`
-     , height of each layer, :sub:`($..filter.layerH) no-sub`
-    21, **filter chamber drain**, 
-     , nominal diameter, :sub:`($..filter.slottedDrain.ND) no-sub` inch
+    20, **Filter chamber**,
+     , Number of filter chambers, :sub:`($..filter.fiPipes.bay.N) no-sub`
+     , Number of spare filter chambers, :sub:`($..filter.fiPipes.bay.spare) no-sub`
+     , Length, :sub:`($..filter.L) no-sub`
+     , Width, :sub:`($..filter.bayW) no-sub`
+     , Height, :sub:`($..filter.H) no-sub`
+     , Number of stacked filters, :sub:`($..filter.layerN) no-sub`
+     , Height of each layer, :sub:`($..filter.layerH) no-sub`
+    21, **Filter chamber drain**, 
+     , Nominal diameter, :sub:`($..filter.slottedDrain.ND) no-sub` inch
     22, **sand dump pipe**,
-     , nominal diameter, :sub:`($..filter.sandDump.ND) no-sub` inch
+     , Nominal diameter, :sub:`($..filter.sandDump.ND) no-sub` inch
      , SDR, :sub:`($..filter.sandDump.SDR) no-sub`
      , Discharge height,  :sub:`($..filter.sandDump.H) no-sub`
-    23, **siphon pipe**,
-     , nominal diameter, :sub:`($..filter.siphon.ND) no-sub` inch
+    23, **Siphon pipe**,
+     , Nominal diameter, :sub:`($..filter.siphon.ND) no-sub` inch
      , SDR, :sub:`($..filter.siphon.SDR) no-sub`
-     , initial flow rate at beginning of backwash,  :sub:`($..filter.siphon.initialQ) no-sub`
-     , head loss at filter chamber design flow, :sub:`($..filter.siphon.HL) no-sub`
-     , number of orifices,  :sub:`($..filter.siphonManifold.portN) no-sub`
-     , orifice diameter,  :sub:`($..filter.siphonManifold.portD) no-sub`
-     , orifice center to center spacing,  :sub:`($..filter.siphonManifold.portB) no-sub`
-     24, **siphon air valve**,
-      , nominal diameter siphon control air vent valve,  :sub:`($..filter.airValveND) no-sub`
-     25, **siphon water seal**,
-      , nominal diameter siphon control air vent valve,  :sub:`($..filter.siphonWaterSeal.ND) no-sub`
-      , head loss over the weir of the pipe,  :sub:`($..filter.siphonWaterSeal.HL) no-sub`
-      , optional concrete fill height, :sub:`($..filter.siphonWaterSeal.fillH) no-sub`
-    26, **sand**
-     , depth,  :sub:`($..filter.fiPipes.sand.H) no-sub`
-     , fluidized depth,  :sub:`($..filter.fiPipes.sand.liveH) no-sub`
-     , density,  :sub:`($..filter.fiPipes.sand.RHO) no-sub`
-     , porosity,  :sub:`($..filter.fiPipes.sand.PO) no-sub`
-     , effective size,  :sub:`($..filter.fiPipes.sand.D_es) no-sub`
-     , clean bed headloss at :sub:`($..filter.TEMP_min) no-sub` ,  :sub:`($..filter.fiPipes.sand.HL_max) no-sub` 
-     , clean bed headloss at :sub:`($..filter.TEMP_max) no-sub` ,  :sub:`($..filter.fiPipes.sand.HL_min) no-sub` 
-     , head loss to fluidize sand,  :sub:`($..filter.fiPipes.sand.bwHL) no-sub`
-     , bulk volume of sand per filter chamber (not accounting for volume of internal pipes),  :sub:`($..filter.fiPipes.sand.VOL) no-sub`
-     , mass of sand per filter chamber (not accounting for volume of internal pipes),  :sub:`($..filter.fiPipes.sand.M) pending version update`
+     , Initial flow rate at beginning of backwash,  :sub:`($..filter.siphon.initialQ) no-sub`
+     , Head loss at filter chamber design flow, :sub:`($..filter.siphon.HL) no-sub`
+     , Number of orifices,  :sub:`($..filter.siphonManifold.portN) no-sub`
+     , Orifice diameter,  :sub:`($..filter.siphonManifold.portD) no-sub`
+     , Orifice center to center spacing,  :sub:`($..filter.siphonManifold.portB) no-sub`
+     24, **Siphon air valve**,
+      , Nominal diameter siphon control air vent valve,  :sub:`($..filter.airValveND) no-sub`
+     25, **Siphon water seal**,
+      , Nominal diameter siphon control air vent valve,  :sub:`($..filter.siphonWaterSeal.ND) no-sub`
+      , Head loss over the weir of the pipe,  :sub:`($..filter.siphonWaterSeal.HL) no-sub`
+      , Optional concrete fill height, :sub:`($..filter.siphonWaterSeal.fillH) no-sub`
+    26, **Sand**
+     , Depth,  :sub:`($..filter.fiPipes.sand.H) no-sub`
+     , Fluidized depth,  :sub:`($..filter.fiPipes.sand.liveH) no-sub`
+     , Density,  :sub:`($..filter.fiPipes.sand.RHO) no-sub`
+     , Porosity,  :sub:`($..filter.fiPipes.sand.PO) no-sub`
+     , Effective size,  :sub:`($..filter.fiPipes.sand.D_es) no-sub`
+     , Clean bed headloss at :sub:`($..filter.TEMP_min) no-sub` ,  :sub:`($..filter.fiPipes.sand.HL_max) no-sub` 
+     , Clean bed headloss at :sub:`($..filter.TEMP_max) no-sub` ,  :sub:`($..filter.fiPipes.sand.HL_min) no-sub` 
+     , Head loss to fluidize sand,  :sub:`($..filter.fiPipes.sand.bwHL) no-sub`
+     , Bulk volume of sand per filter chamber (not accounting for volume of internal pipes),  :sub:`($..filter.fiPipes.sand.VOL) no-sub`
+     , Mass of sand per filter chamber (not accounting for volume of internal pipes),  :sub:`($..filter.fiPipes.sand.M) pending version update`
 
 .. _table_Filter_internal_piping_design_parameters:    
 
@@ -415,54 +411,54 @@ Filter Design Parameters
     :widths: 5 55 40
     :class: wraptable
 
-    27, **band clamps**,
-     , band width,  :sub:`($..filter.fiPipes.band.W) no-sub`
-     , band thickness,  :sub:`($..filter.fiPipes.band.T) no-sub`
-    28, **winged branch pipes**,
-     , nominal diameter, :sub:`($..filter.fiPipes.branch.inlet.ND) no-sub` inch
+    27, **Band clamps**,
+     , Band width,  :sub:`($..filter.fiPipes.band.W) no-sub`
+     , Band thickness,  :sub:`($..filter.fiPipes.band.T) no-sub`
+    28, **Winged branch pipes**,
+     , Nominal diameter, :sub:`($..filter.fiPipes.branch.inlet.ND) no-sub` inch
      , SDR, :sub:`($..filter.fiPipes.branch.inlet.SDR) no-sub`
-    29, **slotted branch pipes**,
-     , nominal diameter, :sub:`($..filter.fiPipes.branch.outlet.ND) no-sub` inch
+    29, **Slotted branch pipes**,
+     , Nominal diameter, :sub:`($..filter.fiPipes.branch.outlet.ND) no-sub` inch
      , SDR, :sub:`($..filter.fiPipes.branch.outlet.SDR) no-sub`
-     , length (not including molded ends),  :sub:`($..filter.fiPipes.branch.L) no-sub`
-    30, **receptor pipes**,
-     , nominal diameter, :sub:`($..filter.fiPipes.receptor.pipe.ND) no-sub` inch
+     , Length (not including molded ends),  :sub:`($..filter.fiPipes.branch.L) no-sub`
+    30, **Receptor pipes**,
+     , Nominal diameter, :sub:`($..filter.fiPipes.receptor.pipe.ND) no-sub` inch
      , SDR, :sub:`($..filter.fiPipes.receptor.pipe.SDR) no-sub`
-    31, **trunk spacer**,
-     , thickness,   :sub:`($..filter.internalPipes.spacer.spacerData.factoryT) no-sub` 
-    32, **receptor spacer**,
-     , thickness,   :sub:`($..filter.internalPipes.spacer.spacerData.factoryT) no-sub` 
-    33, **anchor bolts**,
-     , maximum force on anchor bolts, :sub:`($..filter.internalPipes.trunkCableF) no-sub` 
-    34, **cable**,
-     , diameter,  :sub:`($..filter.internalPipes.spacer.cableD) no-sub` 
-     , maximum force on trunk cables, :sub:`($..filter.internalPipes.trunkCableF) no-sub`
-    35, **hose clamp**,
+    31, **Trunk spacer**,
+     , Thickness,   :sub:`($..filter.internalPipes.spacer.spacerData.factoryT) no-sub` 
+    32, **Receptor spacer**,
+     , Thickness,   :sub:`($..filter.internalPipes.spacer.spacerData.factoryT) no-sub` 
+    33, **Anchor bolts**,
+     , Maximum force on anchor bolts, :sub:`($..filter.internalPipes.trunkCableF) no-sub` 
+    34, **Cable**,
+     , Diameter,  :sub:`($..filter.internalPipes.spacer.cableD) no-sub` 
+     , Maximum force on trunk cables, :sub:`($..filter.internalPipes.trunkCableF) no-sub`
+    35, **Hose clamp**,
 
 .. _table_Filter_appurtenances_design_parameters:    
 
 .. csv-table:: Filter appurtenances design parameters.
-    :header: "Key", "Name", "Purpose"
+    :header: "Key", "Name", "Value"
     :align: left
     :widths: 5 55 40
     :class: wraptable
 
-    36, **sand tank**, 
-    , minimum volume, :sub:`($..filter.fiPipes.sand.VOL) no-sub` 
-    , length,  :sub:`($..filter.sandChannel.L) no-sub` 
-    , width,  :sub:`($..filter.sandChannel.W) no-sub` 
-    37, **sand tank overflow weir**, 
-      , height,  :sub:`($..filter.sandChannel.endWallH) no-sub` 
-    38, **slotted sand drain**,
-     , nominal diameter, :sub:`($..filter.fiPipes.branch.outlet.ND) no-sub` inch 
-    39, **sand tank overflow drain**, 
-     , nominal diameter, :sub:`($..filter.bwTankOverflow.ND) no-sub` inch 
-    40, **pipe gallery and filter backwash water tank**,  
-     , maximum depth, :sub:`($..filter.bwTank.HW_max) no-sub` 
-     , volume, :sub:`($..filter.bwTank.VOL) no-sub` 
-     , maximum number of backwash cycles, :sub:`($..filter.bwTank.VOL) no-sub` 
-    41, **pipe gallery drain**, 
-     , nominal diameter, :sub:`($..filter.bwTankOverflow.ND) no-sub` inch
+    36, **Sand tank**, 
+    , Minimum volume, :sub:`($..filter.fiPipes.sand.VOL) no-sub` 
+    , Length,  :sub:`($..filter.sandChannel.L) no-sub` 
+    , Width,  :sub:`($..filter.sandChannel.W) no-sub` 
+    37, **Sand tank overflow weir**, 
+      , Height,  :sub:`($..filter.sandChannel.endWallH) no-sub` 
+    38, **Slotted sand drain**,
+     , Nominal diameter, :sub:`($..filter.fiPipes.branch.outlet.ND) no-sub` inch 
+    39, **Sand tank overflow drain**, 
+     , Nominal diameter, :sub:`($..filter.bwTankOverflow.ND) no-sub` inch 
+    40, **Pipe gallery and filter backwash water tank**,  
+     , Maximum depth, :sub:`($..filter.bwTank.HW_max) no-sub` 
+     , Volume, :sub:`($..filter.bwTank.VOL) no-sub` 
+     , Maximum number of backwash cycles, :sub:`($..filter.bwTank.VOL) no-sub` 
+    41, **Pipe gallery drain**, 
+     , Nominal diameter, :sub:`($..filter.bwTankOverflow.ND) no-sub` inch
 
 
 .. |filter_distribution_icon| image:: /Images/filter_distribution_icon.png
