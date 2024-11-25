@@ -19,7 +19,7 @@ The main components of the system are:
 * Tanks to store the coagulant and chlorine stock solutions
 * An elevated platform to support the chemical storage tanks at the correct elevation for gravity powered dosing
 * A flow measurement calibration column for each chemical
-* A pair of constant level tanks with float valves that maintain a constant level for both chemical solutions
+* A pair of constant level tanks (CLTs) with float valves that maintain a constant level for both chemical solutions
 * Two dosing tube modules that provide the necessary relationship between pressure drop and chemical flow rates for each chemical
 * A chemical doser (the balance) that connects the water level in the plant's entrance tank to the level at the outlet of the chemical dosing system
 
@@ -27,8 +27,8 @@ This system has the characteristic of maintaining a constant chemical **dosage**
 
 Chemical Flow Path
 ^^^^^^^^^^^^^^^^^^
-Pending.
-
+The chemicals are prepared and stored in the chemical stock tanks, on the chemical platform. They then flow from the tanks via piping underneath the platform to the constant level tank system, located against the chemical platform wall. The chemicals flow from the constant level tank system through the dosing tubes to pipes attached to the doser. From there, piping or tubing connects the chemicals to their injection points, where the chemicals are injected into the water in the plant.
+.. monroe to review
 .. may need a photo for this
 
 Specifications
@@ -51,6 +51,12 @@ Specifications
 
 Chemical Stock Tanks
 --------------------
+Purpose and Description
+^^^^^^^^^^^^^^^^^^^^^^^
+Pending.
+
+Specifications
+^^^^^^^^^^^^^^
 Pending.
 
 Constant Level Tanks
@@ -89,6 +95,7 @@ The constant level tanks prevent the changing chemical levels in the stock tanks
     :alt: constant level tank details
 
     Constant level tank with associated valves and dosing tubes. The valves with orange handles are compatible with chlorine and have chlorine resistant o'rings.
+    .. add something about soda ash here as well
 
 .. csv-table:: CLT Details Figure Key
    :header: "Key", "Description"
