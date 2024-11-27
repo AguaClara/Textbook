@@ -28,8 +28,6 @@ This system has the characteristic of maintaining a constant chemical **dosage**
 Chemical Flow Path
 ^^^^^^^^^^^^^^^^^^
 The chemicals are prepared and stored in the chemical stock tanks, on the chemical platform. They then flow from the tanks via piping underneath the platform to the constant level tank system, located against the chemical platform wall. The chemicals flow from the constant level tank system through the dosing tubes to pipes attached to the doser. From there, piping or tubing connects the chemicals to their injection points, where the chemicals are injected into the water in the plant.
-.. monroe to review
-.. may need a photo for this
 
 Specifications
 ^^^^^^^^^^^^^^
@@ -207,10 +205,21 @@ The chlorine dosing tube specifications are given below.
 
 Doser
 -----
+Purpose and Description
+^^^^^^^^^^^^^^^^^^^^^^^
+Pending.
 
+Specifications
+^^^^^^^^^^^^^^
 Pending.
 
 Injection Points
 -----------------
 
+Purpose and Description
+^^^^^^^^^^^^^^^^^^^^^^^
+Pending.
+
+Specifications
+^^^^^^^^^^^^^^
 Pending.
