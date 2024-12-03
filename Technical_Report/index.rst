@@ -49,6 +49,12 @@ AguaClara Technical Report for San Juan Planes
   StaRS.rst
   
 
+.. toctree::
+  :caption: Chapter 6: Construction Tolerances
+  :maxdepth: 1
+
+  Construction_Tolerances.rst
+  
 This textbook is written and maintained in `Github <https://github.com/AguaClara/Textbook>`_ via `Sphinx <http://www.sphinx-doc.org/en/master/>`_.
 
 `Please visit our GitHub site <https://github.com/AguaClara/Textbook>`_ to submit an issue, contribute, or comment.
