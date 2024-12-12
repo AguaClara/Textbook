@@ -6,8 +6,8 @@ Chemical Dosing
 
 .. add design information from textbook where it exists 
 
-General
--------
+General Chemical Dosing
+-----------------------
 
 Purpose and Description
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -27,7 +27,7 @@ This system has the characteristic of maintaining a constant chemical **dosage**
 
 Chemical Flow Path
 ^^^^^^^^^^^^^^^^^^
-The chemicals are prepared and stored in the chemical stock tanks, on the chemical platform. They then flow from the tanks via piping underneath the platform to the constant level tank system, located against the chemical platform wall. The chemicals flow from the constant level tank system through the dosing tubes to pipes attached to the doser. From there, piping or tubing connects the chemicals to their injection points, where the chemicals are injected into the water in the plant.
+The liquid chemical stock solutions are prepared and stored in the chemical stock tanks, on the chemical platform. Chemicals exit the stock tanks through a sloped tube settler to remove sediment and then continue on to the constant level tanks (CLT). The CLT uses a float valve to provide a relatively constant chemical level. The chemicals exit the CLT and flow to a set of dosing tubes that serve as linear resistors with head loss proportional to the chemical flow rate. The chemicals continue to the dose controller where the operator can set the chemical dosages by adjusting the position of a slider. The chemicals leaving the dose controller are then routed to the chemical drip locations. The coagulant (along with chemicals used for pH adjustment if necessary) is dripped into the LFOM and the chlorine is dripped into the filter exit tank.
 
 Specifications
 ^^^^^^^^^^^^^^
@@ -51,11 +51,73 @@ Chemical Stock Tanks
 --------------------
 Purpose and Description
 ^^^^^^^^^^^^^^^^^^^^^^^
-Pending.
+The chemical stock tanks are used to store the following chemicals: coagulant, chlorine, and if necessary, chemicals used for pH adjustment. There are two storage tanks for each chemical.
+
+.. photo here
+
+.. csv-table:: Chemical Platform Overview
+   :header: "Key", "Description"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
+
+   "1", "Chemical stock platform"
+   "2", "Coagulant stock tanks"
+   "3", "Chlorine stock tanks"
+
+If applicable, stock tanks used for pH adjustment will also be located on the chemical platform.
+
+.. photo here
+
+The valves with the orange handles are compatible with chlorine and other chemicals, and have chemical-resistant o'rings.
+
+.. csv-table:: Chemical Platform - Bottom View
+   :header: "Key", "Description"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
+
+   "4", "Chemical pipes - tank to CLT"
+   "5", "Chemical drain pipes"
+   "6", "Valve for chemical drainage"
+   "7", "Union to connect chemical piping to CLT"
+   "8", "Pipe clamping hangers"
+
+
+.. photo here
+
+.. csv-table:: Chemical Platform - Section View
+   :header: "Key", "Description"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
+
+   "9", "Through-wall adaptor for chemical tank to CLT piping"
+   "10", "Tube settler"
+   "11", "Through-wall adaptor for chemical tank to drain piping"
 
 Specifications
 ^^^^^^^^^^^^^^
-Pending.
+.. csv-table:: Chemical Platform Specifications
+   :header: "Key", "Parameter", "Value"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
+
+   "1", "Chemical stock platform", ""
+   "", "Width", "INPUTVALUE"
+   "", "Length", "INPUTVALUE"
+   "", "Distance between top of plant floor and top of platform floor", "INPUTVALUE"
+   "2", "Coagulant tank volume", "INPUTVALUE"
+   "3", "Chlorine tank volume", "INPUTVALUE"
+   "4", "Soda ash tank volume", "INPUTVALUE"
+   "5-11", "Dose and drain plumbing size", "INPUTVALUE"
+   "", "Height of stock tanks above constant head tanks", "INPUTVALUE"
+   "", "Maximum head loss through the float valve orifice", "INPUTVALUE"
+
+
+All of the chemical feed and drain piping uses a nominal diameter of ND.CoagPiping. The piping that connects to the constant level tanks begins at a bulkhead fitting set at an elevation of B.StockOutlet higher than the bottom of the stock tanks to prevent sediment from entering the pipes. 
+
 
 Constant Level Tanks
 --------------------
@@ -203,15 +265,45 @@ The chlorine dosing tube specifications are given below.
    Pipe guard length, :sub:`($..chlorineDoserTube.shell.pipe.L) no-sub`
   
 
-Doser
------
+Chemical Dose Controller
+--------------------
+.. insert blurb about textbook
+
 Purpose and Description
 ^^^^^^^^^^^^^^^^^^^^^^^
-Pending.
+The chemical dose controller makes it easy and accurate to dose chemicals. The flow of chemicals automatically adjusts to changes in the plant flow rate to keep a constant dose, set by the operator. When a turbidity event occurs, the operator can change the dose of coagulant by moving the coagulant slider lower on the lever to increase the dose. The slider has labelled marks so the operator can record the dose accurately.
+
+.. image of doser
+
+.. sentence about soda ash
+
+.. csv-table:: Chemical Dose Controller
+   :header: "Key", "Description"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
+
+   "1", "Doser slider"
+   "2", "Lever"
+   "3", "Float"
+   "4", "Counterweight"
+   "5", "Chemical pipes from CLT"
+   "6", "Clamping hangers for chemical pipes from CLT"
+   "7", "Tubes from CLT piping to doser"
+   "8", "Tee connector between dosing and injection tubes"
+   "9", "Tubes from doser to injection plumbing/points"
 
 Specifications
 ^^^^^^^^^^^^^^
-Pending.
+.. csv-table:: Chemical Dose Controller Specifications
+   :header: "Key", "Parameter", "Value"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
+
+   "5-6", "CLT to doser pipes plumbing size", "INPUTVALUE"
+   "7-9", "Chemical tube size", "INPUTVALUE"
+
 
 Injection Points
 -----------------
