@@ -15,6 +15,16 @@ To publish, first ensure all of your changes have been merged into master by fol
 
 Pushing a tag will kick off the automated release workflow which builds the PDF and HTML documentation.
 
+# Technical Reports
+We are using [sphinx_ext_substitution](https://github.com/NordicHPC/sphinx_ext_substitution)  to replace keywords. This enables accessing the last part of the map to find a specific variable. For example, $..lfom.rowN, will find all of the variables where the map ends with lfom.rowN. If more than one option is available sphinx_ext_substitution will throw an error. The solution is to add more detail to the map name and perhaps specify the entrance tank or filter.
+
+Each plant’s technical report will live in its own repository in the [AguaClara Reach github](https://github.com/AguaClara-Reach). The plant repository main branch will contain all of the data needed to create the technical report. 
+1. plant.yml
+2. index.rst
+The gh-pages branch will have the html files and folder structure
+
+
+Create a readme in the plant
+
 # Running locally
 We use [act](https://github.com/nektos/act) to run the workflow locally. After installing act, run `act --container-architecture linux/amd64` in the root directory to see a list of workflows that can be run locally. 
-
