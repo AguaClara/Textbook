@@ -16,4 +16,5 @@ To publish, first ensure all of your changes have been merged into master by fol
 Pushing a tag will kick off the automated release workflow which builds the PDF and HTML documentation.
 
 # Running locally
-We use [act](https://github.com/nektos/act) to run the workflow locally. After installing act, run `act --container-architecture linux/amd64` in the root directory to see a list of workflows that can be run locally.
+We use [act](https://github.com/nektos/act) to run the workflow locally. After installing act, run `act --container-architecture linux/amd64` in the root directory to see a list of workflows that can be run locally. 
+
