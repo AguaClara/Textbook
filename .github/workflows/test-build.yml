@@ -21,6 +21,7 @@ jobs:
         pip install -r requirements-dev.txt
         gem install html-proofer
     - name: Build HTML Docs
+      working-directory: ./Textbook
       run: |
         make html
         touch _build/html/.nojekyll
