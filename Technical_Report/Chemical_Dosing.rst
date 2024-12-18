@@ -101,19 +101,19 @@ Specifications
 .. csv-table:: Chemical Platform Specifications
    :header: "Key", "Parameter", "Value"
    :align: left
-   :widths: 20 80
+   :widths: 20 80 20
    :class: wraptable
 
    "1", "Chemical stock platform", ""
-   "", "Width", "INPUTVALUE"
-   "", "Length", "INPUTVALUE"
-   "", "Distance between top of plant floor and top of platform floor", "INPUTVALUE"
+   " ", "Width", "INPUTVALUE"
+   " ", "Length", "INPUTVALUE"
+   " ", "Distance between top of plant floor and top of platform floor", "INPUTVALUE"
    "2", "Coagulant tank volume", "INPUTVALUE"
    "3", "Chlorine tank volume", "INPUTVALUE"
    "4", "Soda ash tank volume", "INPUTVALUE"
    "5-11", "Dose and drain plumbing size", "INPUTVALUE"
-   "", "Height of stock tanks above constant head tanks", "INPUTVALUE"
-   "", "Maximum head loss through the float valve orifice", "INPUTVALUE"
+   " ", "Height of stock tanks above constant head tanks", "INPUTVALUE"
+   " ", "Maximum head loss through the float valve orifice", "INPUTVALUE"
 
 
 All of the chemical feed and drain piping uses a nominal diameter of ND.CoagPiping. The piping that connects to the constant level tanks begins at a bulkhead fitting set at an elevation of B.StockOutlet higher than the bottom of the stock tanks to prevent sediment from entering the pipes. 
@@ -298,7 +298,7 @@ Specifications
 .. csv-table:: Chemical Dose Controller Specifications
    :header: "Key", "Parameter", "Value"
    :align: left
-   :widths: 20 80
+   :widths: 20 80 20
    :class: wraptable
 
    "5-6", "CLT to doser pipes plumbing size", "INPUTVALUE"
@@ -355,7 +355,7 @@ Specifications
 .. csv-table:: Injection Point Specifications
    :header: "Key", "Parameter", "Value"
    :align: left
-   :widths: 20 80
+   :widths: 20 80 20
    :class: wraptable
 
    "2", "Coagulant injection tube ND", "INPUTVALUE"
