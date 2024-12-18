@@ -53,7 +53,14 @@ Purpose and Description
 ^^^^^^^^^^^^^^^^^^^^^^^
 The chemical stock tanks are used to store the following chemicals: coagulant, chlorine, and if necessary, chemicals used for pH adjustment. There are two storage tanks for each chemical.
 
-.. photo here
+.. _figure_chemical_stock_tanks_overview:
+
+.. figure:: Images/chem_stock_tanks_overview.png
+    :width: 400px
+    :align: center
+    :alt: chemical stock tank overview
+
+    Overview of the chemical stock tank
 
 .. csv-table:: Chemical Platform Overview
    :header: "Key", "Description"
@@ -105,7 +112,7 @@ Specifications
    :class: wraptable
 
    "1", "Chemical stock platform", ""
-   " ", "Width", "INPUTVALUE"
+   " ", "Width", :sub:`($..et.lfom.Qm_max) no-sub`
    " ", "Length", "INPUTVALUE"
    " ", "Distance between top of plant floor and top of platform floor", "INPUTVALUE"
    "2", "Coagulant tank volume", "INPUTVALUE"
@@ -311,6 +318,7 @@ Injection Points
 Purpose and Description
 ^^^^^^^^^^^^^^^^^^^^^^^
 The chemical must be injected into the flow of water within the plant. 
+
 * Coagulant: The coagulant is dripped into the top of the LFOM in the entrance tank.
 * Chlorine: The chlorine is dripped into the water exiting the filter on its way to the community water storage tank.
 * pH adjustment: If pH adjustment is required, it will be dripped into the LFOM with the coagulant.
