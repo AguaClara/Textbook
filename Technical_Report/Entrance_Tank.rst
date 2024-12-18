@@ -15,7 +15,7 @@ General
 Purpose and Description
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-The entrance tank (see :numref:`figure_spec_ET_Diagram_Labeled`) has multiple functions in a drinking water treatment plant.
+The entrance tank (see :numref:`figure_spec_ET_Diagram_Labeled`) has multiple functions in a drinking water treatment plant:
 
 A. Remove air bubbles to reduce splashing, turbulence, and unsteady motion of the chemical feed surface tracking lever system
 B. Remove grit to prevent accumulation in the flocculator

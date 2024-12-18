@@ -310,8 +310,55 @@ Injection Points
 
 Purpose and Description
 ^^^^^^^^^^^^^^^^^^^^^^^
-Pending.
+The chemical must be injected into the flow of water within the plant. 
+* Coagulant: The coagulant is dripped into the top of the LFOM in the entrance tank.
+* Chlorine: The chlorine is dripped into the water exiting the filter on its way to the community water storage tank.
+* pH adjustment: If pH adjustment is required, it will be dripped into the LFOM with the coagulant.
+
+.. insert photo
+
+Additional doser arm and injection points are added for pH adjustment.
+
+.. csv-table:: Coagulant Injection Point
+   :header: "Key", "Description"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
+
+   "1", "Linear dose controller"
+   "2", "Coagulant injection tube"
+   "3", "LFOM"
+
+.. insert photo
+
+.. csv-table:: Chlorine Injection Point
+   :header: "Key", "Description"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
+
+   "4", "Tube from linear dose controller"
+   "5", "Reducing adaptor"
+   "6", "Piping to injection point"
+   "7", "Drain channel"
+   "8", "Clamping hangers"
+   "9", "Union connector"
+   "10", "PVC disc with hole for tube"
+   "11", "Injection tube"
+   "12", "In-filter straight connector for pipe encasing injection tube"
+   "13", "Piping encasing injection tube"
+   "14", "Exit pipe"
+   "15", "Filter exit box"
 
 Specifications
 ^^^^^^^^^^^^^^
-Pending.
+.. csv-table:: Injection Point Specifications
+   :header: "Key", "Parameter", "Value"
+   :align: left
+   :widths: 20 80
+   :class: wraptable
+
+   "2", "Coagulant injection tube ND", "INPUTVALUE"
+   "4 & 11", "Chlorine injection tube ND", "INPUTVALUE"
+   "6", "Plumbing to chlorine injection point ND", "INPUTVALUE"
+   "12", "Piping encasing injection tube ND", "INPUTVALUE"
