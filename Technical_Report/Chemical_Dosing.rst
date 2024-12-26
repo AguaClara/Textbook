@@ -74,7 +74,13 @@ The chemical stock tanks are used to store the following chemicals: coagulant, c
 
 If applicable, stock tanks used for pH adjustment will also be located on the chemical platform.
 
-.. photo here
+.. figure:: Images/chem_stock_tanks_bottom.png
+    :width: 400px
+    :align: center
+    :alt: chemical stock tank bottom
+
+    Bottom view of the chemical stock tanks
+
 
 The valves with the orange handles are compatible with chlorine and other chemicals, and have chemical-resistant o'rings.
 
@@ -91,7 +97,13 @@ The valves with the orange handles are compatible with chlorine and other chemic
    "8", "Pipe clamping hangers"
 
 
-.. photo here
+.. figure:: Images/chem_stock_tank_section.png
+    :width: 400px
+    :align: center
+    :alt: chemical stock tank section
+
+    Section view of the chemical stock tank
+
 
 .. csv-table:: Chemical Platform - Section View
    :header: "Key", "Description"
@@ -280,7 +292,12 @@ Purpose and Description
 ^^^^^^^^^^^^^^^^^^^^^^^
 The chemical dose controller makes it easy and accurate to dose chemicals. The flow of chemicals automatically adjusts to changes in the plant flow rate to keep a constant dose, set by the operator. When a turbidity event occurs, the operator can change the dose of coagulant by moving the coagulant slider lower on the lever to increase the dose. The slider has labelled marks so the operator can record the dose accurately.
 
-.. image of doser
+.. figure:: Images/doser_overview.png
+    :width: 400px
+    :align: center
+    :alt: Chemical doser controller overview
+
+    Overview of the chemical dose controller
 
 .. sentence about soda ash
 
@@ -323,7 +340,12 @@ The chemical must be injected into the flow of water within the plant.
 * Chlorine: The chlorine is dripped into the water exiting the filter on its way to the community water storage tank.
 * pH adjustment: If pH adjustment is required, it will be dripped into the LFOM with the coagulant.
 
-.. insert photo
+.. figure:: Images/injection_point_entrance_tank.png
+    :width: 400px
+    :align: center
+    :alt: Entrance tank injection point
+
+    Entrance tank injection point
 
 Additional doser arm and injection points are added for pH adjustment.
 
@@ -337,7 +359,20 @@ Additional doser arm and injection points are added for pH adjustment.
    "2", "Coagulant injection tube"
    "3", "LFOM"
 
-.. insert photo
+.. figure:: Images/injection_point_chlorine.png
+    :width: 400px
+    :align: center
+    :alt: Chlorine injection point path
+
+    Chlorine injection point path along wall
+
+
+   .. figure:: Images/injection_point_chlorine_filter.png
+    :width: 400px
+    :align: center
+    :alt: Chlorine injection point in filter
+
+    Chlorine injection point in filter
 
 .. csv-table:: Chlorine Injection Point
    :header: "Key", "Description"
