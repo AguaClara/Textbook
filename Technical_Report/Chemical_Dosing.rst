@@ -294,7 +294,7 @@ Purpose and Description
 The chemical dose controller makes it easy and accurate to dose chemicals. The flow of chemicals automatically adjusts to changes in the plant flow rate to keep a constant dose, set by the operator. When a turbidity event occurs, the operator can change the dose of coagulant by moving the coagulant slider lower on the lever to increase the dose. The slider has labelled marks so the operator can record the dose accurately.
 
 .. figure:: Images/doser_overview.png
-    :width: 400px
+    :width: 500px
     :align: center
     :alt: Chemical doser controller overview
 
@@ -342,7 +342,7 @@ The chemical must be injected into the flow of water within the plant.
 * pH adjustment: If pH adjustment is required, it will be dripped into the LFOM with the coagulant.
 
 .. figure:: Images/injection_point_entrance_tank.png
-    :width: 400px
+    :width: 600px
     :align: center
     :alt: Entrance tank injection point
 
@@ -368,8 +368,9 @@ Additional doser arm and injection points are added for pH adjustment.
     Chlorine injection point path along wall
 
 
-   .. figure:: Images/injection_point_chlorine_filter.png
-    :width: 400px
+   
+.. figure:: Images/injection_point_chlorine_filter.png
+    :width: 500px
     :align: center
     :alt: Chlorine injection point in filter
 
