@@ -56,7 +56,7 @@ The chemical stock tanks are used to store the following chemicals: coagulant, c
 .. _figure_chemical_stock_tanks_overview:
 
 .. figure:: Images/chem_stock_tanks_overview.png
-    :width: 400px
+    :width: 600px
     :align: center
     :alt: chemical stock tank overview
 
@@ -75,14 +75,14 @@ The chemical stock tanks are used to store the following chemicals: coagulant, c
 If applicable, stock tanks used for pH adjustment will also be located on the chemical platform.
 
 .. figure:: Images/chem_stock_tanks_bottom.png
-    :width: 400px
+    :width: 700px
     :align: center
     :alt: chemical stock tank bottom
 
     Bottom view of the chemical stock tanks
 
 
-The valves with the orange handles are compatible with chlorine and other chemicals, and have chemical-resistant o'rings.
+Valves with orange handles are compatible with chlorine and other chemicals, and have chemical-resistant o'rings.
 
 .. csv-table:: Chemical Platform - Bottom View
    :header: "Key", "Description"
@@ -98,7 +98,7 @@ The valves with the orange handles are compatible with chlorine and other chemic
 
 
 .. figure:: Images/chem_stock_tank_section.png
-    :width: 400px
+    :width: 600px
     :align: center
     :alt: chemical stock tank section
 
@@ -136,7 +136,7 @@ Specifications
 
 
 
-All of the chemical feed and drain piping uses a nominal diameter of ND.CoagPiping. The piping that connects to the constant level tanks begins at a bulkhead fitting set at an elevation of B.StockOutlet higher than the bottom of the stock tanks to prevent sediment from entering the pipes. 
+All of the chemical feed and drain piping uses a nominal diameter of  :sub:`($..chemPipes.dosing.ND) no-sub`.
 
 
 Constant Level Tanks
@@ -174,8 +174,7 @@ The constant level tanks prevent the changing chemical levels in the stock tanks
     :align: center
     :alt: constant level tank details
 
-    Constant level tank with associated valves and dosing tubes. The valves with orange handles are compatible with chlorine and have chlorine resistant o'rings.
-    .. add something about soda ash here as well
+    Constant level tank with associated valves and dosing tubes. The valves with orange handles are compatible with chlorine and other chemicals and have chemical resistant o'rings.
 
 .. csv-table:: CLT Details Figure Key
    :header: "Key", "Description"
@@ -287,7 +286,8 @@ The chlorine dosing tube specifications are given below.
 
 Chemical Dose Controller
 --------------------
-.. insert blurb about textbook
+Design information for the AguaClara chemical dose controller is available in `the Flow Control chapter of The Physics of Water Treatment Design <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#linear-chemical-dose-controller-cdc>`_.
+
 
 Purpose and Description
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -300,7 +300,7 @@ The chemical dose controller makes it easy and accurate to dose chemicals. The f
 
     Overview of the chemical dose controller
 
-.. sentence about soda ash
+If applicable, there will be an additional slider for pH adjustment.
 
 .. csv-table:: Chemical Dose Controller
    :header: "Key", "Description"
