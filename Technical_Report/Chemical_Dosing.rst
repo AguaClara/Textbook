@@ -124,15 +124,16 @@ Specifications
    :class: wraptable
 
    "1", "Chemical stock platform", ""
-   " ", "Width", :sub:`($..et.lfom.Qm_max) no-sub`
-   " ", "Length", "INPUTVALUE"
-   " ", "Distance between top of plant floor and top of platform floor", "INPUTVALUE"
-   "2", "Coagulant tank volume", "INPUTVALUE"
-   "3", "Chlorine tank volume", "INPUTVALUE"
-   "4", "Soda ash tank volume", "INPUTVALUE"
-   "5-11", "Dose and drain plumbing size", "INPUTVALUE"
-   " ", "Height of stock tanks above constant head tanks", "INPUTVALUE"
-   " ", "Maximum head loss through the float valve orifice", "INPUTVALUE"
+   " ", "Width", :sub:`($..chemPlatform.OW) no-sub`
+   " ", "Length", :sub:`($..chemPlatform.OL) no-sub`
+   " ", "Distance between top of plant floor and top of platform floor", :sub:`($..chemPlatform.H) no-sub`
+   "2", "Coagulant tank volume", :sub:`($..chemPlatform.chemBase.coagTank.VOLm) no-sub`
+   "3", "Chlorine tank volume", :sub:`($..chemPlatform.chemBase.chlorineTank.VOLm) no-sub`
+   "4", "Soda ash tank volume", :sub:`($..chemPlatform.chemBase.sodiumCarbonateTank.VOLm) no-sub`
+   "5-11", "Dose and drain plumbing size", :sub:`($..chemPipes.dosing.ND) no-sub`
+   " ", "Height of stock tanks above constant head tanks", :sub:`($..chemPlatform.platformCltHW_delta) no-sub`
+   " ", "Maximum head loss through the float valve orifice", :sub:`($..chemPlatform.chemBase.clt.floatValve.HL_max) no-sub`
+
 
 
 All of the chemical feed and drain piping uses a nominal diameter of ND.CoagPiping. The piping that connects to the constant level tanks begins at a bulkhead fitting set at an elevation of B.StockOutlet higher than the bottom of the stock tanks to prevent sediment from entering the pipes. 
@@ -325,8 +326,8 @@ Specifications
    :widths: 20 80 20
    :class: wraptable
 
-   "5-6", "CLT to doser pipes plumbing size", "INPUTVALUE"
-   "7-9", "Chemical tube size", "INPUTVALUE"
+   "5-6", "CLT to doser pipes plumbing size", :sub:`($..chemPipes.dosing.ND) no-sub`
+   "7-9", "Chemical tube size", :sub:`($..chemPipes.flex.ND) no-sub`
 
 
 Injection Points
@@ -401,7 +402,7 @@ Specifications
    :widths: 20 80 20
    :class: wraptable
 
-   "2", "Coagulant injection tube ND", "INPUTVALUE"
-   "4 & 11", "Chlorine injection tube ND", "INPUTVALUE"
-   "6", "Plumbing to chlorine injection point ND", "INPUTVALUE"
-   "12", "Piping encasing injection tube ND", "INPUTVALUE"
+   "2", "Coagulant injection tube ND", :sub:`($..chemPipes.flex.ND) no-sub`
+   "4 & 11", "Chlorine injection tube ND", :sub:`($..chemPipes.flex.ND) no-sub`
+   "6", "Plumbing to chlorine injection point ND", :sub:`($..chemPipes.inject.ND) no-sub`
+   "12", "Piping encasing injection tube ND", :sub:`($..filter.ioControls.chlorineConduit.ND) no-sub`
