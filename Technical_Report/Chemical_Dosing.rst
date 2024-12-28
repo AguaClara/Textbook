@@ -129,14 +129,14 @@ Specifications
    " ", "Distance between top of plant floor and top of platform floor", :sub:`($..chemPlatform.H) no-sub`
    "2", "Coagulant tank volume", :sub:`($..chemPlatform.chemBase.coagTank.VOLm) no-sub`
    "3", "Chlorine tank volume", :sub:`($..chemPlatform.chemBase.chlorineTank.VOLm) no-sub`
-   "4", "Soda ash tank volume", :sub:`($..chemPlatform.chemBase.sodiumCarbonateTank.VOLm) no-sub`
-   "5-11", "Dose and drain plumbing size", :sub:`($..chemPipes.dosing.ND) no-sub`
+   "4", "Soda ash tank volume", :sub:`($..chemPlatform.chemBase.sodiumCarbonateTank.VOLm) not applicable`
+   "5-11", "Dose and drain plumbing nominal diameter", :sub:`($..chemPipes.dosing.ND) no-sub` inch
    " ", "Height of stock tanks above constant head tanks", :sub:`($..chemPlatform.platformCltHW_delta) no-sub`
    " ", "Maximum head loss through the float valve orifice", :sub:`($..chemPlatform.chemBase.clt.floatValve.HL_max) no-sub`
 
 
 
-All of the chemical feed and drain piping uses a nominal diameter of  :sub:`($..chemPipes.dosing.ND) no-sub`.
+All of the chemical feed and drain piping uses a nominal diameter of  :sub:`($..chemPipes.dosing.ND) no-sub` inch.
 
 
 Constant Level Tanks
@@ -282,6 +282,7 @@ The chlorine dosing tube specifications are given below.
    Tube outer diameter, :sub:`($..chlorineDoserTube.tube.OD) no-sub`
    Tube length, :sub:`($..chlorineDoserTube.tube.L) no-sub`
    Pipe guard length, :sub:`($..chlorineDoserTube.shell.pipe.L) no-sub`
+   Pipe guard nominal diameter, :sub:`($..chlorineDoserTube.shell.ND) no-sub` inch
   
 
 Chemical Dose Controller
@@ -326,8 +327,8 @@ Specifications
    :widths: 20 80 20
    :class: wraptable
 
-   "5-6", "CLT to doser pipes plumbing size", :sub:`($..chemPipes.dosing.ND) no-sub`
-   "7-9", "Chemical tube size", :sub:`($..chemPipes.flex.ND) no-sub`
+   "5-6", "CLT to doser pipes plumbing nominal diameter", :sub:`($..chemPipes.dosing.ND) no-sub` inch
+   "7-9", "Chemical tube nominal diameter", :sub:`($..chemPipes.flex.ND) no-sub` inch
 
 
 Injection Points
@@ -403,7 +404,7 @@ Specifications
    :widths: 20 80 20
    :class: wraptable
 
-   "2", "Coagulant injection tube ND", :sub:`($..chemPipes.flex.ND) no-sub`
-   "4 & 11", "Chlorine injection tube ND", :sub:`($..chemPipes.flex.ND) no-sub`
-   "6", "Plumbing to chlorine injection point ND", :sub:`($..chemPipes.inject.ND) no-sub`
-   "12", "Piping encasing injection tube ND", :sub:`($..filter.ioControls.chlorineConduit.ND) no-sub`
+   "2", "Coagulant injection tube nominal diameter", :sub:`($..chemPipes.flex.ND) no-sub` inch
+   "4 & 11", "Chlorine injection tube nominal diameter", :sub:`($..chemPipes.flex.ND) no-sub` inch
+   "6", "Plumbing to chlorine injection point nominal diameter", :sub:`($..chemPipes.inject.ND) no-sub` inch
+   "12", "Piping encasing injection tube nominal diameter", :sub:`($..filter.ioControls.chlorineConduit.ND) no-sub` inch

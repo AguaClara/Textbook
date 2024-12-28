@@ -160,5 +160,5 @@ Specifications
    :class: wraptable
 
     Drains,   :sub:`($..floc.drain.ND) no-sub`
-    Baffle frame nominal diameter,    :sub:`($..floc.baffleSet.baffle.pipe.ND) no-sub`
+    Baffle frame nominal diameter,    :sub:`($..floc.baffleSet.baffle.frame.ND) no-sub`
     Baffle spacers nominal diameter,   :sub:`($..floc.baffleSet.baffle.spacer.ND) no-sub`
