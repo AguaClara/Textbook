@@ -79,6 +79,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -222,18 +224,18 @@
 <figure class="align-center" id="id1">
 <span id="figure-circuit-base"></span><a class="reference internal image-reference" href="../_images/circuit_base.png"><img alt="Clarification tank as a circuit." src="../_images/circuit_base.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 179 </span><span class="caption-text">Clarification tank as a circuit.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 180 </span><span class="caption-text">Clarification tank as a circuit.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#figure-circuit-base"><span class="std std-numref">Fig. 179</span></a> shows flow through a clarifier in which there are two clarifier bays working in parallel. Each bay has multiple components through which piezometric head changes; wherever a resistor symbol is shown, it means that there is a difference in piezometric head in that section of pipe. We want to understand what is going on between the inlet channel and the outlet channel so that we can design to control head loss and fluid flow.</p>
+<p><a class="reference internal" href="#figure-circuit-base"><span class="std std-numref">Fig. 180</span></a> shows flow through a clarifier in which there are two clarifier bays working in parallel. Each bay has multiple components through which piezometric head changes; wherever a resistor symbol is shown, it means that there is a difference in piezometric head in that section of pipe. We want to understand what is going on between the inlet channel and the outlet channel so that we can design to control head loss and fluid flow.</p>
 <p>Remember, the goal is to have even flow distribution. It is bad if different flow paths have different loss coefficients. We must consider this between clarifier bays (comparing each bay to each other) and within a single clarifier bay (comparing the flows at different points within the clarifier bay). We want to limit differences in “resistance” to ensure equal flow distribution.</p>
 <section id="inlet-channel">
 <span id="heading-clarifier-influent-channel"></span><h3>Inlet Channel<a class="headerlink" href="#inlet-channel" title="Permalink to this heading"></a></h3>
-<p>After water exits the flocculator, it is ready for clarification. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple clarifiers operating in parallel; we call each of these clarifier units a ‘bay’. Because there may be multiple clarifier bays, we have to distribute flocculated water between the bays. To do this, we have an inlet channel shown in <a class="reference internal" href="#figure-inlet-channel-bays"><span class="std std-numref">Fig. 180</span></a>, which receives water from the flocculator and passes it to the clarifier bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the clarifier bays without allowing any settling of flocs in the inlet channel. The minimum velocity in the inlet channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each clarifier bay.</p>
+<p>After water exits the flocculator, it is ready for clarification. In AguaClara plants, there is one flocculator per treatment train. However, depending on the plant flow rate, one plant may have multiple clarifiers operating in parallel; we call each of these clarifier units a ‘bay’. Because there may be multiple clarifier bays, we have to distribute flocculated water between the bays. To do this, we have an inlet channel shown in <a class="reference internal" href="#figure-inlet-channel-bays"><span class="std std-numref">Fig. 181</span></a>, which receives water from the flocculator and passes it to the clarifier bays. The channel is long, concrete, and relatively shallow. The objective of the channel is to distribute water and flocs to the clarifier bays without allowing any settling of flocs in the inlet channel. The minimum velocity in the inlet channel is about 0.15 mm/s to prevent flocs from settling. In the bottom of the channel, there are pipes that lead to the bottom of each clarifier bay.</p>
 <figure class="align-center" id="id2">
 <span id="figure-inlet-channel-bays"></span><a class="reference internal image-reference" href="../_images/inlet_channel_bays.png"><img alt="Influent channel with pipes leading to different clarifier bays." src="../_images/inlet_channel_bays.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 180 </span><span class="caption-text">Inlet channel with pipes leading to different clarifier bays.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 181 </span><span class="caption-text">Inlet channel with pipes leading to different clarifier bays.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>An important question is consider is whether or not the water in the inlet channel gets evenly distributed between the different bays. If it does not get evenly distributed, which bay will receive the most water? We know from our understanding of fluids and flow distribution that in a pipe (or channel) with multiple orifices that is closed at one end, the distribution of flow is nonuniform along the length of the pipe; it is decelerating. This nonuniformity is due to conversion of kinetic energy into potential energy as the flow decelerates. This deceleration results in an increase in the piezometric head in the direction of flow.</p>
@@ -252,7 +254,7 @@
 <figure class="align-center" id="id3">
 <span id="figure-clarifier-channel-max-v"></span><a class="reference internal image-reference" href="../_images/Clarifier_channel_max_v.png"><img alt="Clarifier inlet channel velocity constraints" src="../_images/Clarifier_channel_max_v.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 181 </span><span class="caption-text">The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 182 </span><span class="caption-text">The ratio of port velocity to manifold velocity must increase to obtain more uniform flow from the ports.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The channel velocity must be less than 0.45 m/s to obtain a flow distribution uniformity above 0.9 given that the clarifier head loss is 5 cm.</p>
@@ -268,11 +270,11 @@
 </section>
 <section id="inlet-manifold">
 <span id="heading-clarifier-inlet-manifold"></span><h3>Inlet Manifold<a class="headerlink" href="#inlet-manifold" title="Permalink to this heading"></a></h3>
-<p>Now, we will focus on a single clarifier bay. Flocculated water enters a pipe in the bottom of the inlet channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the clarifier bay. This section of pipe that distributes water at the bottom of the clarifier bay is referred to as the inlet manifold shown in <a class="reference internal" href="#figure-clarifierinletoutlethydraulics"><span class="std std-numref">Fig. 182</span></a>.</p>
+<p>Now, we will focus on a single clarifier bay. Flocculated water enters a pipe in the bottom of the inlet channel and travels down a few feet. The pipe then has a 90 degree bend and extends along the bottom of the entire length of the clarifier bay. This section of pipe that distributes water at the bottom of the clarifier bay is referred to as the inlet manifold shown in <a class="reference internal" href="#figure-clarifierinletoutlethydraulics"><span class="std std-numref">Fig. 183</span></a>.</p>
 <figure class="align-center" id="id4">
 <span id="figure-clarifierinletoutlethydraulics"></span><a class="reference internal image-reference" href="../_images/ClarifierInletOutletHydraulics.png"><img alt="Clarifier Inlet Outlet Hydraulics" src="../_images/ClarifierInletOutletHydraulics.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 182 </span><span class="caption-text">Flocculated water flows from the inlet channel to the inlet manifold and then through the diffusers, jet reverser, floc filter, and plate settlers. Clarified water flows into the outlet manifold, the collector channel, across the outlet weir, and into the outlet channel.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 183 </span><span class="caption-text">Flocculated water flows from the inlet channel to the inlet manifold and then through the diffusers, jet reverser, floc filter, and plate settlers. Clarified water flows into the outlet manifold, the collector channel, across the outlet weir, and into the outlet channel.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Clarifier design is strongly influenced by the goal of not breaking flocs down to a size that can’t be captured by the plate settlers. The maximum combination of velocity gradient, viscosity, and capture velocity is given by Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(115)</a>. Our goal is to eventually provide clear guidance on setting <span class="math notranslate nohighlight">\(G_{max}\)</span>. In the meantime, given a maximum velocity gradient for the inlet to the clarifier, Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-planejet-v-max-of-q">(81)</a> provides the maximum jet reverser velocity.</p>
@@ -283,7 +285,7 @@
 <figure class="align-center" id="id5">
 <span id="figure-inlet-manifold-diffuser-flow"></span><a class="reference internal image-reference" href="../_images/inlet_manifold_diffuser_flow.png"><img alt="Influent manifold and diffuser flow paths." src="../_images/inlet_manifold_diffuser_flow.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 183 </span><span class="caption-text">Influent manifold and diffuser flow paths.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 184 </span><span class="caption-text">Influent manifold and diffuser flow paths.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The big unknown is the required design value for <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> as defined in Equation <a class="reference internal" href="../Flocs_Fractals_and_Forces/FFF_Intro.html#equation-g-of-vc-and-floc-props">(115)</a>. The expectation is that raw waters with high concentrations of organic matter will have lower density core particles and thus will require a smaller <span class="math notranslate nohighlight">\(\xi_{breakup}\)</span> for successful capture of the lower density flocs.</p>
@@ -291,18 +293,18 @@
 <p>The result of the requirement for a low velocity jet to prevent floc break up is that the inlet manifold has to be large in diameter to obtain reasonably uniform flow distribution between the diffusers. This constraint is fairly severe and results in large diameter (and hence expensive) inlet manifold pipes.</p>
 <p>The fundamental problem of the inlet manifold is that the diffusers exit perpendicular to the flow of the water in the inlet manifold and thus the flow into the diffusers is set by the difference in piezometric head between the manifold and the floc filter. The kinetic energy at the inlet of the manifold is converted to increased pressure at the end of the manifold. That results in more flow out of the last diffuser ports.</p>
 <p>An alternative design would be to have each of the diffuser pipes end inside the manifold with an elbow so that the inlet to the diffuser would face upstream. This change would potentially improve the flow distribution between diffuser pipes, but the large number of diffuser pipes makes this impossible to fabricate without introducing significant additional head loss in the manifold pipe from drag around all of the diffuser inlets.</p>
-<p>To overcome the impossibility of having higher velocity in the inlet manifold and directly connecting that to the diffusers we propose to use a two stage manifold system. The manifold pipe will be split into two chambers with the top chamber being the inlet manifold and the bottom section being a new equalization chamber (see <a class="reference internal" href="#figure-2stageinletmanifold"><span class="std std-numref">Fig. 184</span></a>).</p>
+<p>To overcome the impossibility of having higher velocity in the inlet manifold and directly connecting that to the diffusers we propose to use a two stage manifold system. The manifold pipe will be split into two chambers with the top chamber being the inlet manifold and the bottom section being a new equalization chamber (see <a class="reference internal" href="#figure-2stageinletmanifold"><span class="std std-numref">Fig. 185</span></a>).</p>
 <figure class="align-center" id="id6">
 <span id="figure-2stageinletmanifold"></span><a class="reference internal image-reference" href="../_images/2stageInletManifold.png"><img alt="two stage inlet manifold" src="../_images/2stageInletManifold.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 184 </span><span class="caption-text">The two stage inlet manifold with upper chamber acting as the inlet manifold and the lower chamber acting to equalize the flow from the diffusers (not shown).</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 185 </span><span class="caption-text">The two stage inlet manifold with upper chamber acting as the inlet manifold and the lower chamber acting to equalize the flow from the diffusers (not shown).</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>The inlet manifold flow is transferred to the equalization chamber through half-pipe ports that are tapered (see <a class="reference internal" href="#figure-2stageinletmanifoldfromupstream"><span class="std std-numref">Fig. 185</span></a>) to guide flow into the equalization chamber. The taper is designed to be less than the rate of the flow expansion as given by Equation <a class="reference internal" href="../Flocculation/Floc_Derivations.html#equation-planejet-expansion">(186)</a>.</p>
+<p>The inlet manifold flow is transferred to the equalization chamber through half-pipe ports that are tapered (see <a class="reference internal" href="#figure-2stageinletmanifoldfromupstream"><span class="std std-numref">Fig. 186</span></a>) to guide flow into the equalization chamber. The taper is designed to be less than the rate of the flow expansion as given by Equation <a class="reference internal" href="../Flocculation/Floc_Derivations.html#equation-planejet-expansion">(186)</a>.</p>
 <figure class="align-center" id="id7">
 <span id="figure-2stageinletmanifoldfromupstream"></span><a class="reference internal image-reference" href="../_images/2stageInletManifoldfromUpstream.png"><img alt="two stage inlet manifold from upstream" src="../_images/2stageInletManifoldfromUpstream.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 185 </span><span class="caption-text">The half-pipe ports face upstream and slope at a rate that is slower than the rate at which the flow expands to ensure that the flow is fully expanded before the entrance into the next half-pipe port.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 186 </span><span class="caption-text">The half-pipe ports face upstream and slope at a rate that is slower than the rate at which the flow expands to ensure that the flow is fully expanded before the entrance into the next half-pipe port.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The manifold system must be designed so that the velocity gradient in all flow expansions is less than the maximum allowed velocity gradient.</p>
@@ -359,14 +361,14 @@
 <p>Given the assumption of conservation of velocity as the jet issuing from the diffuser travels around the jet reverser it can be deduced that the flow area is also conserved.</p>
 <div class="math notranslate nohighlight" id="equation-diffuser-area">
 <span class="eqno">(236)<a class="headerlink" href="#equation-diffuser-area" title="Permalink to this equation"></a></span>\[W_D S_D = S_{Jet} B_D\]</div>
-<p>where <span class="math notranslate nohighlight">\(W_D\)</span>, <span class="math notranslate nohighlight">\(S_D\)</span>, and <span class="math notranslate nohighlight">\(B_D\)</span> are defined in <a class="reference internal" href="#figure-diffuser-dimensions"><span class="std std-numref">Fig. 186</span></a> and <span class="math notranslate nohighlight">\(S_{Jet}\)</span> is the thickness of the jet leaving the jet reverser as defined by Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-planejet-s-of-q">(80)</a>. Note that the S dimensions for the jet and for the diffuser are in different directions.</p>
+<p>where <span class="math notranslate nohighlight">\(W_D\)</span>, <span class="math notranslate nohighlight">\(S_D\)</span>, and <span class="math notranslate nohighlight">\(B_D\)</span> are defined in <a class="reference internal" href="#figure-diffuser-dimensions"><span class="std std-numref">Fig. 187</span></a> and <span class="math notranslate nohighlight">\(S_{Jet}\)</span> is the thickness of the jet leaving the jet reverser as defined by Equation <a class="reference internal" href="../Fluid_Deformation_and_Energy_Dissipation/FDED_Derivations.html#equation-planejet-s-of-q">(80)</a>. Note that the S dimensions for the jet and for the diffuser are in different directions.</p>
 <section id="diffuser">
 <h4>Diffuser<a class="headerlink" href="#diffuser" title="Permalink to this heading"></a></h4>
-<p>The diffuser delivers water from the flow equalizer to the jet reverser. The critical dimensions are defined in <a class="reference internal" href="#figure-diffuser-dimensions"><span class="std std-numref">Fig. 186</span></a></p>
+<p>The diffuser delivers water from the flow equalizer to the jet reverser. The critical dimensions are defined in <a class="reference internal" href="#figure-diffuser-dimensions"><span class="std std-numref">Fig. 187</span></a></p>
 <figure class="align-center" id="id8">
 <span id="figure-diffuser-dimensions"></span><a class="reference internal image-reference" href="../_images/diffuser_dimensions.png"><img alt="Diffuser dimension definition" src="../_images/diffuser_dimensions.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 186 </span><span class="caption-text">Dimensions of the diffusers.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 187 </span><span class="caption-text">Dimensions of the diffusers.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The perimeter dimension of the rectangularly formed part of the diffuser is increased slightly due to stretching.</p>
@@ -402,14 +404,14 @@
 <figure class="align-center" id="id9">
 <span id="figure-floc-hopper-highlight"></span><a class="reference external image-reference" href="https://youtu.be/xh9dTjWRoto"><img alt="Floc hopper detail with flocs &quot;spilling&quot; over the wall (click to be sent to video)." src="../_images/floc_hopper_highlight.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 187 </span><span class="caption-text">Floc hopper detail with flocs “spilling” over the wall (click to be sent to video).</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 188 </span><span class="caption-text">Floc hopper detail with flocs “spilling” over the wall (click to be sent to video).</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Consolidated sludge in the bottom of the floc hopper is then removed from the clarifier through small drain valve controlled by the operator. Floc hoppers in the lab-scale and PF300 setting are currently set at a 45 degree angle, but further optimization is needed.</p>
 <figure class="align-center" id="id10">
 <span id="figure-benchtop-sed"></span><a class="reference internal image-reference" href="../_images/benchtop_sed.png"><img alt="Benchtop clarifier setup, highlighting the floc filter and floc hopper." src="../_images/benchtop_sed.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 188 </span><span class="caption-text">Benchtop clarifier setup, highlighting the floc filter and floc hopper.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 189 </span><span class="caption-text">Benchtop clarifier setup, highlighting the floc filter and floc hopper.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The floc hopper allows for a self-cleaning clarifier. By gravity, flocs are sent over to a floc hopper. This means that operators only have to clean the clarifier once every three to six months because there is no stagnant accumulation of anoxic sludge. When operators do clean the clarifier, they are primarily cleaning plate settlers. Under normal operation, operators can open the floc hopper drain valve whenever they want to easily drain the sludge. We don’t yet have a method to guide the operation of the floc hopper, so operators determine how frequently to drain the floc hopper from experimental and operational experience. Without the floc filter transport system, other methods would be required to remove accumulated sludge in the bay. Mechanical sludge removal systems are common alternatives but are well known to be costly to install and a challenge to maintain.</p>
@@ -432,7 +434,7 @@
 </section>
 <section id="plate-settlers">
 <h2>Plate Settlers<a class="headerlink" href="#plate-settlers" title="Permalink to this heading"></a></h2>
-<p>The required length of the plate settlers is given by Equation <a class="reference internal" href="Clarifier_Derivations.html#equation-l-plate-settler">(219)</a>. In practice the length can be rounded up to the nearest 10 cm to simplify fabrication. The effect of the lost triangle (see <a class="reference internal" href="Clarifier_Derivations.html#figure-clarifier-velocities"><span class="std std-numref">Fig. 168</span></a>) at the one end of the plate settlers can be handled by iteratively correcting <span class="math notranslate nohighlight">\(L_{Active}\)</span> and <span class="math notranslate nohighlight">\(\bar v_{z_{Active}}\)</span> for the lost triangle.</p>
+<p>The required length of the plate settlers is given by Equation <a class="reference internal" href="Clarifier_Derivations.html#equation-l-plate-settler">(219)</a>. In practice the length can be rounded up to the nearest 10 cm to simplify fabrication. The effect of the lost triangle (see <a class="reference internal" href="Clarifier_Derivations.html#figure-clarifier-velocities"><span class="std std-numref">Fig. 169</span></a>) at the one end of the plate settlers can be handled by iteratively correcting <span class="math notranslate nohighlight">\(L_{Active}\)</span> and <span class="math notranslate nohighlight">\(\bar v_{z_{Active}}\)</span> for the lost triangle.</p>
 </section>
 <section id="outlet">
 <h2>Outlet<a class="headerlink" href="#outlet" title="Permalink to this heading"></a></h2>
@@ -458,7 +460,7 @@
 <figure class="align-center" id="id11">
 <span id="figure-outlet-manifold"></span><a class="reference internal image-reference" href="../_images/outlet_manifold.png"><img alt="Effluent manifold from the side- and top-view." src="../_images/outlet_manifold.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 189 </span><span class="caption-text">Effluent manifold from the side- and top-view.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 190 </span><span class="caption-text">Effluent manifold from the side- and top-view.</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The orifices in the pipe are evenly distributed along the length of the pipe to promote even flow collection from the tank. The orifices are designed create uniform head loss. Is this head loss “good” or “bad”? Like the diffusers, the orifices in the outlet manifold create “good” head loss because they increase head loss through all flow paths. This is critical because there is pressure recovery within the outlet manifold that creates a changing piezometric head inside the manifold and thus unequal flow through the orifices.</p>
@@ -477,13 +479,13 @@
 <figure class="align-center" id="id12">
 <span id="figure-channel-labeled"></span><a class="reference internal image-reference" href="../_images/channel_labeled.png"><img alt="Image of clarifier channels." src="../_images/channel_labeled.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 190 </span><span class="caption-text">Image of clarifier channels.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 191 </span><span class="caption-text">Image of clarifier channels.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id13">
 <span id="figure-channel-labeled-cad"></span><a class="reference internal image-reference" href="../_images/channel_labeled_cad.png"><img alt="Figure of clarifier channels." src="../_images/channel_labeled_cad.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 191 </span><span class="caption-text">Figure of clarifier channels.</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 192 </span><span class="caption-text">Figure of clarifier channels.</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>

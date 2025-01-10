@@ -79,6 +79,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Derivations.html">Flow Control and Measurement Derivations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/FCM_Solution.html">Flow Control and Measurement Solution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design.html">Entrance Tank Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/ET_Design_Challenge.html">Entrance Tank Design Challenge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Flow_Control_and_Measurement/Flow_Measure_Design_Challenge.html">Flow Measure Design Challenge</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Chapter 6: Rapid Mix</span></p>
 <ul>
@@ -255,7 +257,7 @@
 <figure class="align-center" id="id39">
 <span id="figure-floculator-physical-parameters"></span><a class="reference internal image-reference" href="../_images/Flocculator_physical_parameters.jpg"><img alt="physical floccuation parameter" src="../_images/Flocculator_physical_parameters.jpg" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 129 </span><span class="caption-text">Flocculator geometry definition including the effect of baffle thickness. Accounting for baffle thickness would be particularly important if <a class="reference external" href="https://en.wikipedia.org/wiki/Ferrocement">ferrocement</a> or wood were used for baffles.</span><a class="headerlink" href="#id39" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 130 </span><span class="caption-text">Flocculator geometry definition including the effect of baffle thickness. Accounting for baffle thickness would be particularly important if <a class="reference external" href="https://en.wikipedia.org/wiki/Ferrocement">ferrocement</a> or wood were used for baffles.</span><a class="headerlink" href="#id39" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>We start by making sure that our flocculator will be able to flocculate effectively by defining <span class="math notranslate nohighlight">\(h_{L_{floc}}\)</span> and <span class="math notranslate nohighlight">\(\tilde{G} \theta\)</span>. Fixing these two parameters initially allows us to easily find all other parameters which determine flocculator performance. Here are the current standards (effective 2023) in AguaClara flocculators:</p>
@@ -265,7 +267,7 @@
 <li><p><span class="math notranslate nohighlight">\(\tilde{G} \theta = 35,000\)</span></p></li>
 </ul>
 </div></blockquote>
-<p>The plant flow rate <span class="math notranslate nohighlight">\(Q\)</span> is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water <em>at the end</em> of the flocculator, <span class="math notranslate nohighlight">\(H\)</span>, the <em>maximum</em> length of the flocculator based on the length of the clarifier length, <span class="math notranslate nohighlight">\(L_{max, \, sed}\)</span>, and the <em>minimum</em> width of a flocculator channel required for a human to fit inside, <span class="math notranslate nohighlight">\(W_{min, \, human}\)</span>, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the clarifiers, which is why the length constraint exists. See <a class="reference internal" href="#figure-physical-design-criteria-floc"><span class="std std-numref">Fig. 130</span></a> for a representation of how the flocculator and clarifiers are placed in a plant.</p>
+<p>The plant flow rate <span class="math notranslate nohighlight">\(Q\)</span> is defined by the needs of the community that the plant is being desiged for. Additionally, the height of water <em>at the end</em> of the flocculator, <span class="math notranslate nohighlight">\(H\)</span>, the <em>maximum</em> length of the flocculator based on the length of the clarifier length, <span class="math notranslate nohighlight">\(L_{max, \, sed}\)</span>, and the <em>minimum</em> width of a flocculator channel required for a human to fit inside, <span class="math notranslate nohighlight">\(W_{min, \, human}\)</span>, are also defined initially. Ordinarilly in AguaClara plants, the flocculator occupies the same length dimension as the clarifiers, which is why the length constraint exists. See <a class="reference internal" href="#figure-physical-design-criteria-floc"><span class="std std-numref">Fig. 131</span></a> for a representation of how the flocculator and clarifiers are placed in a plant.</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(H = 2 \, {\rm m}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(L_{max, \, sed} = 6 \, {\rm m}\)</span></p></li>
@@ -274,7 +276,7 @@
 <figure class="align-center" id="id40">
 <span id="figure-physical-design-criteria-floc"></span><a class="reference internal image-reference" href="../_images/Physical_design_criteria.jpg"><img alt="physical design criteria" src="../_images/Physical_design_criteria.jpg" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 130 </span><span class="caption-text">Layout of flocculator and clarifiers that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.</span><a class="headerlink" href="#id40" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 131 </span><span class="caption-text">Layout of flocculator and clarifiers that was adopted starting with the 2nd AguaClara plant in Tamara, Honduras in 2008.</span><a class="headerlink" href="#id40" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <section id="physical-dimensions">
@@ -297,7 +299,7 @@ L_{max, \, \forall} = \frac{\forall}{n_{min, \, channels} W_{min, \, human} H}\]
 <figure class="align-center" id="id41">
 <span id="figure-floc-channels"></span><a class="reference internal image-reference" href="../_images/Floc_channels.jpg"><img alt="floc channels" src="../_images/Floc_channels.jpg" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 131 </span><span class="caption-text">There are an even amount of flocculator channels to keep the AguaClara plant layout consistent for flows greater than 12 L/s. This ensures that the entrance tank, filter box, and filters can be kept in the same places across plants.</span><a class="headerlink" href="#id41" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 132 </span><span class="caption-text">There are an even amount of flocculator channels to keep the AguaClara plant layout consistent for flows greater than 12 L/s. This ensures that the entrance tank, filter box, and filters can be kept in the same places across plants.</span><a class="headerlink" href="#id41" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -382,11 +384,11 @@ L_{max, \, \forall} = \frac{\forall}{n_{min, \, channels} W_{min, \, human} H}\]
 </section>
 <section id="residence-time">
 <h4>Residence Time<a class="headerlink" href="#residence-time" title="Permalink to this heading"></a></h4>
-<p>It is now time to make our final check. We need to make sure that our actual residence time is <em>at least</em> as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than <span class="math notranslate nohighlight">\(\forall_{floc}\)</span>. See <a class="reference internal" href="#figure-flocculator-head-loss"><span class="std std-numref">Fig. 132</span></a> for clarification.</p>
+<p>It is now time to make our final check. We need to make sure that our actual residence time is <em>at least</em> as much as we designed for. Fortunately, in our design we did not account for the change in water level throughout the flocculator due to head loss. Therefore, the actual volume of water in the flocculator is actually greater than <span class="math notranslate nohighlight">\(\forall_{floc}\)</span>. See <a class="reference internal" href="#figure-flocculator-head-loss"><span class="std std-numref">Fig. 133</span></a> for clarification.</p>
 <figure class="align-center" id="id42">
 <span id="figure-flocculator-head-loss"></span><a class="reference internal image-reference" href="../_images/Flocculator_head_loss.jpg"><img alt="Flocculator_head_loss" src="../_images/Flocculator_head_loss.jpg" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 132 </span><span class="caption-text">The water level in the flocculator decreases due to head loss. Flocculators may occupy multiple channels, but this extra triangle of water exists in any case.</span><a class="headerlink" href="#id42" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Fig. 133 </span><span class="caption-text">The water level in the flocculator decreases due to head loss. Flocculators may occupy multiple channels, but this extra triangle of water exists in any case.</span><a class="headerlink" href="#id42" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Thus, the actual average water level in the flocculator is <span class="math notranslate nohighlight">\(H + \frac{h_{L_{floc}}}{2}\)</span>. Thus, the actual residence time is:</p>
