@@ -9,10 +9,10 @@ The construction tolerances are the allowable deviations from the design dimensi
 
 .. _table_Construction_Tolerances:
 
-.. csv-table:: Construction Tolerances.
+.. csv-table:: Construction Tolerances
    :header: "Type", "Parameter", "English Units", "Metric Units"
    :align: left
-   :widths: 80 20
+   :widths: 80 20 20 20
    :class: wraptable
 
    Elevation, Ledges and pipe supports, ±1/2 in., ±1.3 cm
@@ -35,4 +35,3 @@ The construction tolerances are the allowable deviations from the design dimensi
    Surface Finish, Surface finish of formed concrete, No more than 1/8 in. deviation from a 10 ft straightedge, ±0.3 cm deviation from a 3 meter straightedge
    Pipes, Horizontal location of embedded horizontal or vertical pipes, ±1/2 in., ±1.3 cm
    Pipes, Vertical location of embedded horizontal pipes, ±1/4 in., ±0.6 cm
-  
