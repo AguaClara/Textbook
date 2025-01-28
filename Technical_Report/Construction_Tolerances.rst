@@ -12,7 +12,7 @@ The construction tolerances are the allowable deviations from the design dimensi
 .. csv-table:: Construction Tolerances
    :header: "Type", "Parameter", "English Units", "Metric Units"
    :align: left
-   :widths: 80 20 20 20
+   :widths: 30 40 20 20
    :class: wraptable
 
    Elevation, Ledges and pipe supports, ±1/2 in., ±1.3 cm
