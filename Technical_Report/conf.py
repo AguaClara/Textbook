@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'AguaClara'
-copyright = '2024, AguaClara Reach'
+copyright = '2025, AguaClara Reach'
 author = 'AguaClara Reach'
 release = '0.0.0'
 # root_doc = 'index'
@@ -169,3 +169,16 @@ print(os.path.abspath('.'))
 from plants.perseverance.conf import *
 
 #.divina_providencia.conf
+
+latex_engine = 'xelatex'  # Use xelatex for better Unicode support
+
+latex_elements = {
+    'title' : 'Perseverance Technical Report',
+    'papersize': 'a4paper',  # Choose between 'a4paper' or 'letterpaper'
+    'pointsize': '12pt',    # Default font size
+    'preamble': r'''
+        \usepackage{amsmath}
+        \usepackage{amssymb}
+        \setmainfont{Times New Roman}  # Optional: Set the main font
+    ''',
+}

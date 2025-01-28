@@ -8,7 +8,7 @@
   :height: 40
 
 ==============================================
-AguaClara Technical Report for San Juan Planes
+AguaClara Technical Report for Perseverance
 ==============================================
 
 .. toctree::
