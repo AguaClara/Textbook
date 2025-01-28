@@ -286,7 +286,7 @@ The chlorine dosing tube specifications are given below.
   
 
 Chemical Dose Controller
---------------------
+-------------------------
 Design information for the AguaClara chemical dose controller is available in `the Flow Control chapter of The Physics of Water Treatment Design <https://aguaclara.github.io/Textbook/Flow_Control_and_Measurement/FCM_Design.html#linear-chemical-dose-controller-cdc>`_.
 
 

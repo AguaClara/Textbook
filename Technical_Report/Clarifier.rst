@@ -39,7 +39,7 @@ The clarifier removes the majority of the particles and pathogens from the raw w
 .. _figure_clarifier_channel_system_photo:
 
 .. figure:: Images/clarifier_channel_system_photo.png
-    :width: 400px25
+    :width: 400px
     :align: center
     :alt: clarifier channel system photo
 
@@ -143,7 +143,7 @@ The clarifier removes the majority of the particles and pathogens from the raw w
 
 
 Specifications
-===========
+===============
 
 .. _table_Clarifier_Design:
 

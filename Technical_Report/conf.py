@@ -166,6 +166,6 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
 print(os.path.abspath('.'))
-from plants.san_juan_planes.conf import *
+from plants.perseverance.conf import *
 
 #.divina_providencia.conf
